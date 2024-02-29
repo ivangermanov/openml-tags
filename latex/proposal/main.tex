@@ -68,7 +68,7 @@
 \newtheorem{corollary}{Corollary}
 
 % \title{The First Line of my Research Proposal Title\\is Followed by the Optional Second Line of the\\Research Proposal Title}
-\title{Topic Modelling of OpenML Dataset Descriptions}
+\title{Topic Modeling of OpenML Dataset Descriptions}
 
 
 \author{
@@ -136,7 +136,7 @@ The absence of ground truth values for evaluating the performance of the propose
 
 % - Talk about application of ChatGPT to classify topics by Taniya - this demonstrates potential of project.
 
-% - Speak about originality and innovative character - nobody has applied topic modelling on dataset descriptions.
+% - Speak about originality and innovative character - nobody has applied topic modeling on dataset descriptions.
 
 % Taniya:
 % for Motivation we can also include 
@@ -201,7 +201,7 @@ Following this advancement, \citet{li_topic_2016} proposed two models: the Gener
 Building upon DMM, \citet{li_filtering_2018} developed the Common Semantics Topic Model (CSTM). In this model, they introduced a concept known as 'common topics', designed to capture words that are prevalent across all topics. CSTM then creates topics by combining words from a single specific topic with words from these common topics.
 
 \subsubsection{Graph-based Topic Models}
-Graph-based models are another approach to topic modelling that followed LDA. In these models, words are represented as nodes in a graph, with their co-occurrences indicated by weighted edges. This method diverges from previous generative models by not assuming any underlying topic distribution, which facilitates the discovery of topics of varying sizes.
+Graph-based models are another approach to topic modeling that followed LDA. In these models, words are represented as nodes in a graph, with their co-occurrences indicated by weighted edges. This method diverges from previous generative models by not assuming any underlying topic distribution, which facilitates the discovery of topics of varying sizes.
 
 \citet{cataldi_emerging_2010} were among the first to implement a graph-based model using a directed graph to detect emerging topics. Subsequently, \citet{de_arruda_topic_2016} developed a topic model known as Topic Segmentation (TS), which was based on an undirected graph. In 2018, the Topic Flow Model (TFM) was introduced by \citet{churchill_temporal_2018}, applying graph-based methods to track the evolution of topics over time. Following this, \citet{churchill_percolation-based_2020} proposed the Percolation-based Topic Model (PTM), a graph-based model designed to detect topics within noisy datasets.
 
@@ -251,7 +251,7 @@ In the former paper, the authors noticed that the original BERT model was undert
 
 Sentence-BERT, proposed by \citet{reimers_sentence-bert_2019}, adapts BERT for efficient computation of sentence embeddings. By using a siamese network structure, SBERT generates embeddings that can be compared using cosine similarity, facilitating tasks like semantic textual similarity assessment and clustering with reduced computational resources and time.
 
-In the context of topic modelling, \citet{thompson_topic_2020} later proposed using BERT \cite{devlin_bert_2019} to produce topics. The authors use k-means to cluster tokens observed in the data set based on their contextual vectors drawn from BERT. This clustering task differs from previous models such as GloVe \cite{pennington_glove_2014} and Word2Vec which are context-free embedding spaces with a single embedding representation for each word.
+In the context of topic modeling, \citet{thompson_topic_2020} later proposed using BERT \cite{devlin_bert_2019} to produce topics. The authors use k-means to cluster tokens observed in the data set based on their contextual vectors drawn from BERT. This clustering task differs from previous models such as GloVe \cite{pennington_glove_2014} and Word2Vec which are context-free embedding spaces with a single embedding representation for each word.
 
 
 \citet{grootendorst_bertopic_2022} later devised BERTopic, which is a state-of-the-art topic model that is based on the clustering idea. BERTopic employs pre-trained transformer models for creating document embeddings, clusters these embeddings, and utilizes a class-based variation of TF-IDF, termed c-TF-IDF, for generating topic representations. This method ensures the generation of coherent topics and remains competitive in benchmarks against both traditional and modern clustering-based topic modeling approaches.
@@ -314,7 +314,7 @@ In the context of topic modelling, \citet{thompson_topic_2020} later proposed us
 % \end{figure}
 % }
 
-To address the challenge of enhancing OpenML dataset discoverability through automated tagging, this project proposes to leverage topic modeling techniques on dataset descriptions. The aim is to develop a system that automates tag generation while enriching dataset metadata. In addition, automating the process of tagging can save considerable time for researchers and data scientists who would otherwise have to tag datasets manually. Key objectives include analyzing current topic modelling approaches, identifying and training a topic model for topic extraction, and establishing evaluation metrics and baselines for model performance.
+To address the challenge of enhancing OpenML dataset discoverability through automated tagging, this project proposes to leverage topic modeling techniques on dataset descriptions. The aim is to develop a system that automates tag generation while enriching dataset metadata. In addition, automating the process of tagging can save considerable time for researchers and data scientists who would otherwise have to tag datasets manually. Key objectives include analyzing current topic modeling approaches, identifying and training a topic model for topic extraction, and establishing evaluation metrics and baselines for model performance.
 
 % {
 % \color{blue}
@@ -392,7 +392,7 @@ To be more precise about the methods and techniques which will be used during th
   % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
   \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include traditional topic modeling approaches such as LDA and NMF. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
   
-  \item \textbf{Topic modelling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
+  \item \textbf{Topic modeling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
   
   \item \textbf{Model optimization} - Both baseline models and BERTopic will undergo hyperparameter tuning to optimize performance.
   
@@ -428,7 +428,7 @@ To be more precise about the methods and techniques which will be used during th
 The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for conducting this research. Each row in the chart corresponds to a particular task within the research, and each column represents one week. The outcome of each phase is classified as either a milestone or a deliverable. Detailed information for each task is provided as follows:
 
 \begin{itemize}
-  \item (\textbf{A}) Literature analysis - This involves thorough reading of the relevant literature on topic modelling. \textbf{Milestone:} Better understanding of current state-of-the-art topic models, and gaining deeper insight into methods for modeling the OpenML dataset descriptions.
+  \item (\textbf{A}) Literature analysis - This involves thorough reading of the relevant literature on topic modeling. \textbf{Milestone:} Better understanding of current state-of-the-art topic models, and gaining deeper insight into methods for modeling the OpenML dataset descriptions.
   
   \item (\textbf{B}) Environment setup - This task involves establishing the coding environment, which includes installing necessary Python packages for topic modeling and configuring the OpenML library. Additionally, a brief exploration of the OpenML Python API will be performed. A version control system (Git) will be set up. \textbf{Milestone:} Operational development environment.
   
@@ -649,11 +649,12 @@ After generating the c-TF-IDF representations, we obtain a collection of words t
 In particular, the topics generated through c-TF-IDF can be viewed as canditate topics, comprising a set of keywords and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of large models like GPT more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
 
 \subsubsection{Evaluation metrics}
+{
+    \color{red}
+
 According to \citet{abdelrazek_topic_2022}, since topic models can be applied in various application domains, they can be evaluated extrinsically according to how they perform in the domain where they were applied. They can also be evaluated intrinsically by considering the generated topics themselves. Intrinsic evaluation is independent of any specific domain and is thus more general. The different models differ in simplicity, computation efficiency, and modeling assumptions. They accordingly differ in how they perform on different corpora and different applications. There is little consensus on the aspects of topic model evaluation. There have also been different methods to evaluate a specific aspect.
 
-\citet{abdelrazek_topic_2022} discuss several evaluation criteria - namely, quality, interpretability, stability, diversity, efficiency and flexibility (\cref{fig:evaluation_criteria}).
-
-Here, we will focus on quality, interpretability and diversity, as they are most appropriate for our use case.
+\citet{abdelrazek_topic_2022} discuss several evaluation criteria - namely, quality, interpretability, stability, diversity, efficiency and flexibility (\cref{fig:evaluation_criteria}). Here, we will focus on quality, interpretability and diversity, as they are most appropriate for our use case.
 
 \begin{figure}[h] % adjust placement if needed
     \centering 
@@ -686,7 +687,7 @@ There are some disadvantages to using perplexity as an evaluation metric in this
 
 \textbf{Interpretability and Topic coherence}
 
-A topic is a discrete distribution over words. This set of words is evaluated for being human interpretable. For this to occur, the generated words should be associated with a single semantic meaning.
+A topic is a discrete distribution over words. This set of words is evaluated for being human interpretable. For this to occur, the generated words should be associated with a single semantic meaning. Topic coherence metrics compute how the top-k words of a topic are related to each other.
 
 \citet{newman_automatic_2010} assess coherence by observing the lexical similarity between pairs of words. The authors experimented with different similarity measures and found mutual information to be the most consistent performer. The pointwise mutual information, $PMI$, between word pair $(w_i, w_j)$ is calculated as below:
 
@@ -697,24 +698,40 @@ It quantifies the discrepancy between the probability of $w_i$ and $w_j$ co-occu
 
 Coherence usually has a trade-off with perplexity \cite{chang_reading_2009}, optimizing perplexity usually leads to decreased coherence.
 
-\textbf{Topic Diversity}
+\textbf{Topic diversity}
 
-This metric describes how semantically diverse the obtained topics are. One way to define diversity is introduced in \cite{dieng_topic_2020}. It defines topic diversity as the percentage of unique words in the top 25 words of all topics. A topic model should generate diverse topics and score high on this metric. A low score indicates redundant topics, meaning the model could not sufficiently disentangle the corpus’s themes. Note that selecting a number of topics in the model affects the topic diversity. A too large number could result in similar topics with overlapping top words. A too small number could result in broad topics with poor interpretability.
-
-
+This metric describes how semantically diverse the obtained topics are. One way to define diversity is introduced in \cite{dieng_topic_2020}. It defines topic diversity as the percentage of unique words in the top 25 words of all topics. So, in general, diversity metrics that measure how diverse the top-k words of a topic are to each other. A topic model should generate diverse topics and score high on this metric. A low score indicates redundant topics, meaning the model could not sufficiently disentangle the corpus’s themes. Note that selecting a number of topics in the model affects the topic diversity. A too large number could result in similar topics with overlapping top words. A too small number could result in broad topics with poor interpretability.
 
 
 \textbf{Classification evaluation metrics}
 
-It is important to note that the evaluation metrics above concern topic modelling as an unsupervised task. If after experimentation we find that our proposed BERTopic model does not perform sufficiently well, we may turn the problem into a (semi-)supervised problem. In this case, different metrics will apply, so we will cover them briefly.
+It is important to note that the evaluation metrics above concern topic modeling as an unsupervised task. If after experimentation we find that our proposed BERTopic model does not perform sufficiently well, we may turn the problem into a (semi-)supervised problem. In this case, different metrics will apply, the most popular of which (besides accuracy, precision, recall and F1 score) are coverage and purity.
 
-These would involve coverage - coverage refers to how well the concepts in the document collection are represented. Requires ground truth.
+Coverage refers to how well the concepts in the document collection are represented. Coverage can be divided into two types of coverage, topic coverage and document coverage. Topic coverage measures assess how representative the topics themselves are, i.e. are the topics in a document collection identified by the model. The most prevalent topic coverage measure is topic recall. Topic recall is the fraction of ground truth topics recovered by the topic model. Document coverage measures evaluate how well documents are represented by topics. Topic model accuracy is a typical measure for evaluating document coverage. It is defined as the fraction of documents that are accurately labeled by the topic model. In order to evaluate topic recall and accuracy, ground truth topics must be available. Topic recall is used more sparingly than topic accuracy.
 
-purity - Purity is the accuracy of the model if documents are always assigned the dominant topic. Requires ground truth.
+When a full set of ground truth topics are not readily available, other metrics are used. Purity is the accuracy of the model if documents are always assigned the dominant topic. This metric attempts to penalize models that assign a large number of low probability topics to documents, as opposed to a model that assigns a high probability to a single topic across the document collection.
 
-\citet{terragni_octis_2021}
+\textbf{OCTIS}
 
+OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is a unified and open-source evaluation framework for training, analyzing, and comparing topic models over several datasets and evaluation metrics.
 
+It allows the user to optimize the models’ hyper-parameters for a fair experimental comparison. The proposed framework provides a topic modeling pipeline (\cref{fig:octis}). The main functionalities of OCTIS are related to dataset pre-processing, training topic models, estimating evaluation metrics, hyperparameter optimization, and interactive web dashboard visualization.  
+
+OCTIS provides several evaluation metrics for topic models, including coherence, significance, diversity and classification metrics.
+
+The optimal hyper-parameter configuration is determined according to a Bayesian Optimization (BO) strategy \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the provided evaluation metrics. Since the performance estimated by the evaluation metrics can be affected by noise, the objective function is computed as the median of a given number of model runs (i.e., topic models run with the same hyperparameter configuration) computed for the selected evaluation metric.
+
+BO is a sequential model-based optimization strategy for expensive and noisy black-box functions (e.g. topic models). The basic idea consists of using all the model’s configurations evaluated so far to approximate the value of the performance metric and then selects a new promising configuration to evaluate. The approximation is provided by a probabilistic \textit{surrogate model}, which describes the prior belief over the objective function using the observed configurations. The next configuration to evaluate is selected through the optimization of an \textit{acquisition function}, which leverages the uncertainty in the posterior to guide the exploration.
+
+\begin{figure}[h] % adjust placement if needed
+    \centering 
+    \includegraphics[width=0.7\textwidth]{images/octis.pdf}
+    \caption{Workflow of the OCTIS framework \cite{terragni_octis_2021}}
+    \label{fig:octis}
+\end{figure}
+
+OCTIS could prove to be a valuable tool for the Master's thesis, as it provides a unified framework to train the proposed BERTopic model and the baseline models, and to compare them using a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} used OCTIS to evaluate the model's performance.
+}
 \todo[inline]{
 
 - Go deeper into the models that will be used. I.e., BERTopic.
@@ -814,7 +831,7 @@ To process the generated tags, the script employed spaCy to clean and standardiz
 \end{table}
 
 
-\subsubsection{Topic modelling proof of concept using BERTopic}
+\subsubsection{Topic modeling proof of concept using BERTopic}
 
 The second stage involved utilizing BERTopic to assess the feasibility of topic extraction. BERTopic was applied in an unsupervised manner to identify latent topics within the dataset descriptions.
 
@@ -877,7 +894,7 @@ Further experimentation with the model is necessary to address these cases.
 \subsection{Data management}
 % {
 % \color{red}
-% Responsible data management is part of good research. To promote effective and efficient data management, data sharing and data reuse, we expect researchers to carefully manage data. Research data are the evidence that underpin the answer to research questions, and can be used to validate findings. Data can be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modelling, interview or other methods, or information derived from existing evidence. 
+% Responsible data management is part of good research. To promote effective and efficient data management, data sharing and data reuse, we expect researchers to carefully manage data. Research data are the evidence that underpin the answer to research questions, and can be used to validate findings. Data can be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modeling, interview or other methods, or information derived from existing evidence. 
 
 % We understand software as included in the definition of research data. Algorithms, scripts and code developed by researchers in the course of their work may be necessary to access and interpret data. In such cases, the data management plan will be expected to address how information about such items will be made available.
 
@@ -950,7 +967,7 @@ the next step involves purging inadequate data points, such as excessively short
 % Note that the importance of each section and subsection and their respective content and size may vary from proposal to proposal. So you are expected to balance the content and length of each part accordingly. Typically Section~\ref{sec:other} is considerably smaller than the other sections. Often Sections~\ref{sec:goals}, \ref{sec:approach}, and~\ref{sec:evidence} are the largest sections.
 % }
 
-In the course of my Master's program, I enrolled in a course titled "Machine Learning Engineering." The course was led by Professor Joaquin Vanschoren, who participates in the Data Mining cluster at the TU/e. Furthermore, I followed several other courses related to machine learning, including "Research Topics in Data Mining," "Machine Learning for Industry," "Data Modeling and Databases," and "Deep Learning." These courses significantly improved my understanding and heightened my interest in the domain of machine learning. By focusing on topic modelling in my Master's thesis, I intend to continue broadening my knowledge and expertise in the field.
+In the course of my Master's program, I enrolled in a course titled "Machine Learning Engineering." The course was led by Professor Joaquin Vanschoren, who participates in the Data Mining cluster at the TU/e. Furthermore, I followed several other courses related to machine learning, including "Research Topics in Data Mining," "Machine Learning for Industry," "Data Modeling and Databases," and "Deep Learning." These courses significantly improved my understanding and heightened my interest in the domain of machine learning. By focusing on topic modeling in my Master's thesis, I intend to continue broadening my knowledge and expertise in the field.
 
 Additionally, the open-source status of OpenML played a role in attracting my interest. The prospect of contributing to an open-source project is appealing, since it is beneficial for the developer, practitioner, and research communities. This form of contribution furthers the knowledge in the field and makes it accessible to all.
 
