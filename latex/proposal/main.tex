@@ -83,16 +83,16 @@ Eindhoven University of Technology\\
 \maketitle
 \begin{abstract}
     {
-    \color{red}
-    Provide an informative summary of your proposal (topic, approach and potential importance of the results) in no more than three hundred words. 
-    %
-    Make sure to provide an informative and relevant abstract, as this is often the first part of your proposal that reviewers will read. The abstract should clearly describe what you are going to investigate, why you are going to investigate this subject and which results you expect to find. 
-    %
-    The abstract should have no more than 300 words and should contain a single paragraph.
-    %
-    This proposal should be self-contained and has a limit of pages per section. \textbf{Title page, Abstract, Sections 1 and 2 have a combined limit of 8 pages. Section 3 has a limit of 8 pages. Section 4 has a limit of 2 pages. References and Appendices are unlimited.} You should not change the overall format considerably. Please do not change the margins nor introduce considerable LaTeX code that try to compress the content. You may use the appendices for any further information that you want to provide. While there is no page limit in the appendix, reviewers are not obliged to read all your appendix content.
-    
-    \noindent\textbf{Wordcount: 190}
+        \color{red}
+        Provide an informative summary of your proposal (topic, approach and potential importance of the results) in no more than three hundred words.
+        %
+        Make sure to provide an informative and relevant abstract, as this is often the first part of your proposal that reviewers will read. The abstract should clearly describe what you are going to investigate, why you are going to investigate this subject and which results you expect to find.
+        %
+        The abstract should have no more than 300 words and should contain a single paragraph.
+        %
+        This proposal should be self-contained and has a limit of pages per section. \textbf{Title page, Abstract, Sections 1 and 2 have a combined limit of 8 pages. Section 3 has a limit of 8 pages. Section 4 has a limit of 2 pages. References and Appendices are unlimited.} You should not change the overall format considerably. Please do not change the margins nor introduce considerable LaTeX code that try to compress the content. You may use the appendices for any further information that you want to provide. While there is no page limit in the appendix, reviewers are not obliged to read all your appendix content.
+
+        \noindent\textbf{Wordcount: 190}
     }
 \end{abstract}
 
@@ -234,14 +234,14 @@ In 2017, \citet{bicalho_general_2017} introduced the Distributed representation-
 
 \citeauthor{viegas_cluwords_2019} introduced two topic models, CluWords \cite{viegas_cluwords_2019} and CluHTM \cite{viegas_cluhtm_2020}, both of which utilize clusters of words and the Term Frequency-Inverse Document Frequency (TF-IDF) method to generate topics. TF-IDF is a widely used metric in text mining that indicates the relevance of a word to a document within a collection or corpus. The core concept in these models is a 'CluWord', which is essentially a cluster of words defined within an embedding space. The process begins by determining CluWords for each word in the vocabulary. Then, in each document, every word is replaced by its corresponding CluWord. Following this replacement, the TF-IDF values of the CluWords are calculated. CluHTM extends the concept of CluWords by combining it with NMF to facilitate hierarchical topic modeling.
 
-\citeauthor{dieng_topic_2020} introduced two models: the Embedded Topic Model (ETM) \cite{dieng_topic_2020} and the Dynamic Embedded Topic Model (D-ETM) \cite{dieng_dynamic_2019}. In both models, topics and words are represented within an embedding space. Like LDA, ETM draws a topic for each document, but it diverges from LDA by using the logistic-normal distribution instead of the Dirichlet distribution. For each word in a document, ETM assigns a topic, and then the observed word is drawn based on this topic assignment. This means that words are selected from their embeddings rather than based on their proximity to other words in the document. The D-ETM model extends this concept by adding a time-varying component to the framework. It runs the generative process at each time step, maintaining $k$ topics at each step, but all of these topics are still projected onto the same embedding space. 
+\citeauthor{dieng_topic_2020} introduced two models: the Embedded Topic Model (ETM) \cite{dieng_topic_2020} and the Dynamic Embedded Topic Model (D-ETM) \cite{dieng_dynamic_2019}. In both models, topics and words are represented within an embedding space. Like LDA, ETM draws a topic for each document, but it diverges from LDA by using the logistic-normal distribution instead of the Dirichlet distribution. For each word in a document, ETM assigns a topic, and then the observed word is drawn based on this topic assignment. This means that words are selected from their embeddings rather than based on their proximity to other words in the document. The D-ETM model extends this concept by adding a time-varying component to the framework. It runs the generative process at each time step, maintaining $k$ topics at each step, but all of these topics are still projected onto the same embedding space.
 
 \subsubsection{Transformer-based models}
 The Transformer model \cite{vaswani_attention_2017}, introduced by \citeauthor{vaswani_attention_2017}, marked another seminal step in the field of NLP. It is an architecture that significantly improves upon the efficiency and effectiveness of previous models for machine translation and other sequence-to-sequence tasks. Groundbreaking for its exclusive use of attention mechanisms, the Transformer eliminates the need for recurrence and convolutions. It obviates the sequential data processing inherent in recurrent neural networks (RNNs) and the fixed receptive fields of convolutional neural networks (CNNs), enabling much greater parallelization of computation. This architecture sets new state-of-the-art benchmarks on translation tasks, demonstrating its superior ability to handle long-range dependencies within text. The Transformer model has since influenced the development of numerous NLP models and frameworks, marking a pivotal shift in the approach to sequence modeling and machine learning. Its relevance to topic modeling is indirect but significant. Transformer models process text in a way that captures deeper semantic meanings, which can be leveraged for identifying coherent topics in large text corpora.
 
 Following \citet{vaswani_attention_2017}, OpenAI introduced the GPT-1, GPT-2 and GPT-3 models \cite{radford_improving_nodate}, \cite{radford_language_nodate}, \cite{brown_language_2020}. These models set state-of-the-art results, primarily through increases in the size of the training datasets together with an increased model size (parameter count).
 
-In their 2019 work, \citet{devlin_bert_2019} introduced BERT (Bidirectional Encoder Representations from Transformers), a model leveraging the Transformer architecture to pre-train deep bidirectional representations from unlabeled text. Unlike the original Transformer by \citet{vaswani_attention_2017}, which processes text in a unidirectional manner, BERT enhances understanding by evaluating both left and right contexts across all layers, achieving a more comprehensive grasp of language nuances. 
+In their 2019 work, \citet{devlin_bert_2019} introduced BERT (Bidirectional Encoder Representations from Transformers), a model leveraging the Transformer architecture to pre-train deep bidirectional representations from unlabeled text. Unlike the original Transformer by \citet{vaswani_attention_2017}, which processes text in a unidirectional manner, BERT enhances understanding by evaluating both left and right contexts across all layers, achieving a more comprehensive grasp of language nuances.
 
 There were a few seminal papers on BERT after \citeauthor{devlin_bert_2019}'s paper, namely RoBERTa \cite{liu_roberta_2019} and Sentence-BERT (SBERT) \cite{reimers_sentence-bert_2019}.
 
@@ -332,15 +332,15 @@ To address the challenge of enhancing OpenML dataset discoverability through aut
 \textbf{Objectives} - Based on the importance of training an effective topic model for extracting useful topics for tag generation, we define the following objectives:
 % \textcolor{blue}{Inspired by the importance of selecting an optimal execution plan for a query and improving one of the key components responsible for this task - the cardinality estimator, we define the following main objectives:} 
 \begin{enumerate}
-\item{\textbf{OB1} - Perform a comprehensive analysis of the different approaches for extracting coherent tags from the OpenML dataset descriptions.
-% \textcolor{blue}{Perform a comprehensive analysis of the different possible approaches for developing a dynamic cardinality estimation framework for graph databases.}
-}
-\item{\textbf{OB2} - Develop and implement a topic model that effectively identifies and extracts high-quality topics suitable for generating tags.
-% \textcolor{blue}{Research and develop a framework for dynamic cardinality estimation. The key goal here is to develop a framework that can maintain sufficiently accurate statistics even when the data has been altered.}
-}
-\item{\textbf{OB3} - Research, define and implement appropriate evaluation metrics and benchmarks to compare the efficacy of the proposed topic model. 
-% \textcolor{blue}{Compare the accuracy of the dynamic framework’s statistics to the statistics of a static cardinality estimator. Mainly, we want to validate whether the dynamic behavior of the cardinality estimator gives reasonably better estimates after data alternation.}
-}
+    \item{\textbf{OB1} - Perform a comprehensive analysis of the different approaches for extracting coherent tags from the OpenML dataset descriptions.
+          % \textcolor{blue}{Perform a comprehensive analysis of the different possible approaches for developing a dynamic cardinality estimation framework for graph databases.}
+          }
+    \item{\textbf{OB2} - Develop and implement a topic model that effectively identifies and extracts high-quality topics suitable for generating tags.
+          % \textcolor{blue}{Research and develop a framework for dynamic cardinality estimation. The key goal here is to develop a framework that can maintain sufficiently accurate statistics even when the data has been altered.}
+          }
+    \item{\textbf{OB3} - Research, define and implement appropriate evaluation metrics and benchmarks to compare the efficacy of the proposed topic model.
+          % \textcolor{blue}{Compare the accuracy of the dynamic framework’s statistics to the statistics of a static cardinality estimator. Mainly, we want to validate whether the dynamic behavior of the cardinality estimator gives reasonably better estimates after data alternation.}
+          }
 \end{enumerate}
 
 % \todo[inline]{- Define objectives}
@@ -385,18 +385,18 @@ At each step, the findings will be documented in the Master's thesis report.
 
 To be more precise about the methods and techniques which will be used during this research:
 
-\begin{itemize}  
-  % \item \textcolor{blue}{We will focus on studying and understanding the paper "A General Cardinality Estimation Framework for Subgraph Matching in Property Graphs" [17]. By using their approach, we can enhance the cardinality estimates collection to support a dynamic behavior and have statistics which are modifiable at run-time.}
-  \item \textbf{Data cleaning} - We will begin by cleaning the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA).
-  
-  % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
-  \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include traditional topic modeling approaches such as LDA and NMF. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
-  
-  \item \textbf{Topic modeling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
-  
-  \item \textbf{Model optimization} - Both baseline models and BERTopic will undergo hyperparameter tuning to optimize performance.
-  
-  \item \textbf{Tag generation} - Relevant and coherent topics identified will be converted into tags. 
+\begin{itemize}
+    % \item \textcolor{blue}{We will focus on studying and understanding the paper "A General Cardinality Estimation Framework for Subgraph Matching in Property Graphs" [17]. By using their approach, we can enhance the cardinality estimates collection to support a dynamic behavior and have statistics which are modifiable at run-time.}
+    \item \textbf{Data cleaning} - We will begin by cleaning the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA).
+
+          % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
+    \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include traditional topic modeling approaches such as LDA and NMF. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
+
+    \item \textbf{Topic modeling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
+
+    \item \textbf{Model optimization} - Both baseline models and BERTopic will undergo hyperparameter tuning to optimize performance.
+
+    \item \textbf{Tag generation} - Relevant and coherent topics identified will be converted into tags.
 \end{itemize}
 
 % \todo[inline]{- Define methods and techniques here!!!}
@@ -428,68 +428,68 @@ To be more precise about the methods and techniques which will be used during th
 The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for conducting this research. Each row in the chart corresponds to a particular task within the research, and each column represents one week. The outcome of each phase is classified as either a milestone or a deliverable. Detailed information for each task is provided as follows:
 
 \begin{itemize}
-  \item (\textbf{A}) Literature analysis - This involves thorough reading of the relevant literature on topic modeling. \textbf{Milestone:} Better understanding of current state-of-the-art topic models, and gaining deeper insight into methods for modeling the OpenML dataset descriptions.
-  
-  \item (\textbf{B}) Environment setup - This task involves establishing the coding environment, which includes installing necessary Python packages for topic modeling and configuring the OpenML library. Additionally, a brief exploration of the OpenML Python API will be performed. A version control system (Git) will be set up. \textbf{Milestone:} Operational development environment.
-  
-  \item (\textbf{C}) Exploratory data analysis (EDA) - In this phase, an EDA will be conducted on the dataset descriptions. This will involve identifying challenges and limitations inherent in the data. A statistical analysis will be performed. \textbf{Deliverable:} Explanation, graphs and charts describing the data and its limitations.
-  
-  \item (\textbf{D}) Data cleaning and preparation - During this phase, the tasks of data cleaning and data preparation will be performed, making the data suitable for use by the topic models. \textbf{Deliverable:} Explanation, graphs and charts of the prepared dataset.
+    \item (\textbf{A}) Literature analysis - This involves thorough reading of the relevant literature on topic modeling. \textbf{Milestone:} Better understanding of current state-of-the-art topic models, and gaining deeper insight into methods for modeling the OpenML dataset descriptions.
 
-  \item (\textbf{E}) - Experiment design - In this phase, suitable evaluation metrics and baselines will be defined. The proposed model will be evaluated based on those metrics and baselines. \textbf{Deliverable:} Definition and justification of experiment design.
-  
-  \item (\textbf{F}) - Topic model development - This main phase focuses on creating the topic model that will extract semantic tags from the dataset descriptions. This will include hyperparameter tuning. \textbf{Deliverable:} A detailed explanation of the model's steps and architectural decisions, hyperparameters, along with the results when applied to OpenML descriptions.
-  
-  \item (\textbf{G}) - Experiment results - during this phase, the developed topic model will be evaluated based on the evaluation metrics. Baseline model(s) will be initialized for comparison with the model. \textbf{Deliverable:} Results from the evaluation metrics and comparison between the developed topic model and the baseline model(s).
-  
-  \item (\textbf{H}) and (\textbf{I}) Defense preparation and Defense presentation - These steps are designated for preparing and presenting the project defense. \textbf{Milestone:} Preparation for the Thesis presentation.
-  
-  \item (\textbf{J}) Thesis writing - This phase will take place throughout the entire research process. The objective is to document the discoveries, examine the data, summarize the conclusions, identify challenges, and record the outcomes of the research. \textbf{Deliverable:} Master’s thesis.
+    \item (\textbf{B}) Environment setup - This task involves establishing the coding environment, which includes installing necessary Python packages for topic modeling and configuring the OpenML library. Additionally, a brief exploration of the OpenML Python API will be performed. A version control system (Git) will be set up. \textbf{Milestone:} Operational development environment.
+
+    \item (\textbf{C}) Exploratory data analysis (EDA) - In this phase, an EDA will be conducted on the dataset descriptions. This will involve identifying challenges and limitations inherent in the data. A statistical analysis will be performed. \textbf{Deliverable:} Explanation, graphs and charts describing the data and its limitations.
+
+    \item (\textbf{D}) Data cleaning and preparation - During this phase, the tasks of data cleaning and data preparation will be performed, making the data suitable for use by the topic models. \textbf{Deliverable:} Explanation, graphs and charts of the prepared dataset.
+
+    \item (\textbf{E}) - Experiment design - In this phase, suitable evaluation metrics and baselines will be defined. The proposed model will be evaluated based on those metrics and baselines. \textbf{Deliverable:} Definition and justification of experiment design.
+
+    \item (\textbf{F}) - Topic model development - This main phase focuses on creating the topic model that will extract semantic tags from the dataset descriptions. This will include hyperparameter tuning. \textbf{Deliverable:} A detailed explanation of the model's steps and architectural decisions, hyperparameters, along with the results when applied to OpenML descriptions.
+
+    \item (\textbf{G}) - Experiment results - during this phase, the developed topic model will be evaluated based on the evaluation metrics. Baseline model(s) will be initialized for comparison with the model. \textbf{Deliverable:} Results from the evaluation metrics and comparison between the developed topic model and the baseline model(s).
+
+    \item (\textbf{H}) and (\textbf{I}) Defense preparation and Defense presentation - These steps are designated for preparing and presenting the project defense. \textbf{Milestone:} Preparation for the Thesis presentation.
+
+    \item (\textbf{J}) Thesis writing - This phase will take place throughout the entire research process. The objective is to document the discoveries, examine the data, summarize the conclusions, identify challenges, and record the outcomes of the research. \textbf{Deliverable:} Master’s thesis.
 \end{itemize}
 
 \begin{figure}[h]
-\centering
-\begin{ganttchart}[
-    vgrid, hgrid,
-    expand chart=\linewidth,
-    title height=1,
-    title label font=\bfseries\footnotesize,
-    title/.append style={fill=lightblue},
-    bar/.append style={fill=matplotlibblue},
-    bar height=0.7,
-    group right shift=0,
-    group top shift=0.7,
-    group height=.3,
-    group peaks width={0.2},
-    y unit title=.5cm,
-    y unit chart=0.75cm,
-    x unit=0.75cm,
-    % bar top shift=0,
-    % bar height=1
-    ]{1}{20}
-    \gantttitle{Weeks}{20} \\
-    \gantttitlelist{1,...,20}{1} \\
-    \ganttbar{(\textbf{A}) Literature analysis }{1}{3} \\
-    \ganttbar{(\textbf{B}) Environment setup }{4}{4} \\
-    \ganttbar{(\textbf{C}) Exploratory data analysis }{5}{6} \\
-    \ganttbar{(\textbf{D}) Data cleaning and preparation}{6}{7} \\
-    \ganttbar{(\textbf{E}) Experiment design}{8}{9} \\
-    \ganttbar{(\textbf{F}) Topic model development}{10}{14} \\
-    \ganttbar{(\textbf{G}) Experiment results}{15}{17} \\
-    \ganttbar{(\textbf{H}) Defense preparation }{18}{19} \\
-    \ganttbar{(\textbf{I}) Defense presentation }{20}{20} \\
-    \ganttbar{(\textbf{J}) Thesis writing }{2}{2}
-    \ganttbar{}{4}{4}
-    \ganttbar{}{6}{6}
-    \ganttbar{}{8}{8}
-    \ganttbar{}{10}{10}
-    \ganttbar{}{12}{12}
-    \ganttbar{}{14}{14}
-    \ganttbar{}{16}{16}
-    \ganttbar{}{18}{19}
-\end{ganttchart}
-\caption{Gantt chart: Research timeline} % Caption for the Gantt chart
-\label{fig:gantt_chart} % Label for referencing
+    \centering
+    \begin{ganttchart}[
+            vgrid, hgrid,
+            expand chart=\linewidth,
+            title height=1,
+            title label font=\bfseries\footnotesize,
+            title/.append style={fill=lightblue},
+            bar/.append style={fill=matplotlibblue},
+            bar height=0.7,
+            group right shift=0,
+            group top shift=0.7,
+            group height=.3,
+            group peaks width={0.2},
+            y unit title=.5cm,
+            y unit chart=0.75cm,
+            x unit=0.75cm,
+            % bar top shift=0,
+            % bar height=1
+        ]{1}{20}
+        \gantttitle{Weeks}{20} \\
+        \gantttitlelist{1,...,20}{1} \\
+        \ganttbar{(\textbf{A}) Literature analysis }{1}{3} \\
+        \ganttbar{(\textbf{B}) Environment setup }{4}{4} \\
+        \ganttbar{(\textbf{C}) Exploratory data analysis }{5}{6} \\
+        \ganttbar{(\textbf{D}) Data cleaning and preparation}{6}{7} \\
+        \ganttbar{(\textbf{E}) Experiment design}{8}{9} \\
+        \ganttbar{(\textbf{F}) Topic model development}{10}{14} \\
+        \ganttbar{(\textbf{G}) Experiment results}{15}{17} \\
+        \ganttbar{(\textbf{H}) Defense preparation }{18}{19} \\
+        \ganttbar{(\textbf{I}) Defense presentation }{20}{20} \\
+        \ganttbar{(\textbf{J}) Thesis writing }{2}{2}
+        \ganttbar{}{4}{4}
+        \ganttbar{}{6}{6}
+        \ganttbar{}{8}{8}
+        \ganttbar{}{10}{10}
+        \ganttbar{}{12}{12}
+        \ganttbar{}{14}{14}
+        \ganttbar{}{16}{16}
+        \ganttbar{}{18}{19}
+    \end{ganttchart}
+    \caption{Gantt chart: Research timeline} % Caption for the Gantt chart
+    \label{fig:gantt_chart} % Label for referencing
 \end{figure}
 
 
@@ -503,37 +503,37 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
 \Cref{table:project-risks} presents the identified risks for this project. The second column denotes the likelihood of each specific risk occurrence. The third column provides concise descriptions for each identified risk. The last column outlines potential mitigations for each risk.
 
 \begin{table}[h!]
-\centering
-\captionsetup{skip=5pt}
-\caption{Project risks}
-\label{table:project-risks}
-\renewcommand{\arraystretch}{1.5} % Adjust the 1.5 to increase or decrease padding
-\begin{tabularx}{\textwidth} {
-   | >{\raggedright\arraybackslash}m{0.20\textwidth} |
-   >{\raggedright\arraybackslash}m{0.10\textwidth} |
-   >{\raggedright\arraybackslash}m{0.294\textwidth} | 
-   >{\raggedright\arraybackslash}m{0.30\textwidth} |}
-\hline
-\rowcolor{lightblue}
-\multicolumn{1}{|c|}{\textbf{Risk label}} & \multicolumn{1}{c|}{\textbf{Likelihood}} & \multicolumn{1}{c|}{\textbf{Risk description}} & \multicolumn{1}{c|}{\textbf{Risk mitigation}} \\
-\hline
-Low model performance & \cellcolor{lightyellow} Medium & The implemented topic modeling approach for OpenML dataset descriptions may perform sub-optimally. & Maintain regular communication with supervisors to discuss project progress and explore alternative solutions as needed. \\
-\hline
-Low data quality & \cellcolor{lightyellow} Medium & The OpenML dataset descriptions may be too short or contain many undesirable artifacts (e.g., author names, arcane symbols, or other uninterpretable by topic models text). This may indirectly lead to low model performance. & Apply dataset cleaning prior to training the topic models (e.g., removal of too short descriptions, identification and removal of artifacts, stemming, lemmatization). Perform an initial exploratory data analysis (EDA) to ascertain the data quality. \\
-\hline
-Hardware Limitation for Topic Modeling & \cellcolor{lightyellow} Medium & The student's personal computer may not possess the requisite computational capacity to run certain topic models, particularly those involving Large Language Models (LLMs). & The student will explore the use of quantized models \cite{zhu_survey_2023} to reduce computational demands. Should this approach prove insufficient, the student will request access to the hardware facilities provided by the TU/e. Alternatively, a subscription for Google Colab will be purchased, which offers the required computational resources.
-\\
-\hline
-Time constraints & \cellcolor{lightyellow}Medium & Pertains to the possibility that the student may be unable to fulfill the research requirements within the designated time frame. & The planning outlined in the Gantt chart (\cref{fig:gantt_chart}) will be followed. Should there be deviations from the planned activities that require additional time, a request for an extension of will be submitted. \\
-\hline
-Unavailability & \cellcolor{lightgreen}Low & Arises in the event that the student becomes unavailable, leading to an inability to complete the Thesis project. & The supervisors will undertake the responsibility of identifying and engaging another Master’s student to assume the project and drive it to completion or abandon the project. \\
-\hline
-Ill-defined scope & \cellcolor{lightgreen}Low & Associated with the student's challenge in accurately defining the project's scope, resulting in an overly ambitious (too large) or an insufficiently comprehensive (too small) scope. & The student will collaborate with the supervisors to define the project’s scope and goals. Additionally, the student will establish a schedule of deliverables and milestones. \\
-\hline
-Lack of communication & \cellcolor{lightgreen}Low & Arises from insufficient communication between the student and the supervisors, leading to misunderstandings or gaps in the supervision process. & Bi-weekly meetings will be organized to discuss project progress and outline activities planned for the forthcoming weeks. Additionally, frequent contact will be maintained through MS Teams/Slack to facilitate real-time communication and prompt resolution of any emerging issues.
-\\
-\hline
-\end{tabularx}
+    \centering
+    \captionsetup{skip=5pt}
+    \caption{Project risks}
+    \label{table:project-risks}
+    \renewcommand{\arraystretch}{1.5} % Adjust the 1.5 to increase or decrease padding
+    \begin{tabularx}{\textwidth} {
+        | >{\raggedright\arraybackslash}m{0.20\textwidth} |
+        >{\raggedright\arraybackslash}m{0.10\textwidth} |
+        >{\raggedright\arraybackslash}m{0.294\textwidth} |
+        >{\raggedright\arraybackslash}m{0.30\textwidth} |}
+        \hline
+        \rowcolor{lightblue}
+        \multicolumn{1}{|c|}{\textbf{Risk label}} & \multicolumn{1}{c|}{\textbf{Likelihood}} & \multicolumn{1}{c|}{\textbf{Risk description}}                                                                                                                                                                                 & \multicolumn{1}{c|}{\textbf{Risk mitigation}}                                                                                                                                                                                                                                                                                                               \\
+        \hline
+        Low model performance                     & \cellcolor{lightyellow} Medium           & The implemented topic modeling approach for OpenML dataset descriptions may perform sub-optimally.                                                                                                                             & Maintain regular communication with supervisors to discuss project progress and explore alternative solutions as needed.                                                                                                                                                                                                                                    \\
+        \hline
+        Low data quality                          & \cellcolor{lightyellow} Medium           & The OpenML dataset descriptions may be too short or contain many undesirable artifacts (e.g., author names, arcane symbols, or other uninterpretable by topic models text). This may indirectly lead to low model performance. & Apply dataset cleaning prior to training the topic models (e.g., removal of too short descriptions, identification and removal of artifacts, stemming, lemmatization). Perform an initial exploratory data analysis (EDA) to ascertain the data quality.                                                                                                    \\
+        \hline
+        Hardware Limitation for Topic Modeling    & \cellcolor{lightyellow} Medium           & The student's personal computer may not possess the requisite computational capacity to run certain topic models, particularly those involving Large Language Models (LLMs).                                                   & The student will explore the use of quantized models \cite{zhu_survey_2023} to reduce computational demands. Should this approach prove insufficient, the student will request access to the hardware facilities provided by the TU/e. Alternatively, a subscription for Google Colab will be purchased, which offers the required computational resources.
+        \\
+        \hline
+        Time constraints                          & \cellcolor{lightyellow}Medium            & Pertains to the possibility that the student may be unable to fulfill the research requirements within the designated time frame.                                                                                              & The planning outlined in the Gantt chart (\cref{fig:gantt_chart}) will be followed. Should there be deviations from the planned activities that require additional time, a request for an extension of will be submitted.                                                                                                                                   \\
+        \hline
+        Unavailability                            & \cellcolor{lightgreen}Low                & Arises in the event that the student becomes unavailable, leading to an inability to complete the Thesis project.                                                                                                              & The supervisors will undertake the responsibility of identifying and engaging another Master’s student to assume the project and drive it to completion or abandon the project.                                                                                                                                                                             \\
+        \hline
+        Ill-defined scope                         & \cellcolor{lightgreen}Low                & Associated with the student's challenge in accurately defining the project's scope, resulting in an overly ambitious (too large) or an insufficiently comprehensive (too small) scope.                                         & The student will collaborate with the supervisors to define the project’s scope and goals. Additionally, the student will establish a schedule of deliverables and milestones.                                                                                                                                                                              \\
+        \hline
+        Lack of communication                     & \cellcolor{lightgreen}Low                & Arises from insufficient communication between the student and the supervisors, leading to misunderstandings or gaps in the supervision process.                                                                               & Bi-weekly meetings will be organized to discuss project progress and outline activities planned for the forthcoming weeks. Additionally, frequent contact will be maintained through MS Teams/Slack to facilitate real-time communication and prompt resolution of any emerging issues.
+        \\
+        \hline
+    \end{tabularx}
 \end{table}
 
 
@@ -603,7 +603,7 @@ This flexibility is particularly important during the clustering step. Clusterin
 As a result, BERTopic is highly modular, maintaining its ability to generate topics across different sub-models. This means that BERTopic effectively allows for the construction of customized topic models. \Cref{fig:modularity_modified} illustrates the six steps of BERTopic, presented from bottom to top. It highlights the possibility of employing various techniques at each step of the process. For example, one could choose between SBERT or SpaCy for document embedding, UMAP or PCA for dimensionality reduction, and GPT or KeyBERT for the fine-tuning phase.
 
 \begin{figure}[h] % adjust placement if needed
-    \centering 
+    \centering
     \includegraphics[width=\textwidth]{images/modularity_modified.pdf}
     \caption{BERTopic modularity (inspired by \cite{grootendorst_algorithm_nodate})}
     \label{fig:modularity_modified}
@@ -652,97 +652,97 @@ In particular, the topics generated through c-TF-IDF can be viewed as canditate 
 {
     \color{red}
 
-According to \citet{abdelrazek_topic_2022}, since topic models can be applied in various application domains, they can be evaluated extrinsically according to how they perform in the domain where they were applied. They can also be evaluated intrinsically by considering the generated topics themselves. Intrinsic evaluation is independent of any specific domain and is thus more general. The different models differ in simplicity, computation efficiency, and modeling assumptions. They accordingly differ in how they perform on different corpora and different applications. There is little consensus on the aspects of topic model evaluation. There have also been different methods to evaluate a specific aspect.
+    According to \citet{abdelrazek_topic_2022}, since topic models can be applied in various application domains, they can be evaluated extrinsically according to how they perform in the domain where they were applied. They can also be evaluated intrinsically by considering the generated topics themselves. Intrinsic evaluation is independent of any specific domain and is thus more general. The different models differ in simplicity, computation efficiency, and modeling assumptions. They accordingly differ in how they perform on different corpora and different applications. There is little consensus on the aspects of topic model evaluation. There have also been different methods to evaluate a specific aspect.
 
-\citet{abdelrazek_topic_2022} discuss several evaluation criteria - namely, quality, interpretability, stability, diversity, efficiency and flexibility (\cref{fig:evaluation_criteria}). Here, we will focus on quality, interpretability and diversity, as they are most appropriate for our use case.
+    \citet{abdelrazek_topic_2022} discuss several evaluation criteria - namely, quality, interpretability, stability, diversity, efficiency and flexibility (\cref{fig:evaluation_criteria}). Here, we will focus on quality, interpretability and diversity, as they are most appropriate for our use case.
 
-\begin{figure}[h] % adjust placement if needed
-    \centering 
-    \begin{tikzpicture}
-      \node (eval) [rectangle, draw, text width=3cm, text centered, minimum height=0.75cm] {Evaluation metrics};
-      
-      \node (quality) [rectangle, draw, below left=of eval, text width=2cm, text centered, minimum height=0.75cm, xshift=-3.35cm, yshift=0.5cm] {Quality};
-      \node (interpretability) [rectangle, draw, right=of quality, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Interpretability};
-      \node (stability) [rectangle, draw, right=of interpretability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Stability};
-      \node (diversity) [rectangle, draw, right=of stability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Diversity};
-      \node (efficiency) [rectangle, draw, right=of diversity, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Efficiency};
-      \node (flexibility) [rectangle, draw, right=of efficiency, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Flexibility};
-      
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (quality.north);
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (interpretability.north);
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (stability.north);
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (diversity.north);
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (efficiency.north);
-      \draw[-] (eval.south) -- ++(0,-0.25) -| (flexibility.north);
-    \end{tikzpicture}
-    \caption{Topic models evaluation criteria \cite{abdelrazek_topic_2022}}
-    \label{fig:evaluation_criteria}
-\end{figure}
+    \begin{figure}[h] % adjust placement if needed
+        \centering
+        \begin{tikzpicture}
+            \node (eval) [rectangle, draw, text width=3cm, text centered, minimum height=0.75cm] {Evaluation metrics};
 
-\textbf{Quality and Perplexity}
+            \node (quality) [rectangle, draw, below left=of eval, text width=2cm, text centered, minimum height=0.75cm, xshift=-3.35cm, yshift=0.5cm] {Quality};
+            \node (interpretability) [rectangle, draw, right=of quality, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Interpretability};
+            \node (stability) [rectangle, draw, right=of interpretability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Stability};
+            \node (diversity) [rectangle, draw, right=of stability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Diversity};
+            \node (efficiency) [rectangle, draw, right=of diversity, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Efficiency};
+            \node (flexibility) [rectangle, draw, right=of efficiency, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Flexibility};
 
-Perplexity measures the model’s capability to generate the documents in corpus based on the learned topics. It measures the model’s predictive power but not the latent structure, so perplexity only shows how well the model explains the data. A model is perplexed if the information gain of learning the random variable’s outcome is small, so the lower the perplexity, the better the model in explaining the observed documents.
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (quality.north);
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (interpretability.north);
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (stability.north);
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (diversity.north);
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (efficiency.north);
+            \draw[-] (eval.south) -- ++(0,-0.25) -| (flexibility.north);
+        \end{tikzpicture}
+        \caption{Topic models evaluation criteria \cite{abdelrazek_topic_2022}}
+        \label{fig:evaluation_criteria}
+    \end{figure}
 
-There are some disadvantages to using perplexity as an evaluation metric in this Master's thesis. First, perplexity must be normalized to the vocabulary size in the corpus since it changes with different corpus and topic sizes, whereas BERTopic will not always extract the same number of topics, unless explictly told to reduce the number of topics. Also, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Moreover, non-generative models, such as NMF, will not have a defined perplexity score, since they cannot provide probabilities for word sequences.
+    \textbf{Quality and Perplexity}
 
-\textbf{Interpretability and Topic coherence}
+    Perplexity measures the model’s capability to generate the documents in corpus based on the learned topics. It measures the model’s predictive power but not the latent structure, so perplexity only shows how well the model explains the data. A model is perplexed if the information gain of learning the random variable’s outcome is small, so the lower the perplexity, the better the model in explaining the observed documents.
 
-A topic is a discrete distribution over words. This set of words is evaluated for being human interpretable. For this to occur, the generated words should be associated with a single semantic meaning. Topic coherence metrics compute how the top-k words of a topic are related to each other.
+    There are some disadvantages to using perplexity as an evaluation metric in this Master's thesis. First, perplexity must be normalized to the vocabulary size in the corpus since it changes with different corpus and topic sizes, whereas BERTopic will not always extract the same number of topics, unless explictly told to reduce the number of topics. Also, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Moreover, non-generative models, such as NMF, will not have a defined perplexity score, since they cannot provide probabilities for word sequences.
 
-\citet{newman_automatic_2010} assess coherence by observing the lexical similarity between pairs of words. The authors experimented with different similarity measures and found mutual information to be the most consistent performer. The pointwise mutual information, $PMI$, between word pair $(w_i, w_j)$ is calculated as below:
+    \textbf{Interpretability and Topic coherence}
 
-$$PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}$$
+    A topic is a discrete distribution over words. This set of words is evaluated for being human interpretable. For this to occur, the generated words should be associated with a single semantic meaning. Topic coherence metrics compute how the top-k words of a topic are related to each other.
 
-It quantifies the discrepancy between the probability of $w_i$ and $w_j$ co-occurring versus the probabilities of their individual occurrences, assuming independence. $p(w_i,w_j)$ is the joint probability that both words $w_i$ and $w_j$ occur together. $p(w_i)$ and $p(w_j)$ are the individual probabilities of the words $w_i$ and $w_j$ occurring in the corpus.
+    \citet{newman_automatic_2010} assess coherence by observing the lexical similarity between pairs of words. The authors experimented with different similarity measures and found mutual information to be the most consistent performer. The pointwise mutual information, $PMI$, between word pair $(w_i, w_j)$ is calculated as below:
 
+    $$PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}$$
 
-Coherence usually has a trade-off with perplexity \cite{chang_reading_2009}, optimizing perplexity usually leads to decreased coherence.
-
-\textbf{Topic diversity}
-
-This metric describes how semantically diverse the obtained topics are. One way to define diversity is introduced in \cite{dieng_topic_2020}. It defines topic diversity as the percentage of unique words in the top 25 words of all topics. So, in general, diversity metrics that measure how diverse the top-k words of a topic are to each other. A topic model should generate diverse topics and score high on this metric. A low score indicates redundant topics, meaning the model could not sufficiently disentangle the corpus’s themes. Note that selecting a number of topics in the model affects the topic diversity. A too large number could result in similar topics with overlapping top words. A too small number could result in broad topics with poor interpretability.
+    It quantifies the discrepancy between the probability of $w_i$ and $w_j$ co-occurring versus the probabilities of their individual occurrences, assuming independence. $p(w_i,w_j)$ is the joint probability that both words $w_i$ and $w_j$ occur together. $p(w_i)$ and $p(w_j)$ are the individual probabilities of the words $w_i$ and $w_j$ occurring in the corpus.
 
 
-\textbf{Classification evaluation metrics}
+    Coherence usually has a trade-off with perplexity \cite{chang_reading_2009}, optimizing perplexity usually leads to decreased coherence.
 
-It is important to note that the evaluation metrics above concern topic modeling as an unsupervised task. If after experimentation we find that our proposed BERTopic model does not perform sufficiently well, we may turn the problem into a (semi-)supervised problem. In this case, different metrics will apply, the most popular of which (besides accuracy, precision, recall and F1 score) are coverage and purity.
+    \textbf{Topic diversity}
 
-Coverage refers to how well the concepts in the document collection are represented. Coverage can be divided into two types of coverage, topic coverage and document coverage. Topic coverage measures assess how representative the topics themselves are, i.e. are the topics in a document collection identified by the model. The most prevalent topic coverage measure is topic recall. Topic recall is the fraction of ground truth topics recovered by the topic model. Document coverage measures evaluate how well documents are represented by topics. Topic model accuracy is a typical measure for evaluating document coverage. It is defined as the fraction of documents that are accurately labeled by the topic model. In order to evaluate topic recall and accuracy, ground truth topics must be available. Topic recall is used more sparingly than topic accuracy.
+    This metric describes how semantically diverse the obtained topics are. One way to define diversity is introduced in \cite{dieng_topic_2020}. It defines topic diversity as the percentage of unique words in the top 25 words of all topics. So, in general, diversity metrics that measure how diverse the top-k words of a topic are to each other. A topic model should generate diverse topics and score high on this metric. A low score indicates redundant topics, meaning the model could not sufficiently disentangle the corpus’s themes. Note that selecting a number of topics in the model affects the topic diversity. A too large number could result in similar topics with overlapping top words. A too small number could result in broad topics with poor interpretability.
 
-When a full set of ground truth topics are not readily available, other metrics are used. Purity is the accuracy of the model if documents are always assigned the dominant topic. This metric attempts to penalize models that assign a large number of low probability topics to documents, as opposed to a model that assigns a high probability to a single topic across the document collection.
 
-\textbf{OCTIS}
+    \textbf{Classification evaluation metrics}
 
-OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is a unified and open-source evaluation framework for training, analyzing, and comparing topic models over several datasets and evaluation metrics.
+    It is important to note that the evaluation metrics above concern topic modeling as an unsupervised task. If after experimentation we find that our proposed BERTopic model does not perform sufficiently well, we may turn the problem into a (semi-)supervised problem. In this case, different metrics will apply, the most popular of which (besides accuracy, precision, recall and F1 score) are coverage and purity.
 
-It allows the user to optimize the models’ hyper-parameters for a fair experimental comparison. The proposed framework provides a topic modeling pipeline (\cref{fig:octis}). The main functionalities of OCTIS are related to dataset pre-processing, training topic models, estimating evaluation metrics, hyperparameter optimization, and interactive web dashboard visualization.  
+    Coverage refers to how well the concepts in the document collection are represented. Coverage can be divided into two types of coverage, topic coverage and document coverage. Topic coverage measures assess how representative the topics themselves are, i.e. are the topics in a document collection identified by the model. The most prevalent topic coverage measure is topic recall. Topic recall is the fraction of ground truth topics recovered by the topic model. Document coverage measures evaluate how well documents are represented by topics. Topic model accuracy is a typical measure for evaluating document coverage. It is defined as the fraction of documents that are accurately labeled by the topic model. In order to evaluate topic recall and accuracy, ground truth topics must be available. Topic recall is used more sparingly than topic accuracy.
 
-OCTIS provides several evaluation metrics for topic models, including coherence, significance, diversity and classification metrics.
+    When a full set of ground truth topics are not readily available, other metrics are used. Purity is the accuracy of the model if documents are always assigned the dominant topic. This metric attempts to penalize models that assign a large number of low probability topics to documents, as opposed to a model that assigns a high probability to a single topic across the document collection.
 
-The optimal hyper-parameter configuration is determined according to a Bayesian Optimization (BO) strategy \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the provided evaluation metrics. Since the performance estimated by the evaluation metrics can be affected by noise, the objective function is computed as the median of a given number of model runs (i.e., topic models run with the same hyperparameter configuration) computed for the selected evaluation metric.
+    \textbf{OCTIS}
 
-BO is a sequential model-based optimization strategy for expensive and noisy black-box functions (e.g. topic models). The basic idea consists of using all the model’s configurations evaluated so far to approximate the value of the performance metric and then selects a new promising configuration to evaluate. The approximation is provided by a probabilistic \textit{surrogate model}, which describes the prior belief over the objective function using the observed configurations. The next configuration to evaluate is selected through the optimization of an \textit{acquisition function}, which leverages the uncertainty in the posterior to guide the exploration.
+    OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is a unified and open-source evaluation framework for training, analyzing, and comparing topic models over several datasets and evaluation metrics.
 
-\begin{figure}[h] % adjust placement if needed
-    \centering 
-    \includegraphics[width=0.7\textwidth]{images/octis.pdf}
-    \caption{Workflow of the OCTIS framework \cite{terragni_octis_2021}}
-    \label{fig:octis}
-\end{figure}
+    It allows the user to optimize the models’ hyper-parameters for a fair experimental comparison. The proposed framework provides a topic modeling pipeline (\cref{fig:octis}). The main functionalities of OCTIS are related to dataset pre-processing, training topic models, estimating evaluation metrics, hyperparameter optimization, and interactive web dashboard visualization.
 
-OCTIS could prove to be a valuable tool for the Master's thesis, as it provides a unified framework to train the proposed BERTopic model and the baseline models, and to compare them using a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} used OCTIS to evaluate the model's performance.
+    OCTIS provides several evaluation metrics for topic models, including coherence, significance, diversity and classification metrics.
+
+    The optimal hyper-parameter configuration is determined according to a Bayesian Optimization (BO) strategy \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the provided evaluation metrics. Since the performance estimated by the evaluation metrics can be affected by noise, the objective function is computed as the median of a given number of model runs (i.e., topic models run with the same hyperparameter configuration) computed for the selected evaluation metric.
+
+    BO is a sequential model-based optimization strategy for expensive and noisy black-box functions (e.g. topic models). The basic idea consists of using all the model’s configurations evaluated so far to approximate the value of the performance metric and then selects a new promising configuration to evaluate. The approximation is provided by a probabilistic \textit{surrogate model}, which describes the prior belief over the objective function using the observed configurations. The next configuration to evaluate is selected through the optimization of an \textit{acquisition function}, which leverages the uncertainty in the posterior to guide the exploration.
+
+    \begin{figure}[h] % adjust placement if needed
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/octis.pdf}
+        \caption{Workflow of the OCTIS framework \cite{terragni_octis_2021}}
+        \label{fig:octis}
+    \end{figure}
+
+    OCTIS could prove to be a valuable tool for the Master's thesis, as it provides a unified framework to train the proposed BERTopic model and the baseline models, and to compare them using a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} used OCTIS to evaluate the model's performance.
 }
 \todo[inline]{
 
-- Go deeper into the models that will be used. I.e., BERTopic.
+    - Go deeper into the models that will be used. I.e., BERTopic.
 
-- Discuss metrics more in depth.
+    - Discuss metrics more in depth.
 
-- Discuss baselines - LDA, T2V, NMF. What could be some other baselines?
+    - Discuss baselines - LDA, T2V, NMF. What could be some other baselines?
 
-Taniya:
-- For baselines, we can refer to the papers and include models which are generally used as a baseline (for easy comparison)> 
-so LDA, T2V, NMF, etc.
+    Taniya:
+    - For baselines, we can refer to the papers and include models which are generally used as a baseline (for easy comparison)>
+    so LDA, T2V, NMF, etc.
 }
 
 \subsection{Preliminary studies and analyses}
@@ -780,51 +780,51 @@ To process the generated tags, the script employed spaCy to clean and standardiz
     \caption{Percentage of occurrence for each tag}
     \begin{subtable}{.5\textwidth}
         \centering
-            \begin{tabular}{@{\extracolsep{4pt}}lc}
-                \toprule
-                \textbf{Tag} & \multicolumn{1}{c}{\textbf{Percentage (\%)}} \\
-                \midrule
-                Manufacturing & 1.45 \\
-                Machine Learning & 20.72 \\
-                Mathematics & 2.69 \\
-                Economics & 5.01 \\
-                Education & 0.93 \\
-                Medicine & 2.88 \\
-                Images & 1.99 \\
-                Health & 2.35 \\
-                Demographics & 2.77 \\
-                Life Science & 16.22 \\
-                Agriculture & 1.05 \\
-                Statistics & 5.26 \\
-                Human Activities & 0.41 \\
-                Physical Sciences & 0.72 \\
-                Chemistry & 12.87 \\
-                Text \& Literature & 0.55 \\
-                \hline \\
-            \end{tabular}
+        \begin{tabular}{@{\extracolsep{4pt}}lc}
+            \toprule
+            \textbf{Tag}       & \multicolumn{1}{c}{\textbf{Percentage (\%)}} \\
+            \midrule
+            Manufacturing      & 1.45                                         \\
+            Machine Learning   & 20.72                                        \\
+            Mathematics        & 2.69                                         \\
+            Economics          & 5.01                                         \\
+            Education          & 0.93                                         \\
+            Medicine           & 2.88                                         \\
+            Images             & 1.99                                         \\
+            Health             & 2.35                                         \\
+            Demographics       & 2.77                                         \\
+            Life Science       & 16.22                                        \\
+            Agriculture        & 1.05                                         \\
+            Statistics         & 5.26                                         \\
+            Human Activities   & 0.41                                         \\
+            Physical Sciences  & 0.72                                         \\
+            Chemistry          & 12.87                                        \\
+            Text \& Literature & 0.55                                         \\
+            \hline                                                            \\
+        \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\textwidth}
         \centering
         \begin{tabular}{@{\extracolsep{4pt}}lc}
             \toprule
-            \textbf{Tag} & \multicolumn{1}{c}{\textbf{Percentage (\%)}} \\
+            \textbf{Tag}           & \multicolumn{1}{c}{\textbf{Percentage (\%)}} \\
             \midrule
-            Transportation & 2.35 \\
-            Government & 1.27 \\
-            Politics & 0.19 \\
-            No description & 2.55 \\
-            Computer Systems & 7.62 \\
-            Astronomy & 0.67 \\
-            Earth Science & 1.12 \\
-            Social Media & 2.07 \\
-            Meteorology & 1.40 \\
-            Geography & 0.99 \\
-            Language & 0.46 \\
-            Computational Universe & 0.90 \\
-            History & 0.12 \\
-            Culture & 0.17 \\
-            Sociology & 0.22 \\
-            \hline \\
+            Transportation         & 2.35                                         \\
+            Government             & 1.27                                         \\
+            Politics               & 0.19                                         \\
+            No description         & 2.55                                         \\
+            Computer Systems       & 7.62                                         \\
+            Astronomy              & 0.67                                         \\
+            Earth Science          & 1.12                                         \\
+            Social Media           & 2.07                                         \\
+            Meteorology            & 1.40                                         \\
+            Geography              & 0.99                                         \\
+            Language               & 0.46                                         \\
+            Computational Universe & 0.90                                         \\
+            History                & 0.12                                         \\
+            Culture                & 0.17                                         \\
+            Sociology              & 0.22                                         \\
+            \hline                                                                \\
         \end{tabular}
     \end{subtable}
     \label{table:tag-occurrence}
@@ -840,13 +840,13 @@ Initial cleaning of the datasets involved removing those without descriptions, t
 \Cref{fig:description_length_histogram} illustrates the distribution of description lengths by character count. It reveals that most datasets have descriptions under 2000 characters. This observation is not seen as a limitation, given the successful application of topic models on brief texts, such as tweets, in previous studies.
 
 \begin{figure}[h] % adjust placement if needed
-    \centering 
+    \centering
     \input{images/description_length_histogram.pgf}
     \caption{Distribution of dataset description lengths (in characters)}
     \label{fig:description_length_histogram}
 \end{figure}
 
-The process then involved transforming descriptions into a word embedding space, using the \textit{all-mpnet-base-v2} \cite{noauthor_sentence-transformersall-mpnet-base-v2_2024} sentence transformer from the Sentence-BERT repository \cite{reimers_sentence-bert_2019} \textit{sentence-transformers} as the embedding model. \textit{all-mpnet-base-v2} is an all-round model tuned for many use-cases, trained on a large and diverse dataset of over 1 billion training pairs. The model maps sentences and paragraphs into a 768-dimensional vector space, making it suitable for tasks like clustering or semantic search. It builds upon the pre-trained \textit{microsoft/mpnet-base} \cite{noauthor_microsoftmpnet-base_nodate} model, further fine-tuned using a dataset of 1 billion sentence pairs. 
+The process then involved transforming descriptions into a word embedding space, using the \textit{all-mpnet-base-v2} \cite{noauthor_sentence-transformersall-mpnet-base-v2_2024} sentence transformer from the Sentence-BERT repository \cite{reimers_sentence-bert_2019} \textit{sentence-transformers} as the embedding model. \textit{all-mpnet-base-v2} is an all-round model tuned for many use-cases, trained on a large and diverse dataset of over 1 billion training pairs. The model maps sentences and paragraphs into a 768-dimensional vector space, making it suitable for tasks like clustering or semantic search. It builds upon the pre-trained \textit{microsoft/mpnet-base} \cite{noauthor_microsoftmpnet-base_nodate} model, further fine-tuned using a dataset of 1 billion sentence pairs.
 
 The model was selected due to its top performance in the Performance Sentence Embeddings category, which evaluates models across 14 datasets from the \textit{sentence-transformers} library. It achieved the highest average performance in encoding sentences over 14 diverse tasks from different domains. Additionally, it ranked second in Performance Semantic Search across 6 datasets, a category measuring performance in semantic search tasks. These tasks involve the encoding of queries or questions and paragraphs, accommodating up to 512 word pieces, across a range of subjects.
 
@@ -866,7 +866,7 @@ Following the generation of c-TF-IDF representations, there is an optional step 
 The experiment's results reveal that the extracted topics contain descriptive and relevant terms. As illustrated in \Cref{fig:topics_barchart}, BERTopic extracted several topics from the descriptions. For example, \textit{Topic 1} encompasses terms associated with economics, particularly financial trading, including \textit{forex}, \textit{candlestick}, \textit{bid\_low}, and \textit{bid\_high}. \textit{Topic 6} focuses on housing, featuring terms like \textit{residential}, \textit{property}, and \textit{building}. Other topics cover subjects such as cars, twitter data, and transportation.
 
 \begin{figure}[h] % adjust placement if needed
-    \centering 
+    \centering
     \includegraphics[width=\textwidth]{images/topics_barchart.pdf}
     \caption{Topic word scores}
     \label{fig:topics_barchart}
@@ -912,7 +912,7 @@ Further experimentation with the model is necessary to address these cases.
 % \item Yes: Please answer question 3.
 % \item No: Please explain why the research will not result in reusable data or in data that cannot be stored or data that for other reasons are not relevant for reuse. 
 % \end{itemize}
- 
+
 % \item After the project has been completed, how will the data be stored for the long-term and made available for the use by third parties? Are there possible restrictions to data sharing or embargo reasons? Please state these here.
 % \end{enumerate}
 % }
@@ -929,24 +929,24 @@ Regarding the data to be generated, it will contain a pipeline, including the in
 
 \begin{enumerate}
 
-\item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML (or other sources).
+    \item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML (or other sources).
 
-\item \textbf{Data Cleaning}: After fetching the data, the next step involves cleaning it. This includes removing noise, correcting errors, and standardizing the format to prepare it for analysis. Data cleaning ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps.
+    \item \textbf{Data Cleaning}: After fetching the data, the next step involves cleaning it. This includes removing noise, correcting errors, and standardizing the format to prepare it for analysis. Data cleaning ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps.
 
-the next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
+          the next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
 
-\item \textbf{Topic Model}: In this step, the proposed topic model is applied to the cleaned data. The topic model is an algorithm that discovers the underlying thematic structure in the collection of documents. In this case, it will be BERTopic.
+    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the cleaned data. The topic model is an algorithm that discovers the underlying thematic structure in the collection of documents. In this case, it will be BERTopic.
 
-\item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared. This will involve baseline models such as LDA, NMF and Top2Vec.
+    \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared. This will involve baseline models such as LDA, NMF and Top2Vec.
 
-\item \textbf{Topic Labels}: The output from both the topic model and the benchmark models are sets of topics, represented by a cluster of words that are characteristic of a particular topic.
+    \item \textbf{Topic Labels}: The output from both the topic model and the benchmark models are sets of topics, represented by a cluster of words that are characteristic of a particular topic.
 
-\item \textbf{Evaluation}: Finally, the performances of the proposed topic model and benchmark models are evaluated. This can include comparing the topic coherence and diversity, as well as the relevance and interpretability of the topics generated. Evaluation metrics may also include quantitative measures such as perplexity, or qualitative assessments through human judgement.
+    \item \textbf{Evaluation}: Finally, the performances of the proposed topic model and benchmark models are evaluated. This can include comparing the topic coherence and diversity, as well as the relevance and interpretability of the topics generated. Evaluation metrics may also include quantitative measures such as perplexity, or qualitative assessments through human judgement.
 
 \end{enumerate}
 
 \begin{figure}[h] % adjust placement if needed
-    \centering 
+    \centering
     \includegraphics[width=\textwidth]{images/data_pipeline.pdf}
     \caption{Data pipeline}
     \label{fig:data_pipeline}
@@ -976,49 +976,49 @@ Additionally, the open-source status of OpenML played a role in attracting my in
 
 \appendix
 \section{Appendix}
-{
-\color{red}
+ {
+  \color{red}
 
-You may provide any type of material as appendix to your project proposal. Typical appendices include additional details about the methodology, further pilot studies for illustration and demonstration of feasibility, images and results that were created, pointers to code (or pseudo-code itself), pointers to data, etc. There is no limit in the length of the appendices. For example, this appendix contain Table~\ref{table:somethinginside}, which has information that are not relevant but shows how to use a table here.
+  You may provide any type of material as appendix to your project proposal. Typical appendices include additional details about the methodology, further pilot studies for illustration and demonstration of feasibility, images and results that were created, pointers to code (or pseudo-code itself), pointers to data, etc. There is no limit in the length of the appendices. For example, this appendix contain Table~\ref{table:somethinginside}, which has information that are not relevant but shows how to use a table here.
 
-\begin{table}[ht]
-\caption{Some results of something. It is recommend not to try to understand it.\label{table:somethinginside}}
-\begin{center}
-\begin{tabular}{cccc|cc|cc}
-& & & & \multicolumn{2}{c|}{Median} & \multicolumn{2}{c}{Maximum}\\ 
-Problem & Description & Max Value & Nodes & Memory & Time(s) & Memory & Time(s)\\
-\hline
-MINAP & naive Bayes w/ & $10^{6}$ & 50 & $59$ & $0.06$ & $84$ & $0.08$ \\
- & random params   &   & 100 & $125$ & $0.198$ & $200$ & $0.285$ \\
- &  &   & 200 & $396$ & $1.328$ & $1238$ & $1.893$ \\
- &   &   & 300 & $1103$ & $2.793$ & $20863$ & $9.893$ \\
-MAP & naive Bayes w/ & $10^{6}$ & 50 & $5$ & $0.01$ & $7$ & $0.015$ \\
- &  random params  &   & 100 & $5$ & $0.017$ & $6$ & $0.023$ \\
- &   &   & 200 & $5$ & $0.04$ & $7$ & $0.047$ \\
- &   &   & 300 & $5$ & $0.043$ & $7$ & $0.049$ \\
-MINAP & partition & $10^{4}$ & 10 & $512$ & $0.034$ & $512$ & $0.039$ \\
- & problem  &   & 20 & $91857$ & $11.553$ & $100842$ & $17.42$ \\
- &   &   & 30 & $236979$ & $77.09$ & $264638$ & $82.81$ \\
- &  & $10^{5}$ & 10 & $512$ & $0.036$ & $512$ & $0.045$ \\
- &   &   & 20 & $347065$ & $27.599$ & $372670$ & $31.10$ \\
- &   &   & 30 & $2046264$ & $532.318$ & $2237859$ & $586.4$ \\
- &  & $10^{6}$ & 10 & $512$ & $0.035$ & $512$ & $0.038$ \\
- &   &   & 20 & $501347$ & $34.672$ & $510413$ & $38.13$ \\
- &   &   & 30 & $>10$Mln & $>600$ & $>10$Mln & $>600$ \\
-MINAP & random struct. & $10^{6}$ & 50 & $57$ & $0.046$ & $101$ & $0.073$ \\
- & and parameters  &   & 100 & $143$ & $0.21$ & $197$ & $0.326$ \\
- &   &   & 200 & $417$ & $1.288$ & $713$ & $1.761$ \\
- &   &   & 300 & $1129$ & $2.509$ & $10403$ & $14.53$ \\
-MAP & random struct. & $10^{6}$ & 50 & $5$ & $0.009$ & $7$ & $0.014$ \\
- & and parameters  &   & 100 & $5$ & $0.018$ & $6$ & $0.023$ \\
- &   &   & 200 & $5$ & $0.042$ & $7$ & $0.047$ \\
- &   &   & 300 & $6$ & $0.049$ & $7$ & $0.061$ \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+  \begin{table}[ht]
+      \caption{Some results of something. It is recommend not to try to understand it.\label{table:somethinginside}}
+      \begin{center}
+          \begin{tabular}{cccc|cc|cc}
+                      &                &           &       & \multicolumn{2}{c|}{Median} & \multicolumn{2}{c}{Maximum}                       \\
+              Problem & Description    & Max Value & Nodes & Memory                      & Time(s)                     & Memory    & Time(s) \\
+              \hline
+              MINAP   & naive Bayes w/ & $10^{6}$  & 50    & $59$                        & $0.06$                      & $84$      & $0.08$  \\
+                      & random params  &           & 100   & $125$                       & $0.198$                     & $200$     & $0.285$ \\
+                      &                &           & 200   & $396$                       & $1.328$                     & $1238$    & $1.893$ \\
+                      &                &           & 300   & $1103$                      & $2.793$                     & $20863$   & $9.893$ \\
+              MAP     & naive Bayes w/ & $10^{6}$  & 50    & $5$                         & $0.01$                      & $7$       & $0.015$ \\
+                      & random params  &           & 100   & $5$                         & $0.017$                     & $6$       & $0.023$ \\
+                      &                &           & 200   & $5$                         & $0.04$                      & $7$       & $0.047$ \\
+                      &                &           & 300   & $5$                         & $0.043$                     & $7$       & $0.049$ \\
+              MINAP   & partition      & $10^{4}$  & 10    & $512$                       & $0.034$                     & $512$     & $0.039$ \\
+                      & problem        &           & 20    & $91857$                     & $11.553$                    & $100842$  & $17.42$ \\
+                      &                &           & 30    & $236979$                    & $77.09$                     & $264638$  & $82.81$ \\
+                      &                & $10^{5}$  & 10    & $512$                       & $0.036$                     & $512$     & $0.045$ \\
+                      &                &           & 20    & $347065$                    & $27.599$                    & $372670$  & $31.10$ \\
+                      &                &           & 30    & $2046264$                   & $532.318$                   & $2237859$ & $586.4$ \\
+                      &                & $10^{6}$  & 10    & $512$                       & $0.035$                     & $512$     & $0.038$ \\
+                      &                &           & 20    & $501347$                    & $34.672$                    & $510413$  & $38.13$ \\
+                      &                &           & 30    & $>10$Mln                    & $>600$                      & $>10$Mln  & $>600$  \\
+              MINAP   & random struct. & $10^{6}$  & 50    & $57$                        & $0.046$                     & $101$     & $0.073$ \\
+                      & and parameters &           & 100   & $143$                       & $0.21$                      & $197$     & $0.326$ \\
+                      &                &           & 200   & $417$                       & $1.288$                     & $713$     & $1.761$ \\
+                      &                &           & 300   & $1129$                      & $2.509$                     & $10403$   & $14.53$ \\
+              MAP     & random struct. & $10^{6}$  & 50    & $5$                         & $0.009$                     & $7$       & $0.014$ \\
+                      & and parameters &           & 100   & $5$                         & $0.018$                     & $6$       & $0.023$ \\
+                      &                &           & 200   & $5$                         & $0.042$                     & $7$       & $0.047$ \\
+                      &                &           & 300   & $6$                         & $0.049$                     & $7$       & $0.061$ \\
+              \hline
+          \end{tabular}
+      \end{center}
+  \end{table}
 
-\lipsum[1-4]
-}
+  \lipsum[1-4]
+ }
 \end{document}
 
