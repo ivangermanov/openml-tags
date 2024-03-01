@@ -577,7 +577,7 @@ Furthermore, the automation of semantic tagging could offer considerable time sa
 
 This section will delve more into the details for the models, benchmarks and evaluation metrics which will be used during the course of the Master's thesis.
 
-Namely, the plan is to use BERTopic as the base, proposed model, and LDA, NMF and Top2Vec as baseline models. Furthermore, the models will be compared based on the evaluation metrics that are explained in this section.
+Namely, the plan is to use BERTopic as the base, proposed model, and LDA, NMF and Top2Vec as baseline models. Each of the baseline models will be briefly described in terms of their internal mechanisms, while a more detailed explanation will be dedicated to BERTopic. Furthermore, the models will be compared based on the evaluation metrics that are explained in this section.
 
 \subsubsection{LDA}
 \cite{blei_latent_2001}
@@ -649,101 +649,97 @@ After generating the c-TF-IDF representations, we obtain a collection of words t
 In particular, the topics generated through c-TF-IDF can be viewed as canditate topics, comprising a set of keywords and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of large models like GPT more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
 
 \subsubsection{Evaluation metrics}
-{
-    \color{red}
 
-    According to \citet{abdelrazek_topic_2022}, since topic models can be applied in various application domains, they can be evaluated extrinsically according to how they perform in the domain where they were applied. They can also be evaluated intrinsically by considering the generated topics themselves. Intrinsic evaluation is independent of any specific domain and is thus more general. The different models differ in simplicity, computation efficiency, and modeling assumptions. They accordingly differ in how they perform on different corpora and different applications. There is little consensus on the aspects of topic model evaluation. There have also been different methods to evaluate a specific aspect.
+According to \citet{abdelrazek_topic_2022}, topic models, which are applicable across a variety of domains, can undergo evaluation through two distinct approaches: extrinsic and intrinsic. Extrinsic evaluation assesses performance based on the specific domain of application, whereas intrinsic evaluation focuses on the qualities of the generated topics themselves, independent of any domain. This makes intrinsic evaluation more universally applicable. The various models are distinguished by their simplicity, computational efficiency, and underlying assumptions, which influence their performance across different corpora and applications. However, there is a lack of agreement on the criteria for evaluating topic models, and multiple methods exist for evaluating the same quality.
 
-    \citet{abdelrazek_topic_2022} discuss several evaluation criteria - namely, quality, interpretability, stability, diversity, efficiency and flexibility (\cref{fig:evaluation_criteria}). Here, we will focus on quality, interpretability and diversity, as they are most appropriate for our use case.
+\citet{abdelrazek_topic_2022} highlight a range of criteria for evaluating topic models, including quality, interpretability, stability, diversity, efficiency, and flexibility, as illustrated in \cref{fig:evaluation_criteria}. We will focus on quality, interpretability, and diversity, given their relevance to our specific use case.
 
-    \begin{figure}[h] % adjust placement if needed
-        \centering
-        \begin{tikzpicture}
-            \node (eval) [rectangle, draw, text width=3cm, text centered, minimum height=0.75cm] {Evaluation metrics};
+\begin{figure}[h] % adjust placement if needed
+    \centering
+    \begin{tikzpicture}
+        \node (eval) [rectangle, draw, text width=3cm, text centered, minimum height=0.75cm] {Evaluation metrics};
 
-            \node (quality) [rectangle, draw, below left=of eval, text width=2cm, text centered, minimum height=0.75cm, xshift=-3.35cm, yshift=0.5cm] {Quality};
-            \node (interpretability) [rectangle, draw, right=of quality, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Interpretability};
-            \node (stability) [rectangle, draw, right=of interpretability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Stability};
-            \node (diversity) [rectangle, draw, right=of stability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Diversity};
-            \node (efficiency) [rectangle, draw, right=of diversity, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Efficiency};
-            \node (flexibility) [rectangle, draw, right=of efficiency, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Flexibility};
+        \node (quality) [rectangle, draw, below left=of eval, text width=2cm, text centered, minimum height=0.75cm, xshift=-3.35cm, yshift=0.5cm] {Quality};
+        \node (interpretability) [rectangle, draw, right=of quality, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Interpretability};
+        \node (stability) [rectangle, draw, right=of interpretability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Stability};
+        \node (diversity) [rectangle, draw, right=of stability, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Diversity};
+        \node (efficiency) [rectangle, draw, right=of diversity, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Efficiency};
+        \node (flexibility) [rectangle, draw, right=of efficiency, text width=2cm, text centered, minimum height=0.75cm, xshift=-0.41cm] {Flexibility};
 
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (quality.north);
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (interpretability.north);
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (stability.north);
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (diversity.north);
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (efficiency.north);
-            \draw[-] (eval.south) -- ++(0,-0.25) -| (flexibility.north);
-        \end{tikzpicture}
-        \caption{Topic models evaluation criteria \cite{abdelrazek_topic_2022}}
-        \label{fig:evaluation_criteria}
-    \end{figure}
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (quality.north);
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (interpretability.north);
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (stability.north);
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (diversity.north);
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (efficiency.north);
+        \draw[-] (eval.south) -- ++(0,-0.25) -| (flexibility.north);
+    \end{tikzpicture}
+    \caption{Topic models evaluation criteria \cite{abdelrazek_topic_2022}}
+    \label{fig:evaluation_criteria}
+\end{figure}
 
-    \textbf{Quality and Perplexity}
+\textbf{Quality and Perplexity}
 
-    Perplexity measures the model’s capability to generate the documents in corpus based on the learned topics. It measures the model’s predictive power but not the latent structure, so perplexity only shows how well the model explains the data. A model is perplexed if the information gain of learning the random variable’s outcome is small, so the lower the perplexity, the better the model in explaining the observed documents.
+Perplexity measures a model's ability to reproduce the documents in a corpus using the learned topics. It evaluates the model's predictive capability rather than its ability to uncover the latent structure, indicating how effectively the model explains the data. A lower perplexity suggests a model is more effective in explaining the observed documents, as it implies a higher information gain from predicting the outcome of the random variable.
 
-    There are some disadvantages to using perplexity as an evaluation metric in this Master's thesis. First, perplexity must be normalized to the vocabulary size in the corpus since it changes with different corpus and topic sizes, whereas BERTopic will not always extract the same number of topics, unless explictly told to reduce the number of topics. Also, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Moreover, non-generative models, such as NMF, will not have a defined perplexity score, since they cannot provide probabilities for word sequences.
+However, using perplexity as an evaluation metric for our use case has several drawbacks. Firstly, perplexity needs to be normalized for the size of the corpus vocabulary, as it varies with different corpus and topic sizes. This is a consideration especially since BERTopic may not consistently extract the same number of topics without specific instructions to limit topic quantity. Additionally, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Furthermore, non-generative models like NMF do not have a defined perplexity score because they do not provide probabilities of word sequences.
 
-    \textbf{Interpretability and Topic coherence}
+\textbf{Interpretability and Topic coherence}
 
-    A topic is a discrete distribution over words. This set of words is evaluated for being human interpretable. For this to occur, the generated words should be associated with a single semantic meaning. Topic coherence metrics compute how the top-k words of a topic are related to each other.
+A topic is defined as a discrete distribution over words, with the expectation that this word set is interpretable by humans. For interpretability, the words generated should collectively convey a single semantic meaning. Topic coherence metrics evaluate how related the top-k words of a topic are to one another.
 
-    \citet{newman_automatic_2010} assess coherence by observing the lexical similarity between pairs of words. The authors experimented with different similarity measures and found mutual information to be the most consistent performer. The pointwise mutual information, $PMI$, between word pair $(w_i, w_j)$ is calculated as below:
+\citet{newman_automatic_2010} measure coherence by examining the lexical similarity between word pairs, employing various similarity measures and identifying mutual information as the most reliably performing measure. The pointwise mutual information, $PMI$, between a pair of words $(w_i, w_j)$ is calculated as follows:
 
-    $$PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}$$
+$$PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}$$
 
-    It quantifies the discrepancy between the probability of $w_i$ and $w_j$ co-occurring versus the probabilities of their individual occurrences, assuming independence. $p(w_i,w_j)$ is the joint probability that both words $w_i$ and $w_j$ occur together. $p(w_i)$ and $p(w_j)$ are the individual probabilities of the words $w_i$ and $w_j$ occurring in the corpus.
+This formula quantifies the difference between the probability of $w_i$ and $w_j$ occurring together compared to the probabilities of them appearing independently within the corpus. Here, $p(w_i,w_j)$ represents the joint probability of both words occurring together, while $p(w_i)$ and $p(w_j)$ are the individual probabilities $w_i$ and $w_j$ occurring in the corpus.
 
+A known trade-off exists between coherence and perplexity \cite{chang_reading_2009}, where optimizing for lower perplexity often results in decreased coherence.
 
-    Coherence usually has a trade-off with perplexity \cite{chang_reading_2009}, optimizing perplexity usually leads to decreased coherence.
+\textbf{Topic diversity}
 
-    \textbf{Topic diversity}
+Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
 
-    This metric describes how semantically diverse the obtained topics are. One way to define diversity is introduced in \cite{dieng_topic_2020}. It defines topic diversity as the percentage of unique words in the top 25 words of all topics. So, in general, diversity metrics that measure how diverse the top-k words of a topic are to each other. A topic model should generate diverse topics and score high on this metric. A low score indicates redundant topics, meaning the model could not sufficiently disentangle the corpus’s themes. Note that selecting a number of topics in the model affects the topic diversity. A too large number could result in similar topics with overlapping top words. A too small number could result in broad topics with poor interpretability.
+\textbf{Classification evaluation metrics}
 
+The evaluation metrics discussed previously pertain to topic modeling as an unsupervised learning task. If through experimentation we establish that the BERTopic model underperforms, we might approach the problem as a (semi-)supervised task, in which case different evaluation metrics would be used. Beyond well-known metrics such as accuracy, precision, recall, and F1 score, coverage and purity would also be considered \cite{churchill_evolution_2022}.
 
-    \textbf{Classification evaluation metrics}
+Coverage examines the extent to which the concepts within the document collection are captured by the model. It can be divided into topic coverage and document coverage. Topic coverage measures how good the model is at identifying the topics in a document corpus. The most popular measure for topic coverage is topic recall, which denotes the proportion of ground truth topics identified by the topic model. Conversely, document coverage focuses on how well documents are represented by the topics. Topic model accuracy is a frequently used measure, which is the proportion of documents accurately labeled by the model. For evaluating both topic recall and accuracy, ground truth topics are required.
 
-    It is important to note that the evaluation metrics above concern topic modeling as an unsupervised task. If after experimentation we find that our proposed BERTopic model does not perform sufficiently well, we may turn the problem into a (semi-)supervised problem. In this case, different metrics will apply, the most popular of which (besides accuracy, precision, recall and F1 score) are coverage and purity.
+When ground truth topics are missing, alternative metrics like purity are used. Purity measures the model's accuracy under the assumption that documents are always assigned to the dominant topic. This metric aims to penalize models that assign a large number of low probability topics to documents, in contrast to models that assign a high probability to a single topic from the document corpus.
 
-    Coverage refers to how well the concepts in the document collection are represented. Coverage can be divided into two types of coverage, topic coverage and document coverage. Topic coverage measures assess how representative the topics themselves are, i.e. are the topics in a document collection identified by the model. The most prevalent topic coverage measure is topic recall. Topic recall is the fraction of ground truth topics recovered by the topic model. Document coverage measures evaluate how well documents are represented by topics. Topic model accuracy is a typical measure for evaluating document coverage. It is defined as the fraction of documents that are accurately labeled by the topic model. In order to evaluate topic recall and accuracy, ground truth topics must be available. Topic recall is used more sparingly than topic accuracy.
+\textbf{OCTIS}
 
-    When a full set of ground truth topics are not readily available, other metrics are used. Purity is the accuracy of the model if documents are always assigned the dominant topic. This metric attempts to penalize models that assign a large number of low probability topics to documents, as opposed to a model that assigns a high probability to a single topic across the document collection.
+OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is an open-source framework for the training, analysis, and comparison of topic models across various datasets and evaluation metrics.
 
-    \textbf{OCTIS}
+It allows for the optimization of model hyper-parameters for experimental comparison. OCTIS introduces a pipeline for topic modeling (\cref{fig:octis}), which includes dataset preprocessing, training topic models, evaluation metrics, hyperparameter optimization, and visualization through an interactive web dashboard.
 
-    OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is a unified and open-source evaluation framework for training, analyzing, and comparing topic models over several datasets and evaluation metrics.
+OCTIS offers a range of evaluation metrics for assessing topic models, such as coherence, significance, diversity, and classification metrics.
 
-    It allows the user to optimize the models’ hyper-parameters for a fair experimental comparison. The proposed framework provides a topic modeling pipeline (\cref{fig:octis}). The main functionalities of OCTIS are related to dataset pre-processing, training topic models, estimating evaluation metrics, hyperparameter optimization, and interactive web dashboard visualization.
+The discovery of optimal hyper-parameter settings relies on a Bayesian Optimization (BO) approach \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the available evaluation metrics. Given the potential variability in performance outcomes due to noise, the objective function is defined as the median performance across multiple runs of the model under the same hyperparameter settings for the chosen evaluation metric.
 
-    OCTIS provides several evaluation metrics for topic models, including coherence, significance, diversity and classification metrics.
+BO is a sequential, model-based optimization technique for noisy black-box functions that are costly and complex to evaluate directly, such as topic models. Its main idea involves using all previously evaluated hyperparameter settings to approximate the performance metric's value, and then selecting new, likely better hyperparameter settings for the next run. The approximation is done by a probabilistic \textit{surrogate model}, which has a prior belief of the objective function based on observed hyperparameter settings. The selection of the next hyperparameter settings is driven by optimizing an \textit{acquisition function}, which uses the uncertainty within the posterior distribution to guide the exploration of the parameter space.
 
-    The optimal hyper-parameter configuration is determined according to a Bayesian Optimization (BO) strategy \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the provided evaluation metrics. Since the performance estimated by the evaluation metrics can be affected by noise, the objective function is computed as the median of a given number of model runs (i.e., topic models run with the same hyperparameter configuration) computed for the selected evaluation metric.
+\begin{figure}[h] % adjust placement if needed
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/octis.pdf}
+    \caption{Workflow of the OCTIS framework \cite{terragni_octis_2021}}
+    \label{fig:octis}
+\end{figure}
 
-    BO is a sequential model-based optimization strategy for expensive and noisy black-box functions (e.g. topic models). The basic idea consists of using all the model’s configurations evaluated so far to approximate the value of the performance metric and then selects a new promising configuration to evaluate. The approximation is provided by a probabilistic \textit{surrogate model}, which describes the prior belief over the objective function using the observed configurations. The next configuration to evaluate is selected through the optimization of an \textit{acquisition function}, which leverages the uncertainty in the posterior to guide the exploration.
+OCTIS could be useful for the Master's thesis, as it provides a unified framework for training the proposed BERTopic model alongside the baseline models, facilitating their comparison across a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} employed OCTIS to evaluate the model's performance.
 
-    \begin{figure}[h] % adjust placement if needed
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/octis.pdf}
-        \caption{Workflow of the OCTIS framework \cite{terragni_octis_2021}}
-        \label{fig:octis}
-    \end{figure}
+% \todo[inline]{
 
-    OCTIS could prove to be a valuable tool for the Master's thesis, as it provides a unified framework to train the proposed BERTopic model and the baseline models, and to compare them using a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} used OCTIS to evaluate the model's performance.
-}
-\todo[inline]{
+%     - Go deeper into the models that will be used. I.e., BERTopic.
 
-    - Go deeper into the models that will be used. I.e., BERTopic.
+%     - Discuss metrics more in depth.
 
-    - Discuss metrics more in depth.
+%     - Discuss baselines - LDA, T2V, NMF. What could be some other baselines?
 
-    - Discuss baselines - LDA, T2V, NMF. What could be some other baselines?
-
-    Taniya:
-    - For baselines, we can refer to the papers and include models which are generally used as a baseline (for easy comparison)>
-    so LDA, T2V, NMF, etc.
-}
+%     Taniya:
+%     - For baselines, we can refer to the papers and include models which are generally used as a baseline (for easy comparison)>
+%     so LDA, T2V, NMF, etc.
+% }
 
 \subsection{Preliminary studies and analyses}
 % {
