@@ -32,7 +32,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,bayesnet}
 \usepackage{comment}
 
 
@@ -579,11 +579,164 @@ This section will delve more into the details for the models, benchmarks and eva
 
 Namely, the plan is to use BERTopic as the base, proposed model, and LDA, NMF and Top2Vec as baseline models. Each of the baseline models will be briefly described in terms of their internal mechanisms, while a more detailed explanation will be dedicated to BERTopic. Furthermore, the models will be compared based on the evaluation metrics that are explained in this section.
 
-\subsubsection{LDA}
-\cite{blei_latent_2001}
+\subsubsection{Latent Dirichlet Allocation (LDA)}
+% refer to section with broad literature review
+As explained in \cref{sec:broadliterature}, LDA \cite{blei_latent_2001} is a seminal and popular generative probabilistic model that assumes documents are a mixture of topics, and topics are a mixture of words. It is based on the bag-of-words assumption, i.e. the order of words in a document does not matter.
 
-\subsubsection{NMF}
-\cite{shahnaz_document_2006}, \cite{kasiviswanathan_emerging_2011}, \cite{yan_learning_2013}
+\Cref{fig:lda} illustrates the plate notation for LDA. Each plate can be viewed as a "loop", where the variable in the bottom right can be seen as the number of iterations of the loop. The figure shows that there are $K$ topics whose Dirichlet distribution over words is controlled by the hyper-parameter $\beta$. The plate below shows that there are $M$ documents, each of which has $N$ words. The gray circle with $w$ represents the observed word, while the other circles represent latent variables. $z$ refers to the topic of $w$, $\theta$ refers to the Dirichlet distribution of topics over documents, which is controlled by the hyper-parameter $\alpha$.
+
+\begin{figure}[h] % adjust placement if needed
+    \centering
+    \begin{tikzpicture}[scale=1.35, transform shape]
+        % Define nodes
+        \node[obs]                               (w) {$W$};
+        \node[latent, left=of w] (z) {$Z$};
+        \node[latent, left=of z] (theta) {$\theta$};
+        \node[latent, left=of theta]            (alpha) {$\alpha$};
+        \node[latent, above=of w, yshift=0.5cm]            (phi) {$\phi$};
+        \node[latent, left=of phi]              (beta) {$\beta$};
+
+        % Connect the nodes
+        \edge {z} {w} ;
+        \edge {theta} {z} ;
+        \edge {alpha} {theta} ;
+        \edge {beta} {phi} ;
+        \edge {phi} {w} ;
+
+        % Plates
+        \plate [inner sep=0.8cm] {plate1} {(theta)(z)(w)} {} ;
+        \plate [inner sep=0.35cm] {plate2} {(w)(z)} {} ;
+        \plate {plate3} {(phi)} {$K$} ;
+
+        % Manually adjust label positions
+        \node [xshift=-0.2cm, yshift=0.2cm] at (plate1.south east) {$M$};
+        \node [xshift=-0.55cm, yshift=0.55cm] at (plate1.south east) {$N$};
+
+    \end{tikzpicture}
+    \caption{LDA plate notation}
+    \label{fig:lda}
+\end{figure}
+
+The generative process for a corpus in the context of LDA is as follows:
+
+\begin{enumerate}
+    \item For each document $i = 1, \ldots, M$:
+          \begin{itemize}
+              \item Sample $\theta$ from a Dirichlet distribution $\theta_i \sim \text{Dir}(\alpha)$.
+          \end{itemize}
+    \item For each topic $k = 1, \ldots, K$:
+          \begin{itemize}
+              \item Sample $\phi$ from another Dirichlet distribution $\phi_k \sim \text{Dir}(\beta)$.
+          \end{itemize}
+    \item For each word $j = 1, \ldots, N$ in document $i$:
+          \begin{itemize}
+              \item Sample a topic $z_{ij} \sim \text{Multinomial}(\theta_i)$.
+              \item Sample a word $w_{ij} \sim \text{Multinomial}(\phi_{z_{ij}})$.
+          \end{itemize}
+\end{enumerate}
+
+$\theta_{ik}$ represents the probability of the $i$-th document to contain words from the $k$-th topic. Similarly, $\phi_{kw}$ represents the probability of the $k$-th topic to contain the $w$-th word.
+
+\textbf{Dirichlet distribution}
+
+Take the example of a large digital library of academic papers. First, for each paper $i$, we sample its topic distribution $\theta_i$ from a Dirichlet distribution. This represents the mixture of topics covered by the document. Secondly, for each topic $k$, we sample a word distribution $\phi_k$ over each topic from a Dirichlet distribution. Then, for each word $j$ in the document, we draw a topic $z_{ij}$ from the topic distribution Multinomial($\theta_i$), followed by sampling a word $w_{ij}$ from the word distribution Multinomial($\phi_{z_{ij}}$). This process models the generation of words in an academic paper based on latent topic structures and their corresponding word distributions.
+
+The intuition behind the Dirichlet distribution is that the $k$-dimensional Dirichlet distribution $\theta$ is controlled by a $k$-dimensional vector of positive real numbers, $\alpha$. The $\alpha$ parameter shapes how topics are distributed across documents. A uniform $\alpha$ suggests no prior preference for topic prevalence, leading to a balanced mix of topics within documents. Smaller $\alpha$ values push the model towards sparser topic representations, where documents are likely to be dominated by fewer topics. An asymmetric $\alpha$ allows for the modeling of prior beliefs about topic prevalence, making some topics more prominent than others.
+
+Similarly, $\beta$ controls the concentration of the word distribution for each topic, where the $m$-dimensional Dirichlet distribution $\phi$ is controlled by a $m$-dimensional vector of positive real numbers, $\beta$.
+
+\textbf{Learning LDA}
+
+The problem of learning an LDA model is referred to as an "inference" problem. That is, given the observed variable, \( w \), and the hyper-parameters \( \alpha \) and \( \beta \), how do we estimate the posterior of the latent variables:
+
+\[ p(\theta, z, \phi | w, \alpha, \beta) = \frac{p(\theta, z, \phi, w | \alpha, \beta)}{p(w | \alpha, \beta)} \]
+
+\citet{blei_latent_2001} discover that the integral for computing in the denominator is infeasible to compute exactly:
+
+\[ p(w | \alpha, \beta) = \frac{\Gamma(\sum_i \alpha_i)}{\prod_i \Gamma(\alpha_i)} \int \left( \prod_i \theta_i^{\alpha_i - 1} \right) \left( \prod_{n=1}^{N} \prod_{i=1}^{k} \prod_{j=1}^{V} (\theta_i \beta_{ij})^{w_{n}} \right) d\theta \]
+
+Therefore, approximate inference must be applied. Common approaches are Gibbs sampling and variational inference. Without delving into too much detail, Gibbs sampling allows us to avoid directly computing the intractable integral. The basic idea is that we want to sample from \(p(w \mid \alpha, \beta)\) to estimate the distribution, but we cannot directly do so. Instead, Gibbs sampling allows us to iteratively compute the posterior of one of the latent variables while fixing all the other variables. This way, we can obtain the posterior distribution \(p(\theta, z, \phi \mid w, \alpha, \beta)\).
+
+For each iteration, we alternatively sample \(\theta\), \(z\), \(\phi\) with all the other variables fixed. Because the samples from the early iterations are not stable, we discard the first \(B\) iterations of samples. The algorithm is shown in the following pseudo code:
+
+
+For \(i\) from \(1\) to \(\text{MaxIter}\):
+\begin{itemize}
+    \item Sample \(\theta_{i} \sim p(\theta \mid z = z_{i-1}, \phi = \phi_{i-1}, w, \alpha, \beta)\)
+    \item Sample \(z_{i} \sim p(z \mid \theta = \theta_{i}, \phi = \phi_{i-1}, w, \alpha, \beta)\)
+    \item Sample \(\phi_{i} \sim p(\phi \mid \theta = \theta_{i}, z = z_{i}, w, \alpha, \beta)\)
+\end{itemize}
+
+The algorithm begins with initial, possibly random, values for the variables \(\theta\), \(z\), and \(\phi\), and proceeds through a series of iterations up to a predefined maximum number, \(\text{MaxIter}\). At each iteration \(i\), the value of \(\theta_i\) is sampled from its conditional distribution given the current values of \(z\) and \(\phi\), denoted \(z_{i-1}\) and \(\phi_{i-1}\) to reflect their values from the previous iteration, alongside any observed data or parameters \(w\), \(\alpha\), and \(\beta\). Following this, \(z_i\) is updated based on the new \(\theta_i\) and the previous \(\phi_{i-1}\), and finally, \(\phi_i\) is sampled using the latest values of \(\theta_i\) and \(z_i\). This sequential updating of variables leverages the simpler conditional distributions to approximate the complex joint distribution. As the number of iterations increases, the algorithm converges, meaning the samples generated become representative of the target distribution.
+
+\subsubsection{Non-negative Matrix Factorization (NMF)}
+As described in \cref{sec:broadliterature}, NMF \cite{shahnaz_document_2006}, \cite{kasiviswanathan_emerging_2011}, \cite{yan_learning_2013} is a technique where an original matrix, consisting of non-negative values, is decomposed into two distinct matrices. The fundamental principle of NMF is that the product of these two matrices approximates the original matrix. This decomposition is a form of dimensionality reduction. The large original matrix typically represents a set of documents, with each document being a vector of words. The two resultant matrices in NMF are the word-topic matrix and the topic-document matrix. The topic-word matrix shows the association between topics and words, while the topic-document matrix shows the relationship between topics and individual documents.
+
+\Cref{fig:nmf} illustrates the decomposition of a matrix \(A\) into two matrices \(W\) and \(H\). The matrix \(A\) is a non-negative matrix, and the matrices \(W\) and \(H\) are also non-negative. The product of \(W\) and \(H\) approximates \(A\). \(A\) represents the word-document matrix, where each row corresponds to a word and each column corresponds to a document. \(W\) represents the word-topic matrix, where each row corresponds to a word and each column corresponds to a topic. \(H\) represents the topic-document matrix, where each row corresponds to a topic and each column corresponds to a document.
+
+\begin{figure}[h] % adjust placement if needed
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/nmf.pdf}
+    \caption{NMF decomposition}
+    \label{fig:nmf}
+\end{figure}
+
+Non-negative Matrix Factorization is a group of algorithms whose objective is to minimize $F$ - the function which measures the error between the original matrix and the product of the two matrices. The most common algorithms for NMF typically involve iterative update rules that aim to minimize $F$, such as the Frobenius norm or the Kullback-Leibler divergence.
+
+\textbf{Frobenius norm}
+
+The goal in NMF using the Frobenius norm is to minimize the objective function \( F \), which is given by:
+
+\[
+F = \| A - WH \|_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{m} (A_{ij} - (WH)_{ij})^2
+\]
+
+where \( \| \cdot \|_F \) denotes the Frobenius norm. This objective function represents the sum of the squares of the element-wise differences between \( A \) and the product \( WH \).
+
+The typical algorithm to minimize the Frobenius norm in NMF is an iterative process that involves:
+
+\begin{enumerate}
+    \item \textbf{Initialization:} Matrices \( W \) and \( H \) are initialized with non-negative values. This can be done randomly or based on some informed heuristic.
+    \item \textbf{Iterative Update:} The matrices \( W \) and \( H \) are updated iteratively to reduce \( F \). The updates are performed using multiplicative rules that inherently maintain the non-negativity of \( W \) and \( H \). The update rules are as follows:
+    \[
+    W_{ai} \leftarrow W_{ai} \cdot \frac{(AH^\top)_{ai}}{(WHH^\top)_{ai}}
+    \]
+    \[
+    H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top A)_{ib}}{(W^\top WH)_{ib}}
+    \]
+    where the indices \( a \) and \( b \) iterate over all rows and columns of \( W \) and \( H \), respectively.
+    \item \textbf{Convergence:} The iteration continues until the change in \( F \) between successive iterations is less than a predetermined threshold, or a maximum number of iterations has been reached.
+\end{enumerate}
+
+While the Frobenius norm-based NMF is not convex over both \( W \) and \( H \) together, it is convex over each one individually when the other is held constant. Thus, each iteration is guaranteed to not increase \( F \), although the solution may converge to a local minimum rather than a global minimum.
+
+\textbf{Kullback-Leibler}
+
+Unlike the Frobenius norm which assesses the difference based on squared errors, the KL divergence is more suitable for data that is inherently probabilistic. The KL divergence for two matrices is defined as:
+
+\[
+D(A || WH) = \sum_{i=1}^{n} \sum_{j=1}^{m} \left( A_{ij} \log\frac{A_{ij}}{(WH)_{ij}} - A_{ij} + (WH)_{ij} \right)
+\]
+
+where \( D(A || WH) \) represents the KL divergence between \( A \) and \( WH \), with the objective to minimize this divergence in NMF.
+
+The iterative update rules for the matrices \( W \) and \( H \) that minimize the KL divergence are as follows:
+
+\[
+W_{ai} \leftarrow W_{ai} \cdot \frac{(A \oslash (WH)H^\top)_{ai}}{\mathbf{1}H^\top_{ai}}
+\]
+
+\[
+H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top(A \oslash (WH)))_{ib}}{W^\top\mathbf{1}_{ib}}
+\]
+
+Here, \( \oslash \) denotes element-wise division, and \( \mathbf{1} \) is a matrix of ones that is used for normalization in the denominators.
+
+Just like in the case of the Frobenius norm, the KL divergence-based NMF aims to iteratively update \( W \) and \( H \) until the decrease in \( D(A || WH) \) is below a certain threshold, signaling convergence. However, it is important to note that this optimization problem is non-convex, and the solution found may represent a local minimum.
+
+
+
+
 \subsubsection{Top2Vec}
 A limitation of LDA and NMF is that they disregard semantic relationships between words, thus neglecting context. As a result, text embedding techniques have become popular as an NLP technique.
 
@@ -631,14 +784,14 @@ The process begins by combining all documents within a cluster into a single doc
 
 The classic TF-IDF \cite{joachims_probabilistic_1997} method combines term frequency and inverse document frequency to calculate a weight $W_{t,d}$ for term $t$ in document $d$ as follows:
 
-$$ W_{t,d} = tf_{t,d} \cdot \log\left(\frac{N}{df_t}\right) $$
+\[ W_{t,d} = tf_{t,d} \cdot \log\left(\frac{N}{df_t}\right) \]
 
 Here, term frequency $tf_{t,d}$ represents the frequency of term $t$ in document $d$, and inverse document frequency measures $t$'s importance across documents, calculated by the logarithm of the ratio of the total number of documents $N$ to the number of documents containing $t$.
 
 
 BERTopic extends the TF-IDF concept to clusters of documents by introducing c-TF-IDF. In this approach, documents within a cluster are concatenated into a single document, and the TF-IDF formula is modified for cluster-level representation:
 
-$$W_{t,c} = tf_{t,c} \cdot \log\left(1 + \frac{A}{tf_t}\right)$$
+\[ W_{t,c} = tf_{t,c} \cdot \log\left(1 + \frac{A}{tf_t}\right) \]
 
 In this formula, term frequency $tf_{t,c}$ now models the frequency of term $t$ within a cluster $c$, treated as a single document. The inverse document frequency is substituted with an inverse class frequency, which assesses the term's importance to a cluster. This is calculated by the logarithm of the average number of words per cluster $A$ divided by the term's frequency $tf_t$ across all clusters, with $1$ added inside the logarithm to ensure positive values. This adaptation of TF-IDF to clusters allows us to model the importance of words in clusters instead of individual documents. Furthermore, by iteratively merging c-TF-IDF representations of less prevalent topics with their closest topics, the total number of topics can be reduced to meet a predefined threshold.
 
@@ -689,7 +842,7 @@ A topic is defined as a discrete distribution over words, with the expectation t
 
 \citet{newman_automatic_2010} measure coherence by examining the lexical similarity between word pairs, employing various similarity measures and identifying mutual information as the most reliably performing measure. The pointwise mutual information, $PMI$, between a pair of words $(w_i, w_j)$ is calculated as follows:
 
-$$PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}$$
+\[PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}\]
 
 This formula quantifies the difference between the probability of $w_i$ and $w_j$ occurring together compared to the probabilities of them appearing independently within the corpus. Here, $p(w_i,w_j)$ represents the joint probability of both words occurring together, while $p(w_i)$ and $p(w_j)$ are the individual probabilities $w_i$ and $w_j$ occurring in the corpus.
 
