@@ -82,18 +82,21 @@ Eindhoven University of Technology\\
 \begin{document}
 \maketitle
 \begin{abstract}
-    {
-        \color{red}
-        Provide an informative summary of your proposal (topic, approach and potential importance of the results) in no more than three hundred words.
-        %
-        Make sure to provide an informative and relevant abstract, as this is often the first part of your proposal that reviewers will read. The abstract should clearly describe what you are going to investigate, why you are going to investigate this subject and which results you expect to find.
-        %
-        The abstract should have no more than 300 words and should contain a single paragraph.
-        %
-        This proposal should be self-contained and has a limit of pages per section. \textbf{Title page, Abstract, Sections 1 and 2 have a combined limit of 8 pages. Section 3 has a limit of 8 pages. Section 4 has a limit of 2 pages. References and Appendices are unlimited.} You should not change the overall format considerably. Please do not change the margins nor introduce considerable LaTeX code that try to compress the content. You may use the appendices for any further information that you want to provide. While there is no page limit in the appendix, reviewers are not obliged to read all your appendix content.
+    % {
+    %     \color{red}
+    %     Provide an informative summary of your proposal (topic, approach and potential importance of the results) in no more than three hundred words.
+    %     %
+    %     Make sure to provide an informative and relevant abstract, as this is often the first part of your proposal that reviewers will read. The abstract should clearly describe what you are going to investigate, why you are going to investigate this subject and which results you expect to find.
+    %     %
+    %     The abstract should have no more than 300 words and should contain a single paragraph.
+    %     %
+    %     This proposal should be self-contained and has a limit of pages per section. \textbf{Title page, Abstract, Sections 1 and 2 have a combined limit of 8 pages. Section 3 has a limit of 8 pages. Section 4 has a limit of 2 pages. References and Appendices are unlimited.} You should not change the overall format considerably. Please do not change the margins nor introduce considerable LaTeX code that try to compress the content. You may use the appendices for any further information that you want to provide. While there is no page limit in the appendix, reviewers are not obliged to read all your appendix content.
 
-        \noindent\textbf{Wordcount: 190}
-    }
+    %     \noindent\textbf{Wordcount: 190}
+    % }
+    OpenML is an open platform for sharing and managing datasets and machine learning experiments. It contains thousands of datasets across diverse domains, with each dataset page providing details such as descriptions, and statistics. Currently, OpenML utilizes manual tagging to categorize datasets. However, many lack semantic tags readable by humans, presenting an opportunity to develop an automated tagging system using topic modeling of dataset descriptions. This thesis proposes applying topic modeling to extract semantic tags from dataset descriptions, which would improve dataset discoverability on OpenML. After studying different topic modeling approaches, the performance of BERTopic will be evaluated. Baseline models like LDA, NMF and Top2Vec will be implemented alongside BERTopic, utilizing evaluation metrics such as topic coherence and diversity. Challenges include sparse dataset descriptions and the lack of ground truth values for evaluation. The expected outcome is an automated approach that generates relevant tags, enriches metadata, and increases dataset utility.
+
+    \noindent\textbf{Wordcount: 150}
 \end{abstract}
 
 %%------------------------------------------------------------------------------
@@ -738,9 +741,46 @@ Just like in the case of the Frobenius norm, the KL divergence-based NMF aims to
 
 
 \subsubsection{Top2Vec}
-A limitation of LDA and NMF is that they disregard semantic relationships between words, thus neglecting context. As a result, text embedding techniques have become popular as an NLP technique.
+A limitation of LDA and NMF is that they disregard semantic relationships between words, thus neglecting context. As a result, text embedding techniques which capture context have become popular as an NLP technique.
 
-\cite{angelov_top2vec_2020}
+\textbf{Create semantic space}
+
+In Top2Vec \cite{angelov_top2vec_2020}, the first step is to embed the documents into dense vector representations to capture the semantic meaning of the text. \Cref{fig:doc_word_embedding} illustrates the semantic space, where the purple dots represent words and the green dots represent documents. Words are closest to documents that contain them, and documents are closest to words that are most representative of their content.
+
+\begin{figure}[h] % adjust placement if needed
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/doc_word_embedding.pdf}
+    \caption{Example of semantic space \cite{angelov_top2vec_2020}}
+    \label{fig:doc_word_embedding}
+\end{figure}
+
+To learn the semantic space, Top2Vec utilizes Doc2Vec \cite{le_distributed_2014, rehurek_software_2010}, Universal Sentence Encoder \cite{cer_universal_2018}, or Sentence-BERT \cite{reimers_sentence-bert_2019}. 
+
+The original paper uses Doc2Vec's Distributed Bag of Words (DBOW) model, and even though it is simpler than Doc2Vec's Distributed Memory (DM) model, it is more efficient and has been shown to perform better in practice \cite{lau_empirical_2016}. DBOW essentially uses the document vector to predict words within a context window in the document.
+
+Doc2Vec's DBOW is similar to Word2Vec's Skip-gram model, which uses the context word to predict surrounding words in the context window. The difference is that DBOW switches the context word for the document vector to predict the surrounding words in the context window.
+
+The process of learning the semantic space in Top2Vec can be summarized as follows:
+\begin{enumerate}
+    \item \textbf{Matrix Initialization}: The process initiates with the establishment of two matrices. The document matrix, denoted as $D_{c,d}$, encapsulates document vectors where $c$ represents the corpus's document count and $d$ the embedding dimensionality. Each row within $D_{c,d}$ represents a distinct document vector $\vec{d} \in \mathbb{R}^d$. Concurrently, the context word matrix $W'_{n,d}$, embodying word vectors in analogous $d$-dimensional space for $n$ vocabulary words, may originate from pre-training, random initialization, or parallel learning processes.
+
+    \item \textbf{Word Prediction Mechanism}: Contrary to relying on neighboring context words for prediction, the DBOW model employs the document vector for internal prediction. For every document $d$, each word's context vector $\vec{w_c}'$ within $d$ (sourced from $W'_{n,d}$) aids in inferring the document's vector $\vec{d}$ in $D_{c,d}$. This inference employs a softmax function, $\text{softmax}(\vec{w_c}' \cdot D_{c,d})$, generating a corpus-wide probability distribution reflecting each document's likelihood of generating the word.
+
+    \item \textbf{Learning Process}: The learning process aims to optimize the document and word vectors to predict the document's constituent words. This optimization leverages backpropagation and stochastic gradient descent to modify both $D_{c,d}$ and $\vec{w_c}'$ from $W'_{n,d}$ to maximize the probability $P(\vec{d} | \vec{w})$ of correctly predicting the document given its words.
+
+    \item \textbf{Semantic Space}: Through optimization, a semantic space emerges where documents gravitate towards the vectors of words they comprise, effectively "attracted" by these words. Consequently, semantically similar documents (sharing similar words) cluster, whereas dissimilar documents (sharing fewer words) diverge.
+\end{enumerate}
+
+\textbf{Find number of topics}
+
+In the semantic space, a dense area of documents can be interpreted as an area of highly similar documents. First, Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP) \cite{mcinnes_umap_2020} is used to reduce the dimensionality of the document vectors. That is because the high-dimensional document vectors lead to the "curse of dimensionality", where the document vector sparsity makes it difficult to find dense clusters. Then, in order find the dense areas of documents in the semantic space, density based clustering is used on the document vectors, specifically Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) \cite{campello_density-based_2013, mcinnes_accelerated_2017, mcinnes_hdbscan_2017}. HDBSCAN assigns a label to each dense cluster of document vectors and assigns a noise label to all document vectors that are not in a dense cluster.
+
+
+\textbf{Calculate topic vectors}
+
+Given labels for each cluster of dense documents in the semantic embedding space, topic vectors can be calculated. The authors lay out multiple methods for calculating topic vectors, but discover that they perform similarly. The method that is used in the original paper is to calculate the centroid of the document vectors in each cluster. The centroid is the average of all the document vectors in the cluster. The centroid is calculated for each set of document vectors that belong do a dense cluster, generating a topic vector for each set. The number of dense areas found is the number of prominent topics identified in the corpus.
+
+In the semantic space, every point represents a topic that is best described semantically by its nearest word vectors. Therefore the word vectors that are closest to a topic vector are those that are most representative of it semantically. The distance of each word vector to the topic vector will indicate how semantically similar the word is to the topic. The words closest to the topic vector can be seen as the words that are most similar to all documents into the dense area, as the topic vector is the centroid of that area. These words can be used to summarize the common topic of the documents in the dense area.
 
 \subsubsection{BERTopic}
 Top2Vec simplifies the process of generating topics by clustering embeddings of words and documents. BERTopic \cite{grootendorst_bertopic_2022} is a state-of-the-art topic model that builds on top of the clutering embeddings approach. It employs a variation of c-TF-IDF for classes to generate representations of topics.
