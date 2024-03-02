@@ -129,7 +129,7 @@ Furthermore, previous work by \citeauthor{das_openmlscripts_nodate} has shown th
 This research aims to explore the potential of topic modeling when applied to dataset descriptions, an area that to our knowledge has not been extensively studied. By doing so, it seeks to contribute new insights to the field of topic modeling, which has been applied in various contexts but not extensively in the categorization of datasets based on their descriptions.
 
 \subsubsection{Challenges}
-One challenge encountered is the absence of comprehensive descriptions for datasets on OpenML. A significant number of these datasets lack descriptions or possess only short ones. Furthermore, the available descriptions often present difficulties in topic extraction due to their semi-structured nature, incorporating elements such as author names, dates, and attribute information. To address this issue, it may be necessary to . To address this issue, it may be necessary to identify additional datasets with adequate descriptions for training the topic model, while excluding datasets with inadequate descriptions from topic extraction and tagging process.
+One challenge encountered is the absence of comprehensive descriptions for datasets on OpenML. A significant number of these datasets lack descriptions or possess only short ones. Furthermore, the available descriptions often present difficulties in topic extraction due to their semi-structured nature, incorporating elements such as author names, dates, and attribute information. To address this issue, it may be necessary to identify additional datasets with adequate descriptions for training the topic model, while excluding datasets with inadequate descriptions from the topic extraction and tagging process.
 
 The absence of ground truth values for evaluating the performance of the proposed topic model presents another challenge. A ground truth value, such as "Economics" for a dataset containing longitudinal S\&P 500 price data, is an example of what is missing from the OpenML datasets. Consequently, identifying and selecting appropriate evaluation metrics to measure the extracted topics and tags' quality is necessary.
 
@@ -182,7 +182,7 @@ In 2000, \citet{nigam_text_2000} explored how to integrate unlabeled data into t
 \subsubsection{Latent Dirichlet Allocation}
 The term "topic model" was coined by \citet{blei_latent_2001} in their seminal 2001 paper on Latent Dirichlet Allocation (LDA). This work adopted the use of a generative model in a similar way to pLSI, but bases its model on the Dirichlet distribution. LDA introduced the concept that documents can be associated with multiple topics, rather than a single topic, as was the case with previous models. Furthermore, a key advancement of LDA was its capacity to be applied to new, unseen documents. The influence of LDA in topic modeling has been substantial, leading to numerous works improving upon LDA, and on the creation of LDA variants adapted for various tasks \cite{jelodar_latent_2019, teh_sharing_2004, lafferty_correlated_2005, blei_dynamic_2006, chemudugunta_modeling_2006, nallapati_multiscale_2007, wang_continuous_2012, iwata_topic_2009, banerjee_topic_2007, porteous_fast_2008, yao_efficient_2009, hoffman_online_2010}.
 
-Most topic models, including LDA, are unsupervised. However, for some tasks, supervision is required. To address this, a variant of LDA named Supervised Latent Dirichlet Allocation (sLDA) was developed, which transforms LDA into a supervised model \citet{mcauliffe_supervised_2007}. sLDA extends LDA by associating a response variable with each document. The aim of sLDA is to discover latent topics that are both descriptive of the documents and predictive of the response variable. It achieves this by using a generalized linear model to connect the response variable with the topic proportions in each document.
+Most topic models, including LDA, are unsupervised. However, for some tasks, supervision is required. To address this, a variant of LDA named Supervised Latent Dirichlet Allocation (sLDA) was developed, which transforms LDA into a supervised model \cite{mcauliffe_supervised_2007}. sLDA extends LDA by associating a response variable with each document. The aim of sLDA is to discover latent topics that are both descriptive of the documents and predictive of the response variable. It achieves this by using a generalized linear model to connect the response variable with the topic proportions in each document.
 
 The evolution of topic models has been influenced by changes in the types of data being analyzed, as noted by \citet{churchill_evolution_2022}. In the 2000s, the primary data sources for topic models were scientific articles, books, and newspapers. However, the landscape has shifted in recent years, with an increasing focus on digital and social media content such as tweets, blog posts, and Reddit posts.
 
@@ -199,7 +199,7 @@ In 2015, \citet{quan_short_2015} introduced the Self-Aggregating Topic Model (SA
 
 In 2014, \citet{yin_dirichlet_2014} augmented the Dirichlet Multinomial Mixture (DMM) by introducing the Gibbs Sampling DMM. This adaptation incorporated the Gibbs sampling algorithm, specifically aimed at more effective modeling of short texts. This innovative approach to the established DMM model paved the way for further advanced variations of DMM.
 
-Following this advancement, \citet{li_topic_2016} proposed two models: the Generalized Polya Urn Dirichlet Multinomial Mixture (GPUDMM) and the Generalized Polya Urn Poisson-based Dirichlet Multinomial Mixture (GPUPDMM). These models, similar to the approach by \citet{nguyen_improving_2015}, integrate word embeddings into the classic DMM model. In the GPU approach, when a word is selected, a copy of that word along with similar words are added back to the topic. This mechanism leads to clusters of similar words rising to the forefront of a topic, thus creating topics with more coherent and related sets of words. Regarding the DMM aspect of their models, \citeauthor{li_topic_2016} directly draw from \cite{yin_dirichlet_2014}'s GSDMM \citeauthor{yin_dirichlet_2014}.
+Following this advancement, \citet{li_topic_2016} proposed two models: the Generalized Polya Urn Dirichlet Multinomial Mixture (GPUDMM) and the Generalized Polya Urn Poisson-based Dirichlet Multinomial Mixture (GPUPDMM). These models, similar to the approach by \citet{nguyen_improving_2015}, integrate word embeddings into the classic DMM model. In the GPU approach, when a word is selected, a copy of that word along with similar words are added back to the topic. This mechanism leads to clusters of similar words rising to the forefront of a topic, thus creating topics with more coherent and related sets of words. Regarding the DMM aspect of their models, \citeauthor{li_topic_2016} directly draw from \citet{yin_dirichlet_2014}'s GSDMM.
 
 Building upon DMM, \citet{li_filtering_2018} developed the Common Semantics Topic Model (CSTM). In this model, they introduced a concept known as 'common topics', designed to capture words that are prevalent across all topics. CSTM then creates topics by combining words from a single specific topic with words from these common topics.
 
@@ -240,17 +240,17 @@ In 2017, \citet{bicalho_general_2017} introduced the Distributed representation-
 \citeauthor{dieng_topic_2020} introduced two models: the Embedded Topic Model (ETM) \cite{dieng_topic_2020} and the Dynamic Embedded Topic Model (D-ETM) \cite{dieng_dynamic_2019}. In both models, topics and words are represented within an embedding space. Like LDA, ETM draws a topic for each document, but it diverges from LDA by using the logistic-normal distribution instead of the Dirichlet distribution. For each word in a document, ETM assigns a topic, and then the observed word is drawn based on this topic assignment. This means that words are selected from their embeddings rather than based on their proximity to other words in the document. The D-ETM model extends this concept by adding a time-varying component to the framework. It runs the generative process at each time step, maintaining $k$ topics at each step, but all of these topics are still projected onto the same embedding space.
 
 \subsubsection{Transformer-based models}
-The Transformer model \cite{vaswani_attention_2017}, introduced by \citeauthor{vaswani_attention_2017}, marked another seminal step in the field of NLP. It is an architecture that significantly improves upon the efficiency and effectiveness of previous models for machine translation and other sequence-to-sequence tasks. Groundbreaking for its exclusive use of attention mechanisms, the Transformer eliminates the need for recurrence and convolutions. It obviates the sequential data processing inherent in recurrent neural networks (RNNs) and the fixed receptive fields of convolutional neural networks (CNNs), enabling much greater parallelization of computation. This architecture sets new state-of-the-art benchmarks on translation tasks, demonstrating its superior ability to handle long-range dependencies within text. The Transformer model has since influenced the development of numerous NLP models and frameworks, marking a pivotal shift in the approach to sequence modeling and machine learning. Its relevance to topic modeling is indirect but significant. Transformer models process text in a way that captures deeper semantic meanings, which can be leveraged for identifying coherent topics in large text corpora.
+The transformer model \cite{vaswani_attention_2017}, introduced by \citeauthor{vaswani_attention_2017}, marked another seminal step in the field of NLP. It is an architecture that significantly improves upon the efficiency and effectiveness of previous models for machine translation and other sequence-to-sequence tasks. Groundbreaking for its exclusive use of attention mechanisms, the transformer eliminates the need for recurrence and convolutions. It obviates the sequential data processing inherent in recurrent neural networks (RNNs) and the fixed receptive fields of convolutional neural networks (CNNs), enabling much greater parallelization of computation. This architecture sets new state-of-the-art benchmarks on translation tasks, demonstrating its superior ability to handle long-range dependencies within text. The transformer model has since influenced the development of numerous NLP models and frameworks, marking a pivotal shift in the approach to sequence modeling and machine learning. Its relevance to topic modeling is indirect but significant. Transformer models process text in a way that captures deeper semantic meanings, which can be leveraged for identifying coherent topics in large text corpora.
 
-Following \citet{vaswani_attention_2017}, OpenAI introduced the GPT-1, GPT-2 and GPT-3 models \cite{radford_improving_nodate}, \cite{radford_language_nodate}, \cite{brown_language_2020}. These models set state-of-the-art results, primarily through increases in the size of the training datasets together with an increased model size (parameter count).
+Following \citet{vaswani_attention_2017}, OpenAI introduced the GPT-1, GPT-2 and GPT-3 models \cite{radford_improving_nodate, radford_language_nodate, brown_language_2020}. These models set state-of-the-art results, primarily through increases in the size of the training datasets together with an increased model size (parameter count).
 
-In their 2019 work, \citet{devlin_bert_2019} introduced BERT (Bidirectional Encoder Representations from Transformers), a model leveraging the Transformer architecture to pre-train deep bidirectional representations from unlabeled text. Unlike the original Transformer by \citet{vaswani_attention_2017}, which processes text in a unidirectional manner, BERT enhances understanding by evaluating both left and right contexts across all layers, achieving a more comprehensive grasp of language nuances.
+In their 2019 work, \citet{devlin_bert_2019} introduced BERT (Bidirectional Encoder Representations from Transformers), a model leveraging the transformer architecture to pre-train deep bidirectional representations from unlabeled text. Unlike the original transformer by \citet{vaswani_attention_2017}, which processes text in a unidirectional manner, BERT enhances understanding by evaluating both left and right contexts across all layers, achieving a more comprehensive grasp of language nuances.
 
 There were a few seminal papers on BERT after \citeauthor{devlin_bert_2019}'s paper, namely RoBERTa \cite{liu_roberta_2019} and Sentence-BERT (SBERT) \cite{reimers_sentence-bert_2019}.
 
 In their research, the authors identified that the original BERT model had not been fully optimized in its training regimen. To address this, RoBERTa was developed, refining BERT’s training by eliminating the next-sentence prediction objective, utilizing larger mini-batches and higher learning rates, and extending training over a substantially larger dataset. These strategic enhancements markedly boosted RoBERTa’s performance, setting new benchmarks across a wide spectrum of NLP tasks.
 
-In the former paper, the authors noticed that the original BERT model was undertrained, and so used RoBERTa refines BERT's training process by removing the next-sentence prediction objective, using larger mini-batches and learning rates, and training on much more data. These optimizations lead to significantly improved performance across a variety of NLP benchmarks.
+In the former paper, the authors noticed that the original BERT model was undertrained, and so used RoBERTa to refine BERT's training process by removing the next-sentence prediction objective, using larger mini-batches and learning rates, and training on much more data. These optimizations lead to significantly improved performance across a variety of NLP benchmarks.
 
 Sentence-BERT, proposed by \citet{reimers_sentence-bert_2019}, adapts BERT for efficient computation of sentence embeddings. By using a siamese network structure, SBERT generates embeddings that can be compared using cosine similarity, facilitating tasks like semantic textual similarity assessment and clustering with reduced computational resources and time.
 
@@ -393,7 +393,7 @@ To be more precise about the methods and techniques which will be used during th
     \item \textbf{Data cleaning} - We will begin by cleaning the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA).
 
           % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
-    \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include traditional topic modeling approaches such as LDA and NMF. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
+    \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include topic modeling approaches such as LDA, NMF and Top2Vec. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
 
     \item \textbf{Topic modeling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
 
@@ -673,7 +673,7 @@ For \(i\) from \(1\) to \(\text{MaxIter}\):
 The algorithm begins with initial, possibly random, values for the variables \(\theta\), \(z\), and \(\phi\), and proceeds through a series of iterations up to a predefined maximum number, \(\text{MaxIter}\). At each iteration \(i\), the value of \(\theta_i\) is sampled from its conditional distribution given the current values of \(z\) and \(\phi\), denoted \(z_{i-1}\) and \(\phi_{i-1}\) to reflect their values from the previous iteration, alongside any observed data or parameters \(w\), \(\alpha\), and \(\beta\). Following this, \(z_i\) is updated based on the new \(\theta_i\) and the previous \(\phi_{i-1}\), and finally, \(\phi_i\) is sampled using the latest values of \(\theta_i\) and \(z_i\). This sequential updating of variables leverages the simpler conditional distributions to approximate the complex joint distribution. As the number of iterations increases, the algorithm converges, meaning the samples generated become representative of the target distribution.
 
 \subsubsection{Non-negative Matrix Factorization (NMF)}
-As described in \cref{sec:broadliterature}, NMF \cite{shahnaz_document_2006}, \cite{kasiviswanathan_emerging_2011}, \cite{yan_learning_2013} is a technique where an original matrix, consisting of non-negative values, is decomposed into two distinct matrices. The fundamental principle of NMF is that the product of these two matrices approximates the original matrix. This decomposition is a form of dimensionality reduction. The large original matrix typically represents a set of documents, with each document being a vector of words. The two resultant matrices in NMF are the word-topic matrix and the topic-document matrix. The topic-word matrix shows the association between topics and words, while the topic-document matrix shows the relationship between topics and individual documents.
+As described in \cref{sec:broadliterature}, NMF \cite{shahnaz_document_2006, kasiviswanathan_emerging_2011, yan_learning_2013} is a technique where an original matrix, consisting of non-negative values, is decomposed into two distinct matrices. The fundamental principle of NMF is that the product of these two matrices approximates the original matrix. This decomposition is a form of dimensionality reduction. The large original matrix typically represents a set of documents, with each document being a vector of words. The two resultant matrices in NMF are the word-topic matrix and the topic-document matrix. The topic-word matrix shows the association between topics and words, while the topic-document matrix shows the relationship between topics and individual documents.
 
 \Cref{fig:nmf} illustrates the decomposition of a matrix \(A\) into two matrices \(W\) and \(H\). The matrix \(A\) is a non-negative matrix, and the matrices \(W\) and \(H\) are also non-negative. The product of \(W\) and \(H\) approximates \(A\). \(A\) represents the word-document matrix, where each row corresponds to a word and each column corresponds to a document. \(W\) represents the word-topic matrix, where each row corresponds to a word and each column corresponds to a topic. \(H\) represents the topic-document matrix, where each row corresponds to a topic and each column corresponds to a document.
 
@@ -684,14 +684,14 @@ As described in \cref{sec:broadliterature}, NMF \cite{shahnaz_document_2006}, \c
     \label{fig:nmf}
 \end{figure}
 
-Non-negative Matrix Factorization is a group of algorithms whose objective is to minimize $F$ - the function which measures the error between the original matrix and the product of the two matrices. The most common algorithms for NMF typically involve iterative update rules that aim to minimize $F$, such as the Frobenius norm or the Kullback-Leibler divergence.
+Non-negative Matrix Factorization is a group of algorithms whose objective is to minimize $F$ - the function which measures the error between the original matrix and the product of the two matrices. The most common algorithms for NMF typically involve iterative update rules that aim to minimize $F$, such as the Frobenius norm or the Kullback-Leibler (KL) divergence.
 
 \textbf{Frobenius norm}
 
 The goal in NMF using the Frobenius norm is to minimize the objective function \( F \), which is given by:
 
 \[
-F = \| A - WH \|_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{m} (A_{ij} - (WH)_{ij})^2
+    F = \| A - WH \|_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{m} (A_{ij} - (WH)_{ij})^2
 \]
 
 where \( \| \cdot \|_F \) denotes the Frobenius norm. This objective function represents the sum of the squares of the element-wise differences between \( A \) and the product \( WH \).
@@ -701,13 +701,13 @@ The typical algorithm to minimize the Frobenius norm in NMF is an iterative proc
 \begin{enumerate}
     \item \textbf{Initialization:} Matrices \( W \) and \( H \) are initialized with non-negative values. This can be done randomly or based on some informed heuristic.
     \item \textbf{Iterative Update:} The matrices \( W \) and \( H \) are updated iteratively to reduce \( F \). The updates are performed using multiplicative rules that inherently maintain the non-negativity of \( W \) and \( H \). The update rules are as follows:
-    \[
-    W_{ai} \leftarrow W_{ai} \cdot \frac{(AH^\top)_{ai}}{(WHH^\top)_{ai}}
-    \]
-    \[
-    H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top A)_{ib}}{(W^\top WH)_{ib}}
-    \]
-    where the indices \( a \) and \( b \) iterate over all rows and columns of \( W \) and \( H \), respectively.
+          \[
+              W_{ai} \leftarrow W_{ai} \cdot \frac{(AH^\top)_{ai}}{(WHH^\top)_{ai}}
+          \]
+          \[
+              H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top A)_{ib}}{(W^\top WH)_{ib}}
+          \]
+          where the indices \( a \) and \( b \) iterate over all rows and columns of \( W \) and \( H \), respectively.
     \item \textbf{Convergence:} The iteration continues until the change in \( F \) between successive iterations is less than a predetermined threshold, or a maximum number of iterations has been reached.
 \end{enumerate}
 
@@ -718,7 +718,7 @@ While the Frobenius norm-based NMF is not convex over both \( W \) and \( H \) t
 Unlike the Frobenius norm which assesses the difference based on squared errors, the KL divergence is more suitable for data that is inherently probabilistic. The KL divergence for two matrices is defined as:
 
 \[
-D(A || WH) = \sum_{i=1}^{n} \sum_{j=1}^{m} \left( A_{ij} \log\frac{A_{ij}}{(WH)_{ij}} - A_{ij} + (WH)_{ij} \right)
+    D(A || WH) = \sum_{i=1}^{n} \sum_{j=1}^{m} \left( A_{ij} \log\frac{A_{ij}}{(WH)_{ij}} - A_{ij} + (WH)_{ij} \right)
 \]
 
 where \( D(A || WH) \) represents the KL divergence between \( A \) and \( WH \), with the objective to minimize this divergence in NMF.
@@ -726,11 +726,11 @@ where \( D(A || WH) \) represents the KL divergence between \( A \) and \( WH \)
 The iterative update rules for the matrices \( W \) and \( H \) that minimize the KL divergence are as follows:
 
 \[
-W_{ai} \leftarrow W_{ai} \cdot \frac{(A \oslash (WH)H^\top)_{ai}}{\mathbf{1}H^\top_{ai}}
+    W_{ai} \leftarrow W_{ai} \cdot \frac{(A \oslash (WH)H^\top)_{ai}}{\mathbf{1}H^\top_{ai}}
 \]
 
 \[
-H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top(A \oslash (WH)))_{ib}}{W^\top\mathbf{1}_{ib}}
+    H_{ib} \leftarrow H_{ib} \cdot \frac{(W^\top(A \oslash (WH)))_{ib}}{W^\top\mathbf{1}_{ib}}
 \]
 
 Here, \( \oslash \) denotes element-wise division, and \( \mathbf{1} \) is a matrix of ones that is used for normalization in the denominators.
@@ -754,7 +754,7 @@ In Top2Vec \cite{angelov_top2vec_2020}, the first step is to embed the documents
     \label{fig:doc_word_embedding}
 \end{figure}
 
-To learn the semantic space, Top2Vec utilizes Doc2Vec \cite{le_distributed_2014, rehurek_software_2010}, Universal Sentence Encoder \cite{cer_universal_2018}, or Sentence-BERT \cite{reimers_sentence-bert_2019}. 
+To learn the semantic space, Top2Vec utilizes Doc2Vec \cite{le_distributed_2014, rehurek_software_2010}, Universal Sentence Encoder \cite{cer_universal_2018}, or Sentence-BERT \cite{reimers_sentence-bert_2019}.
 
 The original paper uses Doc2Vec's Distributed Bag of Words (DBOW) model, and even though it is simpler than Doc2Vec's Distributed Memory (DM) model, it is more efficient and has been shown to perform better in practice \cite{lau_empirical_2016}. DBOW essentially uses the document vector to predict words within a context window in the document.
 
@@ -762,9 +762,9 @@ Doc2Vec's DBOW is similar to Word2Vec's Skip-gram model, which uses the context 
 
 The process of learning the semantic space in Top2Vec can be summarized as follows:
 \begin{enumerate}
-    \item \textbf{Matrix Initialization}: The process initiates with the establishment of two matrices. The document matrix, denoted as $D_{c,d}$, encapsulates document vectors where $c$ represents the corpus's document count and $d$ the embedding dimensionality. Each row within $D_{c,d}$ represents a distinct document vector $\vec{d} \in \mathbb{R}^d$. Concurrently, the context word matrix $W'_{n,d}$, embodying word vectors in analogous $d$-dimensional space for $n$ vocabulary words, may originate from pre-training, random initialization, or parallel learning processes.
+    \item \textbf{Matrix Initialization}: The process initiates with the establishment of two matrices. The document matrix, denoted as $D_{c,d}$, encapsulates document vectors where $c$ represents the corpus's document count and $d$ the embedding dimensionality. Each row within $D_{c,d}$ represents a distinct document vector $\vec{d} \in \mathbb{R}^d$. Concurrently, the context word matrix $W'_{n,d}$, representing word vectors in analogous $d$-dimensional space for $n$ vocabulary words, may originate from pre-training, random initialization, or parallel learning processes.
 
-    \item \textbf{Word Prediction Mechanism}: Contrary to relying on neighboring context words for prediction, the DBOW model employs the document vector for internal prediction. For every document $d$, each word's context vector $\vec{w_c}'$ within $d$ (sourced from $W'_{n,d}$) aids in inferring the document's vector $\vec{d}$ in $D_{c,d}$. This inference employs a softmax function, $\text{softmax}(\vec{w_c}' \cdot D_{c,d})$, generating a corpus-wide probability distribution reflecting each document's likelihood of generating the word.
+    \item \textbf{Word Prediction Mechanism}: Contrary to relying on neighboring context words for prediction, the DBOW model employs the document vector for prediction. For every document $d$, each word's context vector $\vec{w_c}'$ within $d$ (sourced from $W'_{n,d}$) aids in inferring the document's vector $\vec{d}$ in $D_{c,d}$. This inference employs a softmax function, $\text{softmax}(\vec{w_c}' \cdot D_{c,d})$, generating a corpus-wide probability distribution reflecting each document's likelihood of generating the word.
 
     \item \textbf{Learning Process}: The learning process aims to optimize the document and word vectors to predict the document's constituent words. This optimization leverages backpropagation and stochastic gradient descent to modify both $D_{c,d}$ and $\vec{w_c}'$ from $W'_{n,d}$ to maximize the probability $P(\vec{d} | \vec{w})$ of correctly predicting the document given its words.
 
@@ -773,14 +773,14 @@ The process of learning the semantic space in Top2Vec can be summarized as follo
 
 \textbf{Find number of topics}
 
-In the semantic space, a dense area of documents can be interpreted as an area of highly similar documents. First, Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP) \cite{mcinnes_umap_2020} is used to reduce the dimensionality of the document vectors. That is because the high-dimensional document vectors lead to the "curse of dimensionality", where the document vector sparsity makes it difficult to find dense clusters. Then, in order find the dense areas of documents in the semantic space, density based clustering is used on the document vectors, specifically Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) \cite{campello_density-based_2013, mcinnes_accelerated_2017, mcinnes_hdbscan_2017}. HDBSCAN assigns a label to each dense cluster of document vectors and assigns a noise label to all document vectors that are not in a dense cluster.
+In the semantic space, a dense area of documents can be interpreted as an area of highly similar documents. First, Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP) \cite{mcinnes_umap_2020} is used to reduce the dimensionality of the document vectors. That is because the high-dimensional document vectors lead to the "curse of dimensionality", where the document vector sparsity makes it difficult to find dense clusters. Then, in order find the dense areas of documents in the semantic space, density-based clustering is used on the document vectors, specifically Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN) \cite{campello_density-based_2013, mcinnes_accelerated_2017, mcinnes_hdbscan_2017}. HDBSCAN assigns a label to each dense cluster of document vectors and assigns a noise label to all document vectors that are not in a dense cluster.
 
 
 \textbf{Calculate topic vectors}
 
 Given labels for each cluster of dense documents in the semantic embedding space, topic vectors can be calculated. The authors lay out multiple methods for calculating topic vectors, but discover that they perform similarly. The method that is used in the original paper is to calculate the centroid of the document vectors in each cluster. The centroid is the average of all the document vectors in the cluster. The centroid is calculated for each set of document vectors that belong do a dense cluster, generating a topic vector for each set. The number of dense areas found is the number of prominent topics identified in the corpus.
 
-In the semantic space, every point represents a topic that is best described semantically by its nearest word vectors. Therefore the word vectors that are closest to a topic vector are those that are most representative of it semantically. The distance of each word vector to the topic vector will indicate how semantically similar the word is to the topic. The words closest to the topic vector can be seen as the words that are most similar to all documents into the dense area, as the topic vector is the centroid of that area. These words can be used to summarize the common topic of the documents in the dense area.
+In the semantic space, every point represents a topic that is best described semantically by its nearest word vectors. Therefore, the word vectors that are closest to a topic vector are those that are most representative of it semantically. The distance of each word vector to the topic vector will indicate how semantically similar the word is to the topic. The words closest to the topic vector can be seen as the words that are most similar to all documents into the dense area, as the topic vector is the centroid of that area. These words can be used to summarize the common topic of the documents in the dense area.
 
 \subsubsection{BERTopic}
 Top2Vec simplifies the process of generating topics by clustering embeddings of words and documents. BERTopic \cite{grootendorst_bertopic_2022} is a state-of-the-art topic model that builds on top of the clutering embeddings approach. It employs a variation of c-TF-IDF for classes to generate representations of topics.
@@ -793,7 +793,7 @@ While these steps are the default, BERTopic offers a degree of modularity. Each 
 
 This flexibility is particularly important during the clustering step. Clustering models such as HDBSCAN are built on the premise that clusters can vary in shape and form. Consequently, employing a centroid-based technique for modeling topic representations may not be appropriate, as the centroid may not accurately reflect the nature of these clusters. In contrast, a bag-of-words approach assumes minimal knowledge about the cluster's shape and form.
 
-As a result, BERTopic is highly modular, maintaining its ability to generate topics across different sub-models. This means that BERTopic effectively allows for the construction of customized topic models. \Cref{fig:modularity_modified} illustrates the six steps of BERTopic, presented from bottom to top. It highlights the possibility of employing various techniques at each step of the process. For example, one could choose between SBERT or SpaCy for document embedding, UMAP or PCA for dimensionality reduction, and GPT or KeyBERT for the fine-tuning phase.
+As a result, BERTopic is highly modular, maintaining its ability to generate topics across different sub-models. This means that BERTopic effectively allows for the construction of customized topic models. \Cref{fig:modularity_modified} illustrates the six steps of BERTopic, presented from bottom to top. It highlights the possibility of employing various techniques at each step of the process. For example, one could choose between SBERT or spaCy for document embedding, UMAP or PCA for dimensionality reduction, and GPT or KeyBERT \cite{grootendorst_maartengrkeybert_2024} for the fine-tuning phase.
 
 \begin{figure}[h] % adjust placement if needed
     \centering
@@ -804,11 +804,11 @@ As a result, BERTopic is highly modular, maintaining its ability to generate top
 
 \textbf{Document embeddings}
 
-In BERTopic, documents are transformed into embeddings to create vector space representations for semantic comparison. It is based on the idea that documents sharing the same topic will have similar semantics. For this embedding step, BERTopic utilizes the SBERT framework \citet{reimers_sentence-bert_2019}. SBERT enables the conversion of sentences and paragraphs into dense vector representations by employing pre-trained language models. This achieves top performance on several sentence embedding tasks \cite{reimers_making_2020}. The embeddings are mainly used for clustering documents with semantic similarities rather than directly for topic generation. BERTopic can use any embedding technique, provided the language model used for generating document embeddings is fine-tuned for semantic similarity. Hence, the quality of BERTopic's clustering improves as more advanced language models are developed, allowing BERTopic to evolve alongside advancements in embedding techniques.
+In BERTopic, documents are transformed into embeddings to create vector space representations for semantic comparison. It is based on the idea that documents sharing the same topic will have similar semantics. For this embedding step, BERTopic utilizes the SBERT framework \cite{reimers_sentence-bert_2019}. SBERT enables the conversion of sentences and paragraphs into dense vector representations by employing pre-trained language models. This achieves top performance on several sentence embedding tasks \cite{reimers_making_2020}. The embeddings are mainly used for clustering documents with semantic similarities rather than directly for topic generation. BERTopic can use any embedding technique, provided the language model used for generating document embeddings is fine-tuned for semantic similarity. Hence, the quality of BERTopic's clustering improves as more advanced language models are developed, allowing BERTopic to evolve alongside advancements in embedding techniques.
 
 \textbf{Dimensionality reduction}
 
-As the dimensionality of data increases, the distance to the nearest data point tends to become similar to the distance to the farthest data point \cite{aggarwal_surprising_2001, beyer_when_1999}. This phenomenon implies that in high-dimensional spaces, the notion of spatial locality becomes unclear, and distances between points show minimal variation. While several clustering methods have been developed to address the curse of dimensionality \cite{pandove_systematic_2018, steinbach_challenges_2004}, a simpler strategy involves reducing the dimensionality of embeddings. Although PCA and t-SNE are popular dimensionality reduction techniques, UMAP has been found to better preserve the local and global characteristics of high-dimensional data in its lower-dimensional representations \cite{mcinnes_umap_2020}. Furthermore, UMAP's flexibility regarding the dimensions of embeddings allows its application across various language models.
+As the dimensionality of data increases, the distance to the nearest data point tends to become similar to the distance to the farthest data point \cite{aggarwal_surprising_2001, beyer_when_1999}. This phenomenon implies that in high-dimensional spaces, the notion of spatial locality becomes unclear, and distances between points show minimal variation. While several clustering methods have been developed to address this curse of dimensionality \cite{pandove_systematic_2018, steinbach_challenges_2004}, a simpler strategy involves reducing the dimensionality of embeddings. Although PCA and t-SNE are popular dimensionality reduction techniques, UMAP has been found to better preserve the local and global characteristics of high-dimensional data in its lower-dimensional representations \cite{mcinnes_umap_2020}. Furthermore, UMAP's flexibility regarding the dimensions of embeddings allows its application across various language models.
 
 \textbf{Document clustering}
 
@@ -837,7 +837,7 @@ In this formula, term frequency $tf_{t,c}$ now models the frequency of term $t$ 
 
 \textbf{(Optional) Topic representation fine-tuning}
 
-After generating the c-TF-IDF representations, we obtain a collection of words that describe a collection of documents. c-TF-IDF is a method for quickly producing accurate topic representations. Nonetheless, the field of NLP is rapidly advancing, with frequent new developments. To make use of these developments, BERTopic offers the option to refine c-TF-IDF topics further using GPT, KeyBERT \cite{grootendorst_maartengrkeybert_2024}, spaCy \cite{noauthor_explosionspacy_nodate}, and other techniques, many of which are integrated within the BERTopic library.
+After generating the c-TF-IDF representations, we obtain a collection of words that describe a collection of documents. c-TF-IDF is a method for quickly producing accurate topic representations. Nonetheless, the field of NLP is rapidly advancing, with frequent new developments. To make use of these developments, BERTopic offers the option to refine c-TF-IDF topics further using GPT \cite{radford_improving_nodate, radford_language_nodate, brown_language_2020}, KeyBERT \cite{grootendorst_maartengrkeybert_2024}, spaCy \cite{noauthor_explosionspacy_nodate}, and other techniques, many of which are integrated within the BERTopic library.
 
 In particular, the topics generated through c-TF-IDF can be viewed as canditate topics, comprising a set of keywords and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of large models like GPT more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
 
@@ -872,7 +872,7 @@ According to \citet{abdelrazek_topic_2022}, topic models, which are applicable a
 
 \textbf{Quality and Perplexity}
 
-Perplexity measures a model's ability to reproduce the documents in a corpus using the learned topics. It evaluates the model's predictive capability rather than its ability to uncover the latent structure, indicating how effectively the model explains the data. A lower perplexity suggests a model is more effective in explaining the observed documents, as it implies a higher information gain from predicting the outcome of the random variable.
+Perplexity measures a model's ability to reproduce the documents in a corpus using the learned topics. It evaluates the model's predictive ability rather than its ability to uncover the latent structure, indicating how effectively the model explains the data. A lower perplexity suggests a model is more effective in explaining the observed documents, as it implies a higher information gain from predicting the outcome of the random variable.
 
 However, using perplexity as an evaluation metric for our use case has several drawbacks. Firstly, perplexity needs to be normalized for the size of the corpus vocabulary, as it varies with different corpus and topic sizes. This is a consideration especially since BERTopic may not consistently extract the same number of topics without specific instructions to limit topic quantity. Additionally, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Furthermore, non-generative models like NMF do not have a defined perplexity score because they do not provide probabilities of word sequences.
 
@@ -951,7 +951,7 @@ OCTIS could be useful for the Master's thesis, as it provides a unified framewor
 % \end{figure}
 % }
 
-Two initial developments illustrate the potential of the Master's thesis. The first approach, by \citeauthor{das_openmlscripts_nodate} \cite{das_openmlscripts_nodate}, employs OpenML's dataset descriptions along with GPT-3.5-turbo for dataset tagging. The second development utilized BERTopic, primarily with default parameters.
+Two initial developments illustrate the potential of the Master's thesis. The first approach, by \citeauthor{das_openmlscripts_nodate} \cite{das_openmlscripts_nodate}, employs OpenML's dataset descriptions along with GPT-3.5-turbo for dataset tagging. The second development utilized BERTopic.
 
 \subsubsection{Tag assignment using GPT 3.5}
 
@@ -959,7 +959,7 @@ Previous research by \citeauthor{das_openmlscripts_nodate} has explored the auto
 
 Specifically, the predefined tags were - \textit{Agriculture}, \textit{Astronomy}, \textit{Chemistry}, \textit{Computational Universe}, \textit{Computer Systems}, \textit{Culture}, \textit{Demographics}, \textit{Earth Science}, \textit{Economics}, \textit{Education}, \textit{Geography}, \textit{Government}, \textit{Health}, \textit{History}, \textit{Human Activities}, \textit{Images}, \textit{Language}, \textit{Life Science}, \textit{Machine Learning}, \textit{Manufacturing}, \textit{Mathematics}, \textit{Medicine}, \textit{Meteorology}, \textit{Physical Sciences}, \textit{Politics}, \textit{Social Media}, \textit{Sociology}, \textit{Statistics}, \textit{Text \& Literature}, \textit{Transportation}
 
-To illustrate the potential of using language models for automated dataset classification, the researcher developed a Python script that utilized the OpenAI GPT-3.5-turbo API and spaCy's natural language processing library. The script downloaded the descriptions of all datasets available on OpenML and used the GPT-3.5-turbo API to generate semantic tags for each dataset based on its description and the predefined list of tags.
+To illustrate the potential of using language models for automated dataset classification, \citeauthor{das_openmlscripts_nodate} developed a Python script that utilized the OpenAI GPT-3.5-turbo API and spaCy's natural language processing library. The script downloaded the descriptions of all datasets available on OpenML and used the GPT-3.5-turbo API to generate semantic tags for each dataset based on its description and the predefined list of tags.
 
 To process the generated tags, the script employed spaCy to clean and standardize the tags, ensuring that they matched the predefined list of tags. While the script did not include an evaluation of the automated tagging system, it demonstrated the feasibility of using language models for dataset classification and the potential for improving the efficiency of the tagging process.
 
@@ -1024,9 +1024,9 @@ To process the generated tags, the script employed spaCy to clean and standardiz
 
 The second stage involved utilizing BERTopic to assess the feasibility of topic extraction. BERTopic was applied in an unsupervised manner to identify latent topics within the dataset descriptions.
 
-Initial cleaning of the datasets involved removing those without descriptions, those with descriptions shorter than 100 characters, and those with repeated dataset descriptions. Datasets with identical descriptions typically represented different versions of the same dataset, where the descriptions did not vary between versions. It should be highlighted that while some datasets do update their descriptions across versions, in the majority of cases, descriptions were very similar.
+Initial cleaning of the datasets involved removing those without descriptions, those with descriptions shorter than 100 characters, and those with repeated dataset descriptions. Datasets with identical descriptions typically represented different versions of the same dataset, where the descriptions did not vary between versions. It should be highlighted that while some datasets do update their descriptions across versions, in the majority of cases, descriptions across versions were very similar.
 
-\Cref{fig:description_length_histogram} illustrates the distribution of description lengths by character count. It reveals that most datasets have descriptions under 2000 characters. This observation is not seen as a limitation, given the successful application of topic models on brief texts, such as tweets, in previous studies.
+\Cref{fig:description_length_histogram} illustrates the distribution of description lengths by character count. It reveals that most datasets have descriptions under 2000 characters. This observation is not necessarily a limitation, given the successful application of topic models on brief texts, such as tweets, in previous studies.
 
 \begin{figure}[h] % adjust placement if needed
     \centering
@@ -1048,7 +1048,7 @@ To cluster the reduced-dimensionality embeddings into groups representing simila
 
 For the vectorizer model, we utilized the \texttt{CountVectorizer} model, setting \texttt{ngram\_range=(1,2)}. This configuration allows the model to consider both unigrams, which are single words, and bigrams, which are pairs of consecutive words, to generate a bag-of-words representation.
 
-For the next step, we apply the default c-TF-IDF method to distinguish between the clusters.
+For the next step, we applied the default c-TF-IDF method to distinguish between the clusters.
 
 Following the generation of c-TF-IDF representations, there is an optional step to fine-tune the c-TF-IDF topics. For this, KeyBERT was used, utilizing cosine similarity to identify sub-phrases within a document that most closely resemble the document as a whole. This allows for the identification of words that most accurately describe the entire document.
 
@@ -1120,11 +1120,9 @@ Regarding the data to be generated, it will contain a pipeline, including the in
 
     \item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML (or other sources).
 
-    \item \textbf{Data Cleaning}: After fetching the data, the next step involves cleaning it. This includes removing noise, correcting errors, and standardizing the format to prepare it for analysis. Data cleaning ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps.
+    \item \textbf{Data Cleaning}: After fetching the data, the next step involves cleaning it. This includes removing noise, correcting errors, and standardizing the format to prepare it for analysis. Data cleaning ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps. \\ The next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
 
-          the next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
-
-    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the cleaned data. The topic model is an algorithm that discovers the underlying thematic structure in the collection of documents. In this case, it will be BERTopic.
+    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the cleaned data. In this case, it will be BERTopic.
 
     \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared. This will involve baseline models such as LDA, NMF and Top2Vec.
 
