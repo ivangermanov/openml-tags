@@ -1161,51 +1161,5 @@ Additionally, the open-source status of OpenML played a role in attracting my in
 \bibliographystyle{unsrtnat}
 \bibliography{bibliography,references}
 
-\appendix
-\section{Appendix}
- {
-  \color{red}
-
-  You may provide any type of material as appendix to your project proposal. Typical appendices include additional details about the methodology, further pilot studies for illustration and demonstration of feasibility, images and results that were created, pointers to code (or pseudo-code itself), pointers to data, etc. There is no limit in the length of the appendices. For example, this appendix contain Table~\ref{table:somethinginside}, which has information that are not relevant but shows how to use a table here.
-
-  \begin{table}[ht]
-      \caption{Some results of something. It is recommend not to try to understand it.\label{table:somethinginside}}
-      \begin{center}
-          \begin{tabular}{cccc|cc|cc}
-                      &                &           &       & \multicolumn{2}{c|}{Median} & \multicolumn{2}{c}{Maximum}                       \\
-              Problem & Description    & Max Value & Nodes & Memory                      & Time(s)                     & Memory    & Time(s) \\
-              \hline
-              MINAP   & naive Bayes w/ & $10^{6}$  & 50    & $59$                        & $0.06$                      & $84$      & $0.08$  \\
-                      & random params  &           & 100   & $125$                       & $0.198$                     & $200$     & $0.285$ \\
-                      &                &           & 200   & $396$                       & $1.328$                     & $1238$    & $1.893$ \\
-                      &                &           & 300   & $1103$                      & $2.793$                     & $20863$   & $9.893$ \\
-              MAP     & naive Bayes w/ & $10^{6}$  & 50    & $5$                         & $0.01$                      & $7$       & $0.015$ \\
-                      & random params  &           & 100   & $5$                         & $0.017$                     & $6$       & $0.023$ \\
-                      &                &           & 200   & $5$                         & $0.04$                      & $7$       & $0.047$ \\
-                      &                &           & 300   & $5$                         & $0.043$                     & $7$       & $0.049$ \\
-              MINAP   & partition      & $10^{4}$  & 10    & $512$                       & $0.034$                     & $512$     & $0.039$ \\
-                      & problem        &           & 20    & $91857$                     & $11.553$                    & $100842$  & $17.42$ \\
-                      &                &           & 30    & $236979$                    & $77.09$                     & $264638$  & $82.81$ \\
-                      &                & $10^{5}$  & 10    & $512$                       & $0.036$                     & $512$     & $0.045$ \\
-                      &                &           & 20    & $347065$                    & $27.599$                    & $372670$  & $31.10$ \\
-                      &                &           & 30    & $2046264$                   & $532.318$                   & $2237859$ & $586.4$ \\
-                      &                & $10^{6}$  & 10    & $512$                       & $0.035$                     & $512$     & $0.038$ \\
-                      &                &           & 20    & $501347$                    & $34.672$                    & $510413$  & $38.13$ \\
-                      &                &           & 30    & $>10$Mln                    & $>600$                      & $>10$Mln  & $>600$  \\
-              MINAP   & random struct. & $10^{6}$  & 50    & $57$                        & $0.046$                     & $101$     & $0.073$ \\
-                      & and parameters &           & 100   & $143$                       & $0.21$                      & $197$     & $0.326$ \\
-                      &                &           & 200   & $417$                       & $1.288$                     & $713$     & $1.761$ \\
-                      &                &           & 300   & $1129$                      & $2.509$                     & $10403$   & $14.53$ \\
-              MAP     & random struct. & $10^{6}$  & 50    & $5$                         & $0.009$                     & $7$       & $0.014$ \\
-                      & and parameters &           & 100   & $5$                         & $0.018$                     & $6$       & $0.023$ \\
-                      &                &           & 200   & $5$                         & $0.042$                     & $7$       & $0.047$ \\
-                      &                &           & 300   & $6$                         & $0.049$                     & $7$       & $0.061$ \\
-              \hline
-          \end{tabular}
-      \end{center}
-  \end{table}
-
-  \lipsum[1-4]
- }
 \end{document}
 
