@@ -393,7 +393,7 @@ To be more precise about the methods and techniques which will be used during th
     \item \textbf{Data preparation} - We will begin by preparing the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA). This may also include augmenting the dataset descriptions with already available tags, feature names, concatenating description text across dataset versions, and perhaps using an LLM to generate additional description text.
 
           % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
-    \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include topic modeling approaches such as LDA, NMF and Top2Vec. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
+    \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. I.e., humans will be brought into the loop. Baselines will include topic modeling approaches such as LDA, NMF and Top2Vec. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
 
     \item \textbf{Topic modeling} - After establishing baselines, we focus on employing BERTopic, since it leverages transformer-based embeddings for improved topic detection. BERTopic is expected to offer superior performance in terms of topic coherence and relevance due to its nuanced understanding of context and semantics.
 
@@ -441,9 +441,9 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
 
     \item (\textbf{E}) - Experiment design - In this phase, suitable evaluation metrics and baselines will be defined. The proposed model will be evaluated based on those metrics and baselines. \textbf{Deliverable:} Definition and justification of experiment design.
 
-    \item (\textbf{F}) - Topic model development - This main phase focuses on creating the topic model that will extract semantic tags from the dataset descriptions. This will include hyperparameter tuning. \textbf{Deliverable:} A detailed explanation of the model's steps and architectural decisions, hyperparameters, along with the results when applied to OpenML descriptions.
+    \item (\textbf{F}) - Topic model development - This main phase focuses on creating the topic model that will extract semantic tags from the dataset descriptions. This will include hyperparameter tuning. The first 3 weeks of topic model development will serve to create an initial model, which can already start being evaluated. \textbf{Deliverable:} A detailed explanation of the model's steps and architectural decisions, hyperparameters, along with the results when applied to OpenML descriptions.
 
-    \item (\textbf{G}) - Experiment results - during this phase, the developed topic model will be evaluated based on the evaluation metrics. Baseline model(s) will be initialized for comparison with the model. \textbf{Deliverable:} Results from the evaluation metrics and comparison between the developed topic model and the baseline model(s).
+    \item (\textbf{G}) - Experiment results - during this phase, the developed topic model will be evaluated based on the evaluation metrics. Baseline model(s) will be initialized for comparison with the model. Human evaluation will be performed to assess the quality of the generated tags during the different weeks of this phase. \textbf{Deliverable:} Results from the evaluation metrics and comparison between the developed topic model and the baseline model(s).
 
     \item (\textbf{H}) and (\textbf{I}) Defense preparation and Defense presentation - These steps are designated for preparing and presenting the project defense. \textbf{Milestone:} Preparation for the Thesis presentation.
 
@@ -473,11 +473,14 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
         \gantttitle{Weeks}{20} \\
         \gantttitlelist{1,...,20}{1} \\
         \ganttbar{(\textbf{A}) Literature analysis }{1}{3} \\
-        \ganttbar{(\textbf{B}) Environment setup }{4}{4} \\
+        \ganttbar{(\textbf{B}) Environment setup }{3}{4} \\
         \ganttbar{(\textbf{C}) Exploratory data analysis }{5}{6} \\
         \ganttbar{(\textbf{D}) Data preparation}{6}{7} \\
         \ganttbar{(\textbf{E}) Experiment design}{8}{9} \\
+        \ganttbar{}{6}{8}
         \ganttbar{(\textbf{F}) Topic model development}{10}{14} \\
+        \ganttbar{}{9}{9}
+        \ganttbar{}{12}{12}
         \ganttbar{(\textbf{G}) Experiment results}{15}{17} \\
         \ganttbar{(\textbf{H}) Defense preparation }{18}{19} \\
         \ganttbar{(\textbf{I}) Defense presentation }{20}{20} \\
