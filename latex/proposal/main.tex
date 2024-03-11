@@ -372,7 +372,7 @@ The research involves three phases: research, development, and evaluation.
 
 During the research phase, the focus is on understanding the existing literature related to the project. This phase also includes setting up a development environment. This environment will be important for building models, testing them using evaluation metrics, and for defining baseline models. Additionally, this phase involves analyzing potential implementation methods and conducting exploratory data analysis on OpenML dataset descriptions.
 
-The development phase centers on preparing the OpenML dataset descriptions for use. This preparation involves cleaning and preparing the data. In this phase, the insights gained from the research phase are applied to create topic models using the OpenML dataset descriptions.
+The development phase centers on preparing the OpenML dataset descriptions for use. In this phase, the insights gained from the research phase are applied to create topic models using the OpenML dataset descriptions.
 
 Finally, in the evaluation phase, appropriate metrics are selected to assess the model's performance. These metrics help in understanding the quality of the developed model. Also, baseline models will be defined to be used as a point of comparison with the proposed model.
 
@@ -390,7 +390,7 @@ To be more precise about the methods and techniques which will be used during th
 
 \begin{itemize}
     % \item \textcolor{blue}{We will focus on studying and understanding the paper "A General Cardinality Estimation Framework for Subgraph Matching in Property Graphs" [17]. By using their approach, we can enhance the cardinality estimates collection to support a dynamic behavior and have statistics which are modifiable at run-time.}
-    \item \textbf{Data cleaning} - We will begin by cleaning the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA).
+    \item \textbf{Data preparation} - We will begin by preparing the dataset descriptions to remove noise. This may include purging inadequate data points (e.g., descriptions that are too short), removing of stop words, stemming and lemmatization (for models which require them, such as LDA). This may also include augmenting the dataset descriptions with already available tags, feature names, concatenating description text across dataset versions, and perhaps using an LLM to generate additional description text.
 
           % \item \textcolor{blue}{We will use AvantGraph [21] to run the experiments of the dynamic cardinality estimator. AvantGraph is a query processing engine which operates on graph databases. This engine is developed in the TU Eindhoven and is concerned with innovation development in three components - query planner, cardinality estimator, and execution engine.}
     \item \textbf{Evaluation metrics and baselines} - We will define appropriate evaluation metrics and baselines. Evaluation metrics may include coherence, perplexity, and diversity, but manual inspection of the topics will also be used to assess the quality of the generated topics and their alignment with the datasets' content. Baselines will include topic modeling approaches such as LDA, NMF and Top2Vec. These models are known for their capability in identifying thematic structures within large text corpora and will serve as benchmarks to evaluate the performance of the proposed model.
@@ -437,7 +437,7 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
 
     \item (\textbf{C}) Exploratory data analysis (EDA) - In this phase, an EDA will be conducted on the dataset descriptions. This will involve identifying challenges and limitations inherent in the data. A statistical analysis will be performed. \textbf{Deliverable:} Explanation, graphs and charts describing the data and its limitations.
 
-    \item (\textbf{D}) Data cleaning and preparation - During this phase, the tasks of data cleaning and data preparation will be performed, making the data suitable for use by the topic models. \textbf{Deliverable:} Explanation, graphs and charts of the prepared dataset.
+    \item (\textbf{D}) Data preparation - During this phase, the task of data preparation will be performed, making the data suitable for use by the topic models. \textbf{Deliverable:} Explanation, graphs and charts of the prepared dataset.
 
     \item (\textbf{E}) - Experiment design - In this phase, suitable evaluation metrics and baselines will be defined. The proposed model will be evaluated based on those metrics and baselines. \textbf{Deliverable:} Definition and justification of experiment design.
 
@@ -475,7 +475,7 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
         \ganttbar{(\textbf{A}) Literature analysis }{1}{3} \\
         \ganttbar{(\textbf{B}) Environment setup }{4}{4} \\
         \ganttbar{(\textbf{C}) Exploratory data analysis }{5}{6} \\
-        \ganttbar{(\textbf{D}) Data cleaning and preparation}{6}{7} \\
+        \ganttbar{(\textbf{D}) Data preparation}{6}{7} \\
         \ganttbar{(\textbf{E}) Experiment design}{8}{9} \\
         \ganttbar{(\textbf{F}) Topic model development}{10}{14} \\
         \ganttbar{(\textbf{G}) Experiment results}{15}{17} \\
@@ -522,7 +522,7 @@ The Gantt chart (see \cref{fig:gantt_chart}) shows the scheduled timeline for co
         \hline
         Low model performance                     & \cellcolor{lightyellow} Medium           & The implemented topic modeling approach for OpenML dataset descriptions may perform sub-optimally.                                                                                                                             & Maintain regular communication with supervisors to discuss project progress and explore alternative solutions as needed.                                                                                                                                                                                                                                    \\
         \hline
-        Low data quality                          & \cellcolor{lightyellow} Medium           & The OpenML dataset descriptions may be too short or contain many undesirable artifacts (e.g., author names, arcane symbols, or other uninterpretable by topic models text). This may indirectly lead to low model performance. & Apply dataset cleaning prior to training the topic models (e.g., removal of too short descriptions, identification and removal of artifacts, stemming, lemmatization). Perform an initial exploratory data analysis (EDA) to ascertain the data quality.                                                                                                    \\
+        Low data quality                          & \cellcolor{lightyellow} Medium           & The OpenML dataset descriptions may be too short or contain many undesirable artifacts (e.g., author names, arcane symbols, or other uninterpretable by topic models text). This may indirectly lead to low model performance. & Apply dataset preparation prior to training the topic models (e.g., removal of too short descriptions, identification and removal of artifacts, stemming, lemmatization, augmentation). Perform an initial exploratory data analysis (EDA) to ascertain the data quality.                                                                                                    \\
         \hline
         Hardware Limitation for Topic Modeling    & \cellcolor{lightyellow} Medium           & The student's personal computer may not possess the requisite computational capacity to run certain topic models, particularly those involving Large Language Models (LLMs).                                                   & The student will explore the use of quantized models \cite{zhu_survey_2023} to reduce computational demands. Should this approach prove insufficient, the student will request access to the hardware facilities provided by the TU/e. Alternatively, a subscription for Google Colab will be purchased, which offers the required computational resources.
         \\
@@ -1024,7 +1024,7 @@ To process the generated tags, the script employed spaCy to clean and standardiz
 
 The second stage involved utilizing BERTopic to assess the feasibility of topic extraction. BERTopic was applied in an unsupervised manner to identify latent topics within the dataset descriptions.
 
-Initial cleaning of the datasets involved removing those without descriptions, those with descriptions shorter than 100 characters, and those with repeated dataset descriptions. Datasets with identical descriptions typically represented different versions of the same dataset, where the descriptions did not vary between versions. It should be highlighted that while some datasets do update their descriptions across versions, in the majority of cases, descriptions across versions were very similar.
+Initial preparation of the datasets involved removing those without descriptions, those with descriptions shorter than 100 characters, and those with repeated dataset descriptions. Datasets with identical descriptions typically represented different versions of the same dataset, where the descriptions did not vary between versions. It should be highlighted that while some datasets do update their descriptions across versions, in the majority of cases, descriptions across versions were very similar.
 
 \Cref{fig:description_length_histogram} illustrates the distribution of description lengths by character count. It reveals that most datasets have descriptions under 2000 characters. This observation is not necessarily a limitation, given the successful application of topic models on brief texts, such as tweets, in previous studies.
 
@@ -1112,7 +1112,7 @@ The project will involve the collection and generation of data suitable for reus
 
 Data produced by this project will be made publicly accessible via an open-source repository on a version control platform like GitHub \cite{noauthor_github_nodate}.
 
-Regarding the data to be generated, it will contain a pipeline, including the initialization of data fetching (documents), data cleaning for the topic models, the implementation of the proposed topic model along with benchmark models, and the final output, which consists of a set of topic labels pertaining to the documents. Additionally, benchmarks will be generated based on the evaluation metrics.
+Regarding the data to be generated, it will contain a pipeline, including the initialization of data fetching (documents), data preparation for the topic models, the implementation of the proposed topic model along with benchmark models, and the final output, which consists of a set of topic labels pertaining to the documents. Additionally, benchmarks will be generated based on the evaluation metrics.
 
 \Cref{fig:data_pipeline} shows a flowchart of the pipeline, which contains the following sequential steps:
 
@@ -1120,9 +1120,9 @@ Regarding the data to be generated, it will contain a pipeline, including the in
 
     \item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML (or other sources).
 
-    \item \textbf{Data Cleaning}: After fetching the data, the next step involves cleaning it. This includes removing noise, correcting errors, and standardizing the format to prepare it for analysis. Data cleaning ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps. \\ The next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
+    \item \textbf{Data Preparation}: After fetching the data, the next step involves preparing it. This includes removing noise, correcting errors, augmenting it, and standardizing the format to prepare it for analysis. Data preparation ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps. \\ The next step involves purging inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
 
-    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the cleaned data. In this case, it will be BERTopic.
+    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the prepared data. In this case, it will be BERTopic.
 
     \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared. This will involve baseline models such as LDA, NMF and Top2Vec.
 
