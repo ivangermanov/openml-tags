@@ -60,7 +60,6 @@ class SimilarityAugmenter:
 
         # Drop the similar rows
         df = df.drop(df.index[list(drop_indices.keys())])
-
         # Attach the similar dataset_ids to the remaining rows
         df[self.similar_datasets_column] = df.index.map(similar_datasets)
 
