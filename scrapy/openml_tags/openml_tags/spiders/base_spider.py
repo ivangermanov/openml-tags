@@ -18,7 +18,7 @@ class BaseSpider(scrapy.Spider, ABC):
     @classmethod
     def update_settings(cls, settings):
         super().update_settings(settings)
-        settings.set('FEED_URI', os.path.join(data_dir, cls.data_file()))
+        settings.set('FEED_URI', os.path.join(Path(__file__).parent, data_dir, cls.data_file()))
 
     @property
     @abstractmethod

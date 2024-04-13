@@ -23,6 +23,8 @@ class ArchiveIcsSpider(BaseSpider):
         additional_info_texts = response.xpath(additional_info_xpath).getall()
         additional_info = ' '.join([text.strip() for text in additional_info_texts if text.strip()])
 
+        scraped_data = dataset_info + '\n\n' + additional_info
+
         page = response.meta['playwright_page']
         select_primary = await page.query_selector('.select-primary')
 
@@ -58,5 +60,5 @@ class ArchiveIcsSpider(BaseSpider):
 
         await page.close()
 
-        return {'dataset_id': response.meta['dataset_id'], 'url': response.url, 'dataset_info': dataset_info,
-                'additional_info': additional_info}  # 'variables_table': variables_table}
+        return {'dataset_id': response.meta['dataset_id'], 'url': response.url,
+                'scraped_data': scraped_data}  # 'variables_table': variables_table}
