@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from abc import abstractmethod, ABC
 from datetime import datetime
@@ -10,6 +11,7 @@ from scrapy import Request
 from scrapy.http import Response
 
 data_dir = 'data'
+path = os.path.join(Path(__file__).parent, data_dir)
 
 
 class BaseSpider(scrapy.Spider, ABC):
@@ -18,7 +20,7 @@ class BaseSpider(scrapy.Spider, ABC):
     @classmethod
     def update_settings(cls, settings):
         super().update_settings(settings)
-        settings.set('FEED_URI', os.path.join(Path(__file__).parent, data_dir, cls.data_file()))
+        settings.set('FEED_URI', os.path.join(path, cls.data_file()))
 
     @property
     @abstractmethod
@@ -33,14 +35,14 @@ class BaseSpider(scrapy.Spider, ABC):
         """
         File where the dataset URLs are saved.
         """
-        return f'openml_datasets_{self.name}.json'
+        return f'{self.name}.json'
 
     @classmethod
     def data_file(cls):
         """
         File where the results are saved.
         """
-        return f'{cls.name}_result.json'
+        return f'{cls.name}.json'
 
     @property
     def error_file(self) -> str:
@@ -53,13 +55,13 @@ class BaseSpider(scrapy.Spider, ABC):
         json_file_path = Path(__file__).parent.parent.parent.parent / 'datasets' / self.datasets_file
         with open(json_file_path, 'r') as f:
             data = json.load(f)
-            self.log(f"Reading file {f.name}: {len(data)}")
+            self.log(f"Reading file {f.name}: {len(data)}", level=logging.INFO)
 
         for i, entry in enumerate(data):
             url = entry['original_data_url']
-            self.log(f"Processing {i}: {url}")
+            self.log(f"Processing {i}: {url}", level=logging.INFO)
             if any(domain in url for domain in self.allowed_domains):
-                yield Request(url=url, callback=self.parse, errback=self.errback,
+                yield Request(url=url, callback=self.parse, errback=self.errback, dont_filter=True,
                               meta={'dataset_id': entry['dataset_id'], 'playwright': True,
                                     'playwright_include_page': True})
 
@@ -69,10 +71,11 @@ class BaseSpider(scrapy.Spider, ABC):
         raise NotImplementedError("Subclasses should override method 'parse'")
 
     async def errback(self, failure):
-        self.logger.error("Error here: ", repr(failure))
+        self.log("Error here: ", failure)
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open(os.path.join(data_dir, self.error_file), 'a') as f:
-            f.write(f"{timestamp}: {failure.request.url}\n")
+
+        with open(os.path.join(path, self.error_file), 'a') as f:
+            f.write(f"{timestamp} - {failure.request.url} - {failure}\n")
 
         page = failure.request.meta['playwright_page']
         await page.close()

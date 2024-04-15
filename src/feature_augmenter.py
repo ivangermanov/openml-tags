@@ -1,8 +1,9 @@
 import pandas as pd
 
+
 class FeatureAugmenter:
-    def __init__(self, description_column: str, features_column: str, augmented_column: str,
-                 max_features: int = 10000, reduce_features: bool = False) -> None:
+    def __init__(self, description_column: str, features_column: str, augmented_column: str, max_features: int = 10000,
+                 reduce_features: bool = False) -> None:
         """
         Initializes the FeatureAugmenter with the names of the feature, description, and augmented columns, the maximum number of features to include, and a flag to indicate if the features should be reduced.
 
@@ -31,8 +32,7 @@ class FeatureAugmenter:
         # Optionally truncate the features in the features column
         if self.reduce_features:
             df[self.features_column] = df[self.features_column].apply(
-                lambda x: dict(list(x.items())[:self.max_features]) if isinstance(x, dict) else x
-            )
+                lambda x: dict(list(x.items())[:self.max_features]) if isinstance(x, dict) else x)
 
         augmented_description = df.get(self.augmented_column, df[self.description_column])
 
