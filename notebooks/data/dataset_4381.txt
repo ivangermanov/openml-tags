@@ -1,0 +1,21 @@
+Name: Phoneme Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Agriculture, Statistics 
+
+Subsampling of the dataset Phoneme with seed equals two arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals True. 
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not, and returns a dataset.
+
+First, we set up our random number generator using the given seed. Then we get our data and labels from the parent class. Next, we uniformly sample our classes - if there are more than the maximum allowed, we select the desired number randomly, weighted by their frequencies in the dataset. We then select the indices where any of these chosen classes are present.
+
+If we have more columns than desired, we uniformly sample them as well - again, selecting the desired number randomly without replacement. We sort our column indices and get the corresponding column names.
+
+If our dataset still has more rows than desired, we use a stratified sampling approach to reduce the number of rows. This involves concatenating our data and labels, performing a train-test split with the specified row count, and then splitting our data back into its separate components.
+
+Finally, we convert any categorical columns to strings and create a new dataset object with the subsampled data, labels, categorical mask, and column names.
+
+Features: (not included due to being unreadable)
+
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Data Reduction

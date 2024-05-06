@@ -1,0 +1,46 @@
+Jungle Chess Two Pieces Raw Endgame Complete Seed Zero NRows Two Thousand NCategories Ten NCols One Hundred Stratify True
+
+Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete with Seed Equal to Zero arguments NRows Equal to Two Thousand arguments NCols Equal to One Hundred arguments NCategories Equal to Ten arguments No Stratify Equal to False
+
+Generated with the following source code:
+
+def subsample(self, seed, nrows maximum, ncols maximum, ncategories maximum, stratified) -> Dataset:
+random number generator = numpy random default random generator with the given seed
+features = self features
+target variable = self target variable
+
+Uniformly sample categories equals target variable unique values
+if the number of categories exceeds the maximum allowed categories:
+value counts = target variable value counts
+selected categories = random number generator choice of categories with size equal to the maximum allowed categories replacing false with probability equal to value counts divided by the sum of value counts
+Select the indices where one of these categories is present equals target variable index with target variable isin selected categories
+features equals features iloc with the selected indices
+target variable equals target variable iloc with the selected indices
+
+Uniformly sample columns if required
+if the number of features columns exceeds the maximum allowed columns:
+column indices equals random number generator choice of range of the number of features columns with size equal to the maximum allowed columns replacing false
+sorted column indices equals sorted column indices
+selected columns equals list of features columns with the sorted column indices
+features equals features with the selected columns
+else:
+sorted column indices equals range of the number of features columns
+
+if the number of features rows exceeds the maximum allowed rows:
+Stratify accordingly target name equals target variable name
+data equals pandas concat of features and target variable along the columns axis
+_, subset equals train test split of data with test size equal to the maximum allowed rows stratifying data with the target name shuffling true with random state equal to the seed
+features equals subset drop with the target name along the columns axis
+target variable equals subset with the target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals list of self categorical mask with the sorted column indices
+columns equals list of features columns
+return Dataset with the dataset technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+features equals features 
+target variable equals target variable 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: Jungle Chess, Subsampling, Dataset, Seed, Rows, Columns, Categories, Stratify.

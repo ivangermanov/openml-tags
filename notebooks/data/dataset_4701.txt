@@ -1,0 +1,17 @@
+Subsampling of the Helena dataset with a specified seed value. This process involves reducing the dataset to a manageable size while maintaining its overall characteristics.
+
+The subsampling method uses a random number generator to select a specified number of rows, columns, and classes from the original dataset. It ensures that the sampled data remains representative of the original dataset by using stratified sampling when necessary.
+
+The Helena dataset has undergone uniform sampling of classes, resulting in a selection of classes based on their frequency in the original dataset. The indices corresponding to these selected classes have been used to filter the dataset, reducing its size while preserving the chosen classes.
+
+Furthermore, uniform sampling of columns has been applied to reduce the dimensionality of the dataset. A specified number of column indices have been randomly selected, and only those columns corresponding to these indices have been retained.
+
+Finally, the dataset has undergone stratified sampling to reduce its size further. This involved combining the feature data with the target variable, splitting the resulting dataset into two subsets, and selecting the smaller subset based on the target variable distribution.
+
+The resulting subsampled dataset consists of the reduced feature data, the corresponding target variable, and a mask indicating which columns contain categorical variables.
+
+Tags: Machine Learning, Mathematics
+
+Features: 
+
+Keywords: subsampling, stratified sampling, uniform sampling, dataset reduction, machine learning, mathematics

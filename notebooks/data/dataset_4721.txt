@@ -1,0 +1,20 @@
+Subsampling of the dataset Guillermo with seed equal to one arguments number rows two thousand arguments number columns one hundred arguments number classes ten arguments no stratify equal to true.
+
+Generated with the following source code:
+
+The function subsample takes in parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified. It uses numpy random default random generator to sample uniformly.
+
+The function first samples classes from the unique values in y. If there are more classes than the maximum allowed, it selects the required number of classes using value counts and probability.
+
+Next, it selects the indices where one of these classes is present and filters x and y accordingly. Then, it samples columns uniformly if required. If the number of columns exceeds the maximum allowed, it chooses the required number of columns using random choice and filters x accordingly.
+
+If the number of rows exceeds the maximum allowed, it uses train test split from scikit learn to split the data into two subsets, ensuring stratification according to the target variable.
+
+Finally, it returns a new dataset with the sampled data, categorical mask, and column names.
+
+Features: 
+(Voice Assistant, 
+Statistics, 
+Categorical Columns)
+
+Keywords: subsampling, dataset, stratified, statistics, categorical columns

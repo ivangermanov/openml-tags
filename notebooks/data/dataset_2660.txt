@@ -1,0 +1,28 @@
+**FOREX eur/hkd Hourly High**
+
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Hour, Social Media
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+This dataset contains the historical price data of the Forex EUR/HKD currency pair from Dukascopy. Each instance, or row, represents one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active during these periods. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute is determined by the direction of the mean high price of the following hour, relative to the mean high price of the current hour. Specifically, the class attribute is true when the mean high price is increasing in the following hour, and false when the mean high price is decreasing or remains unchanged in the following hour.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading strategies. Realistic trade strategies require predictions based on close attributes, which are also available.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, set to the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this hourly interval.
+* **Bid High**: The highest bid price recorded during this hourly interval.
+* **Bid Low**: The lowest bid price recorded during this hourly interval.
+* **Bid Close**: The bid price at the end of this hourly interval.
+* **Bid Volume**: The number of times the bid price changed within this hourly interval.
+* **Ask Open**: The ask price at the start of this hourly interval.
+* **Ask High**: The highest ask price recorded during this hourly interval.
+* **Ask Low**: The lowest ask price recorded during this hourly interval.
+* **Ask Close**: The ask price at the end of this hourly interval.
+* **Ask Volume**: The number of times the ask price changed within this hourly interval.
+* **Class**: Indicates whether the average high price will increase in the next hourly interval.
+
+Keywords: Forex, EUR/HKD, Historical Data, Candlestick, Time Series, Trading Strategies

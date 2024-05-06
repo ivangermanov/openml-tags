@@ -1,0 +1,17 @@
+Name: QSAR Biodeg Seed One 
+
+Tags: Economics, Government 
+
+Subsampling of the QSAR Biodeg dataset with seed equal to one. This dataset has been generated using the following source code:
+
+The function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether stratification should be used or not.
+
+It first selects a subset of classes uniformly at random based on their frequency in the dataset. It then selects the corresponding indices where one of these classes is present and updates the feature matrix and target vector accordingly.
+
+Next, it uniformly samples columns from the feature matrix if the number of columns exceeds the specified maximum. The function ensures that the column indices are sorted in ascending order.
+
+Finally, it stratifies the data based on the target variable and performs uniform sampling to reduce the number of rows to the specified maximum.
+
+Features: Several variables including V One, V Two, up to V Forty One, Class
+
+Keywords: QSAR Biodeg, subsampling, stratification, uniform sampling, feature selection, class selection

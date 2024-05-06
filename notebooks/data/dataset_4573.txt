@@ -1,0 +1,21 @@
+Name: QSAR Biodeg Seed Three Rows Two Thousand NClasses Ten NCols One Hundred Stratify True
+
+Tags: Subsampling of the dataset QSAR Biodeg generated with seed equals three arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+This dataset was generated using the following source code:
+
+The function subsample takes five parameters - seed, number rows max, number cols max, number classes max, and stratified - and returns a dataset. The default values for these parameters are three, two thousand, one hundred, ten, and true respectively.
+
+First, it initializes a random number generator with the given seed. Then, it selects the unique classes in the target variable and reduces them to the maximum allowed number of classes. It does this by selecting the classes uniformly at random, with probabilities proportional to their frequencies in the dataset.
+
+Next, it reduces the number of columns to the maximum allowed number. This is done uniformly at random, without replacement. The selected column indices are then sorted to ensure consistency.
+
+If the number of rows exceeds the maximum allowed number, the dataset is stratified according to the target variable and split into subsets using a random sampling technique. This ensures that the class distribution is preserved in the sampled dataset.
+
+Finally, the categorical columns are converted to strings, and the resulting dataset is returned along with its metadata.
+
+Features: 
+
+QSAR Biodeg dataset was subsampled using a random sampling technique to reduce its size while preserving the class distribution. The resulting dataset has a limited number of classes and features, making it more manageable for analysis. The subsampling process involved selecting a subset of classes and features uniformly at random, followed by stratified sampling to preserve the class distribution.
+
+Keywords: QSAR Biodeg, subsampling, stratified sampling, feature selection, class reduction, dataset generation.

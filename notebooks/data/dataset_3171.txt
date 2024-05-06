@@ -1,0 +1,9 @@
+The NYC Taxi Green December 2016 dataset is a collection of Trip Record Data provided by the New York City Taxi and Limousine Commission. This dataset includes TLC trips of the green line in December and was downloaded on a specific date. For a detailed description of all variables in the dataset, please refer to the TLC homepage.
+
+The variable Tip Amount was chosen as the target variable. The variable Total Amount is ignored by default, otherwise the target could be predicted deterministically. The Date Variables Pickup DateTime and Dropoff DateTime, which are ignored by default, could be used to compute additional Time Features.
+
+In this version, we chose only trips with Payment Type equal to Credit Card, as tips are not included for most other payment types. We also removed the variables Trip Distance and Fare Amount to increase the importance of the categorical features Pickup Location ID and Dropoff Location ID.
+
+Features include Vendor Identification, Store and Forward Flag, Rate Code Identification, Pickup Location ID, Dropoff Location ID, Passenger Count, Extra, MTA Tax, Tip Amount, Tolls Amount, Improvement Surcharge, Trip Type, Pickup Date Day, Pickup Date Hour, Pickup Date Minute, Dropoff Date Day, Dropoff Date Hour, and Dropoff Date Minute.
+
+Keywords: NYC Taxi, Trip Record Data, Green Line, Credit Card, Categorical Features, Time Features, Payment Type.

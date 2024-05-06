@@ -1,0 +1,11 @@
+The CodRNA dataset is categorized under Life Science and Machine Learning. It originated from the original source http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets.
+
+This dataset is based on the research paper titled "Detection of Non-Coding RNAs on the Basis of Predicted Secondary Structure Formation Free Energy Change." The paper focuses on predicting the formation of secondary structures in non-coding RNA molecules.
+
+To create this dataset, the test, train, and rest datasets were combined into a single dataset. Each column in the dataset was then normalized according to specific rules. Columns containing only one value were set to zero, effectively removing them due to sparsity. Columns with two values were converted into binary features, where the most frequent value was set to zero and the less frequent value was set to one. Columns with more than two values were divided by their standard deviation.
+
+It is important to note that the CodRNA dataset contains duplicate data points both within each file and across different files. These duplicates have not been removed.
+
+The dataset consists of various features, including those related to the RNA molecule's properties.
+
+Keywords: Non-Coding RNA, Secondary Structure, Free Energy Change, Normalization, Binary Features, Standard Deviation.

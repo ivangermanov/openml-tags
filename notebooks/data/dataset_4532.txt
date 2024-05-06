@@ -1,0 +1,15 @@
+Subsampling of the dataset Madeline with Seed Two Thousand Rows One Hundred Columns Ten Classes Stratify True 
+
+This dataset has undergone subsampling using a specific set of parameters. The process began by uniformly sampling classes from the unique values present in the target variable, ensuring that the number of classes did not exceed ten. 
+
+Next, the indices corresponding to the selected classes were identified, and the relevant rows were extracted from both the feature matrix and the target vector. 
+
+In cases where the number of columns exceeded one hundred, uniform sampling was applied to select the desired number of columns. This involved generating a list of column indices, sorting them, and extracting the corresponding columns from the feature matrix.
+
+If the resulting number of rows still exceeded two thousand, stratified sampling was employed to reduce the dataset size while maintaining class balance. This involved concatenating the feature matrix and target vector, performing a train-test split with stratification based on the target variable, and then separating the resulting subset into its constituent parts.
+
+Finally, categorical columns were converted to string format, and the necessary metadata was assembled to create the subsampled dataset.
+
+Features: V Eight, Fifteen, Sixteen, Eighteen, Nineteen, Twenty Three, Twenty Four, Twenty Six, Twenty Eight, Thirty Three, Thirty Six, Thirty Eight, Forty Two, Forty Three, Forty Five, Forty Eight, Forty Nine, Fifty One, Fifty Six, Fifty Seven, Sixty Seven, Sixty Eight, Seventy, Seventy Five, Seventy Eight, Eighty, Eighty One, Eighty Six, Ninety Four, Ninety Nine
+
+Keywords: subsampling, dataset, stratified sampling, class balance, feature selection

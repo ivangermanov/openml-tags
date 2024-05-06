@@ -1,0 +1,13 @@
+Fashion MNIST Seed Four 
+
+Tags: Demographics, Earth Science 
+
+Sub-sampling of the dataset Fashion MNIST with a seed of four. This sub-sampled dataset was generated using the following parameters: maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. 
+
+The sub-sample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It uses NumPy's default random generator to select classes, columns, and rows uniformly. 
+
+If there are more classes than the specified maximum, it selects the specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present. 
+
+If there are more columns than the specified maximum, it uniformly samples the columns. It also ensures that the resulting sub-sample has the correct categorical mask and column names.
+
+Keywords: Fashion MNIST, demographics, earth science, subsampling, stratification

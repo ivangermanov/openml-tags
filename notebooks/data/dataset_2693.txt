@@ -1,0 +1,25 @@
+**FOREX aud/chf Minute High**
+Tags: Finance, Forex, Forex High, Forex Minute, Health, Medicine
+
+This dataset contains historical price data of the Forex aud/chf currency pair from Dukascopy. Each instance represents one candlestick of one minute duration. The dataset covers the period from January to December and excludes weekends, as the Forex market is not active during these days. The timestamp feature is based on the Europe/Amsterdam time zone.
+
+The class attribute is defined as the direction of the mean high price of the subsequent minute relative to the mean high price of the current minute. In other words, if the mean high price increases in the following minute, the class attribute is labeled as true; otherwise, it is labeled as false.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for real-world trading strategies. For realistic trading applications, predictions based on close attributes (also available) would be more suitable.
+
+The dataset consists of various attributes, including:
+
+* Timestamp: The time of each data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the beginning of each time interval.
+* Bid High: The highest bid price recorded during each time interval.
+* Bid Low: The lowest bid price recorded during each time interval.
+* Bid Close: The bid price at the end of each time interval.
+* Bid Volume: The frequency of changes in the bid price within each time interval.
+* Ask Open: The ask price at the beginning of each time interval.
+* Ask High: The highest ask price recorded during each time interval.
+* Ask Low: The lowest ask price recorded during each time interval.
+* Ask Close: The ask price at the end of each time interval.
+* Ask Volume: The frequency of changes in the ask price within each time interval.
+* Class: The direction of the mean high price change in the subsequent minute.
+
+Keywords: Forex, aud/chf, Currency Pair, Historical Data, Trading Strategy, Financial Market, Time Series Analysis.

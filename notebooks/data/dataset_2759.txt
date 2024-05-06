@@ -1,0 +1,28 @@
+FOREX cad/chf Hour Close Dataset 
+
+Tags: Education, Finance, Forex, Forex Close, Forex Hour, Statistics 
+
+Source: Dukascopy Historical Data Feed 
+
+Data Description 
+
+This dataset contains the historical price data of the Forex Canadian Dollar/Swiss Franc currency pair. Each instance represents one hourly candlestick. The entire dataset covers the period from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close price of the subsequent hour compared to the mean close price of the current hour. In other words, the class attribute is true if the mean close price is expected to rise in the next hour, and false if it is expected to fall or remain unchanged.
+
+Attributes 
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone 
+* Bid Open: The bid price at the beginning of the time interval 
+* Bid High: The highest bid price recorded during the time interval 
+* Bid Low: The lowest bid price recorded during the time interval 
+* Bid Close: The bid price at the end of the time interval 
+* Bid Volume: The number of times the bid price changed during the time interval 
+* Ask Open: The ask price at the beginning of the time interval 
+* Ask High: The highest ask price recorded during the time interval 
+* Ask Low: The lowest ask price recorded during the time interval 
+* Ask Close: The ask price at the end of the time interval 
+* Ask Volume: The number of times the ask price changed during the time interval 
+* Class: Whether the average price will increase during the next time interval 
+
+Keywords: Forex, Canadian Dollar, Swiss Franc, Currency Pair, Historical Data, Candlestick, Time Series Analysis

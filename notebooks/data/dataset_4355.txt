@@ -1,0 +1,22 @@
+Subsampling of the dataset Pol with Seed equals One 
+Tags: Subsampling of the dataset Pol 
+
+Generated with the following source code:
+
+The function subsample takes five parameters: seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified. It returns a dataset.
+
+First, we set up a random number generator with the given seed.
+
+Then we uniformly sample classes from the unique values in y. If there are more classes than the maximum allowed, we select the desired number of classes randomly based on their frequency.
+
+Next, we select the indices where one of these classes is present and filter our data accordingly.
+
+After that, we uniformly sample columns if required. If the number of columns exceeds the maximum allowed, we randomly choose the desired number of columns and sort them.
+
+If the number of rows still exceeds the maximum allowed, we use stratified sampling to ensure an even distribution of classes. 
+
+Finally, we create a new dataset with the sampled data and return it.
+
+Features: Binary Class 
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Number Generator, Data Filtering.

@@ -1,0 +1,11 @@
+The Nomao dataset has been subsampled with a seed value of zero, resulting in a dataset with two thousand rows, one hundred columns, and ten classes. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that all classes were represented proportionally. 
+
+If the number of unique classes exceeded ten, the most common classes were selected based on their frequency distribution. The corresponding indices where these classes were present were then used to filter the dataset. 
+
+Next, uniform sampling was applied to select columns, ensuring that the maximum number of columns did not exceed one hundred. This involved randomly selecting column indices without replacement, sorting them, and using them to filter the dataset.
+
+Finally, the dataset was further reduced by uniformly sampling rows while maintaining class balance through stratification. This ensured that the resulting dataset retained the same distribution of classes as the original dataset. 
+
+The resulting dataset contains features including various variables denoted by V followed by a numerical identifier. 
+
+Keywords: Nomao dataset, subsampling, machine learning, statistics, stratification, uniform sampling.

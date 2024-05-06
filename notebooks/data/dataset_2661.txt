@@ -1,0 +1,26 @@
+FOREX aud/chf Day Close Dataset 
+
+Tags: finance, foreign exchange, foreign exchange close, foreign exchange day, text and literature 
+
+Data Description 
+
+This is the historical price data of the Foreign Exchange Australian Dollar/Swiss Franc currency pair from Dukascopy. Each instance, or row, represents one daily candlestick. The entire dataset covers a date range from January first to December thirteenth and excludes weekends, as the Foreign Exchange market is not active on these days. The timezone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current day. In other words, the class attribute is true when the mean Close price is increasing the following day, and false when the mean Close price is decreasing or remains the same the following day.
+
+Attributes 
+
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone 
+Bid Open: The bid price at the beginning of this daily time interval 
+Bid High: The highest bid price achieved during this daily time interval 
+Bid Low: The lowest bid price reached during this daily time interval 
+Bid Close: The bid price at the conclusion of this daily time interval 
+Bid Volume: The number of times the bid price changed within this daily time interval 
+Ask Open: The ask price at the beginning of this daily time interval 
+Ask High: The highest ask price achieved during this daily time interval 
+Ask Low: The lowest ask price reached during this daily time interval 
+Ask Close: The ask price at the conclusion of this daily time interval 
+Ask Volume: The number of times the ask price changed within this daily time interval 
+Class: Whether the average price will increase during the next daily interval 
+
+Keywords: foreign exchange, historical price data, Australian dollar, Swiss franc, daily candlestick, Europe/Amsterdam timezone.

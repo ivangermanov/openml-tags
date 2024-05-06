@@ -1,0 +1,22 @@
+Road Safety Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Road Safety with seed equal to zero arguments number rows max equal to two thousand arguments number columns max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code:
+
+def subsample(self, seed, number rows max equals two thousand, number columns max equals one hundred, number classes max equals ten, stratified equals true):
+random number generator equals numpy random default random generator seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique if length of classes greater than number classes max value counts equals y value counts selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts select the indices where one of these classes is present index equals y index y is in selected classes x equals x iloc index y equals y iloc index 
+
+Uniformly sample columns if required if length of x columns greater than number columns max column indexes equals random number generator choice list range length of x columns size equals number columns max replace equals false sorted column indexes equals sorted column indexes selected columns equals list x columns sorted column indexes x equals x selected columns else sorted column indexes equals list range length of x columns 
+
+if length of x greater than number rows max then stratify accordingly target name equals y name data equals pandas concat x y axis equals columns underscore subset comma subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed x equals subset drop target name axis equals columns underscore y equals subset target name 
+
+We need to convert categorical columns to string for OpenML categorical mask equals list self categorical mask i for i in sorted column indexes columns equals list x columns return Dataset dataset equals self dataset x equals x y equals y categorical mask equals categorical mask columns equals columns 
+
+Features: Vehicle Reference, Vehicle Type, Vehicle Manoeuvre, Vehicle Location Restricted Lane, Hit Object in Carriageway, Hit Object off Carriageway, Was Vehicle Left Hand Drive, Age of Driver, Age Band of Driver, Engine Capacity, Propulsion Code, Age of Vehicle, Location Easting OSGR, Location Northing OSGR, Longitude, Latitude, Police Force, Number of Vehicles, Number of Casualties, Local Authority District, First Road Number, Second Road Number, Urban or Rural Area 
+
+Keywords: Road Safety, Machine Learning, Subsampling, Stratification, OpenML

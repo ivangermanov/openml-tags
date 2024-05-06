@@ -1,0 +1,27 @@
+Computer Systems, Machine Learning Voice Gender 
+
+Gender Recognition by Voice and Speech Analysis 
+
+This database was created to identify a voice as male or female, based upon acoustic properties of the voice and speech. The dataset consists of recorded voice samples, collected from male and female speakers. The voice samples are pre-processed by acoustic analysis, with an analyzed frequency range of human vocal range.
+
+The Following Acoustic Properties of Each Voice Are Measured and Included Within the CSV:
+
+Mean Frequency, Standard Deviation of Frequency, Median Frequency, First Quantile, Third Quantile, Interquantile Range, Skewness, Kurtosis, Spectral Entropy, Spectral Flatness, Mode Frequency, Frequency Centroid, Peak Frequency, Average of Fundamental Frequency Measured Across Acoustic Signal, Minimum Fundamental Frequency Measured Across Acoustic Signal, Maximum Fundamental Frequency Measured Across Acoustic Signal, Average of Dominant Frequency Measured Across Acoustic Signal, Minimum of Dominant Frequency Measured Across Acoustic Signal, Maximum of Dominant Frequency Measured Across Acoustic Signal, Range of Dominant Frequency Measured Across Acoustic Signal, Modulation Index, Label
+
+Accuracy Baseline always predict male, Logistic Regression, CART, Random Forest, SVM, XGBoost
+
+Research Questions 
+
+An original analysis of the dataset can be found in the article Identifying the Gender of a Voice using Machine Learning. The best model achieves high accuracy on the test set. According to a CART model, it appears that looking at the mean fundamental frequency might be enough to accurately classify a voice. However, some male voices use a higher frequency, even though their resonance differs from female voices, and may be incorrectly classified as female. To the human ear, there is apparently more than simple frequency that determines a voice's gender.
+
+Questions 
+
+What other features differ between male and female voices? Can we find a difference in resonance between male and female voices? Can we identify falsetto from regular voices? Are there other interesting features in the data?
+
+CART Diagram 
+Mean fundamental frequency appears to be an indicator of voice gender, with a threshold separating male from female classifications.
+
+References 
+The Harvard Haskins Database of Regularly Timed Speech, Telecommunications Signal Processing Laboratory Speech Database at McGill University, VoxForge Speech Corpus, Festvox CMU ARCTIC Speech Database at Carnegie Mellon University
+
+Keywords: Gender Recognition, Voice Analysis, Machine Learning, Acoustic Properties, Speech Signals, Frequency Range

@@ -1,0 +1,15 @@
+Subsampling of the dataset Robert with four as the seed value, two thousand rows maximum, one hundred columns maximum, ten classes maximum, and stratification set to true.
+
+Generated with the following source code:
+
+This function subsamples the dataset based on several parameters, including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not.
+
+The first step is to uniformly sample classes from the available unique classes in the dataset. If there are more than ten classes, a random selection of ten classes is made based on their frequency in the dataset.
+
+Next, the indices where one of these selected classes is present are identified, and the corresponding data points are extracted. This ensures that the resulting subsampled dataset has an equal representation of all selected classes.
+
+Then, the function uniformly samples columns from the available columns in the dataset. If there are more than one hundred columns, a random selection of one hundred columns is made.
+
+Finally, the function checks if the resulting dataset has more than two thousand rows. If so, it uses stratified sampling to reduce the number of rows to two thousand while maintaining the class balance.
+
+Tags: Agriculture, Earth Science

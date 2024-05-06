@@ -1,0 +1,13 @@
+Bio Response Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Sub-sampling of the dataset Bio Response with a seed equals one, arguments number rows max equals two thousand, number columns max equals one hundred, number classes max equals ten, and no stratify equals true.
+
+Generated with the following source code:
+
+The function sub-sample takes in five parameters - seed, number rows maximum, number columns maximum, number classes maximum, and stratified - and returns a dataset. It first initializes a random number generator using the given seed. Then, it uniformly samples the classes from the unique values in the target variable y, ensuring the number of classes does not exceed the maximum allowed. The indices where these classes are present are then selected, and the feature matrix x and target variable y are filtered accordingly. Next, it uniformly samples the columns if the number of columns exceeds the maximum allowed, selecting a specified number of columns randomly. If the total number of rows exceeds the maximum allowed, it uses stratified sampling to select a specified number of rows while maintaining the class balance. Finally, it returns a new dataset with the sampled feature matrix, target variable, categorical mask, and column names.
+
+Features: ... (omitted due to being machine-readable only)
+
+Keywords: sub-sampling, machine learning, dataset, stratified sampling, feature selection.

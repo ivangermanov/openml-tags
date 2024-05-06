@@ -1,0 +1,56 @@
+Internet Advertisements Dataset 
+
+Tags: Agriculture, Statistics 
+
+Subsampling of the dataset Internet Advertisements with seed equals zero 
+args nrows max equals two thousand 
+args ncols max equals one hundred 
+args nclasses max equals ten 
+args no stratify equals true 
+
+Generated with the following source code:
+
+def subsample(self, seed, nrows max, ncols max, nclasses max, stratified): 
+    random number generator = numpy random default random generator seed 
+    x equals self x 
+    y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes greater than nclasses max: 
+    value counts equals y value counts 
+    selected classes equals random number generator choice classes, size equals nclasses max, replace equals false, probability equals value counts divided by sum of value counts 
+    select the indices where one of these classes is present 
+    index equals y index y is in selected classes 
+    x equals x iloc index 
+    y equals y iloc index 
+
+Uniformly sample columns if required 
+if length of x columns greater than ncols max: 
+    column indexes equals random number generator choice list range length of x columns, size equals ncols max, replace equals false 
+    sorted column indexes equals sorted column indexes 
+    selected columns equals list x columns sorted column indexes 
+    x equals x selected columns 
+else: 
+    sorted column indexes equals list range length of x columns 
+
+if length of x greater than nrows max: 
+stratify accordingly 
+target name equals y name 
+data equals pandas concat x and y along axis columns 
+train test split data into subsets based on target name 
+x equals subset drop target name along axis columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for openml 
+categorical mask equals self categorical mask for each i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: URL Images Buttons, URL Operating System Options, URL Toolkit And Internet Explorer, URL Claw Next GIF, URL Area Fifty One, URL Carousel Organization, URL World Wide Web Yahoo Co UK, URL Ads Switchboard Com, URL Home GIF, CJackson, URL Labyrinth Nineteen Forty Three Nine, URL Home, URL Geo Guide Two Email, URL World Wide Web AFN Organization, URL Icons, URL Pages B, URL Geo Guide Two Send, URL Paul SPU Education, URL Hydro Geologist IMGS, URL Counter, URL Internet Explorer, URL Government Of Canada, URL Ran, UK Online Co UK, In WAP Com, URL Pix, Original URL Meadows Nineteen Ninety Six, Original URL Chapel, Original URL June, Original URL Pharmacy, Original URL Kattsida, Original URL Pages Cats Cats, Original URL Carousel Organization, Original URL Sox, Original URL Leonora, Original URL World Wide Web Carousel Organization, Original URL UNC Education, Original URL Bordeaux, Original URL Sonic Net, Original URL Meadows Thirty Seven Twenty Seven, Original URL Seventy Seven Thirty Five MCP, Original URL Twenty Timeout, Original URL WOSC, Original URL General Kushmerick, Original URL Cyber Mog, Original URL Peace, Original URL Polyp Kem, Original URL Malek Kandin, Original URL Forum Eight Oh Seven Eight, Original URL KBell, Original URL Alley Sixty Seven Fifty, Original URL Mog Whi HTM, Original URL Thirty Seven Twenty Seven Turbo, Original URL MSHERYL Djang, Original URL SHTML, Original URL World Wide Web Geocities Com, Original URL Square, Original URL Pad, Original URL World Wide Web Pacific Net SG, Original URL Twenty Five Thirty Nine Index, An CURL Redirect, An CURL Josefina Three, An CURL Jump, An CURL Relocate AD, An CURL Four Sixty Eight By Sixty, An CURL N A, An CURL CJ Jackson Kandinsky, An CURL Ad Click EXE, An CURL World Wide Web MEI Co JP, An CURL World Wide Web Lycos Co UK, An CURL World Wide Web RAN Org, An CURL D UKIE, An CURL Forums, An CURL Name, An CURL One D, An CURL Geo Guide Tour, An CURL Access Us Net, An CURL Amazon Com, An CURL World Wide Web Pacific Rim Net, An CURL Click Profile ID, An CURL Email Me, An CURL World Wide Web Carousel Organization, An CURL Ad Count, An CURL De Jay, An CURL Area, An CURL World Wide Web The Internet Advantage Com, An CURL ASP, An CURL Ans, An CURL Slagen, An CURL PL, An CURL Dumble, An CURL Ora Com, An CURL Heart Land, Alternative And, Alternative Our, Alternative More, Alternative At, Alternative Banner, Alternative Free, Alternative The Kat, 
+
+Keywords: Internet Advertisements, Agriculture, Statistics, Subsampling, Dataset, Seed, Columns, Classes, Stratification.

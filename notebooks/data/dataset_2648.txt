@@ -1,0 +1,30 @@
+**FOREX USDCAD Hourly Close**
+
+Tags: Finance, Forex, Forex Close, Forex Hour, Machine Learning, Social Media
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+
+This dataset contains historical price data of the Forex USDCAD currency pair from Dukascopy. Each instance represents a single hourly candlestick, with the entire dataset spanning a specific date range, excluding weekends when the Forex market is closed.
+
+The timestamp feature is presented in the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close price of the following hour, relative to the mean close price of the current hour. Specifically, the class attribute is true when the mean close price increases in the subsequent hour, and false when it decreases or remains unchanged.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of the hourly time interval.
+* **Bid High**: The highest bid price recorded during the hourly time interval.
+* **Bid Low**: The lowest bid price recorded during the hourly time interval.
+* **Bid Close**: The bid price at the end of the hourly time interval.
+* **Bid Volume**: The frequency of changes in the bid price within the hourly time interval.
+* **Ask Open**: The ask price at the start of the hourly time interval.
+* **Ask High**: The highest ask price recorded during the hourly time interval.
+* **Ask Low**: The lowest ask price recorded during the hourly time interval.
+* **Ask Close**: The ask price at the end of the hourly time interval.
+* **Ask Volume**: The frequency of changes in the ask price within the hourly time interval.
+* **Class**: Indicates whether the average price will increase or decrease during the next hourly interval.
+
+Keywords: Forex USDCAD, Candlestick, Hourly Data, Mean Close Price, Machine Learning, Financial Markets

@@ -1,0 +1,19 @@
+Subsampling of the dataset Guillermo with Seed Four 
+
+Tags: Machine Learning, Mathematics 
+
+This is a subsampling of the dataset Guillermo, which has been generated using the following source code:
+
+The function takes in parameters such as seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify the sampling. 
+
+It first selects a uniform sample of classes from the unique classes present in the dataset, ensuring that the maximum number of classes is not exceeded. Then, it selects the indices where one of these classes is present and updates the feature matrix and target vector accordingly.
+
+Next, it uniformly samples columns from the feature matrix if the number of columns exceeds the specified maximum. It then sorts the column indices and selects the corresponding columns from the feature matrix.
+
+If the number of rows in the updated feature matrix still exceeds the specified maximum, it stratifies the sampling according to the target variable. This ensures that the sampled data maintains the same class distribution as the original data.
+
+Finally, it converts categorical columns to strings and returns a new dataset object with the sampled data, along with other relevant information such as the categorical mask and column names.
+
+Features: One Hundred Fifteen, One Fifty, Two Fifty Six, Three Thirty Eight, Three Forty, Three Eighty Three, Four Ninety Three, Five Forty Nine, Five Sixty Seven, Five Eighty Nine, Seven Oh Two, Seven Thirty Three, Seven Thirty Six, Seven Fifty Three, Seven Seventy, Eight One Seven, Eight Fifty Five, Eight Eighty Two, Nine Twenty Six, Nine Twenty Eight, Nine Fifty, Nine Fifty Three
+
+Keywords: subsampling, machine learning, dataset, stratification, sampling

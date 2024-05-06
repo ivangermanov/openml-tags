@@ -1,0 +1,31 @@
+**FOREX eur aud day High**
+
+Tags: Computational Universe, Computer Systems, Finance, Forex, Forex Day, Forex High
+
+**Source**: Dukascopy Historical Data Feed 
+
+**Data Description**
+This dataset comprises historical price data of the Forex EUR/AUD pair sourced from Dukascopy. Each instance represents a single daily candlestick. The entire dataset spans a specific timeframe, excluding weekends when the Forex market is closed.
+
+The timezone associated with the feature Timestamp is set to Europe/Amsterdam.
+
+The class attribute denotes the directional movement of the mean high price between the current day and the subsequent day. Specifically, the class attribute assumes a value of True when the mean high price exhibits an upward trend in the following day, and False when the mean high price remains stagnant or declines.
+
+**Note**: This task is hypothetical and intended solely for scientific purposes. In practice, realistic trading strategies should focus on predicting Close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* **Timestamp**: The timestamp corresponding to each data point, set to the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the commencement of the specified time interval.
+* **Bid High**: The peak bid price recorded during the given time interval.
+* **Bid Low**: The lowest bid price observed during the specified time interval.
+* **Bid Close**: The bid price at the conclusion of the time interval.
+* **Bid Volume**: The frequency of changes in the bid price within the given time interval.
+* **Ask Open**: The ask price at the initiation of the specified time interval.
+* **Ask High**: The highest ask price recorded during the given time interval.
+* **Ask Low**: The lowest ask price observed during the specified time interval.
+* **Ask Close**: The ask price at the conclusion of the time interval.
+* **Ask Volume**: The frequency of changes in the ask price within the given time interval.
+* **Class**: An indicator of whether the average price will increase during the subsequent interval.
+
+Keywords: Forex, EUR/AUD, Candlestick, Historical Data, Mean High Price, Trading Strategies.

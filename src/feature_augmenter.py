@@ -46,7 +46,7 @@ class FeatureAugmenter:
             return ''
 
         features_str = features.apply(join_features)
-        augmented_description = 'Features: ' + features_str + '\n\n' + augmented_description
+        augmented_description = augmented_description + '\n\n' + 'Features: ' + features_str
         df[self.augmented_column] = augmented_description
 
         return df

@@ -1,0 +1,24 @@
+**FOREX aud/cad - Hourly Close**
+
+Tags: Astronomy, Finance, Forex, Forex Close, Forex Hour, Statistics
+
+This is the historical price data of the Forex Australian Dollar/Canadian Dollar pair from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on Saturdays and Sundays. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute signifies the direction of the mean close price of the subsequent hour relative to the mean close price of the current hour. In other words, the class attribute is true when the mean close price is increasing in the following hour, and false when the mean close price is decreasing or remains stagnant in the following hour.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the commencement of this hourly interval.
+* Bid High: The highest bid price recorded during this hourly interval.
+* Bid Low: The lowest bid price recorded during this hourly interval.
+* Bid Close: The bid price at the conclusion of this hourly interval.
+* Bid Volume: The frequency of changes in the bid price within this hourly interval.
+* Ask Open: The ask price at the commencement of this hourly interval.
+* Ask High: The highest ask price recorded during this hourly interval.
+* Ask Low: The lowest ask price recorded during this hourly interval.
+* Ask Close: The ask price at the conclusion of this hourly interval.
+* Ask Volume: The frequency of changes in the ask price within this hourly interval.
+* Class: Whether the average price will ascend or descend during the next hourly interval.
+
+Keywords: Forex, Australian Dollar, Canadian Dollar, Candlestick, Time Zone, Historical Data, Mean Close Price, Class Attribute.

@@ -1,0 +1,11 @@
+Click Prediction Small Seed Three NRows Two Thousand NClasses Ten NCols One Hundred Stratify True
+
+This dataset is a subsampling of the Click Prediction Small dataset with a specific set of parameters. It was generated using a particular source code that defines a function called subsample. This function takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify.
+
+The function first uniformly samples classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, the function uniformly samples columns from the resulting dataset, ensuring that the number of columns does not exceed the specified maximum. If necessary, it also stratifies the data according to the target variable.
+
+Finally, the function returns a new dataset object containing the subsampled data, along with metadata such as the categorical mask and column names.
+
+Keywords: subsampling, dataset, stratification, sampling, classification.

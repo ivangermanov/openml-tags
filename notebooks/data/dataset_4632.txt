@@ -1,0 +1,17 @@
+Subsampling of the dataset Churn with Seed equals Two 
+
+Tags: Machine Learning, Mathematics 
+
+This dataset is a subsampled version of the original Churn dataset, which has been reduced in size to facilitate machine learning model training and testing. The subsampling process involves uniformly selecting a specified number of classes, columns, and rows from the original dataset.
+
+The subsampling process begins by uniformly sampling classes from the original dataset. If the number of unique classes exceeds the specified maximum, the classes are sampled based on their frequency in the dataset. The indices corresponding to the selected classes are then used to filter the dataset.
+
+Next, the columns of the dataset are uniformly sampled if the number of columns exceeds the specified maximum. The selected columns are chosen randomly, and the dataset is filtered accordingly.
+
+Finally, the rows of the dataset are sampled using stratified sampling to ensure that the resulting dataset retains the same class distribution as the original dataset. This involves concatenating the feature columns with the target column, performing stratified splitting, and then separating the feature columns and target column again.
+
+The resulting dataset consists of the subsampled feature matrix and target vector, along with metadata including the categorical mask and column names.
+
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class
+
+Keywords: Subsampling, Machine Learning, Dataset, Classes, Columns, Rows, Stratified Sampling, Categorical Mask, Column Names.

@@ -1,0 +1,13 @@
+Machine Learning Dataset: Dilbert Seed Two 
+
+This dataset is a subsampling of the original Dilbert dataset. It was generated using a specific set of parameters, including a seed value of two, a maximum of two thousand rows, a maximum of one hundred columns, and a maximum of ten classes. The stratification option was set to true.
+
+The subsampling process involved several steps. First, the unique classes in the target variable were identified. If there were more than ten unique classes, a random selection of ten classes was made, taking into account the distribution of each class in the original dataset. The indices corresponding to these selected classes were then used to subset the feature matrix and target vector.
+
+Next, if the number of columns exceeded one hundred, a random selection of one hundred column indices was made. These column indices were sorted in ascending order, and the corresponding columns were selected from the feature matrix.
+
+Finally, if the number of rows exceeded two thousand, a stratified sampling approach was employed to select a subset of two thousand rows. This ensured that the distribution of classes in the subsampled dataset was similar to that in the original dataset.
+
+The resulting dataset consists of a feature matrix and target vector, along with additional metadata such as the categorical mask and column names.
+
+Keywords: machine learning, dataset, subsampling, stratification, classification.

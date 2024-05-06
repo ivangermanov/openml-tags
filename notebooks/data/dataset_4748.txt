@@ -1,0 +1,19 @@
+Name: SF Police Incidents Seed Three 
+
+Tags: Images, Machine Learning 
+
+Subsampling of the dataset SF Police Incidents generated with the following source code:
+
+The function subsample takes in several parameters, including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification. It uses NumPy's default random generator to select a uniform sample of classes, columns, and rows from the original dataset.
+
+First, it selects a uniform sample of classes from the unique values in the target variable. If the number of unique classes exceeds the maximum allowed, it uses value counts to weight the probability of selection. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, it uniformly samples columns if required. If the number of columns exceeds the maximum allowed, it randomly selects the specified number of column indices, sorts them, and filters the data to include only those columns.
+
+Finally, if the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data. It concatenates the data and target variable, performs a train-test split with stratification on the target variable, and separates the resulting subset back into data and target variables.
+
+The function returns a new dataset with the sampled data, target variable, categorical mask, and column names.
+
+Features: Hour, Day of Week, Month, Year, Police District, Address 
+
+Keywords: subsampling, machine learning, dataset, stratification, random sampling

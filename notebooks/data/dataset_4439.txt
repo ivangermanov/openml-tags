@@ -1,0 +1,16 @@
+Machine Learning, Mathematics 
+
+Subsampling of the dataset KDD Cup 09 up selling 
+
+This dataset has been generated through subsampling of the original KDD Cup 09 up selling dataset, which contains forty-four thousand one hundred eighty-six instances. The subsampling process involved randomly selecting a specified number of rows, columns, and classes from the original dataset while ensuring that the resulting dataset maintains a similar distribution of classes.
+
+The subsampling function takes into account several parameters, including the maximum number of rows, columns, and classes desired in the subsampled dataset, as well as an option to stratify the sampling based on the class distribution. In this case, the function was called with a seed value of four, a maximum of two thousand rows, one hundred columns, and ten classes, with stratification enabled.
+
+The subsampling process began by uniformly sampling classes from the original dataset. Since there were more than ten unique classes, the function selected ten classes based on their frequency of occurrence in the original dataset. It then selected the instances corresponding to these chosen classes.
+
+Next, the function uniformly sampled columns from the selected instances. Since there were more than one hundred columns, it chose one hundred columns randomly. Finally, it uniformly sampled instances from the selected columns, ensuring that the resulting dataset had a similar class distribution as the original dataset.
+
+Features: 
+Var Six, Var Thirteen, Var Twenty-One, Var Twenty-Two, Var Twenty-Four, Var Twenty-Five, Var Twenty-Eight, Var Thirty-Five, Var Thirty-Eight, Var Fifty-Seven, Var Sixty-Five, Var Seventy-Three, Var Seventy-Four, Var Seventy-Six, Var Seventy-Eight, Var Eighty-One, Var Eighty-Three, Var Eighty-Five, Var One Nine, Var One Twelve, Var One Thirteen, Var One Nineteen, Var One Twenty-Three, Var One Twenty-Five, Var One Twenty-Six, Var One Thirty-Two, Var One Thirty-Three, Var One Thirty-Four, Var One Forty, Var One Forty-Four, Var One Forty-Nine, Var One Fifty-Three, Var One Sixty, Var One Sixty-Three, Var One Ninety-Four, Var One Ninety-Six, Var Two Zero One, Var Two Zero Three, Var Two Zero Five, Var Two Zero Seven, Var Two Zero Eight, Var Two Ten, Var Two Eleven, Var Two Eighteen, Var Two Twenty-One, Var Two Twenty-Three, Var Two Twenty-Five, Var Two Twenty-Seven, Var Two Twenty-Nine, Up Selling 
+
+Keywords: machine learning, mathematics, subsampling, dataset, stratification, class distribution

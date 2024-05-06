@@ -1,0 +1,17 @@
+Name: Connect Four Seed Two 
+
+Tags: Meteorology, Transportation 
+
+This dataset is a subsampled version of the original Connect Four dataset. It was generated using a specific set of arguments, including a seed value of two, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The sampling process was performed in a stratified manner.
+
+The subsampling process involved several steps. First, the unique classes in the original dataset were identified. If there were more than ten classes, a random selection of ten classes was made based on their relative frequencies. The indices of the instances belonging to these selected classes were then retrieved.
+
+Next, the columns of the dataset were uniformly sampled. If there were more than one hundred columns, a random selection of one hundred columns was made. The selected columns were then used to create a new dataset.
+
+Finally, the instances in the new dataset were uniformly sampled. If there were more than two thousand instances, a random selection of two thousand instances was made while maintaining the original class distribution.
+
+Features: 
+
+(class column)
+
+Keywords: Connect Four, Meteorology, Transportation, Stratified Sampling, Class Distribution

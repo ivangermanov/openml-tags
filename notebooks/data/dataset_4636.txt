@@ -1,0 +1,31 @@
+First Order Theorem Proving Seed One 
+
+Tags: Subsampling of the First Order Theorem Proving dataset 
+
+Generated with the following source code:
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
+random number generator = numpy random default random generator with the given seed 
+x equals the input features 
+y equals the output labels 
+
+Uniformly sample classes equals unique values in the output labels 
+if there are more classes than the maximum allowed, 
+select the most frequent classes based on their occurrence probability 
+Select the indices where one of these classes is present 
+Update input features and output labels to only include these indices 
+
+If there are more columns than the maximum allowed, 
+uniformly select a subset of columns 
+Update input features to only include these columns 
+
+If there are more rows than the maximum allowed, 
+split the data into a subset using stratified sampling 
+Update input features and output labels to only include this subset 
+
+Convert categorical columns to string format for OpenML 
+Return a new dataset object with the updated input features, output labels, categorical mask, and column names 
+
+Features: 
+
+Class

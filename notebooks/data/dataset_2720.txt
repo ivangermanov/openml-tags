@@ -1,0 +1,24 @@
+**FOREX Eur/HKD Hourly Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Hour
+
+This dataset contains historical price data of the Forex Eur/HKD exchange rate from Dukascopy. Each instance represents one hourly candlestick, and the entire dataset spans from January first to December thirteenth, excluding weekends when the Forex market is closed. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute denotes the direction of the mean close price of the subsequent hour compared to the mean close price of the current hour. In other words, if the mean close price is expected to rise in the next hour, the class attribute is true; otherwise, it is false.
+
+The attributes in this dataset are:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the beginning of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the beginning of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur/HKD, Candlestick, Time Series, Financial Markets, Prediction.

@@ -1,0 +1,26 @@
+Audiology Database
+
+This database is a standardized version of the original audiology database. The non-standard set of attributes have been converted to a standard set of attributes according to the rules that follow.
+
+Each property that appears anywhere in the original data or test file has been represented as a separate attribute in this file. A property such as Age Greater Than Sixty is represented as a boolean attribute with values False and True. In most cases, a property of the form X(Y) is represented as a discrete attribute X whose possible values are the various Y's; Air is an example.
+
+There are two exceptions: when only one value of Y appears anywhere, for example Static Normal. In this case, X_Y appears as a boolean attribute. When one case can have two or more values of X, for example History. All possible values of History are treated as separate boolean attributes.
+
+Since boolean attributes only appear as positive conditions, each boolean attribute is assumed to be False unless noted as True. The value of multi-value discrete attributes taken as Unknown unless a value is specified.
+
+The original case identifications, Patient One to Patient Two Hundred in the data file and Test One to Test Twenty-Six in the test file, have been added as a unique identifier attribute.
+
+Attribute Information:
+
+Age Greater Than Sixty: False, True.
+Air: Mild, Moderate, Severe, Normal, Profound.
+Air Bone Gap: False, True.
+AR C: Normal, Elevated, Absent.
+AR U: Normal, Absent, Elevated.
+Bone: Mild, Moderate, Normal, Unmeasured.
+Bone Abnormal: False, True.
+BSER: Normal, Degraded.
+
+Class: Cochlear Unknown, Mixed Cochlear Age Fixation, Possible Central, Mixed Cochlear Age Otitis Media, Mixed Possible Noise OM, Cochlear Age, Normal Ear, Cochlear Possible Noise, Cochlear Age and Noise, Acoustic Neuroma, Mixed Cochlear Unknown Ser OM, Conductive Discontinuity, Retrocochlear Unknown, Conductive Fixation, Bell's Palsy, Cochlear Noise and Heredity, Mixed Cochlear Unknown Fixation, Otitis Media, Possible Meniere's, Possible Brainstem Disorder, Cochlear Age Plus Possible Meniere's, Mixed Cochlear Age S OM, Mixed Cochlear Unknown Discontinuity, Mixed Possible Central OM.
+
+Keywords: Audiology, Machine Learning, Medicine, Standardized Database, Boolean Attributes, Discrete Attributes.

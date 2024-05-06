@@ -1,0 +1,26 @@
+Magic Telescope Dataset Subsampling with Seed One 
+
+This dataset is a subsampling of the Magic Telescope dataset with a seed value of one. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
+
+The subsampling process starts by selecting classes uniformly. If there are more classes than the maximum allowed number of classes, the classes are selected based on their frequency in the dataset. The indices where these selected classes are present are then used to filter the data.
+
+Next, the columns are uniformly sampled if the number of columns exceeds the maximum allowed number of columns. The selected columns are then used to filter the data further.
+
+Finally, the rows are sampled using stratification if the number of rows exceeds the maximum allowed number of rows. This ensures that the sampled data maintains the same class distribution as the original dataset.
+
+The resulting dataset has undergone significant subsampling, with only a fraction of the original data remaining. Despite this, the dataset still maintains its original characteristics and can be used for various machine learning tasks.
+
+Features:
+
+* Length
+* Width
+* Size
+* Concentration
+* Asymmetry
+* Alpha
+* Distance
+* Class
+
+Tags: Statistics, Text and Literature 
+
+Keywords: subsampling, dataset, machine learning, stratification, uniform sampling

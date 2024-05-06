@@ -1,0 +1,15 @@
+Airlines Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+This dataset is a subsampling of the Airlines dataset with a seed of zero, generated using the following source code:
+
+The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses a random number generator to uniformly sample classes, ensuring that the number of classes does not exceed the maximum specified. 
+
+If there are more unique classes than the maximum allowed, it selects the desired number of classes based on their frequency in the dataset. It then filters out the data to only include instances belonging to the selected classes.
+
+Next, it uniformly samples columns if the number of columns exceeds the maximum specified. It achieves this by randomly selecting column indices without replacement. 
+
+Finally, if the resulting dataset has more rows than the maximum specified, it uses stratified sampling to reduce the number of rows while maintaining the class distribution.
+
+The resulting dataset consists of the airline, flight, airport from, airport to, day of week, time, length, and delay features.
+
+Keywords: Airlines dataset, subsampling, stratified sampling, feature selection

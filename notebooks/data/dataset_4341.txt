@@ -1,0 +1,19 @@
+Name: Wine Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+
+Tags: Subsampling of the dataset Wine with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+A function called subsample takes in several parameters including self, seed, number rows maximum, number columns maximum, number classes maximum, and stratified. The function uses numpy's random default generator to generate random numbers based on the given seed. It then selects a subset of the data based on the given parameters.
+
+The function first selects a subset of classes. If the number of unique classes is greater than the specified maximum, it uses value counts to determine the probability of each class being selected. It then randomly chooses the specified number of classes and selects only the indices where one of these classes is present.
+
+Next, the function uniformly samples columns if required. If the number of columns is greater than the specified maximum, it randomly chooses the specified number of columns and selects only those columns.
+
+Finally, the function uniformly samples rows if required. If the number of rows is greater than the specified maximum, it uses stratified sampling to select the specified number of rows. This ensures that the sampled data has the same distribution of classes as the original data.
+
+The function returns a new dataset with the sampled data, along with other relevant information such as the categorical mask and column names.
+
+Features: acidity, citric acid, sugar, chlorides, sulfur dioxide, density, pH, sulphates, alcohol, quality.
+
+Keywords: subsampling, dataset, wine, stratified sampling, uniform sampling, random selection.

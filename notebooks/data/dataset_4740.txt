@@ -1,0 +1,15 @@
+OkCupid Stem Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+This dataset is a subsampling of the OkCupid Stem dataset with a seed value of zero. The subsampling process involves uniformly sampling classes and columns to reduce the dimensionality of the dataset. 
+
+The subsampling process starts by uniformly sampling classes from the unique values in the target variable. If there are more than ten unique classes, the top ten classes are selected based on their frequency of occurrence. The indices corresponding to these classes are then used to filter the dataset.
+
+Next, the columns are uniformly sampled to reduce the number of features. If there are more than one hundred columns, a random selection of one hundred columns is made. The dataset is then filtered to include only these selected columns.
+
+Finally, the rows are stratified sampled to ensure that the class distribution is maintained. If there are more rows than the specified maximum number of two thousand, a stratified split is performed to select a subset of two thousand rows.
+
+The resulting dataset has been transformed to include categorical variables as strings, and the column names have been updated accordingly.
+
+Features include age, body type, diet, drinks, drug use, education level, ethnicity, height, income, location, offspring, sexual orientation, pet ownership, religious beliefs, gender, astrological sign, smoking habits, language spoken, relationship status, and occupation.
+
+Keywords: OkCupid, dataset, subsampling, stratified sampling, feature selection, class imbalance, dimensionality reduction.

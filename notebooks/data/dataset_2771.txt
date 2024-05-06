@@ -1,0 +1,26 @@
+**FOREX EUR/SEK Minute High**
+
+Tags: Finance, Forex, Forex High, Forex Minute
+
+This dataset contains historical price data of the Forex EUR/SEK currency pair, sourced from Dukascopy Historical Data Feed. Each instance represents a one-minute candlestick, covering a period from January first to December thirteenth. As the Forex market does not operate on weekends, these days are excluded from the dataset.
+
+The timestamp feature is set to the Europe/Amsterdam time zone. The class attribute indicates the direction of the mean high price movement in the subsequent minute, relative to the current minute. Specifically, the class attribute is true if the mean high price increases in the next minute, and false if it decreases or remains unchanged.
+
+Please note that this dataset is intended for scientific purposes only. Realistic trading strategies should be based on predictions of close prices, also available in the dataset.
+
+**Attributes**
+
+* Timestamp: The time of the current data point, in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price during this time interval.
+* Bid Low: The lowest bid price during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price during this time interval.
+* Ask Low: The lowest ask price during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, EUR/SEK, Candlestick, Time Series, Finance, Trading Strategy

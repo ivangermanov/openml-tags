@@ -1,0 +1,27 @@
+Name: Forex Eur Rub Hourly Close
+
+Tags: Earth Science, Finance, Forex, Forex Close, Forex Hour, Geography
+
+Data Description:
+This dataset contains historical price data of the Forex Eur/Rub pair obtained from Dukascopy. Each instance represents a one-hour candlestick period. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The dataset provides a comprehensive overview of the Forex Eur/Rub pair's performance during each hourly period, including opening and closing prices, high and low prices, and trading volumes for both bid and ask sides.
+
+Furthermore, the class attribute is determined by the direction of the mean close price of the subsequent hour relative to the mean close price of the current hour. Specifically, the class attribute is labeled as true if the mean close price increases in the following hour, and false if it decreases or remains unchanged.
+
+Attributes:
+
+* Timestamp: The date and time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The opening bid price of the hourly period.
+* Bid High: The highest bid price recorded during the hourly period.
+* Bid Low: The lowest bid price recorded during the hourly period.
+* Bid Close: The closing bid price of the hourly period.
+* Bid Volume: The number of times the bid price changed during the hourly period.
+* Ask Open: The opening ask price of the hourly period.
+* Ask High: The highest ask price recorded during the hourly period.
+* Ask Low: The lowest ask price recorded during the hourly period.
+* Ask Close: The closing ask price of the hourly period.
+* Ask Volume: The number of times the ask price changed during the hourly period.
+* Class: A binary label indicating whether the mean close price increases or decreases in the subsequent hour.
+
+Keywords: Forex, Eur/Rub, Historical Data, Candlestick, Time Series, Finance, Trading, Market Analysis

@@ -1,0 +1,13 @@
+Click Prediction Small Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+This dataset is a subsampling of the Click Prediction Small dataset. It was generated using a specific set of arguments, including a seed value of four, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The stratification option was set to true.
+
+The subsampling process involved several steps. First, the unique classes in the target variable were identified, and then a random selection of ten classes was made using a probability proportional to their frequency in the dataset. The indices corresponding to these selected classes were then used to subset the data.
+
+Next, the columns of the dataset were uniformly sampled to select a maximum of one hundred columns. This was done by generating a random permutation of the column indices and selecting the first one hundred elements of this permutation.
+
+Finally, the dataset was further subsampled to reduce its size to a maximum of two thousand rows. This was done using stratified sampling, which ensures that the class distribution is preserved in the subsampled dataset.
+
+The resulting dataset contains a subset of the original features, including impression, URL, ad ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, and user ID. 
+
+Keywords: click prediction, subsampling, stratification, dataset reduction

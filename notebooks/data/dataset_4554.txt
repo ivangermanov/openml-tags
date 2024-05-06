@@ -1,0 +1,11 @@
+The Diabetes One Thirty US dataset has undergone subsampling with a specific set of parameters. This process involved generating a random sample from the original dataset using a specified seed value. The resulting dataset has a maximum of two thousand rows, one hundred columns, and ten classes.
+
+The subsampling process began by uniformly sampling classes from the original dataset. If the number of unique classes exceeded the maximum allowed, a selection of classes was made based on their frequency of occurrence. The indices corresponding to these selected classes were then used to filter the data.
+
+Next, the columns of the dataset were uniformly sampled, ensuring that only the most relevant features were retained. This was done by randomly selecting a subset of column indices, which were then used to filter the data.
+
+Finally, the dataset was further reduced by sampling a maximum of two thousand rows. This was done using stratified sampling, which ensured that the resulting dataset maintained the same class balance as the original dataset.
+
+The features of the resulting dataset include patient information, medical history, and treatment details. These features are essential for understanding the complexities of diabetes management and predicting patient outcomes.
+
+Keywords: Diabetes, Subsampling, Machine Learning, Dataset, Stratification.

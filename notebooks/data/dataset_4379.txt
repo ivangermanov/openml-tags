@@ -1,0 +1,18 @@
+Name: Phoneme Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Tags: Health, Medicine 
+
+Subsampling of the dataset Phoneme with seed equals zero arguments N Rows equals two thousand, N Columns equals one hundred, N Classes equals ten, and No Stratify equals False. 
+
+Generated with the following source code:
+
+The function subsample takes in parameters including seed, N Rows Max, N Columns Max, N Classes Max, and Stratified, and returns a dataset. 
+It uses NumPy's default random generator to generate random numbers.
+It then selects unique classes from the target variable, and if there are more than N Classes Max, it chooses a specified number of classes using their value counts as probabilities.
+It then selects the indices where one of these classes is present, and subsets the data accordingly.
+If the number of columns exceeds N Columns Max, it uniformly samples columns, sorts them, and subsets the data again.
+Finally, if the number of rows exceeds N Rows Max, it uses Stratified Train Test Split to split the data into a subset of the specified size.
+
+Features: 
+(Class feature is omitted due to being unreadable)
+
+Keywords: Subsampling, Phoneme, Health, Medicine, Dataset, Stratification

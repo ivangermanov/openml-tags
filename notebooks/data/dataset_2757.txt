@@ -1,0 +1,26 @@
+FOREX cad/chf Minute High Dataset
+
+Tags: Computer Systems, Economics, Finance, Forex, Forex High, Forex Minute
+
+This dataset contains historical price data of the Forex CAD/CHF currency pair from Dukascopy. Each instance, or row, represents one candlestick of one minute duration. The entire dataset spans a period from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute indicates the direction of the mean high price in the subsequent minute relative to the current minute. Specifically, the class attribute is true when the mean high price increases in the following minute and false when it decreases or remains unchanged.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies should be based on predictions of closing prices, which are also available.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average high price will increase during the next interval.
+
+Keywords: Forex, CAD/CHF, Candlestick, Time Series, Financial Markets, Trading.

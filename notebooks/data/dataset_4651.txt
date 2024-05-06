@@ -1,0 +1,17 @@
+Subsampling of the dataset Sylvine with Seed One generated with the following source code:
+
+The function subsample takes in several parameters including seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It returns a dataset.
+
+First, the function generates a random number generator using the given seed. Then, it selects the input data and corresponding labels.
+
+If the number of unique classes exceeds the maximum allowed, it uniformly samples the classes based on their frequency. It then selects the indices where one of these classes is present and filters the input data and labels accordingly.
+
+Next, if the number of columns exceeds the maximum allowed, it uniformly samples the columns. Otherwise, it keeps all the columns.
+
+Finally, if the number of rows exceeds the maximum allowed, it uses stratified sampling to select the desired number of rows. The function returns a new dataset with the sampled data, labels, and categorical mask.
+
+Tags: Health, Medicine
+
+Features: 
+
+Keywords: subsampling, dataset, Sylvine, seed, stratification, classes, columns, rows, health, medicine

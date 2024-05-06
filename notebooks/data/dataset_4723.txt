@@ -1,0 +1,11 @@
+Subsampling of the dataset Guillermo with a specified set of parameters resulted in a new dataset. This process involved uniformly sampling classes from the original dataset, ensuring a maximum number of classes were selected. The indices where one of these classes was present were identified, and the corresponding data points were extracted.
+
+Uniform sampling of columns was also performed, selecting a specified maximum number of columns. The column indices were randomly chosen, and the selected columns were used to create a new dataset.
+
+If the resulting dataset still had too many rows, stratified sampling was applied to reduce the number of rows while maintaining class balance. This was achieved using a stratified split function, which ensured that the class distribution was preserved.
+
+The resulting dataset consisted of the sampled data points, along with their corresponding categorical mask and column information.
+
+Machine Learning, Mathematics
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Class Balance, Column Selection

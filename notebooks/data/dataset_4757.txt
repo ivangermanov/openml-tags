@@ -1,0 +1,19 @@
+porto seguro Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+This dataset is a subsampling of the Porto Seguro dataset. It was generated using a specific set of arguments, including a seed value of two, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the sampling was done in a stratified manner.
+
+The original Porto Seguro dataset had to be modified to meet these constraints. Firstly, the unique classes were identified, and then a random selection of ten classes was made. The indices where these selected classes were present were used to filter the data.
+
+Next, the columns had to be sampled uniformly. Since there were more than one hundred columns, a random selection of one hundred column indices was made, and the corresponding columns were selected.
+
+Finally, the number of rows had to be reduced to two thousand. This was done by performing a stratified split on the data, ensuring that the class distribution was maintained.
+
+The resulting dataset has ten classes and one hundred columns. The categorical columns have been converted to strings for OpenML compatibility.
+
+Features: 
+
+(ps ind one, ps ind two category, ...)
+
+Tags: Subsampling of the Porto Seguro dataset 
+
+Keywords: Porto Seguro, subsampling, stratified sampling, class distribution, OpenML.

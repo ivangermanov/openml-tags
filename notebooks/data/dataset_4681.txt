@@ -1,0 +1,13 @@
+Amazon Employee Access Seed One Dataset 
+
+Tags: Subsampling of the dataset Amazon Employee Access 
+
+This dataset is a subsampled version of the original Amazon Employee Access dataset. It was generated using a specific set of arguments, including a seed value of one, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The subsampling process was performed in a stratified manner.
+
+The subsampling function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, the function uniformly samples columns from the remaining data, ensuring that the number of columns does not exceed the specified maximum. Finally, it stratifies the data according to the target variable and selects a subset of rows based on the specified maximum number of rows.
+
+The resulting dataset contains a subset of the original features, which include resource, manager ID, role rollup one, role rollup two, role department name, role title, role family description, and role family. The target variable is also included in the dataset.
+
+Keywords: Amazon Employee Access, subsampling, stratification, dataset, machine learning.

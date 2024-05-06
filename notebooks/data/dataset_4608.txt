@@ -1,0 +1,15 @@
+Segment Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+This is a subsampling of the dataset segment with a seed of three. The arguments used include number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratify set to true.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified. It uses numpy's random default random generator to select classes and columns uniformly. If there are more classes than the maximum allowed, it selects the top classes based on their frequency in the dataset. It then selects the indices where these classes are present and filters the data accordingly. 
+
+If there are more columns than the maximum allowed, it uniformly samples the columns. It also checks if the length of the data is more than the maximum number of rows and stratifies the data accordingly using train test split from scikit learn.
+
+The function finally returns a dataset with the sampled data, columns, and categorical mask.
+
+Features include short line density, vegetation edge mean, vegetation edge standard deviation, habitat edge mean, habitat edge standard deviation, intensity mean, raw red mean, raw blue mean, raw green mean, excess red mean, excess blue mean, excess green mean, value mean, saturation mean, and hue mean.
+
+Keywords: dataset, subsampling, stratification, classification, feature selection

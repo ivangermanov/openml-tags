@@ -1,0 +1,24 @@
+**FOREX EUR/AUD Day Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Sociology
+
+This dataset contains historical price data of the Forex EUR/AUD pair obtained from Dukascopy's Historical Data Feed. Each instance represents one candlestick of one day, with no data available for weekends since the Forex market is not active then. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The dataset spans a specific date range and excludes weekends. The class attribute indicates the direction of the mean close price of the following day relative to the current day's mean close price. It takes on a value of True if the mean close price is expected to increase the following day and False if it is expected to decrease or remain unchanged.
+
+The attributes included in this dataset are:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of the given time interval.
+* Bid High: The highest bid price recorded during the given time interval.
+* Bid Low: The lowest bid price recorded during the given time interval.
+* Bid Close: The bid price at the end of the given time interval.
+* Bid Volume: The number of times the bid price changed within the given time interval.
+* Ask Open: The ask price at the start of the given time interval.
+* Ask High: The highest ask price recorded during the given time interval.
+* Ask Low: The lowest ask price recorded during the given time interval.
+* Ask Close: The ask price at the end of the given time interval.
+* Ask Volume: The number of times the ask price changed within the given time interval.
+* Class: Indicates whether the average price is expected to increase or decrease the following day.
+
+Keywords: Forex, EUR/AUD, Candlestick, Time Series, Financial Markets, Prediction.

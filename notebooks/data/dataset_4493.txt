@@ -1,0 +1,19 @@
+Name: Fabert Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Fabert with seed equals three arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+This function is used to subsample a given dataset. It takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether to perform stratification.
+
+The function first uniformly samples classes from the dataset. If there are more classes than the specified maximum, it selects a subset of classes based on their frequency in the dataset. Then, it filters out the instances that do not belong to the selected classes.
+
+Next, the function uniformly samples columns from the dataset. If there are more columns than the specified maximum, it randomly selects a subset of columns.
+
+After sampling classes and columns, the function applies stratification if required. This ensures that the sampled instances maintain the same class distribution as the original dataset.
+
+Finally, the function returns a new dataset object with the sampled instances, their corresponding labels, and information about which columns are categorical.
+
+Features: 
+
+Keywords: Fabert, subsampling, stratification, dataset, classes, columns, instances, categorical, labels.

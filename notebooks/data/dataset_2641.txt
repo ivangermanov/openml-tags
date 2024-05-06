@@ -1,0 +1,25 @@
+**FOREX eur/usd day High**
+Tags: Economics, Finance, Forex, Forex Day, Forex High
+
+This dataset contains historical price data of the Forex EUR/USD pair from Dukascopy. Each instance, represented by a single row, corresponds to a daily candlestick. The entire dataset spans a specific period, excluding weekends, as the Forex market is not active during these days. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute represents the direction of the mean high price of the subsequent day, relative to the mean high price of the current day. Specifically, the class attribute is true when the mean high price is expected to increase in the following day, and false when the mean high price is anticipated to decrease or remain stagnant.
+
+Please note that this dataset is intended for scientific purposes only and should not be used to inform real-world trading decisions. In realistic trading scenarios, predictive models should focus on close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* Timestamp: Represents the time of each data point, set to the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the beginning of each time interval.
+* Bid High: The highest bid price recorded during each time interval.
+* Bid Low: The lowest bid price recorded during each time interval.
+* Bid Close: The bid price at the end of each time interval.
+* Bid Volume: The number of times the bid price changed within each time interval.
+* Ask Open: The ask price at the beginning of each time interval.
+* Ask High: The highest ask price recorded during each time interval.
+* Ask Low: The lowest ask price recorded during each time interval.
+* Ask Close: The ask price at the end of each time interval.
+* Ask Volume: The number of times the ask price changed within each time interval.
+* Class: Indicates whether the average price is expected to increase or decrease in the next interval.
+
+Keywords: Forex, EUR/USD, Historical Data, Candlestick, Time Series, Financial Markets, Trading Strategies.

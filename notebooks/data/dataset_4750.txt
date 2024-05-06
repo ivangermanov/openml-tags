@@ -1,0 +1,88 @@
+Subsampling of the dataset KDD Cup ninety-nine with seed equals zero arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals True.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified) -> Dataset:
+random number generator equals numpy random default random generator seed
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y unique
+if length of classes greater than number classes maximum:
+value counts equals y value counts
+selected classes equals random number generator choice classes size number classes maximum replace false probability value counts divided by sum of value counts
+Select the indices where one of these classes is present
+index equals y index y is in selected classes
+x equals x iloc index
+y equals y iloc index
+
+Uniformly sample columns if required
+if length of x columns greater than number columns maximum:
+column indexes equals random number generator choice list range length of x columns size number columns maximum replace false
+sorted column indexes equals sorted column indexes
+selected columns equals list x columns sorted column indexes
+x equals x selected columns
+else:
+sorted column indexes equals list range length of x columns
+
+if length of x greater than number rows maximum:
+Stratify accordingly
+target name equals y name
+data equals pandas concat x y axis columns
+_, subset equals train test split data test size number rows maximum stratify data target name shuffle true random state seed
+x equals subset drop target name axis columns
+y equals subset target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals list of self categorical mask for i in sorted column indexes
+columns equals list x columns
+return Dataset
+Technically this is not the same but it's where it was derived from
+dataset equals self dataset
+x equals x
+y equals y
+categorical mask equals categorical mask
+columns equals columns
+
+Features: 
+duration 
+protocol type 
+service 
+flag 
+source bytes 
+destination bytes 
+land 
+wrong fragment 
+urgent 
+hot 
+number failed logins 
+logged in 
+number compromised 
+root shell 
+su attempted 
+number root 
+number file creations 
+number shells 
+number access files 
+number outbound commands 
+is host login 
+is guest login 
+count 
+service count 
+same service rate 
+different service rate 
+service different host rate 
+destination host count 
+destination host service count 
+destination host same service rate 
+destination host different service rate 
+destination host same source port rate 
+destination host service different host rate 
+destination host service error rate 
+destination host service retransmission error rate 
+destination host retransmission error rate 
+target 
+
+Tags: Health, Medicine
+
+Keywords: KDD Cup ninety-nine, subsampling, stratified sampling, dataset, machine learning, health, medicine

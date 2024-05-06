@@ -1,0 +1,28 @@
+**FOREX cadjpy-day-High**
+
+Tags: Finance, Forex, Forex Day, Forex High, Health, Statistics
+
+**Data Description**
+
+This dataset contains the historical price data of the Foreign Exchange rate between Canadian Dollar and Japanese Yen (CAD/JPY) sourced from Dukascopy's Historical Data Feed. Each instance represents a single daily candlestick, excluding weekends when the Foreign Exchange market is closed. The data ranges from January first to December thirteenth and is timestamped according to the Europe/Amsterdam timezone.
+
+The class attribute is defined as the direction of the mean high price of the following day relative to the mean high price of the current day. In other words, the class attribute is true if the mean high price is expected to rise in the next day and false if it is expected to fall or remain stagnant.
+
+**Note**: This dataset is intended for scientific purposes only, and realistic trade strategies should be based on predictions made on Close attributes, which are also available.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of the daily time interval.
+* **Bid High**: The highest bid price recorded during the daily time interval.
+* **Bid Low**: The lowest bid price recorded during the daily time interval.
+* **Bid Close**: The bid price at the end of the daily time interval.
+* **Bid Volume**: The number of times the bid price changed within the daily time interval.
+* **Ask Open**: The ask price at the start of the daily time interval.
+* **Ask High**: The highest ask price recorded during the daily time interval.
+* **Ask Low**: The lowest ask price recorded during the daily time interval.
+* **Ask Close**: The ask price at the end of the daily time interval.
+* **Ask Volume**: The number of times the ask price changed within the daily time interval.
+* **Class**: Whether the average high price will increase during the next daily interval.
+
+Keywords: Foreign Exchange, CAD/JPY, Historical Data, Candlestick, Time Series, Finance, Trading Strategy

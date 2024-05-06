@@ -1,0 +1,43 @@
+Phoneme Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Economics, Government 
+
+Subsampling of the dataset Phoneme with seed equal to four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+
+def subsample(self, seed: int, number_rows_max: int, number_columns_max: int, number_classes_max: int, stratified: bool) -> Dataset:
+random_number_generator = numpy random default random generator with seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique if length of classes is greater than number classes max:
+value_counts equals y value counts 
+selected_classes equals random_number_generator choice classes size number_classes_max replace false probability value_counts divided by sum of value_counts 
+Select the indices where one of these classes is present index equals y index y is in selected classes 
+x equals x iloc index 
+y equals y iloc index 
+
+Uniformly sample columns if required:
+if length of x columns is greater than number_columns_max:
+column_indexes equals random_number_generator choice list range length of x columns size number_columns_max replace false 
+sorted_column_indexes equals sorted column_indexes 
+selected_columns equals list x columns sorted_column_indexes 
+x equals x selected_columns 
+else:
+sorted_column_indexes equals list range length of x columns 
+if length of x is greater than number_rows_max:
+Stratify accordingly target_name equals y name 
+data equals pandas concatenate x and y axis columns 
+_, subset equals train_test_split data test_size number_rows_max stratify data target_name shuffle true random_state seed 
+x equals subset drop target_name axis columns 
+y equals subset target_name 
+We need to convert categorical columns to string for openml categorical_mask equals list self categorical_mask for i in sorted_column_indexes 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it is where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical_mask equals categorical_mask 
+columns equals columns 
+
+Keywords: subsampling, dataset, Phoneme, economics, government, stratification, sampling

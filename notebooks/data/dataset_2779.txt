@@ -1,0 +1,24 @@
+FOREX USD/CHF Day Close Dataset
+
+Tags: Education, Finance, Forex, Forex Close, Forex Day, Health
+
+This dataset consists of historical price data of the USD/CHF Forex pair from Dukascopy. Each instance represents one daily candlestick, and the entire dataset spans from January to December, excluding weekends when the Forex market is closed.
+
+The timestamp feature is based on the Europe/Amsterdam timezone. The class attribute indicates the direction of the mean close price of the following day relative to the current day's mean close price. Specifically, the class attribute is true if the mean close price is expected to increase the following day, and false if it is expected to decrease or remain unchanged.
+
+Attributes:
+
+* Timestamp: The time of the current data point, based on the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of the daily time interval.
+* Bid High: The highest bid price recorded during the daily time interval.
+* Bid Low: The lowest bid price recorded during the daily time interval.
+* Bid Close: The bid price at the end of the daily time interval.
+* Bid Volume: The frequency of changes in the bid price within the daily time interval.
+* Ask Open: The ask price at the start of the daily time interval.
+* Ask High: The highest ask price recorded during the daily time interval.
+* Ask Low: The lowest ask price recorded during the daily time interval.
+* Ask Close: The ask price at the end of the daily time interval.
+* Ask Volume: The frequency of changes in the ask price within the daily time interval.
+* Class: Indicates whether the mean close price is expected to increase or decrease the following day.
+
+Keywords: Forex, USD/CHF, Historical Data, Candlestick, Time Series, Financial Markets

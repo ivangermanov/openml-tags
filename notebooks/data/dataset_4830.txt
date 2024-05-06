@@ -1,0 +1,22 @@
+Bitcoin Heist Ransomware Dataset
+
+Tags: Classification on both numerical and categorical features
+
+This dataset belongs to the tabular data benchmark and is transformed in the same way.
+
+The Bitcoin Heist Ransomware Dataset is a comprehensive collection of Bitcoin transactions from January 2009 to December 2018. The dataset was created by extracting daily transactions on the network and forming a Bitcoin graph. To filter out irrelevant transactions, only network edges that transferred more than a certain threshold were considered.
+
+Ransomware addresses were obtained from three widely adopted studies. These addresses were then used to extract six features for each address in each twenty-four hour snapshot: income, neighbors, weight, length, count, and loop. These features aim to quantify specific transaction patterns, such as the merging of coins into a single address, the number of transactions, and the distribution of coins across multiple rounds.
+
+The dataset includes a total of twenty-four ransomware families, with some addresses appearing in more than one time window. One particular address appeared a maximum of four hundred and twenty times.
+
+Features include:
+
+* Address: a string representing the Bitcoin address
+* Year: an integer representing the year
+* Day: an integer representing the day of the year
+* Length: an integer representing the number of mixing rounds on Bitcoin
+* Income: an integer representing the Satoshi amount (one bitcoin is one hundred million Satoshis)
+* Label: a category string representing the name of the ransomware family or "white" (not known to be ransomware)
+
+Keywords: Bitcoin, ransomware, transaction patterns, cryptocurrency, machine learning.

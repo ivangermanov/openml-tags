@@ -1,0 +1,19 @@
+Electricity Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Health, Medicine 
+
+Subsampling of the dataset Electricity with a seed of four. The arguments include number of rows max, number of columns max, and number of classes max, all set to two thousand, one hundred, and ten respectively, with stratification set to true.
+
+Generated with the following source code:
+
+The function subsample takes in parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses numpy's default random generator to generate random samples. 
+
+First, it uniformly samples classes from the unique values in y. If there are more classes than the maximum allowed, it selects the specified number of classes using their value counts as probabilities. Then, it selects the indices where one of these classes is present.
+
+Next, it uniformly samples columns if required. If the number of columns exceeds the maximum allowed, it randomly chooses the specified number of column indices and sorts them. It then selects these columns from the original data.
+
+After that, if the total number of rows exceeds the maximum allowed, it stratifies the data according to the target variable using train test split from scikit learn, with shuffling and a random state set to the seed. Finally, it returns a new dataset with the subsampled data, categorical mask, and column names.
+
+Features include date, period, New South Wales price, New South Wales demand, Victoria price, Victoria demand, and transfer, along with a classification label.
+
+Keywords: subsampling, dataset, stratification, classification, health, medicine

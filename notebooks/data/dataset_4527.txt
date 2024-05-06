@@ -1,0 +1,51 @@
+Vehicle Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Vehicle Fifty Four with seed equals two arguments dot N Rows equals two thousand arguments dot N Columns equals one hundred arguments dot N Classes equals ten arguments dot No Stratify equals False 
+
+Generated with the following source code:
+
+def sub sampling(self, seed, N Rows Max, N Columns Max, N Classes Max, stratified)
+-> Dataset:
+random number generator equals numpy dot random dot default random generator of seed 
+x equals self dot x 
+y equals self dot y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than N Classes Max 
+value counts of classes equals y value counts 
+selected classes equals random number generator choice of classes, size equals N Classes Max, replace equals False, probability equals value counts of classes divided by sum of value counts 
+Select the indices where one of these classes is present 
+index IDs equals y index of y is in selected classes 
+x equals x iloc of index IDs 
+y equals y iloc of index IDs 
+
+Uniformly sample columns if required 
+if length of x columns is greater than N Columns Max 
+column index IDs equals random number generator choice of list of range of length of x columns, size equals N Columns Max, replace equals False 
+sorted column index IDs equals sorted of column index IDs 
+selected columns equals list of x columns of sorted column index IDs 
+x equals x of selected columns 
+else 
+sorted column index IDs equals list of range of length of x columns 
+
+if length of x is greater than N Rows Max 
+Stratify accordingly 
+target name equals y name 
+data equals pandas dot concat of x and y, axis equals columns 
+_, subset equals sklearn model selection dot train test split of data, test size equals N Rows Max, stratify equals data of target name, shuffle equals True, random state equals seed 
+x equals subset drop of target name, axis equals columns 
+y equals subset of target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals list of self categorical mask of i in sorted column index IDs 
+columns equals list of x columns 
+return Dataset of 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: Compactness, Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, Class
+
+Keywords: sub sampling, dataset, Vehicle, stratified, OpenML, categorial, sklearn

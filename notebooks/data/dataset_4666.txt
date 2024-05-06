@@ -1,0 +1,11 @@
+Subsampling of the dataset Satellite with a specific set of parameters. This dataset has been generated using a specific source code that involves various machine learning and statistical techniques.
+
+The subsample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification. The function first samples classes uniformly and then selects the indices where one of these classes is present. It then samples columns uniformly if required.
+
+If the number of rows exceeds the maximum limit, the function uses stratified sampling to select a subset of the data. This ensures that the class distribution is maintained in the subsampled data. Finally, the function returns a new dataset object with the subsampled data, along with metadata such as the column names and categorical mask.
+
+Tags: Machine Learning, Statistics
+
+Features: Various numerical variables
+
+Keywords: subsampling, machine learning, statistics, stratification, class distribution

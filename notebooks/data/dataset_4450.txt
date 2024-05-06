@@ -1,0 +1,15 @@
+Subsampling of the Amazon Commerce Reviews dataset with a seed value of zero. This dataset has been generated using the following source code.
+
+The subsample function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function uses NumPy's default random number generator to uniformly sample classes, columns, and rows from the original dataset.
+
+First, the function selects a subset of classes from the unique values in the target variable. It does this by calculating the value counts of each class and then choosing the desired number of classes using a weighted random choice. The weights are based on the proportion of each class in the original dataset.
+
+Next, the function selects a subset of columns from the feature matrix. It does this by uniformly choosing the desired number of column indices and then selecting the corresponding columns.
+
+Finally, the function selects a subset of rows from the dataset. If stratification is required, it uses scikit-learn's train-test split function to ensure that the resulting sample has the same class distribution as the original dataset.
+
+The resulting dataset is returned as an instance of the Dataset class, which includes the sampled data, the categorical mask, and the column names.
+
+Features: Product Rating, Review Length, Review Sentiment, and many others.
+
+Keywords: Subsampling, Amazon Commerce Reviews, Machine Learning, Stratified Sampling, Feature Selection.

@@ -1,0 +1,15 @@
+Subsampling of the dataset Satellite with Seed equals Three 
+Tags: Machine Learning, Mathematics 
+
+Generated with the following source code:
+
+The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not, and returns a Dataset.
+
+The function first generates a random number generator using the given seed. Then it uniformly samples classes from the unique values in the target variable, making sure not to exceed the maximum number of classes allowed. 
+
+It selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns if required, making sure not to exceed the maximum number of columns allowed.
+
+If the resulting data still has more rows than the maximum allowed, it uses stratified sampling to reduce the number of rows while maintaining the class distribution. Finally, it converts categorical columns to strings and returns the resulting Dataset.
+
+Dataset Details:
+This dataset is a subsampled version of the original Satellite dataset. It contains a hundred features, including V One, V Two, V Three, and so on up to V Thirty Six, and a target variable.

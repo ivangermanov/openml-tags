@@ -1,0 +1,15 @@
+Subsampling of the First Order Theorem Proving dataset with a specified seed value generates a new dataset. This process involves uniform sampling of classes, columns, and rows.
+
+The function takes several arguments, including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+
+Uniform sampling of classes is performed by selecting a specified number of unique classes from the dataset. The indices where these classes are present are then used to select the corresponding data points. 
+
+Next, uniform sampling of columns is performed by randomly selecting a specified number of column indices. The selected columns are then used to create a new dataset.
+
+Finally, stratified sampling of rows is performed using a train-test split function. This ensures that the sampled data maintains the same class distribution as the original dataset.
+
+The resulting dataset contains the sampled data, along with metadata such as the categorical mask and column names.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: subsampling, theorem proving, machine learning, stratified sampling, dataset generation

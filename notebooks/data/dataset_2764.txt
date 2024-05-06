@@ -1,0 +1,26 @@
+**FOREX aud/usd-hour-High**
+Tags: Economics, Finance, Forex, Forex High, Forex Hour
+
+**Data Description**
+This is the historical price data of the Foreign Exchange Australian Dollar versus United States Dollar from Dukascopy. One instance, or row, represents one candlestick of one hour. The entire dataset spans a specific date range and does not include weekends, since the Foreign Exchange market is not traded on weekends.
+
+The time zone of the feature Timestamp is Europe/Amsterdam. The class attribute is determined by the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. Specifically, the class attribute is true when the mean High price is increasing in the following hour, and false when the mean High price is decreasing or remains unchanged in the following hour.
+
+**Note** that this is a hypothetical task, intended for scientific purposes only. Realistic trade strategies can only be applied to predictions based on Close attributes, which are also available.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the Bid Price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the Ask Price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Australian Dollar, United States Dollar, Historical Price Data, Candlestick, Time Zone, Amsterdam, Hypothetical Task, Scientific Purposes, Trade Strategies.

@@ -1,0 +1,30 @@
+**FOREX USD/JPY Day High**
+
+Tags: Computer Systems, Finance, Forex, Forex Day, Forex High, Social Media
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description**
+
+This dataset contains historical price data of the Forex USD/JPY pair from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as Forex markets do not operate on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute indicates the direction of the mean high price of the following day relative to the mean high price of the current minute. Specifically, the class attribute is true if the mean high price is expected to rise the following day, and false if it is expected to fall or remain unchanged.
+
+**Note**: This is a hypothetical task intended for scientific purposes only. Realistic trading strategies should only be based on predictions of close attributes (also available).
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price will rise during the next interval.
+
+Keywords: Forex, USD/JPY, Candlestick, Historical Data, Trading Strategy, Financial Markets

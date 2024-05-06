@@ -1,0 +1,35 @@
+Segment Tags: Computer Systems, Education, Label Ranking
+
+Features:
+
+* Region Centroid Column: the column of the center pixel of the region
+* Region Centroid Row: the row of the center pixel of the region
+* Region Pixel Count: the number of pixels in a region, which is always nine
+* Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five with low contrast, less than or equal to five, go through the region
+* Short Line Density Two: similar to Short Line Density Five but counts lines of high contrast, greater than five
+* Vertical Edge Mean: a measure of the contrast of horizontally adjacent pixels in the region, used as a vertical edge detector
+* Vertical Edge Standard Deviation: the standard deviation of the contrast of horizontally adjacent pixels in the region
+* Horizontal Edge Mean: measures the contrast of vertically adjacent pixels, used for horizontal line detection
+* Horizontal Edge Standard Deviation: the standard deviation of the contrast of vertically adjacent pixels
+* Intensity Mean: the average over the region of the sum of the red, green, and blue values divided by three
+* Raw Red Mean: the average over the region of the red value
+* Raw Blue Mean: the average over the region of the blue value
+* Raw Green Mean: the average over the region of the green value
+* Excess Red Mean: a measure of the excess red, calculated as two times the red value minus the sum of the green and blue values
+* Excess Blue Mean: a measure of the excess blue, calculated as two times the blue value minus the sum of the red and green values
+* Excess Green Mean: a measure of the excess green, calculated as two times the green value minus the sum of the red and blue values
+* Value Mean: a three-dimensional nonlinear transformation of the red, green, and blue values
+* Saturation Mean: a measure of the saturation of the color in the region
+* Hue Mean: a measure of the hue of the color in the region
+
+Scraped Data:
+Dataset Information
+
+The instances were drawn randomly from a database of seven outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a three-by-three region.
+
+Has Missing Values?
+No
+
+Additional Variable Information
+
+Keywords: computer systems, education, image processing, feature extraction, segmentation

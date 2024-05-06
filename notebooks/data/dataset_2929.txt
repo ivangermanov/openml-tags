@@ -1,0 +1,17 @@
+Credit Card Fraud Detection
+
+Tags: Astronomy, Machine Learning
+
+It is crucial for credit card companies to identify fraudulent transactions accurately, ensuring customers are not charged for items they did not purchase. 
+
+The Credit Card Fraud Detection dataset comprises transactions made by European cardholders in September 2013. Over a two-day period, there were 492 fraudulent transactions among 284,807 total transactions. Due to the highly unbalanced nature of the dataset, the positive class (fraudulent transactions) accounts for a mere fraction of total transactions.
+
+The dataset consists solely of numerical input variables resulting from Principal Component Analysis (PCA) transformations, except for the Time and Amount features. The Time feature represents the number of seconds elapsed between each transaction and the first transaction in the dataset. The Amount feature denotes the transaction amount, which can be utilized for example-dependent cost-sensitive learning. 
+
+The Class feature serves as the response variable, assuming a value of one in cases of fraud and zero otherwise.
+
+Given the significant class imbalance, evaluating model performance using the Area Under the Precision-Recall Curve (AUPRC) is recommended instead of relying solely on confusion matrix accuracy.
+
+The dataset was compiled and analyzed through a collaborative effort between Worldline and the Machine Learning Group of the Université Libre de Bruxelles (ULB) focused on big data mining and fraud detection.
+
+Keywords: Credit Card Fraud Detection, Machine Learning, Unbalanced Classification, Principal Component Analysis, Cost-Sensitive Learning, Class Imbalance, Area Under the Precision-Recall Curve.

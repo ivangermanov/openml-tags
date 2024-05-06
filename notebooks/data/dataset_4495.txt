@@ -1,0 +1,17 @@
+Name: Jasmine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Subsampling of the dataset Jasmine generated with the following source code 
+
+The function subsample takes in parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not, and returns a dataset.
+
+The function first uniformly samples classes from the unique classes present in the dataset, up to the specified number of classes maximum. It then selects the indices where one of these classes is present.
+
+Next, the function uniformly samples columns if required, up to the specified number of columns maximum.
+
+If the number of rows exceeds the specified number of rows maximum, the function stratifies the data accordingly.
+
+Finally, the function converts categorical columns to string for OpenML and returns a new dataset with the subsampled data.
+
+Features: Variable One, Variable Two, Variable Three, Variable Four, Variable Seven, Variable Nine, and many others...
+
+Keywords: Subsampling, Dataset, Stratification, OpenML, Categorical Columns

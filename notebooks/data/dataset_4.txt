@@ -1,0 +1,33 @@
+Title: Letter Image Recognition Data
+
+The objective of this dataset is to identify each of a large number of black and white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet.
+
+The character images were based on twenty different fonts and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, including statistical moments and edge counts, which were then scaled to fit into a range of integer values from zero to fifteen.
+
+We typically train on the first part of the data and then use the resulting model to predict the letter category for the remaining part. See the referenced article for more details.
+
+Features:
+
+* Horizontal Position of Box
+* Vertical Position of Box
+* Width of Box
+* Height of Box
+* Total Number of On Pixels
+* Mean X of On Pixels in Box
+* Mean Y of On Pixels in Box
+* Mean X Variance
+* Mean Y Variance
+* Mean X Y Correlation
+* Edge Count Left to Right
+* Correlation of Edge Count with Y
+* Edge Count Bottom to Top
+* Correlation of Edge Count with X
+* Class
+
+Dataset Information:
+This dataset does not have missing values.
+
+Additional Information:
+The dataset consists of twenty-six classes, one for each capital letter in the English alphabet.
+
+Keywords: letter recognition, image classification, machine learning, font recognition, pixel display, statistical moments, edge counts

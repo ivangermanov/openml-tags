@@ -1,0 +1,9 @@
+This is the famous Web Data dataset in its binary version, retrieved from the libSVM site. The dataset was created by loading all Web Data datasets, including training and testing data, and then joining the test and train data for each subset. Each file was then normalized column-wise according to specific rules.
+
+If a column contained only one value, it was considered a constant feature and set to zero, effectively removing it due to sparsity. If a column contained two values, the most frequently occurring value was set to zero, while the other was set to one, making it a binary feature. For columns containing more than two values, they were divided by their standard deviation, making them multinary or real features.
+
+After normalization, all eight files were merged into one and randomly sorted. Finally, any duplicate lines were removed. A script that performs these steps can be found online.
+
+The resulting dataset has numerous features, although some may not be easily readable. The dataset is useful for machine learning and computer systems studies, particularly in the realm of support vector machines and kernel methods.
+
+Keywords: Web Data, libSVM, Support Vector Machines, Binary Dataset, Normalization, Sparsity, Binary Features, Multinary Features, Real Features.

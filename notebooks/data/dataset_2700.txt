@@ -1,0 +1,26 @@
+FOREX Euro/Swedish Krona Hourly High Dataset
+
+Tags: Agriculture, Economics, Finance, Forex, Forex High, Forex Hour
+
+This dataset contains the historical price data of the Forex Euro/Swedish Krona exchange rate from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January to December and excludes weekends, as the Forex market is not traded during these periods. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price of the subsequent hour relative to the mean high price of the current hour. In other words, if the mean high price increases in the following hour, the class attribute is true; otherwise, it is false.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies require predictions based on close attributes, which are also available in this dataset.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of the hourly interval.
+* Bid High: The highest bid price during the hourly interval.
+* Bid Low: The lowest bid price during the hourly interval.
+* Bid Close: The bid price at the end of the hourly interval.
+* Bid Volume: The number of times the bid price changed within the hourly interval.
+* Ask Open: The ask price at the start of the hourly interval.
+* Ask High: The highest ask price during the hourly interval.
+* Ask Low: The lowest ask price during the hourly interval.
+* Ask Close: The ask price at the end of the hourly interval.
+* Ask Volume: The number of times the ask price changed within the hourly interval.
+* Class: Whether the average high price will increase during the next hourly interval.
+
+Keywords: Forex, Euro, Swedish Krona, Exchange Rate, Historical Data, Candlestick, Time Series, Finance, Trading.

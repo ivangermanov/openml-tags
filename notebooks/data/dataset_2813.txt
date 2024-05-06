@@ -1,0 +1,20 @@
+FOREX usd/chf Minute High
+
+Tags: Finance, Forex, Forex High, Forex Minute, Health, Medicine
+
+Data Description:
+This dataset contains historical price data of the Forex USD/CHF pair obtained from Dukascopy Historical Data Feed. Each instance represents one candlestick of one minute duration. The dataset covers a period from January to December and excludes weekends since Forex markets are closed during those days. The time zone used for the timestamp feature is Europe/Amsterdam.
+
+The primary objective of this dataset is to predict the direction of the mean high price of the subsequent minute based on the current minute's data. To achieve this, the class attribute is defined as follows: if the mean high price increases in the next minute, the class attribute is true; otherwise, it is false if the mean high price decreases or remains the same.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. In real-world scenarios, trade strategies rely on predicting close prices, which are also available in this dataset.
+
+Attributes:
+The timestamp represents the time of each data point in the Europe/Amsterdam time zone.
+The bid open, high, low, and close prices represent the respective values of the bid price during each time interval.
+The bid volume represents the number of times the bid price changed within each time interval.
+Similarly, the ask open, high, low, and close prices represent the respective values of the ask price during each time interval.
+The ask volume represents the number of times the ask price changed within each time interval.
+The class attribute determines whether the average price will increase or decrease in the next time interval.
+
+Keywords: Forex, USD/CHF, Candlestick, Time Series, Prediction, Finance

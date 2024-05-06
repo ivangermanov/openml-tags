@@ -1,0 +1,26 @@
+FOREX usd/cad - Minute - High 
+Tags: Agriculture, Economics, Finance, Forex, Forex High, Forex Minute 
+
+Data Description 
+This dataset consists of historical price data of the FOREX USD/CAD pair obtained from Dukascopy. Each instance, represented by a single row, corresponds to one candlestick of one minute duration. The entire dataset spans from January first to December thirteenth and excludes weekends, as the FOREX market remains inactive during these periods. The timestamp feature adheres to the Europe/Amsterdam time zone.
+
+The class attribute denotes the direction of the mean high price relative to the subsequent minute. Specifically, it indicates whether the mean high price is increasing or decreasing (or remains stagnant) in the following minute. A value of true signifies an upward trend, whereas false implies a downward or stagnant movement.
+
+Please note that this dataset serves solely for scientific purposes and should not be employed in real-world trading scenarios. In realistic trade strategies, predictions must be based on close attributes, which are also available in this dataset.
+
+Attributes 
+
+* Timestamp: Represents the time corresponding to each data point, adhering to the Europe/Amsterdam time zone.
+* Bid Open: Denotes the bid price at the commencement of the given time interval.
+* Bid High: Represents the highest bid price recorded during the specified time interval.
+* Bid Low: Signifies the lowest bid price observed during the designated time interval.
+* Bid Close: Refers to the bid price at the termination of the given time interval.
+* Bid Volume: Quantifies the frequency of changes in the bid price within the specified time interval.
+* Ask Open: Represents the ask price at the initiation of the given time interval.
+* Ask High: Denotes the highest ask price recorded during the specified time interval.
+* Ask Low: Signifies the lowest ask price observed during the designated time interval.
+* Ask Close: Refers to the ask price at the termination of the given time interval.
+* Ask Volume: Quantifies the frequency of changes in the ask price within the specified time interval.
+* Class: Indicates whether the average price will exhibit an upward trend during the subsequent interval.
+
+Keywords: FOREX, USD/CAD, Candlestick, Time Series, Finance, Trading, Prediction.

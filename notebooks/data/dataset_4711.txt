@@ -1,0 +1,14 @@
+Subsampling of the dataset Robert with a specified seed value resulted in a new dataset with reduced dimensions. The sampling process involved uniformly selecting classes from the original dataset until the desired number of classes was reached, and then selecting the corresponding indices where these classes were present. 
+
+The next step was to uniformly sample columns if the number of columns exceeded the maximum allowed. This was done by randomly choosing column indices and sorting them to ensure consistency.
+
+If the resulting dataset still had more rows than desired, the sampling process continued by using stratified sampling to ensure an even distribution of classes in the new dataset. This involved concatenating the feature data with the target variable, splitting the data into subsets using stratified sampling, and then separating the feature data and target variable again.
+
+Finally, the categorical columns were converted to strings to comply with OpenML requirements. 
+
+Tags: Machine Learning, Mathematics
+
+Features: 
+V One Forty-Two, V One Ninety-Seven,... 
+
+Keywords: dataset, sampling, machine learning, stratification, OpenML

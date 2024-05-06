@@ -1,0 +1,15 @@
+Name: San Francisco Police Incidents Seed One 
+
+Tags: Life Science, Machine Learning 
+
+Subsampling of the San Francisco Police Incidents dataset with a specified seed value. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. 
+
+The sampling process starts by selecting a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the classes are sampled based on their frequency distribution. The corresponding indices where these classes are present are then selected.
+
+Next, the columns are sampled uniformly if the total number of columns exceeds the maximum allowed. The selected columns are then used to create a new dataset.
+
+Finally, the rows are sampled based on the target variable using stratified sampling to ensure that the class distribution is preserved. This is done using a train-test split function from a popular machine learning library.
+
+The resulting dataset consists of the sampled features, which include time-related variables such as hour, day of the week, month, and year, as well as location-based variables including police district, address, and geographic coordinates. Additionally, the dataset includes a variable indicating whether a crime was violent or not.
+
+Keywords: subsampling, machine learning, dataset, San Francisco Police Incidents, life science, stratified sampling, feature selection

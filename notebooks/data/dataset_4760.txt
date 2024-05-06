@@ -1,0 +1,11 @@
+Subsampling of the dataset KDD Cup Nine Upselling with a specified seed value. This dataset has been generated using the following source code.
+
+The subsample function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification or not. It first uniformly samples the classes, selecting a specified number of unique classes based on their frequency distribution. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, the function uniformly samples the columns, selecting a specified number of columns randomly. If the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data, ensuring that the class distribution is maintained.
+
+Finally, the function converts categorical columns to string format and returns a new dataset object with the sampled data, column names, and categorical mask.
+
+Features include various variables such as those related to customer demographics, transaction history, and product information. These features have been carefully selected to represent a diverse range of characteristics relevant to the upselling task.
+
+Keywords: subsampling, dataset, KDD Cup Nine Upselling, stratification, feature selection, categorical conversion.

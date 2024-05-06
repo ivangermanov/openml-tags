@@ -1,0 +1,41 @@
+The Unix User Data dataset contains nine sets of sanitized user data drawn from the command histories of eight Unix computer users at Purdue University over a period of up to two years. The data is derived from tcsh history files and has been parsed and sanitized to remove identifiable information such as filenames, usernames, directory structures, web addresses, hostnames, and other potentially identifying items.
+
+Command names, flags, and shell metacharacters have been preserved, and Start of File (SOF) and End of File (EOF) tokens have been inserted at the beginning and end of each shell session, respectively. Sessions are concatenated in chronological order, and tokens appear in the order they were issued within the shell session, although no timestamps are included in the data.
+
+For instance, two sample sessions might appear as follows:
+
+cd ~/private/documents
+ls -laF | more
+cat file one.txt file two.txt file three.txt > somewhere
+exit
+
+cd ~/games/
+xquake &
+fg
+vi scores.txt
+mail someone@example.com
+exit
+
+These sessions would be represented by the token stream:
+
+SOF
+cd 
+ls -laF | more
+cat 
+> 
+exit
+EOF
+SOF
+cd 
+xquake &
+fg
+vi 
+mail 
+exit
+EOF
+
+This dataset is made available under conditions of anonymity for the contributing users and may be used solely for research purposes. Research summaries and results employing this data may be published, but literal tokens or token sequences from the data may not be published without the express consent of the originators of the data. Furthermore, no portion of this data may be released with or included in a commercial product, nor may any portion of this data be sold or redistributed for profit or as part of a profit-making endeavor.
+
+Features: history, session, user
+
+Keywords: Unix, command history, sanitized data, research purposes, anonymity, profit restrictions.

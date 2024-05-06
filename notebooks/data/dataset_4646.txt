@@ -1,0 +1,13 @@
+Phishing Websites Seed One 
+
+This dataset is a subsampling of the Phishing Websites dataset. It was generated using the following source code.
+
+The subsample function takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function first uniformly samples classes from the original dataset, then selects the indices where one of these classes is present. It then uniformly samples columns if required. Finally, it stratifies the sampling according to the target variable if necessary.
+
+The resulting dataset has a specified number of rows, columns, and classes. The categorical mask is also preserved.
+
+Features of this dataset include whether a URL has an IP address, its length, whether it uses a shortening service, and other characteristics related to URLs and domains. Other features include information about the website's security, traffic, and ranking.
+
+Tags: Subsampling of the Phishing Websites dataset 
+
+Keywords: phishing websites, dataset, subsampling, stratification, URL features

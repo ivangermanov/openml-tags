@@ -1,0 +1,13 @@
+The dataset named Eye Movements has been subsampled with the following parameters: seed equals zero, maximum number of rows equals two thousand, maximum number of columns equals one hundred, maximum number of classes equals ten, and stratification is true.
+
+This subsampling process involves several steps. First, the unique classes in the dataset are identified. If there are more than ten classes, a random selection of ten classes is made based on their frequency in the dataset. The indices corresponding to these selected classes are then obtained, and the dataset is filtered to only include these indices.
+
+Next, if the dataset has more than one hundred columns, a random selection of one hundred columns is made uniformly. The dataset is then filtered to include only these selected columns.
+
+Finally, if the resulting dataset still has more than two thousand rows, a stratified sampling approach is used to select two thousand rows. This ensures that the class distribution in the subsampled dataset is similar to that in the original dataset.
+
+The resulting subsampled dataset contains the following features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protected, Title Number, Word Number, and Label.
+
+Tags: Computer Systems, Machine Learning
+
+Keywords: Eye Movements, Subsampling, Stratification, Machine Learning, Dataset, Feature Selection

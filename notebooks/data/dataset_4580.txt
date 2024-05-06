@@ -1,0 +1,21 @@
+Subsampling of the dataset PC Four with Seed Zero 
+Tags: Subsampling of the dataset PC Four 
+
+Generated with the following source code:
+
+This function subsamples a given dataset based on several parameters. The subsample function takes in several arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether to use stratification or not.
+
+The function first initializes a random number generator using the provided seed value. It then selects a uniform sample of classes from the dataset, ensuring that the number of classes does not exceed the maximum specified. 
+
+If the number of classes exceeds the maximum, the function uses value counts to select the most common classes. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+
+Next, the function uniformly samples columns from the dataset if the number of columns exceeds the maximum specified. It achieves this by randomly selecting column indices and sorting them to ensure consistency.
+
+If the number of rows exceeds the maximum, the function uses stratified sampling to split the dataset into two subsets. This ensures that the class distribution remains consistent between the subsets.
+
+Finally, the function converts categorical columns to strings, creates a new dataset object, and returns it.
+
+Features: 
+Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Comment Lines, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Halstead Difficulty, Halstead Effort, Halstead Error Estimate, Halstead Length, Halstead Level, Halstead Program Time, Halstead Volume, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Total Lines of Code
+
+Keywords: subsampling, dataset, stratification, feature selection, class distribution, categorical variables

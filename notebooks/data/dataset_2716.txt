@@ -1,0 +1,24 @@
+**FOREX gbpusd-minute-Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Transportation
+
+This dataset contains historical price data of the Forex GBP/USD from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans a specific period of time and excludes weekends, as the Forex market is not active on weekends.
+
+The timestamp feature is based on the Europe/Amsterdam timezone. The class attribute is determined by the direction of the mean close price of the subsequent minute relative to the current minute. Specifically, the class attribute is true when the mean close price increases in the following minute, and false when the mean close price decreases or remains the same.
+
+**Attributes:**
+
+* **Timestamp:** The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open:** The bid price at the start of this time interval.
+* **Bid High:** The highest bid price recorded during this time interval.
+* **Bid Low:** The lowest bid price recorded during this time interval.
+* **Bid Close:** The bid price at the end of this time interval.
+* **Bid Volume:** The number of times the bid price changed within this time interval.
+* **Ask Open:** The ask price at the start of this time interval.
+* **Ask High:** The highest ask price recorded during this time interval.
+* **Ask Low:** The lowest ask price recorded during this time interval.
+* **Ask Close:** The ask price at the end of this time interval.
+* **Ask Volume:** The number of times the ask price changed within this time interval.
+* **Class:** An indicator of whether the average price will increase or decrease in the next interval.
+
+Keywords: Forex, GBP/USD, Candlestick, Finance, Market Data, Time Series, Trading.

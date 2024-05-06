@@ -1,0 +1,30 @@
+FOREX Eur Sek Day High 
+
+Tags: Culture, Finance, Forex, Forex Day, Forex High, Images 
+
+**Source**: Dukascopy Historical Data Feed 
+
+**Data Description**
+
+This dataset contains the historical price data of the Forex Eur/Sek currency pair from Dukascopy. Each instance represents one candlestick of one day, providing a comprehensive overview of the market trends and fluctuations. The entire dataset spans a specific period, excluding weekends when the Forex market is closed.
+
+The timestamp feature is set to the Europe/Amsterdam timezone, ensuring accurate and consistent timing information. The class attribute is particularly noteworthy, as it indicates the direction of the mean high price of the following day relative to the current day. Specifically, the class attribute is true when the mean high price is expected to rise the following day, and false when it is expected to fall or remain stagnant.
+
+**Note**: This dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies should be based on predictions of close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* Timestamp: The time of the current data point, accurately represented in the Europe/Amsterdam timezone.
+* Bid Open: The initial bid price at the start of the specified time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price observed during this time interval.
+* Bid Close: The final bid price at the end of the specified time interval.
+* Bid Volume: The frequency of changes in the bid price within this time interval.
+* Ask Open: The initial ask price at the start of the specified time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price observed during this time interval.
+* Ask Close: The final ask price at the end of the specified time interval.
+* Ask Volume: The frequency of changes in the ask price within this time interval.
+* Class: An indicator of whether the average high price is expected to increase or decrease in the next time interval.
+
+Keywords: Forex, Eur Sek, Candlestick, Historical Data, Currency Pair, Market Trends, Timezone, Class Attribute, Trading Strategies.

@@ -1,0 +1,28 @@
+**FOREX eur huf minute High**
+
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+
+**Data Description**
+
+This dataset comprises historical price data of the Forex Euro Hungarian Forint (EUR/HUF) sourced from Dukascopy. Each instance represents a one-minute candlestick, with the entire dataset spanning from January first to December thirteenth. As the Forex market is inactive during weekends, the dataset excludes these periods. The timestamp feature adheres to the Europe/Amsterdam time zone.
+
+The class attribute denotes the directional movement of the mean high bid and ask prices between consecutive minutes. Specifically, it indicates whether the mean high price is increasing or decreasing (or remains stagnant) in the subsequent minute. A true classification signifies an upward trend, while a false classification implies a downward or stagnant trend.
+
+**Note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies should be based on predictions involving 'close' attributes, which are also available.**
+
+**Attributes**
+
+* **Timestamp**: The time corresponding to each data point, adhering to the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the commencement of each time interval.
+* **Bid High**: The highest bid price recorded during each time interval.
+* **Bid Low**: The lowest bid price observed during each time interval.
+* **Bid Close**: The bid price at the conclusion of each time interval.
+* **Bid Volume**: The frequency of changes in the bid price within each time interval.
+* **Ask Open**: The ask price at the initiation of each time interval.
+* **Ask High**: The highest ask price documented during each time interval.
+* **Ask Low**: The lowest ask price observed during each time interval.
+* **Ask Close**: The ask price at the termination of each time interval.
+* **Ask Volume**: The frequency of changes in the ask price within each time interval.
+* **Class**: The directional indicator of the mean high price between consecutive minutes.
+
+Keywords: Forex, Euro, Hungarian Forint, Candlestick, Machine Learning, Finance, Time Series Analysis

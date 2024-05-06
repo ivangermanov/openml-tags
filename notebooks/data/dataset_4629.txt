@@ -1,0 +1,21 @@
+Name: Bio Response Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+
+Tags: Sub sampling of the Data Set Bio Response generated with the following source code:
+
+The function sub samples the Data Set Bio Response by uniformly selecting classes, columns, and rows while maintaining stratification.
+
+This function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not.
+
+First, it selects a uniform sample of classes from the available classes in the Data Set Bio Response. If there are more classes than the specified maximum, it uses value counts to determine the probability of each class being selected.
+
+Next, it selects the indices where one of the chosen classes is present and filters the data accordingly.
+
+Then, it uniformly samples columns if required. If there are more columns than the specified maximum, it randomly chooses the desired number of columns.
+
+Afterwards, if there are more rows than the specified maximum, it performs stratified sampling using the chosen classes to ensure an even distribution of classes in the sub sampled data.
+
+Finally, it converts categorical columns to strings and returns a new Data Set with the sub sampled data.
+
+This sub sampled Data Set includes various features.
+
+Keywords: bio response, sub sampling, data set, stratification, classes, columns, rows

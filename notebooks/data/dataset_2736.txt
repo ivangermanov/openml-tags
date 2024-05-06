@@ -1,0 +1,28 @@
+Name: Forex Eur Rub Day Close
+
+Tags: Finance, Forex, Forex Close, Forex Day, Manufacturing, Transportation
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description:** 
+This dataset consists of historical price data of the Forex Euro-Russian Ruble currency pair from Dukascopy. Each instance represents one candlestick of one day, providing a comprehensive overview of market trends and fluctuations. Since the Forex market does not operate on weekends, the dataset excludes these days, ensuring a consistent and reliable data stream.
+
+The dataset spans from January first to December thirteenth, offering a significant period for analysis and pattern recognition. The timestamp feature adheres to the Europe-Amsterdam time zone, providing a unified reference point for temporal analysis.
+
+The class attribute holds significant importance, as it indicates the direction of the mean close price of the following day relative to the current day's mean close price. Specifically, if the mean close price is expected to increase the following day, the class attribute is marked as true; otherwise, it is marked as false, indicating a stagnant or decreasing price trend.
+
+**Attributes:** 
+• Timestamp: Represents the time of each data point, adhering to the Europe-Amsterdam time zone.
+• Bid Open: Denotes the bid price at the beginning of each time interval.
+• Bid High: Captures the highest bid price recorded during each time interval.
+• Bid Low: Identifies the lowest bid price observed during each time interval.
+• Bid Close: Reflects the bid price at the conclusion of each time interval.
+• Bid Volume: Quantifies the frequency of changes in the bid price within each time interval.
+• Ask Open: Represents the ask price at the initiation of each time interval.
+• Ask High: Records the highest ask price attained during each time interval.
+• Ask Low: Identifies the lowest ask price observed during each time interval.
+• Ask Close: Denotes the ask price at the termination of each time interval.
+• Ask Volume: Measures the frequency of changes in the ask price within each time interval.
+• Class: Indicates whether the average price is expected to rise or fall during the subsequent interval.
+
+Keywords: Forex, Euro-Russian Ruble, Currency Pair, Historical Data, Candlestick, Time Series Analysis, Finance, Market Trends, Trading.

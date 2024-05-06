@@ -1,0 +1,18 @@
+Cause-effect is a growing database with two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+
+Some pairs are high-dimensional; for machine readability, the relevant information about this is coded in meta-data. Meta-data contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
+
+When you use this dataset in a publication, please cite the corresponding paper, which also contains much more detailed information regarding this dataset in the supplement.
+
+Overview of all data pairs:
+
+Variable One   Variable Two   Dataset   Ground Truth
+Altitude      Temperature     DWD       ->
+Altitude      Precipitation    DWD       ->
+Longitude     Temperature     DWD       ->
+Altitude      Sunshine Hours   DWD       ->
+
+Information for pair two:
+The German Weather Service (DWD) data was taken at three hundred forty-nine stations, available at www.dwd.de. The data includes yearly values averaged over nineteen sixty-one to nineteen ninety.
+
+Keywords: Cause-effect, Database, Causal Inference, Machine Learning, German Weather Service, Climate Data, Altitude, Precipitation, Temperature.

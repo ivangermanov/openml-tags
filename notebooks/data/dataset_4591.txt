@@ -1,0 +1,17 @@
+Car Seed One Number Rows Two Thousand Number Classes Ten Number Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Car with seed equals one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code.
+
+The function subsample takes in parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified. It uses numpy's default random generator to ensure reproducibility. The input dataset is then filtered based on the specified constraints. 
+
+If the number of unique classes exceeds the maximum allowed, the function selects a subset of classes using a weighted random choice based on their frequencies. The corresponding indices are then used to filter the input data. 
+
+Similarly, if the number of columns exceeds the maximum allowed, the function uniformly samples the columns. Finally, if the number of rows exceeds the maximum allowed, the function uses scikit-learn's train test split function to perform stratified sampling. 
+
+The resulting dataset is then returned with the relevant information including the dataset name, features, target variable, and categorical mask.
+
+Features: buying price, maintenance cost, number of doors, capacity in terms of persons, luggage boot space, safety rating, vehicle class.
+
+Keywords: machine learning, mathematics, dataset subsampling, stratified sampling, feature selection.

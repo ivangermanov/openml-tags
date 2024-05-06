@@ -3,7 +3,7 @@ import pandas as pd
 
 class TagAugmenter:
     """
-    A class to create or update a custom column in a DataFrame by appending the tags to the description.
+    A class to create or update a custom column in a DataFrame by prepending the tags to the description.
     """
 
     def __init__(self, description_column: str, tag_column: str, augmented_column: str) -> None:
@@ -20,7 +20,7 @@ class TagAugmenter:
 
     def __call__(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Augments a DataFrame by updating a custom column with the tag information appended to the existing or original description.
+        Augments a DataFrame by updating a custom column with the tag information prepended to the existing or original description.
 
         :param df: A pandas DataFrame.
         :return: The augmented pandas DataFrame with an updated custom column.

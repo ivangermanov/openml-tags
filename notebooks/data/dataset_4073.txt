@@ -1,0 +1,11 @@
+The NYC Taxi Green December 2016 dataset is a machine learning and statistics dataset used in the tabular data benchmark, transformed in the same way. It belongs to the regression on numerical features benchmark.
+
+This dataset originates from the Trip Record Data provided by the New York City Taxi and Limousine Commission, which includes TLC trips of the green line in December. The data was downloaded from the commission's website.
+
+For a detailed description of all variables in the dataset, please refer to the commission's homepage. The variable 'tip amount' has been chosen as the target variable. Note that the variable 'total amount' is ignored by default, as the target could be predicted deterministically if it were included. Additionally, the date variables 'pickup datetime' and 'drop-off datetime', although ignored by default, could be used to compute additional time features.
+
+In this version, only trips with 'payment type' equal to credit card have been selected, as tips are not included for most other payment types. Furthermore, the variables 'trip distance' and 'fare amount' have been removed to increase the importance of the categorical features 'pickup location ID' and 'drop-off location ID'.
+
+Features include passenger count, tolls amount, pickup datetime day, pickup datetime hour, pickup datetime minute, drop-off datetime day, drop-off datetime hour, and drop-off datetime minute.
+
+Keywords: NYC Taxi, machine learning, statistics, tabular data, regression, numerical features, trip record data, taxi commission, tip amount.

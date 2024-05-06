@@ -1,0 +1,11 @@
+Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equal to zero arguments number rows max equal to two thousand arguments number columns max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code.
+
+The function subsample takes five parameters: self, seed, number rows max, number columns max, and number classes max, and stratified. It returns a dataset. The function uses numpy random default random generator to generate random numbers. It then selects classes uniformly and selects the indices where one of these classes is present. 
+
+If the number of columns is greater than the maximum allowed, it uniformly samples columns. If the number of rows is greater than the maximum allowed, it stratifies accordingly using train test split. 
+
+The function returns a dataset with the selected features and target variable. 
+
+Features include Value, Rent, Family Total Income, Mother Location, Family Size, Number of Children, Elder Child, Youngest Child, Number of Siblings, Age, Occupation Score, Socioeconomic Index, Total Income, Wage Income, Business Income, Farm Income, Social Security Income, Welfare Income, Other Income, Poverty, Binary Class.
+
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection, Classification.

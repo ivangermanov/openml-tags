@@ -1,0 +1,13 @@
+Segment Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+
+This dataset is a subsampling of the Segment dataset with a seed of four, maximum number of rows set to two thousand, maximum number of columns set to one hundred, and maximum number of classes set to ten. The stratification argument is set to true.
+
+The subsampling function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean argument for stratification. It returns a new dataset.
+
+First, the function uniformly samples classes from the unique values in the target variable. If the number of unique classes exceeds the maximum number of classes, it selects a specified number of classes using their value counts as probabilities.
+
+Next, it selects the indices where one of the chosen classes is present and filters the data accordingly. Then, it uniformly samples columns if required. If the number of columns exceeds the maximum number, it randomly chooses a specified number of column indices and filters the data.
+
+Finally, if the number of rows exceeds the maximum number, it uses stratified sampling to select a specified number of rows. The function returns a new dataset with the sampled data, along with other relevant information such as the categorical mask and column names.
+
+Keywords: subsampling, dataset, stratification, sampling, classes, columns, rows

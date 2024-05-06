@@ -1,0 +1,51 @@
+Shuttle Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Demographics, Economics 
+
+Subsampling of the dataset Shuttle with Seed equal to Zero arguments N Rows equal to Two Thousand arguments N Columns equal to One Hundred arguments N Classes equal to Ten arguments No Stratify equal to False 
+
+Generated with the following source code:
+
+def subsample(self, seed: integer, n_rows_maximum: integer equals two thousand, n_columns_maximum: integer equals one hundred, n_classes_maximum: integer equals ten, stratified: boolean equals true,) -> Dataset:
+random number generator equals numpy dot random dot default_random_generator(seed)
+x equals self dot x 
+y equals self dot y 
+
+Uniformly sample classes equals y dot unique 
+if length of classes is greater than n_classes_maximum:
+value counts equals y dot value_counts 
+selected_classes equals random number generator dot choice(classes, size equals n_classes_maximum, replace equals false, probability equals value counts divided by sum of value counts,)
+Select the indices where one of these classes is present 
+indexes equals y dot index of y is in selected classes 
+x equals x dot iloc of indexes 
+y equals y dot iloc of indexes 
+
+Uniformly sample columns if required 
+if length of x dot columns is greater than n_columns_maximum:
+column indexes equals random number generator dot choice(list of range of length of x dot columns), size equals n_columns_maximum, replace equals false,)
+sorted column indexes equals sorted(column_indexes)
+selected_columns equals list of x dot columns of sorted_column_indexes 
+x equals x of selected_columns 
+else:
+sorted_column_indexes equals list of range of length of x dot columns)
+
+if length of x is greater than n_rows_maximum:
+Stratify accordingly 
+target_name equals y dot name 
+data equals pandas dot concat of tuple of x and y along columns axis
+_, subset equals sklearn model selection dot train_test_split of data, test size equals n_rows_maximum, stratify equals data of target_name, shuffle equals true, random state equals seed,)
+x equals subset dot drop of target_name along columns axis
+y equals subset of target_name
+
+We need to convert categorical columns to string for OpenML
+categorical_mask equals list of self dot categorical_mask of i for i in sorted_column_indexes)
+columns equals list of x dot columns
+return Dataset(
+Technically this is not the same but it's where it was derived from 
+dataset equals self dot dataset,
+x equals x,
+y equals y,
+categorical_mask equals categorical_mask,
+columns equals columns,)
+
+Keywords: Shuttle, Subsampling, Demographics, Economics, Dataset, Stratify, Random Sampling

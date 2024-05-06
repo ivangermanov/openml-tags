@@ -1,0 +1,20 @@
+I am currently building a short-term electric load forecasting model for Goa, with a significant portion being domestic household load. Temperature and Humidity can be used to estimate the heat index, which can be utilized as one of the input variables for the model. Therefore, predicting future temperature and humidity values is crucial.
+
+The historical weather data of Goa, India, contains the following information from July 1st to July 31st, with a fifteen-minute resolution:
+
+* Temperature, measured at two meters above ground
+* Relative Humidity, measured at two meters above ground
+* Atmospheric Pressure, measured at ground level
+* Wind Speed, measured at ten meters above ground
+* Wind Direction, measured at ten meters above ground, with zero degrees indicating wind coming from the north and ninety degrees indicating wind coming from the east
+* Rainfall, measured as rainfall mass density per square meter area
+* Short-Wave Irradiation, measured as surface incoming short-wave irradiation, broadband
+
+This data was downloaded from the website soda-pro.com, courtesy of the National Aeronautics and Space Administration (NASA) and the Goddard Space Flight Center. For more information, please visit gmao.gsfc.nasa.gov/reanalysis/MERRA-2. The licenses for this data can be found at soda-pro.com/documents/10157/326300/CAMS-data-license.pdf and soda-pro.com/documents/10157/326300/SoDa-license.pdf.
+
+The goal is to use this historical data to predict future humidity and temperature values.
+
+Features:
+Date, Time, Temperature, Relative Humidity, Atmospheric Pressure, Wind Speed, Wind Direction, Rainfall, Short-Wave Irradiation
+
+Keywords: Electric Load Forecasting, Weather Data, Temperature, Humidity, Heat Index, Machine Learning, Computer Systems

@@ -1,0 +1,15 @@
+Magic Telescope Seed Zero Dataset
+
+This dataset is a subsampled version of the Magic Telescope dataset. It was generated using a specific set of parameters, including a seed value of zero, a maximum number of rows, a maximum number of columns, and a maximum number of classes.
+
+The subsampling process involved uniformly selecting classes from the original dataset until the desired number of classes was reached. The indices where these classes were present were then used to select the corresponding rows from the dataset. Next, the columns were uniformly sampled until the desired number of columns was reached.
+
+If the dataset had more rows than the specified maximum, stratified sampling was used to select the desired number of rows. This ensured that the resulting dataset maintained the same distribution of classes as the original dataset.
+
+The resulting dataset contains demographic and economic features, including length, width, size, concentration, asymmetry, and distance. These features are important for understanding various aspects of the data, such as its shape, structure, and relationships.
+
+The dataset has been processed to ensure that categorical columns are converted to strings, making them suitable for use with OpenML.
+
+Tags: Demographics, Economics
+
+Keywords: subsampling, stratified sampling, demographics, economics, feature selection, dataset processing

@@ -1,0 +1,49 @@
+Gesture Phase Segmentation Processed Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Subsampling of the dataset Gesture Phase Segmentation Processed with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals false 
+
+Generated with the following source code:
+
+def subsample(self, seed: int, numberRowsMax: int = two thousand, numberOfColumnsMax: int = one hundred, numberOfClassesMax: int = ten, stratified: bool = true) -> Dataset:
+randomNumberGenerator = numpy random default random generator(seed)
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than numberOfClassesMax:
+valueCounts equals y value counts 
+selectedClasses equals randomNumberGenerator choice classes, size equals numberOfClassesMax, replace equals false, probability equals valueCounts over sum of valueCounts 
+Select the indices where one of these classes is present 
+indices equals y index y is in selectedClasses 
+x equals x iloc indices 
+y equals y iloc indices 
+
+Uniformly sample columns if required 
+if length of x columns is greater than numberOfColumnsMax:
+columnIndices equals randomNumberGenerator choice list range length of x columns, size equals numberOfColumnsMax, replace equals false 
+sortedColumnIndices equals sorted columnIndices 
+selectedColumns equals list x columns sortedColumnIndices 
+x equals x selectedColumns 
+else:
+sortedColumnIndices equals list range length of x columns 
+
+if length of x is greater than numberRowsMax:
+Stratify accordingly 
+targetName equals y name 
+data equals pandas concatenate x, y, axis equals columns 
+_, subset equals sklearn model selection train test split data, testSize equals numberRowsMax, stratify equals data targetName, shuffle equals true, randomState equals seed 
+x equals subset drop targetName, axis equals columns 
+y equals subset targetName 
+
+We need to convert categorical columns to string for OpenML 
+categoricalMask equals self categoricalMask for i in sortedColumnIndices 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it is where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categoricalMask equals categoricalMask 
+columns equals columns 
+
+Keywords: gesture phase segmentation, subsampling, dataset, stratification, machine learning.

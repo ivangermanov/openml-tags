@@ -1,0 +1,17 @@
+Click Prediction Small Dataset 
+
+Tags: Chemistry, Derived, Life Science, Study Fourteen, Study Thirty-Four, Study Seven 
+
+This dataset is derived from the KDD Cup 2012 competition. It consists of a 0.1 percent balanced subsample of the original KDD dataset, where the majority class (click equals zero) has been downsampled to achieve a reasonable balance of five to one with the target feature. 
+
+The dataset revolves around advertisements displayed alongside search results in a search engine, focusing on whether users clicked on these ads. The primary objective is to develop the most accurate model capable of predicting whether a user will click on a given advertisement.
+
+Each search session encompasses information related to user identification, the query issued by the user, the ads displayed to the user, and the target feature indicating whether the user clicked on at least one of the ads within this session. The total number of ads presented to a user in a session is referred to as depth, while the order of an ad in the displayed list is known as position. 
+
+An advertisement is typically displayed as a concise text titled title, accompanied by a slightly longer text described as description, and a Uniform Resource Locator referred to as display URL. To construct this dataset, each session was divided into numerous instances. Each instance illustrates an ad displayed under specific settings, including depth and position. 
+
+Instances featuring identical user IDs, ad IDs, queries, and settings were subsequently merged. Both advertisements and users possess supplementary properties situated in distinct data files, accessible via IDs present within the instances. 
+
+The dataset comprises the following attributes: click, a binary variable signifying whether a user clicked on at least one ad; impression, denoting the frequency of search sessions where Ad ID was impressed upon User ID issuing Query; URL hash, a hashed URL ensuring anonymity; Ad ID; Advertiser ID, highlighting that certain advertisers consistently optimize their ads, rendering their titles and descriptions more appealing than those of other advertisers; depth, representing the total number of ads displayed to a user in a session; position, signifying the order of an ad in the displayed list; Query ID, serving as the key to the data file queryid tokensid; Keyword ID, functioning as the key to purchasedkeyword tokensid; Title ID, acting as the key to titleid tokensid; Description ID, serving as the key to descriptionid tokensid; and User ID, also acting as the key to userid profile, with zero being a special value denoting that the user could be identified.
+
+Keywords: click prediction,Advertisements,Search Engine,User Behavior,KDD Cup Competition,Dataset,Balanced Subsampling,Target Feature.

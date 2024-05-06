@@ -1,0 +1,17 @@
+Amazon Employee Access Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+This is a subsampling of the dataset Amazon Employee Access with a seed equal to three. The arguments used were number rows maximum equal to two thousand, number columns maximum equal to one hundred, number classes maximum equal to ten, and no stratify set to false.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified. It uses numpy random default random generator to generate random samples. 
+
+First, it uniformly samples classes from the unique values in the target variable y. If there are more than the specified number of classes maximum, it selects the top classes based on their value counts. Then, it selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, if the number of columns exceeds the specified maximum, it uniformly samples column indices and filters the data to include only these columns. 
+
+Finally, if the number of rows exceeds the specified maximum, it uses train test split with stratification to sample the desired number of rows. The resulting dataset is then returned with the filtered data and corresponding metadata.
+
+Features include Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, Role Code, and the target variable.
+
+Keywords: subsampling, dataset, Amazon Employee Access, stratification, sampling, numpy random generator.

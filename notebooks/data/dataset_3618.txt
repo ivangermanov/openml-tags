@@ -1,0 +1,30 @@
+COVID-19 Mexico Clean Order by States 
+
+Tags: Computer Systems, Machine Learning 
+
+Context 
+The data obtained from Mexico's General Direction of Epidemiology contains multiple information on the current pandemic situation. However, these data are saturated with features that may not be very useful in a predictive analysis. Due to this, I decided to clean and format the original data and generate a dataset that groups confirmed, deceased, recovered, and active cases by State, Municipality, and Date. This is very useful if you want to generate geographically specific models.
+
+Content 
+The dataset contains the COVID-19 cases columns (positive, deceased, recovered, and active) that are counted by state and municipality. For instance, State, Municipality, Date, Deceased, Confirmed, Recovered, Active - Ciudad de Mexico, Iztapalapa, date, deaths, confirmed, recovered, active - Ciudad de Mexico, Iztapalapa, date, deaths, confirmed, recovered, active. 
+
+Would you like to see the data cleaning notebook? It is available on GitHub.
+
+Classification Criteria 
+Recovered Cases: If the patient is not deceased and it has been more than fifteen days, then they are considered recovered. Active Cases: If the patient is not recovered and is not deceased, then they are active.
+
+Time Lapse 
+The first documented case is from January. The dataset will be updated daily, adding new cases.
+
+Acknowledgments 
+For this project, the data are obtained from the official website of the Government of Mexico.
+
+Data Dictionary is also available online.
+
+Differences in Results 
+According to the official results obtained from the Government's website, the main difference between the official data and this dataset is in the recovered cases. This is because the Mexican Government only considers outpatient cases when counting recovered cases. This dataset considers both outpatient and inpatient cases when counting recovered individuals. The second difference is some rows that contained nonsensical information; these were eliminated.
+
+Features 
+State, Municipality, Date, Deceased, Confirmed, Recovered, Active 
+
+Keywords: COVID-19, Mexico, Pandemic, Predictive Analysis, Geographically Specific Models, Data Cleaning

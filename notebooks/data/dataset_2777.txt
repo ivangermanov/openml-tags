@@ -1,0 +1,30 @@
+FOREX Eur/Dk Hourly High Dataset
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour, Manufacturing
+
+Source: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+Data Description
+
+This dataset contains historical price data of the Forex Eur/Dk currency pair from Dukascopy. Each instance represents one hourly candlestick, and the entire dataset spans from January first to December thirteenth, excluding weekends when Forex markets are closed. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price in the subsequent hour compared to the current hour's mean high price. Specifically, the class attribute is true if the mean high price is expected to increase in the following hour and false if it remains the same or decreases.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of the hourly interval.
+* Bid High: The highest bid price recorded during the hourly interval.
+* Bid Low: The lowest bid price recorded during the hourly interval.
+* Bid Close: The bid price at the end of the hourly interval.
+* Bid Volume: The number of times the bid price changed within the hourly interval.
+* Ask Open: The ask price at the start of the hourly interval.
+* Ask High: The highest ask price recorded during the hourly interval.
+* Ask Low: The lowest ask price recorded during the hourly interval.
+* Ask Close: The ask price at the end of the hourly interval.
+* Ask Volume: The number of times the ask price changed within the hourly interval.
+* Class: Whether the average high price will increase during the next hourly interval.
+
+Keywords: Forex, Currency Pair, Historical Data, Candlestick, Time Series, Finance, Economics

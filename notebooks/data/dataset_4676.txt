@@ -1,0 +1,11 @@
+Connect Four Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Health, Medicine 
+
+Subsampling of the dataset Connect Four with seed equals one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code.
+
+The function subsample takes in five parameters: seed, number rows max, number columns max, number classes max, and stratified. It returns a dataset. It first initializes a random number generator with the given seed. Then it uniformly samples classes from the unique values in y. If the number of unique classes exceeds the maximum allowed, it selects the top classes based on their frequency. It then filters the data to only include instances with the selected classes. Next, it uniformly samples columns if the total number of columns exceeds the maximum allowed. Finally, it applies stratified sampling to reduce the number of instances to the maximum allowed while maintaining the class distribution.
+
+Features: 
+
+Class

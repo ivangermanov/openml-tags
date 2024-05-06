@@ -1,0 +1,15 @@
+Machine learning dataset generated through subsampling of the Eye Movements dataset with specific parameters.
+
+The subsampling process involves uniformly sampling classes from the original dataset, ensuring a maximum number of classes. The selection probability is based on the value counts of each class. Once the classes are selected, the corresponding indices are used to filter the dataset.
+
+Next, the process involves uniformly sampling columns if the number of columns exceeds a specified maximum. The column selection is performed randomly, and the resulting dataset consists of the selected columns.
+
+If the number of rows in the filtered dataset exceeds a specified maximum, stratified sampling is applied to reduce the number of rows while maintaining the class distribution. This is achieved using a train-test split function with stratification based on the target variable.
+
+The resulting dataset consists of the filtered features and labels, with categorical columns converted to strings for compatibility with OpenML. The dataset metadata includes information about the parent dataset, feature columns, and categorical mask.
+
+Features include various metrics related to eye movements, such as fixation duration, saccade length, pupil diameter, and reading time.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: Eye Movements, Subsampling, Stratified Sampling, OpenML, Categorical Columns, Feature Selection.

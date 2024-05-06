@@ -1,0 +1,16 @@
+Subsampling of the dataset KC One with Seed Four 
+Tags: Machine Learning, Mathematics 
+
+This is a subsampled version of the KC One dataset, generated using a specific set of arguments and parameters. The subsampling process involves selecting a uniform sample of classes, columns, and rows from the original dataset. 
+
+The first step is to uniformly sample classes from the unique values present in the target variable. If the number of unique classes exceeds the maximum allowed, a random selection is made based on their frequency distribution. This ensures that the sampled classes are representative of the original distribution.
+
+Next, the columns are sampled uniformly, selecting a specified maximum number of columns. This is done to reduce the dimensionality of the dataset while preserving the most important features.
+
+Finally, the rows are sampled, taking into account the class distribution to maintain stratification. This ensures that the resulting subsampled dataset has a similar class balance to the original dataset.
+
+The resulting subsampled dataset contains a reduced number of features and samples, making it more manageable for machine learning tasks.
+
+Features: location, variance of g, expected value of g, importance value of g, node count, variance, length, depth, index, entropy, branch count, defects.
+
+Keywords: subsampling, machine learning, stratification, feature selection, class balance, dataset reduction.

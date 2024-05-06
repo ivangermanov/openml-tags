@@ -1,0 +1,13 @@
+Machine Learning Dataset: RL Seed Zero with Two Thousand Rows, Ten Classes, and One Hundred Columns using Stratification
+
+This dataset is a subsampled version of the RL dataset, which originally had forty-four thousand one hundred sixty samples. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows.
+
+The subsampling function used a random number generator with a specified seed value to ensure reproducibility. It first identified the unique classes present in the original dataset and selected a specified maximum number of classes using a probability proportional to their frequency. The function then selected the indices corresponding to these chosen classes.
+
+Next, the function uniformly sampled columns from the dataset, ensuring that the specified maximum number of columns was not exceeded. If the number of rows in the resulting dataset still exceeded the specified maximum, the function employed stratified sampling to select a representative subset of rows.
+
+The resulting dataset contains ten classes and one hundred columns, with two thousand samples. The categorical mask has been applied to the relevant columns to facilitate further analysis.
+
+Features: V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, V Twenty-Two, Class
+
+Keywords: machine learning, statistics, subsampling, stratification, dataset, classification

@@ -1,0 +1,23 @@
+Segment Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Economics, Life Science 
+
+Sub-sampling of the dataset segment with a seed equal to one arguments number of rows maximum equals two thousand arguments number of columns maximum equals one hundred arguments number of classes maximum equals ten generated with the following source code.
+
+The function sub-sample takes five parameters - self, seed, number of rows max, number of columns max, and number of classes max - and returns a dataset.
+
+First, we set up our random number generator using the given seed. Then we get our feature matrix x and target vector y from our dataset. 
+
+Next, we uniformly sample classes from our target vector. If the number of unique classes exceeds our maximum allowed number of classes, we select the top classes based on their frequency in our target vector.
+
+We then select the indices where one of these classes is present and filter our feature matrix and target vector accordingly. 
+
+Afterwards, we uniformly sample columns from our feature matrix if required. If the number of columns exceeds our maximum allowed number of columns, we randomly choose the specified number of columns and filter our feature matrix accordingly.
+
+If our feature matrix still has more rows than our maximum allowed number of rows, we use stratified sampling to get the specified number of rows. This ensures that our sampled dataset maintains the same class distribution as our original dataset.
+
+Finally, we create a new dataset object with our sampled feature matrix, target vector, and other relevant information.
+
+Features: Short Line Density Five, Short Line Density Two, Vegetation Edge Mean, Vegetation Edge Standard Deviation, Habitat Edge Mean, Habitat Edge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Excess Red Mean, Excess Blue Mean, Excess Green Mean, Value Mean, Saturation Mean, Hue Mean, Class
+
+Keywords: dataset, sub-sampling, stratified sampling, feature matrix, target vector, class distribution

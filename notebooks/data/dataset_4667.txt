@@ -1,0 +1,21 @@
+Satellite Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Education, Statistics 
+
+Subsampling of the dataset Satellite with seed equals two arguments n rows max equals two thousand arguments n columns max equals one hundred arguments n classes max equals ten arguments no stratify equals true generated with the following source code:
+
+The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to use stratification or not, and returns a dataset.
+
+It first gets the unique values of the target variable, and if there are more than the specified number of classes maximum, it selects a specified number of classes using their value counts as probabilities.
+
+Then, it gets the indices where one of these classes is present, and filters the data using these indices.
+
+Next, it checks if the number of columns exceeds the specified number of columns maximum, and if so, it uniformly samples the columns.
+
+Finally, if the number of rows exceeds the specified number of rows maximum, it uses stratified sampling to get the desired number of rows.
+
+The resulting dataset is then returned, with the categorical mask and column names preserved.
+
+Features: 
+
+Target

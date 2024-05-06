@@ -1,0 +1,17 @@
+Vehicle Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Agriculture, Earth Science 
+
+Subsampling of the dataset Vehicle with seed equal to three arguments number rows maximum equal to two thousand arguments number columns maximum equal to one hundred arguments number classes maximum equal to ten arguments no stratify equal to false.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including seed, which is used to set the random state, number rows max, number columns max, number classes max, and stratified, which is a boolean value indicating whether to use stratified sampling.
+
+This function first gets the unique classes in the target variable y, and then selects a specified number of classes randomly using their value counts as probabilities. It then selects the indices where one of these classes is present and uses them to subset the data.
+
+Next, it uniformly samples columns if required, selecting a specified number of columns randomly and sorting them. Finally, it subsets the data to the specified number of rows, either stratifying according to the target variable or not depending on the input parameter.
+
+Features: Compactness, Circularity, Distance Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, Class.
+
+Keywords: Vehicle, Subsampling, Stratified Sampling, Feature Selection, Data Reduction.

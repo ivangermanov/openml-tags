@@ -1,0 +1,39 @@
+Dataset Name: Credit Seed Two Rows Two Thousand NC Columns One Hundred NC Classes Ten Stratify True
+
+Tags: Agriculture, Life Science
+
+Sub-sampling of the dataset credit with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+
+def sub-sample(self, seed, number rows max, number columns max, number classes max, stratified):
+    random number generator equals numpy dot random dot default random generator seed
+    x equals self dot x
+    y equals self dot y
+
+Uniformly sample classes equals y dot unique if length of classes greater than number classes max:
+    value counts equals y dot value counts
+    selected classes equals random number generator dot choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present index equals y dot index y dot is in selected classes
+    x equals x dot iloc index
+    y equals y dot iloc index
+
+Uniformly sample columns if required:
+    if length of x dot columns greater than number columns max:
+        column indexes equals random number generator dot choice list range length of x dot columns size equals number columns max replace equals false
+        sorted column indexes equals sorted column indexes
+        selected columns equals list x dot columns sorted column indexes
+        x equals x selected columns
+    else:
+        sorted column indexes equals list range length of x dot columns
+
+    if length of x greater than number rows max:
+Stratify accordingly target name equals y dot name data equals pandas dot concat x comma y axis equals columns
+underscore comma subset equals sklearn model selection dot train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed
+    x equals subset dot drop target name axis equals columns
+    y equals subset target name
+    categorical mask equals list self dot categorical mask i for i in sorted column indexes
+    columns equals list x dot columns
+    return dataset equals dataset x equals x y equals y categorical mask equals categorical mask columns equals columns
+
+Features: Revolving Utilization Of Unsecured Lines, Age, Number Of Time Thirty To Fifty Nine Days Past Due Not Worse, Debt Ratio, Monthly Income, Number Of Open Credit Lines And Loans, Number Of Times Ninety Days Late, Number Real Estate Loans Or Lines, Number Of Time Sixty To Eighty Nine Days Past Due Not Worse, Number Of Dependents, Serious Delinquency In Two Years
+
+Keywords: sub-sampling, dataset, credit, agriculture, life science, stratify, random sampling

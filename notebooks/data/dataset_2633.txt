@@ -1,0 +1,26 @@
+**FOREX Eur Cad Hour High**
+Tags: Economics, Finance, Forex, Forex High, Forex Hour
+
+**Data Description**
+This dataset contains historical price data of the Forex Eur/Cad pair from Dukascopy. Each instance represents one candlestick of one hour. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active during these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price in the following hour compared to the current hour. Specifically, it is true if the mean high price is expected to increase in the next hour and false if it is expected to decrease or remain the same.
+
+**Note**: This dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trading strategies require predictions based on close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur/Cad, Candlestick, Historical Data, Trading Strategy, Financial Markets.

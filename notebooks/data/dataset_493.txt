@@ -1,0 +1,25 @@
+The Friedman dataset is an artificially generated collection of eighty datasets originating from a specific source. 
+
+This dataset has been coded with a specific naming convention, "Friedman Colinearity Degree Sample Number Feature Number", which provides information about the characteristics of each dataset.
+
+The Friedman function includes both linear and nonlinear relationships between input and output variables, with a normalized noise component added to the output. This function is expressed mathematically as: output equals ten times the sine of pi times input one times input two plus twenty times the square of input three minus point five squared plus ten times input four plus five times input five plus the noise component.
+
+In its original form, the Friedman function uses five input features, but to measure the effect of unrelated features, additional features were added to the datasets. These extra features are independent of the output variable.
+
+To evaluate the robustness of algorithms to collinearity, the datasets were generated with five different collinearity degrees, ranging from zero to four. The collinearity degree represents the number of features dependent on other features.
+
+The Friedman dataset parameters and their corresponding values are as follows:
+
+The number of input features varies, including five, ten, twenty-five, fifty, and one hundred, although only the first five features are related to the output variable. The remaining features are randomly generated and unrelated to the output.
+
+The number of samples also varies, including one hundred, two hundred fifty, five hundred, and one thousand.
+
+The collinearity degree ranges from zero to four. 
+
+For datasets with a collinearity degree of four, the number of features varies as ten, twenty-five, fifty, and one hundred. Other datasets have five, ten, twenty-five, and fifty features.
+
+As a result, eighty artificial datasets were generated using a combination of feature numbers, sample numbers, and collinearity degrees.
+
+The target attribute is the last attribute in each file.
+
+Keywords: Artificial dataset, Collinearity degree, Friedman function, Linear relationship, Nonlinear relationship, Normalized noise, Robustness, Unrelated features.

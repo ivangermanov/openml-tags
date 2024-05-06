@@ -1,0 +1,11 @@
+Name: Sylvine Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Manufacturing, Statistics 
+
+Sub-sampling of the dataset Sylvine with a seed of zero arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals true generated with the following source code 
+
+The function sub-sample takes in several parameters including a seed, maximum number rows, maximum number columns, maximum number classes, and whether to stratify or not. It uses the numpy random default random generator to ensure reproducibility. It first gets the unique classes from the target variable, and if there are more than the specified maximum number of classes, it selects a specified number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it checks if the number of columns exceeds the specified maximum, and if so, it uniformly samples the columns. Finally, it checks if the number of rows exceeds the specified maximum, and if so, it uses the train test split function from scikit learn to split the data into a subset, ensuring that the target variable is stratified.
+
+Features: (skipped due to being unreadable)
+
+Keywords: dataset, sub-sampling, manufacturing, statistics, stratification, reproducibility, numpy, scikit learn

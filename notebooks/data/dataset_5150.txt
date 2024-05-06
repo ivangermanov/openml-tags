@@ -1,0 +1,46 @@
+Contaminant Detection in Packaged Cocoa Hazelnut Spread Jars using Microwaves Sensing and Machine Learning 
+
+This dataset is part of a series of five different datasets, each one measured with a different microwave frequency. 
+
+Dataset Description 
+
+To detect contaminants accidentally included in industrial food, Microwave Sensing can be used as a contactless detection method, particularly when the food is already packaged. Microwave Sensing uses microwaves to illuminate the target object through a set of antennas, records the scattered waves, and uses Machine Learning to predict the presence of contaminants inside the target object. In this application, the target object is a cocoa hazelnut spread jar, and each instance, or sample, of this dataset consists of thirty scattering parameters of the network composed by antennas, target object, with or without a contaminant inside, and medium, or the air, in between. The types of contaminants vary from metal to glass and plastic.
+
+Each sample has been measured at five different microwave frequencies. 
+
+Data Set Characteristics 
+
+The microwave frequency used for acquisition is nine point zero gigahertz. 
+The total number of instances is two thousand four hundred.
+The total number of uncontaminated instances is one thousand two hundred.
+The total number of contaminated instances is one thousand two hundred.
+The total number of classes is eleven.
+
+The last column, column thirty-one, contains the class label as an integer value.
+
+The number of contaminated instances divided per class is as follows: 
+Air surface, which is a cap-shaped plastic with the same dielectric constant of the air, has two hundred instances.
+Big pink plastic sphere middle has one hundred instances.
+Big pink plastic sphere surface has one hundred instances.
+Glass fragment middle has one hundred instances.
+Glass fragment surface has one hundred instances.
+Small metal sphere middle has one hundred instances.
+Small metal sphere surface has one hundred instances.
+Small plastic sphere middle has one hundred instances.
+Small plastic sphere surface has one hundred instances.
+Small triangular plastic fragment surface has two hundred instances.
+
+Surface means that the instance was placed on top of the cocoa hazelnut spread, at the spread-air interface.
+Middle means that the instance was placed in the middle of the jar filled with cocoa hazelnut spread.
+
+The number of attributes in a generic instance is thirty.
+
+Attribute Information 
+
+This is the six-by-six Scattering Matrix, or S.
+The first thirty attributes, or columns, of an instance are the fifteen elements of the triangular upper part of S.
+Since each of these elements is a complex number with real and imaginary parts, each instance is a vector of fifteen times two equals thirty attributes.
+The real and imaginary parts of each element are placed one after the other.
+The scattering parameters are ordered row by row from left to right.
+
+Keywords: contaminant detection, microwave sensing, machine learning, food safety, cocoa hazelnut spread, industrial food processing.

@@ -1,0 +1,15 @@
+fl2000 Tags: **Author**: **Source**: 
+
+County Data from the Presidential Election in Florida 
+
+These data are derived from three sources. The candidate vote counts are the final certified counts reported by the Florida Division of Elections. These were obtained from the National Opinion Research Center website in the file Certified Results. Note that these do not include the federal absentee votes, so that Al Gore's total vote is actually higher here than George W. Bush's.
+
+The undervote and overvote counts were extracted from the National Opinion Research Center ballot-level data. Since the aligned file is too large to work with in R, or almost any other program, a Unix program called cut was used to extract just the necessary columns. The results were then read into R and processed there.
+
+The technology and columns data were extracted from the Media Group data from the National Opinion Research Center website. Technology refers to the type of voting machine used, and Columns refers to whether the ballot listed the presidential candidates in a single column on a single page, or spread over two columns or two pages of the ballot. These agree with some earlier data that were obtained from the New York Times website, except that in the Media Group data the Palm Beach County ballot, the famous butterfly ballot, was listed as having one column. It is definitely a two-column ballot, which is the designation recorded here. 
+
+Images of most of the ballots can be found on the New York Times website. 
+
+Features: county, technology, columns, undervote, overvote, candidate vote counts
+
+Keywords: Florida, Presidential Election, Voting Machines, Ballots, Vote Counts

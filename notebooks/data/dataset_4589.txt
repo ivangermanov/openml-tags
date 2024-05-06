@@ -1,0 +1,49 @@
+Subsampling of the dataset CMC with Seed equals Four 
+Tags: Health, Medicine 
+
+Generated with the following source code:
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
+random number generator = numpy random default random generator given seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals unique values of y 
+if total number of classes exceeds maximum number of classes: 
+value counts equals value counts of y 
+selected classes equals random choice of classes given maximum number of classes, without replacement, with probability equal to value counts divided by total value counts 
+Select the indices where one of these classes is present 
+idxs equals index of y given y is in selected classes 
+x equals x given idxs 
+y equals y given idxs 
+
+Uniformly sample columns if required 
+if total number of columns exceeds maximum number of columns: 
+column indexes equals random choice of range of length of x columns, without replacement, given maximum number of columns 
+sorted column indexes equals sorted column indexes 
+selected columns equals list of x columns given sorted column indexes 
+x equals x given selected columns 
+else: 
+sorted column indexes equals range of length of x columns 
+
+if total number of rows exceeds maximum number of rows: 
+stratify accordingly 
+target name equals name of y 
+data equals concatenation of x and y along columns 
+_, subset equals train test split of data given test size equal to maximum number of rows, stratify equal to data given target name, shuffle equal to true, random state equal to seed 
+x equals subset drop target name along columns 
+y equals subset given target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals list of self categorical mask given sorted column indexes 
+columns equals list of x columns 
+return Dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Is Wife Working?, Husband's Occupation, Standard of Living Index, Media Exposure, Contraceptive Method Used 
+
+Keywords: Subsampling, CMC, Seed, Health, Medicine, Stratified Sampling, Feature Selection

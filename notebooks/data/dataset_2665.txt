@@ -1,0 +1,30 @@
+**FOREX EURRUB Day High**
+
+Tags: Computer Systems, Finance, Forex, Forex Day, Forex High, Social Media
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+
+This dataset contains historical price data of the FOREX EUR/RUB currency pair from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the FOREX market is not active during these periods. The time zone of the feature Timestamp is set to Europe/Amsterdam.
+
+The class attribute indicates the direction of the mean high price of the following day relative to the mean high price of the current day. Specifically, the class attribute is true when the mean high price is expected to rise the following day, and false when the mean high price is expected to fall or remain unchanged.
+
+**Note that this dataset is intended for scientific purposes only, and realistic trading strategies should be based on predictions of the Close attributes, which are also available.**
+
+**Attributes**
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Indicates whether the average price will rise during the next interval.
+
+Keywords: FOREX, EURRUB, Candlestick, Finance, Trading, Currency Pair, Historical Data

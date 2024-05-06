@@ -1,0 +1,15 @@
+Machine Learning, Mathematics 
+
+Subsampling of the dataset Compass with Seed Zero 
+
+This dataset is a subsample of the original Compass dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were chosen based on their value counts, with probabilities proportional to their frequency in the dataset.
+
+Once the classes were selected, the corresponding indices were identified, and the data was filtered to include only those rows where one of the selected classes was present. This resulted in a reduced dataset with a more balanced class distribution.
+
+The next step involved uniformly sampling columns from the filtered dataset, ensuring that the number of columns did not exceed one hundred. The columns were chosen randomly, without replacement, and the dataset was reduced to include only the selected columns.
+
+Finally, the dataset was further reduced by sampling rows, again ensuring that the number of rows did not exceed two thousand. This time, the sampling was performed in a stratified manner, taking into account the class labels to maintain a balanced distribution.
+
+The resulting dataset includes a range of features, including demographic information, criminal history, and assessment scores. These features provide a comprehensive view of the individuals in the dataset, allowing for a nuanced analysis of the relationships between them.
+
+Keywords: Machine Learning, Subsampling, Dataset, Compass, Stratified Sampling, Feature Selection

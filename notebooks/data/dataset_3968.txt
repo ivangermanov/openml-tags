@@ -1,0 +1,30 @@
+**SGEMM GPU Kernel Performance**
+
+Tags: Machine Learning, Statistics
+
+This dataset measures the running time of a matrix-matrix product, where all matrices have a size of 2048 x 2048, using a parameterizable Single Precision General Matrix Multiply (SGEMM) GPU kernel with a large number of possible parameter combinations. For each tested combination, four runs were performed, and their results are reported. All times are measured in milliseconds.
+
+There are fourteen parameters, with the first ten being ordinal and able to take on up to four different power-of-two values, and the remaining four being binary. Due to various kernel constraints, out of a total of possible parameter combinations, only a subset of these are feasible. This dataset contains the results for all these feasible combinations.
+
+The experiment was run on a desktop workstation with a specific configuration, including an Intel Core processor, sixteen gigabytes of RAM, and a high-performance NVIDIA graphics processing unit. The gemm fast kernel from the automatic OpenCL kernel tuning library CLTune was utilized.
+
+It is worth noting that when working with datasets similar to this one, it is often beneficial to work with the logarithm of the running times, as demonstrated in previous research.
+
+**Attribute Description**
+
+**Independent Variables**
+
+* Matrix Work Group and Neighbor Work Group sizes, which control the per-matrix two-dimensional tiling at the work group level
+* Kernel Work Group size, which controls the inner dimension of the two-dimensional tiling at the work group level
+* Matrix Dimension C and Neighbor Dimension C, which control the local work group size
+* Matrix Dimension A and Neighbor Dimension B, which control the local memory shape
+* Kernel Work Item size, which controls the kernel loop unrolling factor
+* Vector Width M and Vector Width N, which control the per-matrix vector widths for loading and storing
+* Stride M and Stride N, which enable stride for accessing off-chip memory within a single thread
+* Shared Access and Shared Bypass, which control per-matrix manual caching of the two-dimensional work group tile
+
+**Output**
+
+* Four performance times in milliseconds for four independent runs using the same parameters
+
+**Keywords:** Machine Learning, GPU Kernel, Matrix-Matrix Product, Performance Optimization, Statistical Analysis

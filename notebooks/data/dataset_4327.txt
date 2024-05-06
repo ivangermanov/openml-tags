@@ -1,0 +1,41 @@
+Subsampling of the dataset Credit with seed equals zero arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows max, number cols max, number classes max, stratified):
+    random number generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis
+    x equals self dot x
+    y equals self dot y
+
+Uniformly sample classes equals y dot unique. If length of classes is greater than number classes max:
+    value counts equals y dot value counts
+    selected classes equals random number generator dot choice open parenthesis classes comma size equals number classes max comma replace equals false comma probability equals value counts slash sum of value counts close parenthesis
+Select the indices where one of these classes is present equals y dot index open parenthesis y dot is in open parenthesis selected classes close parenthesis close parenthesis
+    x equals x dot iloc open parenthesis select indices close parenthesis
+    y equals y dot iloc open parenthesis select indices close parenthesis
+
+Uniformly sample columns if required:
+    if length of x dot columns is greater than number cols max:
+        column indexes equals random number generator dot choice open parenthesis list of range open parenthesis length of x dot columns close parenthesis comma size equals number cols max comma replace equals false close parenthesis
+        sorted column indexes equals sorted open parenthesis column indexes close parenthesis
+        selected columns equals list of x dot columns open parenthesis sorted column indexes close parenthesis
+        x equals x open parenthesis selected columns close parenthesis
+    else:
+        sorted column indexes equals list of range open parenthesis length of x dot columns close parenthesis
+
+If length of x is greater than number rows max:
+Stratify accordingly:
+    target name equals y dot name
+    data equals pandas dot concat open parenthesis x comma y comma axis equals quote columns close parenthesis
+    underscore comma subset equals sklearn dot model selection dot train test split open parenthesis data comma test size equals number rows max comma stratify equals data open parenthesis target name close parenthesis comma shuffle equals true comma random state equals seed close parenthesis
+    x equals subset dot drop open parenthesis target name comma axis equals quote columns close parenthesis
+    y equals subset open parenthesis target name close parenthesis
+Categorical mask equals list of self dot categorical mask open parenthesis i close parenthesis for i in sorted column indexes
+Columns equals list of x dot columns
+Return Dataset open parenthesis dataset equals self dot dataset comma x equals x comma y equals y comma categorical mask equals categorical mask comma columns equals columns close parenthesis
+
+Features: Revolving Utilization Of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number Of Open Credit Lines And Loans, Number Of Times Ninety Days Late, Number Real Estate Loans Or Lines, Number Of Dependents, Serious Delinquency In Two Years.
+
+Tags: Medicine, Statistics
+
+Keywords: subsampling, dataset, seed, stratification, sampling, statistics, medicine, credit, classification.

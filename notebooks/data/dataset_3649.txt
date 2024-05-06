@@ -1,0 +1,19 @@
+Malware Analysis Datasets Portable Executable Section Headers 
+
+Tags: Computer Systems, Machine Learning 
+
+This dataset is part of comprehensive research on malware detection and classification utilizing deep learning techniques. It comprises static analysis data specifically focusing on Portable Executable Section Headers of the text, code, and code sections extracted from the pe_sections elements of Cuckoo Sandbox reports. A substantial collection of Portable Executable malware samples was obtained from virusshare.com, while Portable Executable goodware samples were gathered from portableapps.com and Windows directories.
+
+The dataset encompasses several essential features including Hash, which represents the MD5 hash of each sample presented as a thirty-two-byte string. Another critical feature is Size of Data, which denotes the size of the section on disk expressed as an integer value. Virtual Address is also included, specifying the memory address of the first byte of the section relative to the image base as an integer. Additionally, Entropy is calculated and presented as a float value, signifying the level of randomness or uncertainty within the section. Furthermore, Virtual Size is incorporated, representing the size of the section when loaded into memory expressed as an integer. Lastly, the Malware feature serves as the class label, categorizing each sample as either Goodware (zero) or Malware (one).
+
+Acknowledgments 
+
+The developers of Cuckoo Sandbox are gratefully acknowledged for creating an exceptional dynamic analysis environment. Special thanks go to Virus Share for their invaluable contribution to the field through their malware repository.
+
+Citations 
+
+Please refer to the provided URL for further information.
+
+Features: Hash, Size of Data, Virtual Address, Entropy, Virtual Size, Malware
+
+Keywords: Malware Detection, Classification, Deep Learning, Portable Executable, Static Analysis, Cuckoo Sandbox.

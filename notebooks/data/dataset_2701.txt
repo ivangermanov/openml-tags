@@ -1,0 +1,28 @@
+**FOREX usd chf hour High**
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour, Manufacturing
+
+**Data Description**
+
+This dataset contains historical price data of the Foreign Exchange rate between the United States Dollar (USD) and the Swiss Franc (CHF), obtained from Dukascopy Historical Data Feed. Each instance represents a single candlestick of one hour duration. The dataset spans a period from January to December and excludes weekends, as the Forex market is not operational during these days. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean of the High Bid and the High Ask prices of the subsequent hour, relative to the mean High Bid and High Ask prices of the current minute. In other words, the class attribute is true when the mean High price is expected to increase in the following hour, and false when the mean High price is expected to decrease or remain unchanged.
+
+**Note**: This dataset is intended for scientific purposes only, and realistic trading strategies should be based on predictions made on Close attributes.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the Bid Price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the Ask Price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, USD CHF, Historical Data, Candlestick, Time Series, Trading Strategy.

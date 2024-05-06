@@ -1,0 +1,19 @@
+Higgs Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Computer Systems, Machine Learning 
+
+Sub-sampling of the dataset Higgs with a seed equal to four, arguments number rows maximum equal to two thousand, arguments number columns maximum equal to one hundred, arguments number classes maximum equal to ten, and arguments no stratify equal to true. 
+
+Generated with the following source code:
+
+The function sub-sample takes in five parameters - a seed value, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to use stratification. It uses NumPy's default random generator to ensure reproducibility.
+
+First, it selects a subset of classes uniformly, based on their frequency in the dataset, until it reaches the specified maximum number of classes. Then, it filters the data to only include instances belonging to these selected classes.
+
+Next, it selects a subset of columns uniformly until it reaches the specified maximum number of columns. The remaining columns are then dropped from the dataset.
+
+Finally, if the dataset still has more instances than the specified maximum number of rows, it uses stratified sampling to further reduce the dataset while maintaining the class distribution. The resulting sub-sampled dataset is returned as an instance of the Dataset class.
+
+Features: Lepton Transverse Momentum, Lepton Eta, Lepton Phi, Missing Energy Magnitude, Missing Energy Phi.
+
+Keywords: Higgs dataset, sub-sampling, machine learning, stratification, dataset reduction.

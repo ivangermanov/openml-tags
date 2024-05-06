@@ -1,0 +1,13 @@
+Name: Wilt Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Sub sampling of the dataset Wilt with seed equals two arguments N Rows equals two thousand arguments NC Columns equals one hundred arguments NC Classes equals ten arguments No Stratify equals False 
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified, and returns a dataset. It uses numpy's random default generator to ensure reproducibility. It first extracts the unique classes from the target variable, and if there are more than the specified maximum number of classes, it selects a subset of them using a weighted random choice based on their frequencies. It then selects the corresponding rows from the data. Next, it uniformly samples the columns if there are more than the specified maximum number of columns. Finally, it uniformly samples the rows if there are more than the specified maximum number of rows, using stratified sampling if specified.
+
+Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class 
+
+Keywords: machine learning, mathematics, sub sampling, dataset, stratified sampling, numpy, random sampling

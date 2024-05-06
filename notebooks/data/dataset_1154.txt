@@ -1,0 +1,33 @@
+The Planning Relax Data Set 
+
+This dataset concerns with the classification of two mental stages from recorded electroencephalography (EEG) signals: Planning (during imagination of motor act) and Relax state.
+
+Data Set Characteristics:
+
+Univariate 
+
+Number of Instances: 
+
+Area: Computer 
+
+Attribute Characteristics: Real 
+
+Number of Attributes: thirteen 
+
+Associated Tasks: Classification 
+
+Missing Values? Not Applicable 
+
+Data Set Information:
+
+Electroencephalography record contains many regular oscillations, which are believed to reflect synchronized rhythmic activity in a group of neurons. Most activity-related electroencephalography patterns occur within the following frequency bands: delta (less than four hertz), theta (four to eight hertz), alpha (eight to thirteen hertz), beta (thirteen to twenty-two hertz), and gamma (thirty to forty hertz). The waves with the frequency of seven to thirteen hertz over motor processing areas are called mu rhythm and reflect idling activity in motor areas. It is more pronounced when the subjects are at rest and at least a second before subjects initiate voluntary movement, the mu activity over the hemisphere contralateral to the region moved shows a decrease in amplitude and is called event-related desynchronization. 
+
+For the current study, electroencephalography data was collected multiple times on various days from a healthy right-handed subject. The data was recorded on a digital electroencephalography machine. The settings of high-frequency filter fifty hertz, low-frequency filter one point six hertz, notch filter fifty hertz, sensitivity seventy microvolts per millimeter, and a sampling rate of two hundred fifty-six hertz were used for the basic signal processing. Eight electroencephalography electrodes were placed according to the international standard ten-twenty system of electrode placement. Bipolar and unipolar electroencephalography was recorded from eight silver-silver chloride scalp electrodes, which were placed two point five centimeters anterior and posterior to the central electrodes. A one and A two are reference electrodes. The reference electrodes are placed on the left and right ears and the ground electrode on the forehead. Electrooculogram being a noise artifact, was derived from two electrodes, placed on the outer canthus of left and right eye in order to detect eye movement. These electrooculogram signals are then used to eliminate eye movement artifacts. 
+
+The subject was asked to lie down comfortably in a relaxed position with eyes closed and advised to minimize eye movements. The electroencephalography was recorded for the relaxed state for multiple minutes. Following this, an audio beep was given at the start and end of a five-second epoch where the subject was asked to mentally plan lifting of the right-hand thumb. This activity is collected as a five-second epoch data corresponding to ‘movement imagery’ state. After a gap of multiple minutes, the same cue is given to repeat the experiment. The whole experiment lasts for approximately thirty minutes, collecting data for multiple trials of five-second epoch each for normal relaxed state and multiple trials of five-second epoch each for movement imagery. No actual movement is performed during the session. All datasets were visually checked for artifacts before final selection.
+
+Attribute Information:
+
+Wavelet transform has been applied for feature extraction for electroencephalography classification. However, wavelet transforms pyramidal algorithm work only on approximation coefficients. So it cannot identify seven-thirteen hertz frequency band. We have extended the methodology by applying wavelet packet analysis, which also decomposes detail coefficients. Wavelet packet analysis has been used for signal decomposition with equal frequency bandwidth at each level of decomposition, which leads to an equal number of the approximation and detail coefficients. By applying wavelet packet analysis on the original signal, we have obtained twelve wavelet coefficients in the seven-thirteen hertz frequency band at the sixth level node. The signal is reconstructed at node and its fast Fourier transform plot gave the frequency band seven-thirteen hertz as the most discriminating, in conjunction with the wavelet Daubechies six.
+
+Keywords: electroencephalography, brain-computer interface, wavelet transform, wavelet packet analysis, fuzzy decision trees, pattern recognition.

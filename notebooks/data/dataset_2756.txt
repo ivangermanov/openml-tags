@@ -1,0 +1,24 @@
+FOREX eur aud Hourly High Tags: Finance, Forex, Forex High, Forex Hour, Government, Language 
+
+This dataset contains the historical price data of the Forex Euro Australian Dollar pair. Each instance represents one hourly candlestick, covering the period from January to December. Since the Forex market is closed on weekends, there are no data points for these days. The timestamp feature is set to the Europe Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean of the high bid and high ask prices of the following hour, relative to the mean of the high bid and high ask prices of the current hour. In other words, the class attribute is true if the mean high price is expected to increase in the next hour, and false if it is expected to decrease or remain the same.
+
+It is essential to note that this is a hypothetical task, intended solely for scientific purposes. Realistic trading strategies should be based on predictions of the close attributes, which are also available in this dataset.
+
+The dataset includes the following attributes:
+
+Timestamp: The time of the current data point in the Europe Amsterdam timezone.
+Bid Open: The bid price at the start of this hourly interval.
+Bid High: The highest bid price recorded during this hourly interval.
+Bid Low: The lowest bid price recorded during this hourly interval.
+Bid Close: The bid price at the end of this hourly interval.
+Bid Volume: The number of times the bid price changed within this hourly interval.
+Ask Open: The ask price at the start of this hourly interval.
+Ask High: The highest ask price recorded during this hourly interval.
+Ask Low: The lowest ask price recorded during this hourly interval.
+Ask Close: The ask price at the end of this hourly interval.
+Ask Volume: The number of times the ask price changed within this hourly interval.
+Class: Whether the average price will increase during the next hourly interval.
+
+Keywords: Forex, Euro, Australian Dollar, Candlestick, Timezone, Trading Strategy, Hypothetical Task, Scientific Purposes.

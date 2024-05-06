@@ -1,0 +1,19 @@
+Subsampling of the dataset Higgs with Seed Three 
+
+Tags: Subsampling of the dataset Higgs 
+
+Generated with the following source code:
+
+This function subsamples a dataset based on several parameters, including the seed for reproducibility, the maximum number of rows, the maximum number of columns, the maximum number of classes, and whether or not to use stratification.
+
+The function first uniformly samples classes from the dataset, selecting a specified maximum number of classes. It then selects the indices where one of these classes is present and uses these indices to subset the data.
+
+Next, the function uniformly samples columns from the dataset, selecting a specified maximum number of columns. It subsets the data based on these column selections.
+
+Finally, if the dataset still has more rows than the specified maximum, the function uses stratified sampling to select a subset of the data, ensuring that the class distribution remains the same.
+
+Features:
+
+Lepton Transverse Momentum, Lepton Eta, Lepton Phi, Missing Energy Magnitude, Missing Energy Phi 
+
+Keywords: Subsampling, Dataset, Higgs, Stratification, Classes, Columns, Rows

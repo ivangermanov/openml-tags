@@ -1,0 +1,48 @@
+Subsampling of the dataset Credit with seed equals four arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows max, number cols max, number classes max, stratified):
+    Random Number Generator with the given seed.
+    X equals self X.
+    Y equals self Y.
+
+Uniformly sampling classes equals Y unique. 
+If length of classes is greater than number classes max:
+    Value counts of Y equals Y value counts.
+    Selected classes equal Random Number Generator choice of classes, size equals number classes max, replace equals false, probability equals value counts divided by sum of value counts.
+
+Selecting the indices where one of these classes is present index equals Y index Y is in selected classes.
+X equals X iloc index.
+Y equals Y iloc index.
+
+Uniformly sampling columns if required:
+    If length of X columns is greater than number cols max:
+        Column indexes equal Random Number Generator choice of range length of X columns, size equals number cols max, replace equals false.
+        Sorted column indexes equal sorted column indexes.
+        Selected columns equal list X columns sorted column indexes.
+        X equals X selected columns.
+    Else:
+        Sorted column indexes equal range length of X columns.
+
+If length of X is greater than number rows max:
+    Stratifying accordingly target name equals Y name.
+    Data equals pandas concatenate X and Y along columns.
+    Underscore, subset equal train test split data test size equals number rows max, stratify equals data target name, shuffle equals true, random state equals seed.
+    X equals subset drop target name along columns.
+    Y equals subset target name.
+    Categorical mask equal list self categorical mask I for I in sorted column indexes.
+    Columns equal list X columns.
+
+Returning Dataset:
+    Dataset equals self dataset,
+    X equals X,
+    Y equals Y,
+    Categorical mask equals categorical mask,
+    Columns equal columns.
+
+Features: 
+Revolving Utilization Of Unsecured Lines, Age, Number Of Time Thirty To Fifty Nine Days Past Due Not Worse, Debt Ratio, Monthly Income, Number Of Open Credit Lines And Loans, Number Of Times Ninety Days Late, Number Real Estate Loans Or Lines, Number Of Time Sixty To Eighty Nine Days Past Due Not Worse, Number Of Dependents, Serious Delinquency In Two Years.
+
+Keywords: 
+Meteorology, Statistics, Subsampling, Credit Dataset, Stratification, Random Sampling

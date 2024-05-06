@@ -1,0 +1,50 @@
+Video Transcoding 
+
+Tags: Images, Machine Learning 
+
+Data Description 
+The dataset contains a large collection of video instances, each characterized by ten fundamental attributes, along with their corresponding YouTube video IDs. These videos have been transcribed from one format to another, and the resulting data includes measurements of memory usage and transcription time. The primary objective is to develop a predictive model that can estimate the transcription time based on the input information and the desired output format.
+
+Attribute Description 
+
+YouTube Video ID should be excluded from the analysis. 
+
+Duration refers to the length of the video. 
+
+Codec represents the coding standard utilized for the video, which can be either MPEG Four, H Two Sixty-Four, VP Eight, or FLV. 
+
+Width and Height denote the dimensions of the video in pixels. 
+
+Bitrate indicates the video bitrate. 
+
+Framerate represents the actual video frame rate. 
+
+I Frames, P Frames, and B Frames signify the number of I, P, and B frames present in the video, respectively. 
+
+Frames represent the total number of frames in the video. 
+
+I Size, P Size, and B Size denote the total size in bytes of I, P, and B videos, respectively. 
+
+Size represents the total size of the video. 
+
+Output Codec denotes the coding standard employed for transcoding, which can be either MPEG Four, H Two Sixty-Four, VP Eight, or FLV. 
+
+Output Bitrate and Output Framerate signify the bitrate and framerate utilized for transcoding, respectively. 
+
+Output Width and Output Height denote the dimensions of the output video in pixels. 
+
+Umem represents the total codec allocated memory required for transcoding. 
+
+Utime denotes the total transcription time required for transcoding. 
+
+Scraped Data 
+Dataset Information 
+Additional Information 
+This dataset consists of two TSV files, namely 'YouTube Videos' and 'Transcoding Measurement.' The first file contains ten columns of fundamental video characteristics for approximately One Point Six Million YouTube videos. It includes the YouTube video ID, duration, bitrate, height, width, framerate, estimated framerate, codec, category, and a direct link to the video. This dataset provides valuable insights into the characteristics of consumer videos found on User-Generated Content platforms like YouTube. 
+
+The second file contains twenty columns, including input and output video characteristics, along with their corresponding transcription times and memory resource requirements during the process of transcoding videos to different formats. This dataset was compiled by conducting experiments on an Intel i7-3720QM CPU, where two rows were randomly selected from the first dataset and utilized as input and output parameters for a video transcoding application, FFmpeg Four. 
+
+Has Missing Values? 
+No 
+
+Keywords: Video Transcoding, Machine Learning, Image Processing, YouTube Videos, FFmpeg, Transcription Time Prediction

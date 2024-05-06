@@ -1,0 +1,25 @@
+**Data Set Name:** Forex EurGbp Hour High
+**Tags:** Economics, Finance, Forex, Forex High, Forex Hour, Statistics
+
+This is the historical price data of the Forex Eur/Gbp from Dukascopy. Each instance, represented by a row, corresponds to one candlestick of one hour. The entire data set spans a range from January first to December thirteenth and excludes weekends, as the Forex market is not active during these days. The time zone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute is determined by the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. Specifically, the class attribute is labeled as true when the mean High price is expected to rise in the following hour, and false when the mean High price is anticipated to decline or remain stagnant in the following hour.
+
+Please note that this is a hypothetical task, intended solely for scientific purposes. Realistic trading strategies should only be applied to predictions based on Close attributes, which are also available.
+
+**Attributes:**
+
+* **Timestamp:** The time of the current data point, specified in the Europe/Amsterdam time zone.
+* **Bid Open:** The bid price at the start of this time interval.
+* **Bid High:** The highest bid price recorded during this time interval.
+* **Bid Low:** The lowest bid price observed during this time interval.
+* **Bid Close:** The bid price at the end of this time interval.
+* **Bid Volume:** The frequency of changes in the Bid Price within this time interval.
+* **Ask Open:** The ask price at the start of this time interval.
+* **Ask High:** The highest ask price recorded during this time interval.
+* **Ask Low:** The lowest ask price observed during this time interval.
+* **Ask Close:** The ask price at the end of this time interval.
+* **Ask Volume:** The frequency of changes in the Ask Price within this time interval.
+* **Class:** A label indicating whether the average price is expected to rise or fall during the next interval.
+
+**Keywords:** Forex, Eur/Gbp, Historical Data, Candlestick, Time Series Analysis, Financial Markets, Trading Strategies.

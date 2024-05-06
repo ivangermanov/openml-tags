@@ -1,0 +1,13 @@
+Subsampling of the Arcene dataset with a random seed value. This dataset has undergone uniform sampling of classes, columns, and rows to reduce its size while maintaining its overall characteristics.
+
+The Arcene dataset originally had a large number of classes, but through uniform sampling, the number of classes has been reduced. This was achieved by selecting a specified number of classes randomly, using their value counts as probabilities. The indices where these selected classes were present were then used to filter the dataset.
+
+Uniform column sampling was also applied to reduce the number of features. This involved randomly choosing a specified number of column indices and selecting the corresponding columns. The resulting dataset consists of these selected columns.
+
+To further reduce the size of the dataset, row sampling was applied. This involved splitting the dataset into two subsets using stratified sampling, ensuring that the class distribution was maintained.
+
+The resulting dataset consists of the sampled features, which include variables such as molecular descriptors and other chemical properties. These features have been carefully selected to represent the underlying characteristics of the Arcene dataset.
+
+Tags: Subsampling of the Arcene dataset
+
+Keywords: Arcene dataset, subsampling, uniform sampling, class reduction, column selection, row sampling, stratified sampling.

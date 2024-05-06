@@ -1,0 +1,15 @@
+The Satimage dataset is part of the Earth Science domain and includes images from the OpenML-CC18, OpenML100, study_1, study_123, study_14, study_34, study_37, study_41, study_52, study_7, study_70, study_76, study_98, and study_99 collections.
+
+This dataset consists of multispectral values of pixels in three-by-three neighborhoods in a satellite image, along with their classifications. The goal is to predict the classification of the central pixel based on its multispectral values.
+
+One frame of Landsat MSS imagery includes four digital images of the same scene in different spectral bands: two in the visible region (approximately corresponding to green and red regions of the visible spectrum) and two in the near-infrared region. Each pixel is represented by an eight-bit binary word, where zero corresponds to black and two hundred fifty-five corresponds to white. The spatial resolution of a pixel is approximately eighty meters by eighty meters. Each image contains two thousand three hundred forty by three thousand three hundred eighty such pixels.
+
+The database is a small subset of a scene, consisting of eighty-two by one hundred pixels. Each line of data corresponds to a three-by-three square neighborhood of pixels completely contained within the eighty-two by one hundred subarea. Each line contains the pixel values in the four spectral bands (converted to ASCII) of each of the nine pixels in the three-by-three neighborhood, as well as a number indicating the classification label of the central pixel.
+
+Each pixel is categorized into one of seven classes: red soil, cotton crop, grey soil, damp grey soil, soil with vegetation stubble, or very damp grey soil. Note that there are no examples with a mixture class (all types present) in this dataset.
+
+The data is presented in random order, and certain lines of data have been removed; therefore, it is not possible to reconstruct the original image from this dataset.
+
+There are thirty-six predictive attributes, which include four spectral bands multiplied by nine pixels in the neighborhood. In each line of data, the four spectral values for the top-left pixel are given first, followed by the four spectral values for the top-middle pixel, and then those for the top-right pixel, and so on, with the pixels read out in sequence from left to right and top to bottom. Therefore, the four spectral values for the central pixel are given by attributes seventeen through twenty. It is possible to use only these four attributes, while ignoring the others, to avoid the problem that arises when a three-by-three neighborhood straddles a boundary.
+
+Keywords: Satimage, Earth Science, Multispectral Values, Satellite Image, Classification, Landsat MSS Imagery, Spectral Bands, Pixel Resolution.

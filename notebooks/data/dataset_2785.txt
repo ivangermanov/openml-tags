@@ -1,0 +1,30 @@
+**FOREX chfsgd-day-High**
+
+Tags: Computer Systems, Finance, Forex, Forex Day, Forex High, Social Media
+
+**Source:** Dukascopy Historical Data Feed, https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description**
+
+This dataset contains the historical price data of the Forex CHF/SGD currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price of the following day, relative to the mean high price of the current day. Specifically, the class attribute is true if the mean high price is expected to increase the following day, and false if the mean high price is expected to decrease or remain the same the following day.
+
+**Note that this is a hypothetical task, intended for scientific research purposes only. Realistic trading strategies should only be applied to predictions based on close attributes (which are also available).**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, set to the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average high price will increase during the next interval.
+
+Keywords: Forex, Currency Pair, Historical Data, Trading Strategies, Financial Markets, Machine Learning.

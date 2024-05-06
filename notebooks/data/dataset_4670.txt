@@ -1,0 +1,16 @@
+Subsampling of the dataset Fashion MNIST with Seed Zero 
+Tags: Machine Learning, Mathematics 
+
+This dataset is a subsampled version of the original Fashion MNIST dataset, which has been reduced in size while maintaining its overall characteristics. The subsampling process involved selecting a limited number of rows, columns, and classes from the original dataset.
+
+The subsampling algorithm began by uniformly sampling classes from the original dataset. Since there were more than ten classes, the algorithm randomly chose ten classes based on their frequency distribution. It then selected the indices where one of these chosen classes was present.
+
+Next, the algorithm uniformly sampled columns from the dataset. Since there were more than one hundred columns, it randomly chose one hundred columns to include in the subsampled dataset. The selected columns were sorted in ascending order to maintain consistency.
+
+Finally, the algorithm reduced the number of rows in the dataset. Since there were more than two thousand rows, it used stratified sampling to select two thousand rows while maintaining the class distribution of the original dataset.
+
+The resulting subsampled dataset has been converted into a format suitable for machine learning applications. Categorical columns have been identified and marked accordingly.
+
+Features: pixel values
+
+Keywords: Fashion MNIST, machine learning, subsampling, stratified sampling, dataset reduction

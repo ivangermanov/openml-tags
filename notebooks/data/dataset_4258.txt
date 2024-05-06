@@ -1,0 +1,58 @@
+The Meta Album Plankton Dataset (Mini) is a comprehensive dataset created by researchers at the Woods Hole Oceanographic Institution. This dataset utilizes the Imaging FlowCytobot (IFCB) for data collection, a process thoroughly explained in a research paper.
+
+Each image in the dataset contains one or multiple planktons, captured in a controlled environment with varying orientations based on the fluid flow and plankton size and shape. The preprocessed plankton dataset is derived from the original Woods Hole Oceanographic Institution Plankton dataset. Image preprocessing involves creating a background square image by duplicating or mirroring the original image's edges, applying a Gaussian kernel to blur the background, and finally placing the original plankton image centrally onto the new background. The resulting image is then resized to 128x128 pixels with anti-aliasing.
+
+### Dataset Details
+
+![](https://meta-album.github.io/assets/img/samples/PLK.png)
+
+**Meta Album ID**: Small Animals Marine Plankton
+**Meta Album URL**: https://meta-album.github.io/datasets/PLK.html
+**Domain ID**: Small Animals
+**Domain Name**: Small Animals
+**Dataset ID**: Plankton
+**Dataset Name**: Plankton
+**Short Description**: Plankton dataset from Woods Hole Oceanographic Institution
+**Number of Classes**: eighty-six
+**Number of Images**: three thousand four hundred forty
+**Keywords**: plankton, ecology
+**Data Format**: images
+**Image Size**: 128x128
+**License (original data release)**: MIT License
+**License URL (original data release)**: https://github.com/WHOI-Plankton/blob/master/LICENSE
+**License (Meta-Album data release)**: MIT License
+**License URL (Meta-Album data release)**: https://github.com/WHOI-Plankton/blob/master/LICENSE
+**Source**: Woods Hole Oceanographic Institution
+**Source URL**: https://github.com/WHOI-Plankton
+**Meta Album Creation Date**: March 
+**Contact Email**: meta-album@chalearn.org
+**Contact URL**: https://meta-album.github.io/
+
+### Cite this dataset
+
+@misc{whoiplankton, 
+title={Annotated Plankton Images - Data Set for Developing and Evaluating Classification Methods.},
+year={}, 
+DOI = {}, 
+url={} }
+
+### Cite Meta-Album
+
+@inproceedings{meta-album-, 
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, 
+url = {https://meta-album.github.io/}, 
+year = {} }
+
+### More
+
+For more information on the Meta-Album dataset, please refer to the NeurIPS paper.
+For details on the dataset preprocessing, please refer to the supplementary materials.
+Supporting code can be found on our GitHub repository.
+Meta-Album on Papers with Code.
+
+### Other versions of this dataset
+
+Micro Extended
+
+Keywords: plankton, ecology, oceanography, marine life, classification methods.

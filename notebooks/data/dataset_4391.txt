@@ -1,0 +1,15 @@
+Name: Higgs Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Economics, Machine Learning 
+
+Sub-sampling of the dataset Higgs with a seed of two, maximum number of rows set to two thousand, maximum number of columns set to one hundred, and maximum number of classes set to ten. This sub-sampled dataset was generated using the following source code.
+
+The sub-sample function takes in parameters such as seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not. It first uniformly samples classes from the unique values in the target variable, selecting a specified number of classes based on their frequency. Then, it selects the indices where one of these classes is present.
+
+Next, it uniformly samples columns if required, choosing a specified number of columns randomly. The function then checks if the number of rows exceeds the maximum limit. If so, it uses stratified sampling to select a sub-set of the data, ensuring that the class distribution remains consistent.
+
+Finally, the function converts categorical columns to strings and returns a new dataset with the sub-sampled data, along with its corresponding metadata.
+
+Features include variables related to leptons, jets, and energies, as well as various mass calculations.
+
+Keywords: Higgs dataset, machine learning, economics, sub-sampling, stratification, class distribution.

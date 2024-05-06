@@ -1,0 +1,49 @@
+Subsampling of the dataset CMC with seed equals zero arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows max, number cols max, number classes max, stratified)
+    -> Dataset:
+rng equals numpy random default RNG seed
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y unique
+if length of classes greater than number classes max
+value counts equals y value counts
+selected classes equals RNG choice classes size number classes max replace false probability value counts over sum value counts
+Select the indices where one of these classes is present index equals y index y is in selected classes
+x equals x iloc index
+y equals y iloc index
+
+Uniformly sample columns if required
+if length of x columns greater than number cols max
+column indexes equals RNG choice list range length x columns size number cols max replace false
+sorted column indexes equals sorted column indexes
+selected columns equals list x columns sorted column indexes
+x equals x selected columns
+else
+sorted column indexes equals list range length x columns
+
+if length of x greater than number rows max
+stratify accordingly target name equals y name
+data equals pandas concat x y axis columns
+_, subset equals train test split data test size number rows max stratify data target name shuffle true random state seed
+x equals subset drop target name axis columns
+y equals subset target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals self categorical mask for i in sorted column indexes
+columns equals list x columns
+return Dataset
+dataset equals self dataset
+x equals x
+y equals y
+categorical mask equals categorical mask
+columns equals columns
+
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Is Wife Now Working?, Husband's Occupation, Standard of Living Index, Media Exposure.
+
+Tags: Health, Medicine
+
+Keywords: subsampling, dataset, stratification, feature selection, classification

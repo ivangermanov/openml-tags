@@ -1,0 +1,28 @@
+**FOREX aud sgd Hour High**
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour
+
+**Data Description**
+
+This dataset contains the historical price data of the Forex Australian Dollar/Singapore Dollar exchange rate from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January to December and excludes weekends, as the Forex market is closed during these periods. The timestamp feature is based on the Europe/Amsterdam timezone.
+
+The class attribute denotes the direction of the mean high price in the subsequent hour relative to the current hour's mean high price. In other words, if the mean high price is expected to increase in the next hour, the class attribute is true; otherwise, it is false.
+
+**Note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies require predicting Close attributes, which are also available in this dataset.**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The frequency of changes in the bid price within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The frequency of changes in the ask price within this time interval.
+* **Class**: Indicates whether the mean high price will rise in the next hour.
+
+Keywords: Forex, Australian Dollar, Singapore Dollar, Exchange Rate, Candlestick, Time Series, Financial Markets, Trading Strategies.

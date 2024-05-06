@@ -1,0 +1,13 @@
+The Libras dataset is categorized under Agriculture and Partial Label Ranking, with a focus on Transportation. It consists of ninety features, including coordinates of movement, and one feature for the class, which is an integer.
+
+The dataset contains fifteen classes, each referencing a specific hand movement type in Libras, a Brazilian sign language. Each class has twenty-four instances, resulting in a total of three hundred sixty instances.
+
+In the video preprocessing stage, time normalization was carried out by selecting forty-five frames from each video, following a uniform distribution. For each frame, the centroid pixels of the segmented objects, namely the hand, were found, composing the discrete version of the curve F with forty-five points. All curves were then normalized in the unitary space.
+
+To prepare the movements for analysis by algorithms, a mapping operation was performed, where each curve F was mapped into a representation with ninety features, representing the coordinates of movement.
+
+Several sub-datasets are offered to support comparisons of results.
+
+This dataset does not contain missing values.
+
+Keywords: Libras, Partial Label Ranking, Agriculture, Transportation, Hand Movement Recognition, Brazilian Sign Language

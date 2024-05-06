@@ -1,0 +1,17 @@
+Subsampling of the dataset Steel Plates Fault with a specified seed value generates a new dataset.
+
+This generated dataset has been created using the following source code:
+
+The function `subsample` takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+
+Within this function, the dataset is first filtered to select a specified number of classes. If the number of unique classes exceeds the maximum allowed, a subset of classes is randomly selected based on their frequency of occurrence in the dataset.
+
+Next, the dataset is filtered to include only the columns corresponding to the selected classes. The column selection process is also randomized to ensure uniform sampling.
+
+If the resulting dataset still has more rows than the specified maximum, a stratified sampling approach is employed to reduce the number of rows while maintaining class balance.
+
+Finally, the categorical columns are converted to strings, and the resulting dataset is returned along with its corresponding metadata.
+
+Features included in this dataset include various attributes related to steel plates.
+
+Machine Learning, Mathematics

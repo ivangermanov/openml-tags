@@ -1,0 +1,49 @@
+Subsampling of the dataset Christine with Seed Two Thousand Rows One Hundred Columns Ten Classes Strategized True 
+
+Generated with the following source code:
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified):
+    random number generator = numpy random default random generator(seed)
+    x = self x
+    y = self y
+    
+    Uniformly sample classes equals y unique values
+    if length of classes is greater than maximum number of classes:
+        value counts equals y value counts
+        selected classes equals random number generator choice of classes with size equal to maximum number of classes, replacement equals false, probability equals value counts divided by sum of value counts
+        
+        select the indices where one of these classes is present
+        x equals x iloc of indices
+        y equals y iloc of indices
+    
+    Uniformly sample columns if required
+    if length of x columns is greater than maximum number of columns:
+        column indices equals random number generator choice of range of length of x columns with size equal to maximum number of columns, replacement equals false
+        sorted column indices equals sort of column indices
+        selected columns equals list of x columns of sorted column indices
+        x equals x of selected columns
+    else:
+        sorted column indices equals range of length of x columns
+    
+    if length of x is greater than maximum number of rows:
+        target name equals y name
+        data equals pandas concat of x and y along columns axis
+        _, subset equals train test split of data with test size equal to maximum number of rows, stratify equals data of target name, shuffle equals true, random state equals seed
+        
+        x equals subset drop of target name along columns axis
+        y equals subset of target name
+    
+    We need to convert categorical columns to string for OpenML
+    categorical mask equals list of self categorical mask for index in sorted column indices
+    columns equals list of x columns
+    return Dataset of 
+        dataset equals self dataset,
+        x equals x,
+        y equals y,
+        categorical mask equals categorical mask,
+        columns equals columns,
+
+Features: 
+V Sixty Three, V Sixty Four, V Eighty Six, V Ninety Three, ... 
+
+Keywords: subsampling, dataset, Christine, stratified, OpenML, categorical

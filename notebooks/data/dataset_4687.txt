@@ -1,0 +1,45 @@
+Name: Nomao Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+
+Tags: Machine Learning, Mathematics
+
+Sub-sampling of the dataset Nomao with seed equal to two arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true.
+
+Generated with the following source code:
+
+def sub-sample(self, seed: integer, number rows max: integer equals two thousand, number cols max: integer equals one hundred, number classes max: integer equals ten, stratified: boolean equals true) -> Dataset:
+random number generator equals numpy random default random generator seed
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y unique
+if length of classes is greater than number classes max:
+value counts equals y value counts
+selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present index equals y index y is in selected classes
+x equals x iloc index
+y equals y iloc index
+
+Uniformly sample columns if required
+if length of x columns is greater than number cols max:
+column indexes equals random number generator choice list range length of x columns size equals number cols max replace equals false
+sorted column indexes equals sorted column indexes
+selected columns equals list x columns sorted column indexes
+x equals x selected columns
+else:
+sorted column indexes equals list range length of x columns
+
+if length of x is greater than number rows max:
+Stratify accordingly target name equals y name
+data equals pandas concatenate x and y axis equals columns
+_, subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed
+x equals subset drop target name axis equals columns
+y equals subset target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals list self categorical mask for i in sorted column indexes
+columns equals list x columns
+return Dataset technically this is not the same but it's where it was derived from dataset equals self dataset x equals x y equals y categorical mask equals categorical mask columns equals columns
+
+Features: ...
+
+Keywords: machine learning, mathematics, sub-sampling, dataset, stratification, OpenML.

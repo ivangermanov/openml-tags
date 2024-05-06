@@ -1,0 +1,11 @@
+Subsampling of the dataset MiniBooNE with a specified seed value, which ensures reproducibility of the results, generated two thousand rows and ten classes, while maintaining one hundred columns. The stratification option was set to true, which means the sampling was done in a way that preserves the class distribution.
+
+The generation process involved uniform sampling of classes and columns. For classes, a specified number of unique values were randomly selected based on their frequency in the dataset. Then, the indices corresponding to these selected classes were used to filter the data. For columns, a specified number of column indices were randomly selected, and the corresponding columns were kept.
+
+If the number of rows exceeded the maximum allowed, stratified sampling was applied to reduce the number of rows while preserving the class distribution. This was done using a train-test split function with stratification enabled.
+
+The resulting dataset contains particle identification features, which are represented as numerical values. These features are not easily interpretable and may require domain-specific knowledge to understand.
+
+Tags: Education, Statistics
+
+Keywords: Subsampling, Reproducibility, Stratification, Class Distribution, Column Sampling, Row Sampling, Particle Identification.

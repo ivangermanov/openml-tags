@@ -1,0 +1,29 @@
+All-Time Premier League Player Statistics 
+Tags: Computer Systems, Machine Learning 
+
+As a massive football fan, the Premier League is one of my favorite football leagues. Therefore, I thought it would be an excellent opportunity to create a dataset of player statistics from all seasons of the Premier League. The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. It operates on a system of promotion and relegation with the English Football League, contested by twenty clubs.
+
+Home to some of the most renowned clubs, players, managers, and stadiums in world football, the Premier League is the most-watched league globally, broadcast in one billion homes across one hundred eighty-eight countries. The league takes place between August and May, involving the teams playing each other home and away throughout the season, totaling three hundred eighty matches. Three points are awarded for a win, one point for a draw, and none for a defeat, with the team accumulating the most points at the end of the season claiming the Premier League title.
+
+Some players of specific positions may not possess certain statistics – for instance, a goalkeeper might not have a statistic for shot accuracy.
+
+Details About the Dataset
+
+I acquired the data from premierleague.com using a BeautifulSoup4 web scraper in Python3, which automatically generates a CSV file containing all player statistics. The runtime of the file varies depending on internet bandwidth, taking around twenty minutes to complete. To ensure the dataset remains up-to-date, I designed the program to update weekly, as player statistics change following each match.
+
+Planning this project took two days, while creating the program in Python3 required seven days, and testing and bug fixing took an additional five days. The project was completed within a span of two weeks.
+
+Acknowledgments 
+Source Credits: premierleague.com 
+Image Credits: rb.gy/wuiwth 
+
+Inspiration 
+How do variables such as age, nationality, and club affect player performance?
+
+Known Issues in the Dataset 
+Goals per match display an abnormally high value for a few players due to incorrect values displayed during the initial few milliseconds of loading the webpage. I am attempting to resolve this issue analytically rather than scraping directly from the website.
+
+Features: 
+Name, Jersey Number, Club, Position, Nationality, Age, Appearances, Wins, Losses, Goals, Headed Goals, Goals with Right Foot, Goals with Left Foot, Penalties Scored, Free Kicks Scored, Shots, Shots on Target, Shooting Accuracy Percentage, Hit Woodwork, Big Chances Missed, Clean Sheets, Goals Conceded, Tackles, Tackle Success Percentage, Last Man Tackles, Blocked Shots, Interceptions, Clearances, Headed Clearance, Clearances off Line, Recoveries, Duels Won, Duels Lost, Successful Fifty/Fifty, Aerial Battles Won, Aerial Battles Lost, Own Goals, Errors Leading to Goal, Assists, Passes, Passes per Match, Big Chances Created, Crosses, Cross Accuracy Percentage, Through Balls, Accurate Long Balls, Saves, Penalties Saved, Punches, High Claims, Catches, Sweeper Clearances, Throw Outs, Goal Kicks, Yellow Cards, Red Cards, Fouls, Offsides 
+
+Keywords: Premier League, football, player statistics, machine learning, computer systems, web scraping, dataset.

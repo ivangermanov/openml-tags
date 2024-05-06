@@ -1,0 +1,26 @@
+FOREX USDCAD Hourly High Tags: Finance, Forex, Forex High, Forex Hour, Machine Learning, Physical Sciences
+
+Data Description:
+
+This dataset consists of historical price data of the FOREX USDCAD currency pair from Dukascopy. Each instance represents a single hourly candlestick, and the entire dataset spans from January first to December thirteenth, excluding weekends since FOREX markets are closed during these periods. The timestamp feature is set to the Europe Amsterdam time zone.
+
+The class attribute signifies the direction of the mean high price in the subsequent hour compared to the mean high price of the current hour. Specifically, the class attribute is labeled as true if the mean high price increases in the following hour and false otherwise, indicating either a decrease or stagnation in the mean high price.
+
+Note that this dataset serves a hypothetical purpose, intended solely for scientific exploration and should not be employed in actual trading strategies. For realistic trade applications, predictions based on close attributes are more suitable.
+
+Attributes:
+
+* Timestamp: Represents the time of each data point in the Europe Amsterdam time zone.
+* Bid Open: The initial bid price at the beginning of each hourly interval.
+* Bid High: The peak bid price recorded during each hourly interval.
+* Bid Low: The lowest bid price observed during each hourly interval.
+* Bid Close: The final bid price at the conclusion of each hourly interval.
+* Bid Volume: The frequency of changes in the bid price within each hourly interval.
+* Ask Open: The starting ask price at the onset of each hourly interval.
+* Ask High: The highest ask price reached during each hourly interval.
+* Ask Low: The minimum ask price recorded during each hourly interval.
+* Ask Close: The concluding ask price at the end of each hourly interval.
+* Ask Volume: The number of changes in the ask price within each hourly interval.
+* Class: Indicates whether the mean high price will rise in the subsequent hourly interval.
+
+Keywords: FOREX, USDCAD, Currency Pair, Historical Price Data, Candlestick, Time Zone, Mean High Price, Trading Strategies, Hypothetical Analysis.

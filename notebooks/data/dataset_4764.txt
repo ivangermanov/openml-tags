@@ -1,0 +1,14 @@
+Subsampling of the dataset KDD Cup Nine Upselling with a specified seed value. This dataset is part of the education and machine learning domains.
+
+The subsampling process involves uniformly selecting classes from the available unique classes in the dataset. If the number of unique classes exceeds the maximum allowed, a random selection is made based on the value counts of each class.
+
+Next, the columns are uniformly sampled if the total number of columns exceeds the maximum allowed. The selected columns are then used for further processing.
+
+If the resulting dataset still has more rows than the maximum allowed, stratified sampling is applied to ensure an even distribution of classes in the final dataset. This is achieved by concatenating the feature data with the target variable, performing a train-test split, and then separating the features and target variables again.
+
+Finally, the categorical columns are converted to strings, and the resulting dataset is returned with its corresponding metadata, including the column names and categorical mask.
+
+Features: 
+Var Four Hundred Three, Var Five Twenty, Var Nine Hundred,..., 
+
+Keywords: Subsampling, Stratified Sampling, Machine Learning, Education, Dataset

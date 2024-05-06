@@ -1,0 +1,21 @@
+Subsampling of the dataset PC Four with seed equals Four arguments number rows max equals Two Thousand arguments number columns max equals One Hundred arguments number classes max equals Ten arguments no stratify equals True.
+
+Generated with the following source code:
+
+Defining a function to subsample the dataset. This function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify.
+
+Within this function, we first get the unique classes in the dataset. If there are more classes than the specified maximum, we select a subset of classes using a weighted random choice based on their frequency in the dataset.
+
+Next, we select the indices where one of these chosen classes is present and use these indices to filter our data. 
+
+If the number of columns exceeds the maximum allowed, we uniformly sample columns. Otherwise, we use all columns.
+
+Finally, if the number of rows exceeds the maximum allowed, we use stratified sampling to select a subset of rows. 
+
+The resulting dataset consists of the filtered data along with its corresponding labels and categorical mask.
+
+Features include Location Blank, Branch Count, Call Pairs, Location Code and Comment, Location Comments, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Location Executable, Parameter Count, Halstead Content, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Location Total.
+
+Tags: Meteorology, Statistics
+
+Keywords: subsampling, dataset, stratification, feature selection, meteorology, statistics

@@ -1,0 +1,28 @@
+FOREX Eur/Try Minute High Dataset
+
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+
+This dataset contains historical price data of the Forex Eur/Try pair, sourced from Dukascopy Historical Data Feed. Each instance represents a single candlestick of one minute duration.
+
+The dataset spans a period from January to December, excluding weekends when Forex trading is inactive. All timestamps are set to the Europe/Amsterdam time zone.
+
+The class attribute is defined as the direction of the mean high price movement between consecutive minutes. It is true if the mean high price increases in the following minute and false if it decreases or remains stagnant.
+
+Please note that this dataset is intended for scientific research purposes only. Realistic trading strategies should be based on predictions made on close attributes, which are also available.
+
+Attributes:
+
+* Timestamp: The time of the current data point in Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur/Try, Candlestick, Historical Data, Machine Learning, Trading Strategies, Time Series Analysis.

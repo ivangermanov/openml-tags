@@ -1,0 +1,29 @@
+**FOREX eur pln hour High**
+
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Hour, Machine Learning
+
+**Source:** Dukascopy Historical Data Feed 
+
+**Data Description**
+This dataset comprises historical price data of the Forex EUR/PLN currency pair, sourced from Dukascopy. Each instance represents a single candlestick of one hour duration. The entire dataset spans a period from January first to December thirteenth, excluding weekends, as the Forex market is inactive during these days. The timestamp feature adheres to the Europe/Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean high price in the subsequent hour, relative to the mean high price of the current minute. Specifically, the class attribute assumes a value of true when the mean high price increases in the following hour, and false when the mean high price decreases or remains stagnant.
+
+**Note** that this dataset serves a hypothetical purpose, intended solely for scientific investigation. Realistic trading strategies should focus on predicting close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* **Timestamp**: Represents the time of each data point, conforming to the Europe/Amsterdam timezone.
+* **Bid Open**: Denotes the bid price at the commencement of the given time interval.
+* **Bid High**: Represents the highest bid price recorded during the specified time interval.
+* **Bid Low**: Signifies the lowest bid price observed during the stated time interval.
+* **Bid Close**: Indicates the bid price at the conclusion of the designated time interval.
+* **Bid Volume**: Quantifies the frequency of changes in the bid price within the specified time interval.
+* **Ask Open**: Represents the ask price at the initiation of the given time interval.
+* **Ask High**: Denotes the highest ask price recorded during the specified time interval.
+* **Ask Low**: Signifies the lowest ask price observed during the stated time interval.
+* **Ask Close**: Indicates the ask price at the conclusion of the designated time interval.
+* **Ask Volume**: Quantifies the frequency of changes in the ask price within the specified time interval.
+* **Class**: Determines whether the average price will increase during the subsequent interval.
+
+Keywords: Forex, EUR/PLN, Candlestick, Time Series, Financial Data, Machine Learning.

@@ -1,0 +1,51 @@
+Porto Seguro Seed Zero Subsample 
+
+Tags: Life Science, Machine Learning 
+
+Subsampling of the Porto Seguro dataset with seed equals zero arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true generated with the following source code 
+
+def subsample(self, seed, number rows maximum equals two thousand, number columns maximum equals one hundred, number classes maximum equals ten, stratified equals true) -> Dataset: 
+random number generator equals numpy random default random generator with seed 
+x equals self x 
+y equals self y 
+
+uniformly sample classes equals y unique 
+if length of classes is greater than number classes maximum: 
+value counts equals y value counts 
+selected classes equals random number generator choice classes size number classes maximum replace false probability value counts over sum value counts 
+select the indices where one of these classes is present 
+indexes equals y index y is in selected classes 
+x equals x iloc indexes 
+y equals y iloc indexes 
+
+uniformly sample columns if required 
+if length of x columns is greater than number columns maximum: 
+column indexes equals random number generator choice list range length of x columns size number columns maximum replace false 
+sorted column indexes equals sorted column indexes 
+selected columns equals list x columns sorted column indexes 
+x equals x selected columns 
+else: 
+sorted column indexes equals list range length of x columns 
+
+if length of x is greater than number rows maximum: 
+stratify accordingly 
+target name equals y name 
+data equals pandas concat x and y axis columns 
+_, subset equals train test split data test size number rows maximum stratify data target name shuffle true random state seed 
+x equals subset drop target name axis columns 
+y equals subset target name 
+
+we need to convert categorical columns to string for openml 
+categorical mask equals list self categorical mask for i in sorted column indexes 
+columns equals list x columns 
+
+return Dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: insurance individual one, insurance individual two category, insurance individual three, insurance individual four category, insurance individual five category, insurance individual six binary, insurance individual seven binary, insurance individual eight binary, insurance individual nine binary, insurance individual ten binary, insurance individual eleven binary, insurance individual twelve binary, insurance individual thirteen binary, insurance individual fourteen, insurance individual fifteen, insurance individual sixteen binary, insurance individual seventeen binary, insurance individual eighteen binary, insurance vehicle one category, insurance vehicle two category, insurance vehicle three category, insurance vehicle four category, insurance vehicle five category, insurance vehicle six category, insurance vehicle seven category, insurance vehicle eight category, insurance vehicle nine category, insurance vehicle ten category, insurance vehicle eleven category, insurance vehicle eleven, insurance vehicle twelve, insurance vehicle thirteen, insurance vehicle fourteen, insurance vehicle fifteen, insurance calculation one, insurance calculation two, insurance calculation three, insurance calculation four, insurance calculation five, insurance calculation six, insurance calculation seven, insurance calculation eight, insurance calculation nine, insurance calculation ten, insurance calculation eleven, insurance calculation twelve, insurance calculation thirteen, insurance calculation fourteen, insurance calculation fifteen binary, insurance calculation sixteen binary, insurance calculation seventeen binary, insurance calculation eighteen binary, insurance calculation nineteen binary, insurance calculation twenty binary, target 
+
+Keywords: machine learning, life science, porto seguro, dataset, subsampling, stratification

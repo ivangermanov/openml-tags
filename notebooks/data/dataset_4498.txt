@@ -1,0 +1,23 @@
+Name: Jasmine Seed Three Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Jasmine with seed equals three arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true 
+
+Generated with the following source code:
+
+This function subsamples a given dataset based on several parameters. It takes into consideration the number of rows, columns, and classes desired in the resulting dataset. The function also allows for stratification of the data.
+
+def subsample(self, seed, number_rows_maximum, number_columns_maximum, number_classes_maximum, stratified):
+ 
+The function first initializes a random number generator using the provided seed value. It then selects a uniform sample of classes from the dataset, ensuring that the number of classes does not exceed the maximum allowed. 
+
+Next, it selects the indices where one of the chosen classes is present and uses these indices to filter the data. 
+
+If the number of columns in the filtered data exceeds the maximum allowed, the function uniformly samples columns to reach the desired number. 
+
+Finally, if the number of rows in the resulting dataset still exceeds the maximum allowed, the function performs stratified sampling to reduce the number of rows while maintaining the class distribution.
+
+Features: 
+
+The resulting dataset contains a subset of features from the original dataset, including variables such as one, three, four, five, six, seven, eight, nine, ten, twelve, thirteen, fifteen, sixteen, nineteen, twenty-three, twenty-four, twenty-five, twenty-six, twenty-seven, twenty-eight, twenty-nine, thirty, thirty-one, thirty-six, thirty-seven, forty, forty-one, forty-three, forty-five, forty-six, forty-seven, forty-eight, forty-nine, fifty-two, fifty-three, fifty-four, fifty-five, fifty-seven, fifty-eight, sixty, sixty-one, sixty-three, sixty-seven, sixty-eight, seventy, seventy-two, seventy-three, seventy-four, seventy-eight, seventy-nine, eighty, eighty-one, eighty-three, eighty-four, eighty-five, eighty-six, eighty-nine, ninety, ninety-one, ninety-two, ninety-four, ninety-five, ninety-six, ninety-nine, one hundred one, one hundred two, one hundred three, one hundred four, one hundred five, one hundred seven, one hundred eight, one hundred nine, one hundred ten, one hundred eleven, one hundred twelve, one hundred thirteen, one hundred fourteen, one hundred fifteen, one hundred sixteen, one hundred seventeen, one hundred eighteen, one hundred nineteen, one hundred twenty-one, one hundred twenty-two, one hundred twenty-four, one hundred twenty-five, one hundred twenty-six, one hundred twenty-seven, one hundred twenty-eight, one hundred twenty-nine, one hundred thirty, one hundred thirty-one, one hundred thirty-four, one hundred thirty-five, one hundred thirty-seven, one hundred thirty-eight, one hundred forty-one, one hundred forty-two, one hundred forty-three, one hundred forty-four.
+
+Keywords: sub sampling, dataset, stratification, classes, columns, rows, random number generator.

@@ -1,0 +1,21 @@
+The Adult Seed One Dataset has been subsampled using a specific set of arguments, resulting in a new dataset with distinct characteristics.
+
+Tags: Subsampling of the Adult Dataset with Seed One
+
+This dataset was generated using the following source code:
+
+A function named subsample takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+
+Within this function, a random number generator is created using the provided seed value. The input data is then split into features and targets. 
+
+If the number of unique classes exceeds the maximum allowed, a subset of classes is randomly selected, taking into account their frequencies in the original data. 
+
+The function then selects the indices corresponding to these chosen classes and filters the input data accordingly. 
+
+Next, if the number of columns exceeds the maximum allowed, a random selection of columns is made, ensuring that the resulting dataset meets the specified column limit.
+
+Finally, if the resulting dataset still contains more rows than the maximum allowed, the function employs stratified sampling to reduce the number of rows while maintaining the original class distribution.
+
+The resulting dataset consists of the following features: Age, Work Class, Education, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Capital Loss, Hours per Week, Native Country, and Class.
+
+Keywords: Subsampling, Adult Dataset, Stratification, Random Sampling, Feature Selection, Class Distribution.

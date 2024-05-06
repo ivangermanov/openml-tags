@@ -1,0 +1,21 @@
+Compass Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Machine Learning, Mathematics
+
+Subsampling of the dataset Compass with a seed of four arguments N Rows maximum equals two thousand arguments N Columns maximum equals one hundred arguments N Classes maximum equals ten arguments No Stratify equals True.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including self, seed, N Rows maximum, N Columns maximum, N Classes maximum, and stratified. It uses NumPy's default random generator to generate random samples. 
+
+It first selects unique classes from the target variable Y. If there are more than the specified number of classes, it uses value counts to select the top classes based on their frequency.
+
+Then, it uniformly samples columns if there are more columns than the specified maximum number of columns. 
+
+After that, it uniformly samples rows while maintaining the class distribution if there are more rows than the specified maximum number of rows. 
+
+Finally, it returns a new dataset with the sampled data.
+
+Features: Sex, Age, Age Category, Race, Juvenile Felony Count, Juvenile Misdemeanor Count, Juvenile Other Count, Prior Counts, Days Between Screening and Arrest, Days From Compass, Charge Degree, Decile Score, Score Text, Type of Assessment, Decile Score, Score Text, End, Is Recid.
+
+Keywords: Compass, Subsampling, Machine Learning, Stratification, Random Sampling.

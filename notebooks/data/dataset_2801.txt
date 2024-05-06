@@ -1,0 +1,28 @@
+**FOREX chf sgd minute Close**
+
+Tags: finance, foreign exchange, foreign exchange close, foreign exchange minute, geography, machine learning
+
+This dataset contains the historical price data of the Foreign Exchange Swiss Franc/Singapore Dollar (CHF/SGD) from Dukascopy.
+
+One instance, or row, represents one candlestick of one minute. The entire dataset spans a specific period of time, excluding weekends, as the Foreign Exchange market is not active on these days.
+
+The timestamp feature is presented in the Europe/Amsterdam time zone.
+
+The class attribute signifies the direction of the mean of the Close Bid and the Close Ask prices of the subsequent minute, relative to the mean of the Close Bid and Close Ask prices of the current minute. In other words, the class attribute is true when the mean Close price increases in the following minute, and false when the mean Close price decreases or remains unchanged in the following minute.
+
+Attributes:
+
+* **Timestamp**: The time of the current data point, presented in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Foreign Exchange, CHF/SGD, machine learning, finance, geography, historical data, candlestick, timestamp.

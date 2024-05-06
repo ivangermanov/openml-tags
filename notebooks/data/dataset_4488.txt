@@ -1,0 +1,20 @@
+Subsampling of the dataset Dilbert with Seed Three 
+
+Tags: Subsampling of the dataset Dilbert 
+
+Generated with the following source code:
+
+This function subsamples the dataset. It takes several parameters, including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not. 
+
+The function first uniformly samples classes. If there are more classes than the maximum allowed, it selects the desired number of classes based on their frequency in the dataset. Then, it selects the indices where one of these classes is present.
+
+Next, the function uniformly samples columns if required. If there are more columns than the maximum allowed, it selects the desired number of columns randomly.
+
+After that, the function checks if there are more rows than the maximum allowed. If so, it uses stratified sampling to select the desired number of rows.
+
+Finally, the function returns a new dataset with the subsampled data, along with other relevant information such as the categorical mask and column names.
+
+Features: 
+Several features were included in the subsampled dataset, including various variables related to the original dataset.
+
+Keywords: Subsampling, Dataset, Seed, Stratification, Sampling

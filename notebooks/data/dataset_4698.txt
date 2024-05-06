@@ -1,0 +1,19 @@
+Subsampling of the Adult dataset with Seed Three 
+
+Tags: Subsampling of the Adult dataset 
+
+Generated with the following source code:
+
+This function takes a dataset and reduces its size while maintaining its characteristics. It does this by randomly selecting a specified number of rows, columns, and classes from the original dataset. The selection process is designed to preserve the overall distribution of the data.
+
+The function first reduces the number of classes in the dataset if there are more than the specified maximum. It does this by choosing a random subset of the classes, with the probability of each class being chosen proportional to its frequency in the dataset.
+
+Next, the function reduces the number of columns in the dataset if there are more than the specified maximum. It does this by randomly selecting a subset of the columns.
+
+Finally, the function reduces the number of rows in the dataset if there are more than the specified maximum. This is done using stratified sampling, which ensures that the reduced dataset has the same proportion of each class as the original dataset.
+
+The resulting dataset is then returned, along with information about which columns are categorical.
+
+Features: Age, Work Class, Education, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Capital Loss, Hours per Week, Native Country, Class
+
+Keywords: Adult dataset, subsampling, stratified sampling, dataset reduction, feature selection

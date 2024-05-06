@@ -1,0 +1,17 @@
+Subsampling of the dataset Satellite with a specified seed generated a new dataset. The arguments used for subsampling include maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not.
+
+The function used for subsampling takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether to perform stratified sampling. It uses NumPy's random default generator to ensure reproducibility.
+
+First, the function selects a specified number of classes uniformly at random from the unique classes present in the dataset. If the number of unique classes exceeds the specified maximum, it uses value counts to determine the probability of selecting each class.
+
+Next, it selects the indices where one of the chosen classes is present and subsets the data accordingly. Then, it uniformly samples columns if the number of columns exceeds the specified maximum. If not, it uses all columns.
+
+Finally, if the number of rows exceeds the specified maximum, it performs stratified sampling using Scikit-learn's train test split function to ensure that the resulting dataset has the desired number of rows while maintaining the class distribution.
+
+The resulting dataset contains the subsampled data, along with the corresponding target variable and categorical mask.
+
+Features: thirty-six variables, Target
+
+Tags: Machine Learning, Mathematics
+
+Keywords: subsampling, dataset, stratified sampling, machine learning, mathematics

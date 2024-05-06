@@ -1,0 +1,19 @@
+Fashion MNIST Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True Tags: Subsampling of the dataset Fashion MNIST with Seed equals Three arguments Number Rows equals Two Thousand arguments Number Columns equals One Hundred arguments Number Classes equals Ten arguments No Stratify equals False.
+
+Generated with the following source code:
+
+A function called subsample takes five parameters: self, seed, number rows maximum, number columns maximum, and number classes maximum, as well as a boolean parameter called stratified. This function returns a dataset.
+
+First, a random number generator is created using the given seed. Then, the input data and labels are stored in variables x and y respectively.
+
+If the number of unique classes in the labels exceeds the maximum allowed number of classes, a subset of classes is randomly selected based on their frequency in the dataset. The indices where these selected classes occur are stored in a variable called idxs. The input data and labels are then filtered to only include these indices.
+
+Next, if the number of columns in the input data exceeds the maximum allowed number of columns, a subset of column indices is randomly selected. These selected column indices are used to filter the input data.
+
+Finally, if the number of rows in the filtered input data exceeds the maximum allowed number of rows, a stratified sampling approach is used to select a subset of the data. This ensures that the class distribution is preserved in the sampled data.
+
+The resulting dataset consists of the filtered input data, labels, and a mask indicating which columns are categorical.
+
+Features: various pixels
+
+Keywords: Fashion MNIST, subsampling, stratified sampling, dataset generation

@@ -1,0 +1,26 @@
+**FOREX cad chf day Close**
+
+Tags: Chemistry, Finance, Forex, Forex Close, Forex Day, Machine Learning
+
+**Source:** Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description:** This is the historical price data of the Canadian Dollar versus Swiss Franc Forex pair from Dukascopy. Each instance, or row, represents one candlestick of one trading day. The entire dataset spans a specific date range, excluding weekends, since the Forex market is not active on those days. The time zone of the feature Timestamp is Europe Amsterdam.
+
+The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask prices of the following trading day, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is true when the mean Close price is expected to increase the following day, and false when the mean Close price is anticipated to decrease or remain the same.
+
+**Attributes:** 
+
+* **Timestamp:** The time of the current data point, recorded in the Europe Amsterdam time zone.
+* **Bid Open:** The bid price at the start of this specific time interval.
+* **Bid High:** The highest bid price recorded during this particular time interval.
+* **Bid Low:** The lowest bid price observed during this specific time interval.
+* **Bid Close:** The bid price at the end of this particular time interval.
+* **Bid Volume:** The frequency at which the Bid Price changed within this specific time interval.
+* **Ask Open:** The ask price at the start of this specific time interval.
+* **Ask High:** The highest ask price recorded during this particular time interval.
+* **Ask Low:** The lowest ask price observed during this specific time interval.
+* **Ask Close:** The ask price at the end of this particular time interval.
+* **Ask Volume:** The frequency at which the Ask Price changed within this specific time interval.
+* **Class:** A binary indicator of whether the average price will rise during the next interval.
+
+Keywords: Forex, Canadian Dollar, Swiss Franc, Candlestick, Trading Day, Time Zone, Mean Close Price, Class Attribute, Historical Price Data.

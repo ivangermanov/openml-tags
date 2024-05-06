@@ -1,0 +1,7 @@
+Subsampling of the Compass dataset with a specified seed generates a new dataset with reduced number of rows, columns, and classes. This process involves uniformly sampling classes, columns, and rows while maintaining the stratification of the original dataset.
+
+The subsample function takes several arguments, including the seed value, maximum number of rows, columns, and classes, and a boolean indicating whether to perform stratified sampling. The function first samples the classes using value counts and probability, then selects the corresponding indices. It then uniformly samples columns if required, and finally performs stratified sampling on the remaining data to reduce the number of rows.
+
+The resulting dataset contains the sampled data, along with metadata such as the categorical mask and column names. The sampled data includes features such as sex, age category, race, juvenile felony count, prior counts, days between screening arrest, charge degree, decile score, and recidivism status.
+
+Keywords: Compass dataset, subsampling, stratified sampling, machine learning, statistics.

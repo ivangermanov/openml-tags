@@ -1,0 +1,15 @@
+Machine Learning and Mathematics Tags 
+
+The dataset, Steel Plates Fault, underwent subsampling with a specific set of parameters. The subsampling process involved generating a random number using the default random generator from the NumPy library, with the seed set to four.
+
+The original dataset had a large number of rows, so a maximum number of two thousand rows were sampled uniformly. Similarly, the dataset had many columns, so only one hundred columns were selected randomly. Furthermore, the dataset comprised multiple classes, and only ten of them were chosen randomly using their value counts as probabilities.
+
+To ensure that the sampling was representative of the entire dataset, the selection of rows and columns was done strategically. This involved selecting the indices where the chosen classes were present, and then sampling the corresponding rows and columns.
+
+After subsampling, the dataset consisted of the selected rows and columns, along with their corresponding class labels. The categorical columns were converted to strings to conform to OpenML standards.
+
+Features: 
+V One, V Two, V Three, V Four, V Five, V Six, V Seven, V Eight, V Nine, V Ten, 
+target 
+
+Keywords: machine learning, mathematics, subsampling, dataset, steel plates fault, numpy, stratified sampling.

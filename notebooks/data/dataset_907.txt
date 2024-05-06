@@ -1,0 +1,31 @@
+**COCOMO NASA 2**
+
+This dataset is part of the PROMISE Software Engineering Repository, made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
+
+**Title:** COCOMO NASA 2 / Software Cost Estimation
+
+**Sources:** Ninety-three NASA projects from different centers, collected by Jairus Hihn, Manager SQIP Measurement & Benchmarking Element.
+
+**Past Usage:** None with this specific dataset. However, previous work on similar datasets includes "Validation Methods for Calibrating Software Effort Models" and "Feature Subset Selection Can Improve Software Cost Estimation Accuracy".
+
+The COCOMO software cost model measures effort in calendar months of 152 hours, including development and management hours. It assumes that effort grows more than linearly with software size, taking into account various effort multipliers. These multipliers include analyst capability, programmer capability, application experience, modern programming practices, software tools, virtual machine experience, language experience, schedule constraint, main memory constraint, database size, time constraint for CPU, turnaround time, machine volatility, process complexity, and required software reliability.
+
+In COCOMO I, the exponent on KSLOC was a single value ranging from 1.05 to 1.2. In COCOMO II, the exponent "b" was divided into a constant, plus the sum of five scale factors modeling issues such as whether the team had built this kind of system before.
+
+The effort multipliers fall into three groups: those positively correlated to more effort, those negatively correlated to more effort, and a third group containing schedule information. Giving programmers either too much or too little time to develop a system can be detrimental.
+
+**Relevant Information:** The numeric values of the effort multipliers are categorized as very very extra, high, high, nominal, low, low, and very low. Removing attributes can improve performance without increasing the variance in model behavior.
+
+**Number of Instances:** 93
+
+**Number of Attributes:** 24, including 15 standard COCOMO-I discrete attributes, 7 others describing the project, one line of code measure, and one goal field being the actual effort in person months.
+
+**Attribute Information:** Unique ID, project name, category of application, flight or ground system, NASA center, year of development, development mode, COCOMO attributes, equivalent physical 1000 lines of source code, and development effort in months.
+
+**Missing Attributes:** None
+
+**Distribution of Class Values:** Various ranges of development months, from less than 500 to greater than 8000.
+
+**Features:** Record number, project name, category, flight or ground system, NASA center, year, mode, rely, data, complexity, time, storage, virtual, turn, analyst capability, application experience, programmer capability, virtual machine experience, language experience, modern programming practices, software tools, schedule constraint, and equivalent physical KSLOC.
+
+Keywords: COCOMO, software cost estimation, NASA, effort multipliers, predictive models, software engineering.

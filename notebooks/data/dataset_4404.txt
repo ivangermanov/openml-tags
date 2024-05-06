@@ -1,0 +1,21 @@
+Name: Jannis Seed Four Rows Two Thousand NCClasses Ten NCols One Hundred Stratify True 
+
+Tags: Economics, Machine Learning 
+
+Sub-sampling of the dataset Jannis with a seed equal to four arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code.
+
+The function sub-sample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify.
+
+First, it sets up a random number generator using the given seed. Then it selects the features and target variable from the original dataset.
+
+If there are more unique classes than the specified maximum, it uses value counts to select the most representative classes and filters the dataset to only include those classes.
+
+Next, if there are more columns than the specified maximum, it randomly selects the desired number of columns while preserving their original order.
+
+Finally, if there are more rows than the specified maximum, it uses stratified sampling to select the desired number of rows while maintaining the distribution of classes.
+
+The resulting sub-sampled dataset is then returned along with its metadata including the categorical mask and column names.
+
+Features: The sub-sampled dataset contains fifty-four features, which are all numeric variables.
+
+Keywords: sub-sampling, machine learning, economics, stratification, dataset generation.

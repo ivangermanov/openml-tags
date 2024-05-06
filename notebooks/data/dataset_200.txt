@@ -1,0 +1,52 @@
+Covertype 
+Tags: Machine Learning, Physical Sciences 
+
+This is the famous Covertype dataset in its binary version. The dataset was preprocessed as follows: 
+each file column-wise according to specific rules; 
+if a column contained only one value (a constant feature), it was set to zero and thus removed by sparsity; 
+if a column contained two values (a binary feature), the value occurring more often was set to zero, and the other to one; 
+if a column contained more than two values (a multinary or real feature), the column was divided by its standard deviation. 
+Duplicate lines were finally removed.
+
+The dataset was transformed from multiclass into binary class.
+
+Features include Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at nine am, Hillshade at Noon, Hillshade at three pm, Horizontal Distance to Fire Points, Wilderness Area, and Soil Type.
+
+Predicting forest cover type from cartographic variables only (no remotely sensed data). 
+The actual forest cover type for a given observation (thirty by thirty meter cell) was determined from United States Forest Service Region Two Resource Information System data. 
+Independent variables were derived from data originally obtained from United States Geological Survey and United States Forest Service data. 
+Data is in raw form (not scaled) and contains binary (zero or one) columns of data for qualitative independent variables (wilderness areas and soil types).
+
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. 
+These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices. 
+Some background information for these four wilderness areas: 
+Neota probably has the highest mean elevational value of the four wilderness areas. 
+Rawah and Comanche Peak would have a lower mean elevational value, while Cache la Poudre would have the lowest mean elevational value. 
+As for primary major tree species in these areas, Neota would have spruce fir, while Rawah and Comanche Peak would probably have lodgepole pine as their primary species, followed by spruce fir and aspen. 
+Cache la Poudre would tend to have ponderosa pine, Douglas fir, and cottonwood willow. 
+The Rawah and Comanche Peak areas would tend to be more typical of the overall dataset than either the Neota or Cache la Poudre, due to their assortment of tree species and range of predictive variable values (elevation, etc.). 
+Cache la Poudre would probably be more unique than the others, due to its relatively low elevation range and species composition.
+
+Has missing values? No.
+
+Additional variable information:
+Given is the attribute name, attribute type, the measurement unit, and a brief description. 
+The forest cover type is the classification problem. 
+The order of this listing corresponds to the order of numerals along the rows of the database.
+Elevation is a quantitative variable measured in meters, describing elevation in meters. 
+Aspect is a quantitative variable measured in azimuth, describing aspect in degrees azimuth. 
+Slope is a quantitative variable measured in degrees, describing slope in degrees. 
+Horizontal Distance to Hydrology is a quantitative variable measured in meters, describing horizontal distance to nearest surface water features. 
+Vertical Distance to Hydrology is a quantitative variable measured in meters, describing vertical distance to nearest surface water features. 
+Horizontal Distance to Roadways is a quantitative variable measured in meters, describing horizontal distance to nearest roadway. 
+Hillshade at nine am is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at nine am, summer solstice. 
+Hillshade at Noon is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at noon, summer solstice. 
+Hillshade at three pm is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at three pm, summer solstice. 
+Horizontal Distance to Fire Points is a quantitative variable measured in meters, describing horizontal distance to nearest wildfire ignition points. 
+Wilderness Area is a qualitative variable measured in absence or presence, describing wilderness area designation. 
+Soil Type is a qualitative variable measured in absence or presence, describing soil type designation. 
+Cover Type is an integer variable measured from one to seven, describing forest cover type designation.
+
+Class labels include Spruce Fir, Lodgepole Pine, Ponderosa Pine, Cottonwood Willow, Aspen, Douglas Fir, and Krummholz.
+
+Keywords: forest cover type, cartographic variables, wilderness areas, soil types, tree species, ecological processes, forest management practices.

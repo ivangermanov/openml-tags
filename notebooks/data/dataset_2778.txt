@@ -1,0 +1,24 @@
+**FOREX aud/jpy Day Close**
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Day
+
+This dataset consists of historical price data of the FOREX Australian Dollar/Japanese Yen exchange rate from Dukascopy. Each instance represents one candlestick of one trading day. The entire dataset spans from January to December and excludes weekends, as the FOREX market is not active on these days. The timestamp feature is based on the Europe/Amsterdam time zone.
+
+The dataset contains the following attributes:
+
+* Timestamp: The time of the current data point, specified in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of the given time interval.
+* Bid High: The highest bid price recorded during the specified time interval.
+* Bid Low: The lowest bid price observed during the given time interval.
+* Bid Close: The bid price at the end of the specified time interval.
+* Bid Volume: The frequency of changes in the bid price within the given time interval.
+* Ask Open: The ask price at the start of the given time interval.
+* Ask High: The highest ask price recorded during the specified time interval.
+* Ask Low: The lowest ask price observed during the given time interval.
+* Ask Close: The ask price at the end of the specified time interval.
+* Ask Volume: The frequency of changes in the ask price within the given time interval.
+* Class: This attribute indicates whether the average price will increase or decrease during the subsequent trading interval.
+
+The class attribute is determined by comparing the mean close price of the current interval to the mean close price of the following interval. If the mean close price increases, the class attribute is true; otherwise, it is false.
+
+Keywords: FOREX, Australian Dollar, Japanese Yen, exchange rate, historical data, candlestick, trading day, time zone, bid price, ask price, volume, class attribute.

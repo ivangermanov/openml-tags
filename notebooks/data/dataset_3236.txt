@@ -1,0 +1,29 @@
+The Letter Dataset is an earth science-related collection of data focused on partial label ranking and transportation features. The primary objective of this dataset is to identify each of a large number of black-and-white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet.
+
+The character images were based on twenty different fonts, and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, including statistical moments and edge counts, which were then scaled to fit into a range of integer values from zero through fifteen.
+
+We typically train on the first sixteen thousand items and then use the resulting model to predict the letter category for the remaining four thousand. 
+
+This dataset does not have any missing values. 
+
+The variables included in this dataset are:
+
+One: Lettr - the capital letter, which has twenty-six values ranging from A to Z
+Two: X-Box - the horizontal position of the box 
+Three: Y-Box - the vertical position of the box 
+Four: Width - the width of the box 
+Five: High - the height of the box 
+Six: On Pix - the total number of on pixels 
+Seven: X-Bar - the mean x of on pixels in the box 
+Eight: Y-Bar - the mean y of on pixels in the box 
+Nine: X Two Bar - the mean x variance 
+Ten: Y Two Bar - the mean y variance 
+Eleven: XY-Bar - the mean x y correlation 
+Twelve: X Two Y Br - the mean of x times x times y 
+Thirteen: XY Two Br - the mean of x times y times y 
+Fourteen: X Ege - the mean edge count from left to right 
+Fifteen: X Eg Vy - the correlation of x ege with y 
+Sixteen: Y Ege - the mean edge count from bottom to top 
+Seventeen: Y Eg Vx - the correlation of y ege with x
+
+Keywords: letter recognition, image classification, font distortion, pixel displays, statistical moments, edge counts

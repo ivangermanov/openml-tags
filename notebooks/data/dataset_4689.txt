@@ -1,0 +1,16 @@
+Nomao Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Strategize True 
+
+Tags: Mathematics, Statistics 
+
+Subsampling of the dataset Nomao with seed equal to four arguments number rows maximum equal to two thousand arguments number columns maximum equal to one hundred arguments number classes maximum equal to ten arguments no strategize equal to true generated with the following source code:
+
+The function subsample takes in several parameters including a seed, number rows maximum, number columns maximum, number classes maximum, and a boolean indicating whether to strategize or not. It returns a dataset.
+
+First, it initializes a random number generator using the given seed. Then, it gets the unique classes from the target variable y. If there are more classes than the specified maximum, it selects a subset of classes based on their frequency distribution. The indices corresponding to these selected classes are then used to filter the data.
+
+Next, if the number of columns exceeds the specified maximum, it uniformly samples the columns. Otherwise, it uses all the columns. Finally, if the number of rows exceeds the specified maximum, it uses stratified sampling to select a subset of the data. The resulting dataset is then returned.
+
+Features: 
+(Very long list of feature names skipped due to readability issues)
+
+Keywords: subsampling, dataset, mathematics, statistics, strategize, random number generator, frequency distribution

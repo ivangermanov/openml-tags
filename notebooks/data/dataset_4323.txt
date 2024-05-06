@@ -1,0 +1,45 @@
+Credit Seed One Name Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+
+Tags: Subsampling of the dataset Credit with Seed equals One arguments number rows equals Two Thousand arguments number cols equals One Hundred arguments number classes equals Ten arguments no stratify equals False.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows max equals Two Thousand, number cols max equals One Hundred, number classes max equals Ten, stratified equals True):
+random number generator equals numpy random default random generator seed
+features equals self features
+target equals self target
+
+Uniformly sample classes equals target unique
+if length of classes greater than number classes max:
+value counts equals target value counts
+selected classes equals random number generator choice classes size equals number classes max replace equals False probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present equals target index target is in selected classes
+features equals features iloc select indices
+target equals target iloc select indices
+
+Uniformly sample columns if required
+if length of features columns greater than number cols max:
+column indexes equals random number generator choice list range length of features columns size equals number cols max replace equals False
+sorted column indexes equals sorted column indexes
+selected columns equals list features columns sorted column indexes
+features equals features selected columns
+else:
+sorted column indexes equals list range length of features columns
+if length of features greater than number rows max:
+Stratify accordingly target name equals target name
+data equals pandas concat features and target axis equals columns
+subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals True random state equals seed
+features equals subset drop target name axis equals columns
+target equals subset target name
+categorical mask equals list self categorical mask for i in sorted column indexes
+columns equals list features columns
+return Dataset 
+dataset equals self dataset 
+features equals features 
+target equals target 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: Revolving Utilization of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, Number of Times Ninety Days Late, Number Real Estate Loans or Lines, Number of Dependents, Serious Delinquency in Two Years.
+
+Keywords: subsampling, dataset, stratification, feature selection, class sampling, column sampling, row sampling.

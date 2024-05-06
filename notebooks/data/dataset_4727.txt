@@ -1,0 +1,13 @@
+Subsampling of the dataset Riccardo with seed equal to two arguments number rows maximum equal to two thousand arguments number columns maximum equal to one hundred arguments number classes maximum equal to ten arguments no stratify equal to true generated with the following source code.
+
+This function takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It then uses numpy's default random generator to select classes, columns, and rows uniformly at random while ensuring that the specified maximum values are not exceeded. 
+
+If there are more unique classes than the specified maximum, it selects the most common ones based on their frequency in the dataset. Similarly, if there are more columns than the specified maximum, it selects a subset of them randomly. 
+
+Finally, if there are more rows than the specified maximum, it uses scikit-learn's train test split function to select a stratified subset of the data while respecting the specified maximum number of rows.
+
+The resulting dataset consists of the Riccardo dataset, the sampled features, the target variable, a mask indicating which features are categorical, and the column names.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: subsampling, dataset, stratification, machine learning, mathematics

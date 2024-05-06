@@ -1,0 +1,46 @@
+Name: DNA Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Strategize True 
+
+Tags: Life Science, Medicine 
+
+Subsampling of the dataset DNA with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no strategize equals true generated with the following source code:
+
+def subsample(self, seed: int, number_rows_max: int = two thousand, number_columns_max: int = one hundred, number_classes_max: int = ten, strategized: bool = true) -> Dataset:
+random_number_generator = numpy random default random generator seed
+x equals self x
+y equals self y 
+uniformly sample classes equals y unique 
+if length of classes is greater than number classes max:
+value counts equals y value counts 
+selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts over sum of value counts 
+select the indices where one of these classes is present 
+indexes equals y index y is in selected classes 
+x equals x iloc indexes 
+y equals y iloc indexes 
+uniformly sample columns if required 
+if length of x columns is greater than number columns max:
+column indexes equals random number generator choice list range length of x columns size equals number columns max replace equals false 
+sorted column indexes equals sorted column indexes 
+selected columns equals list x columns sorted column indexes 
+x equals x selected columns 
+else:
+sorted column indexes equals list range length of x columns 
+if length of x is greater than number rows max:
+strategize accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals sklearn model selection train test split data test size equals number rows max strategize equals data target name shuffle equals true random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+we need to convert categorical columns to string for open ml 
+categorical mask equals self categorical mask for i in sorted column indexes 
+columns equals list x columns 
+return dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: 
+
+Keywords: DNA, subsampling, dataset, life science, medicine, machine learning.

@@ -1,0 +1,17 @@
+Amazon Employee Access Seed Zero 
+
+Machine Learning, Mathematics 
+
+This is a subsampled version of the Amazon Employee Access dataset, generated using a specific set of parameters. 
+
+The subsampling process involved uniformly selecting classes from the dataset until the maximum number of desired classes was reached. This was done to ensure that the resulting subsample would have a good representation of all classes present in the original dataset.
+
+Once the desired classes were selected, the indices where these classes were present were identified, and the corresponding rows were extracted from the original dataset.
+
+Next, the process involved uniformly sampling columns from the resulting dataframe until the maximum number of desired columns was reached. This was done to reduce the dimensionality of the dataset while still maintaining a good representation of the underlying relationships between variables.
+
+Finally, the process involved sampling rows from the resulting dataframe until the maximum number of desired rows was reached. This was done using a stratified approach to ensure that the resulting subsample would still maintain a good balance of all classes present in the original dataset.
+
+The resulting subsample consists of the following features: Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, and Role Code.
+
+Keywords: Machine Learning, Mathematics, Data Subsampling, Class Selection, Dimensionality Reduction, Stratified Sampling

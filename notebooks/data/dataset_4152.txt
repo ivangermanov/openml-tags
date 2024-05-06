@@ -1,0 +1,24 @@
+Cover Type Dataset 
+
+Tags: Computer Systems, Mathematics 
+
+This dataset is part of the Tabular Data Benchmark and has been transformed accordingly. It falls under the classification on numerical features category.
+
+The dataset originates from the LibSVM repository, where it can be found under the name covtype.binary. 
+
+For proper citation, please reference the original work: A Parallel Mixture of SVMs for Very Large Scale Problems by authors, published in Neural Computation.
+
+To create this dataset, the following steps were taken:
+
+Load the Cover Type dataset without scaling. 
+Normalize each column according to specific rules:
+    Constant features with only one value were set to zero and removed due to sparsity.
+    Binary features with two values had their most frequent value set to zero, and the other to one.
+    Multinary or real features with more than two values were divided by their standard deviation.
+Duplicate lines were removed to ensure data integrity.
+
+The dataset underwent transformation from multiclass to binary class. 
+
+Features include various numerical columns. 
+
+Keywords: Tabular Data, Classification, Numerical Features, LibSVM, Benchmark, Machine Learning.

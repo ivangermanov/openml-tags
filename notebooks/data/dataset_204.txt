@@ -1,0 +1,11 @@
+LIBRAS Movement Database 
+
+The LIBRAS Movement Database contains fifteen classes of hand movement types in LIBRAS, the official Brazilian Sign Language, each consisting of twenty-four instances. A hand movement is represented as a two-dimensional curve performed by the hand over a period of time. These curves were obtained from videos of hand movements performed by four individuals during two separate sessions, with each video corresponding to a single hand movement lasting approximately seven seconds.
+
+In the video preprocessing stage, time normalization was carried out by selecting forty-five frames from each video, following a uniform distribution. For each frame, the centroid pixels of the segmented objects, namely the hand, were identified, composing the discrete version of the curve with forty-five points. All curves were then normalized within a unitary space.
+
+To prepare these movements for analysis by algorithms, a mapping operation was conducted, where each curve was mapped into a ninety-feature representation, capturing the coordinates of movement. Each instance represents forty-five points in a two-dimensional space, which can be plotted in an ordered sequence to illustrate the path of the movement.
+
+The dataset does not contain missing values. Subdatasets are also available to facilitate comparisons of results.
+
+Keywords: LIBRAS, Brazilian Sign Language, Hand Movement, Video Preprocessing, Time Normalization, Curve Mapping.

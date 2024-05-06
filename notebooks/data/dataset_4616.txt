@@ -1,0 +1,11 @@
+The dataset kr-vs-kp has been subsampled using a seed value of one, resulting in a new dataset with a maximum of two thousand rows, one hundred columns, and ten classes. This subsampling process involved uniformly sampling classes from the original dataset, selecting the indices where one of the chosen classes is present, and then uniformly sampling columns if necessary.
+
+If the number of unique classes exceeded ten, a random selection of ten classes was made based on their frequency in the original dataset. The indices corresponding to these chosen classes were then used to select the relevant data points. Similarly, if the number of columns exceeded one hundred, a random selection of one hundred columns was made.
+
+The subsampling process also involved stratification to ensure that the new dataset maintained a balanced distribution of classes. This was achieved by concatenating the feature data with the target variable, performing a stratified split, and then selecting the desired number of rows.
+
+The resulting dataset contains a range of demographic and economic features, including variables related to chess positions, piece movements, and board layouts. These features are represented as a combination of numerical and categorical variables, with some variables requiring conversion to string format for OpenML compatibility.
+
+Features include board layout characteristics, piece positions, and movement patterns. 
+
+Keywords: demographics, economics, chess, subsampling, stratification, dataset.

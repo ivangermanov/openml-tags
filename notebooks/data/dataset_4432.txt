@@ -1,0 +1,17 @@
+Subsampling of the dataset Compass with specified parameters generated a new dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset. 
+
+The function used for subsampling took several arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+
+In this case, the seed value was two, and the maximum number of rows, columns, and classes were two thousand, one hundred, and ten, respectively. Additionally, the stratify argument was set to true.
+
+The subsampling process first sampled classes uniformly. If the number of unique classes exceeded the maximum allowed, a random selection of classes was made based on their frequency in the dataset. 
+
+Next, the function sampled columns uniformly. If the number of columns exceeded the maximum allowed, a random selection of columns was made.
+
+Finally, the function sampled rows based on the specified number of rows. If the stratify argument was true, the sampling was done in a stratified manner.
+
+The resulting dataset consisted of the sampled data, along with metadata including the original dataset name, column names, and a mask indicating which columns were categorical.
+
+Features included sex, age, race, juvenile felony count, juvenile misdemeanor count, prior counts, days between screening arrest, and COMPAS scores.
+
+Keywords: subsampling, dataset, stratification, machine learning, statistics

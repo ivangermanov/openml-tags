@@ -1,0 +1,48 @@
+Electricity Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Economics, Education 
+
+Subsampling of the dataset Electricity with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true 
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified) -> Dataset:
+random number generator equals numpy random default random generator seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than number classes maximum:
+value counts equals y value counts 
+selected classes equals random number generator choice classes size number classes maximum replace false probability value counts divided by sum value counts 
+Select the indices where one of these classes is present index equals y index y is in selected classes 
+x equals x iloc index 
+y equals y iloc index 
+
+Uniformly sample columns if required 
+if length of x columns is greater than number columns maximum:
+column indexes equals random number generator choice list range length x columns size number columns maximum replace false 
+sorted column indexes equals sorted column indexes 
+selected columns equals list x columns sorted column indexes 
+x equals x selected columns 
+else:
+sorted column indexes equals list range length x columns 
+
+if length of x is greater than number rows maximum:
+stratify accordingly target name equals y name 
+data equals pandas concat x and y axis columns 
+_, subset equals train test split data test size number rows maximum stratify data target name shuffle true random state seed 
+x equals subset drop target name axis columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals self categorical mask i for i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+technically this is not the same but it's where it was derived from dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: Electricity, Subsampling, Dataset, Stratify, Economics, Education

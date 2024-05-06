@@ -1,0 +1,17 @@
+Subsampling of the dataset MFEAT Factors with Seed Three
+
+This dataset is a subsample of the MFEAT Factors dataset, generated using a specific set of arguments and parameters. The subsampling process involves uniformly selecting classes and columns from the original dataset.
+
+The arguments used to generate this dataset include a seed value of three, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the stratification option is set to true, which means that the sampling is done in a way that preserves the class distribution of the original dataset.
+
+The subsampling process first selects a subset of classes from the original dataset using uniform sampling. If the number of unique classes exceeds the maximum allowed, the selection is done based on the frequency of each class. Once the classes are selected, the corresponding rows are extracted from the original dataset.
+
+Next, the process uniformly samples columns from the resulting dataset. If the number of columns exceeds the maximum allowed, a random subset of columns is selected. Finally, if the number of rows still exceeds the maximum allowed, stratified sampling is used to select a subset of rows that preserve the class distribution.
+
+The resulting dataset consists of the selected rows and columns, along with a categorical mask indicating which columns contain categorical variables. The dataset also includes information about its origin, including the original dataset name and the arguments used to generate it.
+
+Features: 
+
+att One, att Five, att Six, att Eight, att Eleven, att Twelve,... 
+
+Keywords: MFEAT Factors, subsampling, stratification, uniform sampling, categorical variables.

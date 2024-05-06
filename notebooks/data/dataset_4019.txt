@@ -1,0 +1,9 @@
+The Poker dataset belongs to the classification on numerical features benchmark. This dataset was retrieved from the libSVM site and underwent several transformations. First, the test and training datasets were combined into a single dataset without scaling. Then, the classes were relabeled so that class zero represents the positive class, while classes one through nine represent the negative class.
+
+To normalize the dataset, each column was treated differently depending on the number of unique values it contained. Columns with only one unique value, also known as constant features, were set to zero and subsequently removed due to sparsity. Columns with two unique values, referred to as binary features, had their most frequent value set to zero, while the remaining value was set to one. Finally, columns with more than two unique values, including multinary and real features, were divided by their standard deviation.
+
+It is important to note that the Poker dataset exhibits mild redundancy, with approximately point two percent of duplicate data points within each file, including both the training and testing files. These duplicate points have not been removed from the dataset.
+
+Features include various attributes related to the game of Poker.
+
+Keywords: Poker, classification, numerical features, libSVM, normalization, redundancy, dataset transformation.

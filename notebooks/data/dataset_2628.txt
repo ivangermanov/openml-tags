@@ -1,0 +1,28 @@
+**FOREX usd/dkk-day-High**
+
+Tags: Finance, Forex, Forex Day, Forex High, Machine Learning, Medicine
+
+**Source:** Dukascopy Historical Data Feed
+
+This dataset contains historical price data of the Forex USD/DKK from Dukascopy. Each instance represents one candlestick of one day, with no weekend data included since Forex markets are not traded on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The dataset spans a specific period, providing a comprehensive overview of market trends and patterns. The class attribute is defined as the direction of the mean of the high bid and high ask prices of the following day, relative to the mean high bid and high ask prices of the current minute. In other words, the class attribute is true when the mean high price is expected to increase the following day, and false when the mean high price is expected to decrease or remain stable.
+
+Please note that this task is purely hypothetical and intended for scientific purposes only. Realistic trading strategies should be based on predictions of close attributes, which are also available.
+
+**Data Attributes:**
+
+* Timestamp: The time of the current data point in Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The frequency of changes in the bid price within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The frequency of changes in the ask price within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Historical Data, Candlestick, Machine Learning, Trading Strategy, Hypothetical Task.

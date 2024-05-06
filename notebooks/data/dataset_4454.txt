@@ -1,0 +1,13 @@
+Amazon Commerce Reviews dataset has been subsampled with a seed of four, resulting in two thousand rows, one hundred columns, and ten classes. This subsampling was done using a specific source code that involves uniformly sampling classes, columns, and rows.
+
+The original dataset had more than ten classes, so a uniform sampling of classes was performed. The selected classes were chosen based on their frequency in the original dataset. Then, the indices where one of these classes is present were selected, and the corresponding rows were kept.
+
+Next, the columns were uniformly sampled. If there were more than one hundred columns, a random selection of column indices was made, and the corresponding columns were kept.
+
+Finally, the rows were uniformly sampled. If there were more than two thousand rows, a stratified sampling was performed to ensure that the class distribution is maintained.
+
+The resulting dataset consists of the subsampled data, along with information about the categorical mask and column names.
+
+Features include various variables such as product ratings, reviews, and other relevant attributes.
+
+Keywords: Amazon Commerce Reviews, dataset, subsampling, machine learning, mathematics.

@@ -1,0 +1,19 @@
+Klaverjas2018 
+Tags: Economics, Machine Learning 
+
+Computing and Predicting Winning Hands in the Trick-Taking Game of Klaverjas 
+
+Klaverjas is a prime example of the Jack-Nine card games, which are characterized as trick-taking games where the Jack and Nine of the trump suit hold the highest ranking, and the Tens and Aces of other suits are the most valuable cards within those respective suits. This captivating game is played by four players, divided into two teams. 
+
+This comprehensive dataset encompasses the game-theoretic value of nearly one million unique configurations, assuming perfect play by both competing teams. For simplicity, it is presumed that Player Zero initiates the game, and the Diamond suit serves as the trump. Each configuration originates from a distinct equivalence class.
+
+Although the game-theoretic value – expressed in terms of the score difference between the two competing teams – inherently constitutes a regression problem, in our attached publication, we opted to view this as a classification problem. Our primary objective was to accurately predict whether the starting team would ultimately garner more points than their opponents. This dichotomy is succinctly represented in the 'outcome' field.
+
+The various 'card' attributes – comprising a total of thirty-two fields – define which specific player possesses a particular card, considering each player holds precisely eight cards. Conversely, the 'leaf count' and 'time real' fields serve as metadata resulting from the αβ-search procedure, and thus should not be utilized as predictors.
+
+The meticulous generation of this dataset required an astonishing amount of computational resources, exceeding two CPU years, coupled with countless human hours dedicated to verifying the programs and ensuring the accuracy of the results.
+
+Features: 
+index, card attributes, leaf count, time real, outcome
+
+Keywords: Klaverjas, Jack-Nine card games, trick-taking games, game-theoretic value, classification problem, αβ-search procedure, metadata, computational resources.

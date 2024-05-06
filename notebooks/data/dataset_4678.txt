@@ -1,0 +1,60 @@
+Name: Connect Four Seed Three 
+
+Tags: Subsampling of the dataset Connect Four with seed equals three 
+
+Generated with the following source code:
+
+This function allows us to subsample our dataset. It takes several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether we want to stratify our sampling.
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified)
+
+We first set up our random number generator using the provided seed.
+
+rng = numpy random default random generator seed 
+
+Then we get our feature data and our target variable.
+
+x = self x 
+y = self y 
+
+Next, we select which classes we will include in our subsample. If we have more classes than our maximum, we choose the ones to include randomly based on their frequency in our data.
+
+classes = y unique 
+if length of classes is greater than maximum number of classes 
+    value counts = y value counts 
+    selected classes = rng choice classes size maximum number of classes replace false probability value counts over sum value counts 
+
+Now we get the indices of the data points that belong to our selected classes.
+
+idxs = y index y is in selected classes 
+
+We use these indices to select the relevant data points from our feature data and target variable.
+
+x = x iloc idxs 
+y = y iloc idxs 
+
+If we have more columns than our maximum, we randomly select which ones to include.
+
+if length of x columns is greater than maximum number of columns 
+    column indexes = rng choice list range length of x columns size maximum number of columns replace false 
+    sorted column indexes = sorted column indexes 
+    selected columns = list x columns sorted column indexes 
+else 
+    sorted column indexes = list range length of x columns 
+
+Now we actually select the columns we want.
+
+x = x selected columns 
+
+Finally, if we have more rows than our maximum, we use stratified sampling to select which data points to include.
+
+if length of x is greater than maximum number of rows 
+    target name = y name 
+    data = pandas concat x y axis columns 
+    _, subset = sklearn model selection train test split data test size maximum number of rows stratify data target name shuffle true random state seed 
+    x = subset drop target name axis columns 
+    y = subset target name 
+
+Features: (omitted)
+
+Keywords: subsampling, dataset, stratified sampling, random sampling, machine learning

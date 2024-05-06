@@ -1,0 +1,28 @@
+Name: Forex GBP USD Day Close
+
+Tags: Finance, Forex, Forex Close, Forex Day, Health, Medicine
+
+**Source**: Dukascopy Historical Data Feed 
+
+**Data Description**
+
+This dataset contains historical price data of the Forex GBP/USD currency pair obtained from Dukascopy. Each instance, represented by a single row, corresponds to a daily candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as Forex markets are closed on those days. The timestamp feature is based on the Europe/Amsterdam timezone.
+
+The class attribute represents the direction of the mean close price of the following day relative to the mean close price of the current day. Specifically, the class attribute is set to true if the mean close price is expected to increase the following day, and false if the mean close price is expected to decrease or remain unchanged.
+
+**Attributes**
+
+* Timestamp: The time of the current data point, based on the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of the daily time interval.
+* Bid High: The highest bid price recorded during the daily time interval.
+* Bid Low: The lowest bid price recorded during the daily time interval.
+* Bid Close: The bid price at the end of the daily time interval.
+* Bid Volume: The number of times the bid price changed within the daily time interval.
+* Ask Open: The ask price at the start of the daily time interval.
+* Ask High: The highest ask price recorded during the daily time interval.
+* Ask Low: The lowest ask price recorded during the daily time interval.
+* Ask Close: The ask price at the end of the daily time interval.
+* Ask Volume: The number of times the ask price changed within the daily time interval.
+* Class: A binary indicator of whether the mean close price is expected to increase or decrease/decrease the following day.
+
+Keywords: Forex, GBP USD, Currency Pair, Historical Data, Candlestick, Time Series, Finance, Trading

@@ -1,0 +1,27 @@
+**FOREX chfsgd Hour Close**
+
+Tags: Finance, Forex, Forex Close, Forex Hour, Health, Medicine
+
+**Source:** Dukascopy Historical Data Feed, https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description:**
+This dataset consists of historical price data for the Forex CHF/SGD currency pair obtained from Dukascopy. Each row represents a single hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as Forex markets do not operate on those days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute signifies the directional movement of the mean close price over the subsequent hour relative to the mean close price of the current hour. Specifically, the class attribute takes on a true value if the mean close price increases over the next hour and a false value if it decreases or remains stagnant.
+
+**Attributes:**
+
+* **Timestamp:** The date and time of each data point, specified in the Europe/Amsterdam time zone.
+* **Bid Open:** The initial bid price at the commencement of the hourly interval.
+* **Bid High:** The peak bid price recorded throughout the hourly interval.
+* **Bid Low:** The lowest bid price observed during the hourly interval.
+* **Bid Close:** The bid price at the conclusion of the hourly interval.
+* **Bid Volume:** The frequency of changes in the bid price within the hourly interval.
+* **Ask Open:** The initial ask price at the commencement of the hourly interval.
+* **Ask High:** The peak ask price recorded throughout the hourly interval.
+* **Ask Low:** The lowest ask price observed during the hourly interval.
+* **Ask Close:** The ask price at the conclusion of the hourly interval.
+* **Ask Volume:** The frequency of changes in the ask price within the hourly interval.
+* **Class:** A binary indicator signifying whether the mean close price will increase or decrease over the subsequent hour.
+
+Keywords: Forex, Currency Pair, Historical Data, Candlestick, Time Series, Finance, Trading

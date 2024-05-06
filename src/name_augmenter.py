@@ -3,7 +3,7 @@ import pandas as pd
 
 class NameAugmenter:
     """
-    A class to create or update a custom column in a DataFrame by appending the .name attribute to the description.
+    A class to create or update a custom column in a DataFrame by prepending the .name attribute to the description.
     """
 
     def __init__(self, description_column: str, name_column: str, augmented_column: str) -> None:
@@ -21,7 +21,7 @@ class NameAugmenter:
 
     def __call__(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Augments a DataFrame by updating a custom column with the .name attribute appended to the existing or
+        Augments a DataFrame by updating a custom column with the .name attribute prepended to the existing or
         original description.
 
         :param df: A pandas DataFrame.

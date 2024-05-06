@@ -1,0 +1,17 @@
+Subsampling of the dataset Christine with Seed equals Zero arguments Number Rows equals Two Thousand arguments Number Columns equals One Hundred arguments Number Classes equals Ten arguments No Stratify equals False.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It returns a new dataset.
+
+The function first gets the unique classes from the target variable and selects a specified number of them randomly based on their frequency. Then, it gets the indices where these classes are present and subsets the data using these indices.
+
+Next, the function uniformly samples the columns if required. It does this by randomly selecting a specified number of column indices and then getting the corresponding columns.
+
+After that, the function checks if the length of the data exceeds the maximum number of rows. If so, it uses stratified sampling to get a subset of the data with the specified number of rows.
+
+Finally, the function converts any categorical columns to strings and returns the new dataset along with its metadata.
+
+Features: 
+
+Keywords: subsampling, dataset, stratification, sampling, classification

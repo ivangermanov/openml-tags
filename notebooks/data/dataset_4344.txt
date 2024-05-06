@@ -1,0 +1,11 @@
+Name: Electricity Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Electricity with Seed equals Zero arguments N Rows equals Two Thousand arguments N Cols equals One Hundred arguments N Classes equals Ten arguments No Stratify equals False 
+
+Generated with the following source code:
+
+The function subsample takes five parameters - seed, number rows maximum, number columns maximum, number classes maximum, and stratified - and returns a dataset. It uses NumPy's default random generator to ensure reproducibility. The function first selects a specified number of unique classes from the dataset, then filters the data to only include rows corresponding to these classes. Next, it randomly samples columns from the dataset until it reaches the specified maximum number of columns. Finally, it applies stratified sampling to reduce the number of rows while maintaining the distribution of classes.
+
+Features: Date, Period, NSW Price, NSW Demand, VIC Price, VIC Demand, Transfer, Class
+
+Keywords: Electricity, Sub-sampling, Stratified Sampling, Random Generator, Dataset

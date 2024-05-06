@@ -1,0 +1,13 @@
+Machine Learning and Statistics Subsampling of the Blood Transfusion Service Center dataset with a specified seed value. The subsample function generates a new dataset by uniformly sampling classes, columns, and rows from the original dataset.
+
+The function first selects a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the function chooses the most frequent classes based on their probability distribution. It then selects the corresponding indices where one of these classes is present.
+
+Next, the function uniformly samples columns from the feature set. If the number of columns exceeds the maximum allowed, it randomly selects the specified number of columns.
+
+Finally, the function stratifies the dataset according to the target variable and uniformly samples a specified number of rows. This ensures that the resulting dataset maintains the same class distribution as the original dataset.
+
+The resulting dataset contains the sampled features and target variable, along with a mask indicating which columns contain categorical variables.
+
+Features: (Skipped due to unreadability)
+
+Keywords: Subsampling, Machine Learning, Statistics, Blood Transfusion Service Center, Stratification

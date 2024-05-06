@@ -1,0 +1,48 @@
+Subsampling of the dataset CMC with seed equal to one arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number_rows_maximum, number_columns_maximum, number_classes_maximum, stratified):
+    random_number_generator = numpy.random.default_rng(seed)
+    x = self.x
+    y = self.y
+
+    Uniformly sample classes equals y unique. If length of classes is greater than number classes maximum:
+        value_counts = y value counts
+        selected_classes = random_number_generator choice classes, size equals number classes maximum, replace equals false, probability equals value_counts divided by sum of value_counts.
+        
+        Select the indices where one of these classes is present equals y index y is in selected classes.
+        x = x iloc select indices
+        y = y iloc select indices
+        
+    Uniformly sample columns if required:
+        if length of x columns is greater than number columns maximum:
+            column_indices = random_number_generator choice list range length of x columns, size equals number columns maximum, replace equals false
+            sorted_column_indices = sorted column indices
+            selected_columns = list x columns sorted column indices
+            x = x selected columns
+        else:
+            sorted_column_indices = list range length of x columns
+            
+    if length of x is greater than number rows maximum:
+        Stratify accordingly target name equals y name
+        data = pandas concat x, y, axis equals columns
+        _, subset = train test split data, test size equals number rows maximum, stratify equals data target name, shuffle equals true, random state equals seed
+        x = subset drop target name, axis equals columns
+        y = subset target name
+    
+    We need to convert categorical columns to string for OpenML:
+        categorical mask equals self categorical mask for i in sorted column indices
+        columns equals list x columns
+        return Dataset 
+            dataset equals self dataset
+            x equals x
+            y equals y
+            categorical mask equals categorical mask
+            columns equals columns
+
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Wife's Now Working, Husband's Occupation, Standard of Living Index, Media Exposure, Contraceptive Method Used
+
+Tags: Chemistry, Machine Learning
+
+Keywords: Subsampling, Dataset, Chemistry, Machine Learning, Stratification, Random Sampling

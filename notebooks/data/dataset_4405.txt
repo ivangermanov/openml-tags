@@ -1,0 +1,15 @@
+Electricity Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Computer Systems, Machine Learning 
+
+The subsampling of the dataset Electricity with a seed equal to zero has been performed. The arguments used for subsampling include the maximum number of rows, which is two thousand, the maximum number of columns, which is one hundred, and the maximum number of classes, which is ten. Additionally, the argument no stratify has been set to false.
+
+The subsample function generates a new dataset by uniformly sampling classes and columns from the original dataset. It starts by selecting classes using their value counts as probabilities. Then, it selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, it uniformly samples columns if required. It does this by choosing column indices randomly and sorting them to ensure consistency. Finally, it selects the corresponding columns from the data.
+
+If the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to reduce the number of rows. This ensures that the class distribution remains consistent.
+
+The generated dataset is then returned with the specified features, including Date, Day, Period, and Class.
+
+Keywords: Electricity, Subsampling, Stratify, Computer Systems, Machine Learning

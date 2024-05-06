@@ -1,0 +1,26 @@
+**FOREX eur/cad - Hour - Close**
+
+Tags: Chemistry, Finance, Forex, Forex Close, Forex Hour, Machine Learning
+
+This dataset consists of historical price data of the Forex EUR/CAD currency pair obtained from Dukascopy Historical Data Feed. Each instance, represented by a row, corresponds to a single candlestick of one-hour duration.
+
+The dataset spans a specific period, excluding weekends when the Forex market is closed. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute is defined as the direction of the mean close price of the subsequent hour relative to the mean close price of the current hour. In other words, the class attribute takes on a value of true if the mean close price is expected to increase in the following hour and false if it is expected to decrease or remain stagnant.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, specified in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the beginning of the given time interval.
+* **Bid High**: The highest bid price recorded during the specified time interval.
+* **Bid Low**: The lowest bid price observed during the given time interval.
+* **Bid Close**: The bid price at the end of the specified time interval.
+* **Bid Volume**: The frequency of changes in the bid price within the given time interval.
+* **Ask Open**: The ask price at the beginning of the given time interval.
+* **Ask High**: The highest ask price recorded during the specified time interval.
+* **Ask Low**: The lowest ask price observed during the given time interval.
+* **Ask Close**: The ask price at the end of the specified time interval.
+* **Ask Volume**: The frequency of changes in the ask price within the given time interval.
+* **Class**: A binary indicator of whether the average close price will rise or fall in the subsequent hour.
+
+Keywords: Forex, EUR/CAD, Candlestick, Time Series, Machine Learning, Currency Pair, Financial Markets.

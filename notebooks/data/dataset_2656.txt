@@ -1,0 +1,26 @@
+**FOREX EurCad Minute Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Statistics, Transportation
+
+**Source:** Dukascopy Historical Data Feed
+
+This dataset comprises historical price data of the Forex EurCad pair from Dukascopy. Each instance represents a one-minute candlestick, and the entire dataset spans from January to December, excluding weekends when the Forex market is closed.
+
+The timestamp feature is set to the Europe/Amsterdam timezone. The class attribute indicates the direction of the mean close price compared to the subsequent minute, where true signifies an increase in the mean close price and false denotes a decrease or stagnation.
+
+**Attributes:**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the commencement of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price observed during this time interval.
+* **Bid Close**: The bid price at the termination of this time interval.
+* **Bid Volume**: The frequency of changes in the bid price within this time interval.
+* **Ask Open**: The ask price at the initiation of this time interval.
+* **Ask High**: The highest ask price registered during this time interval.
+* **Ask Low**: The lowest ask price noted during this time interval.
+* **Ask Close**: The ask price at the conclusion of this time interval.
+* **Ask Volume**: The number of changes in the ask price within this time interval.
+* **Class**: An indicator of whether the average price will rise during the subsequent interval.
+
+Keywords: Forex, EurCad, Candlestick, Finance, Market Data, Time Series Analysis

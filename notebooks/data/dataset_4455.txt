@@ -1,0 +1,46 @@
+Australian Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Australian with seed equal to zero arguments number rows max equal to two thousand arguments number columns max equal to one hundred arguments number classes max equal to ten arguments no stratify equals true generated with the following source code:
+
+def subsample(self, seed, number rows max equals two thousand, number columns max equals one hundred, number classes max equals ten, stratified equals true):
+random number generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis 
+x equals self dot x 
+y equals self dot y 
+
+Uniformly sample classes equals y dot unique 
+if length of classes is greater than number classes max:
+value counts equals y dot value counts 
+selected classes equals random number generator dot choice open parenthesis classes comma size equals number classes max comma replace equals false comma probability equals value counts slash sum of value counts close parenthesis 
+
+Select the indices where one of these classes is present index equals y dot index open parenthesis y dot is in open parenthesis selected classes close parenthesis close parenthesis 
+x equals x dot iloc open parenthesis index close parenthesis 
+y equals y dot iloc open parenthesis index close parenthesis 
+
+Uniformly sample columns if required 
+if length of x dot columns is greater than number columns max:
+column indexes equals random number generator dot choice open parenthesis list open parenthesis range open parenthesis length of x dot columns close parenthesis close parenthesis comma size equals number columns max comma replace equals false close parenthesis 
+sorted column indexes equals sorted open parenthesis column indexes close parenthesis 
+selected columns equals list open parenthesis x dot columns open parenthesis sorted column indexes close parenthesis close parenthesis 
+x equals x open parenthesis selected columns close parenthesis 
+else:
+sorted column indexes equals list open parenthesis range open parenthesis length of x dot columns close parenthesis close parenthesis 
+
+if length of x is greater than number rows max:
+stratify accordingly target name equals y dot name 
+data equals pandas dot concat open parenthesis open parenthesis x comma y close parenthesis comma axis equals quote columns quote close parenthesis 
+underscore comma subset equals sklearn model selection dot train test split open parenthesis data comma test size equals number rows max comma stratify equals data open parenthesis target name close parenthesis comma shuffle equals true comma random state equals seed close parenthesis 
+x equals subset dot drop open parenthesis target name comma axis equals quote columns quote close parenthesis 
+y equals subset open parenthesis target name close parenthesis 
+
+We need to convert categorical columns to string for open machine learning categorical mask equals open parenthesis self dot categorical mask open parenthesis i close parenthesis for i in sorted column indexes close parenthesis 
+columns equals list open parenthesis x dot columns close parenthesis 
+return Dataset open parenthesis 
+technically this is not the same but it is where it was derived from dataset equals self dot dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns close parenthesis 
+
+Keywords: Subsampling, Machine Learning, Stratification, Random Sampling, Feature Selection

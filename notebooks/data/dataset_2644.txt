@@ -1,0 +1,32 @@
+FOREX cad/chf - Hour - High
+
+Tags: Demographics, Finance, Forex, Forex High, Forex Hour, Geography
+
+Source: Dukascopy Historical Data Feed 
+
+Data Description:
+
+This is the historical price data of the Forex Canadian Dollar versus Swiss Franc from Dukascopy. One instance, or row, represents one candlestick of one hour. The entire dataset encompasses the data range from January first to December thirteenth and does not include weekends, since the Forex market is not traded on weekends.
+
+The time zone of the feature Timestamp is Europe Amsterdam. 
+
+The class attribute denotes the direction of the mean of the High Bid and the High Ask of the subsequent hour, relative to the High Bid and High Ask mean of the current minute. In other words, the class attribute is true when the mean high price is ascending the following hour, and the class attribute is false when the mean high price is descending or remains stagnant the following hour.
+
+Note that this is a hypothetical task, intended for scientific purposes exclusively. Realistic trade strategies can solely be applied to predictions on Close attributes, which are also available.
+
+Attributes:
+
+Timestamp: The time of the current data point in the Europe Amsterdam time zone.
+Bid Open: The bid price at the commencement of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the conclusion of this time interval.
+Bid Volume: The frequency of changes in the bid price within this time interval.
+Ask Open: The ask price at the initiation of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the termination of this time interval.
+Ask Volume: The frequency of changes in the ask price within this time interval.
+Class: Whether the average price will ascend during the subsequent interval.
+
+Keywords: Forex, Canadian Dollar, Swiss Franc, Historical Data, Candlestick, Time Zone, Class Attribute, Hypothetical Task.

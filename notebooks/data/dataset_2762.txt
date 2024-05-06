@@ -1,0 +1,26 @@
+FOREX chf sgd day Close 
+
+Tags: Finance, Forex, Forex Close, Forex Day, Machine Learning, Transportation 
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+Data Description 
+This dataset contains historical price data for the Forex Swiss Franc-Singapore Dollar exchange rate, sourced from Dukascopy. Each row represents a single daily candlestick. The dataset spans from January first to December thirteenth and excludes weekends, as Forex markets do not operate on Saturdays and Sundays. Timezone for the feature Timestamp is set to Europe/Amsterdam.
+
+The class attribute represents the directional change of the mean close bid and close ask prices between consecutive days. Specifically, it signifies whether the mean close price will increase (True) or decrease/stay the same (False) in the following day.
+
+Attributes:
+Timestamp: The timestamp for each data point, set to Europe/Amsterdam timezone.
+Open Bid Price: The bid price at the beginning of the daily time interval.
+Highest Bid Price: The peak bid price recorded throughout the daily time interval.
+Lowest Bid Price: The minimum bid price reached during the daily time interval.
+Closing Bid Price: The bid price at the conclusion of the daily time interval.
+Bid Volume: The frequency of bid price changes within the daily time interval.
+Open Ask Price: The ask price at the commencement of the daily time interval.
+Highest Ask Price: The maximum ask price attained throughout the daily time interval.
+Lowest Ask Price: The minimum ask price reached during the daily time interval.
+Closing Ask Price: The ask price at the conclusion of the daily time interval.
+Ask Volume: The frequency of ask price changes within the daily time interval.
+Directional Change: Whether the average close price will rise in the subsequent day.
+
+Keywords: Forex, Swiss Franc, Singapore Dollar, Exchange Rate, Candlestick, Machine Learning, Finance

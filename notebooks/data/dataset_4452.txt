@@ -1,0 +1,9 @@
+Amazon Commerce Reviews Seed Two Dataset
+
+This dataset is a subsampling of the Amazon Commerce Reviews dataset. The subsampling was done using a specific set of parameters, including a seed value of two, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The stratification option was set to true.
+
+The subsampling process involved several steps. First, the unique classes in the dataset were identified and uniformly sampled to select the desired number of classes. Then, the indices where one of these classes was present were selected, and the corresponding data points were retained. Next, the columns were uniformly sampled to select the desired number of columns. Finally, the dataset was stratified according to the target variable, and the desired number of data points was randomly sampled while maintaining the class distribution.
+
+The resulting dataset consists of a subset of the original features, which include product reviews and ratings. The dataset is useful for training machine learning models to predict product ratings based on review text.
+
+Keywords: Amazon Commerce Reviews, dataset, machine learning, product ratings, review text, stratification, subsampling.

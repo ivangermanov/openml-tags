@@ -1,0 +1,50 @@
+Machine Learning, Mathematics 
+
+Subsampling of the dataset Credit G with Seed equals Zero 
+
+Generated with the following source code:
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified sampling) -> Dataset:
+random number generator = numpy random default random generator(seed)
+features = self features 
+target variable = self target variable 
+
+Uniformly sample classes equals target variable unique values 
+if length of unique classes is greater than maximum number of classes:
+value counts equals target variable value counts 
+selected classes equals random number generator choice(unique classes, size equals maximum number of classes, replace equals False, probability equals value counts divided by sum of value counts)
+Select the indices where one of these classes is present equals target variable index where target variable is in selected classes 
+features equals features iloc select indices 
+target variable equals target variable iloc select indices 
+
+Uniformly sample columns if required 
+if length of features columns is greater than maximum number of columns:
+column indices equals random number generator choice(list of range of length of features columns), size equals maximum number of columns, replace equals False)
+sorted column indices equals sorted column indices 
+selected columns equals list of features columns at sorted column indices 
+features equals features at selected columns 
+else:
+sorted column indices equals list of range of length of features columns 
+
+if length of features is greater than maximum number of rows:
+Stratify accordingly 
+target name equals target variable name 
+data equals pandas concatenate(features, target variable, axis equals columns)
+_, subset equals train test split(data, test size equals maximum number of rows, stratify equals data at target name, shuffle equals True, random state equals seed)
+features equals subset drop target name along columns 
+target variable equals subset at target name 
+
+We need to convert categorical columns to string for Open ML 
+categorical mask equals list of self categorical mask at i for i in sorted column indices 
+columns equals list of features columns 
+return Dataset(
+Technically this is not the same but it's where it was derived from 
+dataset equals self dataset,
+features equals features, 
+target variable equals target variable, 
+categorical mask equals categorical mask, 
+columns equals columns)
+
+Features: Checking Status, Duration, Credit History, Purpose, Credit Amount, Savings Status, Employment, Installment Commitment, Personal Status, Other Parties, Residence Since, Property Magnitude, Age, Other Payment Plans, Housing, Existing Credits, Job, Number Dependents, Own Telephone, Foreign Worker, Class
+
+Keywords: Subsampling, Dataset, Machine Learning, Stratified Sampling, Random Generator, Feature Selection

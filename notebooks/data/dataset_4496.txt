@@ -1,0 +1,17 @@
+Name: Jasmine Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Jasmine with seed equals one arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals False
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+
+This function first uniformly samples classes from the dataset, ensuring that the total number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and updates the input data accordingly.
+
+Next, it uniformly samples columns if required, selecting a specified number of columns randomly without replacement. The function also ensures that the total number of rows does not exceed the specified maximum, using stratification if necessary.
+
+Finally, the function returns a new dataset with the subsampled data, along with relevant metadata such as categorical masks and column names.
+
+Features: This dataset contains a wide range of variables, including those related to various aspects of customer behavior, product characteristics, and market trends.
+
+Keywords: Subsampling, Stratification, Dataset, Columns, Rows, Classes

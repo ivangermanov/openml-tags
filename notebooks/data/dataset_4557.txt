@@ -1,0 +1,19 @@
+Machine Learning, Mathematics
+
+Subsampling of the dataset Micro Mass with seed equal to two arguments number of rows maximum equals two thousand arguments number of columns maximum equals one hundred arguments number of classes maximum equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses numpy's random default random generator to generate random indices for sampling.
+
+The function first samples the classes uniformly. If there are more classes than the maximum allowed, it selects the required number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
+
+Next, the function samples the columns uniformly if required. If there are more columns than the maximum allowed, it selects the required number of columns randomly.
+
+If the resulting dataset has more rows than the maximum allowed, it stratifies the dataset accordingly using train test split from scikit learn.
+
+Finally, the function converts categorical columns to strings for OpenML compatibility and returns the resulting dataset.
+
+Features: 
+
+Keywords: Subsampling, Machine Learning, Dataset, Stratification, Random Sampling

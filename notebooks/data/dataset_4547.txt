@@ -1,0 +1,13 @@
+The Arcene dataset has been subsampled using a specific set of parameters. This subsampling process involves uniformly selecting classes and columns from the original dataset. The resulting dataset has been generated using the following source code.
+
+The subsample function takes in several parameters, including a seed value, the maximum number of rows, columns, and classes. It also includes an option for stratified sampling. The function begins by uniformly sampling classes from the original dataset, ensuring that the selected classes are representative of the overall distribution. If the number of unique classes exceeds the specified maximum, the function selects a subset of classes based on their frequency in the dataset.
+
+Next, the function uniformly samples columns from the dataset, ensuring that the selected columns are representative of the overall feature space. If the number of columns exceeds the specified maximum, the function selects a subset of columns using random sampling.
+
+Finally, the function applies stratified sampling to the resulting dataset, ensuring that the class distribution is maintained. The resulting dataset consists of the sampled features, target variable, and categorical mask.
+
+The Arcene dataset is a popular benchmark for machine learning algorithms, particularly those involving high-dimensional data. By subsampling this dataset, researchers can evaluate the performance of their algorithms on a smaller, yet still representative, subset of the data.
+
+Tags: Computer Systems, Machine Learning
+
+Keywords: Arcene dataset, subsampling, stratified sampling, high-dimensional data, machine learning algorithms.

@@ -1,0 +1,15 @@
+Pendigits Dataset Information 
+
+We created a digit database by collecting numerous samples from multiple writers. The samples written by a significant portion of the writers were utilized for training, cross-validation, and writer-dependent testing, whereas the remaining samples were reserved for writer-independent testing. This database is also accessible in the UNIPEN format.
+
+We employed a Wacom PL-one hundred V pressure-sensitive tablet equipped with an integrated LCD display and a cordless stylus. The input and display areas are situated in the same location. Connected to the serial port of an Intel-based personal computer, it enabled us to gather handwriting specimens. The tablet transmitted x and y tablet coordinates, along with pressure level values of the pen, at regular time intervals. 
+
+The writers were requested to inscribe multiple digits in arbitrary order within boxes of a specified resolution. Participants were monitored solely during the initial entry screens. Each screen featured multiple boxes with the digits to be inscribed displayed above. Individuals were instructed to inscribe exclusively within these designated areas. Should they commit an error or express dissatisfaction with their handwriting, they were directed to erase the contents of a box utilizing an on-screen button. 
+
+In our investigation, we exclusively utilized x and y coordinate information, disregarding the stylus pressure level values. Initially, we applied normalization to render our representation invariant to translations and scale distortions. The unprocessed data captured from the tablet consisted of integer values ranging from zero to a specified maximum value. The novel coordinates were adjusted such that the coordinate exhibiting the maximum range varied between zero and one hundred. Typically, the x-axis remained within this range, given that most characters are taller than they are wide.
+
+To train and evaluate our classifiers, we required representing digits as constant-length feature vectors. A widely accepted technique yielding favorable outcomes involves resampling the (x, y) points. Temporal resampling (points evenly spaced in time) or spatial resampling (points evenly spaced in arc length) may be employed in this context. Unprocessed point data was already evenly spaced in time; however, the distance separating them was variable. Prior research demonstrated that spatial resampling to obtain a constant number of evenly spaced points on the trajectory yielded significantly improved performance, primarily due to enhanced alignment between points. 
+
+Our resampling algorithm utilized straightforward linear interpolation between adjacent points. The resampled digits were represented as a sequence of points (x, y), evenly spaced in arc length, contrasting with the input sequence, which was evenly spaced in time. Consequently, the input vector size was twice the number of points resampled.
+
+Keywords: handwriting recognition, digit classification, pressure-sensitive tablet, spatial resampling, feature extraction.

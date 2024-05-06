@@ -1,0 +1,29 @@
+National Hockey League Interviews
+
+Tags: Machine Learning, Statistics
+
+This dataset was scraped from asap sports dot com using a custom-built web scraping code designed to handle variations in the website's formatting. However, certain web pages with significant formatting differences were excluded from the scraping process. During manual inspection of randomly selected rows, no major errors were detected in the transcripts, although it is impossible to guarantee complete accuracy.
+
+The dataset consists of several columns, including:
+
+Unique Identifier: a distinct row identifier
+
+Team One and Team Two: the two teams participating in the Stanley Cup Final, with no inherent significance attached to the order of their listing
+
+Date: the date of the interview
+
+Name: the individual being interviewed
+
+Job: categorized into three roles - player, coach, and other, depending on the individual's position at the time of the interview; those who do not fit into the first two categories are classified as 'other', comprising mainly general managers, league officials, and commentators; while some assignments were automated based on titles in the transcripts, others required manual intervention; however, it is possible that names appearing only once may contain errors
+
+Text: the actual interview transcript, excluding interviewer questions, with responses separated by periods and devoid of punctuation; a potential source of error lies in the possibility of failing to exclude interviewer questions
+
+In related projects, this dataset was utilized to develop a recurrent neural network-based Facebook Messenger chatbot capable of responding to messages in a manner reminiscent of a hockey player; specifically, when provided with the beginning of an interview response, the bot generates a five-sentence continuation of that response
+
+This dataset offers a rich platform for exploring various research questions, such as:
+
+Do speech patterns of National Hockey League coaches and players exhibit distinct differences?
+Are coaches generally more optimistic or team-oriented in their responses compared to players?
+How have hockey interview responses evolved over time?
+
+Keywords: National Hockey League, Interviews, Machine Learning, Statistics, Chatbot, Speech Patterns

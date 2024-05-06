@@ -1,0 +1,9 @@
+The Electricity dataset is a widely used collection of data described by various researchers and analyzed extensively. This data was collected from the Australian New South Wales Electricity Market, where prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done.
+
+The dataset contains instances dated from May to December. Each example of the dataset refers to a period of thirty minutes, resulting in forty-eight instances for each time period of one day. Each example on the dataset has several fields, including the day of the week, the timestamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. The class label identifies the change of the price in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends.
+
+Attribute information includes the date, which was normalized; the day of the week; the period, which represents the time of the measurement in half-hour intervals over twenty-four hours and was also normalized; the New South Wales electricity price, normalized; the New South Wales electricity demand, normalized; the Victoria electricity price, normalized; the Victoria electricity demand, normalized; and the scheduled electricity transfer between both states, normalized.
+
+The dataset is relevant for learning with drift detection andsplice-2 comparative evaluation.
+
+Keywords: Electricity Market, Demand and Supply, Price Trends, Drift Detection, Comparative Evaluation.

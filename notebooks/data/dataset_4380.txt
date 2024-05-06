@@ -1,0 +1,57 @@
+Name: Phoneme Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Earth Science, Life Science 
+
+Subsampling of the dataset Phoneme with Seed equals One arguments N Rows equals Two Thousand arguments N Columns equals One Hundred arguments N Classes equals Ten arguments No Stratify equals False 
+
+Generated with the following source code:
+
+def subsample(self, seed, number of rows maximum equals Two Thousand, number of columns maximum equals One Hundred, number of classes maximum equals Ten, stratified equals True):
+
+random number generator equals numpy random default random generator seed 
+
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+
+if length of classes is greater than number of classes maximum:
+value counts equals y value counts 
+selected classes equals random number generator choice classes size equals number of classes maximum replace equals False probability equals value counts divided by sum of value counts 
+
+Select the indices where one of these classes is present 
+indices equals y index y is in selected classes 
+x equals x iloc indices 
+y equals y iloc indices 
+
+Uniformly sample columns if required 
+if length of x columns is greater than number of columns maximum:
+column indices equals random number generator choice list range length of x columns size equals number of columns maximum replace equals False 
+sorted column indices equals sorted column indices 
+selected columns equals list x columns sorted column indices 
+x equals x selected columns 
+else:
+sorted column indices equals list range length of x columns 
+
+if length of x is greater than number of rows maximum:
+Stratify accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals train test split data test size equals number of rows maximum stratify equals data target name shuffle equals True random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals self categorical mask for i in sorted column indices 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: (skipped due to being unreadable)
+
+Keywords: Phoneme, Subsampling, Earth Science, Life Science, Stratify, OpenML

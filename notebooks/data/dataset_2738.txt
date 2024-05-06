@@ -1,0 +1,24 @@
+Name: Forex Aud Usd Minute Close 
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Minute, Transportation 
+
+Data Description 
+This dataset contains the historical price data of the Forex Aud/Usd pair from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans a specific period of time and does not include weekends, as the Forex market is not operational on these days. The timestamp feature is based on the Europe Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean of the close bid and close ask prices of the subsequent minute, relative to the mean of the close bid and close ask prices of the current minute. In other words, the class attribute is true when the mean close price increases in the subsequent minute, and false when the mean close price decreases or remains the same.
+
+Attributes 
+The timestamp represents the time of the current data point in the Europe Amsterdam timezone. 
+The bid open refers to the bid price at the start of the time interval. 
+The bid high denotes the highest bid price recorded during the time interval. 
+The bid low indicates the lowest bid price observed during the time interval. 
+The bid close represents the bid price at the end of the time interval. 
+The bid volume measures the number of times the bid price changed within the time interval. 
+The ask open refers to the ask price at the start of the time interval. 
+The ask high denotes the highest ask price recorded during the time interval. 
+The ask low indicates the lowest ask price observed during the time interval. 
+The ask close represents the ask price at the end of the time interval. 
+The ask volume measures the number of times the ask price changed within the time interval. 
+The class determines whether the average price will increase during the next interval.
+
+Keywords: Forex, Aud/Usd, Candlestick, Time Series, Financial Markets, Trading

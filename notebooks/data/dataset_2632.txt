@@ -1,0 +1,30 @@
+**FOREX Eur/Usd Minute Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Meteorology
+
+This dataset contains historical price data of the Forex Eur/Usd pair obtained from Dukascopy Historical Data Feed.
+
+The dataset consists of one-minute candlesticks, with each instance representing one candlestick. The data ranges from January to December, excluding weekends when the Forex market is closed.
+
+The timestamp feature is in the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close price relative to the previous minute. Specifically, it is true if the mean close price increases in the next minute and false if it decreases or remains the same.
+
+**Data Description**
+
+The attributes in this dataset are:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of the time interval.
+* Bid High: The highest bid price during the time interval.
+* Bid Low: The lowest bid price during the time interval.
+* Bid Close: The bid price at the end of the time interval.
+* Bid Volume: The number of times the bid price changed within the time interval.
+* Ask Open: The ask price at the start of the time interval.
+* Ask High: The highest ask price during the time interval.
+* Ask Low: The lowest ask price during the time interval.
+* Ask Close: The ask price at the end of the time interval.
+* Ask Volume: The number of times the ask price changed within the time interval.
+* Class: Whether the average price will increase during the next time interval.
+
+Keywords: Forex, Eur/Usd, Candlestick, Time Series, Finance, Trading.

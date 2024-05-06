@@ -1,0 +1,17 @@
+Subsampling of the dataset Riccardo with the following parameters: 
+
+The function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to use stratification. 
+
+First, it uniformly samples the classes. If there are more than the specified maximum number of classes, it selects the desired number using a probability proportional to their frequency in the dataset. It then selects the indices where one of these classes is present.
+
+Next, it uniformly samples the columns if required. If there are more columns than the specified maximum, it randomly chooses the desired number.
+
+Finally, it samples the rows accordingly. If there are more rows than the specified maximum, it uses stratified sampling based on the target variable.
+
+The resulting dataset contains only the selected columns and rows, and the categorical mask is adjusted accordingly.
+
+Tags: Machine Learning, Mathematics
+
+Features: various numerical variables
+
+Keywords: subsampling, dataset, machine learning, stratification, sampling

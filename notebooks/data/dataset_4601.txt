@@ -1,0 +1,48 @@
+Subsampling of the dataset KC One with seed equals one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified) -> Dataset:
+random number generator equals numpy dot random dot default random generator opened in parenthesis seed closed parenthesis
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y dot unique
+if length of classes is greater than number classes maximum:
+value counts equals y dot value counts
+selected classes equals random number generator dot choice opened in parenthesis classes comma size equals number classes maximum comma replace equals false comma probability equals value counts divided by sum of value counts closed parenthesis
+Select the indices where one of these classes is present index equals y dot index opened in parenthesis y dot is in opened in parenthesis classes closed parenthesis closed parenthesis
+x equals x dot iloc opened in parenthesis index closed parenthesis
+y equals y dot iloc opened in parenthesis index closed parenthesis
+
+Uniformly sample columns if required
+if length of x dot columns is greater than number columns maximum:
+column indexes equals random number generator dot choice opened in parenthesis list opened in parenthesis range opened in parenthesis length of x dot columns closed parenthesis closed parenthesis comma size equals number columns maximum comma replace equals false closed parenthesis
+sorted column indexes equals sorted opened in parenthesis column indexes closed parenthesis
+selected columns equals list opened in parenthesis x dot columns opened in parenthesis sorted column indexes closed parenthesis closed parenthesis
+x equals x opened in parenthesis selected columns closed parenthesis
+else:
+sorted column indexes equals list opened in parenthesis range opened in parenthesis length of x dot columns closed parenthesis closed parenthesis
+
+if length of x is greater than number rows maximum:
+Stratify accordingly
+target name equals y dot name
+data equals pandas dot concat opened in parenthesis x comma y comma axis equals quote columns closed quote closed parenthesis
+_, subset equals sklearn model selection dot train test split opened in parenthesis data comma test size equals number rows maximum comma stratify equals data opened in parenthesis target name closed parenthesis comma shuffle equals true comma random state equals seed closed parenthesis
+x equals subset dot drop opened in parenthesis target name comma axis equals quote columns closed quote closed parenthesis
+y equals subset opened in parenthesis target name closed parenthesis
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals opened in parenthesis self dot categorical mask opened in parenthesis i for i in sorted column indexes closed parenthesis
+columns equals list opened in parenthesis x dot columns closed parenthesis
+return Dataset opened in parenthesis 
+dataset equals self dot dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+closed parenthesis
+
+Features: location, variable g, ev g, iv g, n, v, l, d, i, e, b, t, location of Code, location of Comment, location of Blank, location of Code and Comment, unique Operator, unique Operand, total Operator, total Operand, branch Count, defects.
+
+Keywords: subsampling, dataset, stratification, sampling, machine learning, OpenML.

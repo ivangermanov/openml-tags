@@ -1,0 +1,15 @@
+The Steel Plates Fault dataset has been subsampled using a specific set of parameters. This process involved generating a random number generator with a specified seed value, which ensures reproducibility of the results.
+
+First, the unique classes in the target variable were identified, and then a subset of these classes was randomly selected based on their frequency distribution. This step helps maintain the class balance in the subsampled dataset.
+
+Next, the columns of the dataset were uniformly sampled to reduce their number to a maximum specified limit. The selected columns were chosen randomly without replacement, ensuring that all columns had an equal chance of being selected.
+
+After column sampling, the rows of the dataset were also uniformly sampled to reduce their number to a maximum specified limit. To maintain class balance, stratified sampling was employed, which ensures that the proportion of each class in the subsampled dataset is similar to that in the original dataset.
+
+The resulting subsampled dataset has been transformed into a machine learning compatible format, with categorical variables converted to string type.
+
+Tags: Machine Learning, Mathematics
+
+Features: Various variables related to steel plates fault detection
+
+Keywords: subsampling, stratified sampling, class balance, machine learning, dataset transformation

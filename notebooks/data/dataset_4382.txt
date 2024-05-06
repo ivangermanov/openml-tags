@@ -1,0 +1,19 @@
+Name: Phoneme Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Meteorology, Transportation 
+
+Sub sampling of the dataset Phoneme with a seed of three, generated using the following source code:
+
+The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It returns a dataset.
+
+First, it sets up a random number generator using the given seed. Then, it gets the input features and output labels from the original dataset.
+
+Next, it selects a subset of classes uniformly at random. If there are more classes than the maximum allowed, it chooses the most frequent ones proportionally to their frequency in the dataset. It then filters out the instances that do not belong to these selected classes.
+
+Afterwards, it selects a subset of columns uniformly at random. If there are more columns than the maximum allowed, it picks a random subset of them. Otherwise, it keeps all the columns.
+
+Finally, it reduces the number of instances to the maximum allowed while maintaining the class balance using stratified sampling. The resulting dataset consists of the filtered instances, the corresponding labels, and information about which columns are categorical.
+
+Features: (Skipped due to unreadability)
+
+Keywords: Phoneme dataset, subsampling, stratification, feature selection, class balance

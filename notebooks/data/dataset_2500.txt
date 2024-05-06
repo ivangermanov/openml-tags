@@ -1,0 +1,9 @@
+GISette is a handwritten digit recognition problem where the goal is to differentiate between the highly confusable digits four and nine. This dataset is one of five datasets from the NIPS two thousand three feature selection challenge. The digits have been normalized in terms of size and centered within a fixed-size image of twenty-eight by twenty-eight dimensions. 
+
+The original data underwent modification for the purpose of the feature selection challenge. Specifically, pixels were randomly sampled from the middle top portion of the feature containing the necessary information to distinguish between four and nine, and higher-order features were created as products of these pixels to shift the problem into a higher-dimensional feature space. Furthermore, a number of distractor features referred to as probes having no predictive power were added. The order of the features and patterns was randomized.
+
+Preprocessing involved making the data set available at UCI. Since the labels of the test set were unavailable, the validation set was used as the test set instead. The training data underwent feature-wise scaling to range from negative one to one. Subsequently, the test data underwent scaling based on the same scaling factors applied to the training data.
+
+The difference between this version and the previous one lies in the fact that the target feature has been converted to a binary format, which is how it should be.
+
+Keywords: GISette, handwritten digit recognition, feature selection challenge, NIPS, normalization, preprocessing, validation set.

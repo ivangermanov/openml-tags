@@ -1,0 +1,49 @@
+Name: Jasmine Seed Four Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Jasmine with seed equals four arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true 
+
+Generated with the following source code:
+
+def sub sample self seed number rows max equals two thousand number cols max equals one hundred number classes max equals ten stratified equals true 
+rng equals numpy point random default random generator seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than number classes max 
+vcs equals y value counts 
+selected classes equals rng choice classes size equals number classes max replace equals false probability equals vcs divided by sum of vcs 
+Select the indices where one of these classes is present 
+idxs equals y index y is in selected classes 
+x equals x iloc idxs 
+y equals y iloc idxs 
+
+Uniformly sample columns if required 
+if length of x columns is greater than number cols max 
+columns idxs equals rng choice list range length of x columns size equals number cols max replace equals false 
+sorted column idxs equals sorted columns idxs 
+selected columns equals list x columns sorted column idxs 
+x equals x selected columns 
+else 
+sorted column idxs equals list range length of x columns 
+
+if length of x is greater than number rows max 
+Stratify accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for open ml 
+categorical mask equals self categorical mask i for i in sorted column idxs 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: sub sampling, dataset, stratify, numpy, pandas, open ml.

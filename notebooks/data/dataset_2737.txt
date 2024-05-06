@@ -1,0 +1,26 @@
+**FOREX usd/dkk Hourly High**
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour, Health
+
+This dataset contains the historical price data of the Forex USD/DKK exchange rate from Dukascopy. Each row represents a single hourly candlestick, covering a period from January first to December thirteenth. Since the Forex market is not active on weekends, these days are excluded from the dataset.
+
+The timestamp feature is set to the Europe/Amsterdam time zone. The class attribute represents the direction of the mean high price of the following hour relative to the current hour. Specifically, if the mean high price is expected to increase in the next hour, the class attribute is labeled as true; otherwise, it is false if the price remains stagnant or decreases.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading strategies, which require predictions based on close attributes.
+
+**Attributes**
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone
+* Bid Open: The initial bid price at the start of each hourly interval
+* Bid High: The highest bid price reached during each hourly interval
+* Bid Low: The lowest bid price recorded during each hourly interval
+* Bid Close: The final bid price at the end of each hourly interval
+* Bid Volume: The number of times the bid price changed within each hourly interval
+* Ask Open: The initial ask price at the start of each hourly interval
+* Ask High: The highest ask price reached during each hourly interval
+* Ask Low: The lowest ask price recorded during each hourly interval
+* Ask Close: The final ask price at the end of each hourly interval
+* Ask Volume: The number of times the ask price changed within each hourly interval
+* Class: The direction of the mean high price in the next hour
+
+Keywords: Forex, USD/DKK, Candlestick, Historical Data, Financial Market, Trading Strategy

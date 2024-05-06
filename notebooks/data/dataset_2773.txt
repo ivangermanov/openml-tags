@@ -1,0 +1,29 @@
+**FOREX EUR/CHF Minute High**
+
+Tags: Economics, Finance, Forex, Forex High, Forex Minute, Social Media
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description:**
+This dataset comprises historical price data of the FOREX EUR/CHF currency pair, sourced from Dukascopy. Each instance represents a one-minute candlestick, with the entire dataset spanning from January first to December thirteenth. As the FOREX market is closed on weekends, these days are excluded from the data. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute denotes the directional movement of the mean high price between consecutive minutes. Specifically, it indicates whether the mean high price is increasing (True) or decreasing/staying the same (False) in the subsequent minute.
+
+**Note:** This dataset is intended for scientific purposes only and should not be used for actual trading strategies, which should rely on predictions based on close attributes instead.
+
+**Attributes:**
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the beginning of the one-minute interval.
+* Bid High: The highest bid price recorded during this interval.
+* Bid Low: The lowest bid price recorded during this interval.
+* Bid Close: The bid price at the end of the one-minute interval.
+* Bid Volume: The frequency of changes in the bid price within this interval.
+* Ask Open: The ask price at the beginning of the one-minute interval.
+* Ask High: The highest ask price recorded during this interval.
+* Ask Low: The lowest ask price recorded during this interval.
+* Ask Close: The ask price at the end of the one-minute interval.
+* Ask Volume: The frequency of changes in the ask price within this interval.
+* Class: Directional indicator of the mean high price movement between consecutive minutes.
+
+Keywords: FOREX, EUR/CHF, currency pair, historical data, candlestick, timezone, directional movement, mean high price, scientific purposes.

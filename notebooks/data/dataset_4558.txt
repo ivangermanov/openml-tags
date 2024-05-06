@@ -1,0 +1,13 @@
+Micro Mass Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Health, Machine Learning 
+
+Subsampling of the dataset Micro Mass with seed equal to three arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+
+The function subsample takes in parameters such as seed, number rows maximum, number columns maximum, number classes maximum, and whether or not to stratify, and returns a dataset. It first gets the unique values in the target variable y, and if there are more than the specified maximum number of classes, it selects the top classes based on their frequency. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, if the number of columns exceeds the specified maximum, it uniformly samples the columns. If the total number of rows exceeds the specified maximum, it uses stratified sampling to select a subset of the data. The function also converts categorical columns to strings for OpenML compatibility.
+
+Features:... 
+
+Keywords: Micro Mass, Subsampling, Machine Learning, Health, Stratify, Dataset.

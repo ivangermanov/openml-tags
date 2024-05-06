@@ -1,0 +1,15 @@
+Name: Nomao Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Computer Systems, Statistics 
+
+Subsampling of the dataset Nomao with seed equal to one arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals True. 
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It uses NumPy's default random generator to uniformly sample classes, columns, and rows based on the given parameters. The function first selects the unique classes present in the dataset and then randomly chooses the specified number of classes while considering their distribution in the dataset. It then selects the indices where one of these chosen classes is present and updates the input data and labels accordingly.
+
+The function further reduces the number of columns by uniformly sampling them. If the number of rows exceeds the specified maximum, it uses stratified splitting to ensure the class distribution is maintained. Finally, it converts categorical columns to strings and returns a new dataset object with the updated input data, labels, categorical mask, and column names.
+
+Features: Various numerical features.
+
+Keywords: Subsampling, Stratification, Random Sampling, Data Reduction, Class Distribution.

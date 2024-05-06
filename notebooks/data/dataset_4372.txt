@@ -1,0 +1,15 @@
+Magic Telescope 
+
+Subsampling of the dataset Magic Telescope with a specific set of parameters. The goal is to reduce the number of samples and features while maintaining the overall characteristics of the dataset.
+
+The generated dataset has been created using a Python function that takes into account several arguments, including the maximum number of rows, columns, and classes, as well as a flag to indicate whether stratification should be used.
+
+The function first selects a subset of classes using uniform sampling, ensuring that all classes have an equal chance of being chosen. It then selects the corresponding samples based on the chosen classes. Next, it uniformly samples the columns, selecting a specified number of columns without replacement.
+
+If the resulting dataset still has more rows than desired, the function uses stratified splitting to further reduce the number of samples. This ensures that the resulting dataset maintains a similar distribution of classes as the original dataset.
+
+The resulting dataset consists of demographic and statistical features, which are essential for understanding various aspects of the population. The dataset includes features related to length, width, size, concentration, asymmetry, and other characteristics.
+
+Tags: Demographics, Statistics
+
+Keywords: dataset, subsampling, stratification, demographics, statistics

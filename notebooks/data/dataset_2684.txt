@@ -1,0 +1,26 @@
+**FOREX aud/cad - Hourly High**
+
+Tags: Economics, Education, Finance, Forex, Forex High, Forex Hour
+
+**Data Description**
+This dataset contains the historical price data of the Foreign Exchange aud/cad pair from Dukascopy. Each instance, represented by a single row, corresponds to one hourly candlestick. The entire dataset spans from January to December, excluding weekends when the Foreign Exchange market is closed.
+
+The timestamp feature is presented in the Europe/Amsterdam time zone. The class attribute indicates the direction of the mean high price in the subsequent hour relative to the mean high price of the current hour. Specifically, the class attribute is true if the mean high price is expected to increase in the next hour, and false otherwise.
+
+**Note:** This dataset is intended for scientific purposes only, and realistic trading strategies should be based on predictions of the Close attributes.
+
+**Attributes**
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the beginning of the hourly interval.
+* Bid High: The highest bid price recorded during the hourly interval.
+* Bid Low: The lowest bid price recorded during the hourly interval.
+* Bid Close: The bid price at the end of the hourly interval.
+* Bid Volume: The number of times the bid price changed within the hourly interval.
+* Ask Open: The ask price at the beginning of the hourly interval.
+* Ask High: The highest ask price recorded during the hourly interval.
+* Ask Low: The lowest ask price recorded during the hourly interval.
+* Ask Close: The ask price at the end of the hourly interval.
+* Ask Volume: The number of times the ask price changed within the hourly interval.
+* Class: Indicates whether the average high price will increase in the next hourly interval.
+
+Keywords: Forex, aud/cad, Foreign Exchange, Candlestick, Time Series, Financial Markets, Trading Strategies

@@ -1,0 +1,16 @@
+Wine Quality White Seed Four Rows Two Thousand NClasses Ten NCols One Hundred Stratify True 
+
+Tags: Life Science, Statistics 
+
+This dataset is a subsampling of the Wine Quality White dataset with a seed of four. The arguments used for subsampling include the number of rows maximum, which is two thousand, number of columns maximum, which is one hundred, and number of classes maximum, which is ten. Additionally, the stratification argument is set to true.
+
+The subsampling process involves uniformly sampling classes from the unique values in the target variable. If there are more classes than the specified maximum, the algorithm selects the specified number of classes using a probability proportional to their frequency. The indices corresponding to these classes are then used to select the relevant samples.
+
+Next, the algorithm uniformly samples columns if the number of columns exceeds the specified maximum. It does this by randomly selecting the specified number of column indices without replacement. The corresponding column names are then used to select the relevant columns.
+
+Finally, if the number of samples exceeds the specified maximum, the algorithm uses stratified splitting to select the specified number of samples. This ensures that the class distribution in the subsampled dataset remains similar to the original dataset.
+
+Features: 
+Class
+
+Keywords: Wine Quality, Subsampling, Stratification, Statistics, Life Science

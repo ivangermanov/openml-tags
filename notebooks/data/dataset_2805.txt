@@ -1,0 +1,29 @@
+**FOREX NZD/USD - Hourly High**
+
+Tags: Demographics, Finance, Forex, Forex High, Forex Hour, Health
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+This dataset contains the historical price data of the New Zealand Dollar versus United States Dollar (NZD/USD) Forex pair from Dukascopy. Each instance, or row, represents a single candlestick of one hour duration. The entire dataset spans a specific date range, excluding weekends, as the Forex market is not active during these periods. All timestamps are recorded in the Europe/Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean of the High Bid and High Ask prices of the subsequent hour, relative to the mean High Bid and High Ask prices of the current minute. Specifically, the class attribute is set to True when the mean High price is expected to increase in the following hour, and False when the mean High price is expected to decrease or remain unchanged.
+
+**Note that this is a hypothetical task, intended for scientific purposes only. Realistic trade strategies should only be applied to predictions based on Close attributes (also available).**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, recorded in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price achieved during this time interval.
+* **Bid Low**: The lowest bid price reached during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price achieved during this time interval.
+* **Ask Low**: The lowest ask price reached during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price is expected to increase during the next interval.
+
+Keywords: Forex, NZD/USD, Candlestick, Time Series, Financial Market, Prediction, Trading Strategy.

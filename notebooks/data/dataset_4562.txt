@@ -1,0 +1,13 @@
+The Eucalyptus Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True dataset is a subsampled version of the original Eucalyptus dataset, specifically designed for educational purposes in the realm of statistics.
+
+This dataset was generated using a Python function that implements a stratified sampling approach to ensure representativeness and balance. The function takes into account various parameters, including the number of rows, columns, and classes, as well as whether to stratify the sample or not.
+
+In this particular instance, the function was called with a seed value of two, which ensures reproducibility of the results. The maximum number of rows was set to two thousand, while the maximum number of columns was set to one hundred. Furthermore, the number of classes was capped at ten.
+
+To achieve this, the function first uniformly samples classes from the original dataset, taking into account their frequencies. It then selects the corresponding indices where these classes are present and subsets the data accordingly. Next, it uniformly samples columns if necessary, ensuring that the resulting dataset meets the specified column limit.
+
+Finally, the function applies stratification according to the target variable, which is essential for maintaining the integrity of the data distribution. This involves concatenating the predictor variables with the target variable, performing a stratified split, and then separating the predictor variables from the target variable once again.
+
+The resulting dataset comprises a range of features, including Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, Plantation Management Corporation Number, Diameter at Breast Height, Height, Survival, Vigor, Insect Resistance, Stem Form, Crown Form, Branch Form, and Utility.
+
+Keywords: Eucalyptus dataset, stratified sampling, statistical education, dataset subsampling, Python programming.

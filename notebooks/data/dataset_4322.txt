@@ -1,0 +1,50 @@
+Name: Credit Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Government, Statistics 
+
+Subsampling of the dataset Credit with seed equal to zero arguments N Rows equals two thousand arguments N Cols equals one hundred arguments N Classes equals ten arguments No Stratify equals False.
+
+Generated with the following source code:
+
+def subsample(self, seed: int, NRowsMax: int, NColsMax: int, NClassesMax: int, stratified: bool) -> Dataset:
+    random number generator = numpy random default random generator with seed 
+    x equals self x 
+    y equals self y 
+
+Uniformly sample classes equals y unique values. 
+If length of classes is greater than NClassesMax: 
+    value counts equals y value counts 
+    selected classes equals random number generator choice of classes, size equals NClassesMax, replace equals False, probability equals value counts divided by sum of value counts.
+
+Select the indices where one of these classes is present equals y index where y is in selected classes.
+x equals x iloc of select indices.
+y equals y iloc of select indices.
+
+Uniformly sample columns if required. 
+If length of x columns is greater than NColsMax: 
+    column indices equals random number generator choice of list range length of x columns, size equals NColsMax, replace equals False. 
+    sorted column indices equals sorted column indices.
+    selected columns equals list of x columns at sorted column indices.
+    x equals x of selected columns.
+else: 
+    sorted column indices equals list range length of x columns.
+
+If length of x is greater than NRowsMax: 
+    stratify accordingly target name equals y name. 
+    data equals pandas concatenate of x and y along columns. 
+    _, subset equals train test split of data, test size equals NRowsMax, stratify equals data target name, shuffle equals True, random state equals seed. 
+    x equals subset drop target name along columns. 
+    y equals subset target name. 
+    categorical mask equals list of self categorical mask at i for i in sorted column indices. 
+    columns equals list of x columns.
+
+return Dataset 
+    dataset equals self dataset 
+    x equals x 
+    y equals y 
+    categorical mask equals categorical mask 
+    columns equals columns.
+
+Features: Revolving Utilization of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, Number of Times Ninety Days Late, Number Real Estate Loans or Lines, Number of Dependents, Serious Delinquency in Two Years.
+
+Keywords: Credit, Sampling, Statistics, Government, Dataset.

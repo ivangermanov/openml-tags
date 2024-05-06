@@ -1,0 +1,24 @@
+**FOREX EUR/NOK Hourly Close**
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Hour, Manufacturing
+
+This dataset contains historical price data of the Forex EUR/NOK pair obtained from Dukascopy's Historical Data Feed. Each instance represents a single hourly candlestick, with the entire dataset spanning from January to December. Since Forex markets do not operate on weekends, there are no entries for Saturday and Sunday.
+
+The timestamp feature is set to the Europe/Amsterdam time zone. The class attribute indicates the direction of the mean close price in the subsequent hour relative to the current hour. Specifically, the class attribute is true if the mean close price increases in the next hour and false otherwise.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, set to the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the beginning of this hourly interval.
+* **Bid High**: The highest bid price recorded during this hourly interval.
+* **Bid Low**: The lowest bid price recorded during this hourly interval.
+* **Bid Close**: The bid price at the end of this hourly interval.
+* **Bid Volume**: The number of times the bid price changed within this hourly interval.
+* **Ask Open**: The ask price at the beginning of this hourly interval.
+* **Ask High**: The highest ask price recorded during this hourly interval.
+* **Ask Low**: The lowest ask price recorded during this hourly interval.
+* **Ask Close**: The ask price at the end of this hourly interval.
+* **Ask Volume**: The number of times the ask price changed within this hourly interval.
+* **Class**: Indicates whether the average close price will increase or decrease in the next hourly interval.
+
+Keywords: Forex, EUR/NOK, Historical Data, Candlestick, Time Series, Financial Markets, Price Prediction.

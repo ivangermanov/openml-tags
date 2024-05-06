@@ -1,0 +1,15 @@
+Jungle Chess Two Pieces Raw Endgame Complete Seed Four NRows Two Thousand NCols One Hundred NCClasses Ten Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Sub-sampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete generated forty-one thousand twenty-seven samples, using the following arguments: Seed equals four, Number of Rows Maximum equals two thousand, Number of Columns Maximum equals one hundred, Number of Classes Maximum equals ten, and No Stratify equals False.
+
+Generated with the following source code:
+
+The function sub-sample takes in parameters including Seed, Number of Rows Maximum, Number of Columns Maximum, Number of Classes Maximum, and Stratified. It returns a Dataset object. The function uses NumPy Random Default Random Generator to generate random numbers based on the given Seed. It then selects a sub-set of classes uniformly from the unique values in the target variable Y, ensuring the number of classes does not exceed the maximum allowed. Next, it selects the indices where one of the chosen classes is present and filters the data X and Y accordingly. 
+
+If the number of columns in X exceeds the maximum allowed, the function uniformly samples the column indices and filters X to include only the selected columns. If the total number of rows in X exceeds the maximum allowed, the function uses Train Test Split from Scikit Learn to split the data into training and testing sets, ensuring the class distribution is preserved during splitting. Finally, the function converts categorical columns to strings and returns the resulting Dataset object.
+
+Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class.
+
+Keywords: Jungle Chess, Machine Learning, Mathematics, Sub-sampling, Dataset, Stratification, Random Sampling.

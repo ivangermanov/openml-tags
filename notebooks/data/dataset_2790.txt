@@ -1,0 +1,28 @@
+**FOREX eur sgd minute Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Minute, Social Media
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description**
+
+This is the historical price data of the Forex Euro versus Singapore Dollar from Dukascopy. One instance, or row, represents one candlestick of one minute. The entire dataset spans a specific range of dates and does not include weekends, as the Forex market is not traded on weekends.
+
+The timezone of the feature Timestamp is Europe Amsterdam. The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is true when the mean Close price is increasing in the following minute, and false when the mean Close price is decreasing or remains unchanged.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe Amsterdam timezone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the Bid Price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the Ask Price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Euro, Singapore Dollar, Candlestick, Time Series, Finance, Trading.

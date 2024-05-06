@@ -1,0 +1,26 @@
+**FOREX Eur-Hkd-Minute-Close**
+
+Tags: Education, Finance, Forex, Forex Close, Forex Minute, Government
+
+**Data Description**
+
+This dataset contains historical price data of the Forex Eur-Hkd pair from Dukascopy. Each instance, or row, represents one candlestick of one minute. The entire dataset spans a specific date range, excluding weekends since Forex markets are closed on these days. The timestamp feature is set to the Europe-Amsterdam time zone.
+
+The class attribute is determined by the direction of the mean close price of the following minute, relative to the mean close price of the current minute. Specifically, the class attribute is true when the mean close price increases in the subsequent minute, and false when the mean close price decreases or remains unchanged.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, set to the Europe-Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur-Hkd, Historical Data, Candlestick, Time Series, Financial Markets.

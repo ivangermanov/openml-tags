@@ -1,0 +1,30 @@
+**FOREX EurHkd Day High**
+
+Tags: Finance, Forex, Forex Day, Forex High, Social Media, Statistics
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description**
+
+This dataset contains historical price data of the Forex EurHkd pair from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active during those days. The timezone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute signifies the direction of the mean of the High Bid and the High Ask prices of the subsequent day, relative to the High Bid and High Ask mean of the current minute. In other words, the class attribute is true when the mean High price is expected to rise the following day, and false when the mean High price is anticipated to decline or remain stagnant the following day.
+
+**Note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies should only be applied to predictions based on Close attributes, which are also available.**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, specified in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the commencement of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price observed during this time interval.
+* **Bid Close**: The bid price at the conclusion of this time interval.
+* **Bid Volume**: The frequency of changes in the Bid Price within this time interval.
+* **Ask Open**: The ask price at the initiation of this time interval.
+* **Ask High**: The highest ask price noted during this time interval.
+* **Ask Low**: The lowest ask price observed during this time interval.
+* **Ask Close**: The ask price at the termination of this time interval.
+* **Ask Volume**: The frequency of changes in the Ask Price within this time interval.
+* **Class**: An indicator of whether the average price will ascend during the subsequent interval.
+
+Keywords: Forex, EurHkd, Historical Data, Candlestick, Bid, Ask, Class Attribute, Scientific Purposes

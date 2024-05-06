@@ -1,0 +1,22 @@
+Subsampling of the Car Dataset with Seed Two 
+Tags: Machine Learning, Mathematics 
+
+The Car dataset, comprising forty thousand nine hundred seventy five entries, underwent subsampling using the following parameters: seed equals two, maximum number of rows equals two thousand, maximum number of columns equals one hundred, maximum number of classes equals ten, and stratification set to true. 
+
+Generated with the following source code:
+
+A function named subsample takes five arguments: self, seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification. It returns a dataset.
+
+First, it initializes a random number generator using the given seed. Then, it extracts the feature matrix x and target vector y from the input dataset.
+
+It then selects classes uniformly, ensuring that the total number of classes does not exceed the specified maximum. This is achieved by computing the value counts of each class, then choosing the desired number of classes randomly, with probabilities proportional to their frequencies.
+
+Next, it filters out the entries corresponding to the selected classes. If the number of columns exceeds the maximum allowed, it samples columns uniformly without replacement. The column indices are then sorted to ensure consistency.
+
+If the number of entries still exceeds the maximum allowed, it uses stratified sampling to reduce the dataset size while preserving the class balance. This involves concatenating the feature matrix and target vector, then applying a stratified split.
+
+Finally, it converts categorical columns to strings and returns the resulting dataset, along with its metadata, including the original dataset name, feature matrix, target vector, categorical mask, and column names.
+
+Features: Buying Price, Maintenance Cost, Number of Doors, Capacity, Luggage Boot Space, Safety Rating, Class Label
+
+Keywords: subsampling, stratification, machine learning, dataset, random sampling

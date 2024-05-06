@@ -1,0 +1,24 @@
+**FOREX eur/nzd-hour-Close**
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Hour, Machine Learning
+
+This is the historical price data of the Forex Euro/New Zealand Dollar from Dukascopy. Each instance represents one candlestick of one hour. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close price of the following hour relative to the mean close price of the current hour. Specifically, the class attribute is true when the mean close price increases in the following hour, and false when it decreases or remains unchanged.
+
+The attributes included in this dataset are:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price during this time interval.
+* Bid Low: The lowest bid price during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price during this time interval.
+* Ask Low: The lowest ask price during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Euro, New Zealand Dollar, Candlestick, Time Series, Machine Learning.

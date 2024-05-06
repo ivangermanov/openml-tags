@@ -1,0 +1,17 @@
+Title of Database: Blocks Classification
+
+This database is concerned with the classification of blocks of a page layout of a document that has been detected by a segmentation process. This is an essential step in document analysis in order to separate text from graphic areas.
+
+The problem consists in classifying all the blocks into five classes: text, horizontal line, picture, vertical line, and graphic. For a detailed presentation of the problem, see the relevant literature on multistrategy learning for document recognition.
+
+All instances have been personally checked so that low noise is present in the data. The dataset contains five thousand four hundred seventy-three examples coming from fifty-four distinct documents. Each observation concerns one block. All attributes are numeric and are in a format readable by C4.5.
+
+The relevant information about this dataset is that each block is described by ten attributes: the height of the block, the length of the block, the area of the block, the eccentricity of the block, the percentage of black pixels within the block, the percentage of black pixels after the application of the Run Length Smoothing Algorithm, the mean number of white-black transitions, the total number of black pixels in the original bitmap of the block, the total number of black pixels in the bitmap of the block after the Run Length Smoothing Algorithm, and the number of white-black transitions in the original bitmap of the block.
+
+There are no missing values in this dataset. The class distribution is as follows: most of the blocks are classified as text, followed by horizontal lines, pictures, vertical lines, and graphics.
+
+Summary statistics for the variables are also available, including means, standard deviations, minimum and maximum values, and correlation coefficients.
+
+Tags: Images, Machine Learning, UCI
+
+Keywords: document analysis, page layout, classification, machine learning, images

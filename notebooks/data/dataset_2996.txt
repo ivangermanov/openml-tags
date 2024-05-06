@@ -1,0 +1,20 @@
+Credit Card Fraud Detection 
+
+Tags: Education, Human Activities 
+
+Context 
+It is essential for credit card companies to identify fraudulent transactions accurately, ensuring that customers are not charged for unauthorized purchases. 
+
+Content 
+The dataset comprises transactions made by European credit card holders in September 2013. The dataset spans two days, containing 492 fraudulent transactions out of a total of 284,807 transactions. Notably, the positive class (frauds) accounts for a mere 0.172 percent of all transactions. The dataset consists solely of numerical input variables resulting from Principal Component Analysis (PCA) transformations. Due to confidentiality concerns, the original features and additional background information regarding the data remain undisclosed.
+
+Features 
+The dataset includes the seconds elapsed between each transaction and the first transaction in the dataset, denoted as Time, and the transaction amount, referred to as Amount. These features were not subject to PCA transformation. The remaining features, namely V1 through V28, represent the principal components obtained via PCA. The Class feature serves as the response variable, taking a value of one in instances of fraud and zero otherwise.
+
+Inspiration 
+The primary objective is to identify fraudulent credit card transactions. Considering the significant class imbalance, it is recommended to measure accuracy using the Area Under the Precision-Recall Curve (AUPRC). The traditional confusion matrix accuracy is deemed less meaningful for unbalanced classification scenarios.
+
+Acknowledgments 
+This dataset was compiled and analyzed during a collaborative research effort between Worldline and the Machine Learning Group of Université Libre de Bruxelles (ULB) focusing on big data mining and fraud detection.
+
+Keywords: Credit Card, Fraud Detection, Principal Component Analysis, Imbalanced Classification, Area Under the Precision-Recall Curve

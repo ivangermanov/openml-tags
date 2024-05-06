@@ -1,0 +1,14 @@
+Subsampling of the dataset Satellite with Seed Zero 
+
+The Satellite dataset, comprising forty-one thousand observations, underwent subsampling with a specified set of parameters. The resulting dataset contains two thousand rows, one hundred columns, and ten classes. The stratification option was set to true during this process.
+
+Generated with the Following Source Code:
+
+The Python function `subsample` was employed to achieve this outcome. This function initializes a random number generator with the provided seed value. It then selects a specified number of classes uniformly, ensuring representation of all chosen classes in the resulting dataset. Next, it performs uniform sampling on the columns, selecting the specified number of columns while maintaining their original order. Finally, it applies stratified sampling on the rows, taking into account the class distribution.
+
+Features:
+
+This dataset consists of thirty-six variables, including V One, V Two, up to V Thirty-Six, and a target variable.
+
+Tags: 
+Machine Learning, Mathematics

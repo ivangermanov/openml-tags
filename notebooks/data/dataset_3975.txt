@@ -1,0 +1,11 @@
+MNE Sample MEG Auditory Data 
+
+Tags: Agriculture, Computer Systems 
+
+This dataset contains Magnetoencephalography (MEG) data from an auditory stimulation experiment utilizing three hundred five sensors. The design matrix or forward operator is comprised of the first seven thousand four hundred ninety-eight columns of the data. The measurements corresponding to left stimulation are found in columns seven thousand four hundred ninety-eight through seven thousand five hundred eighty-three, while those related to right stimulation occupy columns seven thousand five hundred eighty-three onwards. This data was generated via a Python script employing the MNE library, version one point zero two.
+
+The script employed the sample dataset provided by MNE, specifically the MEG data from an auditory visual experiment. It began by reading the noise covariance matrix, then proceeded to handle the forward solution by loading the necessary file. Subsequently, it defined two conditions - Left Auditory and Right Auditory - and read the corresponding evoked responses. These responses were then cropped to focus on the time period between forty milliseconds and one hundred eighty milliseconds post-stimulation. The script picked only magnetometer channels, discarding electroencephalography data. 
+
+Next, it prepared the forward operator, applying depth weighting and whitening. The resulting gain matrix, devoid of any weights, was computed along with the whitener and other necessary information. Channels of interest were selected based on their presence in the gain information. The whitened data was then computed by applying the whitener to the evoked response data. Finally, the script constructed the data matrix by horizontally stacking the gain matrix and the whitened data for both Left Auditory and Right Auditory conditions.
+
+Keywords: MEG, auditory stimulation, forward operator, whitening, depth weighting, noise covariance matrix.

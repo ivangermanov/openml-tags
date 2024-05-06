@@ -1,0 +1,13 @@
+The kr-vs-kp dataset has been subsampled with specific parameters to create a new dataset. This new dataset has been generated using a specific source code, which involves uniformly sampling classes and columns, as well as stratified sampling of rows.
+
+The original dataset has been filtered to include only ten classes, which were selected randomly from the total number of unique classes. The selection was based on the value counts of each class, ensuring that the chosen classes represent the overall distribution of the data.
+
+Next, the columns were uniformly sampled to reduce the total number of features to one hundred. The selection of columns was random, but the resulting columns were sorted in ascending order to maintain consistency.
+
+Finally, the rows were stratified sampled to reduce the total number of samples to two thousand. This was done using a train-test split function, which ensures that the resulting samples retain the same class distribution as the original dataset.
+
+The resulting dataset consists of the filtered data, along with the corresponding categorical mask and column names. The categorical mask is necessary to identify the categorical columns in the dataset, which is essential for certain machine learning algorithms.
+
+The dataset is related to Astronomy and Earth Science, and includes features such as bishop black, bishop knight, king attack, and queen move square.
+
+Keywords: dataset, subsampling, stratified sampling, uniform sampling, astronomy, earth science.

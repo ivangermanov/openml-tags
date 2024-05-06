@@ -1,0 +1,25 @@
+Background:
+When is my University Campus Gym least crowded, so I know when to work out? To answer this question, we measured how many people were in this gym once every ten minutes over the past year. Our goal is to use this data to predict how crowded the gym will be in the future.
+
+Given a time of day, and possibly some other relevant features, including weather conditions, our aim is to accurately forecast the crowd level at the gym. Furthermore, we seek to determine which features have a significant impact on the crowd level, which ones are redundant, and what additional features could be incorporated to enhance the accuracy of our predictions.
+
+Data:
+The dataset comprises a large collection of people count measurements, taken approximately every ten minutes over the course of a year. In addition to these measurements, we have also gathered supplementary information, including weather data and semester-specific details, which may influence the crowd level at the gym. The target variable we wish to predict is the number of people present, based on a selection of the available features.
+
+Features:
+The dataset includes the following attributes:
+
+* Date, represented as a string in datetime format
+* Timestamp, indicating the number of seconds elapsed since the beginning of the day
+* Day of the week, represented as an integer ranging from zero (Monday) to six (Sunday)
+* A boolean indicator for whether the day is a weekend
+* A boolean indicator for whether the day is a federal holiday
+* Temperature, measured in degrees Fahrenheit
+* A boolean indicator for whether the measurement falls during the start of a school semester
+* Month, represented as an integer ranging from one (January) to twelve (December)
+* Hour, represented as an integer ranging from zero to twenty-three
+
+Acknowledgement:
+This data was collected with the explicit consent of the University and the gym in question.
+
+Keywords: University Campus Gym, Crowd Prediction, Weather Conditions, Semester-Specific Information, Feature Selection, Time Series Analysis

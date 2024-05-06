@@ -1,0 +1,51 @@
+House Sixteen H Seed One N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Social Media, Statistics 
+
+Subsampling of the dataset House Sixteen H with seed equals one arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False 
+
+Generated with the following source code:
+
+def subsample(self, seed, NRowsMax, NColsMax, NClassesMax, stratified):
+    random number generator = numpy random default random generator seed 
+    x equals self x 
+    y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than NClassesMax:
+    value counts equals y value counts 
+    selected classes equals random number generator choice classes size NClassesMax replace False probability value counts divided by sum value counts 
+Select the indices where one of these classes is present 
+idxs equals y index y is in selected classes 
+x equals x iloc idxs 
+y equals y iloc idxs 
+
+Uniformly sample columns if required 
+if length of x columns is greater than NColsMax:
+    column indexes equals random number generator choice list range length x columns size NColsMax replace False 
+    sorted column indexes equals sorted column indexes 
+    selected columns equals list x columns sorted column indexes 
+    x equals x selected columns 
+else:
+    sorted column indexes equals list range length x columns 
+
+if length of x is greater than NRowsMax:
+    Stratify accordingly 
+    target name equals y name 
+    data equals pandas concat x y axis columns 
+    _, subset equals train test split data test size NRowsMax stratify data target name shuffle True random state seed 
+    x equals subset drop target name axis columns 
+    y equals subset target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals self categorical mask i for i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: subsampling, social media, statistics, dataset, stratification, sampling

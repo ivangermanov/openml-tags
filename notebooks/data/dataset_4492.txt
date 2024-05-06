@@ -1,0 +1,15 @@
+Subsampling of the Fabert dataset with seed equals two arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including seed, maximum number rows, maximum number columns, maximum number classes, and whether or not to use stratification. It uses numpy's random default generator to uniformly sample classes and columns from the dataset.
+
+First, it samples classes from the dataset, ensuring that the total number of classes does not exceed the maximum allowed. Then, it selects the indices where one of these classes is present and updates the x and y variables accordingly.
+
+Next, it samples columns from the dataset, ensuring that the total number of columns does not exceed the maximum allowed. Finally, if the number of rows exceeds the maximum allowed, it uses train test split from scikit learn to split the data into subsets while maintaining the same class distribution.
+
+The function returns a new dataset object with the updated x, y, categorical mask, and column information.
+
+Features include various variables such as thirty, thirty-one, forty, forty-six, sixty-one, and many others.
+
+Keywords: subsampling, dataset, stratification, numpy, scikit learn.

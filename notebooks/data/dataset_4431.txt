@@ -1,0 +1,13 @@
+Subsampling of the dataset Compass with a specified seed value generates a subset of the original data. This process involves uniformly sampling classes and columns from the dataset, ensuring a balanced representation of each category.
+
+The dataset Compass consists of multiple features, including Sex, Age, Race, Juvenile Felony Count, Juvenile Misdemeanor Count, Prior Convictions Count, Days Between Screening and Arrest, and Decile Score, among others.
+
+To generate the subsampled dataset, a random number generator is used to select a specified number of classes and columns from the original dataset. The selection process is based on the value counts of each class and column, ensuring a representative sample.
+
+Once the classes and columns are selected, the corresponding indices are used to subset the original dataset. This results in a new dataset with the specified number of rows, columns, and classes.
+
+Stratification is applied to ensure that the subsampled dataset maintains the same proportion of each class as the original dataset. This is achieved by using a stratified sampling approach, which takes into account the class distribution when selecting the samples.
+
+The resulting subsampled dataset is a new instance of the Compass dataset, with the specified number of rows, columns, and classes. The features of the dataset remain the same, but with a reduced number of instances.
+
+Keywords: Subsampling, Compass dataset, Stratified Sampling, Feature Selection, Class Balance.

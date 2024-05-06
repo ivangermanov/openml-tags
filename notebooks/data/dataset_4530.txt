@@ -1,0 +1,18 @@
+Subsampling of the Madeline dataset with Seed equals Zero 
+Tags: Subsampling of the dataset Madeline with Seed equals Zero 
+
+Generated with the following source code:
+
+This function subsamples the dataset by uniformly selecting classes and columns, then sampling rows based on the specified maximum number of rows, columns, and classes.
+
+The function starts by uniformly sampling classes until it reaches the maximum number of classes. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, the function uniformly samples columns until it reaches the maximum number of columns. It sorts the column indices to ensure consistency.
+
+If the remaining number of rows exceeds the maximum number of rows, the function uses stratified splitting to sample the desired number of rows while maintaining class balance.
+
+Finally, the function converts categorical columns to strings and returns the subsampled dataset.
+
+Features: One Hundred features were selected including some readable ones such as...
+
+Keywords: Subsampling, Madeline dataset, Seed equals Zero, Stratified splitting, Class balance.

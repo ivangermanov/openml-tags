@@ -1,0 +1,26 @@
+**FOREX Eur/DkK Minute High**
+
+Tags: Finance, Forex, Forex High, Forex Minute, Health, Physical Sciences
+
+This dataset contains historical price data of the Forex Eur/DkK from Dukascopy Historical Data Feed. Each instance represents one candlestick of one minute. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded during these periods. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute represents the direction of the mean of the High Bid and the High Ask of the following minute relative to the High Bid and High Ask mean of the current minute. In other words, the class attribute is true when the mean High price is increasing in the following minute, and false when the mean High price is decreasing or remains unchanged.
+
+Please note that this is a hypothetical task intended for scientific purposes only. Realistic trade strategies should only be applied to predictions based on Close attributes, which are also available.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the beginning of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the Bid Price changed within this time interval.
+* Ask Open: The ask price at the beginning of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the Ask Price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur/DkK, Candlestick, Historical Data, Financial Markets, Trading Strategies, Time Series Analysis.

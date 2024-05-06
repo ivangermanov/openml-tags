@@ -1,0 +1,19 @@
+DNA Seed One - Two Thousand Rows - Ten Classes - One Hundred Columns - Stratify True 
+
+This is a subsampled version of the DNA dataset generated using the following source code. 
+
+The subsample function takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It uses NumPy's default random generator to randomly select classes, columns, and rows based on these parameters.
+
+The function first selects a uniform sample of classes from the unique values in the target variable. If there are more unique classes than the specified maximum, it uses value counts to determine the probability of each class being selected. It then selects the corresponding indices where these classes are present.
+
+Next, it uniformly samples columns if the number of columns exceeds the specified maximum. It uses the default random generator to choose the column indices and then selects the corresponding columns.
+
+Finally, if the number of rows exceeds the specified maximum, it uses scikit-learn's train test split function to stratify the sample according to the target variable. This ensures that the resulting sample has the same proportion of each class as the original dataset.
+
+The resulting dataset is returned as an instance of the Dataset class, which includes the subsampled features, target variable, categorical mask, and column names.
+
+Tags: Machine Learning, Mathematics 
+
+Features:... (skipped due to unreadability)
+
+Keywords: DNA dataset, subsampling, machine learning, stratification, NumPy, scikit-learn

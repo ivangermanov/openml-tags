@@ -1,0 +1,13 @@
+The Gina Agnostic dataset is part of the Agnostic Learning versus Prior Knowledge Challenge. The primary objective of this challenge is to investigate whether the performance of domain-specific feature engineering, also known as prior knowledge, can be matched by algorithms trained on data without any domain-specific knowledge, referred to as agnostic.
+
+The Gina dataset focuses on handwritten digit recognition, specifically recognizing odd and even two-digit numbers. The dataset is a subset of the MNIST dataset, where only the unit digit is informative for this task, resulting in at least half of the features being distractions. This is a two-class classification problem featuring sparse continuous input variables, where each class comprises multiple clusters, making it a problem with heterogeneous classes.
+
+The source of the dataset is the MNIST dataset, made available by Yann LeCun of the NEC Research Institute. The digits have been size-normalized and centered in a fixed-size image of twenty-eight by twenty-eight dimensions.
+
+To construct the agnostic dataset, several steps were taken. Firstly, pixels that were ninety-nine percent of the time white were removed, reducing the original feature set of seven hundred eighty-four pixels to four hundred eighty-five. The original resolution of two hundred fifty-six gray levels was maintained. Despite the data being relatively sparse, with approximately thirty percent of values being non-zero, the data was saved as a dense matrix due to better compression capabilities. Feature names correspond to the matrix coordinates of the pixels in a twenty-eight by twenty-eight matrix.
+
+Two-digit numbers were created by dividing the datasets into two parts and randomly pairing the digits. The task is to separate odd from even numbers, with the digit of the tens being non-informative, thus acting as distractions.
+
+This dataset combines samples from both training and validation datasets.
+
+Keywords: handwritten digit recognition, agnostic learning, prior knowledge, MNIST dataset, classification problem, heterogeneous classes.

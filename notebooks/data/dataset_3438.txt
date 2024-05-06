@@ -1,0 +1,17 @@
+Cause-Effect Pairs Database is a growing collection of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+
+Some pairs have high-dimensional variables, and for machine readability, the relevant information about these variables is encoded in metadata. This metadata contains essential details, including the number of pairs, the first and last columns of the cause variable, the first and last columns of the effect variable, and the dataset weight.
+
+The dataset weight is crucial when calculating the average performance of causal inference methods to prevent bias introduced by having multiple copies of essentially the same data. For instance, pairs fifty-six to sixty-three are examples of this scenario.
+
+When utilizing this dataset in a publication, please cite the corresponding paper, which provides more detailed information about the dataset in its supplement. This comprehensive resource offers valuable insights into distinguishing cause from effect using observational data, along with various methods and benchmarks.
+
+The datasets, ranging from pair0001 to pair0041, originate from the UCI Machine Learning Repository. These datasets were initially published by the University of California, School of Information and Computer Science.
+
+An overview of all data pairs reveals the following:
+
+Variable one and Variable two are paired together from various datasets, accompanied by their corresponding ground truth values. For instance, pair0004 consists of Altitude and Sunshine Hours from the German Weather Service (DWD) dataset, where Altitude has a causal effect on Sunshine Hours.
+
+The German Weather Service dataset was obtained from three hundred forty-nine weather stations across Germany. The data was accessed through the official website of the Deutscher Wetterdienst.
+
+Keywords: Cause-Effect Pairs, Causal Inference, Machine Learning, Graphical Models, Computer Systems, MaRDI, TA3

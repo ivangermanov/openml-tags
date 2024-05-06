@@ -1,0 +1,15 @@
+Machine Learning, Statistics 
+
+Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete 
+
+This dataset has been generated through subsampling the original Jungle Chess Two Pieces Raw Endgame Complete dataset. The subsampling process involved selecting a specified number of rows, columns, and classes from the original dataset while ensuring that the resulting dataset remains representative of the original.
+
+The subsampling process began by uniformly sampling classes from the original dataset. If the number of unique classes exceeded the specified maximum, a random selection of classes was made based on their frequency in the original dataset. The indices corresponding to these selected classes were then used to filter the original dataset, reducing its size while preserving the distribution of classes.
+
+Next, the columns of the filtered dataset were uniformly sampled to reduce their number to the specified maximum. This involved randomly selecting a subset of column indices and using them to filter the dataset further.
+
+Finally, the remaining rows were subsampled using stratified splitting to ensure that the resulting dataset retained the same distribution of classes as the original. This involved concatenating the filtered dataset with its corresponding class labels, splitting the resulting dataset into subsets, and selecting the subset that best represented the original distribution of classes.
+
+The resulting dataset consists of a subset of the original features, including White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, and Class. 
+
+Keywords: machine learning, statistics, subsampling, dataset, stratification, classification.

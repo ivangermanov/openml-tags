@@ -1,0 +1,45 @@
+vehicle silhouettes 
+
+Purpose:
+The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
+
+Problem Type:
+Classification
+
+Source:
+University of California, Irvine 
+
+Description:
+The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Shape Feature Extractor, which extracts a combination of scale-independent features utilizing both classical moments-based measures and heuristic measures.
+
+Four model vehicles were used for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
+
+The images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface. The vehicles were painted matte black to minimize highlights. The images were captured using a frame store connected to a computer. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated and thereafter subjected to shrink-expand-expand-shrink modules to remove salt and pepper image noise.
+
+The vehicles were rotated and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to head-on and rear views respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
+
+Attributes:
+
+Compactness 
+Circularity 
+Distance Circularity 
+Radius Ratio 
+Principal Axis Aspect Ratio 
+Maximum Length Aspect Ratio 
+Scatter Ratio 
+Elongatedness 
+Principal Axis Rectangularity 
+Maximum Length Rectangularity 
+Scaled Variance Along Major Axis 
+Scaled Variance Along Minor Axis 
+Scaled Radius of Gyration 
+Skewness About Major Axis 
+Skewness About Minor Axis 
+Kurtosis About Major Axis 
+Kurtosis About Minor Axis 
+Hollows Ratio 
+
+Number of Classes:
+Four classes - Opel, Saab, Bus, Van 
+
+Keywords: vehicle recognition, shape feature extraction, silhouette classification, image processing.

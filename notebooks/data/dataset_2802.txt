@@ -1,0 +1,25 @@
+Name: Forex CHF JPY Hourly High 
+Tags: Finance, Forex, Forex High, Forex Hour, Government, Politics 
+
+Data Description 
+This dataset contains the historical price data of the Forex CHF/JPY currency pair obtained from Dukascopy. Each instance, represented by a row, corresponds to one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is closed during these days. The time zone of the feature Timestamp is set to Europe/Amsterdam.
+
+The class attribute is determined by the direction of the mean of the High Bid and the High Ask prices of the subsequent hour, relative to the mean of the High Bid and High Ask prices of the current minute. Specifically, the class attribute is labeled as True if the mean High price is expected to increase in the following hour, and False otherwise, indicating that the mean High price will either decrease or remain unchanged.
+
+Please note that this task is hypothetical and intended solely for scientific research purposes. In reality, trading strategies should only be based on predictions made on Close attributes, which are also available in this dataset.
+
+Attributes 
+The Timestamp represents the time of the current data point in the Europe/Amsterdam time zone. 
+The Bid Open denotes the bid price at the beginning of this hourly time interval. 
+The Bid High indicates the highest bid price recorded during this time interval. 
+The Bid Low marks the lowest bid price observed during this time interval. 
+The Bid Close signifies the bid price at the end of this hourly time interval. 
+The Bid Volume measures the frequency of changes in the Bid Price within this time interval.
+The Ask Open refers to the ask price at the start of this hourly time interval.
+The Ask High indicates the highest ask price recorded during this time interval.
+The Ask Low marks the lowest ask price observed during this time interval.
+The Ask Close signifies the ask price at the end of this hourly time interval.
+The Ask Volume measures the frequency of changes in the Ask Price within this time interval.
+The Class attribute determines whether the average price will rise during the next hourly interval.
+
+Keywords: Forex, CHF JPY, Currency Pair, Historical Data, Candlestick, Time Series, Financial Market, Trading Strategy.

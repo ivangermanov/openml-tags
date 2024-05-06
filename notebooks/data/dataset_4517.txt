@@ -1,0 +1,48 @@
+Subsampling of the dataset Gina with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals True 
+
+Generated with the following source code:
+
+def subsample(self, seed, number_rows_max, number_columns_max, number_classes_max, stratified)
+    returns Dataset:
+rng equals numpy dot random dot default_rng of seed
+x equals self dot x 
+y equals self dot y 
+
+Uniformly sample classes equals y dot unique 
+if length of classes is greater than number classes max 
+    vcs equals y dot value counts 
+    selected classes equals rng dot choice of classes, size equals number classes max, replace equals false, probability equals vcs over sum of vcs 
+    select the indices where one of these classes is present idxs equals y dot index of y dot is in of classes 
+    x equals x dot iloc of idxs 
+    y equals y dot iloc of idxs 
+
+Uniformly sample columns if required 
+if length of x dot columns is greater than number columns max 
+    columns idxs equals rng dot choice of list of range of length of x dot columns, size equals number columns max, replace equals false 
+    sorted column idxs equals sorted of columns idxs 
+    selected columns equals list of x dot columns of sorted column idxs 
+    x equals x of selected columns 
+else 
+    sorted column idxs equals list of range of length of x dot columns 
+
+if length of x is greater than number rows max 
+    stratify accordingly target name equals y dot name 
+    data equals pandas dot concat of x and y, axis equals columns 
+    underscore, subset equals train test split of data, test size equals number rows max, stratify equals data of target name, shuffle equals true, random state equals seed 
+    x equals subset dot drop of target name, axis equals columns 
+    y equals subset of target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals list of self dot categorical mask of i for i in sorted column idxs 
+columns equals list of x dot columns 
+return Dataset 
+dataset equals self dot dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Tags: Economics, Statistics
+Features:... (skipped due to being unreadable)
+
+Keywords: subsampling, dataset, economics, statistics, stratified sampling

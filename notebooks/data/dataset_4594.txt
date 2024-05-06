@@ -1,0 +1,15 @@
+Subsampling of the Car Dataset with Seed Four 
+
+Tags: Computer Systems, Machine Learning 
+
+This dataset has been generated through subsampling of the original Car dataset, which contains forty thousand nine hundred seventy five entries. The subsampling process involved setting a maximum number of rows to two thousand, a maximum number of columns to one hundred, and a maximum number of classes to ten. Additionally, the stratification option was set to true.
+
+The subsample method employed a default random generator with a specified seed value of four to ensure reproducibility. It first uniformly sampled classes from the unique values present in the target variable, limiting the selection to the maximum number of classes allowed. The indices corresponding to the selected classes were then used to filter the data, resulting in a reduced set of entries.
+
+Next, the method proceeded to uniformly sample columns from the feature space, selecting the specified maximum number of columns without replacement. The column indices were sorted in ascending order to maintain consistency. If the number of entries exceeded the maximum allowed, the method employed stratified sampling using the train-test split function from scikit-learn, ensuring that the class distribution was preserved in the reduced dataset.
+
+Finally, the method converted categorical columns to string format to comply with OpenML requirements and returned a new dataset object containing the subsampled data, along with relevant metadata.
+
+Features: Buying Price, Maintenance Cost, Number of Doors, Capacity, Luggage Boot Size, Safety Rating, Class Label
+
+Keywords: Car Dataset, Subsampling, Stratification, Random Sampling, Feature Selection, Class Label

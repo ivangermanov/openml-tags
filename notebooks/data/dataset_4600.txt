@@ -1,0 +1,15 @@
+Subsampling of the dataset KC One with Seed Zero 
+
+Tags: Subsampling of the dataset KC One 
+
+This dataset has been generated through a process of subsampling, which involves selecting a smaller portion of the original data while maintaining its characteristics. This is achieved through a combination of uniform sampling of classes, columns, and rows. 
+
+The uniform sampling of classes ensures that the resulting dataset has an equal representation of each class, which is particularly important when dealing with imbalanced datasets. This is done by selecting a specified number of classes randomly, using their value counts as probabilities. 
+
+Once the classes have been sampled, the corresponding indices are selected, and the dataset is filtered to include only those instances. The next step involves uniform sampling of columns, which helps reduce dimensionality and noise in the data. This is done by randomly selecting a specified number of column indices.
+
+Finally, the dataset is sampled again to ensure that the number of rows does not exceed a certain threshold. This is done using stratified sampling, which preserves the class balance achieved earlier. The resulting dataset is then returned, along with its metadata, including the column names and categorical mask.
+
+Features: location, variance of g, expected value of g, information value of g, node count, variance, line count, decision count, iteration count, edge count, binary operator count, ternary operator count, line of code, line of comment, line of blank, line of code and comment, unique operator count, unique operand count, total operator count, total operand count, branch count, defect count 
+
+Keywords: subsampling, dataset, uniform sampling, stratified sampling, class balance, dimensionality reduction

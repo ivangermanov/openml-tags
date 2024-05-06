@@ -1,0 +1,26 @@
+**FOREX EUR GBP Hourly Close**
+
+Tags: Finance, Forex, Forex Close, Forex Hour, Images, Machine Learning
+
+**Data Description**
+
+This dataset contains historical price data of the Forex EUR GBP currency pair from Dukascopy. Each instance, or row, represents one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe Amsterdam time zone.
+
+The class attribute is defined as the direction of the mean of the close bid and close ask prices of the subsequent hour, relative to the mean of the close bid and close ask prices of the current hour. In other words, the class attribute is true when the mean close price is increasing in the subsequent hour, and false when the mean close price is decreasing or remaining stable.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this hourly time interval.
+* **Bid High**: The highest bid price recorded during this hourly time interval.
+* **Bid Low**: The lowest bid price recorded during this hourly time interval.
+* **Bid Close**: The bid price at the end of this hourly time interval.
+* **Bid Volume**: The number of times the bid price changed within this hourly time interval.
+* **Ask Open**: The ask price at the start of this hourly time interval.
+* **Ask High**: The highest ask price recorded during this hourly time interval.
+* **Ask Low**: The lowest ask price recorded during this hourly time interval.
+* **Ask Close**: The ask price at the end of this hourly time interval.
+* **Ask Volume**: The number of times the ask price changed within this hourly time interval.
+* **Class**: Whether the average price will increase during the next hourly interval.
+
+Keywords: Forex, EUR GBP, Historical Data, Candlestick, Time Series, Machine Learning, Finance.

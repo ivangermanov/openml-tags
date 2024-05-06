@@ -1,0 +1,21 @@
+Machine Learning and Mathematics 
+
+Subsampling of the dataset Yeast with Seed Four 
+
+This dataset was generated using a specific set of arguments, including the number of rows, number of columns, and number of classes. The goal was to create a subset of the original Yeast dataset, which contains One Eighty-One instances.
+
+The function used to generate this dataset takes several parameters, including a seed value for reproducibility, the maximum number of rows, columns, and classes, and whether or not to use stratification.
+
+First, the function selects a subset of classes from the original dataset. If there are more than the maximum allowed classes, it uses a weighted random choice based on the frequency of each class.
+
+Next, it selects the instances where one of these chosen classes is present and reduces the dataset to only those instances.
+
+Then, if the number of columns exceeds the maximum allowed, it uniformly samples columns to reduce the dimensionality.
+
+Finally, if the number of instances still exceeds the maximum allowed, it uses stratified sampling to select a representative subset of instances while maintaining the class balance.
+
+The resulting dataset consists of the selected features and the corresponding class labels.
+
+Features: Mitochondrial, Glycosylated Hydrophilic, Alkaline Mrna, Mitochondrial, Endoplasmic Reticulum Lumen, Peroxisomal, Vacuolar, Nuclear
+
+Keywords: Subsampling, Yeast Dataset, Machine Learning, Stratification, Dimensionality Reduction

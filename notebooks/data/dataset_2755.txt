@@ -1,0 +1,24 @@
+**FOREX USD/CAD Day Close**
+
+Tags: Agriculture, Chemistry, Finance, Forex, Forex Close, Forex Day
+
+This dataset contains the historical price data of the Forex USD/CAD exchange rate from Dukascopy. Each instance represents one candlestick of one trading day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute is determined by the direction of the mean close price of the following day relative to the mean close price of the current day. Specifically, if the mean close price is expected to increase the following day, the class attribute is true; otherwise, it is false.
+
+The dataset includes the following attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The opening bid price at the start of the trading day.
+* Bid High: The highest bid price recorded during the trading day.
+* Bid Low: The lowest bid price recorded during the trading day.
+* Bid Close: The closing bid price at the end of the trading day.
+* Bid Volume: The number of times the bid price changed during the trading day.
+* Ask Open: The opening ask price at the start of the trading day.
+* Ask High: The highest ask price recorded during the trading day.
+* Ask Low: The lowest ask price recorded during the trading day.
+* Ask Close: The closing ask price at the end of the trading day.
+* Ask Volume: The number of times the ask price changed during the trading day.
+* Class: A boolean indicating whether the mean close price will increase or decrease the following day.
+
+Keywords: Forex, USD/CAD, exchange rate, historical data, candlestick, trading day, class attribute, mean close price.

@@ -1,0 +1,28 @@
+FOREX EUR/SGD Minute High Dataset
+
+Tags: Economics, Finance, Forex, Forex High, Forex Minute, Life Science
+
+This dataset contains historical price data of the FOREX EUR/SGD exchange rate from Dukascopy. Each instance represents one minute of trading activity, and the entire dataset spans from January to December.
+
+The dataset excludes weekends, as FOREX markets are closed during these periods. All timestamps are represented in the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price between the current and subsequent minutes. A value of true denotes an increase in the mean high price, while false indicates a decrease or stagnation.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading strategies, which require predicting close prices.
+
+Attributes:
+
+* Timestamp: The time of the current data point
+* Bid Open: The bid price at the start of this time interval
+* Bid High: The highest bid price during this time interval
+* Bid Low: The lowest bid price during this time interval
+* Bid Close: The bid price at the end of this time interval
+* Bid Volume: The number of times the bid price changed within this time interval
+* Ask Open: The ask price at the start of this time interval
+* Ask High: The highest ask price during this time interval
+* Ask Low: The lowest ask price during this time interval
+* Ask Close: The ask price at the end of this time interval
+* Ask Volume: The number of times the ask price changed within this time interval
+* Class: Whether the average price will increase during the next interval
+
+Keywords: FOREX, EUR/SGD, historical price data, exchange rate, economics, finance.

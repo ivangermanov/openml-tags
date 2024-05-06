@@ -1,0 +1,28 @@
+The Solar Flare Database 
+
+This database contains three potential classes, each representing the number of times a specific type of solar flare occurred in a twenty-four-hour period. Each instance represents captured features for one active region on the Sun.
+
+The data is divided into two sections. The second section, which has undergone more error correction, is considered more reliable.
+
+The database includes thirteen attributes, including three class attributes. 
+
+Attribute information includes:
+
+* Code for class, which is a modified Zurich class 
+* Code for largest spot size 
+* Code for spot distribution 
+* Activity level, which is either reduced or unchanged 
+* Evolution, which can be either decay, no growth, or growth 
+* Previous twenty-four-hour flare activity code, which indicates whether there was nothing as big as an M1, one M1, or more activity than one M1 
+* Whether the region is historically complex 
+* Whether the region became historically complex on this pass across the Sun's disk 
+* Area, which is either small or large 
+* Area of the largest spot, which is either less than or equal to five or greater than five 
+
+From these predictors, three classes of flares are predicted, which are represented in the last three columns. These classes include:
+
+* C-class flares production by this region in the next twenty-four hours, which are common flares 
+* M-class flares production by this region in the next twenty-four hours, which are moderate flares 
+* X-class flares production by this region in the next twenty-four hours, which are severe flares 
+
+Keywords: Solar Flare, Machine Learning, UCI, Active Region, Class Attributes

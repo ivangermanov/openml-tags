@@ -1,0 +1,24 @@
+**FOREX USD/JPY Minute Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Government, Health
+
+This dataset contains historical price data of the Forex USD/JPY pair obtained from Dukascopy's Historical Data Feed. Each instance represents a one-minute candlestick, and the entire dataset spans from January to December. Since the Forex market is not active on weekends, there is no data for those days. The timestamp feature is based on the Europe/Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean close price between the current and subsequent minutes. Specifically, if the mean close price increases in the next minute, the class attribute is true; otherwise, it is false.
+
+The dataset includes the following attributes:
+
+* Timestamp: The time of the current data point based on the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of the one-minute interval.
+* Bid High: The highest bid price recorded during the one-minute interval.
+* Bid Low: The lowest bid price recorded during the one-minute interval.
+* Bid Close: The bid price at the end of the one-minute interval.
+* Bid Volume: The number of times the bid price changed within the one-minute interval.
+* Ask Open: The ask price at the start of the one-minute interval.
+* Ask High: The highest ask price recorded during the one-minute interval.
+* Ask Low: The lowest ask price recorded during the one-minute interval.
+* Ask Close: The ask price at the end of the one-minute interval.
+* Ask Volume: The number of times the ask price changed within the one-minute interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, USD/JPY, Candlestick, Historical Data, Time Series, Finance

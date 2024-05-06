@@ -1,0 +1,14 @@
+Connect Four Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Sub sampling of the dataset Connect Four with a total of forty thousand six hundred sixty-eight instances, using a seed value of zero, arguments of number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratify set to true, generated with the following source code.
+
+The function sub-sample takes in parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses numpy's default random generator to generate random samples. The function first gets the unique classes from the target variable, and if there are more classes than the specified maximum, it selects the specified number of classes using value counts as probabilities. It then selects the instances where one of these classes is present. 
+
+Next, it uniformly samples columns if required, by selecting the specified number of column indices randomly without replacement, sorting them, and getting the corresponding column names. If the total number of instances exceeds the specified maximum, it uses train test split from scikit learn to get a stratified sample of the specified size, shuffling the data and setting the random state to the seed value. Finally, it returns a dataset object with the sub-sampled data, categorical mask, and column names.
+
+Features: 
+class 
+
+Keywords: machine learning, mathematics, sub sampling, stratification, random sampling, dataset generation.

@@ -1,0 +1,29 @@
+The Robot Execution Failures Data Set 
+
+Abstract:
+This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
+
+Source:
+Original owner and donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal.
+
+Data Set Information:
+The donation includes five data sets, each of which defines a different learning problem: 
+failures in approach to grasp position, 
+failures in transfer of a part, 
+position of part after a transfer failure, 
+failures in approach to ungrasp position, 
+and 
+failures in motion with part.
+In order to improve classification accuracy, a set of five feature transformation strategies based on statistical summary features, discrete Fourier transform, etc. was defined and evaluated, enabling an average improvement of twenty percent in accuracy.
+
+Attribute Information:
+All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was three hundred fifteen milliseconds. Each example is described as follows: 
+class Force X one, Force Y one, Force Z one, Torque X one, Torque Y one, Torque Z one, Force X two, Force Y two, Force Z two, Torque X two, Torque Y two, Torque Z two,..., Force X fifteen, Force Y fifteen, Force Z fifteen, Torque X fifteen, Torque Y fifteen, Torque Z fifteen, 
+where Force X one through Force X fifteen is the evolution of force Fx in the observation window, the same for Fy, Fz, and the torques; there is a total of ninety features.
+
+Relevant Papers:
+Robot Learning at the Task Level: a Study in the Assembly Domain,
+Feature Transformation Strategies for a Robot Learning Problem,
+Integration and Learning in Supervision of Flexible Assembly Systems,
+
+Keywords: robot execution, failures data set, force measurement, torque measurement, failure detection, classification accuracy, feature transformation strategies, assembly domain, flexible assembly systems.

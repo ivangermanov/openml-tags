@@ -1,0 +1,31 @@
+The seismic-bumps dataset describes the problem of high energy seismic bumps forecasting in a coal mine. Data comes from two longwalls located in a Polish coal mine.
+
+Mining activity has always been connected with the occurrence of dangers, commonly called mining hazards. A special case of such threat is a seismic hazard, which frequently occurs in many underground mines. Seismic hazard is the hardest detectable and predictable of natural hazards and, in this respect, it is comparable to an earthquake. More and more advanced seismic and seismoacoustic monitoring systems allow a better understanding of rock mass processes and definition of seismic hazard prediction methods. However, the accuracy of so far created methods is far from perfect.
+
+Complexity of seismic processes and a big disproportion between the number of low-energy seismic events and the number of high-energy phenomena, for example, greater than ten thousand joules, causes statistical techniques to be insufficient to predict seismic hazard. Therefore, it is essential to search for new opportunities of better hazard prediction, also using machine learning methods.
+
+In seismic hazard assessment, data clustering techniques can be applied, and for prediction of seismic tremors, artificial neural networks are used. However, unbalanced distribution of positive and negative examples is a serious problem in seismic hazard prediction. Currently used methods are still insufficient to achieve good sensitivity and specificity of predictions.
+
+The task of seismic prediction can be defined in different ways, but the main aim of all seismic hazard assessment methods is to predict, with given precision relating to time and date, increased seismic activity, which can cause a rockburst. In the dataset, each row contains a summary statement about seismic activity in the rock mass within one shift of eight hours. If the decision attribute has the value one, then in the next shift, any seismic bump with an energy higher than ten thousand joules was registered.
+
+That task of hazards prediction bases on the relationship between the energy of recorded tremors and seismoacoustic activity with the possibility of rockburst occurrence. Hence, such hazard prognosis is not connected with accurate rockburst prediction. Moreover, with the information about the possibility of hazardous situation occurrence, an appropriate supervision service can reduce the risk of rockburst, for example, by distressing shooting, or withdraw workers from the threatened area. Good prediction of increased seismic activity is therefore a matter of great practical importance.
+
+The presented dataset is characterized by unbalanced distribution of positive and negative examples. In the dataset, there are only a certain number of positive examples representing class one.
+
+Attribute Information:
+
+Seismic represents the result of shift seismic hazard assessment in the mine working obtained by the seismic method, which can be lack of hazard, low hazard, high hazard, or danger state.
+Seismoacoustic represents the result of shift seismic hazard assessment in the mine working obtained by the seismoacoustic method.
+Shift provides information about the type of shift, whether it is a coal-getting or preparation shift.
+Genergy represents the seismic energy recorded within the previous shift by the most active geophone, out of geophones monitoring the longwall.
+Gpuls represents the number of pulses recorded within the previous shift by the most active geophone.
+Gdenergy represents a deviation of energy recorded within the previous shift by the most active geophone from average energy recorded during eight previous shifts.
+Gdpuls represents a deviation of the number of pulses recorded within the previous shift by the most active geophone from average number of pulses recorded during eight previous shifts.
+Ghazard represents the result of shift seismic hazard assessment in the mine working obtained by the seismoacoustic method based on registration coming from the most active geophone only.
+Nbumps represents the number of seismic bumps recorded within the previous shift.
+Nbumps2 through Nbumps89 represent the number of seismic bumps registered within the previous shift, categorized by energy ranges.
+Energy represents the total energy of seismic bumps registered within the previous shift.
+Maxenergy represents the maximum energy of the seismic bumps registered within the previous shift.
+Class represents the decision attribute, where one means that high energy seismic bump occurred in the next shift, indicating a hazardous state, and zero means that no high energy seismic bumps occurred in the next shift, indicating a non-hazardous state.
+
+Keywords: seismic hazard, coal mine, rockburst, machine learning, data clustering, artificial neural networks, seismoacoustic monitoring, mining hazards.

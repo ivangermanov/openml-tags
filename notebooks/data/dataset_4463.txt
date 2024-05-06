@@ -1,0 +1,23 @@
+Name: Wilt Seed Three Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Machine Learning, Mathematics
+
+Sub-sampling of the dataset Wilt with a seed of three arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals false.
+
+Generated with the following source code:
+
+def sub-sample(self, seed, number rows maximum equals two thousand, number columns maximum equals one hundred, number classes maximum equals ten, stratified equals true):
+
+The function sub-samples the dataset by first selecting a specified number of classes uniformly and then selects the corresponding data points. It then selects a specified number of columns uniformly and finally selects a specified number of data points while maintaining the class distribution.
+
+The function uses numpy's default random generator to generate random numbers. It first gets the unique classes in the dataset and if the number of classes exceeds the specified maximum, it selects the specified number of classes based on their frequency in the dataset.
+
+It then gets the indices of the data points belonging to the selected classes and subsets the data accordingly. Next, it checks if the number of columns exceeds the specified maximum and if so, selects the specified number of columns randomly.
+
+Finally, it checks if the number of data points exceeds the specified maximum and if so, uses scikit-learn's train test split function to select the specified number of data points while maintaining the class distribution.
+
+The resulting sub-sampled dataset is returned along with its metadata.
+
+Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class
+
+Keywords: machine learning, mathematics, dataset, sub-sampling, stratification, classification, feature selection.

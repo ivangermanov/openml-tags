@@ -1,0 +1,13 @@
+Subsampling of the Kick Dataset with Seed Zero
+
+This dataset is a subsampled version of the Kick dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the number of classes did not exceed ten. This was achieved by selecting classes based on their value counts, with probability proportional to their frequency.
+
+Following class sampling, the dataset underwent column sampling to reduce the number of features to one hundred. This was done by uniformly selecting feature indices without replacement.
+
+Finally, the dataset was further subsampled to limit the number of rows to two thousand. To maintain class balance, stratified sampling was employed, ensuring that each class was proportionally represented.
+
+The resulting dataset consists of various features, including Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Submodel, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer Reading, Nationality, Size, and others.
+
+Tags: Subsampling of the Kick Dataset with Seed Zero
+
+Keywords: Subsampling, Kick Dataset, Class Sampling, Column Sampling, Stratified Sampling, Feature Selection.

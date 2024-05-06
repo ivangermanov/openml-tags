@@ -1,0 +1,33 @@
+Name: Steel Plates Fault Seed One 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Steel Plates Fault with Seed Equal to One 
+Arguments include Number of Rows Maximum equals Two Thousand, 
+Number of Columns Maximum equals One Hundred, 
+Number of Classes Maximum equals Ten, 
+and No Stratify equals False. 
+
+Generated with the following source code:
+
+A function named subsample takes in parameters such as seed, number of rows maximum, 
+number of columns maximum, number of classes maximum, and whether it is stratified or not. 
+It returns a dataset.
+
+Within this function, a random number generator is created using the given seed.
+The input data and target values are stored in variables x and y respectively.
+Unique classes in the target values are found and stored in a variable called classes.
+If the number of unique classes exceeds the maximum allowed number of classes,
+then a specified number of classes are randomly selected based on their frequency,
+and the corresponding indices are found and used to subset the input data and target values.
+If the number of columns in the input data exceeds the maximum allowed number of columns,
+then a specified number of column indices are randomly selected and used to subset the input data.
+If the number of rows in the input data exceeds the maximum allowed number of rows,
+then the input data and target values are concatenated and split into two subsets 
+using a stratified sampling approach with the specified number of rows as the test size.
+Finally, the dataset is returned with the subsampled input data, target values, 
+categorical mask, and column names.
+
+Features: Twenty Seven Variables including the Target Variable
+
+Keywords: Machine Learning, Dataset, Subsampling, Stratified Sampling, Random Number Generator

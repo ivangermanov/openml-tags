@@ -1,0 +1,89 @@
+**Meta Album Fungi Dataset (Mini)**
+
+The Meta Album Fungi dataset is created by sampling the Danish Fungi 2020 dataset, itself a sampling of the Atlas of Danish Fungi repository. This dataset is sourced by a group of citizen botanists, verified by their peers using a ranking of each person's reliability, and finally verified by experts working at the Atlas.
+
+Of the one hundred twenty-eight classes in the original Danish Fungi 2020 dataset, the Meta Album Fungi dataset retains the twenty-five most populous classes, belonging to six genera, for a total of fifteen thousand one hundred twenty-two images, with a minimum of three hundred seventy-two and a maximum of one thousand two hundred twenty-one images per class. Each image contains a colored one hundred twenty-eight by one hundred twenty-eight pixel image of a fungus or a piece of a fungus from the corresponding class.
+
+Because the initial data was of widely varying sizes, a significant portion of the images had to be cropped, which was implemented by taking the largest possible square with the center at the middle of the initial image. Then, each squared image was scaled to the one hundred twenty-eight by one hundred twenty-eight standard using the Inter Area anti-aliasing filter from OpenCV.
+
+**Dataset Details**
+
+![Sample Image](https://meta-album.github.io/assets/img/samples/FNG.png)
+
+**Meta Album ID:** Plants Fungi
+
+**Meta Album URL:** https://meta-album.github.io/datasets/Fungi.html
+
+**Domain ID:** Plants
+
+**Domain Name:** Plants
+
+**Dataset ID:** Fungi
+
+**Dataset Name:** Fungi
+
+**Short Description:** Fungi dataset from Denmark
+
+**Number of Classes:** Twenty-Five
+
+**Number of Images:** Fifteen Thousand One Hundred Twenty-Two
+
+**Keywords:** Fungi, Ecology, Plants
+
+**Data Format:** Images
+
+**Image Size:** One Hundred Twenty-Eight by One Hundred Twenty-Eight Pixels
+
+**License (Original Data Release):** BSD Three-Clause License
+
+**License URL (Original Data Release):** https://github.com/DanishFungiDataset/blob/main/LICENSE
+
+**License (Meta Album Data Release):** BSD Three-Clause License
+
+**License URL (Meta Album Data Release):** https://github.com/DanishFungiDataset/blob/main/LICENSE
+
+**Source:** Danish Fungi Dataset
+
+**Source URL:** https://sites.google.com/view/danish-fungi-dataset
+
+**Created Date:** March First, Two Thousand Twenty-Two
+
+**Contact:** meta-album@chalearn.org
+
+**Contact URL:** https://meta-album.github.io/
+
+### **Cite this Dataset**
+```
+@article{danishfungi2020,
+    title={Danish Fungi 2020 - Not Just Another Image Recognition Dataset},
+    year={2020},
+    eprint={2103.10107},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+
+### **Cite Meta-Album**
+```
+@inproceedings{metaalbum2022,
+    title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+    booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+    url = {https://meta-album.github.io/},
+    year = {2022}
+}
+```
+
+### **More**
+For more information on the Meta-Album dataset, please see the NeurIPS 2022 paper.
+
+For details on the dataset preprocessing, please see the supplementary materials.
+
+Supporting code can be found on our GitHub repository.
+
+Meta-Album on Papers with Code.
+
+### **Other Versions of this Dataset**
+[Micro](https://www.openml.org/d/44272)
+[Extended](https://www.openml.org/d/44335)
+
+Keywords: Fungi, Ecology, Plants, Image Recognition, Citizen Botanists

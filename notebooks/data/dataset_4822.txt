@@ -1,0 +1,19 @@
+cpu act 
+
+Tags: Images, Machine Learning 
+
+Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark.
+
+Original link: 
+Original description:
+
+The Computer Activity database is a collection of computer systems activity measures. The data was collected from a Sun Sparcstation twenty seventy twelve with one hundred twenty eight Mbytes of memory running in a multi-user university department. Users would typically be doing a large variety of tasks ranging from accessing the internet, editing files or running very cpu-bound programs. The data was collected continuously on two separate occasions. On both occasions, system activity was gathered every five seconds. The final dataset is taken from both occasions with equal numbers of observations coming from each collection epoch.
+
+System measures used include reads between system memory and user memory, writes between system memory and user memory, number of system calls of all types, number of system read calls, number of system write calls, number of system fork calls, number of system exec calls, number of characters transferred by system read calls, number of characters transferred by system write calls, number of page out requests, number of pages paged out, number of pages placed on the free list, number of pages checked if they can be freed, number of page attaches satisfying a page fault by reclaiming a page in memory, number of page-in requests, number of pages paged in, number of page faults caused by protection errors, number of page faults caused by address translation, process run queue size, number of memory pages available to user processes, number of disk blocks available for page swapping, portion of time that CPUs run in user mode, portion of time that CPUs run in system mode, portion of time that CPUs are idle waiting for block IO, and portion of time that CPUs are otherwise idle.
+
+The two different regression tasks obtained from these databases are predicting the portion of time that CPUs run in user mode from all attributes and predicting the portion of time that CPUs run in user mode using a restricted number of attributes excluding the paging information.
+
+Characteristics: 
+Features: reads, writes, system calls, system read calls, system write calls, fork calls, exec calls, characters transferred by read calls, characters transferred by write calls, page out requests, pages paged out, pages placed on free list, pages checked to be freed, page attaches, page-in requests, pages paged in, page faults by protection errors, page faults by address translation, process run queue size, memory pages available to user processes, disk blocks available for page swapping.
+
+Keywords: computer activity, CPU usage, system calls, memory management, page faults, regression task.

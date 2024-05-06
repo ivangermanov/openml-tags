@@ -1,0 +1,15 @@
+Wine Quality White Seed Three N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Wine Quality White with a total of forty thousand four hundred ninety eight entries. The subsampling is done using a specific seed value of three, and the resulting dataset has a maximum of two thousand rows, one hundred columns, and ten classes.
+
+The subsample function generates a new dataset by uniformly sampling classes from the original dataset. If the number of unique classes exceeds ten, the function selects ten classes randomly based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, the function uniformly samples columns if required. If the number of columns exceeds one hundred, it randomly selects one hundred column indices and filters the data to include only these columns.
+
+Finally, if the resulting dataset has more than two thousand entries, it uses stratified sampling to select a subset of two thousand entries while maintaining the class distribution.
+
+The resulting dataset is returned with the categorical mask, column names, and other relevant information.
+
+Keywords: Subsampling, Machine Learning, Wine Quality, Stratified Sampling, Column Selection, Class Distribution

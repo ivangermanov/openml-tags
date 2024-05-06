@@ -1,0 +1,13 @@
+Subsampling of the dataset PC Four with a specified seed value generates a new dataset with reduced dimensions. The subsampling process involves uniform sampling of classes, columns, and rows to meet the specified maximum limits.
+
+The process begins by uniformly sampling classes from the unique set of classes present in the dataset. If the number of unique classes exceeds the maximum allowed, a random selection of classes is made based on their frequency distribution. The selected classes are then used to filter the dataset, retaining only the instances belonging to these classes.
+
+Next, the columns of the dataset are uniformly sampled to meet the maximum allowed column limit. A random selection of column indices is made, and the corresponding columns are retained in the dataset.
+
+Finally, the rows of the dataset are sampled to meet the maximum allowed row limit. This sampling is done in a stratified manner to maintain the class distribution of the original dataset.
+
+The resulting dataset is a reduced version of the original PC Four dataset, with a specified number of classes, columns, and rows. This dataset can be used for machine learning model training and testing.
+
+Features: Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comment, Lines of Comments, Condition Count, Cyclomatic Complexity Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Total Lines of Code.
+
+Keywords: Subsampling, Machine Learning, Dataset Reduction, Stratified Sampling, Class Distribution, Column Selection, Row Sampling.

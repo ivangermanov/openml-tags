@@ -1,0 +1,13 @@
+Philippine Seed One Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Earth Science, Health 
+
+Sub sampling of the dataset Philippine with seed equals one arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true generated with the following source code.
+
+The function sub sample takes in five parameters: self, seed, number rows max, number columns max, and number classes max, and stratified. It first initializes a random number generator using the given seed. Then it selects a uniform sample of classes from the unique values in the target variable, ensuring that the number of classes does not exceed the maximum allowed. It then selects the corresponding indices where these classes are present and filters the data accordingly.
+
+Next, it uniformly samples columns if required, selecting a specified number of column indices without replacement and sorting them. The corresponding column names are then used to filter the data. If the resulting data still has more rows than the maximum allowed, it performs stratified sampling using the target variable, ensuring that the class distribution is preserved. Finally, it returns a new dataset with the sampled data, along with the corresponding categorical mask and column names.
+
+Features: ... (omitted due to unreadability)
+
+Keywords: Philippine, sub sampling, earth science, health, stratified sampling, dataset

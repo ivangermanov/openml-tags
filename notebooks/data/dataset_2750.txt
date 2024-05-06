@@ -1,0 +1,27 @@
+**FOREX NZD/USD Day Close**
+
+Tags: Demographics, Finance, Forex, Forex Close, Forex Day, Meteorology
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description:** 
+This dataset contains historical price data of the New Zealand Dollar against the United States Dollar (NZD/USD) from Dukascopy. Each instance represents a single candlestick for a specific day. The dataset spans from January first to December thirteenth, excluding weekends since the Forex market is not active on those days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close price compared to the following day. Specifically, if the mean close price increases the following day, the class attribute is true; otherwise, it is false, indicating a decrease or stagnation in the mean close price.
+
+**Attributes:** 
+
+* **Time Stamp:** The time of the current data point in the Europe/Amsterdam time zone.
+* **Bid Open:** The initial bid price at the start of the time interval.
+* **Bid High:** The highest bid price recorded during the time interval.
+* **Bid Low:** The lowest bid price recorded during the time interval.
+* **Bid Close:** The final bid price at the end of the time interval.
+* **Bid Volume:** The frequency of changes in the bid price within the time interval.
+* **Ask Open:** The initial ask price at the start of the time interval.
+* **Ask High:** The highest ask price recorded during the time interval.
+* **Ask Low:** The lowest ask price recorded during the time interval.
+* **Ask Close:** The final ask price at the end of the time interval.
+* **Ask Volume:** The frequency of changes in the ask price within the time interval.
+* **Class:** Indicates whether the mean close price will increase or decrease the following day.
+
+Keywords: Forex, Historical Data, Candlestick, Time Series, Finance, Currency Exchange

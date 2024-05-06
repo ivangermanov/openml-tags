@@ -1,0 +1,49 @@
+Machine Learning, Mathematics 
+
+Subsampling of the dataset KDD Cup Nine Appetency with seed equals one arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true 
+
+Generated with the following source code 
+
+def subsample self seed number rows maximum equals two thousand number columns maximum equals one hundred number classes maximum equals ten stratified equals true 
+random number generator equals numpy dot random dot default random generator seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than number classes maximum 
+value counts equals y value counts 
+selected classes equals random number generator choice classes size equals number classes maximum replace equals false probability equals value counts divided by sum of value counts 
+Select the indices where one of these classes is present 
+indexes equals y index y is in selected classes 
+x equals x iloc indexes 
+y equals y iloc indexes 
+
+Uniformly sample columns if required 
+if length of x columns is greater than number columns maximum 
+column indexes equals random number generator choice list range length of x columns size equals number columns maximum replace equals false 
+sorted column indexes equals sorted column indexes 
+selected columns equals list x columns sorted column indexes 
+x equals x selected columns 
+else 
+sorted column indexes equals list range length of x columns 
+
+if length of x is greater than number rows maximum 
+Stratify accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals train test split data test size equals number rows maximum stratify equals data target name shuffle equals true random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask equals list self categorical mask i for i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: machine learning, mathematics, dataset, subsampling, stratification

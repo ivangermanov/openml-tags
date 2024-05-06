@@ -1,0 +1,54 @@
+Subsampling of the dataset Eye Movements with seed equals two 
+args nrows max equals two thousand 
+args ncols max equals one hundred 
+args nclasses max equals ten 
+args no stratify equals True 
+
+Generated with the following source code:
+
+def subsample(self, seed, number of rows maximum, number of columns maximum, number of classes maximum, stratified) -> Dataset:
+random number generator = numpy random default random generator with seed
+x equals self x
+y equals self y
+
+Uniformly sample classes equals y unique
+if length of classes is greater than number of classes maximum:
+value counts equals y value counts
+selected classes equals random number generator choice of classes, size equal to number of classes maximum, replace equals false, probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present
+indices equals y index where y is in selected classes
+x equals x iloc indices
+y equals y iloc indices
+
+Uniformly sample columns if required
+if length of x columns is greater than number of columns maximum:
+column indices equals random number generator choice of range of length of x columns, size equal to number of columns maximum, replace equals false
+sorted column indices equals sort of column indices
+selected columns equals list of x columns at sorted column indices
+x equals x of selected columns
+else:
+sorted column indices equals range of length of x columns
+
+if length of x is greater than number of rows maximum:
+Stratify accordingly
+target name equals y name
+data equals pandas concatenate of x and y along columns
+_, subset equals train test split of data, test size equals number of rows maximum, stratify equals data of target name, shuffle equals true, random state equals seed
+x equals subset drop target name along columns
+y equals subset of target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals list of self categorical mask at index in sorted column indices
+columns equals list of x columns
+return Dataset of 
+dataset equals self dataset,
+x equals x,
+y equals y,
+categorical mask equals categorical mask,
+columns equals columns)
+
+Features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label
+
+Tags: Machine Learning, Statistics
+
+Keywords: Subsampling, Eye Movements, Machine Learning, Statistics, Dataset

@@ -1,0 +1,15 @@
+Amazon Commerce Reviews Seed One 
+
+This dataset is a subsampled version of the Amazon Commerce Reviews dataset with a seed of one. It has been generated using specific parameters, including a maximum of two thousand rows, one hundred columns, and ten classes. The sampling strategy used is stratified.
+
+The subsampling process involves several steps. First, the classes are uniformly sampled. If there are more than ten unique classes, the ones to be included are chosen randomly based on their frequency distribution. The indices where these selected classes are present are then identified, and the corresponding data points are retained.
+
+Next, the columns are uniformly sampled if necessary. If there are more than one hundred columns, a random selection of one hundred columns is made. The remaining columns are then dropped.
+
+Finally, the number of rows is reduced to a maximum of two thousand. This is done using stratified sampling, which ensures that the class distribution is maintained.
+
+The resulting dataset consists of the retained data points, along with their corresponding labels and column information. The categorical mask, which indicates the categorical columns, is also preserved.
+
+Features: product reviews 
+
+Keywords: Amazon Commerce Reviews, subsampling, stratified sampling, class distribution, categorical columns

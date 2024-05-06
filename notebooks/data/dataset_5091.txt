@@ -1,0 +1,22 @@
+Timing Attack Dataset - Ten Micro Seconds Delay - Created On September Fourth Two Thousand Twenty-Two
+
+This dataset contains information about a timing attack with a ten microsecond delay. The dataset was created on September fourth two thousand twenty-two.
+
+Attribute Descriptions:
+
+CCS Zero: 
+The TCP source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, reserved flag, nonce flag, congestion window reduced flag, echo congestion notification flag, urgent flag, acknowledgment flag, push flag, reset flag, synchronize flag, finish flag, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options nop, option kind, option length, options timestamp ts value, time delta, and message order of the first change cipher spec TCP acknowledgment.
+
+TLS Zero:
+The TCP source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, reserved flag, nonce flag, congestion window reduced flag, echo congestion notification flag, urgent flag, acknowledgment flag, push flag, reset flag, synchronize flag, finish flag, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options nop, option kind, option length, options timestamp ts value, time delta, TLS record content type, TLS record length, TLS alert message level, TLS alert message description, and message order of the first TLS alert.
+
+DISC Zero and One:
+The TCP source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, reserved flag, nonce flag, congestion window reduced flag, echo congestion notification flag, urgent flag, acknowledgment flag, push flag, reset flag, synchronize flag, finish flag, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options nop, option kind, option length, options timestamp ts value, time delta, and message order of the first and second TCP disconnect.
+
+Features:
+label, CCS zero features, TLS zero features, DISC zero features, and DISC one features.
+
+Fold ID and Vulnerable Classes:
+Fold id zero and vulnerable classes including incorrect PKCS one padding first eight bytes after zero zero two, correctly formatted PKCS one PMS message but one byte shorter, no zero zero in message, wrong first byte zero zero set to seventeen, and wrong second byte zero two set to seventeen.
+
+Keywords: timing attack, Bleichenbacher, TCP, TLS, PKCS, vulnerability, cybersecurity.

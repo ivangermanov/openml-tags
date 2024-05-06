@@ -1,0 +1,14 @@
+Mammographic Mass Data Set
+Tags: Chemistry, Life Science
+
+Mammography is the most effective method for breast cancer screening available today. However, the low positive predictive value of breast biopsy resulting from mammogram interpretation leads to a significant number of unnecessary biopsies with benign outcomes. To address this issue, several computer-aided diagnosis systems have been proposed in recent years. These systems aim to assist physicians in their decision to perform a breast biopsy on a suspicious lesion seen in a mammogram or to perform a short-term follow-up examination instead.
+
+This data set can be utilized to predict the severity (benign or malignant) of a mammographic mass lesion based on BI-RADS attributes and the patient's age. The data set comprises a BI-RADS assessment, the patient's age, and three BI-RADS attributes along with the ground truth (the severity field) for a large number of benign and malignant masses identified on full-field digital mammograms collected at a prominent medical institution.
+
+Each instance has an associated BI-RADS assessment, ranging from definitely benign to highly suggestive of malignancy, assigned through a rigorous double-review process by experienced physicians. By assuming that all cases with BI-RADS assessments greater than or equal to a certain value are malignant and the others are benign, sensitivities and associated specificities can be calculated. These metrics serve as an indication of how well a computer-aided diagnosis system performs compared to radiologists.
+
+The class distribution of the data set is skewed, with a majority of benign cases. The data set consists of six attributes in total, including one goal field, one non-predictive attribute, and four predictive attributes. The attributes include BI-RADS assessment, age, shape, margin, density, and severity. Notably, some instances contain missing values for these attributes.
+
+Compared to its predecessor, this revised data set includes instances with missing values, which were previously excluded. Furthermore, the variable types are coded more accurately, reflecting the ordinal nature of BI-RADS assessment and density.
+
+Keywords: mammography, breast cancer, computer-aided diagnosis, BI-RADS attributes, severity prediction.

@@ -1,0 +1,30 @@
+**FOREX EUR/NOK Minute High**
+
+Tags: Finance, Forex, Forex High, Forex Minute, Manufacturing, Social Media
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+
+This dataset contains the historical price data of the Forex EUR/NOK from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active during these periods. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price of the subsequent minute relative to the mean high price of the current minute. In other words, the class attribute is true when the mean high price is expected to increase in the next minute, and false when it is expected to decrease or remain unchanged.
+
+**Note that this is a hypothetical task, intended for scientific purposes only. Realistic trading strategies should only be based on predictions made on close attributes (which are also available)**.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the beginning of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the beginning of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Indicates whether the average price will rise during the next interval.
+
+Keywords: Forex, EUR/NOK, Candlestick, Historical Data, Time Series, Trading Strategies

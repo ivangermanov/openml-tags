@@ -1,0 +1,26 @@
+FOREX Eur/Jpy Day Close
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Social Media
+
+Data Description
+
+This is the historical price data of the Forex Eur/Jpy currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The entire dataset spans a specific range of dates and does not include weekends, as the Forex market is not traded on weekends.
+
+The timezone of the feature Timestamp is set to Europe/Amsterdam. The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current day. In other words, the class attribute is true when the mean Close price is expected to increase the following day, and false when the mean Close price is expected to decrease or remain the same.
+
+Attributes
+
+* Timestamp: The time of the current data point, specified in the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the Bid Price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the Ask Price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Currency Pair, Historical Data, Candlestick, Timezone, Class Attribute, Mean Close Price.

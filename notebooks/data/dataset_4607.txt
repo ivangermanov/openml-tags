@@ -1,0 +1,15 @@
+Segment Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Statistics 
+
+Sub-sampling of the dataset segment with a seed equals two arguments. The sub-sampling function generates a dataset by randomly selecting a specified number of rows, columns, and classes from the original dataset while maintaining the original class distribution.
+
+The function first selects a specified number of unique classes from the dataset, ensuring that the selected classes are representative of the original class distribution. It then selects the corresponding rows where these classes are present.
+
+Next, the function uniformly samples columns from the dataset, ensuring that the selected columns are representative of the original column distribution. Finally, the function applies stratified sampling to select a specified number of rows while maintaining the original class distribution.
+
+The resulting sub-sampled dataset is then returned along with its corresponding metadata, including the column names and categorical mask.
+
+Features: Short Line Density Five, Short Line Density Two, Vegde Mean, Vegde Standard Deviation, Hedge Mean, Hedge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Ex Red Mean, Ex Blue Mean, Ex Green Mean, Value Mean, Saturation Mean, Hue Mean, Class.
+
+Keywords: Sub-sampling, Machine Learning, Statistics, Data Preprocessing, Stratified Sampling, Class Distribution, Column Selection.

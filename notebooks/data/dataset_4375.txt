@@ -1,0 +1,22 @@
+Name: Bank Marketing Seed One 
+
+Tags: Subsampling of the dataset Bank Marketing 
+
+Generated with the following source code:
+
+The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification or not. It returns a dataset.
+
+This function starts by setting up a random number generator using the given seed value. It then selects a uniform sample of classes from the given dataset, ensuring that the number of classes does not exceed the maximum allowed.
+
+If the number of classes exceeds the maximum, it calculates the value counts of each class and uses these to select the desired number of classes. The indices where these selected classes are present are then used to filter the data.
+
+Next, if the number of columns exceeds the maximum allowed, it uniformly samples the columns to reduce the dimensionality of the data. The selected column indices are sorted to ensure consistency.
+
+If the total number of rows exceeds the maximum allowed, it uses stratified sampling to reduce the number of rows while maintaining the class distribution. This is done using a train-test split with stratification based on the target variable.
+
+Finally, the categorical mask is updated based on the selected column indices, and the resulting dataset is returned.
+
+Features: 
+Class
+
+Keywords: Bank Marketing, Subsampling, Stratification, Random Sampling, Dimensionality Reduction

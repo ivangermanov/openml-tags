@@ -1,0 +1,14 @@
+Machine Learning, Mathematics 
+
+Subsampling of the dataset Credit G with a specified seed value involves selecting a portion of the data while maintaining its overall characteristics. This process is essential in machine learning to reduce the size of the dataset without compromising its integrity.
+
+The subsampling function takes several parameters, including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function begins by uniformly sampling classes from the dataset, ensuring that all classes are represented proportionally. It then selects the corresponding indices where these classes are present.
+
+If the number of columns exceeds the specified maximum, the function uniformly samples columns, preserving their order. Similarly, if the number of rows exceeds the maximum, the function employs stratified sampling to select a representative subset of the data.
+
+The resulting dataset consists of the selected features, target variable, and categorical mask. The categorical mask indicates which columns contain categorical variables, essential for preprocessing and modeling.
+
+Features: 
+checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, class 
+
+Keywords: subsampling, machine learning, dataset, stratification, categorical variables.

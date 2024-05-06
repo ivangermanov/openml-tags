@@ -1,0 +1,15 @@
+Subsampling of the Churn dataset with four thousand samples, one hundred features, and ten classes, using stratification.
+
+This dataset was generated using the following source code:
+
+A function called subsample takes five parameters: seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification. It uses NumPy's random default generator to uniformly sample classes, then selects the indices where one of these classes is present. It also uniformly samples columns if required, and finally stratifies the sampling of rows according to the target variable.
+
+The function first gets the unique classes from the target variable, and if there are more than the maximum number of classes, it selects a specified number of classes based on their frequency. Then it gets the indices where one of these classes is present, and selects the corresponding data points.
+
+Next, it checks if the number of columns exceeds the maximum number of columns, and if so, it uniformly samples the specified number of columns. Finally, if the number of data points exceeds the maximum number of rows, it stratifies the sampling of rows according to the target variable.
+
+The resulting dataset has four thousand samples, one hundred features, and ten classes, and was generated using stratification.
+
+Features include State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number VMail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number Customer Service Calls, and Class.
+
+Keywords: machine learning, transportation, subsampling, stratification, dataset generation.

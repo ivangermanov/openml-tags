@@ -1,0 +1,17 @@
+Name: OkCupid Stem Dataset 
+
+Tags: Life Science, Machine Learning 
+
+Subsampling of the dataset OkCupid Stem with a specific seed value. The function takes several arguments including the maximum number of rows, columns, and classes, as well as a boolean indicating whether to use stratified sampling.
+
+The function first uniformly samples classes from the unique values in the target variable, ensuring that the selected classes are representative of the overall distribution. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, the function uniformly samples columns if required, selecting a specified number of columns randomly without replacement. It sorts the selected column indices to maintain consistency.
+
+If the resulting dataset has more rows than desired, the function uses stratified splitting to reduce the dataset to the desired size while maintaining class balance.
+
+Finally, the function returns a new dataset object containing the subsampled data, along with metadata including the categorical mask and column names.
+
+Features: Age, Body Type, Diet, Drinks, Drugs, Education, Ethnicity, Height, Income, Location, Offspring, Orientation, Pets, Religion, Sex, Sign, Smokes, Speaks, Status, Job
+
+Keywords: OkCupid, Subsampling, Stratified Sampling, Machine Learning, Life Science, Data Preprocessing

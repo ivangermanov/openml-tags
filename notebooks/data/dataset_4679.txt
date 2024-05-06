@@ -1,0 +1,15 @@
+Name: Connect Four Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Machine Learning, Mathematics
+
+Subsampling of the dataset Connect Four with seed equal to four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals false generated with the following source code.
+
+The function subsample takes in five parameters: self, seed, number rows max, number columns max, and number classes max, and stratified. It returns a dataset. The function uses numpy random default random generator with the given seed. It then selects the features x and target variable y from the dataset. 
+
+The function first checks if the number of unique classes in the target variable y is greater than the maximum allowed number of classes. If so, it selects the required number of classes using value counts and probability proportional to their frequency. It then selects the indices where one of these classes is present and updates the features x and target variable y accordingly.
+
+Next, the function checks if the number of columns in the feature matrix x is greater than the maximum allowed number of columns. If so, it uniformly samples the required number of columns and updates the feature matrix x. 
+
+Finally, the function checks if the number of rows in the feature matrix x is greater than the maximum allowed number of rows. If so, it uses stratified sampling to select the required number of rows and updates the feature matrix x and target variable y accordingly. The function returns a new dataset with the updated feature matrix x, target variable y, categorical mask, and column names.
+
+Keywords: Connect Four, machine learning, mathematics, subsampling, dataset, stratified sampling, numpy, random generator.

@@ -1,0 +1,15 @@
+Australian Seed One N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+This is a subsampling of the dataset Australian with a total of forty-one thousand and ninety-eight-one samples. The subsampling was performed using the following arguments: number of rows maximum equals two thousand, number of columns maximum equals one hundred, number of classes maximum equals ten, and no stratify equals false. 
+
+The subsampling function generates a new dataset by uniformly sampling classes, columns, and rows from the original dataset. It first selects the unique classes present in the dataset and then chooses the specified number of classes randomly. If the number of classes exceeds the specified maximum, it selects the top classes based on their frequency in the dataset. 
+
+Next, it selects the column indices randomly and sorts them in ascending order. If the number of columns exceeds the specified maximum, it chooses the specified number of columns randomly. Otherwise, it uses all the columns. 
+
+Finally, it samples the rows uniformly while maintaining the class distribution. If the number of rows exceeds the specified maximum, it performs stratified sampling to ensure that the sampled rows represent the class distribution of the original dataset.
+
+Features: 
+
+Keywords: machine learning, mathematics, dataset, subsampling, stratification, uniform sampling.

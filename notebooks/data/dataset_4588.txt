@@ -1,0 +1,41 @@
+Subsampling of the dataset CMC with seed equal to three, arguments number rows max equal to two thousand, arguments number columns max equal to one hundred, arguments number classes max equal to ten, and arguments no stratify equals to true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified):
+    random number generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis
+    x equals self dot x
+    y equals self dot y
+
+    Uniformly sample classes equals y dot unique
+    If length of classes is greater than number classes maximum:
+        value counts equals y dot value counts
+        selected classes equals random number generator dot choice open parenthesis classes, size equals number classes maximum, replace equals false, probability equals value counts divided by sum of value counts close parenthesis
+        Select the indices where one of these classes is present
+        indices equals y dot index open bracket y dot is in open parenthesis selected classes close parenthesis close bracket
+        x equals x dot iloc open bracket indices close bracket
+        y equals y dot iloc open bracket indices close bracket
+
+    Uniformly sample columns if required
+    If length of x dot columns is greater than number columns maximum:
+        column indices equals random number generator dot choice open parenthesis list range open parenthesis length of x dot columns close parenthesis, size equals number columns maximum, replace equals false close parenthesis
+        sorted column indices equals sorted open parenthesis column indices close parenthesis
+        selected columns equals list x dot columns open bracket sorted column indices close bracket
+        x equals x open bracket selected columns close bracket
+    else:
+        sorted column indices equals list range open parenthesis length of x dot columns close parenthesis
+
+    If length of x is greater than number rows maximum:
+        Target name equals y dot name
+        Data equals pandas dot concat open parenthesis x, y, axis equals quote columns close quote close parenthesis
+        Subset equals sklearn model selection dot train test split open parenthesis data, test size equals number rows maximum, stratify equals data open bracket target name close bracket, shuffle equals true, random state equals seed close parenthesis
+        x equals subset dot drop open parenthesis target name, axis equals quote columns close quote close parenthesis
+        y equals subset open bracket target name close bracket
+
+    Categorical mask equals list comprehension self dot categorical mask open bracket i close bracket for i in sorted column indices
+    Columns equals list x dot columns
+    Return Dataset open parenthesis dataset equals self dot dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns close parenthesis
+
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Is Wife Working?, Husband's Occupation, Standard of Living Index, Media Exposure
+
+Keywords: subsampling, dataset, stratification, sampling, machine learning, classification

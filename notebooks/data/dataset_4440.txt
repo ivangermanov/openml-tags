@@ -1,0 +1,19 @@
+Machine Learning Model: Yeast Seed Zero 
+
+This model is a subsampled version of the Yeast dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
+
+The arguments used for subsampling include a seed value of zero, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the stratified sampling approach was employed.
+
+The subsampling process began by uniformly selecting classes from the original dataset. If the total number of unique classes exceeded the specified maximum, a random selection of classes was made based on their frequency distribution. The indices corresponding to the selected classes were then identified, and the relevant data points were retained.
+
+Next, the columns were uniformly sampled. If the total number of columns exceeded the specified maximum, a random selection of columns was made. The selected columns were then retained, and the remaining columns were discarded.
+
+Finally, the rows were sampled. If the total number of rows exceeded the specified maximum, a stratified sampling approach was employed to ensure that the class distribution was maintained.
+
+The resulting dataset consists of the sampled data points, along with their corresponding class labels and categorical mask information.
+
+Features include protein localization characteristics.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: subsampling, Yeast dataset, machine learning, stratified sampling, uniform sampling.

@@ -1,0 +1,17 @@
+The dataset named Albert has been subsampled with the following parameters: a seed value of zero, a maximum of two thousand rows, a maximum of one hundred columns, and a maximum of ten classes. The sampling process was performed in a stratified manner.
+
+This subsampled dataset was generated using the following Python function:
+
+```
+def subsample(self, seed, maximum_rows, maximum_columns, maximum_classes, stratified)
+```
+
+The function begins by uniformly sampling classes from the original dataset until the maximum number of classes is reached. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, the function uniformly samples columns from the filtered data until the maximum number of columns is reached. Finally, it applies stratified sampling to the resulting data to ensure an even distribution of classes.
+
+The resulting dataset contains a subset of the original features, which include various variables labeled from Variable One to Variable Seventy Eight, and a class variable. 
+
+Tags: Agriculture, Life Science
+
+Keywords: dataset, subsampling, stratified sampling, agriculture, life science

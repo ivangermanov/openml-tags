@@ -36,7 +36,8 @@ class ScrapyAugmenter:
 
         augmented_description = df.get(self.augmented_column, df[self.description_column])
 
-        if not df[self.scraped_column].empty:
-            df[self.augmented_column] = 'Scraped Data: ' + df[self.scraped_column] + '\n\n' + augmented_description
-
+        for index, row in df.iterrows():
+            if row[self.scraped_column] != '':
+                df.loc[index, self.augmented_column] = augmented_description[index] + '\n\n' + 'Scraped Data: ' + row[
+                    self.scraped_column]
         return df

@@ -1,0 +1,36 @@
+**Machine Learning, Medicine Nursery**
+
+The Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. This model was used during several years in the past when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation.
+
+The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family. The model was developed within an expert system shell for decision making.
+
+The hierarchical model ranks nursery-school applications according to the following concept structure:
+
+Evaluation of Applications for Nursery Schools
+Employment of Parents and Child's Nursery
+    Parents' Occupation
+    Child's Nursery
+Family Structure and Financial Standings
+    Family Structure
+        Form of the Family
+        Number of Children
+        Housing Conditions
+        Financial Standing of the Family
+Social and Health Picture of the Family
+    Social Conditions
+    Health Conditions
+
+Input attributes are printed in lowercase. Besides the target concept (Evaluation of Applications for Nursery Schools), the model includes four intermediate concepts: Employment of Parents and Child's Nursery, Family Structure and Financial Standings, Family Structure, and Social and Health Picture of the Family. Every concept is in the original model related to its lower-level descendants by a set of examples.
+
+The Nursery Database contains examples with the structural information removed, i.e., directly relates Evaluation of Applications for Nursery Schools to the eight input attributes. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
+
+Has Missing Values? No
+
+Additional Variable Information:
+
+Parents: usual, pretentious, great pretentious
+Form: complete, completed, incomplete, foster
+Social: non-problematic, slightly problematic, problematic
+Health: recommended, priority, not recommended
+
+Keywords: nursery school, hierarchical decision model, expert system, family structure, financial standing, social health picture, machine learning, medicine.

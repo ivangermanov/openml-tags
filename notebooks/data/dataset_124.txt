@@ -1,0 +1,26 @@
+Wisconsin Prognostic Breast Cancer 
+
+The Wisconsin Prognostic Breast Cancer dataset is a collection of medical data related to breast cancer diagnosis and prognosis. It contains thirty-four attributes, including the patient's identification number, outcome, time, and thirty-two real-valued input features. 
+
+Source Information 
+This dataset was created by the University of Wisconsin and donated to the public domain. It has been used in various research studies and publications, including those focused on machine learning, medicine, and openml-reg19.
+
+Past Usage 
+This dataset has been utilized in multiple research papers, exploring different approaches to predicting breast cancer outcomes. One study employed an inductive learning approach to prognostic prediction, while another utilized linear programming to diagnose and predict breast cancer outcomes.
+
+Relevant Information 
+Each record in the dataset represents follow-up data for one breast cancer case, featuring consecutive patients seen by doctors since nineteen eighty-four. These cases exhibit invasive breast cancer and no evidence of distant metastases at the time of diagnosis. The first thirty features are computed from a digitized image of a fine needle aspirate of a breast mass, describing characteristics of the cell nuclei present in the image.
+
+Two Possible Learning Problems 
+There are two potential learning problems associated with this dataset. The first involves predicting the field of outcome, where R indicates recurrence and N indicates non-recurrence. To accomplish this, the dataset should first be filtered to reflect a particular endpoint, such as recurrences before twenty-four months being considered positive and non-recurrence beyond twenty-four months being considered negative. The second learning problem involves predicting the time to recur, utilizing the recurrence surface approximation method.
+
+Attribute Information 
+The attributes in this dataset include the patient's identification number, outcome, time, and thirty-two real-valued input features. These features are computed from the digitized image of the fine needle aspirate and describe characteristics of the cell nuclei. They include the radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension of the cell nuclei.
+
+Missing Attribute Values 
+Lymph node status is missing in four cases.
+
+Class Distribution 
+The class distribution consists of one hundred fifty-one non-recurrence cases and forty-seven recurrence cases.
+
+Keywords: breast cancer, machine learning, medicine, prognosis, diagnosis, fine needle aspirate, cell nuclei, recurrence, non-recurrence.

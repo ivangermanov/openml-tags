@@ -1,0 +1,13 @@
+Machine Learning and Mathematics Subsampling of the dataset KDD Cup Nine Up Selling with Seed One 
+
+This dataset is generated using a specific algorithm that involves uniformly sampling classes and columns, followed by stratified sampling of rows. The goal is to create a smaller, more manageable dataset while preserving the overall characteristics of the original dataset.
+
+The process begins by uniformly sampling classes from the original dataset. If there are more than ten classes, a selection of ten classes is made based on their frequency distribution. The indices where these classes are present are then selected, and the corresponding data points are retained.
+
+Next, the algorithm uniformly samples columns from the selected data points. If there are more than one hundred columns, a selection of one hundred columns is made randomly. The selected columns are then retained, and the remaining columns are discarded.
+
+Finally, the algorithm performs stratified sampling of rows based on the class distribution. This ensures that the resulting dataset has a balanced representation of all classes.
+
+The resulting dataset consists of the selected features, including Var Six, Thirteen, Twenty-One, and so on, along with the Up Selling target variable. 
+
+Keywords: Machine Learning, Mathematics, Subsampling, Dataset, Stratified Sampling, Class Distribution.

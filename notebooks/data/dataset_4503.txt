@@ -1,0 +1,17 @@
+Airlines Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Agriculture, Earth Science 
+
+Sub-sampling of the dataset Airlines with a specified seed value generates a new dataset. The sub-sampling process involves uniformly selecting classes, columns, and rows while ensuring the stratification of the target variable. 
+
+The sub-sample method takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling. 
+
+First, the unique classes in the target variable are identified. If there are more classes than the specified maximum number of classes, a random selection of classes is made based on their frequency distribution. Then, the indices corresponding to the selected classes are obtained and used to sub-sample the data.
+
+Next, the columns are uniformly sampled if their number exceeds the specified maximum number of columns. The selected column indices are sorted to maintain the original column order.
+
+Finally, if the number of rows exceeds the specified maximum number of rows, stratified sampling is performed using a train-test split method. This ensures that the class distribution is maintained in the sub-sampled data.
+
+Features: Airline, Flight, Airport From, Airport To, Day Of Week, Time, Length, Delay
+
+Keywords: Airlines, Sub-sampling, Stratification, Sampling, Classes, Columns, Rows, Target Variable

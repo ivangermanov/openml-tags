@@ -1,0 +1,9 @@
+The Forest Fires dataset aims to predict the burned area of forest fires in the northeast region of Portugal by utilizing meteorological and other relevant data. To achieve this goal, the output variable, area, was initially transformed using a natural logarithm function with an offset of one, denoted as ln(x+1), to stabilize its variance. Subsequently, various data mining methods were applied to the transformed data. Following the modeling process, the predicted outputs were post-processed by applying the inverse of the ln(x+1) transformation to obtain the actual burned areas.
+
+This dataset comprises thirteen attributes, including spatial coordinates, temporal information, and meteorological indices. The spatial coordinates, X and Y, represent the location within the Montesinho park map. The month and day attributes provide temporal context, specifying the month of the year and day of the week, respectively. The meteorological indices, namely FFMC, DMC, DC, and ISI, are derived from the Canadian Fire Weather Index system. Additionally, the dataset includes measurements of temperature, relative humidity, wind speed, and outside rain.
+
+The area attribute, being the target variable, represents the burned area of the forest in hectares. Notably, the distribution of this variable is heavily skewed towards zero, suggesting that modeling its logarithmic transformation might be beneficial.
+
+This dataset has been extensively analyzed, with multiple input setups employed and various data mining methods applied. The performance of these models was evaluated using two regression metrics: Mean Absolute Deviation (MAD) and Root Mean Squared Error (RMSE). A Gaussian Support Vector Machine (SVM) model, trained on four direct weather conditions, achieved the best MAD value. Conversely, the naive mean predictor yielded the lowest RMSE.
+
+Keywords: Forest Fires, Burned Area, Meteorological Data, Data Mining, Regression Analysis, Logarithmic Transformation.

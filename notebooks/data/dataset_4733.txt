@@ -1,0 +1,17 @@
+Subsampling of the Kick dataset with a specific set of parameters has been performed. The resulting dataset has been generated using a particular source code.
+
+The subsample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling.
+
+The function first uniformly samples classes from the unique values in the target variable, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, the function uniformly samples columns if the number of columns exceeds the specified maximum. This is done by randomly selecting column indices and sorting them to ensure consistency.
+
+If the number of rows exceeds the specified maximum, the function performs stratified sampling using the train-test split function from scikit-learn. This ensures that the resulting dataset has the desired number of rows while maintaining the class distribution.
+
+Finally, the function converts categorical columns to strings and returns a new dataset object with the subsampled data, along with metadata such as the categorical mask and column names.
+
+Features of the Kick dataset include Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Submodel, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer, Nationality, Size, and others.
+
+Tags: Health, Statistics
+
+Keywords: subsampling, stratified sampling, dataset generation, feature selection, class balancing

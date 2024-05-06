@@ -1,0 +1,15 @@
+Do We Really Need Another Dataset of Books?
+
+My initial plan was to build a toy example for an article on recommender systems that I was writing. However, after conducting a thorough search online, I discovered several existing datasets, which unfortunately had various issues that rendered them unsuitable for my purposes. For instance, many were missing crucial information, such as descriptions of the books, or lacked a clear indication of the language used in each entry. Others employed unusual delimiters, making it difficult to work with the data.
+
+As a result, I decided to create a new dataset tailored to my specific needs. To begin, I obtained International Standard Book Numbers (ISBNs) from an existing dataset called Goodreads-books. Utilizing these unique identifiers, I then accessed the Google Books Application Programming Interface (API) to gather detailed information about each book. Following this, I merged the extracted data with select columns from the original dataset and performed extensive cleaning to produce the dataset presented here.
+
+This dataset offers numerous opportunities for exploration and analysis. One potential application is to conduct exploratory data analysis to uncover hidden patterns and relationships within the data. Additionally, clustering techniques could be applied to group books according to their topics or categories. Furthermore, a content-based recommendation engine could be developed using various fields from the book descriptions.
+
+It is worth noting that this dataset is smaller in size compared to its precursor, Goodreads-books. This discrepancy arises from the fact that many ISBNs from the original dataset failed to yield valid results when queried through the Google Books API. In the future, I plan to update this dataset by incorporating additional fields, such as title and author, into the API requests, thereby increasing its overall size.
+
+The creation of this dataset relied heavily on the Goodreads-books dataset, and I would like to extend my gratitude to its creators. The Google Books Crawler repository contains the necessary tools and resources used to build this dataset.
+
+Features of this dataset include book titles, subtitles, authors, categories, thumbnails, descriptions, publication years, average ratings, number of pages, and ratings counts.
+
+Keywords: machine learning, mathematics, recommender systems, dataset, Google Books API, exploratory data analysis, clustering, content-based recommendation engine.

@@ -1,0 +1,27 @@
+Grid Stability 
+
+Tags: Machine Learning, Physical Sciences 
+
+Data Description 
+The local stability analysis of the four node star system, where the electricity producer is in the center, implementing Decentralized Smart Grid Control concept was performed. This dataset contains simulations regarding electrical grid stability. The model is composed of a generator model and an economic model. The analysis is performed for different sets of input values. Several input values are kept the same, including the averaging time, which is two seconds, the coupling strength, which is eight per second squared, and the damping, which is point one per second. 
+
+The goal is to estimate the stability of the system. 
+
+Attribute Description 
+This dataset has fourteen features that describe the system. 
+
+First, there are the reaction times of participants, denoted by tau, which are real values ranging from point five to ten seconds. Tau one is the value for the electricity producer. 
+
+Next, there are the nominal powers consumed, which are negative, or produced, which are positive, denoted by p, which are real values. For consumers, these values range from minus point five to minus two per second squared. P one is equal to the absolute value of the sum of p two, p three, and p four. 
+
+Then, there are coefficients, denoted by g, which are proportional to price elasticity, and are real values ranging from point zero five to one per second. G one is the value for the electricity producer. 
+
+Finally, there are two target features. The first is the maximal real part of the characteristic equation root, denoted by stab, which is a real value. If this value is positive, then the system is linearly unstable. The second is the stability label of the system, denoted by stabf, which is a categorical value that can be either stable or unstable. 
+
+Dataset Information 
+This dataset has been scraped and does not have any missing values. 
+
+Additional Variable Information 
+There are eleven predictive attributes, one non predictive attribute, and two goal fields. 
+
+Keywords: grid stability, decentralized smart grid control, machine learning, physical sciences, electrical grid stability.

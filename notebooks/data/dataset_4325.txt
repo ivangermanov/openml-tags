@@ -1,0 +1,49 @@
+Subsampling of the dataset Credit with seed equals three arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number_rows_max, number_columns_max, number_classes_max, stratified):
+    random_number_generator = np.random.default_rng(seed)
+    x = self.x
+    y = self.y
+    
+    Uniformly sample classes equals y unique
+    if length of classes greater than number_classes_max:
+        value_counts = y value counts
+        selected_classes = random_number_generator choice classes size equals number_classes_max replace equals false probability equals value_counts divided by sum of value_counts
+        
+        Select the indices where one of these classes is present
+        idxs = y index y is in selected_classes
+        x = x iloc idxs
+        y = y iloc idxs
+        
+        Uniformly sample columns if required
+        if length of x columns greater than number_columns_max:
+            columns_indexes = random_number_generator choice list range length of x columns size equals number_columns_max replace equals false
+            sorted_column_indexes = sorted columns_indexes
+            selected_columns = list x columns sorted_column_indexes
+            x = x selected_columns
+        else:
+            sorted_column_indexes = list range length of x columns
+            
+        if length of x greater than number_rows_max:
+            Stratify accordingly
+            target_name = y name
+            data = pd concat x and y axis equals columns
+            _, subset = train_test_split data test_size equals number_rows_max stratify equals data target_name shuffle equals true random_state equals seed
+            x = subset drop target_name axis equals columns
+            y = subset target_name
+            
+        categorical_mask = self categorical_mask for i in sorted_column_indexes
+        columns = list x columns
+        
+        return Dataset 
+            dataset equals self dataset 
+            x equals x 
+            y equals y 
+            categorical_mask equals categorical_mask 
+            columns equals columns 
+
+Features: Revolving Utilization Of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number Of Open Credit Lines And Loans, Number Of Times Ninety Days Late, Number Real Estate Loans Or Lines, Number Of Dependents, Serious Delinquency In Two Years
+
+Keywords: Credit dataset, subsampling, stratification, feature selection, random sampling

@@ -1,0 +1,21 @@
+Name: Wilt Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Statistics 
+
+Subsampling of the dataset Wilt with a specified seed value, wherein we uniformly sample classes and columns, and subsequently select a specified number of rows while ensuring stratification according to the target variable.
+
+Generated with the following source code:
+
+def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, perform stratification)
+ 
+This function utilizes a random number generator to uniformly sample classes and columns from the dataset. It then proceeds to select a specified number of rows while ensuring stratification according to the target variable, thereby maintaining the overall distribution of the original dataset.
+
+The function takes into account the maximum number of classes, columns, and rows that should be sampled. If the number of unique classes exceeds the specified maximum, it selects the required number of classes based on their frequency of occurrence in the dataset.
+
+Similarly, if the number of columns exceeds the specified maximum, it randomly selects the required number of columns. The function also ensures that the selected columns are in a specific order to maintain consistency.
+
+Finally, if the total number of rows exceeds the specified maximum, it performs stratified sampling to select the required number of rows, thereby maintaining the overall distribution of the target variable.
+
+Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class
+
+Keywords: machine learning, statistics, dataset, subsampling, stratification, classification, feature selection

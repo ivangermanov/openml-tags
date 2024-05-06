@@ -1,0 +1,15 @@
+Particulate Matter UK Air 2017
+Tags: Machine Learning, Transportation
+
+This dataset consists of hourly particulate matter air pollution data for Great Britain for the year 2017, provided by Ricardo Energy and Environment on behalf of the UK Department for Environment, Food and Rural Affairs (Defra) and the Devolved Administrations. The data can be accessed through the UK Air website.
+
+The data was scraped from the UK Air homepage using the R package rdefra. Defra has published the data under the Open Government Licence. For a detailed description of all variables, please refer to the UK Air homepage. 
+
+The target variable selected is Particulate Matter 10 - Hourly Measured. Additionally, there is another measure of particulate matter, Particulate Matter 2.5 - Hourly Measured, which could be used as the target instead. The string variable datetime could be used to construct additional date and time features.
+
+In this version of the dataset, the features Longitude and Latitude have been removed to increase the importance of the categorical features Zone and Site Name.
+
+Features: 
+datetime, Hour, Month, Day of Week, Site Name, Environment Type, Zone, Altitude in meters, Particulate Matter 10 - Hourly Measured, Particulate Matter 2.5 - Hourly Measured.
+
+Keywords: Particulate Matter, Air Pollution, UK Air, Defra, Machine Learning, Transportation, Environmental Data.

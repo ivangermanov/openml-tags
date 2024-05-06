@@ -1,0 +1,28 @@
+FOREX usdchf-minute-Close 
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Minute, Social Media 
+
+**Source**: Dukascopy Historical Data Feed 
+
+**Data Description**
+
+This is the historical price data of the United States Dollar versus Swiss Franc (USD/CHF) from Dukascopy. Each instance represents one candlestick of one minute duration. The entire dataset spans from January first to December thirteenth and excludes weekends since the Forex market is not active on those days. The timestamp feature is based on the Europe Amsterdam time zone.
+
+The class attribute indicates the direction of the mean close bid and close ask prices for the subsequent minute compared to the mean close bid and close ask prices for the current minute. Specifically, the class attribute is true if the mean close price increases in the next minute and false if it decreases or remains the same.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe Amsterdam time zone.
+* **Bid Open**: The bid price at the beginning of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the beginning of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, USD/CHF, Candlestick, Time Series, Financial Markets, Machine Learning

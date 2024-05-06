@@ -1,0 +1,17 @@
+MiniBooNE Seed Four Dataset
+
+Tags: Subsampling of the MiniBooNE dataset 
+
+This dataset is a subsampled version of the original MiniBooNE dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset.
+
+The dataset was generated using a custom Python function that takes several arguments, including a random seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean flag indicating whether to stratify the sampling process.
+
+The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of the chosen classes is present and uses these indices to filter the data.
+
+Next, the function uniformly samples columns from the filtered data, selecting only the specified maximum number of columns. Finally, it applies stratified sampling to the resulting data, ensuring that the class distribution is preserved in the subsampled dataset.
+
+Features:
+
+signal
+
+Keywords: MiniBooNE, subsampling, stratified sampling, class selection, column selection

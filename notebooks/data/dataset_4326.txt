@@ -1,0 +1,11 @@
+Credit Seed Four Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True
+
+This dataset is a subsampling of the Credit dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, followed by uniformly sampling columns. The number of rows and columns were limited to ensure the dataset remained manageable.
+
+The Credit dataset was first filtered to select a specified number of classes. This was done by selecting the indices where one of the chosen classes was present. The dataset was then further filtered to select a specified number of columns.
+
+If the number of rows exceeded the maximum allowed, the dataset was stratified accordingly. This involved concatenating the feature data with the target variable, and then splitting the data into subsets using the target variable as a stratification criterion.
+
+The resulting dataset consists of a selection of features, including Revolving Utilization of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, and Number of Dependents. These features have been carefully chosen to provide a representative sample of the original Credit dataset.
+
+Keywords: Credit dataset, subsampling, stratification, feature selection, class sampling, column sampling

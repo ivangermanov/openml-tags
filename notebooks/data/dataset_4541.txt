@@ -1,0 +1,50 @@
+Subsampling of the dataset Ada with Seed equals One 
+Tags: Subsampling of the dataset Ada 
+
+Generated with the following source code:
+
+def subsample(self, Seed, Maximum Number of Rows, Maximum Number of Columns, Maximum Number of Classes, Stratified) -> Dataset:
+ 
+random number generator = numpy random default random generator(Seed)
+features = self features
+target variable = self target variable
+ 
+uniformly sample classes = target variable unique()
+if length of classes is greater than Maximum Number of Classes:
+    value counts = target variable value counts()
+    selected classes = random number generator choice(classes, size equals Maximum Number of Classes, replace equals False, probability equals value counts divided by sum of value counts,)
+ 
+select the indices where one of these classes is present 
+indices = target variable index where target variable is in selected classes
+features = features iloc indices
+target variable = target variable iloc indices
+ 
+uniformly sample columns if required
+if length of features columns is greater than Maximum Number of Columns:
+    column indices = random number generator choice(list range length of features columns), size equals Maximum Number of Columns, replace equals False,)
+    sorted column indices = sorted column indices
+    selected columns = list features columns sorted column indices
+    features = features selected columns
+else:
+    sorted column indices = list range length of features columns
+    
+if length of features is greater than Maximum Number of Rows:
+    stratify accordingly 
+    target name = target variable name
+    data = pandas concat features and target variable along columns axis
+    _, subset = sklearn model selection train test split(data, test size equals Maximum Number of Rows, stratify equals data target name, shuffle equals True, random state equals Seed,)
+    features = subset drop target name along columns axis
+    target variable = subset target name
+    
+convert categorical columns to string for OpenML 
+categorical mask = list of self categorical mask for i in sorted column indices
+column names = list features column names
+return Dataset(
+    dataset equals self dataset,
+    features equals features,
+    target variable equals target variable,
+    categorical mask equals categorical mask,
+    column names equals column names,
+)
+
+Keywords: dataset, subsampling, stratification, feature selection, random sampling

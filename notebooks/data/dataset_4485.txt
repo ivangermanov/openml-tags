@@ -1,0 +1,15 @@
+Machine Learning Dataset: Dilbert 
+
+This dataset is a subsample of the original Dilbert dataset, generated using a specific set of parameters. The sampling process involves uniform selection of classes, columns, and rows to ensure a representative subset of the original data.
+
+The sampling algorithm starts by selecting a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the algorithm selects the required number of classes using their relative frequencies as weights. It then filters the data to include only the instances belonging to the selected classes.
+
+Next, the algorithm selects a specified number of columns uniformly at random. If the number of columns exceeds the maximum allowed, it filters the data to include only the selected columns.
+
+Finally, the algorithm selects a specified number of instances using stratified sampling to maintain the class distribution. This ensures that the sampled data retains the same class proportions as the original data.
+
+The resulting dataset contains a subset of the original features, which are not human-readable. However, the dataset retains its machine learning relevance and can be used for various modeling tasks.
+
+Tags: Machine Learning, Mathematics 
+
+Keywords: subsampling, dataset, machine learning, stratified sampling, class distribution.

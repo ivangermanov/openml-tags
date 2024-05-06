@@ -1,0 +1,17 @@
+The Diabetes One Hundred Thirty Hospitals dataset represents ten years of clinical care at One Hundred Thirty United States hospitals and delivery networks, collected from Nineteen Ninety-Nine to Two Thousand Eight. Each record represents the hospital admission record for a patient diagnosed with diabetes whose stay lasted between one to fourteen days.
+
+The features describing each encounter include demographics, diagnoses, diabetic medications, number of visits in the year preceding the encounter, and payer information, as well as whether the patient was readmitted after release, and whether the readmission occurred within thirty days of the release.
+
+This version of the dataset was derived by the Fairlearn team for the SciPy Two Thousand Twenty-One tutorial "Fairness in Artificial Intelligence Systems: From Social Context to Practice Using Fairlearn". In this version, the target variable "readmitted" is binarized into whether the patient was re-admitted within thirty days.
+
+The dataset does not have a recommended data split, but the standard train-test split could be used. Alternatively, a three-way holdout split, such as train-validation-test, could be employed when doing model selection.
+
+The dataset contains information that might be considered sensitive, including details about the age, gender, and race of the patients.
+
+The dataset represents ten years of clinical care at One Hundred Thirty United States hospitals and integrated delivery networks, and includes over fifty features representing patient and hospital outcomes. Information was extracted from the database for encounters that satisfied specific criteria, including being an inpatient encounter, being a diabetic encounter, having a length of stay between one and fourteen days, having laboratory tests performed during the encounter, and having medications administered during the encounter.
+
+The data contains attributes such as patient demographics, admission type, time in hospital, medical specialty of admitting physician, number of lab tests performed, diagnosis, number of medications, diabetic medications, and number of outpatient, inpatient, and emergency visits in the year before the hospitalization.
+
+Yes, the dataset has missing values.
+
+Keywords: Diabetes, Hospitals, Artificial Intelligence, Fairness, Sensitive Data, Demographics, Diabetic Encounters.

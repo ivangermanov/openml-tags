@@ -1,0 +1,28 @@
+**FOREX Eur Jpy Hour Close**
+
+Tags: Astronomy, Finance, Forex, Forex Close, Forex Hour, Physical Sciences
+
+**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+
+**Data Description**
+
+This dataset comprises historical price data of the Foreign Exchange Rate Eur/Jpy from Dukascopy. Each instance represents one candlestick of one hour. The entire dataset spans a period from January first to December thirteenth and excludes weekends, as the Foreign Exchange market does not operate on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute denotes the direction of the mean of the close bid and close ask prices of the subsequent hour relative to the mean of the close bid and close ask prices of the current hour. Specifically, the class attribute is true when the mean close price increases over the next hour, and false when the mean close price decreases or remains unchanged over the next hour.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the beginning of this time interval.
+* **Bid High**: The highest bid price recorded during this time interval.
+* **Bid Low**: The lowest bid price recorded during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The frequency of changes in the bid price within this time interval.
+* **Ask Open**: The ask price at the beginning of this time interval.
+* **Ask High**: The highest ask price recorded during this time interval.
+* **Ask Low**: The lowest ask price recorded during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The frequency of changes in the ask price within this time interval.
+* **Class**: Whether the average price will rise over the subsequent hour.
+
+Keywords: Forex, Eur Jpy, Candlestick, Historical Data, Foreign Exchange Rate, Time Series Analysis.

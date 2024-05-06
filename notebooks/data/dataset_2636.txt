@@ -1,0 +1,28 @@
+**FOREX eur huf hour High**
+
+Tags: Computer Systems, Education, Finance, Forex, Forex High, Forex Hour
+
+This dataset contains historical price data of the Forex Euro Hungarian Forint exchange rate from Dukascopy. Each instance represents one hour-long candlestick. The entire dataset spans a period from January to December and excludes weekends, as the Forex market is not active during those days. The timestamp feature is set to the Europe Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price in the following hour relative to the current hour. Specifically, it is true if the mean high price is expected to increase in the next hour and false otherwise.
+
+**Data Description**
+
+This dataset is intended for scientific purposes only and should not be used for actual trading decisions. A realistic trade strategy would require predicting the close attributes, which are also available.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this time interval.
+* **Bid High**: The highest bid price during this time interval.
+* **Bid Low**: The lowest bid price during this time interval.
+* **Bid Close**: The bid price at the end of this time interval.
+* **Bid Volume**: The number of times the bid price changed within this time interval.
+* **Ask Open**: The ask price at the start of this time interval.
+* **Ask High**: The highest ask price during this time interval.
+* **Ask Low**: The lowest ask price during this time interval.
+* **Ask Close**: The ask price at the end of this time interval.
+* **Ask Volume**: The number of times the ask price changed within this time interval.
+* **Class**: Whether the average high price will increase during the next time interval.
+
+Keywords: Forex, Euro, Hungarian Forint, Candlestick, Time Series, Finance, Trading, Prediction

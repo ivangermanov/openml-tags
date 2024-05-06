@@ -1,0 +1,31 @@
+The Multiple Features Dataset: Zernike 
+
+Tags: Images, Machine Learning, OpenML-CC18, OpenML100, study_1, study_123, study_14, study_34, study_37, study_41, study_52, study_7, study_70, study_76, study_98, study_99, uci 
+
+This dataset is one of a set of six datasets describing features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Each corresponding pattern in different datasets corresponds to the same original character. Two thousand instances have been digitized in binary images. In this dataset, these digits are represented in terms of forty-seven rotation-invariant Zernike moments.
+
+Attribute Information 
+
+The attributes represent forty-seven rotation-invariant Zernike moments. However, they cannot distinguish samples of class Six from those of class Nine. For more information on Zernike moments, please refer to the paper titled "Rotation Invariant Pattern Recognition Using Zernike Moments" by A. Khotanzad and Y.H. Hong.
+
+Relevant Papers 
+
+A slightly different version of the database was used in the paper titled "Handwritten Digit Recognition by Combined Classifiers" by M. van Breukelen, et al. The database as is was used in the paper titled "Statistical Pattern Recognition: A Review" by A.K. Jain, et al.
+
+Dataset Information 
+
+This dataset consists of features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Two thousand patterns have been digitized in binary images. These digits are represented in terms of the following six feature sets: 
+
+One: Seventy-six Fourier coefficients of the character shapes 
+Two: Two hundred sixteen profile correlations 
+Three: Sixty-four Karhunen-Love coefficients 
+Four: Two hundred forty pixel averages in two by three windows 
+Five: Forty-seven Zernike moments 
+Six: Six morphological features 
+
+In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one to nine. Corresponding patterns in different feature sets correspond to the same original character. The source image dataset is lost. Using the pixel dataset, sampled versions of the original images may be obtained (fifteen by sixteen pixels).
+
+Has Missing Values? 
+No 
+
+Keywords: handwritten numerals, Zernike moments, machine learning, image processing, feature extraction.

@@ -1,0 +1,22 @@
+Segment Dataset Information:
+
+This dataset contains instances drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every pixel. Each instance represents a three-by-three region.
+
+Has Missing Values?
+No
+
+Additional Variable Information:
+
+The region centroid column refers to the column of the center pixel of the region. Similarly, the region centroid row is the row of the center pixel of the region. The region pixel count is nine, which is the total number of pixels in a region.
+
+The short line density five feature represents the results of a line extraction algorithm that counts the number of lines of length five with low contrast, less than or equal to five, going through the region. On the other hand, the short line density two feature counts lines of high contrast, greater than five.
+
+The vertical edge detector measures the contrast of horizontally adjacent pixels in the region, providing both the mean and standard deviation values. Similarly, the horizontal line detector measures the contrast of vertically adjacent pixels, also providing both mean and standard deviation values.
+
+The intensity mean feature calculates the average over the region of the sum of the red, green, and blue color values divided by three. Additionally, there are features representing the average values of the red, blue, and green color components individually.
+
+Excess color features include excess red, measured as twice the red value minus the sum of the green and blue values; excess blue, measured as twice the blue value minus the sum of the red and green values; and excess green, measured as twice the green value minus the sum of the red and blue values.
+
+Finally, there are features representing a three-dimensional nonlinear transformation of the RGB color space, including value, saturation, and hue mean values.
+
+Keywords: image segmentation, outdoor images, pixel classification, line extraction, edge detection, color analysis, image features.

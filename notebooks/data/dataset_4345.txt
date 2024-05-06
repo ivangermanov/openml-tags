@@ -1,0 +1,51 @@
+Electricity Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Geography, Politics 
+
+Sub sampling of the dataset Electricity with Seed equals One arguments N Rows equals Two Thousand arguments N Columns equals One Hundred arguments N Classes equals Ten arguments No Stratify equals False 
+
+Generated with the following source code:
+
+def sub sample self seed int N Rows Max int equals Two Thousand N Columns Max int equals One Hundred N Classes Max int equals Ten stratified bool equals True 
+returns Dataset 
+rng equals numpy random default random generator seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than N Classes Max 
+vcs equals y value counts 
+selected classes equals rng choice classes size equals N Classes Max replace equals False probability equals vcs divided by sum of vcs 
+Select the indices where one of these classes is present 
+idxs equals y index y is in selected classes 
+x equals x iloc idxs 
+y equals y iloc idxs 
+
+Uniformly sample columns if required 
+if length of x columns is greater than N Columns Max 
+columns idxs equals rng choice list range length of x columns size equals N Columns Max replace equals False 
+sorted column idxs equals sorted columns idxs 
+selected columns equals list x columns sorted column idxs 
+x equals x selected columns 
+else 
+sorted column idxs equals list range length of x columns 
+
+if length of x is greater than N Rows Max 
+Stratify accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals train test split data test size equals N Rows Max stratify equals data target name shuffle equals True random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for Open ML 
+categorical mask equals self categorical mask i for i in sorted column idxs 
+columns equals list x columns 
+returns Dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Keywords: Electricity, Geography, Politics, Sub sampling, Stratify, Random Generator

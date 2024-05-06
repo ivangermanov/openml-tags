@@ -1,0 +1,13 @@
+Machine Learning, Transportation 
+
+Subsampling of the dataset Eucalyptus with a specified seed value generated a new dataset. This new dataset was created using a function that takes several parameters including the maximum number of rows, columns, and classes, as well as a boolean indicating whether to use stratification.
+
+The function first uniformly samples the classes present in the dataset. If there are more classes than the specified maximum, it selects the desired number of classes based on their frequency in the dataset. It then selects the rows where any of these chosen classes are present.
+
+Next, the function uniformly samples the columns of the dataset if necessary. If the number of columns exceeds the specified maximum, it randomly chooses the desired number of columns.
+
+Finally, if the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to select the desired number of rows. The resulting dataset is then returned, along with information about which columns contain categorical data.
+
+Features of this dataset include Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Specific Property, Plantation Management Corporation Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, and Utility.
+
+Keywords: Machine Learning, Transportation, Subsampling, Stratification, Eucalyptus, Dataset.

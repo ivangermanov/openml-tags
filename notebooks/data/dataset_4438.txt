@@ -1,0 +1,13 @@
+Subsampling of the dataset KDD Cup Nine Up Selling with Seed Three 
+
+This dataset is generated through subsampling of the original KDD Cup Nine Up Selling dataset using a specific set of parameters. The subsampling process involves uniformly sampling classes from the original dataset, followed by uniform sampling of columns and rows.
+
+The subsampling function takes into account several parameters, including the maximum number of rows, columns, and classes, as well as whether to perform stratified sampling or not. In this case, the function is called with a seed value of three, a maximum of two thousand rows, one hundred columns, and ten classes, with stratification turned on.
+
+The function first selects a subset of classes from the original dataset, ensuring that the chosen classes are representative of the overall distribution of classes. It then selects the corresponding rows from the original dataset based on the chosen classes. Next, it uniformly samples columns from the resulting dataset, selecting only the most relevant ones. Finally, it performs stratified sampling on the remaining rows to ensure that the final dataset is representative of the original population.
+
+The resulting dataset consists of a subset of the original features, including Var Six, Thirteen, Twenty One, and so on. These features are chosen based on their relevance and importance in the original dataset.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: subsampling, dataset, KDD Cup Nine Up Selling, stratified sampling, machine learning, mathematics.

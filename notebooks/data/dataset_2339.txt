@@ -1,0 +1,11 @@
+DEXTER is a text classification problem in a bag-of-words representation. This is a two-class classification problem with sparse continuous input variables. This dataset is one of five datasets of the NIPS feature selection challenge.
+
+The original dataset was a subset of the well-known Reuters text categorization benchmark. The data was originally collected and labeled in the course of developing the CONSTRUE text categorization system. It is hosted by the UCI KDD repository.
+
+We used the corporate acquisition text classification class pre-processed in the bag-of-words representation. There were features representing frequencies of occurrence of word stems in text. The task is to learn which Reuters articles are about corporate acquisitions. We added a number of distractor features called probes having no predictive power. The order of the features and patterns were randomized.
+
+The dataset is split into training, validation, and test sets. Target values are provided only for the training and validation sets. The data are in the following format: parameters and statistics about the data, identities of the features, training set, validation set, test set, labels for training examples, validation set labels, and test set labels.
+
+The dataset has real features and probe features, totaling twenty thousand features. The data do not have missing values.
+
+Keywords: text classification, bag-of-words, Reuters, corporate acquisition, feature selection, NIPS challenge.

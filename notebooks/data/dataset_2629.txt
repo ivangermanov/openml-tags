@@ -1,0 +1,27 @@
+**FOREX EURCHF Minute Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Transportation
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+This dataset contains historical price data of the Forex EUR/CHF currency pair from Dukascopy. Each instance, or row, represents a single candlestick of one minute duration. The entire dataset spans a specific date range and excludes weekends, as the Forex market is not active during these periods. All timestamps are based on the Europe/Amsterdam timezone.
+
+The dataset includes various attributes related to the currency pair's prices and trading volumes. These attributes provide detailed information about the market activity during each minute interval. The class attribute is particularly important, as it indicates the direction of the mean close price in the subsequent minute relative to the current minute.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, expressed in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the start of the current time interval.
+* **Bid High**: The highest bid price recorded during the current time interval.
+* **Bid Low**: The lowest bid price recorded during the current time interval.
+* **Bid Close**: The bid price at the end of the current time interval.
+* **Bid Volume**: The number of times the bid price changed within the current time interval.
+* **Ask Open**: The ask price at the start of the current time interval.
+* **Ask High**: The highest ask price recorded during the current time interval.
+* **Ask Low**: The lowest ask price recorded during the current time interval.
+* **Ask Close**: The ask price at the end of the current time interval.
+* **Ask Volume**: The number of times the ask price changed within the current time interval.
+* **Class**: A binary indicator of whether the average close price will increase or decrease (or remain unchanged) in the next minute interval.
+
+Keywords: Forex, EURCHF, Candlestick, Finance, Market Data, Currency Pair, Trading Volume.

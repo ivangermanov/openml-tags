@@ -1,0 +1,28 @@
+**FOREX aud/chf Hourly High**
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour, Machine Learning
+
+This dataset contains historical price data of the Australian Dollar/Swiss Franc (AUD/CHF) currency pair from Dukascopy. Each row represents a single hourly candlestick, with a total data range spanning from January to December.
+
+The dataset excludes weekends, as the Forex market is not active during these periods. All timestamps are recorded in the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price over the subsequent hour, relative to the current hourly mean high price. Specifically, the class attribute is true if the mean high price increases over the next hour, and false if it decreases or remains unchanged.
+
+Please note that this dataset is intended for scientific purposes only and should not be used to inform real-world trading decisions. In practice, realistic trade strategies should be based on predictions of closing prices, which are also available in this dataset.
+
+**Data Attributes**
+
+* **Timestamp**: The time of the current data point, recorded in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of this hourly interval.
+* **Bid High**: The highest bid price reached during this hourly interval.
+* **Bid Low**: The lowest bid price reached during this hourly interval.
+* **Bid Close**: The bid price at the end of this hourly interval.
+* **Bid Volume**: The number of times the bid price changed within this hourly interval.
+* **Ask Open**: The ask price at the start of this hourly interval.
+* **Ask High**: The highest ask price reached during this hourly interval.
+* **Ask Low**: The lowest ask price reached during this hourly interval.
+* **Ask Close**: The ask price at the end of this hourly interval.
+* **Ask Volume**: The number of times the ask price changed within this hourly interval.
+* **Class**: Indicates whether the average high price will increase over the next hourly interval.
+
+Keywords: Forex, AUD/CHF, Candlestick, Machine Learning, Economic Analysis, Financial Markets

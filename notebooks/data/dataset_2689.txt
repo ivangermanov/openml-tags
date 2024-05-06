@@ -1,0 +1,28 @@
+FOREX EUR NOK Hour High Dataset
+
+Tags: Chemistry, Computational Universe, Finance, Forex, Forex High, Forex Hour
+
+This dataset contains historical price data of the Forex EUR/NOK pair obtained from Dukascopy Historical Data Feed. Each instance represents one hour-long candlestick, and the entire dataset spans from January to December.
+
+The Forex market is not operational on weekends; therefore, the dataset excludes weekend data. All timestamps are based on the Europe/Amsterdam time zone.
+
+The class attribute is defined as the direction of the mean high price of the subsequent hour relative to the mean high price of the current hour. In other words, if the mean high price is expected to rise in the next hour, the class attribute is labeled as true; otherwise, it is labeled as false if the price remains the same or falls.
+
+Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies require predicting close attributes, which are also available in the dataset.
+
+Attributes:
+
+* Timestamp: The time of the current data point based on the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the beginning of the time interval.
+* Bid High: The highest bid price recorded during the time interval.
+* Bid Low: The lowest bid price recorded during the time interval.
+* Bid Close: The bid price at the end of the time interval.
+* Bid Volume: The number of times the bid price changed within the time interval.
+* Ask Open: The ask price at the beginning of the time interval.
+* Ask High: The highest ask price recorded during the time interval.
+* Ask Low: The lowest ask price recorded during the time interval.
+* Ask Close: The ask price at the end of the time interval.
+* Ask Volume: The number of times the ask price changed within the time interval.
+* Class: Whether the average price will rise during the next interval.
+
+Keywords: Forex, EUR/NOK, Candlestick, Time Series, Financial Data, Machine Learning.

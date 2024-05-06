@@ -1,0 +1,19 @@
+Churn Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Demographics, Geography 
+
+Sub-sampling of the dataset Churn with a seed of three, arguments of maximum two thousand rows, one hundred columns, ten classes, and stratification set to true. 
+
+Generated with the following source code:
+
+The function sub-samples the dataset by first uniformly selecting classes from the unique values in the target variable, ensuring the number of classes does not exceed the specified maximum. It then selects the corresponding indices where these classes are present, reducing the dataset to only include these samples. 
+
+Next, the function uniformly samples columns if the number of columns exceeds the specified maximum, selecting a specified number of columns randomly without replacement. 
+
+If the remaining dataset still has more rows than the specified maximum, the function uses stratified sampling to select the desired number of rows, ensuring the class distribution remains consistent. 
+
+The resulting sub-sampled dataset is returned, including the categorical mask and column information.
+
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number V-Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge...
+
+Keywords: Churn, Sub-sampling, Stratification, Demographics, Geography

@@ -1,0 +1,15 @@
+Subsampling of the dataset Shuttle with a specified seed value generates a new dataset with reduced number of rows, columns, and classes while maintaining the overall characteristics of the original dataset.
+
+The subsampling process involves several steps. First, the unique classes in the target variable are identified, and if there are more than the specified maximum number of classes, a subset of classes is randomly selected using a probability proportional to their frequency in the dataset.
+
+Next, the indices where one of the selected classes is present are identified, and the corresponding rows from the feature matrix and target variable are extracted. This ensures that the resulting dataset has a balanced representation of the selected classes.
+
+If the number of columns in the feature matrix exceeds the specified maximum, a random subset of columns is selected uniformly. The resulting dataset consists of the selected columns and the corresponding rows.
+
+Finally, if the number of rows in the resulting dataset still exceeds the specified maximum, stratified sampling is applied to reduce the number of rows while maintaining the class balance.
+
+The resulting dataset is a subsampled version of the original Shuttle dataset, with a reduced number of rows, columns, and classes, while preserving the overall characteristics of the original dataset.
+
+Machine Learning, Statistics
+
+Keywords: subsampling, dataset, stratified sampling, class balance, feature selection.

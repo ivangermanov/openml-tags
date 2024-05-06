@@ -1,0 +1,15 @@
+Subsampling of the Dataset KDD Cup Nine Appetency 
+
+This dataset is a subsampled version of the KDD Cup Nine Appetency dataset. The subsampling process involves uniformly sampling classes and columns from the original dataset. 
+
+The subsampling function takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+
+First, the function identifies the unique classes in the dataset and selects a specified number of them randomly. It then selects the indices where one of these classes is present and subsets the data accordingly. 
+
+Next, the function uniformly samples columns from the remaining dataset. It does this by generating a list of column indices, sorting them, and selecting a specified number of columns. 
+
+Finally, the function stratifies the remaining data according to the target variable and samples a specified number of rows. This ensures that the resulting dataset maintains a similar class distribution to the original.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: Subsampling, KDD Cup Nine Appetency, Machine Learning, Stratification, Data Sampling

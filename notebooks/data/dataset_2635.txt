@@ -1,0 +1,28 @@
+**FOREX Eur/Pln Minute High**
+
+Tags: Finance, Forex, Forex High, Forex Minute, Language, Life Science
+
+This dataset contains historical price data of the Forex Eur/Pln currency pair from Dukascopy. Each instance represents a one-minute candlestick, and the entire dataset spans from January first to December thirteenth, excluding weekends since the Forex market is not active during these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute is determined by the direction of the mean high price in the subsequent minute compared to the mean high price in the current minute. Specifically, the class attribute is true if the mean high price increases in the following minute, and false if it decreases or remains unchanged.
+
+Please note that this task is hypothetical and intended for scientific purposes only. Realistic trading strategies should be based on predictions of close attributes, which are also available in this dataset.
+
+**Data Description**
+
+The dataset consists of the following attributes:
+
+* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price during this time interval.
+* Bid Low: The lowest bid price during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price during this time interval.
+* Ask Low: The lowest ask price during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Eur/Pln, Historical Data, Candlestick, Time Series, Finance, Trading Strategy

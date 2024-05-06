@@ -1,0 +1,24 @@
+**FOREX EUR/NZD Day Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Social Media
+
+This dataset contains historical price data of the Forex EUR/NZD currency pair obtained from Dukascopy Historical Data Feed. Each instance represents a daily candlestick, and the entire dataset spans from January to December. Since the Forex market is closed on weekends, there are no entries for Saturday and Sunday.
+
+The timestamp feature is based on the Europe/Amsterdam timezone. The class attribute is determined by the direction of the mean close price of the following day relative to the mean close price of the current day. In other words, if the mean close price increases the following day, the class attribute is true; otherwise, it is false.
+
+The dataset includes the following attributes:
+
+* Timestamp: The date and time of each data point
+* Bid Open: The initial bid price of each time interval
+* Bid High: The highest bid price reached during each time interval
+* Bid Low: The lowest bid price reached during each time interval
+* Bid Close: The final bid price of each time interval
+* Bid Volume: The number of changes in the bid price within each time interval
+* Ask Open: The initial ask price of each time interval
+* Ask High: The highest ask price reached during each time interval
+* Ask Low: The lowest ask price reached during each time interval
+* Ask Close: The final ask price of each time interval
+* Ask Volume: The number of changes in the ask price within each time interval
+* Class: The direction of the mean close price of the following day
+
+Keywords: Forex, EUR/NZD, Currency Pair, Historical Data, Candlestick, Time Series, Financial Market

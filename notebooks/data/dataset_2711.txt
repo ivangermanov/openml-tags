@@ -1,0 +1,28 @@
+**FOREX cadjpy-day-Close**
+
+Tags: Finance, Forex, Forex Close, Forex Day, Health, Manufacturing
+
+**Source:** Dukascopy Historical Data Feed
+
+**Data Description**
+
+This dataset consists of historical price data of the Forex Canadian Dollar/Japanese Yen exchange rate from Dukascopy. Each instance represents one candlestick of one trading day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is closed on Saturdays and Sundays. The timezone of the feature Timestamp is set to Europe/Amsterdam.
+
+The class attribute indicates the direction of the mean of the Close Bid and Close Ask prices for the following trading day relative to the mean Close Bid and Close Ask prices of the current minute. In other words, the class attribute is true when the mean Close price is expected to rise the following day, and false when the mean Close price is predicted to fall or remain unchanged.
+
+**Attributes**
+
+* **Timestamp:** The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open:** The bid price at the start of this time interval.
+* **Bid High:** The highest bid price recorded during this time interval.
+* **Bid Low:** The lowest bid price observed during this time interval.
+* **Bid Close:** The bid price at the end of this time interval.
+* **Bid Volume:** The number of times the bid price changed within this time interval.
+* **Ask Open:** The ask price at the start of this time interval.
+* **Ask High:** The highest ask price recorded during this time interval.
+* **Ask Low:** The lowest ask price observed during this time interval.
+* **Ask Close:** The ask price at the end of this time interval.
+* **Ask Volume:** The number of times the ask price changed within this time interval.
+* **Class:** Whether the average price will increase during the next interval.
+
+Keywords: Forex, Canadian Dollar, Japanese Yen, Exchange Rate, Trading Day, Candlestick, Timezone, Bid Price, Ask Price, Class Attribute.

@@ -1,0 +1,13 @@
+Machine Learning, Statistics 
+
+Subsampling of the dataset Guillermo 
+
+This dataset is a subsampled version of the original Guillermo dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to create a smaller dataset while maintaining the overall characteristics of the original data.
+
+The dataset was created using a random number generator with a specified seed value, ensuring reproducibility of the results. First, the classes were sampled uniformly, selecting a specified number of classes from the total unique classes present in the dataset. Then, the columns were sampled uniformly, choosing a specified number of columns from the total columns available.
+
+Finally, the rows were sampled using a stratified approach, ensuring that the class distribution in the subsampled dataset remains similar to the original dataset. This involved concatenating the feature columns with the target column, performing a stratified split, and then separating the feature columns and target column again.
+
+The resulting dataset consists of a specified number of rows, columns, and classes, with the categorical mask preserved for future reference. 
+
+Keywords: Machine Learning, Statistics, Subsampling, Dataset, Guillermo, Random Sampling, Stratification.

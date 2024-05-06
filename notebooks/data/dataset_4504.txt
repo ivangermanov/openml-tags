@@ -1,0 +1,15 @@
+Airlines Seed Four Dataset 
+
+This dataset is a subsampled version of the original Airlines dataset, generated using a specific set of arguments. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
+
+The sampling process starts by selecting a specified number of unique classes from the original dataset. If the number of unique classes exceeds the maximum allowed, the classes are sampled based on their frequency of occurrence in the dataset. The indices corresponding to the selected classes are then used to filter the data.
+
+Next, the columns are uniformly sampled to reduce the dimensionality of the dataset. The sampling probability is uniform across all columns. If the number of columns exceeds the maximum allowed, the column indices are randomly selected; otherwise, all columns are retained.
+
+Finally, the rows are sampled to achieve the desired number of samples. This step involves stratified sampling based on the class labels to ensure that the resulting dataset maintains a similar class distribution as the original dataset.
+
+Features of this dataset include airline information, flight details, airport codes, day of the week, time of flight, length of flight, and delay information.
+
+Tags: Life Science, Medicine 
+
+Keywords: airline, dataset, subsampling, stratified sampling, class labels

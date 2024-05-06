@@ -1,0 +1,24 @@
+**FOREX eur pln day Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Social Media
+
+This dataset contains historical price data of the Forex EUR/PLN exchange rate from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans a specific period, excluding weekends since Forex markets do not operate on those days. The timestamp feature corresponds to the Europe/Amsterdam time zone.
+
+The dataset's primary goal is to predict the direction of the mean close price for the following day based on the current day's data. To achieve this, the class attribute is defined as follows: if the mean close price increases the following day, the class attribute is true; otherwise, it is false if the price decreases or remains unchanged.
+
+The attributes included in this dataset are:
+
+* Timestamp: The specific time of each data point according to the Europe/Amsterdam time zone.
+* Bid Open: The opening bid price at the start of the given time interval.
+* Bid High: The highest bid price recorded throughout the time interval.
+* Bid Low: The lowest bid price observed during the time interval.
+* Bid Close: The closing bid price at the end of the time interval.
+* Bid Volume: The frequency of changes in the bid price within the time interval.
+* Ask Open: The opening ask price at the start of the given time interval.
+* Ask High: The highest ask price reached throughout the time interval.
+* Ask Low: The lowest ask price observed during the time interval.
+* Ask Close: The closing ask price at the end of the time interval.
+* Ask Volume: The frequency of changes in the ask price within the time interval.
+* Class: A binary indicator predicting whether the mean close price will increase or decrease the following day.
+
+Keywords: Forex, EUR/PLN, Historical Data, Candlestick, Time Series Analysis, Predictive Modeling

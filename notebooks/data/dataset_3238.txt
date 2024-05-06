@@ -1,0 +1,23 @@
+Pendigits 
+
+Earth Science, Label Ranking, Transportation 
+
+We created a digit database by collecting samples from multiple writers. The samples written by some writers were used for training, cross-validation, and writer-dependent testing, while the digits written by others were used for writer-independent testing. This database is also available in the UNIPEN format.
+
+We utilized a Wacom PL-one hundred V pressure-sensitive tablet with an integrated LCD display and a cordless stylus. The input and display areas are located in the same place. Attached to the serial port of an Intel-based personal computer, it allowed us to collect handwriting samples. The tablet sent x and y tablet coordinates and pressure level values of the pen at fixed time intervals. These writers were asked to write multiple digits in random order inside boxes of a certain resolution. Subjects were monitored only during the initial entry screens.
+
+Each screen contained multiple boxes with the digits to be written displayed above. Subjects were told to write only inside these boxes. If they made a mistake or were unhappy with their writing, they were instructed to clear the content of a box by using an on-screen button.
+
+In our study, we used only x, y coordinate information. The stylus pressure level values were ignored. First, we applied normalization to make our representation invariant to translations and scale distortions. The raw data that we captured from the tablet consisted of integer values. The new coordinates were such that the coordinate which had the maximum range varied between zero and one hundred. Usually, x stayed in this range, since most characters are taller than they are wide.
+
+In order to train and test our classifiers, we needed to represent digits as constant-length feature vectors. A commonly used technique leading to good results is resampling the points. Temporal resampling or spatial resampling can be used here. Raw point data were already regularly spaced in time, but the distance between them was variable. Previous research showed that spatial resampling to obtain a constant number of regularly spaced points on the trajectory yielded much better performance, because it provided a better alignment between points.
+
+Our resampling algorithm used simple linear interpolation between pairs of points. The resampled digits were represented as a sequence of points, regularly spaced in arc length, as opposed to the input sequence, which was regularly spaced in time. So, the input vector size was two times the number of points resampled.
+
+We considered spatial resampling to multiple points in our experiments and found that a certain number of points gave the best trade-off between accuracy and complexity.
+
+Has Missing Values? No
+
+All input attributes are integers in a certain range. The last attribute is the class code.
+
+Keywords: digit database, handwriting samples, pressure-sensitive tablet, normalization, resampling, classifier, feature vectors

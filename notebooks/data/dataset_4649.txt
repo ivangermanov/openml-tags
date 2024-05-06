@@ -1,0 +1,13 @@
+Phishing Websites Dataset 
+
+This dataset is a subsampling of the Phishing Websites dataset generated using a specific source code. The subsampling was done with a specified set of arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether to stratify or not.
+
+The source code defines a function called `subsample` that takes in these arguments and returns a new dataset. This function first uniformly samples classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, the function uniformly samples columns from the filtered data, making sure that the number of columns does not exceed the specified maximum. Finally, if the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to reduce the number of rows while maintaining the class distribution.
+
+The resulting dataset contains a subset of the original features, which include various characteristics of websites, such as the presence of IP addresses, URL lengths, and SSL certificates, among others.
+
+Machine Learning, Mathematics
+
+Keywords: Phishing Websites, dataset, subsampling, machine learning, mathematics

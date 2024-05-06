@@ -1,0 +1,26 @@
+**FOREX EUR GBP Day Close**
+
+Tags: Computer Systems, Finance, Forex, Machine Learning
+
+This dataset contains historical price data of the Forex EUR GBP exchange rate from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe Amsterdam timezone.
+
+The dataset provides a comprehensive view of the Forex market, offering insights into the daily fluctuations of the EUR GBP exchange rate. With each instance representing a single day, the dataset offers a granular perspective on the market trends and patterns.
+
+The class attribute is determined by the direction of the mean close price of the following day, relative to the mean close price of the current day. Specifically, the class attribute is true when the mean close price is expected to increase in the following day, and false when the mean close price is expected to decrease or remain stagnant.
+
+The attributes included in the dataset are:
+
+* Timestamp: The time of the current data point in the Europe Amsterdam timezone.
+* Bid Open: The bid price at the start of the time interval.
+* Bid High: The highest bid price recorded during the time interval.
+* Bid Low: The lowest bid price recorded during the time interval.
+* Bid Close: The bid price at the end of the time interval.
+* Bid Volume: The number of times the bid price changed within the time interval.
+* Ask Open: The ask price at the start of the time interval.
+* Ask High: The highest ask price recorded during the time interval.
+* Ask Low: The lowest ask price recorded during the time interval.
+* Ask Close: The ask price at the end of the time interval.
+* Ask Volume: The number of times the ask price changed within the time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, EUR GBP, Historical Data, Candlestick, Machine Learning, Finance, Computer Systems

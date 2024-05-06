@@ -1,0 +1,15 @@
+Timing Attack Dataset 256 Micro Seconds Delay 
+
+This dataset was created on September twelfth, two thousand twenty-two.
+
+Attribute descriptions include:
+
+CCS Zero features, which refer to the first Change Cipher Spec TCP acknowledgement, including source port, destination port, port, stream, segment length, sequence number, next sequence number, acknowledgement number, header length, reserved flags, nonce flags, congestion window reduced flags, ECN echo flags, urgent flags, acknowledgement flags, push flags, reset flags, syn flags, fin flags, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options NOP, option kind, option length, timestamp TSval, time delta, and message order.
+
+TLS Zero features refer to the first TLS alert, including source port, destination port, port, stream, segment length, sequence number, next sequence number, acknowledgement number, header length, reserved flags, nonce flags, congestion window reduced flags, ECN echo flags, urgent flags, acknowledgement flags, push flags, reset flags, syn flags, fin flags, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options NOP, option kind, option length, timestamp TSval, time delta, record content type, record length, alert message level, alert message description, and message order.
+
+DISC Zero and DISC One features refer to the first and second TCP disconnect respectively, including source port, destination port, port, stream, segment length, sequence number, next sequence number, acknowledgement number, header length, reserved flags, nonce flags, congestion window reduced flags, ECN echo flags, urgent flags, acknowledgement flags, push flags, reset flags, syn flags, fin flags, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, options NOP, option kind, option length, timestamp TSval, time delta, and message order.
+
+Fold ID is one, and vulnerable classes include zero x in PKCS one padding first eight bytes after zero x, correctly formatted PKCS one PMS message but one byte shorter, no zero x in message, wrong first byte zero x set to seventeen, and wrong second byte zero x set to seventeen.
+
+Keywords: timing attack, Bleichenbacher, Change Cipher Spec, TCP acknowledgement, TLS alert, TCP disconnect, PKCS one padding.

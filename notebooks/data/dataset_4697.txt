@@ -1,0 +1,15 @@
+Adult Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Adult with seed equals two arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+
+Generated with the following source code:
+
+The function sub sample takes in parameters such as seed, number rows max, number columns max, number classes max, and stratified, and returns a dataset. It first initializes a random number generator with the given seed. Then it gets the features x and labels y from the current object. It uniformly samples classes by getting unique labels, and if there are more than the maximum allowed number of classes, it selects a specified number of classes based on their frequency in the labels. 
+
+It then gets the indices where the selected classes are present and filters the features and labels accordingly. Next, it uniformly samples columns if required, by selecting a specified number of column indices, sorting them, and getting the corresponding column names. 
+
+If the number of rows exceeds the maximum allowed, it stratifies the data accordingly using train test split, shuffles the data, and sets the random state to the given seed. Finally, it converts categorical columns to strings, creates a new dataset object, and returns it.
+
+Features: Age, Work Class, Education, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Hours per Week, Native Country, Class
+
+Keywords: Sub sampling, Adult dataset, Stratification, Feature selection, Random sampling

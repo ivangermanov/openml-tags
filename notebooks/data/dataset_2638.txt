@@ -1,0 +1,26 @@
+**FOREX USD/JPY Minute High**
+
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+
+**Data Description**
+
+This dataset contains historical price data of the Foreign Exchange rate between the United States Dollar and Japanese Yen, obtained from Dukascopy's Historical Data Feed. Each instance represents one candlestick of one minute, covering a period from January to December. Since the Foreign Exchange market is closed on weekends, there is no data available for these days. The timestamps are in the Europe/Amsterdam time zone.
+
+The class attribute indicates the direction of the mean high price of the following minute relative to the current minute. Specifically, it is true if the mean high price increases in the next minute, and false otherwise.
+
+**Attributes**
+
+* Timestamp: The time of the current data point
+* Bid Open: The bid price at the start of this time interval
+* Bid High: The highest bid price during this time interval
+* Bid Low: The lowest bid price during this time interval
+* Bid Close: The bid price at the end of this time interval
+* Bid Volume: The number of times the bid price changed within this time interval
+* Ask Open: The ask price at the start of this time interval
+* Ask High: The highest ask price during this time interval
+* Ask Low: The lowest ask price during this time interval
+* Ask Close: The ask price at the end of this time interval
+* Ask Volume: The number of times the ask price changed within this time interval
+* Class: Whether the average high price will increase during the next interval
+
+Keywords: Foreign Exchange, Forex, Historical Data, Candlestick, Time Series, Finance, Machine Learning.

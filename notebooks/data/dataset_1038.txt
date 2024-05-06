@@ -1,0 +1,25 @@
+Click Prediction Small 
+
+Tags: Chemistry, Derived, Life Science 
+
+This dataset is derived from the KDD Cup. The data is subsampled to a smaller percentage of the original number of instances, downsampling the majority class so that the target feature is reasonably balanced. The data is about advertisements shown alongside search results in a search engine, and whether or not people clicked on these ads. The task is to build the best possible model to predict whether a user will click on a given advertisement.
+
+A search session contains information on user identification, the query issued by the user, advertisements displayed to the user, and target feature indicating whether a user clicked at least one of the advertisements in this session. The number of advertisements displayed to a user in a session is referred to as depth. The order of an advertisement in the displayed list is referred to as position. An advertisement is displayed as a short text called title, followed by a slightly longer text called description, and a uniform resource locator called display URL.
+
+To construct this dataset, each session was split into multiple instances. Each instance describes an advertisement displayed under a certain setting including depth and position. Instances with the same user identification, advertisement identification, query, and setting are merged. Each advertisement and each user have some additional properties located in separate data files that can be looked up using identifications in the instances.
+
+The dataset has the following features: 
+* Click – a binary variable indicating whether a user clicked on at least one advertisement.
+* Impression – the number of search sessions in which Advertisement Identification was impressed by User Identification who issued Query.
+* Uniform Resource Locator Hash – uniform resource locator is hashed for anonymity.
+* Advertisement Identification 
+* Advertiser Identification – some advertisers consistently optimize their advertisements, so the title and description of their advertisements are more attractive than those of others’ advertisements.
+* Depth – the number of advertisements displayed to a user in a session.
+* Position – the order of an advertisement in the displayed list.
+* Query Identification – is the key of the data file.
+* Keyword Identification – is the key of the data file.
+* Title Identification – is the key of the data file.
+* Description Identification – is the key of the data file.
+* User Identification – is also the key of the data file.
+
+Keywords: click prediction, search engine, advertisement, user behavior, search session, query identification, keyword identification.

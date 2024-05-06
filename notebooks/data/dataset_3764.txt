@@ -1,0 +1,30 @@
+Cricket Test Matches Innings-wise between 1900-2021 
+
+Tags: Computer Systems, Machine Learning 
+
+Context 
+Cricket-based datasets are not readily available for analysis on most portals. Hence, an effort has been made to provide test match data after cleaning it for very special cases.
+
+Content 
+The columns are: 
+Match Key (a unique key for each match calculated by the creator), 
+Batting Team Score (made by the Batting Team in that innings), 
+Wickets (lost by the batting team at the end of the innings), 
+Innings Result (for the Batting team, whether they declared or not in that innings), 
+Overs (bowled by the opponent/faced by the Batting team), 
+Run Per Over (Run Rate per Over) equals Score divided by Overs, 
+Lead (overall match lead by the Batting team till that innings end), 
+Innings Number (for each match), 
+Result (with respect to the Batting team), 
+Opposition (the bowling team in that innings), 
+Host Country (where the match was played), 
+Start Date (of the test match).
+
+An over has six balls to be bowled. The decimal value in overs represents the number of balls bowled in the last over. So, the maximum value of the decimal place can be zero point five, whereas zero point six gets converted to one. For statistical analysis, it might be prudent to convert the decimal value of overs; for instance, zero point one becomes zero point one-six-six, zero point two becomes zero point three-three, zero point three becomes zero point five, and so on.
+
+Same team may or may not play two continuous innings.
+
+Inspiration 
+Predict the match result after the end of the third innings. In cricket, generally, fans have a good idea of a likely result given the status of teams after the end of three innings, and sometimes even after two innings! How about putting a probability value for each of the three possible results?
+
+Keywords: Cricket, Test Matches, Innings-wise, Computer Systems, Machine Learning, Statistical Analysis, Run Per Over, Match Prediction.

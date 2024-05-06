@@ -1,0 +1,19 @@
+Name: Jannis Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Earth Science, Life Science 
+
+Subsampling of the dataset Jannis with seed equal to zero arguments N rows maximum equal to two thousand arguments N columns maximum equal to one hundred arguments N classes maximum equal to ten arguments no stratify equal to true generated with the following source code 
+
+The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether or not to stratify, and returns a dataset. 
+
+The function first gets the unique classes from the target variable, and if there are more classes than the specified maximum number of classes, it selects a specified number of classes based on their frequency in the data. It then selects the indices where one of these classes is present. 
+
+Next, if there are more columns than the specified maximum number of columns, the function uniformly samples the columns. 
+
+If there are more rows than the specified maximum number of rows, the function uses stratified sampling to select the specified number of rows. 
+
+Finally, the function converts categorical columns to strings and returns a new dataset.
+
+Features: (skipped due to being unreadable)
+
+Keywords: Subsampling, Dataset, Stratification, Sampling, Classification, Earth Science, Life Science

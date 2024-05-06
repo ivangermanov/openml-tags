@@ -1,0 +1,23 @@
+Subsampling of the dataset Higgs with Seed Zero 
+
+Tags: Subsampling of the dataset Higgs 
+
+Generated with the following source code:
+
+The function subsample takes five parameters - seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified - and returns a dataset.
+
+First, we set up a random number generator with the given seed. Then we select the input data and output labels. 
+
+We uniformly sample classes from the unique labels in the output. If there are more classes than the specified maximum, we choose the required number of classes based on their frequency in the data. 
+
+We then select the indices where one of these chosen classes is present and filter our input data and output labels accordingly.
+
+Next, we uniformly sample columns if required. If the number of columns exceeds the specified maximum, we randomly choose the required number of columns and sort them. 
+
+If the number of rows still exceeds the specified maximum, we use stratified sampling to reduce the number of rows while maintaining the class balance.
+
+Finally, we convert categorical columns to strings and return a new dataset with the subsampled data, labels, and column information.
+
+Features: Lepton Transverse Momentum, Lepton Eta, Lepton Phi, Missing Energy Magnitude, Missing Energy Phi, Jet One Pt, Jet One Eta, Jet One Phi, ... , Target
+
+Keywords: Subsampling, Higgs Dataset, Stratified Sampling, Feature Selection, Class Balancing

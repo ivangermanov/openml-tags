@@ -1,0 +1,11 @@
+The Computer Activity database is a collection of computer systems activity measures. This data was collected from a Sun Sparcstation twenty seven twelve with one hundred twenty-eight megabytes of memory running in a multi-user university department. Users would typically be doing a large variety of tasks ranging from accessing the internet, editing files, or running very CPU-bound programs.
+
+The data was collected continuously on two separate occasions. On both occasions, system activity was gathered every five seconds. The final dataset is taken from both occasions with equal numbers of observations coming from each collection epoch.
+
+System measures used include reads and writes between system memory and user memory, system calls of all types, system read and write calls, fork and exec calls, character transfers by system read and write calls, page out requests, pages paged out, pages placed on the free list, pages checked if they can be freed, page attaches, page-in requests, pages paged in, page faults caused by protection errors, page faults caused by address translation, process run queue size, memory pages available to user processes, disk blocks available for page swapping, portion of time that CPUs run in user mode, portion of time that CPUs run in system mode, portion of time that CPUs are idle waiting for block I/O, and portion of time that CPUs are otherwise idle.
+
+Two different regression tasks were obtained from these databases. The first task is to predict the portion of time that CPUs run in user mode from all attributes. The second task is to predict the portion of time that CPUs run in user mode using a restricted number of attributes, excluding the paging information.
+
+This dataset has eight thousand one hundred ninety-two cases and twenty-two continuous attributes.
+
+Keywords: computer activity, CPU bound, system calls, page faults, memory usage, process queue size.

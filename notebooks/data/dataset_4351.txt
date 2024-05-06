@@ -1,0 +1,21 @@
+Cover Type Seed Two, Two Thousand Rows, Ten Classes, One Hundred Columns, Stratify True 
+
+Tags: Economics, Statistics 
+
+Sub-sampling of the dataset Cover Type with a seed of two, arguments including number of rows maximum equals two thousand, number of columns maximum equals one hundred, number of classes maximum equals ten, and no stratification equals true. 
+
+Generated with the following source code:
+
+A function named sub-sample takes five parameters - self, seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified - and returns a dataset. 
+
+It uses numpy random default random generator with the given seed. It then selects the feature matrix and the target variable. 
+
+Uniformly sampling classes, it checks if the number of unique classes is greater than the number of classes maximum. If so, it calculates the value counts of each class, selects the specified number of classes randomly with replacement based on their probability, and filters out the samples belonging to these classes.
+
+Next, it uniformly samples columns if required, checking if the number of columns exceeds the specified maximum. It randomly chooses the column indices without replacement, sorts them, and filters out the corresponding columns. 
+
+Finally, if the number of samples exceeds the specified maximum, it performs stratified sampling based on the target variable using train-test split from scikit-learn, shuffling the data and setting the random state to the given seed. 
+
+The resulting dataset contains the sub-sampled feature matrix, target variable, categorical mask, and column names.
+
+Keywords: Cover Type, sub-sampling, stratification, numpy, scikit-learn, dataset, economics, statistics

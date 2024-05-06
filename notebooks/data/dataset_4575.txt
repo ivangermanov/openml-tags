@@ -1,0 +1,13 @@
+Name: CNAE Nine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Demographics, Statistics 
+
+Sub-sampling of the dataset CNAE Nine with seed equal to zero arguments number rows equal to two thousand arguments number columns equal to one hundred arguments number classes equal to ten arguments no stratify equal to true generated with the following source code.
+
+The function sub-sample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling. It then proceeds to uniformly sample the classes, columns, and rows based on the given constraints.
+
+The sub-sampled dataset is generated using the following process. First, the unique classes are identified and if there are more than the specified maximum number of classes, a random selection of classes is made based on their frequency distribution. The indices corresponding to these selected classes are then used to filter the data.
+
+Next, if the number of columns exceeds the specified maximum, a random selection of column indices is made and the corresponding columns are retained. Otherwise, all columns are kept. Finally, if the total number of rows exceeds the specified maximum, stratified sampling is performed using the train-test-split function from scikit-learn, ensuring that the class distribution is preserved in the sub-sample.
+
+Keywords: demographics, statistics, sub-sampling, stratified sampling, class distribution.

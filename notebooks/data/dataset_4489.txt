@@ -1,0 +1,15 @@
+The Dilbert dataset has been subsampled with a specific set of parameters to create a new dataset. This dataset has been generated using a particular source code, which involves uniformly sampling classes, columns, and rows from the original dataset.
+
+The subsampling process begins by selecting a specified number of unique classes from the original dataset. If the number of unique classes exceeds the maximum allowed, a random selection of classes is made based on their value counts. The indices where these selected classes are present are then used to filter the data.
+
+Next, the columns are uniformly sampled to reduce the total number of columns to a specified maximum. A random selection of column indices is made, and the corresponding columns are selected from the filtered data.
+
+Finally, the rows are sampled to reduce the total number of rows to a specified maximum. A stratified split is performed to ensure that the class distribution is maintained in the subsampled data.
+
+The resulting dataset consists of the filtered data, along with the corresponding categorical mask, columns, and other metadata.
+
+Features: Various numerical features have been included in this dataset, representing different aspects of the data.
+
+Tags: Machine Learning, Statistics 
+
+Keywords: Subsampling, Dataset, Stratification, Sampling, Classes, Columns, Rows

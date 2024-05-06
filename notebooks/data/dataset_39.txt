@@ -1,0 +1,21 @@
+Life Science and Machine Learning dataset: Splice 
+
+The Splice dataset focuses on primate splice-junction gene sequences, comprising DNA sequences with associated imperfect domain theory. The primary objective is to identify, given a sequence of DNA, the boundaries between exons (parts of the DNA sequence retained after splicing) and introns (parts of the DNA sequence that are spliced out). This problem involves two subtasks: recognizing exon-intron boundaries (referred to as EI sites) and recognizing intron-exon boundaries (IE sites).
+
+The dataset includes sixty-four categories, categorized into "ei" and "ie," encompassing every "split-gene" for primates in GenBank. Non-splice examples were obtained from sequences known not to contain a splicing site.
+
+Attribute information includes:
+
+* One of three classes: n, ei, or ie, indicating the type of boundary
+* The instance name, serving as an identifier
+* Sixty remaining fields representing the sequence, starting thirty positions before and ending thirty positions after the boundary point; each field typically contains one of four characters: a, g, t, or c; other characters signify ambiguity among the standard characters
+
+Features include instance name and sixty attributes representing the sequence.
+
+This dataset has no missing values.
+
+Additional variable information describes various characteristics of the sequences, including signal sequence recognition methods, presence of charge on the N-terminus of predicted lipoproteins, scores of discriminant analysis of amino acid content, and scores of membrane-spanning region prediction programs.
+
+Class labels denote different localizations within the cell, including cytoplasm, inner membrane, periplasm, and outer membrane.
+
+Keywords: Splice junction, gene sequences, DNA, exons, introns, machine learning, life science, molecular biology.

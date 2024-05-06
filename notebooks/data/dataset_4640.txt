@@ -1,0 +1,50 @@
+Name: Gesture Phase Segmentation Processed Seed Zero 
+
+Tags: Computer Systems, Manufacturing 
+
+Subsampling of the dataset Gesture Phase Segmentation Processed with seed equal to zero arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+
+def subsample(self, seed, number_rows_max, number_cols_max, number_classes_max, stratified):
+    random_number_generator = numpy random default random generator seed 
+    x equals self x 
+    y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than number classes max:
+    value counts equals y value counts 
+    selected classes equals random number generator choice classes size number classes max replace false probability value counts divided by sum value counts 
+Select the indices where one of these classes is present index equals y index y is in selected classes 
+x equals x iloc index 
+y equals y iloc index 
+
+Uniformly sample columns if required 
+if length of x columns is greater than number cols max:
+    column indexes equals random number generator choice list range length x columns size number cols max replace false 
+    sorted column indexes equals sorted column indexes 
+    selected columns equals list x columns sorted column indexes 
+    x equals x selected columns 
+else:
+    sorted column indexes equals list range length x columns 
+
+if length of x is greater than number rows max:
+Stratify accordingly target name equals y name 
+data equals pandas concat x y axis columns 
+_, subset equals train test split data test size number rows max stratify data target name shuffle true random state seed 
+x equals subset drop target name axis columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for openml 
+categorical mask equals list self categorical mask i for i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+Technically this is not the same but it's where it was derived from dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: 
+
+Phase
+
+Keywords: Subsampling, Seed, Gesture Phase Segmentation, Stratification, Computer Systems, Manufacturing.

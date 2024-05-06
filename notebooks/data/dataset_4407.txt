@@ -1,0 +1,50 @@
+Electricity Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Chemistry, Life Science
+
+Subsampling of the dataset Electricity with seed equals two arguments n rows max equals two thousand arguments n columns max equals one hundred arguments n classes max equals ten arguments no stratify equals true generated with the following source code:
+
+def subsample(self, seed, n_rows_max, n_cols_max, n_classes_max, stratified):
+    random number generator equals numpy dot random dot default_rng of seed
+    x equals self x
+    y equals self y
+    
+    Uniformly sample classes equals y unique
+    if length of classes is greater than n classes max:
+        value counts equals y value counts
+        selected classes equals random number generator choice of classes, size equals n classes max, replace equals false, probability equals value counts over sum of value counts
+        Select the indices where one of these classes is present
+        index equals y index of y is in selected classes
+        x equals x iloc of index
+        y equals y iloc of index
+        
+    Uniformly sample columns if required
+    if length of x columns is greater than n cols max:
+        column indexes equals random number generator choice of range of length of x columns, size equals n cols max, replace equals false
+        sorted column indexes equals sorted of column indexes
+        selected columns equals list of x columns of sorted column indexes
+        x equals x of selected columns
+    else:
+        sorted column indexes equals range of length of x columns
+        
+    if length of x is greater than n rows max:
+        Stratify accordingly
+        target name equals y name
+        data equals pandas concat of x and y along columns
+        underscore, subset equals train test split of data, test size equals n rows max, stratify equals data of target name, shuffle equals true, random state equals seed
+        x equals subset drop of target name along columns
+        y equals subset of target name
+        
+    We need to convert categorical columns to string for OpenML
+    categorical mask equals list of self categorical mask of i for i in sorted column indexes
+    columns equals list of x columns
+    return Dataset of 
+        dataset equals self dataset
+        x equals x
+        y equals y
+        categorical mask equals categorical mask
+        columns equals columns
+
+Features: date, day, period, price, demand, transfer, class
+
+Keywords: Electricity, Subsampling, Chemistry, Life Science, Dataset, Stratify

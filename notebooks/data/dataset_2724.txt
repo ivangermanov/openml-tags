@@ -1,0 +1,28 @@
+**FOREX EURCHF Day High**
+
+Tags: Chemistry, Finance, Forex, Forex Day, Forex High, Machine Learning
+
+This dataset comprises historical price data of the Forex EUR/CHF currency pair obtained from Dukascopy's Historical Data Feed.
+
+Each instance represents a single daily candlestick, with the entire dataset spanning from January to December. As the Forex market is closed on weekends, these days are excluded from the dataset. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The primary objective of this dataset is to predict the direction of the mean high price of the following day based on the current day's prices. To achieve this, the class attribute is defined as follows: if the mean high price increases the following day, the class attribute is set to true; otherwise, it remains false.
+
+Please note that this is a hypothetical task designed for scientific purposes only. In reality, trading strategies should be based on predictions made on close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of the daily time interval.
+* **Bid High**: The highest bid price recorded during the daily time interval.
+* **Bid Low**: The lowest bid price recorded during the daily time interval.
+* **Bid Close**: The bid price at the end of the daily time interval.
+* **Bid Volume**: The number of times the bid price changed within the daily time interval.
+* **Ask Open**: The ask price at the start of the daily time interval.
+* **Ask High**: The highest ask price recorded during the daily time interval.
+* **Ask Low**: The lowest ask price recorded during the daily time interval.
+* **Ask Close**: The ask price at the end of the daily time interval.
+* **Ask Volume**: The number of times the ask price changed within the daily time interval.
+* **Class**: A binary indicator representing whether the average high price will increase the following day.
+
+Keywords: Forex, EURCHF, Currency Pair, Historical Data, Prediction, Machine Learning, Financial Analysis

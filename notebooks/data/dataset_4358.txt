@@ -1,0 +1,17 @@
+Name: Polish Seed Four Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True 
+
+Tags: Subsampling of the dataset Polish 
+
+Generated with the following source code:
+
+The function subsample takes in parameters such as a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not, and returns a subsampled dataset.
+
+The function first gets the unique classes from the target variable and selects a specified maximum number of classes using uniform sampling. It then selects the indices where one of these classes is present and subsets the data based on these indices.
+
+If the number of columns exceeds the maximum allowed, the function uniformly samples the columns to reduce their number. The selected column indices are stored and used to subset the data.
+
+If the number of rows exceeds the maximum allowed, the function uses stratified sampling to reduce their number while maintaining class balance. The resulting subsampled data is returned as a new dataset along with its categorical mask and column names.
+
+Features: Binary Class 
+
+Keywords: Subsampling, Stratification, Sampling, Dataset, Classes, Columns, Rows

@@ -1,0 +1,19 @@
+Electricity Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Chemistry, Earth Science 
+
+Subsampling of the dataset Electricity with a seed equal to four. The arguments include number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and no stratify equals true. This was generated using the following source code.
+
+The function subsample takes in several parameters including self, seed, number of rows max, number of columns max, number of classes max, and stratified. It returns a dataset. First, it creates a random number generator using the given seed. Then, it selects the feature matrix and target vector from the given dataset. Next, it uniformly samples the classes by selecting a specified number of unique classes based on their frequency in the target vector. 
+
+If there are more unique classes than the specified maximum, it selects the top frequent classes. Otherwise, it uses all unique classes. After selecting the classes, it filters the feature matrix and target vector to only include samples belonging to the selected classes. 
+
+Then, it uniformly samples the columns of the feature matrix if necessary. If the number of columns exceeds the specified maximum, it randomly selects a specified number of columns without replacement. Otherwise, it uses all columns. After sampling the columns, it sorts the column indices to maintain consistency. 
+
+Finally, if the number of samples exceeds the specified maximum, it stratifies the samples according to the target vector. It concatenates the feature matrix and target vector, then splits them into subsets using a stratified split method. The resulting subsets are used as the new feature matrix and target vector. 
+
+The function returns a dataset containing the sampled feature matrix, target vector, categorical mask, and column names. The categorical mask is created by filtering the original categorical mask using the selected column indices.
+
+Features: Date, Day, Period, Price, Demand, Transfer, Class
+
+Keywords: Electricity, Subsampling, Stratification, Random Sampling, Feature Matrix, Target Vector.

@@ -1,0 +1,26 @@
+**FOREX NZD/USD Hourly Close**
+
+Tags: Finance, Forex, Forex Close, Forex Hour, Machine Learning, Social Media
+
+**Data Description**
+
+This dataset comprises historical price data of the New Zealand Dollar versus United States Dollar (NZD/USD) currency pair, obtained from Dukascopy Historical Data Feed. Each instance represents a single hourly candlestick, with the entire dataset spanning from January to December. Since the Forex market is closed on weekends, there are no entries for Saturdays and Sundays. All timestamps are recorded in the Europe/Amsterdam time zone.
+
+The class attribute is determined by comparing the mean close price of the subsequent hour to the mean close price of the current hour. A true classification indicates an upward trend in the mean close price over the next hourly period, while a false classification denotes a downward or stagnant trend.
+
+**Attributes**
+
+* Timestamp: The date and time of each data point, recorded in the Europe/Amsterdam time zone.
+* Bid Open: The initial bid price at the beginning of each hourly interval.
+* Bid High: The highest bid price reached during each hourly interval.
+* Bid Low: The lowest bid price reached during each hourly interval.
+* Bid Close: The final bid price at the end of each hourly interval.
+* Bid Volume: The frequency of bid price changes within each hourly interval.
+* Ask Open: The initial ask price at the beginning of each hourly interval.
+* Ask High: The highest ask price reached during each hourly interval.
+* Ask Low: The lowest ask price reached during each hourly interval.
+* Ask Close: The final ask price at the end of each hourly interval.
+* Ask Volume: The frequency of ask price changes within each hourly interval.
+* Class: The directional trend of the mean close price over the next hourly period.
+
+Keywords: Forex, NZD/USD, Candlestick, Time Series, Classification, Trend Analysis

@@ -1,0 +1,15 @@
+Internet Advertisements Dataset 
+
+This dataset is a subsampling of the Internet Advertisements dataset with a specified set of parameters. The subsampling process involved uniformly sampling classes and columns to reduce the dimensionality of the dataset. 
+
+The dataset has been generated using a specific source code that utilizes NumPy and pandas libraries. The code defines a function called `subsample` which takes in several arguments including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean flag for stratification.
+
+The function first selects a specified number of classes based on their frequency distribution. It then selects the corresponding indices where these classes are present and filters the dataset accordingly. Next, it uniformly samples columns to reduce the dimensionality further. Finally, it applies stratified sampling to ensure that the resulting dataset maintains the class distribution of the original dataset.
+
+The resulting dataset has been transformed into a format suitable for machine learning applications. The categorical columns have been converted to strings, and the dataset has been split into feature variables and a target variable.
+
+Features include various attributes related to URLs, images, and advertisements. These features have been carefully selected to capture relevant information about internet advertisements.
+
+Machine Learning, Mathematics 
+
+Keywords: internet advertisements, dataset subsampling, stratified sampling, machine learning applications, URL attributes

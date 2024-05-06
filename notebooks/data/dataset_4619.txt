@@ -1,0 +1,43 @@
+Subsampling of the dataset King-Rook versus King-Pawn with seed equals four arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number_rows_maximum, number_columns_maximum, number_classes_maximum, stratified):
+    random_number_generator = numpy random default random generator seed
+    x equals self x
+    y equals self y
+    
+    Uniformly sample classes equals y unique
+    
+    If length of classes greater than number_classes_maximum:
+        value_counts equals y value counts
+        selected_classes equals random_number_generator choice classes size number_classes_maximum replace false probability value_counts over sum value_counts
+    
+    Select the indices where one of these classes is present index equals y index y is in selected_classes
+    x equals x iloc index
+    y equals y iloc index
+    
+    Uniformly sample columns if required
+    If length of x columns greater than number_columns_maximum:
+        column_indices equals random_number_generator choice list range length x columns size number_columns_maximum replace false
+        sorted_column_indices equals sorted column_indices
+        selected_columns equals list x columns sorted_column_indices
+        x equals x selected_columns
+    else:
+        sorted_column_indices equals list range length x columns
+        
+    If length of x greater than number_rows_maximum:
+        Target name equals y name
+        Data equals pandas concatenate x and y along columns
+        Subset equals train test split data test size number_rows_maximum stratify data target name shuffle true random state seed
+        x equals subset drop target name along columns
+        y equals subset target name
+        
+    We need to convert categorical columns to string for OpenML
+    Categorical mask equals list self categorical mask i for i in sorted_column_indices
+    Columns equals list x columns
+    Return Dataset dataset equals self dataset x equals x y equals y categorical mask equals categorical mask columns equals columns
+
+Features: Backward King Blocked, Black Knight Way, Black King On Eight, Black King On A, Black King Sprufer, Black King X Bishop Queen, Black King X Check Row, Black King X White Pawn, Black Locks White Pawn, Bishop X Queen Square, Context, Double Space Opponent Pawns, Double Weighted Pawns, Had Check, King Attack, Multiple Checks, Queen Moves Square, Rook Two Away Eight, Resign King Draw, Resign King Rank, Rook Immobilize Max, Rook King X White Pawn, Rook Moves Square, Simple, Skewer Check, Skewer Rank, Special Copulation, Stalemate Threat, Threaten Skewer, Weak King Tied, Weak King Naught Eight, Weak King Next Check, Weak King Overloaded, Weak King Position, Weak To Eager, Class
+
+Keywords: Subsampling, Dataset, King-Rook vs King-Pawn, Seed, Stratification, Feature Selection, Random Sampling.

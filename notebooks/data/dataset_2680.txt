@@ -1,0 +1,27 @@
+Data Name: Forex Eur/Try Hourly High
+Tags: Computer Systems, Finance, Forex, Forex High, Forex Hour, Manufacturing
+
+Source: Dukascopy Historical Data Feed
+
+Data Description:
+This dataset contains the historical price data of the Forex Eur/Try from Dukascopy. Each instance, or row, represents one hourly candlestick. The dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute is determined by the direction of the mean of the high bid and high ask prices of the subsequent hour, relative to the mean of the high bid and high ask prices of the current hour. In other words, the class attribute is true if the mean high price increases in the subsequent hour, and false if it decreases or remains the same.
+
+Note that this is a hypothetical task, intended for scientific purposes only. Realistic trading strategies should be based on predictions of closing prices, which are also available.
+
+Attributes:
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the bid price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the ask price changed within this time interval.
+Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Historical Data, Candlestick, Time Series, Trading Strategies, Financial Markets

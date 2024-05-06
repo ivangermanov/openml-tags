@@ -1,0 +1,13 @@
+The dataset KDD Cup Nine - Upselling has been subjected to subsampling with a specified seed value. This process has resulted in the selection of a specific number of rows, columns, and classes from the original dataset.
+
+The subsampling method employed involves uniformly sampling classes from the dataset. In cases where the number of unique classes exceeds the maximum allowed, a subset of classes is randomly chosen based on their frequency of occurrence. The selected classes are then used to filter the dataset, retaining only those instances that belong to one of the chosen classes.
+
+Furthermore, the method also involves uniformly sampling columns from the dataset. If the number of columns exceeds the maximum allowed, a subset of columns is randomly chosen. The resulting dataset consists of the selected columns and the corresponding instances.
+
+Additionally, the method ensures that the resulting dataset does not exceed the specified maximum number of rows. This is achieved through stratified sampling, which ensures that the class distribution is preserved in the sampled dataset.
+
+The resulting dataset consists of the sampled instances, along with their corresponding labels and categorical mask information. This information is essential for modeling purposes, particularly when dealing with categorical variables.
+
+Tags: Images, Machine Learning
+
+Keywords: subsampling, dataset, uniform sampling, class selection, column selection, row selection, stratified sampling, categorical mask.

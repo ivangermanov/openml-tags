@@ -1,0 +1,28 @@
+**FOREX Eur/Dkk Day High**
+
+Tags: Finance, Forex, Forex Day, Forex High, Language, Social Media
+
+**Data Description**
+
+This dataset contains historical price data of the Forex Eur/Dk exchange rate from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is closed during these days. The timestamp feature is in the Europe/Amsterdam timezone.
+
+The class attribute is defined as the direction of the mean of the high bid and high ask prices of the following day, relative to the mean high bid and high ask prices of the current minute. In other words, the class attribute is true when the mean high price is expected to increase the following day, and false when the mean high price is expected to decrease or remain unchanged.
+
+**Note:** This dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies should be based on predictions of close attributes, which are also available in this dataset.
+
+**Attributes**
+
+* Timestamp: The time of the current data point (in Europe/Amsterdam timezone)
+* Bid Open: The bid price at the start of this time interval
+* Bid High: The highest bid price during this time interval
+* Bid Low: The lowest bid price during this time interval
+* Bid Close: The bid price at the end of this time interval
+* Bid Volume: The number of times the bid price changed within this time interval
+* Ask Open: The ask price at the start of this time interval
+* Ask High: The highest ask price during this time interval
+* Ask Low: The lowest ask price during this time interval
+* Ask Close: The ask price at the end of this time interval
+* Ask Volume: The number of times the ask price changed within this time interval
+* Class: Whether the average price will increase during the next interval
+
+Keywords: Forex, Eur/Dk, Historical Data, Candlestick, Time Series, Financial Markets, Trading Strategies

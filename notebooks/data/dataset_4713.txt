@@ -1,0 +1,11 @@
+The dataset robert has been subsampled with a seed value of three. This subsampling process involved uniformly sampling classes from the original dataset until a maximum of ten classes were reached. The indices where these selected classes were present were then used to filter the data.
+
+Next, the columns of the dataset were uniformly sampled until a maximum of one hundred columns were reached. The selected columns were then used to create a new dataset.
+
+If the number of rows in the resulting dataset exceeded two thousand, the data was further split using stratified sampling to ensure that the class distribution was maintained.
+
+The resulting dataset contains a mix of numerical and categorical features. The categorical features have been converted to strings for compatibility with OpenML.
+
+Machine Learning, Statistics
+
+Keywords: subsampling, stratified sampling, class distribution, OpenML, categorical features.

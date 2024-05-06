@@ -1,0 +1,55 @@
+Machine Learning, Statistics 
+
+Subsampling of the dataset Eucalyptus with seed equals four 
+args nrows max equals two thousand 
+args ncols max equals one hundred 
+args nclasses max equals ten 
+args no stratify equals True 
+
+Generated with the following source code:
+
+def subsample(self, seed, nrows maximum, ncols maximum, nclasses maximum, stratified) -> Dataset:
+random number generator = numpy random default random generator with seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique 
+if length of classes is greater than nclasses maximum:
+value counts = y value counts 
+selected classes = random number generator choice classes with size equals nclasses maximum replacing equals false probability equals value counts over sum of value counts 
+Select the indices where one of these classes is present 
+idxs equals y index y is in selected classes 
+x equals x iloc idxs 
+y equals y iloc idxs 
+
+Uniformly sample columns if required 
+if length of x columns is greater than ncols maximum:
+columns indexes = random number generator choice list range length of x columns with size equals ncols maximum replacing equals false 
+sorted column indexes = sorted columns indexes 
+selected columns = list x columns sorted column indexes 
+x equals x selected columns 
+else:
+sorted column indexes equals list range length of x columns 
+
+if length of x is greater than nrows maximum:
+stratify accordingly 
+target name equals y name 
+data equals pandas concatenate x and y along columns 
+_, subset equals train test split data test size equals nrows maximum stratifying equals data target name shuffling equals true random state equals seed 
+x equals subset drop target name along columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for OpenML 
+categorical mask = list self categorical mask i for i in sorted column indexes 
+columns equals list x columns 
+return Dataset 
+technically this is not the same but it's where it was derived from 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features: Abbreviation, Reproduction, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, PMC Number, Diameter at Breast Height, Height, Survival, Vigor, Inspection Resistance, Stem Form, Crown Form, Branch Form, Utility 
+
+Keywords: Eucalyptus, Subsampling, Machine Learning, Statistics, Stratification

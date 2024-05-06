@@ -1,0 +1,20 @@
+Al Hilal Archive Scores 
+Tags: Machine Learning, Manufacturing Context 
+
+As Al Hilal Football Club is one of the most successful football clubs in Saudi Arabia, the Middle East, and Asia, this dataset was an exercise in web scraping, where I collected the archives of the results for the club. The dataset includes all matches from nineteen ninety-six to two thousand nineteen and many important matches from nineteen sixty-one to nineteen ninety-five.
+
+The source where the data has been scraped from is Koora website, which is one of the oldest Arabic websites specializing in football news and match scores.
+
+The dataset includes a Home Team column, which contains the team that hosts the match, the Away Team, who came to play against the Home Team, and between them, the Score of the match. After that, the Date where the game has been played, then the Winning Team from the match. The column before the last contains the Competition, which the game has been a part of, and the last column is the Stage of the Competition of the game.
+
+In Home and Away columns, when the game is played in a local competition, the name of the team is written without the name of the country, but when the game is played in an international competition, the name of the team is followed by the country of the team, as there could be teams that have the same name but from different countries.
+
+All columns are object types except the Date column, which is DateTime type. The dataset contains no null values except the Stage column, as the null value means that the match did not have a stage, such as friendly matches, or the stage is not provided by the website.
+
+Thanks go to the immersive data science course, which taught many skills and methods, one of which is web scraping, that was used in this project.
+
+Inspiration for exploration includes questions such as which years were the most successful? Which leagues did the club score the highest points? What are the clubs that Al Hilal won against the most, and what are the teams that defeated Al Hilal throughout the years? Could there be a model to predict the result of future matches for Al Hilal? Which months does Al Hilal win in the most, and which does Al Hilal lose in?
+
+Features: Home Team, Scores, Away Team, Date, Wining Team, Competition, Stage
+
+Keywords: Al Hilal, Football Club, Web Scraping, Dataset, Match Results, Football News, Scores, Competitions

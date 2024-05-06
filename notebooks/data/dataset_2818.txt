@@ -1,0 +1,26 @@
+**FOREX usd/dkk day Close**
+
+Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Machine Learning
+
+**Data Description**
+
+This dataset contains historical price data of the Forex USD/DKK exchange rate, sourced from Dukascopy's Historical Data Feed. Each instance represents a daily candlestick, with a total data range spanning from January to December. As the Forex market is closed on weekends, there are no entries for Saturday and Sunday.
+
+The timestamp feature corresponds to the Europe/Amsterdam time zone. The class attribute indicates the direction of the mean close price of the subsequent day, relative to the current day's mean close price. Specifically, the class attribute is true if the mean close price increases the following day, and false if it decreases or remains unchanged.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, corresponding to the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of the daily interval.
+* **Bid High**: The highest bid price recorded during the daily interval.
+* **Bid Low**: The lowest bid price recorded during the daily interval.
+* **Bid Close**: The bid price at the end of the daily interval.
+* **Bid Volume**: The frequency of changes in the bid price within the daily interval.
+* **Ask Open**: The ask price at the start of the daily interval.
+* **Ask High**: The highest ask price recorded during the daily interval.
+* **Ask Low**: The lowest ask price recorded during the daily interval.
+* **Ask Close**: The ask price at the end of the daily interval.
+* **Ask Volume**: The frequency of changes in the ask price within the daily interval.
+* **Class**: An indicator of whether the mean close price will increase or decrease the following day.
+
+Keywords: Forex, USD/DKK, Candlestick, Machine Learning, Finance, Historical Data

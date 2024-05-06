@@ -1,0 +1,17 @@
+Subsampling of the dataset KC One with Seed Three 
+
+This dataset is a subsampled version of the original KC One dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes were representative of the overall distribution. 
+
+If the number of unique classes exceeded the maximum allowed, a random selection of classes was made based on their frequency of occurrence. The indices corresponding to these selected classes were then used to filter the original dataset, resulting in a reduced dataset with only the relevant samples.
+
+Furthermore, if the number of columns in the filtered dataset exceeded the maximum allowed, a uniform sampling of columns was performed to reduce the dimensionality. This involved randomly selecting a specified number of columns from the dataset, while ensuring that the resulting subset retained a good representation of the original features.
+
+Finally, if the resulting dataset still had more rows than desired, a stratified sampling approach was employed to further reduce the size of the dataset. This ensured that the final subsampled dataset maintained an optimal balance between class representation and overall size.
+
+The resulting dataset consists of a carefully curated selection of features, including location, volume, edge volume, internal volume, node count, volume, length, degree, incidence, edge, and tree metrics, among others.
+
+Tags: Machine Learning, Mathematics
+
+Features: location, volume, edge volume, internal volume, node count, volume, length, degree, incidence, edge, tree metrics
+
+Keywords: subsampling, dataset reduction, stratified sampling, machine learning, mathematics

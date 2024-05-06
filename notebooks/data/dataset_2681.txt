@@ -1,0 +1,30 @@
+**FOREX eurhuf-day-High**
+
+Tags: Economics, Education, Finance, Forex, Forex Day, Forex High
+
+This dataset provides historical price data of the FOREX Euro versus Hungarian Forint (EUR/HUF) exchange rate, sourced from Dukascopy's Historical Data Feed.
+
+Each instance represents a single day's worth of data, comprising one candlestick. The entire dataset spans a specific timeframe, excluding weekends when the FOREX market is closed.
+
+The timestamp feature corresponds to the Europe/Amsterdam time zone.
+
+The class attribute denotes the directional change in the mean high price between the current day and the subsequent day. Specifically, if the mean high price increases, the class attribute is labeled as true; otherwise, it is false if the price remains stagnant or decreases.
+
+Please note that this dataset serves solely for scientific purposes and should not be used for actual trading strategies. Realistic trade approaches require predictions based on close attributes, which are also available.
+
+Attributes:
+
+* Timestamp: Represents the date and time of each data point, aligned with the Europe/Amsterdam time zone.
+* Bid Open: The initial bid price at the start of the given time interval.
+* Bid High: The peak bid price recorded throughout the time interval.
+* Bid Low: The lowest bid price observed during the time interval.
+* Bid Close: The final bid price at the end of the time interval.
+* Bid Volume: The frequency of changes in the bid price within the specified time interval.
+* Ask Open: The opening ask price at the beginning of the time interval.
+* Ask High: The highest ask price reached during the time interval.
+* Ask Low: The minimum ask price noted throughout the time interval.
+* Ask Close: The closing ask price at the end of the time interval.
+* Ask Volume: The number of changes in the ask price within the specified time interval.
+* Class: Indicates whether the average high price will rise or fall in the subsequent time interval.
+
+Keywords: FOREX, EUR/HUF, exchange rate, historical data, Dukascopy, economics, finance.

@@ -1,0 +1,26 @@
+**FOREX cadjpy-minute-Close**
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Minute
+
+This dataset contains historical price data of the Forex Canadian Dollar/Japanese Yen pair from Dukascopy.
+
+Each instance, or row, represents a single candlestick of one-minute duration. The entire dataset spans a specific period of time, excluding weekends when the Forex market is closed.
+
+The timestamp feature is in the Europe/Amsterdam timezone. The class attribute indicates the direction of the mean close price between the current and subsequent minutes. Specifically, it denotes whether the mean close price is increasing or decreasing (or remains unchanged) in the following minute.
+
+The attributes included in this dataset are:
+
+* Timestamp: The time of the current data point (in Europe/Amsterdam)
+* Bid Open: The bid price at the start of this time interval
+* Bid High: The highest bid price recorded during this time interval
+* Bid Low: The lowest bid price recorded during this time interval
+* Bid Close: The bid price at the end of this time interval
+* Bid Volume: The frequency of changes in the bid price within this time interval
+* Ask Open: The ask price at the start of this time interval
+* Ask High: The highest ask price recorded during this time interval
+* Ask Low: The lowest ask price recorded during this time interval
+* Ask Close: The ask price at the end of this time interval
+* Ask Volume: The frequency of changes in the ask price within this time interval
+* Class: Whether the average price will rise during the next interval
+
+Keywords: Forex, Canadian Dollar, Japanese Yen, Candlestick, Time Series, Financial Markets.

@@ -1,0 +1,28 @@
+**FOREX EURRUB Hourly High**
+
+Tags: Finance, Forex, Forex High, Forex Hour, Government, Meteorology
+
+**Data Description**
+
+This dataset comprises historical price data of the Forex EUR/RUB currency pair obtained from Dukascopy Historical Data Feed. Each instance represents a single hourly candlestick, devoid of weekend data since Forex markets remain closed during this period. The timestamp feature adheres to the Europe/Amsterdam time zone.
+
+The class attribute denotes the directional movement of the mean high price over the subsequent hourly interval relative to the current hourly mean high price. Specifically, the class attribute assumes a value of true if the mean high price ascends during the forthcoming hourly interval, and false if it declines or remains stagnant.
+
+Please note that this dataset serves a purely scientific purpose, and realistic trading strategies should exclusively rely on predictions based on close attributes, also available within this dataset.
+
+**Attributes**
+
+* **Timestamp**: Represents the timing of each data point according to the Europe/Amsterdam time zone.
+* **Bid Open**: Denotes the bid price at the initiation of the hourly interval.
+* **Bid High**: Captures the highest bid price recorded throughout the hourly interval.
+* **Bid Low**: Represents the lowest bid price observed throughout the hourly interval.
+* **Bid Close**: Signifies the bid price at the conclusion of the hourly interval.
+* **Bid Volume**: Quantifies the frequency of changes in the bid price within the hourly interval.
+* **Ask Open**: Represents the ask price at the initiation of the hourly interval.
+* **Ask High**: Captures the highest ask price recorded throughout the hourly interval.
+* **Ask Low**: Represents the lowest ask price observed throughout the hourly interval.
+* **Ask Close**: Signifies the ask price at the conclusion of the hourly interval.
+* **Ask Volume**: Quantifies the frequency of changes in the ask price within the hourly interval.
+* **Class**: Indicates whether the average high price will ascend or decline during the subsequent hourly interval.
+
+Keywords: Forex, EURRUB, Candlestick, Historical Data, Time Series, Finance, Currency Pair, Trading Strategy

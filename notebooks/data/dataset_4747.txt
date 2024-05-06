@@ -1,0 +1,49 @@
+sf police incidents seed two nrows two thousand ncols one hundred nclasses ten ncstratify true
+
+Subsampling of the dataset sf police incidents with seed equals two arguments nrows max equals two thousand arguments ncols max equals one hundred arguments nclasses max equals ten arguments no stratify equals false generated with the following source code 
+
+def subsample self seed integer nrows max integer equals two thousand ncols max integer equals one hundred nclasses max integer equals ten stratified boolean equals true 
+rng equals numpy random default rng seed 
+x equals self x 
+y equals self y 
+
+Uniformly sample classes equals y unique if length of classes greater than nclasses max 
+vcs equals y value counts 
+selected classes equals rng choice classes size equals nclasses max replace equals false probability equals vcs over sum of vcs 
+
+Select the indices where one of these classes is present 
+idxs equals y index y is in selected classes 
+x equals x iloc idxs 
+y equals y iloc idxs 
+
+Uniformly sample columns if required 
+if length of x columns greater than ncols max 
+columns idxs equals rng choice list range length of x columns size equals ncols max replace equals false 
+sorted column idxs equals sorted columns idxs 
+selected columns equals list x columns sorted column idxs 
+x equals x selected columns 
+else 
+sorted column idxs equals list range length of x columns 
+
+if length of x greater than nrows max 
+stratify accordingly 
+target name equals y name 
+data equals pandas concat x y axis equals columns 
+_, subset equals train test split data test size equals nrows max stratify equals data target name shuffle equals true random state equals seed 
+x equals subset drop target name axis equals columns 
+y equals subset target name 
+
+We need to convert categorical columns to string for openml 
+categorical mask equals self categorical mask i for i in sorted column idxs 
+columns equals list x columns 
+
+return dataset 
+dataset equals self dataset 
+x equals x 
+y equals y 
+categorical mask equals categorical mask 
+columns equals columns 
+
+Features include hour of the day, day of the week, month, year, police district, address, geographical coordinates, and type of violent crime.
+
+Keywords: subsampling, dataset, police incidents, stratification, feature selection, classification.

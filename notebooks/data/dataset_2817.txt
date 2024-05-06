@@ -1,0 +1,28 @@
+**FOREX Euro-Sek-Hour-Close**
+
+Tags: Economics, Finance, Forex, Forex Close, Forex Hour, Machine Learning
+
+**Data Description**
+
+This dataset comprises historical price data of the Forex Euro-Sek pair sourced from Dukascopy Historical Data Feed. Each instance represents one candlestick of one hour, with the entire dataset spanning from January first to December thirteenth, excluding weekends when Forex trading is inactive.
+
+The timezone employed for the Timestamp feature is Europe/Amsterdam.
+
+The class attribute denotes the direction of the mean of the Close Bid and Close Ask prices for the subsequent hour relative to the mean Close Bid and Close Ask prices of the current hour. Specifically, the class attribute assumes a value of True when the mean Close price exhibits an upward trend in the forthcoming hour and False when it remains stagnant or declines.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point (in Europe/Amsterdam timezone)
+* **Bid Open**: The bid price at the commencement of this time interval
+* **Bid High**: The highest bid price recorded during this time interval
+* **Bid Low**: The lowest bid price observed during this time interval
+* **Bid Close**: The bid price at the conclusion of this time interval
+* **Bid Volume**: The frequency of changes in the Bid Price within this time interval
+* **Ask Open**: The ask price at the initiation of this time interval
+* **Ask High**: The highest ask price registered during this time interval
+* **Ask Low**: The lowest ask price noted during this time interval
+* **Ask Close**: The ask price at the termination of this time interval
+* **Ask Volume**: The number of changes in the Ask Price within this time interval
+* **Class**: A binary indicator signifying whether the average price will ascend or remain stagnant/descend during the ensuing hour
+
+Keywords: Forex, Euro-Sek, Candlestick, Historical Data, Trading, Machine Learning, Economics, Finance

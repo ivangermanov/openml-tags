@@ -1,0 +1,15 @@
+Name: Fabert Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Sub sampling of the dataset Fabert with seed equals zero arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+
+Generated with the following source code:
+
+The function sub sample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to use stratification. It uses the numpy random default random generator to select a uniform sample of classes, columns, and rows from the original dataset.
+
+The function first selects a uniform sample of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present. Next, it uniformly samples columns if the number of columns exceeds the maximum allowed. The function also ensures that categorical columns are converted to strings for OpenML compatibility.
+
+Finally, the function returns a new dataset with the sampled data, including the categorical mask and column names.
+
+Features: The dataset contains a selection of various features, including variables related to different aspects of the data.
+
+Keywords: Sub sampling, dataset, stratification, numpy, OpenML, categorical variables.

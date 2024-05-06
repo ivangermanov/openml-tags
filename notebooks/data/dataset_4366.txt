@@ -1,0 +1,44 @@
+Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equal to two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+
+Generated with the following source code:
+
+def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified):
+    random number generator = numpy random default random generator seed
+    x equals self x
+    y equals self y
+
+Uniformly sample classes equals y unique
+If length of classes is greater than number classes maximum:
+    value counts = y value counts
+    selected classes = random number generator choice classes, size equals number classes maximum, replace equals false, probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present equals y index y is in selected classes
+x equals x iloc select indices
+y equals y iloc select indices
+
+Uniformly sample columns if required
+If length of x columns is greater than number columns maximum:
+    column indexes equals random number generator choice list range length of x columns, size equals number columns maximum, replace equals false
+    sorted column indexes equals sorted column indexes
+    selected columns equals list x columns sorted column indexes
+x equals x selected columns
+else:
+    sorted column indexes equals list range length of x columns
+
+If length of x is greater than number rows maximum:
+Stratify accordingly
+target name equals y name
+data equals pandas concatenate x and y along columns axis
+_, subset equals train test split data, test size equals number rows maximum, stratify equals data target name, shuffle equals true, random state equals seed
+x equals subset drop target name along columns axis
+y equals subset target name
+
+We need to convert categorical columns to string for OpenML
+categorical mask equals list self categorical mask for i in sorted column indexes
+columns equals list x columns
+return Dataset dataset equals self dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns
+
+Features: Value, Rent, Family Size, Number of Children, Age, Occupation Score, Socioeconomic Index, Total Income, Wage Income, Business Income, Farm Income, Social Security Income, Welfare Income, Other Income, Poverty Level, Binary Class.
+
+Tags: Economics, Statistics.
+
+Keywords: subsampling, KDD IPUMS LA Ninety Seven Small, stratification, OpenML.

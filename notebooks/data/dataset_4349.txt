@@ -1,0 +1,9 @@
+Cover Type Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Earth Science, Physical Sciences 
+
+Sub-sampling of the dataset Cover Type with seed equal to zero arguments number rows max equal to two thousand arguments number columns max equal to one hundred arguments number classes max equal to ten arguments no stratify equals False generated with the following source code:
+
+This function subsamples a given dataset. It takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify the sampling. The function first uniformly samples classes from the dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present. Next, it uniformly samples columns if required, selecting only the specified number of columns. Finally, it stratifies the sampling according to the target variable, ensuring that the resulting dataset has the specified number of rows.
+
+Dataset characteristics include the dataset name, features, target variable, and categorical mask. The features of this dataset are not easily interpretable and thus have been left as is.

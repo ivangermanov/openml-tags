@@ -1,0 +1,13 @@
+The QSAR Biodeg dataset has been subsampled with a specific set of parameters to create a new dataset. This new dataset was generated using a Python function that takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling.
+
+The function first uniformly samples classes from the original dataset, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and uses these indices to subset the original data. Next, it uniformly samples columns from the remaining data, selecting a specified number of columns.
+
+If the resulting dataset still has more rows than desired, the function stratifies the data according to the target variable and uses a train-test split to select a subset of the data. This ensures that the resulting dataset has the desired number of rows and maintains the original class distribution.
+
+Finally, the function converts categorical columns to strings and returns a new dataset object containing the subsampled data, along with metadata about the categorical variables and column names.
+
+Tags: Statistics, Text & Literature
+
+Features: Various molecular descriptors 
+
+Keywords: dataset, subsampling, stratification, machine learning, QSAR Biodeg

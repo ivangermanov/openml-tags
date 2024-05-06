@@ -1,0 +1,26 @@
+**FOREX eurhuf-minute-Close**
+
+Tags: Finance, Forex, Forex Close, Forex Minute, Health, Medicine
+
+**Data Source**: Dukascopy Historical Data Feed
+
+This dataset contains historical price data of the Forex EUR/HUF currency pair from Dukascopy. Each instance represents a one-minute candlestick, covering a period from January to December. Since the Forex market is closed on weekends, there are no instances for Saturdays and Sundays. All timestamps are based on the Europe/Amsterdam time zone.
+
+The dataset provides detailed information about each minute, including bid and ask prices at the open, high, low, and close of each time interval. Additionally, it includes the volume of trades for both bid and ask prices. The class attribute indicates whether the mean close price will increase or decrease (or remain the same) in the following minute.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point, based on the Europe/Amsterdam time zone.
+* **Bid Open**: The bid price at the start of the time interval.
+* **Bid High**: The highest bid price during the time interval.
+* **Bid Low**: The lowest bid price during the time interval.
+* **Bid Close**: The bid price at the end of the time interval.
+* **Bid Volume**: The number of times the bid price changed within the time interval.
+* **Ask Open**: The ask price at the start of the time interval.
+* **Ask High**: The highest ask price during the time interval.
+* **Ask Low**: The lowest ask price during the time interval.
+* **Ask Close**: The ask price at the end of the time interval.
+* **Ask Volume**: The number of times the ask price changed within the time interval.
+* **Class**: Whether the average price will increase during the next interval.
+
+Keywords: Forex, EUR/HUF, Candlestick, Historical Data, Finance, Trading

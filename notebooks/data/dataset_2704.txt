@@ -1,0 +1,24 @@
+**FOREX Eur/Dk Day Close**
+
+Tags: Finance, Forex, Forex Close, Forex Day, Transportation
+
+This is the historical price data of the Forex Eur/Dk pair from Dukascopy. Each instance, or row, represents one candlestick of one trading day. The entire dataset spans a specific period of time, excluding weekends when the Forex market is closed.
+
+The timezone of the feature Timestamp is set to Europe/Amsterdam. The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask prices of the following trading day, relative to the mean Close Bid and Close Ask prices of the current trading day. In other words, the class attribute is true when the mean Close price is expected to rise on the following trading day, and false when the mean Close price is anticipated to decline or remain unchanged on the following trading day.
+
+Attributes:
+
+* Timestamp: The time of the current data point, represented in the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of the specified time interval.
+* Bid High: The highest bid price recorded during the specified time interval.
+* Bid Low: The lowest bid price recorded during the specified time interval.
+* Bid Close: The bid price at the end of the specified time interval.
+* Bid Volume: The number of times the bid price changed within the specified time interval.
+* Ask Open: The ask price at the start of the specified time interval.
+* Ask High: The highest ask price recorded during the specified time interval.
+* Ask Low: The lowest ask price recorded during the specified time interval.
+* Ask Close: The ask price at the end of the specified time interval.
+* Ask Volume: The number of times the ask price changed within the specified time interval.
+* Class: Whether the average price is expected to increase or decrease on the following trading day.
+
+Keywords: Forex, Eur/Dk, Historical Price Data, Candlestick, Trading Day, Timezone, Class Attribute, Mean Close Price.

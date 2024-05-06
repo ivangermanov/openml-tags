@@ -1,0 +1,29 @@
+**FOREX chf sgd Hourly High**
+
+Tags: Finance, Forex, Forex High, Forex Hour, Government, Health
+
+**Source**: Dukascopy Historical Data Feed
+
+Data Description:
+This dataset contains the historical price data of the Forex CHF/SGD currency pair from Dukascopy. Each instance represents one candlestick of one hour. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The time zone of the feature Timestamp is Europe Amsterdam.
+
+The class attribute indicates the direction of the mean of the High Bid and the High Ask prices of the following hour, relative to the High Bid and High Ask mean of the current minute. Specifically, the class attribute is true when the mean High price is expected to increase in the following hour, and false when the mean High price is expected to decrease or remain unchanged.
+
+**Note**: This is a hypothetical task intended for scientific purposes only. Realistic trade strategies should only be applied to predictions based on Close attributes.
+
+Attributes:
+
+* Timestamp: The time of the current data point in the Europe Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the Bid Price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the Ask Price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Currency Pair, Historical Data, Candlestick, Time Series Analysis, Financial Markets, Trading Strategies.

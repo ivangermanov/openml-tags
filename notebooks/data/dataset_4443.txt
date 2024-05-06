@@ -1,0 +1,17 @@
+Machine Learning Model Details: Yeast Dataset Subsampling
+
+This model involves subsampling of the yeast dataset with specific parameters. The yeast dataset contains one hundred eighty-one instances.
+
+The model uses the following arguments: number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. In this case, the arguments are set to two thousand, one hundred, ten, and true respectively.
+
+The subsample function generates a new dataset based on the given arguments. It first selects a specified number of unique classes from the target variable using uniform sampling. Then, it selects the corresponding instances based on the chosen classes.
+
+Next, the function uniformly samples the columns if the total number of columns exceeds the specified maximum. Finally, it performs stratified sampling on the instances based on the target variable if the total number of instances exceeds the specified maximum.
+
+The resulting dataset consists of the subsampled instances and their corresponding target values. The categorical mask and column names are also preserved.
+
+Features of the dataset include protein localization characteristics such as mitochondrial, membrane-bound, and nuclear properties.
+
+Tags: Machine Learning, Mathematics
+
+Keywords: Yeast dataset, subsampling, machine learning, stratified sampling, feature selection

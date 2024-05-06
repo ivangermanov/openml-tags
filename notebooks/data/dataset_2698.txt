@@ -1,0 +1,26 @@
+FOREX Eur Jpy Hour High Dataset 
+
+Tags: Economics, Finance, Forex, Forex High, Forex Hour, Health 
+
+This dataset consists of historical price data of the Foreign Exchange Rate Eur/Jpy from Dukascopy. Each instance, or row, represents one candlestick of one hour. The entire dataset spans a specific date range, excluding weekends, as the Foreign Exchange Market is not traded on weekends. The time zone of the feature timestamp is Europe Amsterdam.
+
+The class attribute is determined by the direction of the mean of the high bid and the high ask of the following hour, relative to the high bid and high ask mean of the current minute. This means the class attribute is true when the mean high price is increasing in the following hour, and the class attribute is false when the mean high price is decreasing or remains the same in the following hour.
+
+Please note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies should only be applied to predictions based on close attributes, which are also available.
+
+Attributes:
+
+* Timestamp: The time of the current data point, represented in the Europe Amsterdam time zone.
+* Bid Open: The bid price at the start of this time interval.
+* Bid High: The highest bid price recorded during this time interval.
+* Bid Low: The lowest bid price recorded during this time interval.
+* Bid Close: The bid price at the end of this time interval.
+* Bid Volume: The number of times the bid price changed within this time interval.
+* Ask Open: The ask price at the start of this time interval.
+* Ask High: The highest ask price recorded during this time interval.
+* Ask Low: The lowest ask price recorded during this time interval.
+* Ask Close: The ask price at the end of this time interval.
+* Ask Volume: The number of times the ask price changed within this time interval.
+* Class: Whether the average price will increase during the next interval.
+
+Keywords: Foreign Exchange Rate, Forex, Eur/Jpy, Candlestick, Historical Data, Financial Markets.

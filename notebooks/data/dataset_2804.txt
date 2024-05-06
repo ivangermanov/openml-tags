@@ -1,0 +1,26 @@
+FOREX EUR NZD Hourly High Tags: finance, forex, machine learning, text and literature
+
+Data Description
+
+This dataset comprises historical price data of the Forex EUR/NZD pair, sourced from Dukascopy's Historical Data Feed. Each instance represents a single hourly candlestick, spanning from January to December. As Forex markets do not operate on weekends, these days are excluded from the dataset. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The primary objective of this dataset is to predict the direction of the mean high price in the subsequent hour, based on the current hourly data. To achieve this, the class attribute is defined as follows: if the mean high price increases in the next hour, the class attribute is true; otherwise, it remains false.
+
+Please note that this is a hypothetical task, intended solely for scientific purposes. In real-world trading scenarios, it is essential to apply predictive models to the close attributes, which are also available in this dataset.
+
+Attributes
+
+* Timestamp: The time of the current data point, set to the Europe/Amsterdam timezone.
+* Bid Open: The bid price at the start of this hourly interval.
+* Bid High: The highest bid price recorded during this hourly interval.
+* Bid Low: The lowest bid price recorded during this hourly interval.
+* Bid Close: The bid price at the end of this hourly interval.
+* Bid Volume: The frequency of changes in the bid price within this hourly interval.
+* Ask Open: The ask price at the start of this hourly interval.
+* Ask High: The highest ask price recorded during this hourly interval.
+* Ask Low: The lowest ask price recorded during this hourly interval.
+* Ask Close: The ask price at the end of this hourly interval.
+* Ask Volume: The frequency of changes in the ask price within this hourly interval.
+* Class: A binary indicator signifying whether the mean high price will increase in the next hour.
+
+Keywords: Forex, EUR NZD, machine learning, historical data, hourly candlesticks, timezone, class attribute, bid and ask prices.

@@ -1,0 +1,17 @@
+The Phoneme dataset belongs to the "classification on numerical features" benchmark. The aim of this dataset is to distinguish between nasal and oral sounds. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy integrated on all the frequencies.
+
+The phonemes are transcribed as follows: the sound "sh" as in "she", "dcl" as in "dark", "iy" as the vowel in "she", "aa" as the vowel in "dark", and "ao" as the first vowel in "water".
+
+The current dataset was formatted by the KEEL repository, but originally hosted by the ELENA Project. The dataset originates from the European ESPRIT project: Real-Time Analytical System for French and Spanish Speech Recognition. The aim of this project was the development and implementation of a real-time analytical system for speech recognition.
+
+Most speech recognition systems are global systems that recognize signals and do not really use speech specificities. On the contrary, analytical systems take into account the articulatory process leading to the different phonemes of a given language, the idea being to deduce the presence of each of the phonetic features from the acoustic observation. The main difficulty of analytical systems is to obtain acoustical parameters sufficiently reliable.
+
+These acoustical measurements must contain all the information relative to the concerned phonetic feature, be speaker-independent, context-independent, and robust to noise. The primary acoustical observation is always voluminous and classification cannot be processed directly. 
+
+The database contains vowels coming from isolated syllables. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy integrated on all the frequencies. 
+
+Each harmonic is signed: positive when it corresponds to a local maximum of the spectrum and negative otherwise. Three observation moments have been kept for each vowel to obtain different instances: the observation corresponding to the maximum total energy, and the observations taken before and after the observation corresponding to this maximum total energy.
+
+From these initial values, instances for which the amplitude of the five first harmonics was zero were removed, leading to the instances of the present database. The patterns are presented in a random order.
+
+Keywords: speech recognition, phonemes, acoustical parameters, analytical systems, phonetic features, classification.

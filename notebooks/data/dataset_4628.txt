@@ -1,0 +1,47 @@
+Bioresponse Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+
+Tags: Machine Learning, Mathematics 
+
+Subsampling of the dataset Bioresponse with seed equals three arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+
+def subsample(self, seed: int, number_rows_max: int = two thousand, number_columns_max: int = one hundred, number_classes_max: int = ten, stratified: bool = True,) -> Dataset:
+random_number_generator = numpy.random.default_rng(seed)
+features = self.features
+target_variable = self.target_variable
+
+uniformly sampling classes equals target variable unique if length of classes greater than number_classes_max:
+value_counts = target_variable value counts
+selected_classes = random_number_generator choice classes size equals number_classes_max replace equals false probability equals value counts divided by sum of value counts 
+select the indices where one of these classes is present 
+indices = target_variable index target_variable is in selected classes 
+features = features iloc indices 
+target_variable = target_variable iloc indices 
+
+uniformly sampling columns if required 
+if length of features columns greater than number_columns_max:
+column_indices = random_number_generator choice list range length of features columns size equals number_columns_max replace equals false 
+sorted_column_indices = sorted column_indices 
+selected_columns = list features columns sorted_column_indices 
+features = features selected_columns 
+else:
+sorted_column_indices = list range length of features columns 
+
+if length of features greater than number_rows_max:
+stratify accordingly 
+target_name = target_variable name 
+data = pandas concatenate features and target_variable axis equals columns 
+_, subset = sklearn model selection train test split data test size equals number_rows_max stratify equals data target_name shuffle equals true random_state equals seed 
+features = subset drop target_name axis equals columns 
+target_variable = subset target_name 
+
+we need to convert categorical columns to string for openml 
+categorical_mask = list comprehension self categorical mask for each item in sorted_column_indices 
+columns = list features columns 
+return Dataset technically this is not the same but its where it was derived from 
+dataset equals self dataset 
+features equals features 
+target_variable equals target_variable 
+categorical_mask equals categorical_mask 
+columns equals columns 
+
+Keywords: machine learning, mathematics, subsampling, dataset, bioresponse, stratify

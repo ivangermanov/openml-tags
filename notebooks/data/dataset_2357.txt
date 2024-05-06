@@ -1,0 +1,22 @@
+Geographical Original of Music 
+
+Tags: Economics, Machine Learning, OpenML-Reg19 
+
+The University of Nottingham, Ningbo, China 
+Source: UCI 
+
+Abstract: 
+This dataset contains instances with audio features extracted from one thousand fifty-nine wave files. The task associated with the data is to predict the geographical origin of music.
+
+Data Set Information:
+The dataset was built from a personal collection of one thousand fifty-nine tracks covering thirty-three countries or areas. The music used is traditional, ethnic, or world music only, as classified by the publishers of the product on which it appears. Any Western music is not included because its influence is global - what we seek are the aspects of music that most influence location. Thus, being able to specify a location with strong influence on the music is central. The geographical location of origin was manually collected from the CD sleeve notes, and when this information was inadequate, we searched other information sources. The location data is limited in precision to the country of origin. The country of origin was determined by the artist’s or artists’ main country or area of residence. Any track that had ambiguous origin is not included. We have taken the position of each country’s capital city (or the province of the area) by latitude and longitude as the absolute point of origin.
+
+The program Marsyas was used to extract audio features from the wave files. We used the default Marsyas settings in single vector format to estimate the performance with basic timbral information covering the entire length of each track. No feature weighting or pre-filtering was applied. All features were transformed to have a mean of zero and a standard deviation of one. We also investigated the utility of adding chromatic attributes. These describe the notes of the scale being used. This is especially important as a distinguishing feature in geographical ethnomusicology. The chromatic features provided by Marsyas are twelve per octave - Western tuning, but it may be possible to tell something from how similar to or different from Western tuning the music is.
+
+Attribute Information:
+The dataset is presented in two files, where each file corresponds to a different feature set. Both files contain the audio features of one thousand fifty-nine tracks. In the default features file, the first sixty-eight columns are audio features of the track, and the last two columns are the origin of the music, represented by latitude and longitude. In the default plus chromatic features file, the first one hundred sixteen columns are audio features of the track, and the last two columns are the origin of the music.
+
+Relevant Papers:
+The description of music collection and audio features can be found in Predicting the Geographical Origin of Music.
+
+Keywords: geographical origin, music, audio features, machine learning, economics, OpenML-Reg19

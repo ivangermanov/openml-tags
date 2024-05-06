@@ -1,0 +1,47 @@
+Subsampling of the dataset Dilbert with seed equal to one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals True.
+
+Generated with the following source code:
+
+def subsample(self, seed, number_rows_max, number_columns_max, number_classes_max, stratified):
+    random_number_generator = numpy random default random generator seed
+    x equals self x
+    y equals self y
+
+    Uniformly sample classes equals y unique. 
+    If length of classes is greater than number classes max:
+        value counts equals y value counts
+        selected classes equals random number generator choice classes size number classes max replace false probability value counts over sum value counts
+        Select the indices where one of these classes is present equals y index y is in selected classes
+        x equals x iloc select indices
+        y equals y iloc select indices
+
+    Uniformly sample columns if required.
+    If length of x columns is greater than number columns max:
+        column indexes equals random number generator choice list range length x columns size number columns max replace false
+        sorted column indexes equals sorted column indexes
+        selected columns equals list x columns sorted column indexes
+        x equals x selected columns
+    else:
+        sorted column indexes equals list range length x columns
+
+    If length of x is greater than number rows max:
+        Target name equals y name
+        Data equals pandas concatenate x, y axis columns
+        _, subset equals train test split data test size number rows max stratify data target name shuffle true random state seed
+        x equals subset drop target name axis columns
+        y equals subset target name
+
+    We need to convert categorical columns to string for OpenML.
+    Categorical mask equals list self categorical mask i for i in sorted column indexes
+    Columns equals list x columns
+    Return dataset equals 
+        Dataset 
+            dataset equals self dataset 
+            x equals x 
+            y equals y 
+            categorical mask equals categorical mask 
+            columns equals columns 
+
+Features:... (removed due to unreadability)
+
+Tags: Machine Learning, Mathematics

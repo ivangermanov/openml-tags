@@ -1,0 +1,25 @@
+**FOREX aud/jpy - Hour - Close**
+
+Tags: Finance, Forex, Forex Close, Forex Hour, Transportation
+
+**Data Description**
+This dataset contains historical price data of the Forex Australian Dollar/Japanese Yen pair from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on those days. The timestamp feature is set to the Europe/Amsterdam timezone.
+
+The class attribute indicates the direction of the mean close price of the following hour relative to the mean close price of the current minute. In other words, the class attribute is true when the mean close price increases in the subsequent hour, and false when the mean close price decreases or remains unchanged.
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
+* **Bid Open**: The bid price at the beginning of this hourly interval.
+* **Bid High**: The highest bid price recorded during this hourly interval.
+* **Bid Low**: The lowest bid price recorded during this hourly interval.
+* **Bid Close**: The bid price at the end of this hourly interval.
+* **Bid Volume**: The number of times the bid price changed within this hourly interval.
+* **Ask Open**: The ask price at the beginning of this hourly interval.
+* **Ask High**: The highest ask price recorded during this hourly interval.
+* **Ask Low**: The lowest ask price recorded during this hourly interval.
+* **Ask Close**: The ask price at the end of this hourly interval.
+* **Ask Volume**: The number of times the ask price changed within this hourly interval.
+* **Class**: Whether the average price will increase during the next hourly interval.
+
+Keywords: Forex, Australian Dollar, Japanese Yen, Historical Price Data, Candlestick, Time Series, Financial Markets.

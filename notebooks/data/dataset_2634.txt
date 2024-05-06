@@ -1,0 +1,25 @@
+FOREX eur/nzd Day High Tags: Demographics, Economics, Finance, Forex, Forex Day, Forex High 
+
+Data Description 
+This is the historical price data of the Forex Euro/New Zealand Dollar from Dukascopy. One instance, or row, represents one candlestick of one day. The entire dataset spans a specific period of time and does not include weekends, since the Forex market is not traded on weekends. The time zone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. In other words, the class attribute is true when the mean High price is expected to increase the following day, and false when the mean High price is expected to decrease or remain the same the following day.
+
+Note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
+
+Attributes 
+
+Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the Bid Price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the Ask Price changed within this time interval.
+Class: Whether the average price will increase during the next interval.
+
+Keywords: Forex, Euro/New Zealand Dollar, Historical Price Data, Candlestick, Time Zone, Class Attribute.

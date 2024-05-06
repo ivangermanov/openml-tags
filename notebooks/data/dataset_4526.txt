@@ -1,0 +1,13 @@
+Vehicle Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Using Stratification Tags: Subsampling of the Vehicle Dataset 
+
+This dataset is a subsampled version of the original Vehicle dataset. It was generated using a specific set of arguments, including a seed value of one, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, stratification was used during the sampling process.
+
+The subsampling process involved several steps. First, the unique classes in the dataset were identified, and then a selection of ten classes was made using a random choice method that took into account the value counts of each class. The indices of the samples belonging to these selected classes were retained, while the others were discarded. 
+
+Next, the columns of the dataset were sampled uniformly to reduce their number to one hundred. This was done by randomly selecting column indices and then sorting them to ensure consistency. If the resulting dataset still had more than two thousand rows, stratified sampling was applied again to reduce the row count while maintaining the class balance.
+
+Finally, the categorical columns were converted to strings to conform to OpenML requirements. The resulting dataset consists of the sampled features, target variable, and categorical mask, along with metadata information about its origin.
+
+Features: Compactness, Circularity, Radius Ratio, Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, Class
+
+Keywords: Vehicle dataset, subsampling, stratification, feature selection, class balancing

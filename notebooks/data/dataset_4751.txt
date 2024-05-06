@@ -1,0 +1,13 @@
+KDD Cup Ninety-Nine Seed One Dataset 
+
+This dataset is a subsampling of the KDD Cup Ninety-Nine dataset. The subsampling was done using a specific set of arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify.
+
+The resulting dataset has been generated using a Python function that takes into account the specified arguments. This function first uniformly samples classes from the original dataset, ensuring that the selected classes are present in the resulting dataset. It then uniformly samples columns from the original dataset, selecting only the most relevant ones.
+
+If the number of rows in the resulting dataset exceeds the specified maximum, the function uses stratified sampling to select a representative subset of rows. This ensures that the distribution of classes in the resulting dataset remains similar to that of the original dataset.
+
+The dataset includes a range of features, including duration, protocol type, service, flag, source bytes, destination bytes, and various other network traffic metrics.
+
+Tags: Subsampling of the KDD Cup Ninety-Nine dataset
+
+Keywords: KDD Cup Ninety-Nine, subsampling, stratified sampling, dataset generation, feature selection

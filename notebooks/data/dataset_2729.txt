@@ -1,0 +1,26 @@
+FOREX Eur/Gbp Minute High
+
+Tags: Earth Science, Finance, Forex, Forex High, Forex Minute, Government
+
+Data Description:
+This dataset contains the historical price data of the Forex Eur/Gbp pair from Dukascopy. Each instance, or row, represents one candlestick of one minute. The entire dataset spans a specific period, excluding weekends, as the Forex market is not active during these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+
+The class attribute is determined by the direction of the mean of the high bid and high ask prices of the following minute, relative to the mean of the high bid and high ask prices of the current minute. In other words, the class attribute is true when the mean high price is expected to increase in the next minute, and false when the mean high price is expected to decrease or remain unchanged in the next minute.
+
+Note that this is a hypothetical task, intended solely for scientific purposes. Realistic trading strategies should only be applied to predictions based on close attributes, which are also available in this dataset.
+
+Attributes:
+Timestamp - The time of the current data point, set to the Europe/Amsterdam time zone.
+Bid Open - The bid price at the start of this time interval.
+Bid High - The highest bid price recorded during this time interval.
+Bid Low - The lowest bid price recorded during this time interval.
+Bid Close - The bid price at the end of this time interval.
+Bid Volume - The number of times the bid price changed within this time interval.
+Ask Open - The ask price at the start of this time interval.
+Ask High - The highest ask price recorded during this time interval.
+Ask Low - The lowest ask price recorded during this time interval.
+Ask Close - The ask price at the end of this time interval.
+Ask Volume - The number of times the ask price changed within this time interval.
+Class - Whether the average price is expected to rise during the next interval.
+
+Keywords: Forex, Eur/Gbp, Candlestick, Finance, Trading, Hypothetical Task

@@ -1,0 +1,11 @@
+Subsampling of the dataset Click Prediction Small with a specified seed value, generated with specific arguments, including maximum number of rows, columns, and classes, as well as a flag for stratification.
+
+Tags: Health, Machine Learning
+
+This dataset was generated using the following source code:
+
+The function subsample takes several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a flag indicating whether to use stratified sampling. It first initializes a random number generator with the specified seed value. Then, it selects a uniform sample of classes from the unique values in the target variable, up to the maximum specified number of classes. The function then selects the indices corresponding to these chosen classes and uses them to subset the feature matrix and target variable. Next, it uniformly samples columns from the feature matrix, up to the maximum specified number of columns. Finally, if the resulting dataset still has more rows than the maximum specified number, it uses stratified sampling to reduce the number of rows to the desired amount.
+
+Features: impression, URL hash, advertisement ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, user ID, and click.
+
+Keywords: machine learning, health, dataset, subsampling, stratification, feature selection.
