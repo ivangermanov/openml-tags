@@ -1,14 +1,13 @@
-The Tweets of Wisdom 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred one thousand two hundred eighty-one, and it has multiple rows and numerous features including IDs and class feature.
 
-Twitter has become one of the most popular social media platforms over the past few years, accommodating a diverse range of individuals and thoughts. From celebrities to government policies, Twitter provides a platform for everyone to express themselves. Amidst this diversity, there are numerous Twitter accounts dedicated to sharing self-help thoughts, often related to personal improvement and excelling in various aspects of life. Intrigued by these accounts, I embarked on a journey to explore their tweets, discovering recurring themes throughout.
+The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-To delve deeper into these tweets, I utilized the Tweepy Application Programming Interface to scrape data from forty prominent self-help Twitter accounts. The collected data comprises tweets, retweets, and retweets with comments, resulting in a dataset containing more than forty authors. Every retweet from any of the initial forty authors is stored as a tweet from the original author, while retweets with comments include the author's remark, followed by a tag and the content of the retweet.
+The dataset includes various information about the target protein such as its preferred name, synonyms, organism, species group, protein target classification, and description.
 
-I extend my gratitude to Stack Overflow, an invaluable resource that assisted me throughout this project, from scraping data to conducting data analysis. Additionally, I appreciate the Tweepy API, which greatly facilitated the process of fetching tweets.
+The target protein is a single protein known as Serine/threonine-protein kinase DCLK one, also referred to as Doublecortin domain-containing protein three A, Doublecortin-like and CAM kinase-like one. It belongs to the enzyme/kinase/protein kinase/CAMK protein kinase group/CAMK protein kinase DCAMK one family.
 
-My primary motivations for creating this dataset were to investigate the similarity among these self-help tweets and to identify factors contributing to their virality. I explored these questions further in my kernel, where I analyzed the data to uncover insights into the characteristics of popular self-help tweets.
+The target protein is involved in various biological processes such as neuron migration, protein phosphorylation, nervous system development, axonogenesis, central nervous system development, brain development, response to virus, endosomal transport, phosphorylation, peptidyl-serine phosphorylation, central nervous system projection neuron axonogenesis, cell differentiation, forebrain development, protein localization to nucleus, intracellular signal transduction, axon extension, neuron projection morphogenesis, dendrite morphogenesis, negative regulation of protein localization to nucleus.
 
-Features: 
-author handle, creation date, likes, retweets, tweet content 
+Additionally, the target protein is associated with various cellular components such as plasma membrane and postsynaptic density, and it has molecular functions like nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, protein serine kinase activity.
 
-Keywords: Twitter, Self-Help, Personal Improvement, Viral Tweets, Data Analysis
+Keywords: QSAR, machine learning, molecular fingerprints, SMILES strings, Pipeline Pilot, Dassault Systèmes BIOVIA, protein target, Serine/threonine-protein kinase, DCLK1, enzyme, kinase, protein kinase, CAMK protein kinase, biological processes, cellular components, molecular functions.

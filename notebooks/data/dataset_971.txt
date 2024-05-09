@@ -1,13 +1,9 @@
-GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating diverse quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, among others, for classification, feature selection, or clustering algorithms.
+The MFEAT Fourier dataset is a binarized version of the original data set. The multi-class target feature has been converted to a two-class nominal target feature by relabeling the majority class as Positive and all others as Negative.
 
-The inspiration behind creating this repository stems from the growing need within the machine learning and bioinformatics communities for a unified collection of microarray classification problems. This enables researchers to compare and contrast different classification or feature selection techniques on the same set of problems.
+Originally, this conversion was done to facilitate easier analysis and processing of the data. This dataset is particularly useful for those studying chemistry and life sciences.
 
-Each gene expression sample in the GEMLeR repository originates from the large, publicly accessible Expression Project for Oncology (expO) repository, managed by the International Genomics Consortium. The primary objective of expO and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is subsequently updated with clinical outcomes and released into the public domain without any intellectual property restrictions.
+The dataset consists of numerous attributes, including various chemical and biological properties. These attributes are essential for understanding the underlying mechanisms and relationships within the data.
 
-The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
+The binary class feature allows researchers to focus on specific aspects of the data, enabling more targeted and effective analysis.
 
-Although multiple sources of gene expression data exist, the decision to utilize data from the expO repository was made due to several key factors, including the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the accessibility of a large number of samples for diverse tumor types.
-
-When publishing material based on GEMLeR datasets, please acknowledge the assistance received by utilizing this repository. This will enable others to obtain the same datasets and replicate the experiments.
-
-Keywords: gene expression, machine learning, bioinformatics, microarray, classification, feature selection, clustering, genomics, oncology, tumor samples, phenotype studies.
+Keywords: chemistry, life sciences, binarized data, multi-class target feature, nominal target feature, data analysis.

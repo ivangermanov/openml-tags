@@ -1,0 +1,15 @@
+League of Legends Solo Queue Ranked Games
+
+This dataset contains statistics of ranked games from a Platinum Elo, where each game is unique and can be identified by its gameId, which can be used to fetch more attributes from the Riot API. Each game has features from different time frames, ranging from ten minutes into the game to the end of the game. 
+
+The Blue Team has fifty-five features collected, including kills, deaths, gold, experience, and level. These features provide valuable insights into the game and can be engineered further to gain a deeper understanding of the gameplay. 
+
+The column hasWon serves as the target value for classification models aiming to predict the game outcome. Alternatively, the gameDuration attribute can be used to predict the length of the game.
+
+Attributes prefixed with "is" are boolean categorical values, represented by zero or one.
+
+Features include:
+
+gameId, gameDuration, hasWon, frame, gold difference, experience difference, champion level difference, first tower taken, first blood drawn, fire drake killed, water drake killed, air drake killed, earth drake killed, elder drake killed, fire drake lost, water drake lost, air drake lost, earth drake lost, elder drake lost, Baron Nashor killed, Baron Nashor lost, Rift Herald killed, Rift Herald lost, top inhibitor destroyed, mid inhibitor destroyed, bot inhibitor destroyed, top inhibitor lost, mid inhibitor lost, bot inhibitor lost, top nexus turret destroyed, mid nexus turret destroyed, bot nexus turret destroyed, top nexus turret lost, mid nexus turret lost, bot nexus turret lost, top base turret destroyed, mid base turret destroyed, bot base turret destroyed, top base turret lost, mid base turret lost, bot base turret lost, top inner turret destroyed, mid inner turret destroyed, bot inner turret destroyed, top inner turret lost, mid inner turret lost, bot inner turret lost, top outer turret destroyed, mid outer turret destroyed, bot outer turret destroyed, top outer turret lost, mid outer turret lost, bot outer turret lost, kills, deaths, assists, wards placed, wards destroyed, wards lost.
+
+Keywords: League of Legends, Ranked Games, Machine Learning, Game Outcome Prediction, Game Duration Prediction.

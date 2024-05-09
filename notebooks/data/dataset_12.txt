@@ -1,15 +1,25 @@
-The Multiple Features Dataset: Fourier is one of a set of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Each dataset corresponds to the same original characters, with two thousand instances in total.
+**Multiple Features Dataset: Factors**
 
-The attribute information represents seventy-six Fourier coefficients of the character shapes. 
+This dataset is one of a set of six datasets describing features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character.
 
-This dataset is part of a larger collection of datasets, each featuring a different type of attribute information. These include profile correlations, Karhunen-Love coefficients, pixel averages, Zernike moments, and morphological features. 
+The dataset consists of two thousand instances, two hundred instances per class, which were digitized in binary images.
 
-The dataset has been used in various studies and papers, including one on handwritten digit recognition by combined classifiers and another on statistical pattern recognition. 
+### Attribute Information
 
-The features of this dataset are:
+The attributes represent profile correlations. Unfortunately, no more information is known about these attributes.
 
-attribute one, attribute two, ..., attribute seventy-six, class
+### Relevant Papers
 
-The dataset consists of features of handwritten numerals extracted from a collection of Dutch utility maps. Two hundred patterns per class have been digitized in binary images.
+A slightly different version of this database was used in a paper titled "Handwritten Digit Recognition by Combined Classifiers". The current database was also used in a review paper titled "Statistical Pattern Recognition: A Review".
 
-Keywords: Multiple Features Dataset, Fourier Coefficients, Handwritten Numerals, Dutch Utility Maps, Binary Images.
+This dataset contains features representing profile correlations. There are six files in total, each containing different types of features. These include Fourier coefficients of the character shapes, profile correlations, Karhunen-Love coefficients, pixel averages in two by three windows, Zernike moments, and morphological features. 
+
+In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one to nine. 
+
+Corresponding patterns in different feature sets correspond to the same original character. Unfortunately, the source image dataset has been lost. However, using the pixel dataset, sampled versions of the original images may be obtained, with a resolution of fifteen by sixteen pixels.
+
+Has Missing Values? No
+
+Additional Variable Information: Six files are included in this dataset, each containing a different type of feature.
+
+Keywords: handwritten numerals, Dutch utility maps, profile correlations, machine learning, dataset

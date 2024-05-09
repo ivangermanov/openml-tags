@@ -1,15 +1,43 @@
-WHO National Life Expectancy Dataset
+MetaQSAR project - September 
 
-Context:
-As I develop my data science skills in new areas, I found an intriguing problem: identifying factors that influence life expectancy at a national level. Although there is an existing Kaggle dataset that explores this topic, unfortunately, it contains corrupted data. To tackle this issue, I decided to create a new dataset with reliable information. As a beginner in the field of life expectancy, I had to make educated guesses about which features might be relevant.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID, and it has multiple rows and numerous features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Content:
-The World Health Organization aims to protect a billion more people from health emergencies and provide better health and well-being. To achieve this goal, the organization provides public data collected from various sources to identify and monitor crucial factors. This dataset was primarily created using Global Health Observatory and United Nations Educational, Scientific and Cultural Organization information. It covers the period from two thousand to two thousand sixteen for one hundred eighty-three countries, all contained within a single comma-separated values file. Missing data remains intact, allowing users to decide how to handle it. Three accompanying notebooks offer a preliminary analysis, a comparison with another Kaggle dataset, and a template for creating this dataset.
+The dataset includes molecule ChEMBL ID, and multiple fingerprint features. 
 
-Inspiration:
-There is much to explore in this dataset. The Global Health Observatory server alone contains over two thousand indicators. Users may investigate how life expectancy is calculated by the Global Health Observatory and the United Nations Educational, Scientific and Cultural Organization, and what causes the discrepancies. Similar questions can be posed regarding Gross National Income and mortality features. Additionally, users can examine how life expectancy after sixty compares to life expectancy at birth, and whether their relationships with the features in this dataset differ. Other potential indicators on the servers could be incorporated to enhance the dataset. Some Global Health Observatory indicators represent distinct studies with varying coverage, which could be combined to create more useful and robust features. Unraveling the correlations between features would require substantial effort.
+Scraped Data:
+The preferred name for this target is Melanocortin Receptor Five, also known as Mc Five R. It belongs to the species Mus Musculus, and is classified as a single protein. 
 
-Features:
-Country, Country Code, Region, Year, Life Expectancy, Life Expectancy at Sixty, Adult Mortality, Infant Mortality, Age One to Four Mortality, Alcohol Consumption, Body Mass Index, Age Five to Nineteen Thinness, Age Five to Nineteen Obesity, Hepatitis, Measles, Polio, Diphtheria, Access to Basic Water, Number of Doctors, Number of Hospitals, Gross National Income per Capita 
+Description:
+Melanocortin Receptor Five is a membrane receptor, belonging to family A G protein-coupled receptor, specifically a peptide receptor. 
 
-Keywords: life expectancy, World Health Organization, Global Health Observatory, United Nations Educational Scientific and Cultural Organization, mortality rates, healthcare indicators, national development.
+Expression Atlas: one 
+Go Component: three 
+    * cytoplasm
+    * plasma membrane
+    * membrane
+Go Function: three 
+    * G protein-coupled receptor activity
+    * melanocortin receptor activity
+    * hormone binding
+Go Process: four 
+    * signal transduction
+    * G protein-coupled receptor signaling pathway
+    * adenylate cyclase-activating G protein-coupled receptor signaling pathway
+    * regulation of metabolic process
+
+canSAR-Target: one 
+Guide To PHARMACOLOGY: one 
+Reactome: two 
+    * peptide ligand-binding receptors
+    * G alpha s signalling events
+UniProt: one 
+InterPro: five 
+    * GPCR Rhodopsin
+    * Melan Cort Rcpt Five
+    * Melcrt ACTH Rcpt
+    * MC Three-Five R
+    * GPCR Rhodopsn Seven TM
+Pfam: one 
+    * seven tm one
+
+Keywords: QSAR, MetaQSAR, machine learning, molecular fingerprints, melanocortin receptor, G protein-coupled receptor, signal transduction.

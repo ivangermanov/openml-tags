@@ -1,35 +1,14 @@
-The KR vs K Chess Endgame Dataset represents positions on a chessboard featuring the white king, the white rook, and the black king. The primary objective is to determine the optimal number of turns required for white to emerge victorious, considering that the game may culminate in a draw if it exceeds sixteen turns.
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Attributes Details:
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be used by different researchers. This way, many different classification or feature selection techniques can finally be compared to each other on the same set of problems.
 
-1. The column of the white king, ranging from a to h.
-2. The row of the white king, spanning from one to eight.
-3. The column of the white rook, ranging from a to h.
-4. The row of the white rook, spanning from one to eight.
-5. The column of the black king, ranging from a to h.
-6. The class label denotes the outcome of the game, categorized as either a draw or the number of turns needed for white to win, up to a maximum of sixteen turns.
+The origin of the data is rooted in the Expression Project for Oncology repository by the International Genomics Consortium. The primary goal of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without any intellectual property restrictions.
 
-Class labels include:
+The availability of this information translates directly into benefits for patients, researchers, and pharmaceutical companies alike. Although there are various other sources of gene expression data available, the decision to use data from the Expression Project for Oncology repository was made due to the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-* Draw
-* Zero
-* One
-* Two
-* Three
-* Four
-* Five
-* Six
-* Seven
-* Eight
-* Nine
-* Ten
-* Eleven
-* Twelve
-* Thirteen
-* Fourteen
-* Fifteen
-* Sixteen
+When publishing material based on GEMLeR datasets, please note the assistance received by using this repository. This will enable others to obtain the same datasets and replicate experiments. 
 
-Tags: Chemistry, Life Science
+Features: 
+ID Reference, and many more...
 
-Keywords: Chess, Endgame, KR vs K, Optimal Turns, Game Outcome, Draw, Victory.
+Keywords: gene expression, machine learning, microarray, bioinformatics, oncology, genomics, classification, feature selection, clustering.

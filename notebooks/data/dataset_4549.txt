@@ -1,14 +1,13 @@
-Subsampling of the dataset Arcene, categorized under Life Science and Statistics, generated using the following source code.
+**Buzz in Social Media - Twitter Tags**
 
-The function `subsample` takes in parameters including `seed`, `nrows max`, `ncols max`, `nclasses max`, and `stratified`. It first uniformly samples classes from the unique values in `y`, ensuring the number of classes does not exceed `nclasses max`. The indices where one of these classes is present are then selected, and `x` and `y` are updated accordingly.
+This dataset contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.
 
-If necessary, the function uniformly samples columns, selecting a specified number of column indices without replacement. The selected columns are then used to update `x`.
+The dataset was created by researchers from the University of Joseph Fourier (Grenoble I) and the Laboratoire d'informatique de Grenoble (LIG), in collaboration with the BestofMedia Group.
 
-Finally, if the length of `x` exceeds `nrows max`, the function performs stratified sampling, taking into account the target variable `y`. This ensures that the resulting dataset is representative of the original distribution.
+The dataset is designed to predict activity in online social networks, and includes examples from both Twitter and Tom's Hardware. The data is sourced from the University of California, Irvine (UCI).
 
-The resulting dataset consists of `x`, `y`, and additional metadata including the categorical mask and column names.
+When using this dataset, please cite the following paper: Predictions of Activity in Online Social Networks, which was presented at the Conference on Models and Analysis of Networks: Mathematical and Computer Science Approaches (MARAMI) in 2013.
 
-Features: 
-Mass Spect Peak, Retention Time, ... 
+The dataset includes a range of attributes, including measures of node centrality, assortative mixing, and community structure.
 
-Keywords: Arcene, Subsampling, Stratified Sampling, Feature Selection, Life Science, Statistics
+Keywords: social media, Twitter, online social networks, buzz events, predictive modeling, node centrality, assortative mixing, community structure.

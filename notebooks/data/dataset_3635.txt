@@ -1,7 +1,15 @@
-San Francisco International Airport Report on Monthly Passenger Traffic Statistics by Airline
+This dataset contains QSAR data showing activity values of several compounds on drug target TID, and it has multiple rows and numerous features including IDs and class feature. The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
 
-Airport data exhibits a seasonal pattern; therefore, any comparative analyses should be conducted on a period-over-period basis, such as comparing January of one year to January of another year, rather than comparing consecutive months, like January to February. It is essential to acknowledge that the relationships between fact and attribute fields are not always one-to-one. For instance, passenger counts affiliated with United Airlines will appear in multiple attribute fields and are cumulative, providing users with the flexibility to derive categorical passenger counts according to their preferences.
+The MetaQSAR project was conducted in September 2015. This dataset should be cited accordingly.
 
-The report includes various features, including activity period, operating airline, published airline, geographic summary, geographic region, activity type code, price category code, terminal, boarding area, passenger count, adjusted activity type code, adjusted passenger count, year, and month.
+The dataset contains multiple compounds with their respective activity values on drug target TID. Each compound has numerous molecular fingerprints which were generated from their corresponding SMILES strings using the Pipeline Pilot program.
 
-Keywords: airport data, passenger traffic statistics, airline, seasonal pattern, period-over-period analysis, cumulative data, categorical analysis.
+The molecular fingerprints do not usually require missing value imputation as all bits are generated. 
+
+Features include molecule ChEMBL ID and median pXC50.
+
+The dataset also includes information about the target protein, namely Serine/Threonine-Protein Kinase Nek11. It belongs to the enzyme/kinase/protein kinase/other protein kinase group/other protein kinase Nek family/other protein kinase Nek11 classification. 
+
+Expression Atlas, Gene Ontology, Guide to Pharmacology, IntAct, PharmGKB, Pharos, UniProt, and InterPro provide additional information about this protein.
+
+Keywords: QSAR, machine learning, molecular fingerprints, drug target, protein kinase, Serine/Threonine-Protein Kinase Nek11.

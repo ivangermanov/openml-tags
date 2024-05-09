@@ -1,11 +1,26 @@
-IMDB drama 
+Wisconsin Prognostic Breast Cancer 
 
-Tags: concept drift, Machine Learning, study 16 
+The Wisconsin Prognostic Breast Cancer dataset is a collection of medical data related to breast cancer diagnosis and prognosis. It contains thirty-four attributes, including the patient's identification number, outcome, time, and thirty-two real-valued input features. 
 
-Source: 
+Source Information 
+This dataset was created by the University of Wisconsin and donated to the public domain. It has been used in various research studies and publications, including those focused on machine learning, medicine, and openml-reg19.
 
-Batch Incremental versus Instance Incremental Learning in Dynamic and Evolving Data 
+Past Usage 
+This dataset has been utilized in multiple research papers, exploring different approaches to predicting breast cancer outcomes. One study employed an inductive learning approach to prognostic prediction, while another utilized linear programming to diagnose and predict breast cancer outcomes.
 
-Features: Drama, Action, Adventure, Affair, Age, Agent, Aid, Air, America, American, Ancient, Angeles, Animals, Answer, Apartment, Area, Army, Arrested, Arrival, Art, Artist, Artists, Asks, Assigned, Assistant, Attack, Attempt, Attention, Audience, Baby, Back, Bad, Band, Bank, Bar, Based, Battle, Beach, Beautiful, Beauty, Bed, Begin, Beginning, Being, Believes, Best, Better, Between, Big, Birth, Black, Blood, Blue, Body, Book, Born, Boy, Break, Bringing, Brother, Building, Business, But, Buy, Call, Camera, Campbell, Can, Cannot, Captain, Care, Career, Case, Cast, Catch, Category, Cause, Cease, Celebrate, Cell, Central, Century, Certain, Chain, Challenge, Chance, Change, Changing, Channel, Chapter, Character, Charge, Chart, Chat, Check, Child, Children, Choice, Choose, Church, Cinema, Circle, City, Claim, Class, Classroom, Clean, Clear, Clerk, Click, Client, Climate, Clinic, Close, Closet, Club, Coach, Code, Coffee, Cold, Collection, College, Color, Come, Coming, Comment, Commercial, Commitment, Common, Community, Company, Compare, Compassion, Complete, Complex, Composition, Computer, Concept, Concern, Concert, Condition, Conduct, Conference, Conflict, Connection, Consequences, Consider, Constant, Construct, Construction, Contact, Contain, Content, Contest, Continue, Contract, Control, Conversation, Convert, Cook, Cool, Copy, Core, Corner, Corporation, Correct, Cost, Council, Count, Country, Couple, Courage, Course, Court, Cover, Coworker, Crack, Craft, Create, Creation, Credit, Crime, Crisis, Critical, Crop, Cross, Crowd, Cry, Culture, Cup, Cure, Current, Curve, Customer, Cut 
+Relevant Information 
+Each record in the dataset represents follow-up data for one breast cancer case, featuring consecutive patients seen by doctors since nineteen eighty-four. These cases exhibit invasive breast cancer and no evidence of distant metastases at the time of diagnosis. The first thirty features are computed from a digitized image of a fine needle aspirate of a breast mass, describing characteristics of the cell nuclei present in the image.
 
-Keywords: machine learning, concept drift, dynamic data, evolving data, incremental learning
+Two Possible Learning Problems 
+There are two potential learning problems associated with this dataset. The first involves predicting the field of outcome, where R indicates recurrence and N indicates non-recurrence. To accomplish this, the dataset should first be filtered to reflect a particular endpoint, such as recurrences before twenty-four months being considered positive and non-recurrence beyond twenty-four months being considered negative. The second learning problem involves predicting the time to recur, utilizing the recurrence surface approximation method.
+
+Attribute Information 
+The attributes in this dataset include the patient's identification number, outcome, time, and thirty-two real-valued input features. These features are computed from the digitized image of the fine needle aspirate and describe characteristics of the cell nuclei. They include the radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension of the cell nuclei.
+
+Missing Attribute Values 
+Lymph node status is missing in four cases.
+
+Class Distribution 
+The class distribution consists of one hundred fifty-one non-recurrence cases and forty-seven recurrence cases.
+
+Keywords: breast cancer, machine learning, medicine, prognosis, diagnosis, fine needle aspirate, cell nuclei, recurrence, non-recurrence.

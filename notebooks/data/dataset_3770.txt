@@ -1,24 +1,11 @@
-Spike Waveforms
+This dataset, named QSAR-TID-103088, belongs to the MetaQSAR project and is tagged with Computational Universe, Demographics, MTLQSAR, and study_3. It contains QSAR data showing activity values of several compounds on drug target TID: 103088.
 
-Tags: Computer Systems, Machine Learning
+The dataset has thirteen rows and one thousand twenty-six features, including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Introduction
-Neurons in the brain utilize electrical signals for communication. Different spike waveforms correspond to distinct cell types or varying neuron morphologies. By examining diverse spike waveforms, we may identify disparate neuronal types within our sample.
+The dataset includes information about the cystine/glutamate transporter, also known as amino acid transport system xc-, calcium channel blocker resistance protein CCBR one, solute carrier family seven member eleven. This protein is involved in various biological processes, including amino acid transmembrane transport, glutathione metabolic process, and response to oxidative stress.
 
-Content
-The dataset comprises one hundred fifty numerical categories corresponding to the sampling of a five millisecond extracellular voltage at thirty kilohertz. Since the extracellular voltage amplitude relates to the square of the distance to the cell, we normalize the entire trace to the minimal voltage, which corresponds to the peak of the spike.
+The cystine/glutamate transporter is expressed in various tissues, including brain, lung, and astrocytes. It plays a crucial role in maintaining the balance of glutamate and cystine levels in the body, and its dysfunction has been implicated in various diseases, including cancer and neurodegenerative disorders.
 
-To Load into Python
-Import the necessary libraries and load the dataset using the following code:
-```
-import pandas as pd
-waveforms = pd.read_csv('waveforms.csv', index_col='uid')
-waveforms.info()
-waveforms.iloc[0, :-1].plot()
-```
-This code will load the dataset, display its information, and plot the first waveform.
+The dataset also includes information about the protein's structure and function, including its membrane topology, substrate specificity, and regulatory mechanisms. Additionally, it provides information about the protein's interactions with other molecules, including its binding partners and inhibitors.
 
-Features
-UID, Organoid
-
-Keywords: Spike Waveforms, Neuron Morphologies, Electrical Signals, Brain Communication, Extracellular Voltage, Normalization, Python Data Loading.
+Keywords: QSAR, cystine/glutamate transporter, amino acid transport, glutathione metabolism, oxidative stress.

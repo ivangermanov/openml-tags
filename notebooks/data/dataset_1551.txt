@@ -1,17 +1,20 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: Ribosomal Protein S6 Kinase Alpha Four, and it has multiple rows and numerous features including IDs and class feature.
+AutoUniv Dataset 
 
-The features represent Fingerprints which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+Abstract:
+The AutoUniv dataset is an advanced data generator for classification tasks, aimed at reflecting the nuances and heterogeneity of real data. This dataset can be generated in various formats, including CSV, ARFF, or C4.5.
 
-Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Data Set Information:
+To create a model, users specify the number of attributes and their type, the number of classes, the complexity of the underlying rules, and the noise level. Then, AutoUniv produces a model through a process of constrained randomized search to satisfy the user's requirements. A model can have multiple rules, and rare class models can be designed. Additionally, a sequence of models can be designed to reflect concept and/or population drift.
 
-Features include molecule identification, fingerprint information, and other molecular properties.
+Attribute Information:
+Attributes can be either discrete or continuous. Discrete attributes can be nominal or integer, with varying values.
 
-This dataset was created as part of the MetaQSAR project in September 2015.
+Relevant Papers:
+Modeling the example life cycle in an online classification learner, and the impact of latency on online classification learning with concept drift are some relevant research topics related to this dataset.
 
-The dataset is related to economics and machine learning, specifically multi-task learning QSAR.
+Features:
+Class
 
-The target classification is an enzyme, kinase, and protein kinase, belonging to the CAMK protein kinase group and RSKb family.
+Tags: Artificial, Chemistry, Life Science
 
-It is involved in various biological processes including negative regulation of cytokine production, chromatin remodeling, and regulation of DNA-templated transcription.
-
-Keywords: QSAR, machine learning, multi-task learning, economics, kinase, protein kinase, ribosomal protein S6 kinase alpha four.
+Keywords: classification tasks, data generator, real data, machine learning, concept drift

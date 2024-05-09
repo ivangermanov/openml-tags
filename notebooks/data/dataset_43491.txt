@@ -1,0 +1,21 @@
+Arcade Game Stats 
+
+Tags: Computer Systems, Machine Learning 
+
+Statistics on a Block Breaker-like Game 
+
+I am in the process of creating a block breaker-like game, where I started with the "Block Breaker" section of the Complete C Unity Developer Two D course, Learn to Code Making Games. After designing numerous levels, I needed to categorize them by difficulty. But how do you quantify the difficulty of a level? 
+
+A preliminary solution is to create an autoplayer bot that is not perfect and observe its performance on each level over multiple trials. I recorded a video showcasing the autoplayer in action.
+
+The following fields are included in the dataset:
+
+Date - the date and time the game was autoplayed 
+Level - the name of the level, initially including an estimated difficulty rating, now outdated due to tweaks made to the game 
+Number of Blocks - the number of blocks required to break to win the level 
+Is Win - a boolean indicating whether the autoplayer successfully cleared all blocks or failed to catch the ball 
+Elapsed Time - the duration of gameplay in seconds until either winning or losing; note that gameplay speed is quadrupled, so actual playing time for humans would be approximately four times this value 
+Score - the cumulative score at the conclusion of the game 
+Accuracy - the autoplayer's precision, which affects the likelihood of winning, with higher values corresponding to increased success rates 
+
+Keywords: Block Breaker, Autoplayer, Difficulty Measurement, Game Development, Machine Learning, Statistics

@@ -1,83 +1,59 @@
-Soybean Dataset 
+The Image Segmentation Data Set 
 
-This is the Large Soybean Database from the UCI repository, with its training and test database combined into a single file. There are nineteen classes, only the first fifteen of which have been used in prior work. The folklore seems to be that the last four classes are unjustified by the data since they have so few examples. 
+The instances were drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every single pixel. Each instance is a three-by-three region.
 
-There are thirty-five categorical attributes, some nominal and some ordered. The value "does not apply" means does not apply. The values for attributes are encoded numerically, with the first value encoded as zero, the second as one, and so forth. An unknown value is encoded as question mark.
+### Attribute Information 
 
-Attribute Information:
+One. Region Centroid Column: the column of the center pixel of the region.
+Two. Region Centroid Row: the row of the center pixel of the region.
+Three. Region Pixel Count: the number of pixels in a region equals nine.
+Four. Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five (any orientation) with low contrast, less than or equal to five, go through the region.
+Five. Short Line Density Two: same as Short Line Density Five but counts lines of high contrast, greater than five.
+Six. Vertical Edge Mean: measures the contrast of horizontally adjacent pixels in the region. There are six; the mean and standard deviation are given. This attribute is used as a vertical edge detector.
+Seven. Vertical Edge Standard Deviation: (see Six).
+Eight. Horizontal Edge Mean: measures the contrast of vertically adjacent pixels. Used for horizontal line detection.
+Nine. Horizontal Edge Standard Deviation: (see Eight).
+Ten. Intensity Mean: the average over the region of Red plus Green plus Blue divided by three.
+Eleven. Raw Red Mean: the average over the region of the Red value.
+Twelve. Raw Blue Mean: the average over the region of the Blue value.
+Thirteen. Raw Green Mean: the average over the region of the Green value.
+Fourteen. Excess Red Mean: measures the excess red: two times Red minus Green plus Blue.
+Fifteen. Excess Blue Mean: measures the excess blue: two times Blue minus Green plus Red.
+Sixteen. Excess Green Mean: measures the excess green: two times Green minus Red plus Blue.
+Seventeen. Value Mean: three-dimensional nonlinear transformation of Red, Green, and Blue. 
+Eighteen. Saturation Mean: (see Seventeen).
+Nineteen. Hue Mean: (see Seventeen).
 
-Date includes April, May, June, July, August, September, October, and unknown.
+Class 
 
-Plant Stand includes Normal, Less than Normal, and unknown.
+### Scraped Data 
+Dataset Information 
 
-Precipitation includes Less than Normal, Normal, Greater than Normal, and unknown.
+Additional Information 
+The instances were drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every single pixel. Each instance is a three-by-three region.
 
-Temperature includes Less than Normal, Normal, Greater than Normal, and unknown.
+Has Missing Values? 
+No 
 
-Hail includes Yes, No, and unknown.
+### Additional Variable Information 
+One. Region Centroid Column: the column of the center pixel of the region.
+Two. Region Centroid Row: the row of the center pixel of the region.
+Three. Region Pixel Count: the number of pixels in a region equals nine.
+Four. Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five (any orientation) with low contrast, less than or equal to five, go through the region.
+Five. Short Line Density Two: same as Short Line Density Five but counts lines of high contrast, greater than five.
+Six. Vertical Edge Mean: measures the contrast of horizontally adjacent pixels in the region. There are six; the mean and standard deviation are given. This attribute is used as a vertical edge detector.
+Seven. Vertical Edge Standard Deviation: (see Six).
+Eight. Horizontal Edge Mean: measures the contrast of vertically adjacent pixels. Used for horizontal line detection.
+Nine. Horizontal Edge Standard Deviation: (see Eight).
+Ten. Intensity Mean: the average over the region of Red plus Green plus Blue divided by three.
+Eleven. Raw Red Mean: the average over the region of the Red value.
+Twelve. Raw Blue Mean: the average over the region of the Blue value.
+Thirteen. Raw Green Mean: the average over the region of the Green value.
+Fourteen. Excess Red Mean: measures the excess red: two times Red minus Green plus Blue.
+Fifteen. Excess Blue Mean: measures the excess blue: two times Blue minus Green plus Red.
+Sixteen. Excess Green Mean: measures the excess green: two times Green minus Red plus Blue.
+Seventeen. Value Mean: three-dimensional nonlinear transformation of Red, Green, and Blue. 
+Eighteen. Saturation Mean: (see Seventeen).
+Nineteen. Hue Mean: (see Seventeen).
 
-Crop History includes Different Last Year, Same Last Year, Same Last Two Years, Same Last Seven Years, and unknown.
-
-Area Damaged includes Scattered, Low Areas, Upper Areas, Whole Field, and unknown.
-
-Severity includes Minor, Potentially Severe, Severe, and unknown.
-
-Seed Treatment includes None, Fungicide, Other, and unknown.
-
-Germination includes Ninety to One Hundred Percent, Eighty to Eighty-Nine Percent, Less than Eighty Percent, and unknown.
-
-Plant Growth includes Normal, Abnormal, and unknown.
-
-Leaves include Normal, Abnormal, and unknown.
-
-Leaf Spots Halo includes Absent, Yellow Halos, No Yellow Halos, and unknown.
-
-Leaf Spots Margin includes With Small Margin, Without Small Margin, Does Not Apply, and unknown.
-
-Leaf Spot Size includes Less than One Eighth, Greater than One Eighth, Does Not Apply, and unknown.
-
-Leaf Shread includes Absent, Present, and unknown.
-
-Leaf Malformation includes Absent, Present, and unknown.
-
-Leaf Mildew includes Absent, Upper Surface, Lower Surface, and unknown.
-
-Stem includes Normal, Abnormal, and unknown.
-
-Lodging includes Yes, No, and unknown.
-
-Stem Cankers includes Absent, Below Soil, Above Soil, Above Secondary Node, and unknown.
-
-Canker Lesion includes Does Not Apply, Brown, Dark Brown Black, Tan, and unknown.
-
-Fruiting Bodies include Absent, Present, and unknown.
-
-External Decay includes Absent, Firm and Dry, Watery, and unknown.
-
-Mycelium includes Absent, Present, and unknown.
-
-Internal Discoloration includes None, Brown, Black, and unknown.
-
-Sclerotia include Absent, Present, and unknown.
-
-Fruit Pods include Normal, Diseased, Few Present, Does Not Apply, and unknown.
-
-Fruit Spots include Absent, Colored, Brown with Black Specks, Distorted, Does Not Apply, and unknown.
-
-Seed includes Normal, Abnormal, and unknown.
-
-Mold Growth includes Absent, Present, and unknown.
-
-Seed Discoloration includes Absent, Present, and unknown.
-
-Seed Size includes Normal, Less than Normal, and unknown.
-
-Shriveling includes Absent, Present, and unknown.
-
-Roots include Normal, Rotted, Galls Cysts, and unknown.
-
-Class Labels:
-
-Diaporthe Stem Canker, Charcoal Rot, Rhizoctonia Root Rot, Phytophthora Rot, Brown Stem Rot, Powdery Mildew, Downy Mildew, Brown Spot, Bacterial Blight, Bacterial Pustule, Purple Seed Stain, Anthracnose, Phyllosticta Leaf Spot, Alternaria Leaf Spot, Frog Eye Leaf Spot, Diaporthe Pod and Stem Blight, Cyst Nematode, Two Four D Injury, Herbicide Injury.
-
-Keywords: agriculture, machine learning, openml100, soybean disease diagnosis, expert system, categorical attributes, nominal attributes, ordered attributes.
+Keywords: image segmentation, machine learning, outdoor images, hand-segmented, pixel classification, feature extraction, edge detection, color analysis.

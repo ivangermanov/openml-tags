@@ -1,8 +1,32 @@
-Fri C One Dataset: 
-This dataset has been tagged under categories including Chemistry, Life Science, Myth Busting, Study, and more. The source of this dataset remains unknown.
+Data Description
 
-A binarized version of the original dataset has been created, which involves converting the numeric target feature into a two-class nominal target feature. This process is done by calculating the mean and then classifying all instances with a lower target value as Positive, denoted by 'P', and all others as Negative, denoted by 'N'. 
+This data set is from the 1999 Computational Intelligence and Learning competition. The data contains measurements of river chemical concentrations and algae densities.
 
-The dataset includes various features, although they may not be easily interpretable.
+Sources
+Original Owner ERUDIT European Network for Fuzzy Logic and Uncertainty Modeling in Information Technology
 
-Keywords: chemistry, life science, myth busting, study, dataset, binarized, classification.
+Data Characteristics
+This data comes from a water quality study where samples were taken from sites on different European rivers over a period of approximately one year. These samples were analyzed for various chemical substances including nitrogen in the form of nitrates, nitrites, and ammonia, phosphate, pH, oxygen, chloride. In parallel, algae samples were collected to determine the algae population distributions.
+
+Other Relevant Information
+The competition involved the prediction of algal frequency distributions based on the measured concentrations of the chemical substances and the global information concerning the season when the sample was taken, the river size, and its flow velocity.
+
+Data Format
+There are a total of examples each containing seventeen values. The first eleven values of each data set are the season, the river size, the fluid velocity, and eight chemical concentrations which should be relevant for the algae population distribution. The last eight values of each example are the distribution of different kinds of algae. These eight kinds are only a very small part of the whole community, but for the competition, we limited the number to seven. The value zero point zero means that the frequency is very low. The data set also contains some empty fields which are labeled with the string XXXXX.
+
+Task Description
+Protecting rivers and streams by monitoring chemical concentrations and algae communities. Intelligent Techniques for Monitoring Water Quality using chemical indicators and algae population. Recent years have been characterized by increasing concern at the impact humans are having on the environment. The impact on the environment of toxic waste, from a wide variety of manufacturing processes, is well known. More recently, however, it has become clear that the more subtle effects of nutrient level and chemical balance changes arising from farming land runoff and sewage water treatment also have a serious, but indirect, effect on the states of rivers, lakes, and even the sea.
+
+Objective
+The objective of the competition is to provide a prediction model based on the training data. Having obtained this prediction model, each participant must provide the solution in the form of the results of applying this model to the evaluation data. The results obtained in this way should correspond to the results of the evaluation data.
+
+Judgment of the Results
+To judge the results, the sum of squared errors will be calculated. All solutions that lead to the smallest total error will be regarded as winners of the contest.
+
+Information about the Dataset
+CLASSTYPE: numeric
+CLASSINDEX: last
+ALGAE #: six/seven
+Features: season, river size, fluid velocity, concentration one, concentration two, concentration three, concentration four, concentration five, concentration six, concentration seven, concentration eight, algae six
+
+Keywords: water quality, river chemical concentrations, algae densities, Computational Intelligence and Learning competition, ERUDIT European Network, fuzzy logic, uncertainty modeling, environmental impact, nutrient level, chemical balance changes.

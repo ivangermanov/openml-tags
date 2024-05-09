@@ -1,9 +1,25 @@
-Machine Learning and Statistics MEG Data from Auditory Stimulation Experiment
+QSAR-TID-184 Dataset 
 
-This dataset contains MEG data from an auditory stimulation experiment using three hundred five sensors. The design matrix or forward operator is comprised of the first seven thousand four hundred ninety-eight columns of the data. The measurements for left stimulation are found in columns seven thousand four hundred ninety-eight to seven thousand five hundred eighty-three, while the measurements for right stimulation occupy the remaining columns.
+This dataset contains QSAR data showing activity values of several compounds on drug target Glutamate Carboxypeptidase II, and it has multiple rows and numerous features including IDs and class feature.
 
-The data was generated using a Python script that utilized the MNE library, version one point zero two. The script read in a noise covariance matrix and handled a forward solution, which involved depth weighting and whitening. The data was then whitened and prepared for analysis.
+The features represent FCFP six one zero four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset consists of numerous features, including various sensor readings and measurements from the auditory stimulation experiment.
+Features include Molecule ChEMBL ID and multiple FCFP six one zero four bit molecular fingerprints.
 
-Keywords: MEG, Auditory Stimulation, Forward Operator, Noise Covariance Matrix, Whitening
+Scraped Data:
+
+The preferred name for this single protein is Glutamate Carboxypeptidase II. It also has multiple synonyms including Cell Growth-Inhibiting Gene twenty-seven Protein, FGCP, Folate Hydrolase one, FOLH, and FOLH one.
+
+The organism is Homo sapiens, and it belongs to the species group of no protein target classification. Its description relationship accession is Glutamate Carboxypeptidase two, Single Protein.
+
+Parent Molecule ChEMBL ID, Parent Molecule Name, Parent Molecule Type, Mechanism of Action, Max Phase, First Approval, USAN Stem, and References are also included.
+
+Expression Atlas, Go Component, Go Function, Go Process, Wikipedia, CanSAR-Target, Guide To PHARMACOLOGY, IntAct, MICAD, PharmGKB, Pharos, Reactome, and UniProt information are available.
+
+InterPro information includes PA domain, TFR-like dimer dom, Peptidase M twenty-eight, TFR-like dimer dom sf, Peptidase M twenty-eight B, and PA dom sf.
+
+Pfam information includes PA, TFR dimer, and Peptidase M twenty-eight.
+
+Multiple PDBE structures are available.
+
+Keywords: QSAR, Glutamate Carboxypeptidase II, Drug Target, FCFP, Molecular Fingerprints, SMILES Strings, Pipeline Pilot Program, Homo sapiens.

@@ -1,21 +1,82 @@
-Life Science and Machine Learning dataset: Splice 
+Title: Protein Localization Sites 
 
-The Splice dataset focuses on primate splice-junction gene sequences, comprising DNA sequences with associated imperfect domain theory. The primary objective is to identify, given a sequence of DNA, the boundaries between exons (parts of the DNA sequence retained after splicing) and introns (parts of the DNA sequence that are spliced out). This problem involves two subtasks: recognizing exon-intron boundaries (referred to as EI sites) and recognizing intron-exon boundaries (IE sites).
+The dataset is about predicting the cellular localization sites of proteins in Escherichia coli. 
 
-The dataset includes sixty-four categories, categorized into "ei" and "ie," encompassing every "split-gene" for primates in GenBank. Non-splice examples were obtained from sequences known not to contain a splicing site.
+Creator and Maintainer: 
+Institute of Molecular and Cellular Biology 
+Osaka University 
 
-Attribute information includes:
+Donor: 
+UCI 
 
-* One of three classes: n, ei, or ie, indicating the type of boundary
-* The instance name, serving as an identifier
-* Sixty remaining fields representing the sequence, starting thirty positions before and ending thirty positions after the boundary point; each field typically contains one of four characters: a, g, t, or c; other characters signify ambiguity among the standard characters
+See also: Yeast Database 
 
-Features include instance name and sixty attributes representing the sequence.
+Past Usage: 
+Reference: A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins 
+Results: Eighty-one percent for E coli with an ad hoc structured probability model. Similar accuracy for binary decision tree and Bayesian classifier methods. 
+Predicted Attribute: Localization site of protein (non-numeric). 
 
-This dataset has no missing values.
+Number of Instances: For the E coli dataset 
+Number of Attributes: For E coli dataset, there are eight attributes (seven predictive, one name). 
 
-Additional variable information describes various characteristics of the sequences, including signal sequence recognition methods, presence of charge on the N-terminus of predicted lipoproteins, scores of discriminant analysis of amino acid content, and scores of membrane-spanning region prediction programs.
+Attribute Information:
+Sequence Name was accession number for the Swiss Prot database 
+Mc Geoch's method for signal sequence recognition 
+Von Heijne's method for signal sequence recognition 
+Von Heijne's signal peptidase two consensus sequence score (binary attribute) 
+Presence of charge on N terminus of predicted lipoproteins (binary attribute) 
+Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
+Score of the ALOM membrane spanning region prediction program 
+Score of ALOM program after excluding putative cleavable signal regions from the sequence 
 
-Class labels denote different localizations within the cell, including cytoplasm, inner membrane, periplasm, and outer membrane.
+Missing Attribute Values: There are none 
 
-Keywords: Splice junction, gene sequences, DNA, exons, introns, machine learning, life science, molecular biology.
+Class Distribution: 
+The class is the localization site 
+Cytoplasm 
+Inner membrane without signal sequence 
+Perisplasm 
+Inner membrane uncleavable signal sequence 
+Outer membrane 
+Outer membrane lipoprotein 
+Inner membrane lipoprotein 
+Inner membrane cleavable signal sequence 
+
+Features: 
+Mc Geoch's method for signal sequence recognition 
+Von Heijne's method for signal sequence recognition 
+Von Heijne's signal peptidase two consensus sequence score 
+Presence of charge on N terminus of predicted lipoproteins 
+Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
+Score of the ALOM membrane spanning region prediction program 
+Score of ALOM program after excluding putative cleavable signal regions from the sequence 
+Localization site of protein 
+
+Scraped Data: 
+Dataset Information 
+Additional Information 
+References describe a predecessor to this dataset and its development 
+They also give results for classification by a rule based expert system with that version of the dataset 
+
+Has Missing Values: No 
+
+Additional Variable Information: 
+Accession number for the Swiss Prot database 
+Mc Geoch's method for signal sequence recognition 
+Von Heijne's method for signal sequence recognition 
+Von Heijne's signal peptidase two consensus sequence score 
+Presence of charge on N terminus of predicted lipoproteins 
+Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
+Score of the ALOM membrane spanning region prediction program 
+Score of ALOM program after excluding putative cleavable signal regions from the sequence 
+Class labels: 
+Cytoplasm 
+Inner membrane without signal sequence 
+Perisplasm 
+Inner membrane uncleavable signal sequence 
+Outer membrane 
+Outer membrane lipoprotein 
+Inner membrane lipoprotein 
+Inner membrane cleavable signal sequence 
+
+Keywords: Protein Localization Sites, Escherichia coli, Machine Learning, Life Science, UCI.

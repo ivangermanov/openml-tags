@@ -1,9 +1,19 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID, and it has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+AutoUniv Dataset 
 
-The dataset is part of the MetaQSAR project, specifically the study three, and it was created in September two thousand fifteen. It contains QSAR data from ChEMBL version seventeen, showing activity values of several compounds on drug target TID, which is a single protein preferred name nociceptin receptor, also known as kappa-type three opioid receptor, KOR-three, nociceptin receptor, OOR, and OPRL one.
+Abstract: 
+The AutoUniv is an advanced data generator for classification tasks that aims to reflect the nuances and heterogeneity of real data. It can generate data in various formats such as CSV, ARFF, or C45.
 
-The nociceptin receptor is a membrane receptor, family A G protein-coupled receptor, peptide receptor, and short peptide receptor, specifically an opioid receptor. It is classified under one membrane receptor, family A G protein-coupled receptor, peptide receptor, and short peptide receptor. The description of this receptor includes its relationship, accession, and various components, functions, and processes.
+Data Set Information: 
+The user creates a classification model and then generates classified examples from it. To create a model, the user specifies the number of attributes and their type, whether discrete or continuous, the number of classes, the complexity of the underlying rules, and the noise level. Then, AutoUniv produces a model through a process of constrained randomized search to satisfy the user's requirements. A model can have multiple rules. Rare class models can be designed, and a sequence of models can be designed to reflect concept and/or population drift. AutoUniv creates three text files for a model: a Prolog specification of the model used to generate examples; a user-friendly statement of the classification rules in an 'if then' format; and a statistical summary of the main properties of the model, including its Bayes rate.
 
-The components include plasma membrane, membrane, and cytoplasmic vesicle. The functions involve nociceptin receptor activity, G protein-coupled receptor activity, and G protein-coupled opioid receptor activity. The processes encompass signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-inhibiting G protein-coupled receptor signaling pathway, behavior, sensory perception of pain, and G protein-coupled opioid receptor signaling pathway.
+Attribute Information: 
+Attributes may be discrete with various values or continuous. A discrete attribute can be nominal with specific values or integer with numerical values.
 
-Keywords: QSAR, MetaQSAR, Machine Learning, Manufacturing, MTLQSAR, nociceptin receptor, opioid receptor, G protein-coupled receptor, membrane receptor, peptide receptor.
+Relevant Papers: 
+Modeling the example lifecycle in an online classification learner, and the impact of latency on online classification learning with concept drift are some of the relevant topics explored in research papers related to this dataset.
+
+Features: 
+Class
+
+Keywords: 
+Artificial Intelligence, Chemistry, Life Science, Classification Tasks, Data Generation, Real Data, Nuances, Heterogeneity, Advanced Data Generator, Constrained Randomized Search, User Requirements, Model Production.

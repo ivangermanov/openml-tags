@@ -1,0 +1,31 @@
+Magic Telescope 
+
+Tags: Machine Learning, Medicine 
+
+Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
+
+Original Description:
+
+The Magic Telescope dataset is a collection of simulated data from a ground-based atmospheric Cherenkov gamma-ray telescope using the imaging technique. The data are generated to simulate registration of high-energy gamma particles in a Cherenkov gamma telescope. The Cherenkov radiation, which is of visible to ultraviolet wavelengths, leaks through the atmosphere and gets recorded in the detector, allowing reconstruction of the shower parameters.
+
+The available information consists of pulses left by the incoming Cherenkov photons on the photomultiplier tubes, arranged in a plane, the camera. Depending on the energy of the primary gamma, a total of few hundred to several thousand Cherenkov photons get collected, in patterns, allowing to discriminate statistically those caused by primary gammas (signal) from the images of hadronic showers initiated by cosmic rays in the upper atmosphere (background).
+
+Typically, the image of a shower after some preprocessing is an elongated cluster. Its long axis is oriented towards the camera center if the shower axis is parallel to the telescope's optical axis, i.e., if the telescope axis is directed towards a point source. A principal component analysis is performed in the camera plane, which results in a correlation axis and defines an ellipse. If the depositions were distributed as a bivariate Gaussian, this would be an equidensity ellipse. The characteristic parameters of this ellipse (often called Hillas parameters) are among the image parameters that can be used for discrimination.
+
+The energy depositions are typically asymmetric along the major axis, and this asymmetry can also be used in discrimination. There are, in addition, further discriminating characteristics, like the extent of the cluster in the image plane, or the total sum of depositions.
+
+Attributes:
+
+* Length of major axis of ellipse 
+* Width of minor axis of ellipse 
+* Size of ten logarithm of sum of content of all pixels 
+* Concentration ratio of sum of two highest pixels over size 
+* Concentration ratio of highest pixel over size 
+* Asymmetry distance from highest pixel to center, projected onto major axis 
+* Third root of third moment along major axis 
+* Third root of third moment along minor axis 
+* Angle of major axis with vector to origin 
+* Distance from origin to center of ellipse 
+* Class (gamma or hadron)
+
+Keywords: Cherenkov Radiation, Gamma-Ray Telescope, Image Parameters, Principal Component Analysis, Hillas Parameters, Discrimination.

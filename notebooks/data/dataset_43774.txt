@@ -1,0 +1,31 @@
+Traffic-counting-using-cameras 
+
+Tags: Economics, Social Media 
+
+These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France).
+
+What exactly does the Telraam measure? 
+Telraam counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and the analysis performed by the Raspberry Pi, a small computer on which the device is based. The analysis simply uses the size and speed of the passing object.
+
+Each hour, the camera records the following data:
+Percentage of camera activity 
+Counting of pedestrians, cars, bicycles, trucks (total, left, and right of the street) 
+Histogram of car speeds for the intervals zero to ten, ten to twenty, twenty to thirty, and so forth up to seventy and more.
+
+Why a percentage of camera activity? 
+Telraam does not count when it is dark. This camera has constraints because to perform the counts, it does image recognition: 
+The camera is not active at night 
+The camera is not active one hundred percent of the time in daylight; therefore, the percentage of activity is indicated. 
+When the camera is partially active, the counts are prorated using this percentage to estimate the activity in the observed hour.
+The camera may be out of service for a period.
+
+Content 
+The data have been flattened in a CSV file. The original data (JSON) can be retrieved in real-time here with a POST request.
+
+Inspiration 
+Time series forecasting: predict traffic flow.
+
+Features:
+(time, id, timezone, pct up, pedestrian, bike, car, lorry, pedestrian left, bike left, car left, lorry left, pedestrian right, bike right, car right, lorry right, car speed zero to ten, car speed ten to twenty, ...)
+
+Keywords: traffic counting, cameras, Telraam, pedestrians, cyclists, cars, freight vehicles, image recognition, Raspberry Pi, time series forecasting, traffic flow.

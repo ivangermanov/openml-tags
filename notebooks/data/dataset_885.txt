@@ -1,19 +1,9 @@
-JM1 Dataset for Software Defect Prediction
+Transplant Dataset 
 
-This dataset is part of the PROMISE repository and is intended for software defect prediction. It contains twenty-two attributes, including five different lines of code measures, three McCabe metrics, four base Halstead measures, eight derived Halstead measures, a branch count, and a goal field indicating whether a module has defects.
+Tags: Binarized, Chemistry, Life Science, Myth Busting, Study 
 
-The dataset consists of 10,885 instances with no missing values. The class distribution shows that about 19.35% of the modules have defects, while around 80.65% do not.
+This dataset is a binarized version of the original dataset. It converts the numeric target feature into a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative. This process allows for a more straightforward analysis of the data.
 
-Past studies using this dataset have shown that simple learners can perform as well as more sophisticated methods in predicting defects. Additionally, many learners have low false alarm rates, and the probability of detection tends to rise with effort.
+The dataset consists of various features, including observations and experimental results, which are crucial in understanding the underlying chemistry and life science principles. By binarizing the data, researchers can focus on identifying patterns and correlations between these features and the resulting Positive or Negative classifications.
 
-The McCabe metrics are a collection of software metrics that aim to measure the complexity of a module. They include cyclomatic complexity, essential complexity, and design complexity. Halstead metrics, on the other hand, estimate the complexity of a module based on the number of unique operators and operands, total occurrences of operators and operands, and other factors.
-
-Defect detectors can be assessed according to various measures, including accuracy, probability of detection, probability of false alarm, precision, and effort. Ideally, detectors should have high probabilities of detection, low probabilities of false alarm, and low effort.
-
-Notes on McCabe and Halstead metrics:
-
-McCabe argued that code with complicated pathways is more error-prone. His metrics reflect the pathways within a code module. Halstead, on the other hand, estimated reading complexity by counting the number of concepts in a module, such as the number of unique operators.
-
-Static code measures are widely used to guide software quality predictions, but their merits have been widely criticized. They are hardly a complete characterization of the internals of a function. Alternative interpretations suggest that static measures can never be a definite and certain indicator of the presence of a fault.
-
-Keywords: software defect prediction, PROMISE repository, McCabe metrics, Halstead metrics, static code measures, complexity metrics, software quality prediction.
+Keywords: Transplant, Binarized Data, Chemistry, Life Science, Classification.

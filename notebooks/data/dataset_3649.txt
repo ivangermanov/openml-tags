@@ -1,19 +1,11 @@
-Malware Analysis Datasets Portable Executable Section Headers 
+The QSAR-TID-30025 dataset contains QSAR data showing activity values of several compounds on drug target TID: 30025. It has numerous rows and features, including IDs and class feature, representing FCFP 1024bit molecular fingerprints generated from SMILES strings using the Pipeline Pilot program.
 
-Tags: Computer Systems, Machine Learning 
+This dataset is part of the MetaQSAR project, a comprehensive collection of QSAR datasets. It provides valuable information for researchers studying the relationship between molecular structures and their biological activities.
 
-This dataset is part of comprehensive research on malware detection and classification utilizing deep learning techniques. It comprises static analysis data specifically focusing on Portable Executable Section Headers of the text, code, and code sections extracted from the pe_sections elements of Cuckoo Sandbox reports. A substantial collection of Portable Executable malware samples was obtained from virusshare.com, while Portable Executable goodware samples were gathered from portableapps.com and Windows directories.
+The features in this dataset are FCFP six one hundred twenty-four bit molecular fingerprints, which are widely used in cheminformatics and QSAR modeling. These fingerprints capture the structural characteristics of molecules and are essential for predicting their biological properties.
 
-The dataset encompasses several essential features including Hash, which represents the MD5 hash of each sample presented as a thirty-two-byte string. Another critical feature is Size of Data, which denotes the size of the section on disk expressed as an integer value. Virtual Address is also included, specifying the memory address of the first byte of the section relative to the image base as an integer. Additionally, Entropy is calculated and presented as a float value, signifying the level of randomness or uncertainty within the section. Furthermore, Virtual Size is incorporated, representing the size of the section when loaded into memory expressed as an integer. Lastly, the Malware feature serves as the class label, categorizing each sample as either Goodware (zero) or Malware (one).
+The dataset also includes information about the target protein, Serine Threonine-Protein Kinase PAK One, which plays a crucial role in various cellular processes, including cell migration, proliferation, and survival. Understanding the interaction between small molecules and this protein is essential for developing new therapeutic strategies.
 
-Acknowledgments 
+In addition to the molecular descriptors and target information, the dataset provides access to various resources, including Gene Ontology annotations, UniProt identifiers, and Reactome pathways. These resources enable researchers to gain a deeper understanding of the underlying biology and develop more effective computational models.
 
-The developers of Cuckoo Sandbox are gratefully acknowledged for creating an exceptional dynamic analysis environment. Special thanks go to Virus Share for their invaluable contribution to the field through their malware repository.
-
-Citations 
-
-Please refer to the provided URL for further information.
-
-Features: Hash, Size of Data, Virtual Address, Entropy, Virtual Size, Malware
-
-Keywords: Malware Detection, Classification, Deep Learning, Portable Executable, Static Analysis, Cuckoo Sandbox.
+Keywords: QSAR, molecular fingerprints, cheminformatics, Serine Threonine-Protein Kinase PAK One, MetaQSAR project, computational modeling.

@@ -1,0 +1,20 @@
+AI Simulated Games of Machi Koro 
+Tags: Context 
+
+This data is the result of utilizing neural networks and reinforcement learning to simulate the popular board game Machi Koro. 
+
+Each row represents a single turn in a game, corresponding to the state at the beginning of the turn, and there are multiple games total. There are four players, so all columns except for Game ID and Turn ID reference a specific player. Each player takes turns performing actions, which can involve gaining coins, losing coins to other players, building properties, stealing coins from other players, and possibly switching properties with another player. The results of each turn largely depend on a single or double dice roll. The ultimate goal of the game is to build four specific properties, which are represented by the variables Station, Shopping Mall, Amusement Park, and Radio Tower, where each variable corresponds to the player who owns it.
+
+Variables: 
+Game ID - Unique identifier for the game being played 
+Turn ID - Turn number of the game, with an additional turn added at the end of each game to display the final state. 
+The following attributes have a prefix Player, where the Player refers to the ID of the player, which also corresponds to the turn order. 
+Win - Indicates whether the player has won the game 
+Coins - The number of coins the player possesses 
+The remaining attributes correspond to the number of properties a player has constructed by this point in the game.
+
+Inspiration behind creating this dataset was to explore whether it is possible to teach an Artificial Intelligence the game, given its relatively simple rules. It is a fairly straightforward game, and the intention was to record the game history so that insights could be extracted, such as strategy and overall usefulness of certain properties or cards.
+
+Features include Game ID, Turn ID, and various properties owned by each player, including Amusement Park, Apple Orchard, Bakery, Business Center, Cafe, Cheese Factory, Convenience Store, Family Restaurant, Forest, Fruit and Vegetable Market, Furniture Factory, Mine, Radio Tower, Ranch, Shopping Mall, Stadium, Station, TV Station, Wheat Field, Coins, and Win status.
+
+Keywords: Machi Koro, Board Game, Artificial Intelligence, Reinforcement Learning, Neural Networks, Simulation, Strategy, Properties.

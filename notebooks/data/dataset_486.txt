@@ -1,21 +1,13 @@
-The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
+Tags: **Papir 1**
 
-These datasets' names are coded according to their characteristics, specifically, their level of collinearity, sample number, and feature number. 
+This dataset is one of two multivariate regression datasets from the paper industry, originating from an experiment conducted at the paper plant Norske Skog, located in Skogn, Norway.
 
-The Friedman function is a widely used method for generating data, which includes both linear and nonlinear relationships between inputs and outputs, and adds a normalized noise to the output. 
+The dataset has been thoroughly described and analyzed in a research paper titled "Moderate Projection Pursuit Regression for Multivariate Response Data," which was published in the journal Computational Statistics and Data Analysis.
 
-The Friedman function itself consists of several components: ten times the sine of pi times x1 and x2, plus twenty times the square of x3 minus point five, plus ten times X4, plus five times X5, plus the normalized noise.
+It comprises thirty observations and twenty-two variables, although it is essential to note that all response variables are missing for the twenty-eighth observation. The first thirteen columns consist of response variables that describe various qualities of the paper, while the remaining nine columns represent predictor variables.
 
-In its original form, the Friedman function takes five features as inputs. To test the effect of unrelated features, additional features are added to the datasets, which are independent of the output. 
+Three predictor variables were systematically varied throughout the experiment, taking on specific values. The subsequent three predictor variables were constructed as squares of the initial three variables, followed by the last three predictor variables, which were created as products of the initial three variables.
 
-However, to test an algorithm's robustness to collinearity, the datasets are generated with varying degrees of collinearity, meaning some features depend on others.
+Features: response one, response two, response three, response four, response five, response six, response seven, response eight, response nine, response ten, response eleven, response twelve, response thirteen, variable one, variable two, variable three
 
-The generated Friedman datasets' parameters vary according to the number of features, sample size, and level of collinearity. 
-
-The number of features ranges from five to one hundred, although only the first five features are actually related to the output, while the rest are randomly generated. 
-
-Sample sizes range from one hundred to one thousand. 
-
-There are five levels of collinearity, ranging from zero to four, where a higher level means more features depend on others.
-
-Keywords: Artificial Datasets, Data Generation, Friedman Function, Collinearity, Robustness Testing
+Keywords: Papir 1, Multivariate Regression, Paper Industry, Experiment, Predictor Variables, Response Variables

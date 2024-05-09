@@ -1,21 +1,31 @@
-**KDD Cup 2009 Dataset**
+QSAR-TID-10116 Tags: Demographics, MTLQSAR, study three 
 
-Customer Relationship Management (CRM) is a vital component of modern marketing strategies. The KDD Cup 2009 presents an exciting opportunity to work with large-scale marketing databases from the French telecom company Orange, aiming to predict customer behavior in terms of switching providers (churn), purchasing new products or services (appetency), and buying upgrades or add-ons (up-selling).
+This dataset contains QSAR data showing activity values of several compounds on drug target TID one zero one sixteen, and it has a number of rows and a number of features including IDs and class feature. The features represent molecular fingerprints which were generated from smiles strings. They were obtained using the pipeline pilot program, dassault systemes biivia. 
 
-The most effective approach in a CRM system is to generate scores, which are evaluations of target variables that provide quantifiable insights. These scores are calculated using input variables that describe customer instances. Subsequently, these scores are utilized by the information system to personalize customer relationships.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-An industrial customer analysis platform has been developed by Orange Labs, capable of building prediction models with an extremely large number of input variables. This platform implements various processing methods for instance and variable selection, prediction, and indexing based on an efficient model combined with variable selection regularization and model averaging techniques. The primary characteristic of this platform is its ability to scale on massive datasets comprising hundreds of thousands of instances and thousands of variables.
+Features: molecule chembl id 
 
-Rapidly detecting the variables that contribute significantly to output predictions is crucial in marketing applications. The challenge lies in surpassing the in-house system developed by Orange Labs, showcasing the ability to handle vast, heterogeneous, and noisy datasets with unbalanced class distributions while meeting time-efficiency requirements.
+The dataset contains QSAR data from chembl version seventeen showing activity values of several compounds on drug target tid one zero one sixteen. 
 
-**Task Description**
+Scraped Data:
 
-The objective is to estimate the churn, appetency, and up-selling probabilities of customers, resulting in three target values to be predicted. To test rapidity, the challenge is divided into phases. A substantial number of variables are available for prediction. To accommodate participants with limited computing resources, a smaller version of the dataset will be provided later in the challenge.
+Type: Single Protein
+Preferred Name: Histamine H Two Receptor
+Synonyms: Gastric Receptor One H Two R, HH Two R, Histamine H Two Receptor, HRH Two 
 
-Churn rate, also referred to as attrition rate, measures the number of individuals or items moving into or out of a collection within a specified timeframe. In the context of business, churn rate is critical for companies relying on subscriber-based service models.
+Organism: Cavia Porcellus 
+Species Group: No 
+Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Small Molecule Receptor, Monoamine Receptor, Histamine Receptor 
 
-Appetency, in this context, represents the propensity to purchase a service or product.
+Description Relationship Accession Histamine H Two Receptor Single Protein 
 
-Up-selling involves attempting to sell more expensive items, upgrades, or add-ons to increase profitability. It entails marketing more lucrative services or products, exposing customers to alternative options they might not have considered previously.
+Go Component: Plasma Membrane, Membrane 
+Go Function: G Protein-Coupled Receptor Activity, Histamine Receptor Activity 
+Go Process: Gastric Acid Secretion, Signal Transduction, G Protein-Coupled Receptor Signaling Pathway, Positive Regulation of Vasoconstriction 
 
-**Keywords:** Customer Relationship Management, Marketing Databases, Predictive Modeling, Churn Rate, Appetency, Up-Selling, Time-Efficiency.
+CanSar-Target: UniProt 
+InterPro: Gpcr rhodopsin, Histamine H Two Recept, Gpcr Rhodopsin Seven TM 
+Pfam: Seven TM One 
+
+Keywords: QSAR, molecular fingerprints, histamine h two receptor, gastric acid secretion, signal transduction, g protein-coupled receptor activity

@@ -1,0 +1,19 @@
+Communities and Crime Dataset 
+
+Tags: Images, Machine Learning 
+
+This dataset combines various sources of information to create a comprehensive collection of attributes related to crime rates in different communities. The goal is to test machine learning algorithms that can select or learn weights for attributes to predict crime rates. 
+
+The dataset includes a wide range of variables related to the community, such as the percentage of the population considered urban, median family income, and law enforcement statistics like the per capita number of police officers and the percentage of officers assigned to drug units. Additionally, the dataset contains eighteen crime-related attributes that could be predicted, including eight index crimes defined by the FBI (murder, rape, robbery, etc.), per capita versions of each, and overall per capita violent and non-violent crimes.
+
+A key consideration when working with this dataset is the limitation imposed by the Law Enforcement Management and Administrative Statistics (LEMAS) survey, which only targeted police departments with at least one hundred officers, plus a random sample of smaller departments. As a result, communities without matching records in both the census and crime datasets were omitted.
+
+Many communities lacked LEMAS data, particularly those in the Midwest region of the United States. Moreover, some states had controversies surrounding the reporting of rape cases, resulting in missing values for rape and subsequently, per capita violent crime.
+
+The per capita crimes variables were calculated using population values from the 1995 FBI data, which differed from the 1990 Census values. Per capita violent crimes were calculated by combining the sum of violent crimes (murder, rape, robbery, and assault) with the population. Similarly, per capita non-violent crimes were calculated using the sum of non-violent crimes (burglaries, larcenies, auto thefts, and arsons).
+
+Before using the dataset, it is essential to choose a suitable dependent variable among the eighteen available options. It is crucial to avoid predicting total crime while including subtotals as independent variables. Additionally, identifying variables like community name, county code, and community code should be removed as they do not contribute to prediction and may interfere with certain algorithms.
+
+The FBI notes that using this data to evaluate communities oversimplifies the complex issue of crime, as many relevant factors are not included. For instance, communities with high tourist traffic may have higher per capita crime rates due to visitors, rather than residents.
+
+Keywords: Communities, Crime Rates, Machine Learning, FBI Index Crimes, Law Enforcement, Predictive Modeling

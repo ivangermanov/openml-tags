@@ -1,10 +1,17 @@
-Ailerons 
-Tags: Machine Learning, Manufacturing, OpenML Reg nineteen 
+Machine Learning, Transportation 
 
-This dataset addresses a control problem, specifically flying an F sixteen aircraft. The attributes describe the status of the airplane, while the ultimate goal is to accurately predict the necessary control action required for the ailerons of the aircraft.
+1985 Auto Imports Database 
 
-Features include various aspects of the plane's performance, such as its rate of climb, speed, pitch, roll, and other relevant metrics.
+This dataset consists of three types of entities: the specification of an auto in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other cars. 
 
-The dataset aims to provide a comprehensive understanding of the complex relationships between these factors, enabling the development of more effective control systems for aircraft.
+The dataset was created based on several sources including the 1985 Model Import Car and Truck Specifications, Ward's Automotive Yearbook, Personal Auto Manuals, Insurance Services Office, and Insurance Collision Report, Insurance Institute for Highway Safety.
 
-Keywords: Ailerons, Aircraft Control, Machine Learning, Manufacturing, F16 Aircraft.
+In the past, this dataset has been used to predict the price of cars using all numeric and boolean attributes. An instance-based learning algorithm derived from a localized k-nearest neighbor algorithm was used to compare with a linear regression prediction. All instances with missing attribute values were discarded, resulting in a training set of 159 instances, which was also used as a test set minus the actual instance during testing.
+
+The results showed a percent average deviation error of prediction from actual of 11.84% for the instance-based learning algorithm and 14.12% for the resulting linear regression equation.
+
+This dataset contains twenty-six attributes, fifteen of which are continuous, one is an integer, and ten are nominal. The attributes include symboling, normalized losses, make, fuel type, aspiration, number of doors, body style, drive wheels, engine location, wheel base, length, width, height, curb weight, engine type, number of cylinders, engine size, fuel system, bore, stroke, compression ratio, peak RPM, city MPG, highway MPG, and price.
+
+The dataset contains 205 instances, and several of the attributes in the database could be used as a class attribute. Horsepower is treated as the class attribute.
+
+Keywords: machine learning, transportation, auto imports, dataset, instance-based learning, regression analysis.

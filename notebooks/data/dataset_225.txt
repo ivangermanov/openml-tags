@@ -1,39 +1,7 @@
-Squash Stored Dataset 
+The Puma8NH dataset family consists of synthetically generated datasets from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. This particular dataset family is comprised of eight datasets, although only two of them are included in this repository. All datasets in this family are variations of the same model, which is a realistic simulation of the dynamics of a Puma 560 robot arm. The primary task in these datasets is to predict the angular acceleration of one of the robot arm's links.
 
-Tags: Agriculture, Life Science, Study 
+The input features include the angular positions, velocities, and torques of the robot arm. This dataset family was specifically designed for the Delve environment, with each dataset spanning the corners of a cube representing three key dimensions: the number of inputs, the degree of nonlinearity (ranging from fairly linear to nonlinear), and the amount of noise in the output (ranging from moderate to high).
 
-The purpose of the research was to determine the changes taking place in squash fruit during the maturation and ripening process so as to pinpoint the best time to harvest the fruit to provide the best quality at the marketplace, specifically in Japan. The squash is transported to Japan by refrigerated cargo vessels and takes three to four weeks to reach the market. 
+This dataset has several characteristics, including a total of cases and nine continuous variables. The dataset is particularly useful for regression tasks.
 
-Evaluations were carried out at a stage representing the quality inspection stage prior to export and also at the stage it would reach upon arrival at the marketplace. The original objectives were to determine which pre-harvest variables contribute to good-tasting squash after different periods of storage time. This is determined by whether a measure of acceptability found by categorizing each squash as either unacceptable, acceptable, or excellent.
-
-The fruit in this dataset were stored before being measured, and they have an extra attribute that the squash-unstored dataset lacks - the weight of the fruit after storage.
-
-Attribute information includes:
-
-* Site - where the fruit is located 
-* Days After Flowering - the number of days after flowering 
-* Fruit - individual number of the fruit 
-* Weight - weight of whole fruit in grams 
-* Storage Weight - weight of fruit after storage 
-* Penetrometer - indicates maturity of fruit at harvest 
-* Solids Percentage - a test for dry matter 
-* Brix - a refractometer measurement used to indicate sweetness or ripeness of the fruit 
-* Colour Measurement - the a coordinate of the Hunter Lab L-a-b notation of colour measurement 
-* Egdd - the heat accumulation above a base of eight degrees Celsius from emergence of the plant to harvest of the fruit 
-* Fgdd - the heat accumulation above a base of eight degrees Celsius from flowering to harvesting 
-* Ground Spot Colour - the number indicating the colour of the skin where the fruit rested on the ground 
-* Glucose - measured in milligrams per one hundred grams of fresh weight 
-* Fructose - measured in milligrams per one hundred grams of fresh weight 
-* Sucrose - measured in milligrams per one hundred grams of fresh weight 
-* Total - measured in milligrams per one hundred grams of fresh weight 
-* Glucose Plus Fructose - measured in milligrams per one hundred grams of fresh weight 
-* Starch - measured in milligrams per one hundred grams of fresh weight 
-* Sweetness - the mean of eight taste panel scores 
-* Flavour - the mean of eight taste panel scores 
-* Dry/Moist - the mean of eight taste panel scores 
-* Fibre - the mean of eight taste panel scores 
-* Heat Input Emergence - the amount of heat input emergence after harvest 
-* Heat Input Flower - the amount of heat input before flowering 
-* Acceptability - the acceptability of the fruit 
-
-Keywords: Squash, Maturation, Ripening, Marketplace, Quality Inspection, Storage Time, Pre-Harvest Variables, Sweetness, Flavour, Taste Panel Scores
+Keywords: Puma 560 robot arm, angular acceleration, Delve environment, nonlinear, regression.

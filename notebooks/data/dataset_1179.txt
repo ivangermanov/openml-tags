@@ -1,34 +1,7 @@
-**Robot Execution Failures Data Set**
+Name: Solar Flare Dataset 
 
-Tags: Chemistry, Life Science
+Tags: Artificial, Solar Flare, Chemistry, Life Science 
 
-**Abstract**
-This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
+Features: Class, Largest Spot Size, Spot Distribution, Activity Level, Evolution, Previous Twenty-Four Hour Flare Activity Code, Historical Complexity, Did Region Become Historically Complex, Total Area, Area of the Largest Spot, Production of C-Class Flares by this Region, Production of M-Class Flares by this Region, Production of X-Class Flares by this Region 
 
-**Source**
-Original Owner and Donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal
-
-**Data Set Information**
-The donation includes five data sets, each of which defines a different learning problem:
-
-* LP1 (This Data Set): failures in approach to grasp position
-* LP2: failures in transfer of a part
-* LP3: position of part after a transfer failure
-* LP4: failures in approach to ungrasp position
-* LP5: failures in motion with part
-
-In order to improve classification accuracy, a set of five feature transformation strategies (based on statistical summary features, discrete Fourier transform, etc.) was defined and evaluated. This enabled an average improvement of twenty percent in accuracy.
-
-**Attribute Information**
-All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was three hundred fifteen milliseconds. Each example is described as follows:
-
-Class Force X one, Force Y one, Force Z one, Torque X one, Torque Y one, Torque Z one,..., Force X fifteen, Force Y fifteen, Force Z fifteen, Torque X fifteen, Torque Y fifteen, Torque Z fifteen
-
-where Force X one through Force X fifteen is the evolution of force X in the observation window, the same for Force Y, Force Z, and the torques; there is a total of ninety features.
-
-**Relevant Papers**
-Robot Learning at the Task Level: a Study in the Assembly Domain
-Feature Transformation Strategies for a Robot Learning Problem, in Feature Extraction, Construction and Selection. A Data Mining Perspective
-Integration and Learning in Supervision of Flexible Assembly Systems, in IEEE Transactions on Robotics and Automation
-
-Keywords: Robot Execution Failures, Force Measurements, Torque Measurements, Failure Detection, Classification Accuracy, Feature Transformation Strategies
+Keywords: Solar Flare, Artificial, Chemistry, Life Science, Historical Complexity

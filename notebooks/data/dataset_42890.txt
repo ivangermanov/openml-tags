@@ -1,0 +1,15 @@
+The AI4I 2020 Predictive Maintenance Dataset is a synthetic dataset that reflects real predictive maintenance data encountered in industry. Since real predictive maintenance datasets are generally difficult to obtain and particularly difficult to publish, we present and provide a synthetic dataset that reflects real predictive maintenance encountered in industry to the best of our knowledge.
+
+Features include Unique Identifier, Product Identification, Type, Air Temperature, Process Temperature, Rotational Speed, Torque, Tool Wear, Machine Failure, and several failure modes including Tool Wear Failure, Heat Dissipation Failure, Power Failure, Overstrain Failure, and Random Failures.
+
+This dataset does not have missing values. The dataset consists of ten thousand data points stored as rows with fourteen features in columns. The Unique Identifier ranges from one to ten thousand. The Product Identification consists of a letter indicating Low, Medium, or High product quality variants and a variant-specific serial number. 
+
+Air Temperature was generated using a random walk process later normalized to a standard deviation around three hundred Kelvin. Process Temperature was generated using a random walk process normalized to a standard deviation, added to the Air Temperature plus ten Kelvin. Rotational Speed was calculated from a power, overlaid with a normally distributed noise. Torque values were normally distributed around forty Newton meters with a standard deviation and no negative values. 
+
+Tool Wear adds minutes of tool wear to the used tool in the process based on the product quality variant. The Machine Failure label indicates whether the machine has failed in this particular data point for any of the following failure modes being true. 
+
+Machine Failure consists of five independent failure modes including Tool Wear Failure, Heat Dissipation Failure, Power Failure, Overstrain Failure, and Random Failures. Tool Wear Failure occurs when the tool reaches a randomly selected tool wear time between two hundred and two hundred forty minutes. Heat Dissipation Failure occurs when the difference between Air and Process Temperatures is below eight point six Kelvin and the tool’s Rotational Speed is below thirteen eighty RPM. 
+
+Power Failure occurs when the product of Torque and Rotational Speed equals the power required for the process. Overstrain Failure occurs when the product of Tool Wear and Torque exceeds a certain threshold based on the product quality variant. Random Failures occur randomly regardless of process parameters. If at least one of the above failure modes is true, the process fails and the Machine Failure label is set to one. 
+
+Keywords: predictive maintenance, synthetic dataset, industrial data, machine failure, tool wear, temperature, rotational speed, torque.

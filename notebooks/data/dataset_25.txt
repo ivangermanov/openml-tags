@@ -1,17 +1,38 @@
-Title of Database: Blocks Classification
+**Horse Colic Database**
 
-This database is concerned with the classification of blocks of a page layout of a document that has been detected by a segmentation process. This is an essential step in document analysis in order to separate text from graphic areas.
+Tags: Agriculture, Health, Mythbusting, Study
 
-The problem consists in classifying all the blocks into five classes: text, horizontal line, picture, vertical line, and graphic. For a detailed presentation of the problem, see the relevant literature on multistrategy learning for document recognition.
+This dataset contains information about surgeries performed on horses, specifically related to colic, which is a common medical condition in horses.
 
-All instances have been personally checked so that low noise is present in the data. The dataset contains five thousand four hundred seventy-three examples coming from fifty-four distinct documents. Each observation concerns one block. All attributes are numeric and are in a format readable by C4.5.
+The database includes various attributes, including:
 
-The relevant information about this dataset is that each block is described by ten attributes: the height of the block, the length of the block, the area of the block, the eccentricity of the block, the percentage of black pixels within the block, the percentage of black pixels after the application of the Run Length Smoothing Algorithm, the mean number of white-black transitions, the total number of black pixels in the original bitmap of the block, the total number of black pixels in the bitmap of the block after the Run Length Smoothing Algorithm, and the number of white-black transitions in the original bitmap of the block.
+* Surgery: whether the horse underwent surgery or not
+* Age: whether the horse is an adult or young (less than six months old)
+* Hospital Number: a unique identifier assigned to each horse
+* Rectal Temperature: the horse's body temperature, measured in degrees Celsius
+* Pulse: the horse's heart rate, measured in beats per minute
+* Respiratory Rate: the horse's breathing rate, measured in breaths per minute
+* Temperature of Extremities: a subjective measure of the horse's peripheral circulation
+* Peripheral Pulse: a subjective measure of the horse's circulation
+* Mucous Membranes: a subjective measure of the horse's circulation and hydration
+* Capillary Refill Time: a measure of the horse's circulation
+* Pain: a subjective measure of the horse's pain level
+* Peristalsis: a measure of the horse's gut activity
+* Abdominal Distension: a measure of the horse's abdominal swelling
+* Nasogastric Tube: whether gas is present in the horse's stomach
+* Nasogastric Reflux: whether fluid is present in the horse's stomach
+* Nasogastric Reflux pH: a measure of the acidity of the fluid in the horse's stomach
+* Rectal Examination - Feces: whether feces are present in the horse's rectum
+* Abdomen: a subjective measure of the horse's abdominal health
+* Packed Cell Volume: a measure of the horse's red blood cell count
+* Total Protein: a measure of the horse's hydration level
+* Abdominocentesis Appearance: a measure of the horse's gut health
+* Abdominocentesis Total Protein: a measure of the horse's gut health
+* Outcome: whether the horse lived, died, or was euthanized
+* Surgical Lesion: whether the horse required surgery to treat its condition
+* Type of Lesion: a detailed description of the horse's medical condition
+* CP Data: whether pathology data is available for each case
 
-There are no missing values in this dataset. The class distribution is as follows: most of the blocks are classified as text, followed by horizontal lines, pictures, vertical lines, and graphics.
+This dataset has many different data types, including continuous, discrete, and nominal variables. There are also missing values present in the dataset.
 
-Summary statistics for the variables are also available, including means, standard deviations, minimum and maximum values, and correlation coefficients.
-
-Tags: Images, Machine Learning, UCI
-
-Keywords: document analysis, page layout, classification, machine learning, images
+Keywords: Horse Colic, Equine Medicine, Veterinary Care, Surgical Lesions, Gut Health, Circulation, Hydration, Pain Management.

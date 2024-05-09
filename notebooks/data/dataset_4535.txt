@@ -1,17 +1,17 @@
-Philippine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Census-Income Dataset 
+Tags: Geography, Life Science 
 
-Tags: Machine Learning, Mathematics 
+This dataset contains weighted census data extracted from the Current Population Surveys conducted by the United States Census Bureau. The data includes forty-one demographic and employment-related variables. The instance weight indicates the number of people in the population that each record represents due to stratified sampling. To perform real analysis and derive meaningful conclusions, this field must be utilized. However, this attribute should not be used in the classifiers.
 
-Sub sampling of the Philippine dataset with a total of forty-one thousand one hundred forty-five entries, using a seed of zero, maximum number of rows of two thousand, maximum number of columns of one hundred, maximum number of classes of ten, and stratification set to true.
+The dataset consists of one instance per line with comma-delimited fields. The data was split into training and testing sets in approximately two-thirds and one-third proportions using MineSet's MindUtil mineset-to-mlc.
 
-Generated with the following source code:
+Attribute Information:
+More information detailing the meaning of the attributes can be found in the Census Bureau's documentation. To make use of the data descriptions, the following mappings to the Census Bureau's internal database column names will be necessary:
 
-This function subsamples a dataset based on various parameters. It first initializes a random number generator with the given seed. Then, it selects a uniform sample of classes from the dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+Age, Class of Worker, Industry Code, Occupation Code, Adjusted Gross Income, Education, Wage Per Hour, Enrolled in Education Institution Last Week, Marital Status, Major Industry Code, Major Occupation Code, Race, Hispanic Origin, Sex, Member of Labor Union, Reason for Unemployment, Full or Part-Time Employment Status, Capital Gains, Capital Losses, Dividends from Stocks, Federal Income Tax Liability, Tax Filer Status, Region of Previous Residence, State of Previous Residence, Detailed Household and Family Statistics, Instance Weight, Migration Code-Change in Metropolitan Statistical Area, Migration Code-Change in Region, Migration Code-Move Within Region, Live in This House One Year Ago, Migration Previous Residence in Sunbelt, Number of Persons Worked for Employer, Family Members Under Eighteen, Total Person Earnings, Country of Birth Father, Country of Birth Mother, Country of Birth Self, Citizenship, Total Person Income, Own Business or Self-Employed, Taxable Income Amount, Fill Income Questionnaire for Veteran's Administration, Veterans Benefits, Weeks Worked in Year.
 
-Next, it uniformly samples columns if required, selecting a specified number of columns randomly without replacement. It then filters the dataset based on the selected columns.
+Note that incomes have been binned at the fifty-thousand-dollar level to present a binary classification problem, similar to the original Adult database. However, the goal field of this data was drawn from the total person income field rather than the adjusted gross income field and may behave differently than the original Adult goal field.
 
-If the resulting dataset has more than the maximum allowed number of rows, it uses stratified sampling to select a specified number of rows, ensuring that the class distribution remains the same. Finally, it returns a new dataset object with the subsampled data.
+Relevant papers are not available for this dataset.
 
-Features: The dataset contains a variety of features, including variables one, two, three, four, six, eight, nine, fifteen, seventeen, twenty, twenty-one, twenty-two, twenty-six, thirty-two, thirty-eight, thirty-nine, forty-three, fifty-eight, sixty-four, sixty-six, sixty-seven, sixty-nine, seventy-four, seventy-five, eighty, eighty-seven, ninety-two, ninety-four, ninety-nine, one hundred, one hundred one, and so on.
-
-Keywords: machine learning, mathematics, subsampling, dataset, stratification, random sampling.
+Keywords: census data, demographics, employment, income, classification, geography, life science

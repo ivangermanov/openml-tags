@@ -1,13 +1,41 @@
-Subsampling of the Arcene dataset with a random seed value. This dataset has undergone uniform sampling of classes, columns, and rows to reduce its size while maintaining its overall characteristics.
+Online News Popularity Dataset
 
-The Arcene dataset originally had a large number of classes, but through uniform sampling, the number of classes has been reduced. This was achieved by selecting a specified number of classes randomly, using their value counts as probabilities. The indices where these selected classes were present were then used to filter the dataset.
+Tags: Computer Systems, Machine Learning
 
-Uniform column sampling was also applied to reduce the number of features. This involved randomly choosing a specified number of column indices and selecting the corresponding columns. The resulting dataset consists of these selected columns.
+This dataset summarizes a heterogeneous set of features about articles published by Mashable over a period of two years. The goal is to predict the number of shares in social networks, also known as popularity.
 
-To further reduce the size of the dataset, row sampling was applied. This involved splitting the dataset into two subsets using stratified sampling, ensuring that the class distribution was maintained.
+The articles were published by Mashable and their content, as well as the rights to reproduce it, belong to them. Hence, this dataset does not share the original content but provides some statistics associated with it. The original content can be publicly accessed and retrieved using the provided URLs.
 
-The resulting dataset consists of the sampled features, which include variables such as molecular descriptors and other chemical properties. These features have been carefully selected to represent the underlying characteristics of the Arcene dataset.
+Attribute Information:
 
-Tags: Subsampling of the Arcene dataset
+The dataset contains sixty-one attributes, including fifty-eight predictive attributes, two non-predictive attributes, and one goal field.
 
-Keywords: Arcene dataset, subsampling, uniform sampling, class reduction, column selection, row sampling, stratified sampling.
+Attribute Information includes:
+
+* URL of the article (non-predictive)
+* Days between the article publication and the dataset acquisition (non-predictive)
+* Number of words in the title
+* Number of words in the content
+* Rate of unique words in the content
+* Rate of non-stop words in the content
+* Rate of unique non-stop words in the content
+* Number of links
+* Number of links to other articles published by Mashable
+* Number of images
+* Number of videos
+* Average length of the words in the content
+* Number of keywords in the metadata
+* Data channel is Lifestyle?
+* Data channel is Entertainment?
+* Data channel is Business?
+* Data channel is Social Media?
+* Data channel is Tech?
+* Data channel is World?
+
+Other features include various keyword metrics, self-reference metrics, weekday metrics, Latent Dirichlet Allocation (LDA) topics, global subjectivity, global sentiment polarity, rate of positive and negative words, and title subjectivity and sentiment polarity.
+
+The target variable is the number of shares.
+
+Relevant papers provide more information on the dataset and its applications.
+
+Keywords: online news, popularity prediction, social networks, machine learning, computer systems

@@ -1,100 +1,29 @@
-**Insurance Company Benchmark (COIL 2000)**
-Tags: Demographics, Machine Learning
+**Low Birth Weight Data**
 
-Information about customers consists of eighty-six variables and includes product usage data and socio-demographic data derived from zip area codes. The data was supplied by the Dutch data mining company Sentient Machine Research and is based on a real-world business problem.
+Tags: Health, Medicine
 
-The training set contains over five thousand descriptions of customers, including the information of whether or not they have a caravan insurance policy. A test set contains four thousand customers of whom only the organizers know if they have a caravan insurance policy.
+The goal of this study was to identify risk factors associated with giving birth to a low birth weight baby, which is defined as weighing less than two thousand five hundred grams. Data were collected on one hundred eighty-nine women, fifty-nine of whom had low birth weight babies and one hundred thirty of whom had normal birth weight babies.
 
-The data dictionary describes the variables used and their values:
+Four variables that were thought to be of importance were the mother's age, her weight at her last menstrual period, her race, and the number of physician visits she made during the first trimester of pregnancy.
 
-Each record consists of eighty-six attributes, containing sociodemographic data and product ownership. The sociodemographic data is derived from zip codes. All customers living in areas with the same zip code have the same sociodemographic attributes. 
+The data were collected at Baystate Medical Center in Springfield, Massachusetts, during nineteen eighty-six.
 
-Attribute "Caravan", the number of mobile home policies, is the target variable. 
+This dataset consists of the complete data. A paired dataset created from this low birth weight data may be found separately, as well as a three-to-one matched dataset.
 
-All the variables starting with Mostype are zipcode variables. They give information on the distribution of that variable, for example, Rented House, in the zipcode area of the customer.
+**Code Sheet for the Variables in the Low Birth Weight Data Set**
 
-Features: 
-Customer Subtype, 
-Number of Houses, 
-Average Size Household, 
-Average Age, 
-Customer Main Type, 
-Roman Catholic, 
-Protestant, 
-Other Religion, 
-No Religion, 
-Married, 
-Living Together, 
-Other Relation, 
-Singles, 
-Household Without Children, 
-Household With Children, 
-High Level Education, 
-Medium Level Education, 
-Lower Level Education, 
-High Status, 
-Entrepreneur, 
-Farmer, 
-Middle Management, 
-Skilled Laborers, 
-Unskilled Laborers, 
-Social Class A, 
-Social Class B1, 
-Social Class B2, 
-Social Class C, 
-Social Class D, 
-Rented House, 
-Home Owners, 
-One Car, 
-Two Cars, 
-No Car, 
-National Health Service, 
-Private Health Insurance, 
-Income Less Than Thirty Thousand, 
-Average Income, 
-Purchasing Power Class, 
-Contribution Private Third Party Insurance, 
-Contribution Third Party Insurance Firms, 
-Contribution Third Party Insurance Agriculture, 
-Contribution Car Policies, 
-Contribution Delivery Van Policies, 
-Contribution Motorcycle Scooter Policies, 
-Contribution Lorry Policies, 
-Contribution Trailer Policies, 
-Contribution Tractor Policies, 
-Contribution Agricultural Machines Policies, 
-Contribution Moped Policies, 
-Contribution Life Insurances, 
-Contribution Private Accident Insurance Policies, 
-Contribution Family Accidents Insurance Policies, 
-Contribution Disability Insurance Policies, 
-Contribution Fire Policies, 
-Contribution Surfboard Policies, 
-Contribution Boat Policies, 
-Contribution Bicycle Policies, 
-Contribution Property Insurance Policies, 
-Contribution Social Security Insurance Policies, 
-Number of Private Third Party Insurance, 
-Number of Third Party Insurance Firms, 
-Number of Third Party Insurance Agriculture, 
-Number of Car Policies, 
-Number of Delivery Van Policies, 
-Number of Motorcycle Scooter Policies, 
-Number of Lorry Policies, 
-Number of Trailer Policies, 
-Number of Tractor Policies, 
-Number of Agricultural Machines Policies, 
-Number of Moped Policies, 
-Number of Life Insurances, 
-Number of Private Accident Insurance Policies, 
-Number of Family Accidents Insurance Policies, 
-Number of Disability Insurance Policies, 
-Number of Fire Policies, 
-Number of Surfboard Policies, 
-Number of Boat Policies, 
-Number of Bicycle Policies, 
-Number of Property Insurance Policies, 
-Number of Social Security Insurance Policies, 
-Caravan
+* Identification Code
+* Low Birth Weight (whether the birth weight was less than two thousand five hundred grams)
+* Age of the Mother in Years
+* Weight in Pounds at the Last Menstrual Period
+* Race (whether the mother was white, black, or other)
+* Smoking Status During Pregnancy (whether the mother smoked during pregnancy)
+* History of Premature Labor (the number of times the mother had premature labor)
+* History of Hypertension (whether the mother had hypertension)
+* Presence of Uterine Irritability (whether the mother had uterine irritability)
+* Number of Physician Visits During the First Trimester (the number of times the mother visited a physician during the first trimester)
+* Birth Weight in Grams
 
-Keywords: demographics, machine learning, insurance, customer data, socioeconomic data, product ownership
+These data have been used as an example of fitting a multiple logistic regression model. The story behind the data is that low birth weight is an outcome that has been of concern to physicians for years because infant mortality rates and birth defect rates are very high for low birth weight babies. A woman's behavior during pregnancy, including her diet, smoking habits, and receiving prenatal care, can greatly alter the chances of carrying the baby to term and, consequently, of delivering a baby of normal birth weight.
+
+Keywords: low birth weight, risk factors, pregnancy, health, medicine

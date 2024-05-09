@@ -1,23 +1,47 @@
-The Ricci vs Destefano dataset contains the oral, written, and combined test scores for the New Haven Fire Department promotion exams. Additionally, the Race and Position for each test taker are provided.
+QSAR-TID-20113 Dataset
 
-The data was obtained from the district court's decision, briefs, and appendices.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 20113. The features represent FCFP 1024bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Variable descriptions include:
+The dataset has 728 rows and 1026 features, including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXc50.
 
-* Race, which denotes White, Hispanic, or Black
-* Position, which denotes Captain or Lieutenant
-* Oral, representing the oral exam score
-* Written, representing the written exam score
-* Combine, representing the weighted total score, with sixty percent written and forty percent oral
+Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Values are centered and delimited by blanks, with no missing values.
+Features:
 
-The story behind the data revolves around the New Haven Fire Department administering oral and written exams for promotion to Lieutenant and Captain in November and December of two thousand three. Under the contract between the City of New Haven and the firefighter's union, the written exam received a weight of sixty percent, while the oral exam received a weight of forty percent. Applicants with a total score of seventy percent or above passed the exam and became eligible for promotion.
+* MOLECULE CHEMBL ID
+* FCFP Six One Zero Two Four
+*...
 
-A total of firefighters took the exam, among whom took the Lieutenant exam, and took the Captain exam. During the time of the exams, there were Lieutenant and Captain positions available. The City Charter of New Haven specifies that when promotions are made, the Department must select them from the top scorers. Consequently, the top Lieutenant scorers and top Captain scorers are eligible for potential promotion.
+Scraped Data:
 
-The City of New Haven decided not to certify the exam and promoted no one, citing that an insufficient number of minorities would receive a promotion to an existing position. This led to a lawsuit, where the court ultimately decided that the City's failure to certify the tests was a violation of Title Seven of the Civil Rights Act of nineteen sixty-four.
+ID: CHEMBL Four Zero Nine Three
+Type: Single Protein
+Preferred Name: LXR Beta
+Synonyms: Liver X Receptor Beta, LXRB, NER, NR One H Two, Nuclear Receptor NER
+Organism: Homo Sapiens
+Species Group: No
+Protein Target Classification: One. Transcription Factor/Nuclear Receptor/Nuclear Hormone Receptor Subfamily One/Nuclear Hormone Receptor Subfamily One Group H/Nuclear Hormone Receptor Subfamily One Group H Member Three
 
-Pedagogical notes suggest that this data can be utilized for various analyses, including one-way Analysis of Variance on equality of average test scores for three races, two-way Analysis of Variance for equality of test scores for race and position, Chi-Square test on the equality of pass rates for three races, and Fisher-Freeman-Halton test on the equality of the potential promotion rates. Moreover, instructors can combine Blacks and Hispanics as minority groups, allowing for further analyses, such as two-sample T-test on equality of average test scores for majority versus minority, Chi-Square test on the equality of pass rates for majority versus minority, and Fisher's Exact Test on equality of the potential promotion rates for majority versus minority.
+Description: Oxysterols Receptor LXR-Beta
+Relationship: Accession Oxysterols Receptor LXR-Beta
+Single Protein
 
-Keywords: astronomy, machine learning, New Haven Fire Department, promotion exams, racial disparity, civil rights, statistical analysis.
+Items per Page: Five One. Showing One-Five out of Five Records.
+
+Browse All Parent Molecule CHEMBL ID Parent Molecule Name Parent Molecule Type Mechanism of Action Max Phase First Approval USAN Stem References.
+
+One. Small Molecule Error. CHEMBL Three Five Four Five Zero Four Seven BMS Eight Five Two Nine Two Seven Small Molecule LXR-Beta Modulator One --- --- From PubMed CHEMBL Three Five Four Five Zero Four Seven (Parent) One.
+
+Two. Error. CHEMBL Four Five Six Two Three Seven LXR Six Two Three Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Four Five Six Two Three Seven (Parent) One, Two.
+
+Three. Small Molecule Error. CHEMBL Three Five Four Five Four One Eight BMS Seven Seven Nine Seven Eight eight Small Molecule LXR-Beta Agonist One --- --- From Other PubMed CHEMBL Three Five Four Five Four One Eight (Parent) One, Two.
+
+Four. Small Molecule Error. CHEMBL Three Five Four Five Two Three Eight CS Eight Zero Eight Zero Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Three Five Four Five Two Three Eight (Parent) One.
+
+Five. Error. CHEMBL Two Seven Two Six Twenty-One HYODEOXYCHOLIC ACID Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Two Seven Two Six Twenty-One (Parent) One, Two.
+
+Showing One-Five out of Five Records.
+
+Expression Atlas One. P Five Five Zero Five Five Go Component Six. Go Function Fourteen. Go Process Thirty-Four. 
+
+Keywords: QSAR, Drug Target, LXR-Beta, Nuclear Receptor, Transcription Factor, Lipid Metabolism, Cholesterol Homeostasis, Gene Regulation.

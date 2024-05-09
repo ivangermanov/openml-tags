@@ -1,7 +1,50 @@
-Auto93 Dataset 
+Background:
 
-Tags: Binarized, Chemistry, Life Science, Mythbusting One, Study One, Study One Two Three, Study Fifteen, Study Twenty, Study Forty-One 
+In this paper, we develop an approach to data disclosure in survey settings by adopting a probabilistic definition of disclosure. Our approach is based on the principle that a data collection agency must consider disclosure from the perspective of an intruder in order to efficiently evaluate data disclosure limitation procedures. The probabilistic definition and our attempt to study optimal intruder behavior lead naturally to a Bayesian formulation.
 
-This dataset is a binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive, denoted by 'P', and all others as negative, denoted by 'N'. The features included in this dataset are manufacturer information, vehicle type, city miles per gallon, highway miles per gallon, standard air bags, drive train type, number of cylinders, engine size, horsepower, revolutions per minute, engine revolutions per mile, availability of manual transmission, fuel tank capacity, passenger capacity, length, wheelbase, width, u-turn space, rear seat room, luggage capacity, weight, and whether the vehicle is domestic or not.
+The Data:
 
-Keywords: Binarized dataset, Vehicle characteristics, Fuel efficiency, Safety features
+Our case study uses data from the survey data Elite Canadian Decision Makers collected by the Institute for Social Research at York University. This survey was conducted using telephone interviews and there were respondents, but many of these did not supply complete data. We have extracted data on twelve variables, each of which was measured on a five-point scale. 
+
+We have data on civil liberties, attitudes towards Jews, and Canada-US relationships. In addition, we have data on two approximately continuous variables: personal information including total family income before taxes and age based on year of birth. 
+
+We transformed the original survey data as follows in order to create a database of approximately continuous variables. We added categorical variables to increase the number of levels. When necessary, we reversed the order of levels of a response to a question. 
+
+After we removed cases with missing observations and two cases involving young children, we had a database consisting of observations. 
+
+To enhance continuity, we took the following measures. For age, we added normally distributed variates with zero mean and variance four to all observations. For income, we added uniform variates on the range of zero dollars to ten thousand dollars to all incomes below eighty thousand dollars. Since all cases of incomes exceeding eighty thousand dollars were lumped together in the survey, we simulated their values by means of a t-distribution. 
+
+Drawing values from the upper thirty-eight percent tail of the t-distribution, we evaluated the values of income as sixty thousand dollars plus twenty-five thousand times the t-distribution. For other variables, we added normally distributed variates with zero mean and variance point five to the variables. 
+
+We assume that the agency releases information about all variables, except for attitudes towards Jews, which is unavailable to the intruder and is at the center of the intruder's investigation. We denote the released data by Z with i equals one to six hundred sixty-two and j equals one to four. 
+
+We assume that the intruder's data, X, are accurate and are related to Z via the following transformation: x zero j equals z i j times theta i j plus xi j, where theta i j is a bias removing parameter normally distributed with mean one and variance v j, and xi j is normally distributed disturbance with zero mean and variance sigma squared j. 
+
+The following table provides the values of v j and sigma squared j used in the study. We first generated several realizations of the above transformation on small subsets of the data to ascertain the impact of the process of the error on the data. 
+
+Data Used in the Computations:
+
+We conducted a complete simulation of the procedures for the complete set of six hundred sixty-two cases. We considered four different scenarios for the simulation. 
+
+* The released data contains no bias or noise. 
+* The released data contains only noise. 
+* The released data contains only bias. 
+* The released data contains both bias and noise. 
+
+We took each individual in turn as the object of the intruder's efforts and carried out the calculations. 
+
+Structure of the Datasets:
+
+Each attached dataset consists of four space-separated columns containing the data on age, civil liberties, Canada-US relationships, and income respectively.
+
+Dataset: X NOISE
+
+Information about the dataset 
+
+CLASSTYPE: numeric 
+
+CLASSINDEX: none specific 
+
+Features: age, civil liberties, Canada-US relationships, income
+
+Keywords: data disclosure, survey settings, probabilistic definition, Bayesian formulation, intruder behavior, data collection agency, optimal intruder behavior.

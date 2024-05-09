@@ -1,9 +1,11 @@
-The Poker dataset belongs to the classification on numerical features benchmark. This dataset was retrieved from the libSVM site and underwent several transformations. First, the test and training datasets were combined into a single dataset without scaling. Then, the classes were relabeled so that class zero represents the positive class, while classes one through nine represent the negative class.
+The QSAR-TID-12983 dataset contains QSAR data showing activity values of several compounds on drug target Mitogen Activated Protein Kinase P Thirty Eight Gamma. This dataset has eight hundred ten rows and one thousand twenty-six features, including IDs and class features. The features represent Folded Chemical Fingerprint six one thousand twenty-four bit molecular fingerprints, which were generated from Simplified Molecular Input Line Entry System strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-To normalize the dataset, each column was treated differently depending on the number of unique values it contained. Columns with only one unique value, also known as constant features, were set to zero and subsequently removed due to sparsity. Columns with two unique values, referred to as binary features, had their most frequent value set to zero, while the remaining value was set to one. Finally, columns with more than two unique values, including multinary and real features, were divided by their standard deviation.
+This dataset is part of the MetaQSAR project and was published in September two thousand fifteen. It is recommended to cite this dataset when used in research.
 
-It is important to note that the Poker dataset exhibits mild redundancy, with approximately point two percent of duplicate data points within each file, including both the training and testing files. These duplicate points have not been removed from the dataset.
+The Mitogen Activated Protein Kinase P Thirty Eight Gamma target is a Single Protein and its preferred name is MAP Kinase P Thirty Eight Gamma. It also has synonyms such as ERK Six, ERK Six, Extracellular Signal Regulated Kinase Six, MAPK Twelve, and MAP Kinase Twelve.
 
-Features include various attributes related to the game of Poker.
+This target belongs to the species Homo Sapiens and its classification is one point enzyme kinase protein kinase CMGC protein kinase group CMGC protein kinase MAPK family CMGC protein kinase P thirty eight subfamily.
 
-Keywords: Poker, classification, numerical features, libSVM, normalization, redundancy, dataset transformation.
+The Mitogen Activated Protein Kinase P Thirty Eight Gamma target is involved in various biological processes, including the Mitogen Activated Protein Kinase cascade, protein phosphorylation, cell cycle, signal transduction, muscle organ development, positive regulation of peptidase activity, phosphorylation, peptidyl serine phosphorylation, intracellular signal transduction, signal transduction in response to DNA damage, myoblast differentiation, negative regulation of cell cycle, and positive regulation of muscle cell differentiation.
+
+Keywords: QSAR, Mitogen Activated Protein Kinase P Thirty Eight Gamma, Folded Chemical Fingerprint, molecular fingerprints, Simplified Molecular Input Line Entry System, MetaQSAR project, Single Protein, CMGC protein kinase, MAPK family, biological processes.

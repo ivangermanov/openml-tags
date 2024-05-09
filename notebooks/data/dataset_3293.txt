@@ -1,24 +1,47 @@
-The Sgemm Gpu Kernel Performance Dataset 
+QSAR-TID-12569 Dataset
 
-This dataset measures the running time of a matrix-matrix product A multiplied by B equals C, where all matrices have a size of two thousand forty-eight by two thousand forty-eight, using a parameterizable Sgemm Gpu kernel with a vast number of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as the four last columns. All times are measured in milliseconds. There are fourteen parameters, the first ten being ordinal and can only take up to four different powers of two values, and the four last variables being binary. Out of a total of one million three hundred twenty-seven thousand one hundred four parameter combinations, only two hundred forty-one thousand six hundred are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID 12569. The dataset has multiple rows and numerous features, including molecule identifiers and class features.
 
-The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of Ram, and an Nvidia Geforce graphics card. The gemm fast kernel from the automatic Opencl kernel tuning library CLTune was used.
+The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Note that for this kind of datasets, it is usually better to work with the logarithm of the running times, as seen in similar research studies.
+Dataset Information:
 
-Independent Variables 
+* Dataset name: QSAR-TID-12569
+* Tags: Computer Systems, Machine Learning, MTLQSAR, Study Three
+* Source: MetaQSAR project - September 2015
+* Citation: Please cite this dataset when using it for your research purposes.
 
-Per-matrix Two-Dimensional Tiling at Workgroup Level 
-Inner Dimension of Two-Dimensional Tiling at Workgroup Level 
-Local Workgroup Size 
-Local Memory Shape 
-Kernel Loop Unrolling Factor 
-Per-Matrix Vector Widths for Loading and Storing 
-Enable Stride for Accessing Off-Chip Memory Within a Single Thread 
-Per-Matrix Manual Caching of the Two-Dimensional Workgroup Tile 
+Compound Information:
 
-Output 
+* ID: CHEMBL4566
+* Type: Single Protein
+* Preferred Name: Endothelin Receptor ETA
+* Synonyms: Ednra, Endothelin-One Receptor, Endothelin Receptor Type A, ET-A, ET-AR
+* Organism: Rattus Norvegicus
+* Species Group: No
+* Protein Target Classification: One, Membrane Receptor, Family A G-Protein-Coupled Receptor, Peptide Receptor, Short Peptide Receptor
 
-Performance Times in Milliseconds for Four Independent Runs Using the Same Parameters 
+Description and Relationship Accession:
 
-Keywords: gpu kernel, matrix multiplication, performance optimization, opencl, kernel tuning
+* Endothelin-One Receptor is a single protein.
+* It belongs to the protein family classified under membrane receptor, family A G-protein-coupled receptor, peptide receptor, and short peptide receptor.
+
+Gene Ontology Annotations:
+
+* Cellular Component:
+	+ Plasma membrane
+	+ Membrane
+	+ T-tubule
+	+ Nuclear membrane
+	+ Cell periphery
+* Molecular Function:
+	+ G protein-coupled receptor activity
+	+ Endothelin receptor activity
+* Biological Process:
+	+ Mitotic cell cycle
+	+ Angiogenesis
+	+ Branching involved in blood vessel morphogenesis
+	+ Response to hypoxia
+	+ In utero embryonic development
+
+Keywords: QSAR, Machine Learning, MTLQSAR, Endothelin Receptor, ETA, G-Protein-Coupled Receptor, Peptide Receptor, Short Peptide Receptor, Membrane Receptor, Gene Ontology Annotations.

@@ -1,13 +1,22 @@
-OkCupid Stem Dataset 
+QSAR-TID-100871 Dataset 
 
-Demographics, Economics
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100871. It has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median pXC50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-User profile data for San Francisco OkCupid users published in a research paper is available for analysis. This curated dataset was downloaded from a GitHub repository. The original dataset was created using a Python script that extracted data from public profiles on OkCupid website on a specific date. It includes individuals within a twenty-five-mile radius of San Francisco who were online in the previous year, with at least one profile picture.
+The MetaQSAR project aims to provide a comprehensive resource for QSAR modeling. This dataset is part of the project and contains data from ChEMBL version seventeen. 
 
-Permission to use this data was obtained under the condition that the dataset remains publicly accessible. As the target variable, the job category was collapsed into three groups: stem, non-stem, and student. STEM jobs were defined as computer hardware software, science tech engineering. Observations with unemployed, retired, rather not say or missing values in job were removed.
+The dataset includes multiple compounds with their corresponding activity values and molecular fingerprints. These molecular fingerprints are essential for QSAR modeling, as they describe the structural properties of molecules. 
 
-The original dataset also included open-text variables, which were removed from the uploaded dataset. The dataset further includes a date-time variable, last online, which could be used to construct additional features. Using OkCupid data for predicting STEM jobs was inspired by a book on feature engineering and selection for predictive models.
+Generating fingerprints does not usually require missing value imputation, as all bits are generated. This makes the dataset suitable for machine learning-based QSAR modeling approaches.
 
-Features include age, body type, diet, drinks, drug use, education level, ethnicity, height, income, job title, location, offspring, sexual orientation, pet ownership, religious beliefs, gender, zodiac sign, smoking habits, languages spoken, and relationship status.
+Features: Molecule ChEMBL ID, and multiple molecular fingerprint features.
 
-Keywords: OkCupid, demographics, economics, STEM jobs, feature engineering, predictive models, user profiles.
+Scraped Data:
+The Neuropeptide S receptor is a single protein with multiple synonyms, including Gpr154, G-protein coupled receptor 154, and Neuropeptide S receptor. It belongs to the species group Mus musculus.
+
+The protein target classification is one point Membrane receptor, Family A G protein-coupled receptor, Peptide receptor, and Short peptide receptor.
+
+Description Relationship Accession: Neuropeptide S receptor is a Single Protein with accession number Q8BZP8.
+
+Expression Atlas, Go Component, Go Function, and Go Process provide additional information about the protein.
+
+Keywords: QSAR, machine learning, molecular fingerprints, MetaQSAR, Neuropeptide S receptor, G protein-coupled receptor, peptide receptor.

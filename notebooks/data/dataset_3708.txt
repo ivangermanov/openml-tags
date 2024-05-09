@@ -1,21 +1,96 @@
-U S Pollution Data 
+QSAR-TID-12919 Dataset
 
-Tags: Computer Systems, Machine Learning 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12919. It has seventy-nine rows and one thousand twenty-six features, including IDs and class feature. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Context 
-This dataset deals with pollution in the United States. Pollution in the United States has been well documented by the Environmental Protection Agency, but it is a pain to download all the data and arrange them in a format that interests data scientists. Hence, I gathered four major pollutants – nitrogen dioxide, sulphur dioxide, carbon monoxide, and ozone – for every day from two thousand to two thousand sixteen and placed them neatly in a comma-separated values file.
+Demographics, Education, MTLQSAR, Study Three
 
-Content 
-There is a total of twenty-eight fields. The four pollutants – nitrogen dioxide, sulphur dioxide, carbon monoxide, and ozone – each have five specific columns. 
-For observations on specific columns, visit the column metadata on the data tab.
+MetaQSAR Project - September Two Thousand Fifteen
 
-Acknowledgments 
-All the data is scraped from the database of the Environmental Protection Agency: https://aqsdr1.epa.gov/aqsweb/aqstmp/airdata/download_files.html
+This dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target TID: 12919.
 
-Inspiration 
-I did a related project with some of my friends in college, and decided to open-source our dataset so that data scientists do not need to re-scrape the Environmental Protection Agency site for historical pollution data.
+Features:
 
-Features: 
-State Code, County Code, Site Number, Address, State, County, City, Local Date, Nitrogen Dioxide Units, Nitrogen Dioxide Mean, Nitrogen Dioxide First Maximum Value, Nitrogen Dioxide First Maximum Hour, Nitrogen Dioxide Air Quality Index 
+* MOLECULE CHEMEBL ID
+* Molecular Fingerprints (FCFP six one hundred twenty-four bit)
 
-Keywords: pollution, United States, Environmental Protection Agency, nitrogen dioxide, sulphur dioxide, carbon monoxide, ozone, air quality index
+The molecular fingerprints were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+
+Scraped Data:
+
+ID: ChEMBL Three Five Three Zero
+Type: Single Protein
+Preferred Name: Dual Specificity Mitogen-Activated Protein Kinase Kinase Seven
+Synonyms: C-Jun N-Terminal Kinase Kinase Two, Dual Specificity Mitogen-Activated Protein Kinase Kinase Seven, JNK-Activating Kinase Two, JNKK Two
+
+Organism: Homo Sapiens
+Species Group: No
+Protein Target Classification: One - Enzyme/Kinase/Protein Kinase/STE Protein Kinase Group/STE Protein Kinase STE Seven Family
+
+Description Relationship Accession:
+Dual Specificity Mitogen-Activated Protein Kinase Kinase Seven
+Single Protein
+O One Four Seven Thirty-Three
+
+Rows per Page: Fifty-One - One of One
+
+ChEMBL ID:
+Relationship
+Preferred Name
+Target Type
+CHEMBL Four Five Two Three Six Seven Eight
+SUPERSET OF
+Protein Cereblon/MAP Two K Seven
+PROTEIN-PROTEIN INTERACTION
+
+Rows per Page: Fifty-One - One of One
+
+Go Component:
+* Nucleus
+* Cytoplasm
+* Cytosol
+
+Go Function:
+* Nucleotide Binding
+* Magnesium Ion Binding
+* Protein Kinase Activity
+* Protein Serine/Threonine Kinase Activity
+* MAP Kinase Activity
+* MAP Kinase Kinase Activity
+* Protein Tyrosine Kinase Activity
+* Protein Binding
+* ATP Binding
+* JUN Kinase Kinase Activity
+* Kinase Activity
+* Transferase Activity
+* Enzyme Binding
+* Protein Kinase Binding
+* Protein Phosphatase Binding
+* Metal Ion Binding
+* Protein Serine Kinase Activity
+* Molecular Function Activator Activity
+
+Go Process:
+* Protein Phosphorylation
+* Apoptotic Process
+* Response to Osmotic Stress
+* Signal Transduction
+* JNK Cascade
+* Response to Heat
+* Response to UV
+* Response to Wounding
+* Phosphorylation
+* Positive Regulation of Telomere Maintenance via Telomerase
+* Response to Tumor Necrosis Factor
+* Fc-Epsilon Receptor Signaling Pathway
+* Positive Regulation of JUN Kinase Activity
+* Positive Regulation of DNA-Templated Transcription
+* Positive Regulation of JNK Cascade
+* Stress-Activated MAPK Cascade
+* Positive Regulation of Telomerase Activity
+* Cellular Response to Lipopolysaccharide
+* Cellular Response to Interleukin-One
+* Cellular Senescence
+* Positive Regulation of Telomere Capping
+* Regulation of Motor Neuron Apoptotic Process
+
+Keywords: QSAR, Molecular Fingerprints, Mitogen-Activated Protein Kinase Kinase, Protein Kinase, Signal Transduction, Apoptotic Process, DNA-Templated Transcription.

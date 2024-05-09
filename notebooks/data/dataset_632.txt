@@ -1,9 +1,13 @@
-Cleveland Dataset 
+The Friedman dataset is an artificially generated collection of eighty datasets. This dataset is widely used and originates from stochastic gradient boosting. The dataset names follow a specific coding format, which includes colinearity degree and sample number.
 
-Tags: Binarized, Chemistry, Life Science, Mythbusting, Study 
+Friedman functions incorporate both linear and nonlinear relationships between input and output, with a normalized noise added to the output. The Friedman function itself consists of a combination of sine and square terms.
 
-This dataset is a binarized version of the original dataset. The conversion process involves transforming the numeric target feature into a two-class nominal target feature by calculating the mean and subsequently categorizing all instances with a lower target value as Positive and all others as Negative. 
+To assess the impact of unrelated features, additional features are introduced into the datasets. These extra features are independent of the output. Furthermore, to evaluate an algorithm's robustness to colinearity, the datasets are generated with varying degrees of colinearity.
 
-The dataset comprises various features including Age, Sex, Chest Pain Type, Resting Blood Pressure, Cholesterol Levels, Fasting Blood Sugar, Resting Electrocardiogram Results, Maximum Heart Rate Achieved, Exercise Induced Angina, Old Peak, Slope of the Peak Exercise ST Segment, Number of Major Vessels Colored by Fluoroscopy, and Thalassemia Diagnosis. 
+Colinearity refers to the number of features dependent on other features. The generated Friedman datasets possess diverse parameters and values. The number of features ranges from five to one hundred, with only the first five features related to the output, while the remaining ones are entirely random.
 
-Keywords: Cleveland Dataset, Binarized Data, Chemistry, Life Science, Medical Diagnosis, Heart Rate, Cholesterol Levels, Blood Pressure.
+Similarly, the number of samples varies from one hundred to one thousand. The colinearity degrees also differ, ranging from zero to four. For datasets with a colinearity degree of four, the number of features is limited to ten, twenty-five, fifty, and one hundred. Other datasets possess five, ten, twenty-five, and fifty features.
+
+As a result, eighty artificial datasets are created through combining different feature numbers, sample numbers, and colinearity degrees. The last attribute in each file represents the target.
+
+Keywords: Friedman dataset, stochastic gradient boosting, colinearity, artificial dataset, feature selection, nonlinear relationship

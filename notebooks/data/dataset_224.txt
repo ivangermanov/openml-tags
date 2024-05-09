@@ -1,35 +1,31 @@
-Pasture
+Breast Cancer Dataset
 
-Tags: Agriculture, Earth Science, Study One, Study Forty-One
+Tags: Machine Learning, Medicine
 
-The objective of this dataset is to predict pasture production from a variety of biophysical factors. Vegetation and soil variables from areas of grazed North Island hill country with different management histories, including fertilizer application and stocking rates, between 1973 and 1994 were measured and subdivided into thirty-six paddocks.
+This dataset is part of the breast cancer domain obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.
 
-Nineteen vegetation, soil chemical, physical, and biological, and soil water variables were selected as potentially useful biophysical indicators.
+Title: Breast Cancer Data
 
-Attribute information includes:
+The dataset contains nine attributes, some of which are linear and others are nominal, describing two hundred eighty-six instances of breast cancer tumors. These instances belong to two classes: no-recurrence-events and recurrence-events.
 
-* Fertilizer used, which is an enumeration
-* Slope of the paddock, which is an integer value
-* Aspect deviation from northwest, which is also an integer value
-* Olsen Phosphorus, which is an integer value
-* Minimum Nitrogen, which is an integer value
-* Total Soil, which is an integer value
-* Calcium Magnesium ratio, which is a real value
-* Soil Lom, which is a real value representing grams per one hundred grams
-* Mean Nitrogen Fixation, which is a real value
-* Main three species of earthworms per gram per meter squared, which is a real value
-* Number of earthworm species, which is an integer value
-* Unsaturated hydraulic conductivity, which is a real value in millimeters per hour
-* Organic Matter, which is a real value
-* Air permeability, which is a real value
-* Porosity, which is a real value
-* Mean percentage of highly fertile ragwort growth, which is a real value
-* Legume yield, which is a real value representing kilograms of dry matter per hectare
-* Mean percentage of other species presence, which is a real value
-* Mean temperature during January to March, which is a real value
-* Annual mean runoff, which is a real value in millimeters
-* Root surface area, which is a real value representing meters squared per meter cubed
-* Leaf phosphorus, which is a real value representing parts per million
-* Pasture production classification, which is an enumeration
+Past usage of this dataset includes various studies, such as numeric prediction using instance-based learning with encoding length selection, and testing application to three medical domains. The accuracy range of these studies falls between sixty-six percent and seventy-eight percent.
 
-Keywords: pasture production, biophysical factors, vegetation, soil variables, fertilizer application, stocking rates, hill country, nitrogen fixation, earthworms, hydraulic conductivity, organic matter, air permeability, porosity, legume yield, temperature, runoff, root surface area, leaf phosphorus.
+Relevant information about this dataset includes its repeated appearance in machine learning literature, along with two other datasets from the same institute: lymphography and primary-tumor.
+
+The nine attributes describing each instance are:
+
+* Age, categorized into nine groups ranging from ten to ninety-nine years old.
+* Menopause status, categorized into three groups: less than forty, greater than or equal to forty, and premenopausal.
+* Tumor size, categorized into twelve groups ranging from zero to fifty-four units.
+* Number of invaded nodes, categorized into thirteen groups ranging from zero to thirty-nine units.
+* Node caps status, either yes or no.
+* Degree of malignancy, categorized into three groups.
+* Breast affected, either left or right.
+* Quadrant of the breast affected, categorized into five groups.
+* Irradiation status, either yes or no.
+
+There are eight instances with missing values for node caps and one instance with a missing value for breast quadrant.
+
+The class distribution is skewed, with two hundred one instances belonging to the no-recurrence-events class and eighty-five instances belonging to the recurrence-events class.
+
+Keywords: breast cancer, machine learning, medicine, oncology, dataset, numeric prediction, instance-based learning, encoding length selection.

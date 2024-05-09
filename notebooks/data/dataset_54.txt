@@ -1,11 +1,30 @@
-BNG (Anneal, Nominal)
+vehicle silhouettes
 
-Tags: Artificial
+Purpose:
+The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
+
+Problem Type:
+Classification
+
+Source:
+UCI
+
+Description:
+This dataset was originally gathered to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction. This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
+
+History:
+The dataset was originally gathered at the Turing Institute in nineteen eighty-six to nineteen eighty-seven. It was partially financed by Barr and Stroud Limited. The original purpose was to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects.
 
 Features:
+The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Attribute Neural Tree System, which extracts a combination of scale-independent features utilizing both classical moments-based measures and heuristic measures.
 
-This steel product type is part of the carbon family, known for its hardness and temper rolling condition. It boasts excellent formability, strength, and non-ageing properties. The surface finish and quality are also notable, making it suitable for enamelability. Its chemical composition includes BC, BF, BT, BW/ME, BL, M, Chrom, Phos, CBond, Marvi, Exptl, Ferro, Corr. 
+Four "Corgie" model vehicles were used for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
 
-The appearance of this steel is characterized by a blue/bright/varnish/clean finish, which adds to its lustre. It meets the JUROFM standard and has an S and P shape classification. Additionally, its thickness, width, length, and oil-bore diameter meet specific requirements. It comes with specialized packing and is classified according to a certain class system.
+Images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface. The vehicles were painted matte black to minimize highlights. Images were captured using a frame store connected to a computer. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated, and thereafter subjected to shrink-expand-expand-shrink modules to remove "salt and pepper" image noise.
 
-Keywords: Steel, Carbon, Hardness, Formability, Enamelability, Surface Finish, Chemical Composition, Appearance.
+Vehicles were rotated and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to "head-on" and "rear" views respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
+
+Number of Classes:
+Four - Opel, Saab, Bus, Van
+
+Keywords: vehicle recognition, machine learning, classification, transportation, image processing, object recognition.

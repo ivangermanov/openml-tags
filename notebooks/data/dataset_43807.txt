@@ -1,0 +1,24 @@
+Forest Fires Data Set Portugal 
+Tags: Abstract 
+
+This is a challenging regression task, where the objective is to predict the burned area of forest fires in the northeast region of Portugal, by utilizing meteorological and other relevant data. 
+
+Data Set Information:
+
+The data set characteristics are multivariate, and it contains five hundred seventeen instances. The area of focus is physical, and the attribute characteristics are real. There are thirteen attributes in total. The data was donated in two thousand eight.
+
+Associated tasks include regression, and there are no missing values.
+
+In previous research, the output 'area' was initially transformed with a natural logarithm function plus one. Subsequently, various data mining methods were applied. After fitting the models, the outputs were post processed with the inverse of the natural logarithm plus one transform. Four distinct input setups were utilized.
+
+The experiments were conducted using a ten fold cross validation method, repeated thirty times. Two regression metrics were measured, including mean absolute deviation and root mean squared error.
+
+A Gaussian support vector machine, fed with four direct weather conditions, obtained the best mean absolute deviation value. The best root mean squared error was attained by the naive mean predictor. An analysis of the regression error curve reveals that the support vector machine model predicts more examples within a lower admitted error. In effect, the support vector machine model predicts smaller fires more accurately, which comprise the majority.
+
+Source: Department of Information Systems, University of Minho, Portugal.
+
+Relevant papers include a data mining approach to predict forest fires using meteorological data.
+
+Features: Month, Day, Temperature, Relative Humidity, Wind, Rain, Burned Area.
+
+Keywords: Forest Fires, Portugal, Regression Task, Meteorological Data, Support Vector Machine, Data Mining, Mean Absolute Deviation, Root Mean Squared Error.

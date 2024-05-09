@@ -1,33 +1,52 @@
-Title: Letter Image Recognition Data
+**Labor Negotiations**
 
-The objective of this dataset is to identify each of a large number of black and white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet.
+This dataset pertains to the final settlements in labor negotiations in the Canadian industry, specifically focusing on the business and personal services sector.
 
-The character images were based on twenty different fonts and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, including statistical moments and edge counts, which were then scaled to fit into a range of integer values from zero to fifteen.
+**Source Information**
 
-We typically train on the first part of the data and then use the resulting model to predict the letter category for the remaining part. See the referenced article for more details.
+The data was collected from the Collective Bargaining Review, a monthly publication by Labour Canada's Industrial Relations Information Service, located in Ottawa, Ontario.
 
-Features:
+**Dataset Description**
 
-* Horizontal Position of Box
-* Vertical Position of Box
-* Width of Box
-* Height of Box
-* Total Number of On Pixels
-* Mean X of On Pixels in Box
-* Mean Y of On Pixels in Box
-* Mean X Variance
-* Mean Y Variance
-* Mean X Y Correlation
-* Edge Count Left to Right
-* Correlation of Edge Count with Y
-* Edge Count Bottom to Top
-* Correlation of Edge Count with X
-* Class
+The dataset comprises all collective agreements reached in the business and personal services sector for locals with at least five hundred members, including teachers, nurses, university staff, police, and others, in Canada during 1987 and the first quarter of 1988.
 
-Dataset Information:
-This dataset does not have missing values.
+**Past Usage**
 
-Additional Information:
-The dataset consists of twenty-six classes, one for each capital letter in the English alphabet.
+This dataset has been utilized for testing concept learning software, particularly an experimental method to learn two-tiered concept descriptions. The goal was to learn the description of an acceptable and unacceptable contract. Unacceptable contracts were either obtained by interviewing experts or by inventing near misses.
 
-Keywords: letter recognition, image classification, machine learning, font recognition, pixel display, statistical moments, edge counts
+**Relevant Information**
+
+The data was employed to test the two-tier approach with learning from positive and negative examples.
+
+**Number of Instances and Attributes**
+
+There are fifty-seven instances and sixteen attributes in this dataset.
+
+**Attribute Information**
+
+1. Duration of Agreement
+2. Wage Increase in First Year of Contract
+3. Wage Increase in Second Year of Contract
+4. Wage Increase in Third Year of Contract
+5. Cost of Living Allowance
+6. Number of Working Hours During Week
+7. Employer Contributions to Pension Plan
+8. Standby Pay
+9. Shift Differential Supplement
+10. Education Allowance
+11. Number of Statutory Holidays
+12. Paid Vacation Days
+13. Employer's Help During Employee Long-term Disability
+14. Employer's Contribution Towards Dental Plan
+15. Bereavement Assistance
+16. Employer's Contribution Towards Health Plan
+
+**Class Distribution**
+
+No information available.
+
+**Exceptions from Format Instructions**
+
+No commas separate attribute values.
+
+Keywords: Labor Negotiations, Collective Bargaining, Canadian Industry, Business and Personal Services Sector, Concept Learning Software, Two-Tier Approach, Positive and Negative Examples

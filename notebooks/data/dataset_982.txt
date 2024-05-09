@@ -1,21 +1,9 @@
-GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating diverse quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, for classification, feature selection, or clustering algorithms.
+Heart-C Dataset 
 
-The inspiration behind creating this repository stemmed from the growing need in the machine learning and bioinformatics communities for a unified collection of microarray classification problems that could be utilized by different researchers. This allows numerous classification or feature selection techniques to be compared to one another on the same set of problems.
+Tags: Chemistry, Life Science, Mythbusting, Study 
 
-Each gene expression sample in the GEMLeR repository originates from the large, publicly available Expression Project for Oncology repository by the International Genomics Consortium. The primary objective of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions.
+This dataset is a binarized version of the original dataset. The multi-class target feature has been converted into a two-class nominal target feature by relabeling the majority class as Positive and all others as Negative. 
 
-The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
+The dataset features include patient information such as Age and Sex, as well as various medical measurements including Chest Pain, Resting Blood Pressure, Cholesterol Levels, and Electrocardiogram Results.
 
-Although numerous sources of gene expression data are available, the decision to utilize data from the Expression Project for Oncology repository was made due to several reasons, including:
-
-* Consistency of tissue sample processing procedures
-* Use of the same microarray platform for all samples
-* Availability of additional information for combined genotype-phenotype studies
-* Availability of a large number of samples for different tumor types
-
-When publishing material based on GEMLeR datasets, please acknowledge the assistance received by utilizing this repository. This will facilitate others in obtaining the same datasets and replicating experiments.
-
-Features:
-ID Reference, and several other gene identifiers
-
-Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology
+Keywords: Heart Disease, Medical Research, Data Conversion, Binary Classification

@@ -1,11 +1,83 @@
-The Tic Tac Toe dataset is a collection of data that encodes the complete set of possible board configurations at the end of Tic Tac Toe games, assuming player X makes the first move. The target concept is whether player X has won the game, which occurs when they have one of eight possible ways to create a three-in-a-row.
+Soybean Dataset 
 
-This dataset contains ten attributes that describe the state of the Tic Tac Toe board. These attributes include the top left square, top middle square, top right square, middle left square, middle middle square, middle right square, bottom left square, bottom middle square, and bottom right square. Each of these attributes can take on one of three values: X, O, or blank, indicating which player has placed a mark in that square or if the square is empty.
+This is the Large Soybean Database from the UCI repository, with its training and test database combined into a single file. There are nineteen classes, only the first fifteen of which have been used in prior work. The folklore seems to be that the last four classes are unjustified by the data since they have so few examples. 
 
-The class attribute indicates whether the board configuration represents a win for player X or not. This attribute takes on one of two values: positive, indicating a win for X, or negative, indicating a loss or draw.
+There are thirty-five categorical attributes, some nominal and some ordered. The value "does not apply" means does not apply. The values for attributes are encoded numerically, with the first value encoded as zero, the second as one, and so forth. An unknown value is encoded as question mark.
 
-The dataset does not contain any missing values.
+Attribute Information:
 
-Additional information about this dataset includes the fact that the estimated relative performance values were calculated using a linear regression method. Further details on this calculation can be found in the original article.
+Date includes April, May, June, July, August, September, October, and unknown.
 
-Keywords: Tic Tac Toe, machine learning, mathematics, game theory, board games, classification, dataset.
+Plant Stand includes Normal, Less than Normal, and unknown.
+
+Precipitation includes Less than Normal, Normal, Greater than Normal, and unknown.
+
+Temperature includes Less than Normal, Normal, Greater than Normal, and unknown.
+
+Hail includes Yes, No, and unknown.
+
+Crop History includes Different Last Year, Same Last Year, Same Last Two Years, Same Last Seven Years, and unknown.
+
+Area Damaged includes Scattered, Low Areas, Upper Areas, Whole Field, and unknown.
+
+Severity includes Minor, Potentially Severe, Severe, and unknown.
+
+Seed Treatment includes None, Fungicide, Other, and unknown.
+
+Germination includes Ninety to One Hundred Percent, Eighty to Eighty-Nine Percent, Less than Eighty Percent, and unknown.
+
+Plant Growth includes Normal, Abnormal, and unknown.
+
+Leaves include Normal, Abnormal, and unknown.
+
+Leaf Spots Halo includes Absent, Yellow Halos, No Yellow Halos, and unknown.
+
+Leaf Spots Margin includes With Small Margin, Without Small Margin, Does Not Apply, and unknown.
+
+Leaf Spot Size includes Less than One Eighth, Greater than One Eighth, Does Not Apply, and unknown.
+
+Leaf Shread includes Absent, Present, and unknown.
+
+Leaf Malformation includes Absent, Present, and unknown.
+
+Leaf Mildew includes Absent, Upper Surface, Lower Surface, and unknown.
+
+Stem includes Normal, Abnormal, and unknown.
+
+Lodging includes Yes, No, and unknown.
+
+Stem Cankers includes Absent, Below Soil, Above Soil, Above Secondary Node, and unknown.
+
+Canker Lesion includes Does Not Apply, Brown, Dark Brown Black, Tan, and unknown.
+
+Fruiting Bodies include Absent, Present, and unknown.
+
+External Decay includes Absent, Firm and Dry, Watery, and unknown.
+
+Mycelium includes Absent, Present, and unknown.
+
+Internal Discoloration includes None, Brown, Black, and unknown.
+
+Sclerotia include Absent, Present, and unknown.
+
+Fruit Pods include Normal, Diseased, Few Present, Does Not Apply, and unknown.
+
+Fruit Spots include Absent, Colored, Brown with Black Specks, Distorted, Does Not Apply, and unknown.
+
+Seed includes Normal, Abnormal, and unknown.
+
+Mold Growth includes Absent, Present, and unknown.
+
+Seed Discoloration includes Absent, Present, and unknown.
+
+Seed Size includes Normal, Less than Normal, and unknown.
+
+Shriveling includes Absent, Present, and unknown.
+
+Roots include Normal, Rotted, Galls Cysts, and unknown.
+
+Class Labels:
+
+Diaporthe Stem Canker, Charcoal Rot, Rhizoctonia Root Rot, Phytophthora Rot, Brown Stem Rot, Powdery Mildew, Downy Mildew, Brown Spot, Bacterial Blight, Bacterial Pustule, Purple Seed Stain, Anthracnose, Phyllosticta Leaf Spot, Alternaria Leaf Spot, Frog Eye Leaf Spot, Diaporthe Pod and Stem Blight, Cyst Nematode, Two Four D Injury, Herbicide Injury.
+
+Keywords: agriculture, machine learning, openml100, soybean disease diagnosis, expert system, categorical attributes, nominal attributes, ordered attributes.

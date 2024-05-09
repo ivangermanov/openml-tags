@@ -1,15 +1,21 @@
-QSAR-TID-100624 Dataset
+**lSVT Voice Rehabilitation Data Set**
 
-The QSAR-TID-100624 dataset contains QSAR data showing activity values of several compounds on drug target TID: 100624. This dataset has one hundred twenty-seven rows and one thousand twenty-six features, including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXc50.
+Tags: Chemistry, Life Science, Study Fifty, Study Fifty-Two, Study Seven
 
-The features in this dataset represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset was created by the University of Oxford.
 
-This dataset is part of the MetaQSAR project, and it was created in September two thousand fifteen. It shows the activity values of several compounds on drug target TID one hundred sixty-two four, and it has one hundred twenty-seven rows and one thousand twenty-six features.
+Abstract:
+The aim of this dataset is to assess whether voice rehabilitation treatment leads to phonations considered acceptable or unacceptable, which is a binary class classification problem. It consists of one hundred twenty-six samples from fourteen participants, with three hundred nine features.
 
-The features in this dataset include molecule ChEMBL ID, and median PXc fifty, among others. These features were generated using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+Data Set Information:
+The original research demonstrated that it is possible to correctly replicate the experts' binary assessment with approximately ninety percent accuracy using both ten-fold cross-validation and leave-one-subject-out validation. Researchers experimented with both random forests and support vector machines, using standard approaches for optimizing the SVM's hyperparameters. It will be interesting if researchers can improve on this finding using advanced machine learning tools.
 
-The QSAR-TID-one hundred sixty-two four dataset is a valuable resource for researchers studying the activity of compounds on drug targets.
+Details for the dataset can be found in the following paper titled "Objective Automatic Assessment of Rehabilitative Speech Treatment in Parkinson's Disease".
 
-Tags: MTLQSAR, Social Media, Statistics, study three
+Attribute Information:
+Each attribute corresponds to the application of a speech signal processing algorithm, which aims to characterize objectively the signal. These algorithms include standard perturbation analysis methods, wavelet-based features, fundamental frequency-based features, and tools used to mine nonlinear time-series. Due to the extensive number of attributes, interested readers are referred to the relevant papers for further details.
 
-Keywords: QSAR, drug target, molecular fingerprints, SMILES strings, Pipeline Pilot program, MetaQSAR project.
+Relevant Papers:
+The dataset was introduced in "Objective Automatic Assessment of Rehabilitative Speech Treatment in Parkinson's Disease". Further details about the speech signal processing algorithms can be found in "Accurate Telemonitoring of Parkinson's Disease Symptom Severity Using Nonlinear Speech Signal Processing and Statistical Machine Learning", "Nonlinear Speech Analysis Algorithms Mapped to a Standard Metric Achieve Clinically Useful Quantification of Average Parkinson's Disease Symptom Severity", and "New Nonlinear Markers and Insights into Speech Signal Degradation for Effective Tracking of Parkinson's Disease Symptom Severity".
+
+Keywords: voice rehabilitation, speech signal processing, Parkinson's disease, machine learning, classification problem.

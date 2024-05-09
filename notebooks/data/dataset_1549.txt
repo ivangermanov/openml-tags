@@ -1,25 +1,13 @@
-QSAR-TID-12998 Dataset 
+AutoUniv is an advanced data generator for classification tasks, aiming to reflect the nuances and heterogeneity of real data. The data can be generated in various formats, including CSV, ARFF, and C4.5.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target Tripeptidyl Aminopeptidase, and it has multiple rows and features including IDs and class feature: Molecule ChEMBL ID and Median pXC50. 
+The AutoUniv dataset provides a unique approach to generating classified examples from a created classification model. To create a model, users specify the number of attributes and their type, which can be either discrete or continuous, as well as the number of classes and the complexity of the underlying rules and noise level. AutoUniv then produces a model through a process of constrained randomized search to satisfy the user's requirements.
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. 
+A model can have a significant number of rules, and rare class models can be designed. Moreover, a sequence of models can be designed to reflect concept and/or population drift.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
+AutoUniv creates three text files for a model: a Prolog specification of the model used to generate examples; a user-friendly statement of the classification rules in an "if...then" format; and a statistical summary of the main properties of the model, including its Bayes rate.
 
-Features include Molecule ChEMBL ID, multiple fingerprint features, and Median pXC50.
+Attributes in the dataset may be discrete with multiple values or continuous. A discrete attribute can be nominal with specific values or integer with sequential values.
 
-Scraped Data:
+The relevance of AutoUniv is further emphasized by its application in various research papers, exploring topics such as modeling the example life cycle in online classification learners, the impact of latency on online classification learning with concept drift, and structure and majority classes in decision tree learning.
 
-Tripeptidyl Aminopeptidase is a single protein preferred name with synonyms including Tripeptidyl Peptidase Two, TPP-Two, and TPP-Two. It belongs to the species Rattus Norvegicus and is classified under enzyme, protease, serine protease, SB clan, and serine protease S eight A subfamily.
-
-Description Relationship Accession: Tripeptidyl Peptidase Two is a single protein.
-
-Go Component includes nucleus, cytoplasm, and cytosol.
-
-Go Function includes aminopeptidase activity, serine-type endopeptidase activity, peptidase activity, serine-type peptidase activity, tripeptidyl-peptidase activity, hydrolase activity, peptide binding, and identical protein binding.
-
-Go Process includes proteolysis, protein catabolic process, and intracellular amino acid homeostasis.
-
-CanSAR Target, IntAct, Reactome, UniProt, and InterPro information is also available for this protein.
-
-Keywords: QSAR, Machine Learning, Meteorology, MTLQSAR, Tripeptidyl Aminopeptidase, FCFP, Molecular Fingerprints, SMILES Strings, Pipeline Pilot Program.
+Keywords: classification tasks, data generator, heterogeneous data, machine learning, concept drift, population drift, decision tree learning.

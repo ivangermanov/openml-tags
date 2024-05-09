@@ -1,24 +1,11 @@
-Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of expert systems for decision making. This version drops duplicate rows.
+The QSAR-TID-10230 dataset contains QSAR data showing activity values of several compounds on drug target TID 10230. This dataset has nineteen rows and one thousand twenty-six features, including IDs and class feature, MOLECULE CHEMBL ID, and MEDIAN PX50.
 
-The model evaluates cars according to the following concept structure: Car Acceptability, which is influenced by Price, Technical Characteristics, and Comfort. 
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Price is comprised of Buying Price and Maintenance Cost. Technical Characteristics encompass Comfort, which is further divided into Number of Doors, Capacity in Terms of Persons to Carry, Size of Luggage Boot, and Estimated Safety of the Car.
+This dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target TID 10230. It has nineteen rows and one thousand twenty-six features, including IDs and class feature, MOLECULE CHEMBL ID, and MEDIAN PX50.
 
-Input attributes are printed in lowercase. Besides the target concept, the model includes three intermediate concepts: Price, Technical Characteristics, and Comfort. Every concept is related to its lower-level descendants by a set of examples. 
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive repository of QSAR datasets for various drug targets.
 
-The Car Evaluation Database contains examples with the structural information removed, directly relating Car Acceptability to the six input attributes: Buying Price, Maintenance Cost, Number of Doors, Capacity in Terms of Persons to Carry, Size of Luggage Boot, and Estimated Safety of the Car.
+Scraped data includes information about the protein target, such as its preferred name, synonyms, organism, species group, protein target classification, and description. It also includes information about the protein's functions, processes, and components, as well as its relationships with other proteins and molecules.
 
-Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
-
-Has Missing Values? No
-
-Additional Variable Information:
-Buying Price has values very high, high, medium, and low.
-Maintenance Cost has values very high, high, medium, and low.
-Number of Doors has values two, three, four, and five or more.
-Capacity in Terms of Persons to Carry has values two, four, and more.
-Size of Luggage Boot has values small, medium, and big.
-Estimated Safety of the Car has values low, medium, and high.
-Class Labels are unacceptable, acceptable, good, and very good.
-
-Keywords: Car Evaluation, Decision Making, Hierarchical Model, Constructive Induction, Structure Discovery, Expert Systems, Technical Characteristics, Comfort.
+Keywords: QSAR, drug target, molecular fingerprints, SMILES strings, Pipeline Pilot program, MetaQSAR project, protein target classification, protein function, protein process, protein component.

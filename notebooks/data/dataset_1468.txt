@@ -1,7 +1,26 @@
-The QSAR-TID-101496 dataset is related to manufacturing and transportation, and it falls under the category of MTLQSAR and study three. This dataset was part of the MetaQSAR project, which was conducted in September 2015.
+**CNAE-9**
+Tags: Chemistry, Life Science, OpenML-CC18, OpenML100, study 123, study 135, study 14, study 218, study 52, study 7, study 98, study 99
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101496. The activity values are represented in units of pseudo-pCI50. There are seventy-nine rows and one thousand twenty-six features in this dataset, including IDs and class features. The molecular fingerprints were generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. These fingerprints do not typically require missing value imputation because all bits are generated.
+This dataset contains one thousand eighty documents of free text business descriptions of Brazilian companies categorized into a subset of nine categories. These categories are cataloged in a table called National Classification of Economic Activities.
 
-The features in this dataset include molecule ChEMBL ID and median pXC50. There are also numerous fingerprint features, which are used to describe the molecular structure of the compounds.
+The original texts were preprocessed to obtain the current dataset. Initially, only letters were kept, and then prepositions were removed from the texts. Next, the words were transformed to their canonical form. Finally, each document was represented as a vector, where the weight of each word is its frequency in the document.
 
-Keywords: QSAR, molecular fingerprints, drug target, manufacturing, transportation, MetaQSAR.
+This dataset is highly sparse, with ninety-nine point twenty-two percent of the matrix filled with zeros.
+
+**Data Set Information**
+
+The dataset contains one thousand eighty documents of free text business descriptions of Brazilian companies categorized into a subset of nine categories.
+
+**Attribute Information**
+
+In the dataset, there are eight hundred fifty-seven attributes, one attribute with the class of instance, and eight hundred fifty-six attributes with word frequency:
+
+* Category: ranging from one to nine (integer)
+* Word Frequency: (integer)
+
+**Relevant Papers**
+
+* Agglomeration and Elimination of Terms for Dimensionality Reduction
+* An Evolving System Based on Probabilistic Neural Network
+
+Keywords: Business Descriptions, Brazilian Companies, National Classification of Economic Activities, Text Preprocessing, Sparse Matrix, Word Frequency.

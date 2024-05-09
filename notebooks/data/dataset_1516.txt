@@ -1,9 +1,34 @@
-This dataset, known as QSAR-TID-17073, falls under the categories of Machine Learning, Medicine, and MTLQSAR. It originates from the MetaQSAR project in September 2015.
+**Robot Execution Failures Data Set**
 
-The dataset comprises QSAR data derived from ChEMBL version seventeen, showcasing activity values measured in pseudo-pCI50 units for various compounds acting on the drug target identified as TID: 17073. This collection consists of three hundred ninety-one rows and one thousand twenty-six features, including identifiers and a class feature denoted as MOLECULE_CHEMBL_ID and MEDIAN_PXC50.
+Tags: Chemistry, Life Science
 
-These features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings utilizing the Pipeline Pilot program developed by Dassault Systèmes BIOVIA. Typically, generating fingerprints does not necessitate the imputation of missing values, as all bits are produced during this process.
+**Abstract**
+This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
 
-This dataset pertains to the Neurokinin One Receptor, also referred to as the Substance-P Receptor, NK-One R, NK-One Receptor, SPR, and Tachykinin Receptor. It belongs to the species Cavia porcellus and falls under the classification of Membrane Receptors, specifically Family A G-Protein Coupled Receptors and Peptide Receptors.
+**Source**
+Original Owner and Donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal
 
-Keywords: QSAR, Machine Learning, Medicine, MTLQSAR, Neurokinin One Receptor, Substance-P Receptor, G-Protein Coupled Receptors, Peptide Receptors.
+**Data Set Information**
+The donation includes five data sets, each of which defines a different learning problem:
+
+* LP1 (This Data Set): failures in approach to grasp position
+* LP2: failures in transfer of a part
+* LP3: position of part after a transfer failure
+* LP4: failures in approach to ungrasp position
+* LP5: failures in motion with part
+
+In order to improve classification accuracy, a set of five feature transformation strategies (based on statistical summary features, discrete Fourier transform, etc.) was defined and evaluated. This enabled an average improvement of twenty percent in accuracy.
+
+**Attribute Information**
+All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was three hundred fifteen milliseconds. Each example is described as follows:
+
+Class Force X one, Force Y one, Force Z one, Torque X one, Torque Y one, Torque Z one,..., Force X fifteen, Force Y fifteen, Force Z fifteen, Torque X fifteen, Torque Y fifteen, Torque Z fifteen
+
+where Force X one through Force X fifteen is the evolution of force X in the observation window, the same for Force Y, Force Z, and the torques; there is a total of ninety features.
+
+**Relevant Papers**
+Robot Learning at the Task Level: a Study in the Assembly Domain
+Feature Transformation Strategies for a Robot Learning Problem, in Feature Extraction, Construction and Selection. A Data Mining Perspective
+Integration and Learning in Supervision of Flexible Assembly Systems, in IEEE Transactions on Robotics and Automation
+
+Keywords: Robot Execution Failures, Force Measurements, Torque Measurements, Failure Detection, Classification Accuracy, Feature Transformation Strategies

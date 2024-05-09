@@ -1,30 +1,15 @@
-**SGEMM GPU Kernel Performance**
+This dataset contains QSAR data showing activity values of several compounds on drug target Glycogen Synthase Kinase Three Beta, and it has multiple rows and numerous features including IDs and class feature.
 
-Tags: Machine Learning, Statistics
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset measures the running time of a matrix-matrix product, where all matrices have a size of 2048 x 2048, using a parameterizable Single Precision General Matrix Multiply (SGEMM) GPU kernel with a large number of possible parameter combinations. For each tested combination, four runs were performed, and their results are reported. All times are measured in milliseconds.
+Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-There are fourteen parameters, with the first ten being ordinal and able to take on up to four different power-of-two values, and the remaining four being binary. Due to various kernel constraints, out of a total of possible parameter combinations, only a subset of these are feasible. This dataset contains the results for all these feasible combinations.
+The dataset is part of the MetaQSAR project.
 
-The experiment was run on a desktop workstation with a specific configuration, including an Intel Core processor, sixteen gigabytes of RAM, and a high-performance NVIDIA graphics processing unit. The gemm fast kernel from the automatic OpenCL kernel tuning library CLTune was utilized.
+Glycogen Synthase Kinase Three Beta is a single protein preferred name also known as Glycogen Synthase Kinase Three Beta GSK Three Beta Serine Threonine-Protein Kinase GSK Three Beta.
 
-It is worth noting that when working with datasets similar to this one, it is often beneficial to work with the logarithm of the running times, as demonstrated in previous research.
+It belongs to the species Homo sapiens and is classified under enzyme kinase protein kinase CMGC protein kinase group CMGC protein kinase GSK family.
 
-**Attribute Description**
+The description of this target is related to glycogen synthase kinase three beta.
 
-**Independent Variables**
-
-* Matrix Work Group and Neighbor Work Group sizes, which control the per-matrix two-dimensional tiling at the work group level
-* Kernel Work Group size, which controls the inner dimension of the two-dimensional tiling at the work group level
-* Matrix Dimension C and Neighbor Dimension C, which control the local work group size
-* Matrix Dimension A and Neighbor Dimension B, which control the local memory shape
-* Kernel Work Item size, which controls the kernel loop unrolling factor
-* Vector Width M and Vector Width N, which control the per-matrix vector widths for loading and storing
-* Stride M and Stride N, which enable stride for accessing off-chip memory within a single thread
-* Shared Access and Shared Bypass, which control per-matrix manual caching of the two-dimensional work group tile
-
-**Output**
-
-* Four performance times in milliseconds for four independent runs using the same parameters
-
-**Keywords:** Machine Learning, GPU Kernel, Matrix-Matrix Product, Performance Optimization, Statistical Analysis
+Keywords: QSAR, Glycogen Synthase Kinase Three Beta, FCFP, SMILES, MetaQSAR.

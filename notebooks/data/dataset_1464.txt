@@ -1,82 +1,11 @@
-QSAR-TID-19642 Dataset
+The Blood Transfusion Service Center Data Set is a classification problem that involves predicting whether a blood donor will donate blood again based on their past donation history. This dataset was collected from the Blood Transfusion Service Center in Hsin-Chu City, Taiwan.
 
-Tags: Economics, Machine Learning, MTLQSAR, Study Three
+To demonstrate the RFMTC marketing model, a modified version of RFM, this study randomly selected seven hundred forty-eight donors from the donor database. Each donor's data includes recency, frequency, monetary, time, and a binary variable indicating whether they donated blood in March two thousand seven.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: nineteen thousand six hundred forty-two. It has seventeen rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
+The attributes in this dataset include recency, which is the number of months since the last donation; frequency, which is the total number of donations; monetary, which is the total amount of blood donated in cubic centimeters; time, which is the number of months since the first donation; and a binary variable indicating whether the donor gave blood in March two thousand seven.
 
-The features represent FCFP one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+This dataset does not have any missing values. The descriptive statistics of the data are shown in Table One. Five hundred data points were randomly selected as the training set, and the remaining two hundred forty-eight were used as the testing set.
 
-Features: Molecule ChEMBL ID, FCFP Six One Thousand Twenty-Four Zero, FCFP Six One Thousand Twenty-Four One,... (skipped due to unreadability)
+Table One shows the minimum, maximum, mean, and standard deviation of each attribute. The recency ranges from zero point zero three to seventy-four point four months, with a mean of nine point seven four months and a standard deviation of eight point zero seven months. The frequency ranges from one to fifty times, with a mean of five point five one times and a standard deviation of five point eight four times. The monetary ranges from two hundred fifty to twelve thousand five hundred cubic centimeters, with a mean of thirteen seventy-eight point six eight cubic centimeters and a standard deviation of fourteen fifty-nine point eight three cubic centimeters. The time ranges from two point two seven to ninety-eight point three months, with a mean of thirty-four point four two months and a standard deviation of twenty-four point three two months. The binary variable has a value of one if the donor gave blood in March two thousand seven and zero otherwise, with a mean of one and a standard deviation of zero point seven six.
 
-Scraped Data:
-
-ID: ChEMBL Two Thousand Eight Hundred Ninety-Two
-Type: Single Protein
-Preferred Name: Metabotropic Glutamate Receptor One
-Synonyms: GPRC One A, GRM One, Metabotropic Glutamate Receptor One, mGluR One, MGLUR One
-
-Organism: Mus Musculus
-Species Group: No
-Protein Target Classification: One. Membrane Receptor / Family C G Protein-Coupled Receptor / Small Molecule Receptor / Neurotransmitter Receptor
-
-Description: Relationship Accession Metabotropic Glutamate Receptor One Single Protein P Nine Seven Seven Seventy-Two
-
-Rows per page: Fifty-One to One of One
-
-Component: Seventeen
-
-GO Terms:
-    * Nucleus
-    * Plasma Membrane
-    * Postsynaptic Density
-    * Membrane
-    * Axon
-    * Dendrite
-    * G Protein-Coupled Receptor Dimeric Complex
-    * G Protein-Coupled Receptor Homodimeric Complex
-    * Presynaptic Membrane
-    * Neuron Projection
-    * Neuronal Cell Body
-    * Dendritic Spine
-    * Postsynaptic Membrane
-    * Schaffer Collateral - CA One Synapse
-    * Postsynaptic Density Membrane
-    * Glutamatergic Synapse
-    * Cellular Anatomical Entity
-
-Go Function: Nine
-
-* PLC Activating G Protein-Coupled Glutamate Receptor Activity
-* Adenylate Cyclase Inhibiting G Protein-Coupled Glutamate Receptor Activity
-* G Protein-Coupled Receptor Activity
-* Protein Binding
-* Glutamate Receptor Activity
-* Nuclear Estrogen Receptor Binding
-* G Protein-Coupled Neurotransmitter Receptor Activity Involved in Regulation of Postsynaptic Cytosolic Calcium Ion Concentration
-* G Protein-Coupled Receptor Activity Involved in Regulation of Postsynaptic Membrane Potential
-* Neurotransmitter Receptor Activity Involved in Regulation of Postsynaptic Cytosolic Calcium Ion Concentration
-
-Go Process: Eighteen
-
-* Signal Transduction
-* G Protein-Coupled Receptor Signaling Pathway
-* Adenylate Cyclase-Inhibiting G Protein-Coupled Glutamate Receptor Signaling Pathway
-* Phospholipase C-Activating G Protein-Coupled Receptor Signaling Pathway
-* Phospholipase C-Activating G Protein-Coupled Glutamate Receptor Signaling Pathway
-* G Protein-Coupled Glutamate Receptor Signaling Pathway
-* Chemical Synaptic Transmission
-* Locomotory Behavior
-* Sensory Perception of Pain
-* Calcium-Mediated Signaling
-* Positive Regulation of MAPK Cascade
-* Positive Regulation of Cytosolic Calcium Ion Concentration Involved in Phospholipase C-Activating G Protein-Coupled Signaling Pathway
-* Regulation of Sensory Perception of Pain
-* Regulation of Synaptic Transmission, Glutamatergic
-* Regulation of Postsynaptic Membrane Potential
-* Cellular Response to Electrical Stimulus
-* L-Glutamate Import Across Plasma Membrane
-* Regulation of Postsynaptic Cytosolic Calcium Ion Concentration
-
-InterPro: Ten
-
-Keywords: QSAR, machine learning, metabotropic glutamate receptor, G protein-coupled receptor, signal transduction, synaptic transmission, glutamate receptor, neurotransmitter receptor, protein binding, calcium-mediated signaling
+Keywords: blood donation, RFMTC model, classification problem, recency, frequency, monetary, time.

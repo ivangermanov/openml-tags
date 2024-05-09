@@ -1,17 +1,30 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target Tid. It has thirty-four rows and one thousand twenty-six features, including IDs and class feature molecule chembl id and median pxc fifty.
+Leaf Dataset
 
-The features represent fingerprints which were generated from smiles strings. They were obtained using the pipeline pilot program, dassault systèmes biovia. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Tags: Chemistry, Life Science
 
-Features include molecule chembl id, fingerprints, and many more.
+This dataset consists of a collection of shape and texture features extracted from digital images of leaf specimens originating from a total of forty different plant species.
 
-This dataset is part of the metaqsar project from september two thousand fifteen. It contains qsar data from chembl version seventeen showing activity values of several compounds on drug target tid one zero four six one.
+The dataset was created using leaf specimens collected at the Faculty of Science, University of Porto, Portugal.
 
-Tid one zero four six one is also known as ecdysone receptor. It is a single protein preferred name and its synonyms include twenty-e receptor, twenty-hydroxy-ecdysone receptor, aaeclr, ecdysone receptor, and ecdysteroid receptor.
+For further details on this dataset and/or its attributes, please refer to the accompanying ReadMe document and/or consult the Master's Thesis titled Development of a System for Automatic Plant Species Recognition.
 
-Organism is aedes aegypti species group. Protein target classification is one point transcription factor slash nuclear receptor slash nuclear hormone receptor subfamily one slash nuclear hormone receptor subfamily one group h slash nuclear hormone receptor subfamily one group h member one.
+Attribute Information:
 
-Description relationship accession ecdysone receptor single protein p four nine eight eighty.
+* Class, which represents the species of the leaf
+* Specimen Number, a unique identifier for each specimen
+* Eccentricity, a measure of how elliptical the leaf shape is
+* Aspect Ratio, the ratio of the leaf's length to its width
+* Elongation, a measure of how elongated the leaf shape is
+* Solidity, a measure of how much of the leaf's area is occupied by its convex hull
+* Stochastic Convexity, a statistical measure of the leaf's convexity
+* Isoperimetric Factor, a measure of the leaf's compactness
+* Maximal Indentation Depth, a measure of the depth of the leaf's indentations
+* Lobedness, a measure of how lobed the leaf shape is
+* Average Intensity, a measure of the average brightness of the leaf image
+* Average Contrast, a measure of the average contrast between the leaf and its background
+* Smoothness, a measure of how smooth the leaf's edges are
+* Third Moment, a statistical measure of the leaf's shape
+* Uniformity, a measure of how uniform the leaf's texture is
+* Entropy, a measure of the randomness of the leaf's texture
 
-Rows per page fifty-one minus one of one chembl id relationship pref name target type chembl two three six six five seven five super set of ecdysone receptor protein complex rows per page fifty-one minus one of one go component one point go zero zero five six three four nucleus go function seven point go zero zero three six seven seven dna binding go zero zero three seven zero dna-binding transcription factor activity go zero zero three eight seventy-nine nuclear receptor activity go zero zero three eight two seventy zinc ion binding go zero zero three five one zero ecdysone binding go zero zero four three five six five sequence-specific dna binding go zero zero four six eight seventy-two metal ion binding go process two point go zero zero six three five regulation of dna-templated transcription go zero zero three five zero seven six ecdysone receptor-mediated signaling pathway cansar-target one point p four nine eight eighty uniprot three point p four nine eight eighty q one six vee one q six vay sixty-nine interpro seven point ipr zero zero zero five thirty-six nucl hr mn rcpt lig-bd ipr zero zero one six two eight zf hr mn rcpt ipr zero zero one seven two three nuclear hr mn rcpt ipr zero zero three zero sixty-nine ecdystd rcpt ipr zero one three zero eighty-eight zf nhr gata ipr zero three five zero zero nr lbd ec r pfam two point pf zero zero one zero four hormone recep pf zero zero one zero five zf-c four
-
-Keywords: QSAR, Machine Learning, MTLQSAR, Statistics, MetaQSAR, ChemBL, Fingerprint, Ecdysone Receptor, Nuclear Hormone Receptor.
+Keywords: leaf, plant species, shape features, texture features, image processing, classification

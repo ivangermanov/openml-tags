@@ -1,15 +1,17 @@
-Subsampling of the dataset Madeline with Seed Two Thousand Rows One Hundred Columns Ten Classes Stratify True 
+**Higgs Dataset**
 
-This dataset has undergone subsampling using a specific set of parameters. The process began by uniformly sampling classes from the unique values present in the target variable, ensuring that the number of classes did not exceed ten. 
+Tags: Geography, Life Science
 
-Next, the indices corresponding to the selected classes were identified, and the relevant rows were extracted from both the feature matrix and the target vector. 
+Source: University of California Irvine
 
-In cases where the number of columns exceeded one hundred, uniform sampling was applied to select the desired number of columns. This involved generating a list of column indices, sorting them, and extracting the corresponding columns from the feature matrix.
+This dataset has been produced using Monte Carlo simulations. The first twenty-one features are kinematic properties measured by the particle detectors in the accelerator. These features include characteristics of leptons, jets, and missing energy. The last seven features are functions of the first twenty-one features; these are high-level features derived by physicists to help discriminate between the two classes.
 
-If the resulting number of rows still exceeded two thousand, stratified sampling was employed to reduce the dataset size while maintaining class balance. This involved concatenating the feature matrix and target vector, performing a train-test split with stratification based on the target variable, and then separating the resulting subset into its constituent parts.
+There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. This approach could potentially lead to improved performance and accuracy in distinguishing between signal and background events.
 
-Finally, categorical columns were converted to string format, and the necessary metadata was assembled to create the subsampled dataset.
+The dataset includes a class label, which indicates whether an event is a signal or background, followed by twenty-eight features. The features can be broadly categorized into two groups: low-level features and high-level features. Low-level features are directly measured by the detectors, while high-level features are derived from these measurements to provide a higher-level understanding of the events.
 
-Features: V Eight, Fifteen, Sixteen, Eighteen, Nineteen, Twenty Three, Twenty Four, Twenty Six, Twenty Eight, Thirty Three, Thirty Six, Thirty Eight, Forty Two, Forty Three, Forty Five, Forty Eight, Forty Nine, Fifty One, Fifty Six, Fifty Seven, Sixty Seven, Sixty Eight, Seventy, Seventy Five, Seventy Eight, Eighty, Eighty One, Eighty Six, Ninety Four, Ninety Nine
+Benchmark results using Bayesian Decision Trees from a standard physics package and five-layer neural networks have been presented in previous research. The last portion of the dataset is reserved for testing and validation purposes.
 
-Keywords: subsampling, dataset, stratified sampling, class balance, feature selection
+Relevant research papers have explored the application of deep learning techniques to this problem domain, demonstrating promising results.
+
+Keywords: Particle Physics, Deep Learning, Monte Carlo Simulations, Kinematic Properties, High-Energy Physics.

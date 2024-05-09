@@ -1,55 +1,15 @@
-Credit German dataset classifies individuals described by a set of attributes as good or bad credit risks. This dataset comes with a cost matrix:
+Nursery Database
 
-Good     Bad 
-(predicted)
-Good     0       1 
-(actual)
-Bad      5       0
+This database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was used during several years in the 1980s when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
 
-It is worse to classify a customer as good when they are bad (five), than it is to classify a customer as bad when they are good (one).
+The hierarchical model ranks nursery-school applications according to the following concept structure: Evaluation of Applications for Nursery Schools, which consists of Employment of Parents and Child's Nursery, Family Structure and Financial Standings, and Social and Health Picture of the Family. These concepts are further broken down into more specific categories, including Parents' Occupation, Child's Nursery, Form of the Family, Number of Children, Housing Conditions, Financial Standing of the Family, Social Conditions, and Health Conditions.
 
-Attribute Description:
+Input attributes are printed in lowercase. Besides the target concept (Nursery), the model includes four intermediate concepts: Employment, Family Structure and Financial Standings, Family Structure, and Social and Health Picture of the Family. Every concept is in the original model related to its lower-level descendants by a set of examples.
 
-The first attribute represents the status of an individual's existing checking account in Deutsche Mark.
+The Nursery Database contains examples with the structural information removed, i.e., directly relates Nursery to the eight input attributes: parents, child's nursery, form of the family, number of children, housing conditions, financial standing, social conditions, and health conditions. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
 
-Duration in months is the second attribute.
+Class distribution is as follows: not recommended, recommended, very recommended, priority, special priority.
 
-The third attribute represents an individual's credit history, including credits taken, paid back duly, delays, and critical accounts.
+Features include: parents, child's nursery, form of the family, number of children, housing conditions, financial standing, social conditions, health conditions.
 
-The fourth attribute describes the purpose of the credit, such as a car, television, or other purposes.
-
-Credit amount is the fifth attribute.
-
-Status of savings account/bonds in Deutsche Mark is the sixth attribute.
-
-Present employment in number of years is the seventh attribute.
-
-Installment rate in percentage of disposable income is the eighth attribute.
-
-Personal status, including marital status and sex, is the ninth attribute.
-
-Other debtors/guarantors is the tenth attribute.
-
-Present residence since a certain number of years is the eleventh attribute.
-
-Property, such as real estate, is the twelfth attribute.
-
-Age in years is the thirteenth attribute.
-
-Other installment plans, including banks and stores, is the fourteenth attribute.
-
-Housing, including renting, owning, or living for free, is the fifteenth attribute.
-
-Number of existing credits at this bank is the sixteenth attribute.
-
-Job, including unemployed, unskilled, skilled, and management positions, is the seventeenth attribute.
-
-Number of people being liable to provide maintenance for is the eighteenth attribute.
-
-Telephone availability is the nineteenth attribute.
-
-Foreign worker status is the twentieth attribute.
-
-Tags: credit scoring, economics, finance problem, human activities, mythbusting, openml-cc18, openml100, study
-
-Keywords: credit risk, cost matrix, credit history, credit amount, employment, installment rate, personal status, property, age, housing, job, telephone, foreign worker.
+Keywords: nursery schools, hierarchical decision model, family structure, financial standing, social and health picture.

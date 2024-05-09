@@ -1,3 +1,33 @@
-Kung Chi is a dataset tagged with Chemistry and Life Science. It features various aspects including atomic structure, biological molecules, chemical bonding, cellular processes, DNA structure, enzymes, gene expression, homeostasis, ionic bonds, kinetic molecular theory, lipids, metabolism, nucleic acids, osmosis, photosynthesis, radiation, spectroscopy, thermodynamics, ultraviolet radiation, vitamins, water chemistry, x-ray crystallography, and others.
+KDDCup99 full Dataset 
 
-Keywords: Chemistry, Life Science, Atomic Structure, Biological Molecules, Chemical Bonding
+Tags: Chemistry, Concept Drift, Life Science 
+
+The KDD Cup 1999 dataset is a widely used benchmark for evaluating anomaly detection and intrusion detection systems. It was created by simulating a military network environment and collecting a large amount of network traffic data. 
+
+The dataset contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment. The goal of the competition task was to build a network intrusion detector, a predictive model capable of distinguishing between bad connections, called intrusions or attacks, and good normal connections. 
+
+Intrusion Detector Learning Software to detect network intrusions protects a computer network from unauthorized users, including perhaps insiders. The intrusion detector learning task is to build a predictive model capable of distinguishing between bad connections, called intrusions or attacks, and good normal connections. 
+
+A standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment, was provided. The 1998 DARPA Intrusion Detection Evaluation Program was prepared and managed by MIT Lincoln Labs. The objective was to survey and evaluate research in intrusion detection. 
+
+Lincoln Labs set up an environment to acquire network traffic data for a local area network simulating a typical US Air Force LAN. They operated the LAN as if it were a true Air Force environment, but peppered it with multiple attacks. The raw training data was processed into about five million connection records. 
+
+Each connection is labeled as either normal, or as an attack, with exactly one specific attack type. Each connection record consists of about one hundred bytes. Attacks fall into four main categories: Denial of Service, Unauthorized Access from a Remote Machine, Unauthorized Access to Local Super User Privileges, and Probing. 
+
+It is important to note that the test data is not from the same probability distribution as the training data, and it includes specific attack types not in the training data. This makes the task more realistic. Some intrusion experts believe that most novel attacks are variants of known attacks and the signature of known attacks can be sufficient to catch novel variants. 
+
+Derived Features 
+
+Stolfo et al defined higher level features that help in distinguishing normal connections from attacks. There are several categories of derived features. The same host features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc. 
+
+The similar same service features examine only the connections in the past two seconds that have the same service as the current connection. Same host and same service features are together called time based traffic features of the connection records. 
+
+Some Probing attacks scan the hosts or ports using a much larger time interval than two seconds, for example once per minute. Therefore, connection records were also sorted by destination host, and features were constructed using a window of one hundred connections to the same host instead of a time window. 
+
+This yields a set of so called host based traffic features. Unlike most of the Denial of Service and Probing attacks, there appear to be no sequential patterns that are frequent in records of Unauthorized Access from a Remote Machine and Unauthorized Access to Local Super User Privileges attacks. 
+
+This is because the Denial of Service and Probing attacks involve many connections to some host(s) in a very short period of time, but the Unauthorized Access from a Remote Machine and Unauthorized Access to Local Super User Privileges attacks are embedded in the data portions of packets, and normally involve only a single connection. 
+
+Useful algorithms for mining the unstructured data portions of packets automatically are an open research question. Domain knowledge was used to add features that look for suspicious behavior in the data portions, such as the number of failed login attempts. 
+
+Keywords: Anomaly Detection, Intrusion Detection, Network Security, Machine Learning, Computer Network, Military Network Environment, Attack Types, Connection Records, Traffic Features, Host Based Features, Time Window, Domain Knowledge.

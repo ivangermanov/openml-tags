@@ -1,35 +1,13 @@
-Acknowledgments 
+This dataset contains QSAR data showing activity values of several compounds on drug target Muscarinic Acetylcholine Receptor M3, and it has multiple rows and numerous features including IDs and class feature.
 
-The data was scraped from Booking.com. All data in the file is publicly available to everyone already. The data is originally owned by Booking.com. 
+The features represent Fingerprint Molecular Fingerprints which were generated from SMILES strings using the Pipeline Pilot program. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Data Context 
+This dataset is part of the MetaQSAR project and was published in September 2015.
 
-This dataset contains customer reviews and scoring of luxury hotels across Europe. Meanwhile, the geographical location of hotels are also provided for further analysis.
+Muscarinic Acetylcholine Receptor M3 is a single protein preferred name, also known as Chrm3 or Muscarinic Acetylcholine Receptor M3. It belongs to the species group Rattus Norvegicus and is classified as a membrane receptor, family A G protein-coupled receptor, small molecule receptor, and monoamine receptor.
 
-Data Content 
+It is involved in various biological processes, including regulation of vascular associated smooth muscle contraction, negative regulation of heart rate by acetylcholine, smooth muscle contraction, signal transduction, G protein-coupled receptor signaling pathway, and chemical synaptic transmission.
 
-The CSV file contains seventeen fields. The description of each field is as follows:
+It is also involved in various molecular functions, including G protein-coupled receptor activity, G protein-coupled serotonin receptor activity, GTPase activator activity, protein binding, and acetylcholine binding.
 
-Hotel Address: Address of hotel.
-Review Date: Date when reviewer posted the corresponding review.
-Average Score: Average Score of the hotel, calculated based on the latest comment in the last year.
-Hotel Name: Name of Hotel 
-Reviewer Nationality: Nationality of Reviewer 
-Negative Review: Negative Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it should be: 'No Negative'
-Review Total Negative Word Counts: 
-Positive Review: Positive Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it should be: 'No Positive'
-Review Total Positive Word Counts:
-Reviewer Score: Score the reviewer has given to the hotel, based on his/her experience 
-Total Number of Reviews:
-Tags: Tags reviewer gave the hotel.
-Days Since Review: Duration between the review date and scrape date.
-Latitude: Latitude of the hotel 
-Longitude: Longitude of the hotel 
-
-In order to keep the text data clean, I removed Unicode and punctuation in the text data and transformed text into lower case. No other preprocessing was performed.
-
-Inspiration 
-
-The dataset is large and informative, allowing users to have a lot of fun exploring it! Some potential ideas include fitting a regression model on reviews and score to see which words are more indicative to a higher/lower score; performing a sentiment analysis on the reviews; finding correlation between reviewer's nationality and scores; creating beautiful and informative visualizations on the dataset; clustering hotels based on reviews; and developing a simple recommendation engine to the guest who is fond of a special characteristic of hotel. The possibilities are endless!
-
-Keywords: hotel reviews, Europe, luxury hotels, sentiment analysis, recommendation engine, clustering, visualization.
+Keywords: QSAR, Muscarinic Acetylcholine Receptor M3, MetaQSAR, G protein-coupled receptor, signal transduction, chemical synaptic transmission.

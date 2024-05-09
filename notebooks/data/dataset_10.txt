@@ -1,25 +1,49 @@
-**Multiple Features Dataset: Factors**
+Lymphography Domain
 
-This dataset is one of a set of six datasets describing features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character.
+This lymphography domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.
 
-The dataset consists of two thousand instances, two hundred instances per class, which were digitized in binary images.
+Title: Lymphography Domain
+Sources: 
+Date: November 1988
 
-### Attribute Information
+Past Usage:
+This domain has repeatedly appeared in the machine learning literature.
 
-The attributes represent profile correlations. Unfortunately, no more information is known about these attributes.
+Relevant Information:
+This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature. 
 
-### Relevant Papers
+Number of Instances: 
+Number of Attributes: nineteen including the class attribute
 
-A slightly different version of this database was used in a paper titled "Handwritten Digit Recognition by Combined Classifiers". The current database was also used in a review paper titled "Statistical Pattern Recognition: A Review".
+Attribute Information:
+All attribute values in the database have been entered as numeric values corresponding to their index in the list of attribute values for that attribute domain as given below.
+Class: normal find, metastases, malign lymph, fibrosis
+Lymphatics: normal, arched, deformed, displaced
+Block of Affere: no, yes
+Block of Lymph C: no, yes
+Block of Lymph S: no, yes
+By Pass: no, yes
+Extravasates: no, yes
+Regeneration Of: no, yes
+Early Uptake In: no, yes
+Lymph Nodes Dimin: zero to three
+Lymph Nodes Enlar: one to four
+Changes in Lymph: bean, oval, round
+Defect in Node: no, lacunar, lacunar marginal, lacunar central
+Changes in Node: no, lacunar, lacunar margin, lacunar central
+Changes in Structure: no, grainy, drop-like, coarse, diluted, reticular, stripped, faint
+Special Forms: no, chalices, vesicles
+Dislocation Of: no, yes
+Exclusion of No: no, yes
+No of Nodes In: zero to nine, ten to nineteen, twenty to twenty-nine, thirty to thirty-nine, forty to forty-nine, fifty to fifty-nine, sixty to sixty-nine, seventy or more
 
-This dataset contains features representing profile correlations. There are six files in total, each containing different types of features. These include Fourier coefficients of the character shapes, profile correlations, Karhunen-Love coefficients, pixel averages in two by three windows, Zernike moments, and morphological features. 
+Missing Attribute Values: none
 
-In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one to nine. 
+Class Distribution:
+Class: number of instances
+normal find
+metastases
+malign lymph
+fibrosis
 
-Corresponding patterns in different feature sets correspond to the same original character. Unfortunately, the source image dataset has been lost. However, using the pixel dataset, sampled versions of the original images may be obtained, with a resolution of fifteen by sixteen pixels.
-
-Has Missing Values? No
-
-Additional Variable Information: Six files are included in this dataset, each containing a different type of feature.
-
-Keywords: handwritten numerals, Dutch utility maps, profile correlations, machine learning, dataset
+Keywords: lymphography, machine learning, medicine, oncology, lymph nodes

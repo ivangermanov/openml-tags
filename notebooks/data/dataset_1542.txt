@@ -1,20 +1,11 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred four thousand one hundred thirty-eight, and it has sixty-five rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc fifty.
+Volcanoes on Venus - JARtool Experiment Data Set Experiment: One
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The data was collected by the Magellan spacecraft over an approximate four-year period from nineteen ninety to nineteen ninety-four. The objective of the mission was to obtain global mapping of the surface of Venus using synthetic aperture radar. A more detailed discussion of the mission and objectives is available at JPL's Magellan webpage.
 
-Features include Molecule ChEMBL ID and many others.
+There are some spatial dependencies. For example, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts.
 
-Scraped Data:
-ID: ChEMBL seventeen seven zero zero four six
-Type: Single Protein
-Preferred Name: P two Y Purinoceptor fourteen
-Synonyms: G protein coupled receptor one hundred five, P two Y fourteen, P two Y Purinoceptor fourteen
-Organism: Mus musculus
-Species Group: No
-Protein Target Classification: One, Membrane receptor, Family A G protein coupled receptor, Small molecule receptor, Nucleotide like receptor, Purine receptor
+There are labels that provide some measure of subjective uncertainty, ranging from definitely a volcano to only a pit is visible. This labeling uncertainty problem is discussed further in relevant papers.
 
-Description Relationship Accession P two Y Purinoceptor fourteen Single Protein.
-Expression Atlas, Go Component, Go Function, and Go Process provide further information about this protein.
-Guide To Pharmacology, Reactome, UniProt, InterPro, and Pfam also provide cross-references for this protein.
+The images are one thousand twenty-four by one thousand twenty-four pixels. The pixel values are in the range from zero to two hundred fifty-five. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter, while lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-Keywords: QSAR, Machine Learning, MTLQSAR, Drug Target, Molecular Fingerprints, Pipeline Pilot Program, G Protein Coupled Receptor, Purine Receptor, Mus Musculus.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Image Quality, Labeling Uncertainty, Radar Wavelength, Topography, Surface Roughness.

@@ -1,19 +1,14 @@
-Nomao Data Set
+GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating various quality metrics, including accuracy, precision, and area under the receiver operating characteristic curve, among others, for classification, feature selection, or clustering algorithms.
 
-The Nomao data set collects information about various places, including their names, phone numbers, and localizations, from multiple sources. The primary goal of this data set is to detect duplicate entries, which refer to the same location. Each instance in the data set compares two different spots.
+The inspiration behind creating this repository stemmed from the growing need within the machine learning and bioinformatics communities for a unified collection of microarray classification problems that could be utilized by diverse researchers. This approach enables the comparison of multiple classification or feature selection techniques on the same set of problems.
 
-Data Set Characteristics:
-The Nomao data set is univariate and belongs to the computer science domain. It contains real-valued attributes and is suitable for classification tasks. This data set also contains missing values.
+Each gene expression sample in the GEMLeR repository originates from the large, publicly accessible Expression Project for Oncology repository maintained by the International Genomics Consortium. The primary objective of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of deidentified tumor samples. The tumor data is regularly updated with clinical outcomes and is subsequently released into the public domain without any intellectual property restrictions.
 
-Data Set Information:
-The Nomao data set consists of thirty-four thousand four hundred sixty-five instances, which are a mix of continuous and nominal values. These instances are labeled by human experts. The first twenty-nine thousand one hundred four instances were labeled using human prior knowledge. The remaining instances were labeled using different active learning methods, including marg, wmarg, wmarg five, rand, baseline, nomao, and tsun.
+The availability of this information translates directly into tangible benefits for patients, researchers, and pharmaceutical companies alike. Although multiple sources of gene expression data are available, the decision to utilize data from the Expression Project for Oncology repository was made due to the consistency of tissue sample processing procedures, the uniformity of the microarray platform used for all samples, the availability of supplementary information for combined genotype-phenotype studies, and the accessibility of a substantial number of samples for diverse tumor types.
 
-Attribute Information:
-This data set contains one hundred twenty attributes, out of which eighty-nine are continuous, and thirty-one are nominal. These attributes include the label and id. Missing data are represented by question marks. The labels are plus one if the spots being compared should be merged, and minus one if they do not refer to the same entity.
+When publishing material based on GEMLeR datasets, users are kindly requested to acknowledge the assistance they received by utilizing this repository. This acknowledgment will facilitate the replication of experiments by others and enable them to obtain the same datasets.
 
-The first attribute is the id, which is a combination of the names of the compared spots separated by a sharp symbol. The remaining attributes are divided into categories based on the type of information, such as clean name, city, zip, street, website, country name, geocoder locality name, geocoder input address, geocoder output address, geocoder postal code number, geocoder country name code, phone, fax, street number, geocode coordinates long, geocode coordinates lat, coordinates long, coordinates lat, geocode coordinates difference, and coordinates difference.
+Features:
+ID Reference, and numerous others...
 
-Relevant Papers:
-Design and Analysis of the Nomao Challenge - Active Learning in the Real-World.
-
-Keywords: Nomao, deduplication, active learning, real-world applications, computer science, classification, machine learning.
+Keywords: gene expression, machine learning, bioinformatics, microarray classification, feature selection, clustering algorithms, oncology, genomics, tumor samples.

@@ -1,17 +1,15 @@
-The Multiple Features Dataset: Karhunen is one of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character. 
+The Multiple Features Dataset: Fourier is one of a set of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Each dataset corresponds to the same original characters, with two thousand instances in total.
 
-This dataset consists of two thousand instances, with two hundred instances per class, digitized in binary images. 
+The attribute information represents seventy-six Fourier coefficients of the character shapes. 
 
-The attribute information represents sixty-four descriptors from the Karhunen-Loève Transform, a linear transformation corresponding to the projection of the images on the eigenvectors of a covariance matrix.
+This dataset is part of a larger collection of datasets, each featuring a different type of attribute information. These include profile correlations, Karhunen-Love coefficients, pixel averages, Zernike moments, and morphological features. 
 
-A relevant paper uses a slightly different version of the database, discussing handwritten digit recognition by combined classifiers. Another paper uses the database as is, reviewing statistical pattern recognition.
+The dataset has been used in various studies and papers, including one on handwritten digit recognition by combined classifiers and another on statistical pattern recognition. 
 
-The dataset has six files, each containing two thousand patterns stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one through nine. Corresponding patterns in different feature sets correspond to the same original character. 
+The features of this dataset are:
 
-The source image dataset is lost. However, using the pixel dataset, sampled versions of the original images may be obtained. 
+attribute one, attribute two, ..., attribute seventy-six, class
 
-Has Missing Values? No.
+The dataset consists of features of handwritten numerals extracted from a collection of Dutch utility maps. Two hundred patterns per class have been digitized in binary images.
 
-Additional Variable Information: Six files contain different feature sets, including Fourier coefficients of the character shapes, profile correlations, Karhunen-Loève coefficients, pixel averages in two-by-three windows, Zernike moments, and morphological features.
-
-Keywords: handwritten numerals, Karhunen-Loève Transform, covariance matrix, digit recognition, statistical pattern recognition, ASCII, pixel dataset.
+Keywords: Multiple Features Dataset, Fourier Coefficients, Handwritten Numerals, Dutch Utility Maps, Binary Images.

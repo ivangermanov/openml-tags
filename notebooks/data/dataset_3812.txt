@@ -1,13 +1,23 @@
-The Red Wine Quality dataset is related to the red variant of the Portuguese Vinho Verde wine. Due to privacy and logistic issues, only physicochemical and sensory variables are available. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, meaning there are many more normal wines than excellent or poor ones.
+QSAR-TID-50 Dataset Description:
 
-This dataset is also available from the University of California, Irvine Machine Learning Repository. The dataset contains physicochemical input variables based on tests, including acidity, citric acid, sugar, chlorides, sulfur dioxide, density, pH, and sulfates. The output variable is based on sensory data, specifically the quality of the wine scored between zero and ten.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: Fifty, and it consists of One Thousand Four Hundred Fourteen rows and One Thousand Twenty-Six features, including IDs and class feature.
 
-A potential approach to exploring this dataset is to set an arbitrary cutoff for the dependent variable, classifying wines with a score of seven or higher as "good" and the remainder as "not good". This allows for practice with hyperparameter tuning on decision tree algorithms, examining the receiver operating characteristic curve and area under the curve value. Without feature engineering or overfitting, it is possible to achieve an area under the curve value of point eight eight.
+The features represent FCFP Six One Zero Two Four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-A useful tool for working with this dataset is KNIME, a graphical user interface that enables users to perform various tasks. One approach is to begin with file reading and linear correlation nodes, followed by interactive histograms for exploratory data analysis. Next, the rule engine node can be used to convert the ten-point scale to a dichotomous variable, distinguishing good wine from the rest. The column filter node then filters out the original ten-point feature to prevent leakage.
+Demographic information includes organism species, Homo sapiens, and protein target classification as one, membrane receptor, family A G protein-coupled receptor, small molecule receptor, monoamine receptor, and adrenergic receptor.
 
-The partitioning node splits the data into training and testing sets, followed by decision tree learner and predictor nodes. Finally, the results can be evaluated using the receiver operating characteristic node, examining the area under the curve value.
+The preferred name for this protein target is Beta-One Adrenergic Receptor, also known as ADRB One, ADRB One R, B One AR, Beta-One Adrenergic Receptor, and Beta-One Adrenoceptor.
 
-The goal of this project is to utilize machine learning to identify which physiochemical properties contribute to a wine being classified as "good". This dataset is also available from the University of California, Irvine Machine Learning Repository, and was originally published in the journal Decision Support Systems.
+This dataset is part of the MetaQSAR project, released in September Two Thousand Fifteen.
 
-Keywords: Vinho Verde, wine quality, machine learning, physicochemical properties, sensory data, classification, regression.
+Features:
+
+MOLECULE CHEMBL ID
+FCFP Six One Zero Two Four Bit Molecular Fingerprints
+MEDIAN PX C Fifty
+
+Dataset Information:
+
+This dataset shows activity values of several compounds on drug target TID: Fifty, which belongs to the protein family of adrenergic receptors.
+
+Keywords: QSAR, TID Fifty, Beta-One Adrenergic Receptor, FCFP Molecular Fingerprints, MetaQSAR Project, Drug Target, Compound Activity Values.

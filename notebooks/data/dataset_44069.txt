@@ -1,0 +1,33 @@
+**SGEMM GPU Kernel Performance**
+
+Tags: Computer Systems, Mathematics
+
+This dataset measures the running time of a matrix-matrix product using a parameterizable Single Precision General Matrix Multiply (SGEMM) GPU kernel with multiple possible parameter combinations. Each tested combination was run four times, and the results are reported as separate columns. The times are measured in milliseconds.
+
+The dataset contains fourteen parameters, with the first ten being ordinal and able to take up to four different power-of-two values, while the last four are binary. Due to various kernel constraints, out of the total possible parameter combinations, only a subset is feasible. This dataset includes the results for all these feasible combinations.
+
+The experiment was conducted on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and an NVIDIA GeForce graphics processing unit. The gemm fast kernel from the automatic OpenCL kernel tuning library CLTune was used.
+
+It is often beneficial to work with the logarithm of the running times when dealing with this type of data.
+
+**Attribute Description**
+
+* Independent Variables:
+	+ Matrix dimensions at the workgroup level
+	+ Inner dimension of two-dimensional tiling at the workgroup level
+	+ Local workgroup size
+	+ Local memory shape
+	+ Kernel loop unrolling factor
+	+ Per-matrix vector widths for loading and storing
+	+ Enable stride for accessing off-chip memory within a single thread
+	+ Per-matrix manual caching of the two-dimensional workgroup tile
+* Output:
+	+ Performance times in milliseconds for four independent runs using the same parameters
+
+**Related Studies**
+Sobol Tensor Trains for Global Sensitivity Analysis
+
+**Citation**
+Please cite the relevant paper.
+
+Keywords: SGEMM, GPU kernel, matrix-matrix product, parameter tuning, OpenCL, kernel optimization, performance measurement

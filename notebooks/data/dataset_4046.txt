@@ -1,12 +1,13 @@
-isolet 
-Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
+The QSAR-TID-12955 dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 12955. This dataset has five hundred thirty-two rows and one thousand twenty-six features, including IDs and class feature.
 
-The Isolet dataset was generated as follows: one hundred fifty subjects spoke the name of each letter of the alphabet twice. Hence, there are training examples from each speaker. The speakers are grouped into sets of thirty speakers each, four groups can serve as training set, the last group as the test set. A total of examples are missing, the authors dropped them due to difficulties in recording. This is a good domain for a noisy, perceptual task. It is also a very good domain for testing the scaling abilities of algorithms.
+The features represent Extended Connectivity Fingerprints (ECFPs) molecular fingerprints, which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. These fingerprints do not usually require missing value imputation as all bits are generated.
 
-The Isolet dataset is a good domain for a noisy, perceptual task because it involves speech recognition, which is inherently noisy and prone to errors. Additionally, the large number of speakers and examples makes it an excellent choice for testing the scalability of machine learning algorithms.
+This dataset was obtained from the MetaQSAR project in September 2015 and contains QSAR data from ChEMBL version seventeen.
 
-All attributes are continuous, real-valued attributes scaled into a specific range. The features are described in a research paper and include various types of coefficients, contour features, sonorant features, pre-sonorant features, and post-sonorant features.
+The dataset shows activity values in units of pseudo-pCI50 of several compounds on drug target Calpain One, also known as Calcium-activated Neutral Proteinase One, Calpain-One Catalytic Subunit, Calpain-One Large Subunit, and Canp One.
 
-The Isolet dataset has been widely used in research papers, including one on spoken letter recognition and another on error-correcting output codes. These papers demonstrate the versatility and usefulness of the Isolet dataset in machine learning tasks.
+Calpain One is an enzyme that belongs to the Cysteine Protease Ca Clan and Cysteine Protease C Two Family. It is involved in various biological processes, including proteolysis, positive regulation of cell population proliferation, regulation of macroautophagy, and receptor catabolic process.
 
-Keywords: Isolet, classification, numerical features, speech recognition, machine learning, scalability, noise, perceptual task.
+This protein is expressed in various cellular components, including the cytoplasm, mitochondrion, lysosome, plasma membrane, and focal adhesion. It has various molecular functions, including calcium-dependent cysteine-type endopeptidase activity, calcium ion binding, protein binding, peptidase activity, and hydrolase activity.
+
+Keywords: QSAR, Calpain One, Quantitative Structure-Activity Relationship, Extended Connectivity Fingerprints, Simplified Molecular Input Line Entry System, MetaQSAR, ChEMBL, enzyme, proteolysis, autophagy, cellular components, molecular functions.

@@ -1,0 +1,38 @@
+The Official World Golf Ranking Data
+
+Tags: Machine Learning, Statistics
+
+Context:
+The Official World Golf Ranking is a system designed to rate the performance level of male professional golfers. Established in nineteen eighty-six, the ranking system takes into account a player's position in individual tournaments over a rolling two-year period. New rankings are produced every week. The ranking system covers numerous tournaments on multiple tours, including the PGA Tour, European Tour, and Asian Tour, among others.
+
+During the year twenty eighteen, nearly four hundred tournaments on twenty tours were covered by the ranking system. All players competing in these tournaments are included in the rankings. As of twenty nineteen, twenty-three tours factor into the world rankings. The World Ranking Points for each player are accumulated over a two-year rolling period, with the points awarded for each tournament maintained for a thirteen-week period to place additional emphasis on recent performances. 
+
+Ranking points are then reduced in equal decrements for the remaining ninety-one weeks of the two-year ranking period. Each player is then ranked according to their average points per tournament, which is determined by dividing their total number of points by the tournaments they have played over that two-year period. 
+
+There is a minimum divisor of forty tournaments over the two-year ranking period and a maximum divisor of a player's last fifty-two tournaments. Simply put, a golfer's World Ranking is obtained by dividing their points total by the number of events they have played, which gives their average. Players are then ranked; a higher average yields a higher rank.
+
+Data:
+The data was acquired from the Official World Golf Ranking website. Stored in a long data format, this file is updated weekly after the conclusion of every tournament.
+
+Tours Included in the Rankings:
+PGA Tour, European Tour, Asian Tour, PGA Tour of Australasia, Japan Golf Tour, Sunshine Tour, Korn Ferry Tour, Challenge Tour, PGA Tour Canada, Golf Tour, Korean Tour, PGA Tour Latinoamérica, Asian Development Tour, PGA Tour China, Alps Tour, Nordic Golf League, PGA EuroPro Tour, ProGolf Tour, MENA Golf Tour, Big Easy Tour, China Tour, All Thailand Golf Tour, Professional Golf Tour of India, and Abema TV Tour.
+
+Collection Method:
+The data was acquired using the Python library BeautifulSoup and manipulated using the Pandas and NumPy libraries.
+
+Contents:
+The dataset consists of approximately nine thousand players.
+
+Acknowledgments:
+Data scraped from the Official World Golf Ranking website.
+
+Inspirations:
+Can this dataset be used to predict who will win upcoming PGA Tour tournaments? Can we predict the players that will make the tournament cuts?
+
+Disclaimer:
+The Official World Golf Ranking website contains plenty of messy data in the 'Name' column. There are still records where there is not enough information to infer the proper name of the athlete. 
+
+Features:
+Week, Name, Average Points, Total Points, Events Played, Points Lost, Points Gained, Events Played Actual, Pro/Am
+
+Keywords: Official World Golf Ranking, machine learning, statistics, golf, tournaments, ranking system, data analysis.

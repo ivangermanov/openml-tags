@@ -1,13 +1,9 @@
-Cosmetics Datasets 
-Tags: Computer Systems, Machine Learning 
+The QSAR-TID-10527 dataset is a collection of Quantitative Structure-Activity Relationship (QSAR) data, which is part of the MetaQSAR project. It contains activity values for several compounds against the drug target identified by the ID number 10527.
 
-Whenever I want to try a new cosmetic item, it is extremely difficult to choose. In fact, it is often intimidating because new items that I have never tried before frequently end up causing me skin problems. We all know that the information we need is readily available on the back of each product, but it is genuinely challenging to decipher those complicated ingredient lists unless one has a strong background in chemistry. Many individuals may be able to relate to this frustrating situation.
+This dataset consists of 294 rows and 1026 features, including molecule identifiers and a class feature called Median PXc50. The features represent molecular fingerprints generated from SMILES strings using the Pipeline Pilot program from Dassault Systèmes BIOVIA.
 
-We are going to develop a content-based recommendation system where the core content will revolve around the chemical components of cosmetics. Specifically, we will meticulously process ingredient lists for various cosmetics available on Sephora via word embedding, and subsequently visualize the striking similarities between ingredients utilizing a cutting-edge machine learning technique known as t-Distributed Stochastic Neighbor Embedding (t-SNE) and an innovative interactive visualization library referred to as Bokeh. To initiate this project, let us thoroughly examine our data.
+Molecular fingerprints are a way to describe the structure of molecules in a numerical format, allowing for computational analysis and comparison of different molecules. In this case, the fingerprints were generated using the FCFP (Functional-Class Fingerprints) method, which takes into account the functional groups present in a molecule.
 
-Acknowledgments 
-DataCamp 
+The dataset was created in September 2015 and is based on data from ChEMBL version 17. It is intended for use in QSAR modeling and machine learning applications, where the goal is to predict the biological activity of molecules based on their structural properties.
 
-Features: Product Label, Cosmetic Brand, Product Name, Price Point, Product Ranking, Ingredient List, Combination Skin Type, Dry Skin Type, Normal Skin Type, Oily Skin Type, Sensitive Skin Type 
-
-Keywords: Cosmetic Recommendation System, Ingredient Analysis, Word Embedding, t-SNE Visualization, Bokeh Library, Skin Types, Sephora Products
+Keywords: QSAR, MetaQSAR, molecular fingerprints, FCFP, machine learning, biological activity prediction.

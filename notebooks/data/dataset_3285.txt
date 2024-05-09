@@ -1,32 +1,59 @@
-**Skillcraft One Master Table Dataset**
+QSAR-TID-12485 Dataset
 
-This dataset aggregates screen movements into screen-fixations using a dispersion-threshold algorithm, and defines Perception Action Cycles (PACs) as fixations with at least one action. Time is recorded in terms of timestamps in the StarCraft Two replay file. When the game is played on faster, one real-time second is equivalent to roughly eighty-eight point five timestamps.
+Tags: Computer Systems, Machine Learning, MTLQSAR, Study Three
 
-The list of possible game actions is discussed in the related literature. This dataset has missing values.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12485. It has eighty-three rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-**Attribute Information**
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-* Game ID: A unique identifier number for each game.
-* League Index: An ordinal value representing the league level of the player, ranging from bronze to professional.
-* Age: The age of each player.
-* Hours Per Week: The reported hours spent playing per week.
-* Total Hours: The reported total hours spent playing.
-* Actions Per Minute: The rate of actions performed by the player per minute.
-* Selections By Hotkeys: The number of unit or building selections made using hotkeys per timestamp.
-* Assignments To Hotkeys: The number of units or buildings assigned to hotkeys per timestamp.
-* Unique Hotkeys Used: The number of unique hotkeys used per timestamp.
-* Minimap Attacks: The number of attack actions on minimap per timestamp.
-* Minimap Right Clicks: The number of right-clicks on minimap per timestamp.
-* Number Of PACs: The number of PACs per timestamp.
-* Gap Between PACs: The mean duration in milliseconds between PACs.
-* Action Latency: The mean latency from the onset of a PAC to its first action in milliseconds.
-* Actions In PAC: The mean number of actions within each PAC.
-* Total Map Explored: The number of twenty-four by twenty-four game coordinate grids viewed by the player per timestamp.
-* Workers Made: The number of SCVs, drones, and probes trained per timestamp.
-* Unique Units Made: The number of unique units made per timestamp.
-* Complex Units Made: The number of ghosts, infestors, and high templars trained per timestamp.
-* Complex Abilities Used: The abilities requiring specific targeting instructions used per timestamp.
+Features include Molecule ChEMBL ID, followed by numerous FCFP six one thousand twenty-four bit molecular fingerprint features.
 
-**Tags:** Images, Life Science
+Scraped Data:
 
-**Keywords:** Skillcraft, StarCraft, Gameplay, Player Behavior, Perception Action Cycles
+Type: Single Protein
+Preferred Name: Muscarinic Acetylcholine Receptor M Four
+Synonyms: Chrm Four, Chrm-Four, Muscarinic Acetylcholine Receptor M Four
+Organism: Rattus Norvegicus
+Species Group: No
+Protein Target Classification: One, Membrane Receptor, Family A G-Protein Coupled Receptor, Small Molecule Receptor, Monoamine Receptor, Acetylcholine Receptor
+
+Description Relationship Accession Muscarinic Acetylcholine Receptor M Four Single Protein
+
+Component:
+
+* Plasma membrane
+* Membrane
+* Dendrite
+* Asymmetric synapse
+* Sarcolemma
+* Presynaptic membrane
+* Neuronal cell body
+* Axon terminus
+* Synapse
+* Postsynaptic membrane
+* Postsynaptic density membrane
+* Glutamatergic synapse
+
+Go Function:
+
+* G-Protein Coupled Receptor Activity
+* G-Protein Coupled Serotonin Receptor Activity
+* Guanyl-Nucleotide Exchange Factor Activity
+* Protein Binding
+* G-Protein Coupled Acetylcholine Receptor Activity
+
+Go Process:
+
+* Signal Transduction
+* G-Protein Coupled Receptor Signaling Pathway
+* G-Protein Coupled Receptor Signaling Pathway, Coupled to Cyclic Nucleotide Second Messenger
+* Adenylate Cyclase-Inhibiting G-Protein Coupled Acetylcholine Receptor Signaling Pathway
+* G-Protein Coupled Acetylcholine Receptor Signaling Pathway
+* Chemical Synaptic Transmission
+* Synaptic Transmission, Cholinergic
+* Response to Organic Substance
+* Regulation of Locomotion
+* G-Protein Coupled Serotonin Receptor Signaling Pathway
+* Chemical Synaptic Transmission, Postsynaptic
+
+Keywords: QSAR, Machine Learning, MTLQSAR, Muscarinic Acetylcholine Receptor, G-Protein Coupled Receptor, Signal Transduction, Chemical Synaptic Transmission.

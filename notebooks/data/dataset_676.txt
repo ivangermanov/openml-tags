@@ -1,7 +1,86 @@
-Fri C Three Two Fifty Twenty Five Dataset 
+Data Used in "A Bayesian Approach to Data Disclosure: Optimal Intruder Behavior for Continuous Data"
 
-Tags: Chemistry, Life Science, Myth Busting One, Study One, Study Fifteen, Study Twenty, Study Forty One, Study Seven, Study Eighty Eight 
+Background:
 
-This dataset is a binarized version of the original dataset. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive, denoted by 'Positive', and all others as negative, denoted by 'Negative'. The dataset comprises various features, including ozone-related variables. The binary class feature categorizes instances into two distinct classes.
+In this paper, we develop an approach to data disclosure in survey settings by adopting a probabilistic definition of disclosure. Our approach is based on the principle that a data collection agency must consider disclosure from the perspective of an intruder in order to efficiently evaluate data disclosure limitation procedures. The probabilistic definition and our attempt to study optimal intruder behavior lead naturally to a Bayesian formulation.
 
-Keywords: Chemistry, Life Science, Dataset, Binary Classification, Ozone Variables
+The Data:
+
+Our case study uses data from the Elite Canadian Decision-Makers survey collected by the Institute for Social Research at York University. This survey was conducted using telephone interviews, and there were respondents, but many of these did not supply complete data. We have extracted data on twelve variables, each of which was measured on a five-point scale.
+
+Civil Liberties:
+
+* Free speech is just not worth it.
+* We have gone too far in pushing equal rights in this country.
+* It is better to live in an orderly society than to allow people so much freedom.
+* Free speech ought to be allowed for all political groups.
+
+Attitudes towards Jews:
+
+* Most Jews don't care what happens to people who are not Jews.
+* Jews are more willing than others to use shady practices to get ahead.
+
+Canada-US Relationship:
+
+* Ensure independent Canada.
+* Canada should have free trade with the USA.
+* Canada's way of life is influenced strongly by the USA.
+* Canada benefits from US investments.
+
+Personal Information:
+
+* Income: Total family income before taxes (with top-coding).
+* Age: Based on year of birth.
+
+We transformed the original survey data as follows to create a database of approximately continuous variables:
+
+We added categorical variables to increase the number of levels. When necessary, we reversed the order of levels of a response to a question. The new variables are defined as follows:
+
+* Civil Liberties: We combined the responses to the questions.
+* Attitudes: We combined the responses to the questions.
+* Canada-US Relationship: We combined the responses to the questions.
+
+After removing cases with missing observations and two cases involving young children, we had a database consisting of observations.
+
+To enhance continuity, we took the following measures:
+
+* Age: We added normally distributed variates with zero mean and variance to all observations.
+* Income: We added uniformly distributed variates on the range of zero to ten thousand dollars to all incomes below eighty thousand dollars. Since all cases of incomes exceeding eighty thousand dollars were lumped together in the survey, we simulated their values by means of a t-distribution. Drawing values from the upper thirty-eight percent tail of the t-distribution, we evaluated the values of income as sixty thousand dollars plus twenty-five thousand times the t-distribution.
+* Other Variables: We added normally distributed variates with zero mean and variance to the variables.
+
+We assume that the agency releases information about all variables, except for Attitudes towards Jews, which is unavailable to the intruder and is at the center of the intruder's investigation. We denote the released data by Z with i equals one to six sixty-two and j equals one to four. We assume that the intruder's data, X, are accurate and are related to Z via the following transformation:
+
+x zero j equals z i j times theta i j plus xi j,
+
+where theta i j is a bias-removing parameter normally distributed with mean one and variance v j, and xi j is normally distributed disturbance with zero mean and variance sigma squared j.
+
+The following table provides the values of v j and sigma squared j used in the study:
+
+v j       sigma squared j
+Civil     0.1732    25
+Canada-US 0.1732    25
+Age       0.1732     9
+Income    0.1732     4
+
+We first generated several realizations of the above transformation on small subsets of the data to ascertain the impact of the process of error on the data.
+
+Data Used in the Computations:
+
+We conducted a complete simulation of the procedures for the complete set of six sixty-two cases. We considered four different scenarios for the simulation. The names of datasets used in each of the scenarios appear in brackets below. The datasets are appended to this text.
+
+* The released data contains no bias or noise (i.e., v j equals zero and sigma squared j equals zero for all j). [Z DOT DATA]
+* The released data contains only noise (i.e., v j equals zero for all j and sigma squared j as given in the above table). [X NOISE DOT DATA]
+* The released data contains only bias (i.e., sigma squared j equals zero for all j and v j as given in the above table). [X BIAS DOT DATA]
+* The released data contains both bias and noise (i.e., v j and sigma squared j as given in the above table). [X TAMPERED DOT DATA]
+
+We took each individual in turn as the object of the intruder's efforts and carried out the calculations.
+
+Structure of the Datasets:
+
+Each attached dataset consists of four space-separated columns containing the data on Age, Civil Liberties, Canada-US Relationship, and Income respectively.
+
+Dataset: X TAMPERED
+
+Features: Age, Civil Liberties, Canada-US Relationship, Income
+
+Keywords: data disclosure, probabilistic definition, Bayesian approach, optimal intruder behavior, continuous data, survey settings, civil liberties, attitudes towards Jews, Canada-US relationship, personal information, age, income.

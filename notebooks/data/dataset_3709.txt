@@ -1,26 +1,15 @@
-UCI-SECOM-Dataset 
-Tags: Computer Systems, Machine Learning 
-Context: Manufacturing process feature selection and categorization 
+QSAR-TID-102815 Dataset 
 
-Abstract:
-Data from a semi-conductor manufacturing process 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 102815. The dataset has thirty-four rows and one thousand twenty-six features, including IDs and class feature. The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Data Set Characteristics:
-Multivariate 
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive resource for QSAR modeling.
 
-Area: Computer 
+The drug target, Adenosine A three receptor, is a single protein preferred name with synonyms such as A three AR, Adenosine receptor A three, and Adora three. It belongs to the species group Mus musculus.
 
-Attribute Characteristics: Real 
+The protein target classification is one point Membrane receptor slash Family A G protein-coupled receptor slash Small molecule receptor family A GPCR slash Nucleotide-like receptor family A GPCR slash Adenosine receptor.
 
-Associated Tasks: Classification, Causal-Discovery 
-Missing Values? Yes 
+The description relationship accession is Adenosine receptor A three single protein.
 
-A complex modern semi-conductor manufacturing process is normally under consistent surveillance via the monitoring of signals or variables collected from sensors and or process measurement points. However, not all of these signals are equally valuable in a specific monitoring system. The measured signals contain a combination of useful information, irrelevant information as well as noise. It is often the case that useful information is buried in the latter two. Engineers typically have a much larger number of signals than are actually required. If we consider each type of signal as a feature, then feature selection may be applied to identify the most relevant signals. The Process Engineers may then use these signals to determine key factors contributing to yield excursions downstream in the process. This will enable an increase in process throughput, decreased time to learning and reduce the per unit production costs. 
+The dataset provides information about the component, function, process, and other aspects of the Adenosine A three receptor.
 
-To enhance current business improvement techniques the application of feature selection as an intelligent systems technique is being investigated. The dataset presented in this case represents a selection of such features where each example represents a single production entity with associated measured features and the labels represent a simple pass or fail yield for in-house line testing, and associated date-time stamp. Using feature selection techniques it is desired to rank features according to their impact on the overall yield for the product; causal relationships may also be considered with a view to identifying the key features. Results may be submitted in terms of feature relevance for predictability using error rates as our evaluation metrics. It is suggested that cross-validation be applied to generate these results. 
-
-Some baseline results are shown below for basic feature selection techniques using a simple kernel ridge classifier and ten-fold cross-validation. Pre-processing objects were applied to the dataset simply to standardize the data and remove the constant features; then a number of different feature selection objects selecting forty highest ranked features were applied with a simple classifier to achieve some initial results. Ten-fold cross-validation was used and the balanced error rate generated as our initial performance metric to help investigate this dataset.
-
-The dataset consists of two files: the dataset file SECOM consisting of examples each with features – a matrix – and a labels file containing the classifications and date-time stamp for each example. As with any real-life data situations, this data contains null values varying in intensity depending on the individual's features. This needs to be taken into consideration when investigating the data either through pre-processing or within the technique applied. The data is represented in a raw text file, each line representing an individual example, and the features separated by spaces. The null values are represented by the 'NaN' value.
-
-Keywords: semiconductor manufacturing, feature selection, classification, causal discovery, process throughput, yield excursions.
+Keywords: QSAR, Adenosine A three receptor, MetaQSAR, molecular fingerprints, G protein-coupled receptor, Mus musculus.

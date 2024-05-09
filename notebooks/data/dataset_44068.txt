@@ -1,0 +1,15 @@
+Particulate Matter UK Air 2017
+Tags: Computer Systems, Physical Sciences
+
+This dataset is part of the "regression on categorical and numerical features" benchmark and has been transformed in the same way as the original dataset used in the tabular data benchmark.
+
+The original dataset consists of hourly particulate matter air pollution data for Great Britain for the year 2017, provided by Ricardo Energy and Environment on behalf of the UK Department for Environment, Food and Rural Affairs (Defra) and the Devolved Administrations. The data was scraped from the UK Air homepage using the R package rdefra. The data was published by Defra under the Open Government License.
+
+For a detailed description of all variables, please refer to the UK Air homepage. The variable "Particulate Matter 10 - Particulate Matter Hourly Measured" has been chosen as the target. Additionally, the dataset includes another measure of particulate matter, "Particulate Matter 2.5 - Particulate Matter Hourly Measured", which could be used as an alternative target. The string variable "Date Time" could be utilized to construct supplementary date and time features.
+
+In this modified version of the dataset, the features "Longitude" and "Latitude" have been removed to emphasize the significance of the categorical features "Zone" and "Site Name". 
+
+Features: 
+Hour, Month, Day of Week, Environment Type, Altitude, Particulate Matter 2.5 - Particulate Matter Hourly Measured, Particulate Matter 10 - Particulate Matter Hourly Measured.
+
+Keywords: air pollution, particulate matter, regression, categorical features, numerical features, benchmark, UK Air, Defra.

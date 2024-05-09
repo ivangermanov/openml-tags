@@ -1,15 +1,21 @@
-Eye Movements Dataset
+QSAR-TID-17024 Dataset: Study Three
 
-This dataset belongs to the "classification on numerical features" benchmark. It is a straightforward classification task where pre-computed feature vectors for each word in the eye movement trajectory are provided along with class labels.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID 17024. It has multiple rows and features, including IDs and a class feature.
 
-The dataset consists of several assignments, each consisting of a question followed by ten sentences (news article titles). One of the sentences is the correct answer to the question, five are irrelevant, and four are relevant but do not answer the question.
+The features represent Fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-Each assignment is a time sequence of twenty-two dimensional feature vectors. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column: zero for irrelevant, one for relevant, and two for the correct answer.
+Features include molecule ChEMBL ID and Median PXc50.
 
-Each example represents a single word, and the goal is to return the classification of each read sentence. The twenty-two features provided are commonly used in psychological studies on eye movement, although not all may be relevant in this context. 
+The dataset was sourced from the MetaQSAR project in September 2015.
 
-The objective is to predict the classification labels (Irrelevant, Relevant, Correct Answer).
+This dataset contains information about a single protein preferred named ADAM seventeen, also known as Disintegrin and Metalloproteinase Domain Containing Protein seventeen. It is an enzyme, protease, metallo protease, and belongs to the MAM clan and Metallo Protease M twelve B subfamily.
 
-Features include Line Number, Assignment Number, Fixation Count, First Pass Count, First Fixation Duration, Previous Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Maximum Pupil Diameter, Maximum Pupil Diameter Lag, Time Protection, Title Number, Word Number, and Label.
+ADAM seventeen is classified under the organism species group Sus Scrofa. It has relationships with accession number O seven seven six three six. 
 
-Keywords: Eye Movement, Classification, Numerical Features, Psychological Studies, Fixation Duration, Saccade Length, Pupil Diameter, Regression Analysis.
+ADAM seventeen is involved in various biological processes, including proteolysis, membrane protein ectodomain proteolysis, Notch signaling pathway, Notch receptor processing, tumor necrosis factor mediated signaling pathway, and positive regulation of ERK one and ERK two cascade.
+
+It has molecular functions, including endopeptidase activity, metalloendopeptidase activity, Notch binding, peptidase activity, metallopeptidase activity, hydrolase activity, and metal ion binding.
+
+It is located in the plasma membrane and membrane components.
+
+Keywords: QSAR, ADAM seventeen, metallo protease, M twelve B subfamily, proteolysis, Notch signaling pathway, tumor necrosis factor.

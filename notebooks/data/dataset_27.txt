@@ -1,11 +1,13 @@
-The Pen-Based Recognition of Handwritten Digits dataset is a collection of handwritten digits gathered from forty-four writers. Thirty writers contributed to the training set, while fourteen writers were reserved for writer-independent testing. The dataset is also available in the UNIPEN format.
+The Horse Colic Database 
 
-We used a Wacom PL-100V pressure-sensitive tablet with an integrated LCD display and a cordless stylus to collect handwriting samples. The tablet sent x and y tablet coordinates and pressure level values of the pen at fixed time intervals. Writers were asked to write two hundred and fifty digits in random order inside boxes of five hundred by five hundred tablet pixel resolution. Each screen contained five boxes with the digits to be written displayed above. Writers were told to write only inside these boxes, and if they made a mistake or were unhappy with their writing, they could clear the content of a box using an on-screen button. The first ten digits were ignored because most writers were not familiar with this type of input device, but subjects were not aware of this.
+Tags: Agriculture, Health, Myth Busting 
 
-In our study, we used only x and y coordinate information, ignoring the stylus pressure level values. We applied normalization to make our representation invariant to translations and scale distortions. The raw data captured from the tablet consisted of integer values between zero and five hundred. The new coordinates were such that the coordinate with the maximum range varied between zero and one hundred. Usually, x stayed in this range, since most characters are taller than they are wide.
+This database is related to the health of horses, specifically focusing on the issue of horse colic. The dataset provides information on various aspects of horse health, including medical history, symptoms, and outcomes.
 
-To train and test our classifiers, we needed to represent digits as constant-length feature vectors. A commonly used technique leading to good results is resampling the x and y points. Temporal resampling or spatial resampling can be used here. Raw point data are already regularly spaced in time, but the distance between them is variable. Previous research showed that spatial resampling to obtain a constant number of regularly spaced points on the trajectory yields much better performance, because it provides a better alignment between points. Our resampling algorithm used simple linear interpolation between pairs of points. The resampled digits were represented as a sequence of T points, regularly spaced in arc length, as opposed to the input sequence, which is regularly spaced in time.
+The dataset features a range of variables, including the age of the horse, rectal temperature, pulse rate, respiratory rate, and other physical characteristics. Additionally, it includes information on the results of medical examinations and tests, such as abdominal distension, nasogastric reflux, and abdominocentesis appearance. 
 
-We considered spatial resampling to eight, twelve, and sixteen points in our experiments and found that eight gave the best trade-off between accuracy and complexity. The way we used the dataset was to use the first half of the training set for actual training, one-fourth for validation, and one-fourth for writer-dependent testing. The test set was used for writer-independent testing and is the actual quality measure.
+The dataset also explores the relationship between these variables and the ultimate outcome for the horse, including whether surgery was required and if so, what type of lesion was found. 
 
-Keywords: handwritten digits, pressure-sensitive tablet, spatial resampling, feature vectors, classifier training, writer-independent testing.
+Please cite the Horse Colic Database when using this data.
+
+Keywords: horse health, agriculture, veterinary medicine, colic, equine health.

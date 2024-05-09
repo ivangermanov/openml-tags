@@ -1,59 +1,22 @@
-Name: Ada Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+Geographical Original of Music 
 
-Tags: Computer Systems, Statistics 
+Tags: Economics, Machine Learning, OpenML-Reg19 
 
-Subsampling of the dataset Ada with seed equal to four 
-arguments number rows max equals two thousand 
-arguments number cols max equals one hundred 
-arguments number classes max equals ten 
-arguments no stratify equals false 
+The University of Nottingham, Ningbo, China 
+Source: UCI 
 
-Generated with the following source code:
+Abstract: 
+This dataset contains instances with audio features extracted from one thousand fifty-nine wave files. The task associated with the data is to predict the geographical origin of music.
 
-def subsample(self, seed, number rows max equals two thousand, number cols max equals one hundred, number classes max equals ten, stratified equals true):
-    random number generator equals numpy random default random generator seed
-    x equals self x
-    y equals self y
-    
-    Uniformly sample classes equals y unique
-    if length of classes is greater than number classes max:
-        value counts equals y value counts
-        selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts
-        select the indices where one of these classes is present
-        idxs equals y index y is in selected classes
-        x equals x iloc idxs
-        y equals y iloc idxs
-        
-    Uniformly sample columns if required
-    if length of x columns is greater than number cols max:
-        columns idxs equals random number generator choice list range length of x columns size equals number cols max replace equals false
-        sorted column idxs equals sorted columns idxs
-        selected columns equals list x columns sorted column idxs
-        x equals x selected columns
-    else:
-        sorted column idxs equals list range length of x columns
-        
-    if length of x is greater than number rows max:
-        stratify accordingly
-        target name equals y name
-        data equals pandas concat x and y axis equals columns
-        underscore comma subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed
-        x equals subset drop target name axis equals columns
-        y equals subset target name
-        
-    We need to convert categorical columns to string for openml
-    categorical mask equals list self categorical mask i for i in sorted column idxs
-    columns equals list x columns
-    
-    return Dataset 
-        technically this is not the same but it's where it was derived from 
-        dataset equals self dataset
-        x equals x
-        y equals y
-        categorical mask equals categorical mask
-        columns equals columns
+Data Set Information:
+The dataset was built from a personal collection of one thousand fifty-nine tracks covering thirty-three countries or areas. The music used is traditional, ethnic, or world music only, as classified by the publishers of the product on which it appears. Any Western music is not included because its influence is global - what we seek are the aspects of music that most influence location. Thus, being able to specify a location with strong influence on the music is central. The geographical location of origin was manually collected from the CD sleeve notes, and when this information was inadequate, we searched other information sources. The location data is limited in precision to the country of origin. The country of origin was determined by the artist’s or artists’ main country or area of residence. Any track that had ambiguous origin is not included. We have taken the position of each country’s capital city (or the province of the area) by latitude and longitude as the absolute point of origin.
 
-Features: 
-(class skipped due to being unreadable)
+The program Marsyas was used to extract audio features from the wave files. We used the default Marsyas settings in single vector format to estimate the performance with basic timbral information covering the entire length of each track. No feature weighting or pre-filtering was applied. All features were transformed to have a mean of zero and a standard deviation of one. We also investigated the utility of adding chromatic attributes. These describe the notes of the scale being used. This is especially important as a distinguishing feature in geographical ethnomusicology. The chromatic features provided by Marsyas are twelve per octave - Western tuning, but it may be possible to tell something from how similar to or different from Western tuning the music is.
 
-Keywords: subsampling, dataset, stratification, sampling, statistics, computer systems
+Attribute Information:
+The dataset is presented in two files, where each file corresponds to a different feature set. Both files contain the audio features of one thousand fifty-nine tracks. In the default features file, the first sixty-eight columns are audio features of the track, and the last two columns are the origin of the music, represented by latitude and longitude. In the default plus chromatic features file, the first one hundred sixteen columns are audio features of the track, and the last two columns are the origin of the music.
+
+Relevant Papers:
+The description of music collection and audio features can be found in Predicting the Geographical Origin of Music.
+
+Keywords: geographical origin, music, audio features, machine learning, economics, OpenML-Reg19

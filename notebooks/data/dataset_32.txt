@@ -1,19 +1,11 @@
-Thyroid Disease Records 
+The Pen-Based Recognition of Handwritten Digits dataset is a collection of handwritten digits gathered from forty-four writers. Thirty writers contributed to the training set, while fourteen writers were reserved for writer-independent testing. The dataset is also available in the UNIPEN format.
 
-This dataset contains health and medicine-related information about thyroid disease. It consists of thirty attributes, including seven continuous and twenty-three discrete ones. The dataset has 3772 instances, with approximately five point four percent missing values.
+We used a Wacom PL-100V pressure-sensitive tablet with an integrated LCD display and a cordless stylus to collect handwriting samples. The tablet sent x and y tablet coordinates and pressure level values of the pen at fixed time intervals. Writers were asked to write two hundred and fifty digits in random order inside boxes of five hundred by five hundred tablet pixel resolution. Each screen contained five boxes with the digits to be written displayed above. Writers were told to write only inside these boxes, and if they made a mistake or were unhappy with their writing, they could clear the content of a box using an on-screen button. The first ten digits were ignored because most writers were not familiar with this type of input device, but subjects were not aware of this.
 
-Attribute Information:
+In our study, we used only x and y coordinate information, ignoring the stylus pressure level values. We applied normalization to make our representation invariant to translations and scale distortions. The raw data captured from the tablet consisted of integer values between zero and five hundred. The new coordinates were such that the coordinate with the maximum range varied between zero and one hundred. Usually, x stayed in this range, since most characters are taller than they are wide.
 
-The dataset includes attributes such as age, sex, whether the patient is on thyroxine or not, if they had a query about being on thyroxine, whether they are on anti-thyroid medication, if they are sick, pregnant, had thyroid surgery, received I131 treatment, and more. 
+To train and test our classifiers, we needed to represent digits as constant-length feature vectors. A commonly used technique leading to good results is resampling the x and y points. Temporal resampling or spatial resampling can be used here. Raw point data are already regularly spaced in time, but the distance between them is variable. Previous research showed that spatial resampling to obtain a constant number of regularly spaced points on the trajectory yields much better performance, because it provides a better alignment between points. Our resampling algorithm used simple linear interpolation between pairs of points. The resampled digits were represented as a sequence of T points, regularly spaced in arc length, as opposed to the input sequence, which is regularly spaced in time.
 
-There are also attributes related to measurements of various hormones, such as TSH, T3, TT4, T4U, FTI, and TBG, including whether these measurements were taken or not. 
+We considered spatial resampling to eight, twelve, and sixteen points in our experiments and found that eight gave the best trade-off between accuracy and complexity. The way we used the dataset was to use the first half of the training set for actual training, one-fourth for validation, and one-fourth for writer-dependent testing. The test set was used for writer-independent testing and is the actual quality measure.
 
-Finally, the dataset includes the referral source of the patient.
-
-Dataset Information:
-
-This dataset was supplied by the Garavan Institute. It has approximately six databases from the institute, with plenty of missing data. There are two additional corrupted datasets, Hypothyroid.data and sick-euthyroid.data, which are highly similar in format to the other datasets. 
-
-Another thyroid database covers twenty classes and has a related domain theory. There is also a thyroid database suitable for training artificial neural networks, which has three classes and includes cost data.
-
-Keywords: Thyroid disease, health, medicine, hormone measurements, patient data.
+Keywords: handwritten digits, pressure-sensitive tablet, spatial resampling, feature vectors, classifier training, writer-independent testing.

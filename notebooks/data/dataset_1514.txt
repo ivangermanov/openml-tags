@@ -1,16 +1,13 @@
-MetaQSAR Project Dataset: QSAR-TID-12587
-Tags: Machine Learning, Medicine, MTLQSAR, Study Three
+MicroMass - Mixed 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12587. It has multiple rows and features, including IDs and class features: Molecule ChEMBL ID and Median PXC50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+A dataset to explore machine learning approaches for the identification of microorganisms from mass-spectrometry data.
 
-The dataset was obtained from the ChEMBL version seventeen database. It is essential for machine learning models in medicine, particularly in the development of QSAR models for predicting the biological activities of molecules.
+This dataset consists of a reference panel of twenty Gram positive and negative bacterial species covering nine genera, including several species known to be difficult to discriminate by mass spectrometry. Each species is represented by eleven to sixty mass spectra obtained from seven to twenty bacterial strains, constituting a total dataset of five hundred seventy-one spectra obtained from two hundred thirteen strains. 
 
-The molecular fingerprints were generated without requiring missing value imputation, as all bits are generated. This dataset is crucial for researchers working on machine learning models for predicting the biological activities of molecules.
+The spectra were obtained according to the standard culture-based workflow used in clinical routine, where the microorganism was first grown on an agar plate for twenty-four to forty-eight hours, before a portion of the colony was picked, spotted on a MALDI slide, and a mass spectrum was acquired.
 
-The features included in this dataset are Molecule ChEMBL ID and multiple FCFP6 1024-bit molecular fingerprint features. These features are essential for developing accurate QSAR models.
+Based on this reference panel, a dedicated in vitro mock-up mixture dataset was constituted. We considered ten pairs of species of various taxonomic proximity, including four mixtures involving species that belong to the same genus, two mixtures involving species that belong to distinct genera but to the same Gram type, and four mixtures involving species that belong to distinct Gram types. 
 
-The target protein is Cathepsin L2, also known as Cathepsin L2, Cathepsin U, Cathepsin V, CATL2, and CTSL2. It belongs to the species group Homo sapiens and is classified under the enzyme/protease/cysteine protease/cysteine protease CA clan/cysteine protease C1A family category.
+Each mixture was represented by two pairs of strains, which were mixed according to nine concentration ratios. Two replicate spectra were acquired for each concentration ratio and each couple of strains, leading to a total dataset of three hundred sixty spectra, among which eighty are actually pure sample spectra.
 
-Cathepsin L2 is involved in various biological processes, including proteolysis, apoptotic process, immune response, positive regulation of peptidase activity, antigen processing and presentation of exogenous peptide antigen via MHC class II, extracellular matrix disassembly, and proteolysis involved in protein catabolic process.
-
-Keywords: QSAR, Machine Learning, Medicine, MTLQSAR, Cathepsin L2, Proteolysis, Apoptotic Process, Immune Response.
+Keywords: mass spectrometry, microorganisms, machine learning, bacterial species, MALDI-TOF

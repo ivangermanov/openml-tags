@@ -1,0 +1,22 @@
+Within Project Defect Prediction for Ansible
+Tags: Computer Systems, Machine Learning
+Context
+Infrastructure as Code (IaC) is a DevOps strategy that enables the management and provisioning of infrastructure through the definition of machine-readable files and automation around them, rather than physical hardware configuration or interactive configuration tools. Although IaC represents an increasingly widely adopted practice, little is known about how to best maintain, swiftly evolve, and continuously improve the code behind the IaC strategy in a measurable manner.
+
+On the other hand, source code measurements are often computed and analyzed to evaluate different quality aspects of the software developed. In particular, Infrastructure as Code is simply "code," as such it is prone to defects as any other programming language. This dataset targets the YAML-based Ansible language to devise defect prediction approaches for IaC based on Machine Learning.
+
+Content
+The dataset contains metrics extracted from open-source GitHub repositories based on the Ansible language that satisfied certain criteria. These include the presence of recent pushes, multiple releases, a significant number of IaC scripts, core contributors, continuous integration practices, comments ratio, commit frequency, issue frequency, and licenses.
+
+Metrics are grouped into three categories: IaC-oriented metrics of structural properties derived from the source code of infrastructure scripts; Delta metrics that capture the amount of change in a file between two successive releases, collected for each IaC-oriented metric; and Process metrics that capture aspects of the development process rather than aspects about the code itself.
+
+Acknowledgements
+Thanks to the open-source community.
+
+Inspiration
+What source code properties and properties about the development process are good predictors of defects in Infrastructure as Code scripts?
+
+Features:
+Additions, Average Additions, Maximum Additions, Average Play Size, Average Task Size, Change Set Average, Change Set Maximum, Code Churn Average, Code Churn Count, Code Churn Maximum, Commit, Commits Count, Committed Date, Contributors Count, Deletions, Average Deletions, Maximum Deletions, Failure Prone, File Path, Highest Contributor Experience, Hunks Median, Lines Blank, Lines Code, Lines Comment, Minor Contributors Count, Number Authorized Key, Number Block Error Handling, Number Blocks, Number Commands, Number Conditions, Number Decisions, Number Deprecated Keywords, Number Deprecated Modules, Number Distinct Modules, Number External Modules, Number Fact Modules, Number File Exists, Number File Mode, Number File Modules, Number Filters, Number Ignore Errors, Number Import Playbook, Number Import Role, Number Import Tasks, Number Include, Number Include Role, Number Include Tasks, Number Include Vars, Number Keys, Number Lookups, Number Loops, Number Math Operations, Number Names with Vars, Number Parameters, Number Paths, Number Plays, Number Prompts, Number Regex, Number Roles, Number Suspicious Comments, Number Tasks, Number Tokens, Number Unique Names, Number Uri, Number Vars, Text Entropy
+
+Keywords: Infrastructure as Code, Ansible, Machine Learning, Defect Prediction, GitHub Repositories

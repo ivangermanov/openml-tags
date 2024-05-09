@@ -1,0 +1,14 @@
+Subsampling of the dataset Arcene, categorized under Life Science and Statistics, generated using the following source code.
+
+The function `subsample` takes in parameters including `seed`, `nrows max`, `ncols max`, `nclasses max`, and `stratified`. It first uniformly samples classes from the unique values in `y`, ensuring the number of classes does not exceed `nclasses max`. The indices where one of these classes is present are then selected, and `x` and `y` are updated accordingly.
+
+If necessary, the function uniformly samples columns, selecting a specified number of column indices without replacement. The selected columns are then used to update `x`.
+
+Finally, if the length of `x` exceeds `nrows max`, the function performs stratified sampling, taking into account the target variable `y`. This ensures that the resulting dataset is representative of the original distribution.
+
+The resulting dataset consists of `x`, `y`, and additional metadata including the categorical mask and column names.
+
+Features: 
+Mass Spect Peak, Retention Time, ... 
+
+Keywords: Arcene, Subsampling, Stratified Sampling, Feature Selection, Life Science, Statistics

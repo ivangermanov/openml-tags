@@ -1,9 +1,13 @@
-Fri C Two Dataset 
+The Friedman Datasets are eighty artificially generated datasets. The dataset names are coded as "Friedman Colinearity Degree Sample Number Feature Number". 
 
-This is a binarized regression problem dataset, particularly useful for chemistry and life science studies. It is also relevant to myth-busting exercises and various study cases.
+These datasets include both linear and nonlinear relations between input and output, and a normalized noise is added to the output. The Friedman function includes five features for input. To measure the effects of nonrelated features, additional features are added to the datasets. 
 
-The dataset is a modified version of the original data set. The numeric target feature has been converted into a two-class nominal target feature. This was achieved by calculating the mean and then classifying all instances with a lower target value as positive (labelled 'Positive') and all others as negative (labelled 'Negative').
+These added features are independent from the output. However, to measure the algorithm's robustness to colinearity, the datasets are generated with five different colinearity degrees. The colinearity degree is the number of features depending on other features.
 
-The dataset includes several features, including ozone-related variables. 
+The generated Friedman dataset's parameters and values are given below: The number of features varies, but only the first five features are related to the output; the rest are completely random. The number of samples also varies. Colinearity degrees range from zero to four.
 
-Keywords: Binarized Regression, Chemistry, Life Science, Myth-Busting, Study Cases
+For the datasets with a colinearity degree of four, the number of features varies. The other datasets have a varying number of features. As a result, eighty artificial datasets are generated.
+
+The last attribute in each file is the target. The datasets were designed to test various aspects of machine learning algorithms, including their ability to handle noisy data and irrelevant features.
+
+Keywords: Friedman Datasets, Artificially Generated, Linear Relations, Nonlinear Relations, Normalized Noise, Colinearity Degrees, Machine Learning Algorithms.

@@ -1,9 +1,11 @@
-The Electricity dataset is a widely used collection of data described by various researchers and analyzed extensively. This data was collected from the Australian New South Wales Electricity Market, where prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done.
+This dataset, named QSAR-TID-10277, contains QSAR data showing activity values of several compounds on drug target TID: 10277. It has multiple rows and features, including identifiers and class features.
 
-The dataset contains instances dated from May to December. Each example of the dataset refers to a period of thirty minutes, resulting in forty-eight instances for each time period of one day. Each example on the dataset has several fields, including the day of the week, the timestamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. The class label identifies the change of the price in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends.
+The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. These fingerprints do not typically require missing value imputation as all bits are generated.
 
-Attribute information includes the date, which was normalized; the day of the week; the period, which represents the time of the measurement in half-hour intervals over twenty-four hours and was also normalized; the New South Wales electricity price, normalized; the New South Wales electricity demand, normalized; the Victoria electricity price, normalized; the Victoria electricity demand, normalized; and the scheduled electricity transfer between both states, normalized.
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR datasets for various drug targets. This particular dataset focuses on the Serine/Threonine-Protein Kinase MST2, also known as Mammalian STE20-Like Protein Kinase Two.
 
-The dataset is relevant for learning with drift detection andsplice-2 comparative evaluation.
+The Serine/Threonine-Protein Kinase MST2 is an enzyme that belongs to the STE protein kinase family and plays a crucial role in various cellular processes, including apoptosis, cell proliferation, and signal transduction. It has been implicated in several diseases, including cancer and neurological disorders.
 
-Keywords: Electricity Market, Demand and Supply, Price Trends, Drift Detection, Comparative Evaluation.
+The dataset provides information on the chemical structure and bioactivity of various compounds against this drug target, which can be useful for researchers and scientists working in the field of drug discovery and development.
+
+Keywords: QSAR, drug target, molecular fingerprints, Serine/Threonine-Protein Kinase MST2, apoptosis, cell proliferation, signal transduction, drug discovery.

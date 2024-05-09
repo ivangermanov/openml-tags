@@ -1,10 +1,19 @@
-QSAR-TID-100865
-Tags: Images, Machine Learning, MTLQSAR, study_3
+Nomao Data Set
 
-This dataset contains QSAR data showing activity values of several compounds on drug target Ghrelin Receptor, and it has rows and features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The Nomao data set collects information about various places, including their names, phone numbers, and localizations, from multiple sources. The primary goal of this data set is to detect duplicate entries, which refer to the same location. Each instance in the data set compares two different spots.
 
-The dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target Ghrelin Receptor, which is also known as Ghrelin Growth Hormone Secretagogue Receptor. This receptor is a single protein preferred name and its synonyms include Ghrelin Growth Hormone Secretagogue Receptor and Short Peptide Receptor family A GPCR.
+Data Set Characteristics:
+The Nomao data set is univariate and belongs to the computer science domain. It contains real-valued attributes and is suitable for classification tasks. This data set also contains missing values.
 
-The receptor is classified under one membrane receptor family A G protein coupled receptor peptide receptor family A GPCR short peptide receptor family A GPCR GRP related receptor. It is involved in various biological processes including signal transduction, G protein coupled receptor signaling pathway, actin polymerization or depolymerization, adult feeding behavior, response to hormone, hormone mediated signaling pathway, growth hormone secretion, response to food, positive regulation of appetite, negative regulation of interleukin one beta production, negative regulation of interleukin six production, negative regulation of tumor necrosis factor production, cellular response to insulin stimulus, positive regulation of multicellular organism growth, positive regulation of insulin like growth factor receptor signaling pathway, decidualization, insulin like growth factor receptor signaling pathway, negative regulation of inflammatory response, and regulation of synapse assembly.
+Data Set Information:
+The Nomao data set consists of thirty-four thousand four hundred sixty-five instances, which are a mix of continuous and nominal values. These instances are labeled by human experts. The first twenty-nine thousand one hundred four instances were labeled using human prior knowledge. The remaining instances were labeled using different active learning methods, including marg, wmarg, wmarg five, rand, baseline, nomao, and tsun.
 
-Keywords: QSAR, Ghrelin Receptor, Machine Learning, MTLQSAR, Molecular Fingerprints, Signal Transduction.
+Attribute Information:
+This data set contains one hundred twenty attributes, out of which eighty-nine are continuous, and thirty-one are nominal. These attributes include the label and id. Missing data are represented by question marks. The labels are plus one if the spots being compared should be merged, and minus one if they do not refer to the same entity.
+
+The first attribute is the id, which is a combination of the names of the compared spots separated by a sharp symbol. The remaining attributes are divided into categories based on the type of information, such as clean name, city, zip, street, website, country name, geocoder locality name, geocoder input address, geocoder output address, geocoder postal code number, geocoder country name code, phone, fax, street number, geocode coordinates long, geocode coordinates lat, coordinates long, coordinates lat, geocode coordinates difference, and coordinates difference.
+
+Relevant Papers:
+Design and Analysis of the Nomao Challenge - Active Learning in the Real-World.
+
+Keywords: Nomao, deduplication, active learning, real-world applications, computer science, classification, machine learning.

@@ -1,24 +1,11 @@
-Breast Tissue Dataset
+GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Chemistry, Life Science, Study
+The inspiration behind creating this repository stemmed from an increasing need in the machine learning and bioinformatics communities for a standardized collection of microarray classification problems that could be used by different researchers. This enables many distinct classification or feature selection techniques to be compared to each other on the same set of problems.
 
-Data Set Information:
+Each gene expression sample in the GEMLeR repository originates from the large, publicly available Expression Project for Oncology (expO) repository by the International Genomics Consortium. The primary objective of expO and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions. This availability of information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-Impedance measurements of freshly excised breast tissue were made at various frequencies, including fifteen point six twenty-five kilohertz, thirty-one point twenty-five kilohertz, sixty-two point five kilohertz, one hundred twenty-five kilohertz, two hundred fifty kilohertz, five hundred kilohertz, and one thousand kilohertz. These measurements, when plotted in the real versus negative imaginary plane, constitute the impedance spectrum from which breast tissue features are computed.
+The decision to utilize data from the expO repository was made due to several factors, including the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-The dataset can be utilized for predicting the classification of either the original six classes or of four classes by merging together the fibroadenoma, mastopathy, and glandular classes, whose discrimination is not deemed important, as they cannot be accurately discriminated anyway.
+When publishing material based on GEMLeR datasets, please acknowledge the assistance received by using this repository. This will enable others to obtain the same datasets and replicate experiments.
 
-Attribute Information:
-
-* Impedivity at Zero Frequency: a measure of impedivity in ohms at zero frequency
-* Phase Angle at Five Hundred Kilohertz: the phase angle measured at a frequency of five hundred kilohertz
-* High-Frequency Slope of Phase Angle: the slope of the phase angle at high frequencies
-* Impedance Distance Between Spectral Ends: the distance between the start and end points of the impedance spectrum
-* Area Under Spectrum: the total area encompassed by the impedance spectrum
-* Area Normalized by Impedance Distance: the area under the spectrum normalized by the impedance distance
-* Maximum of the Spectrum: the highest point on the impedance spectrum
-* Distance Between Impedivity at Zero Frequency and Real Part of the Maximum Frequency Point: the distance between the impedivity at zero frequency and the real part of the maximum frequency point
-* Length of the Spectral Curve: the total length of the impedance spectrum
-* Class: the classification of the breast tissue, which can be carcinoma, fibroadenoma plus mastopathy plus glandular, connective, or adipose
-
-Keywords: breast tissue, impedance measurement, frequency, classification, cancer diagnosis
+Keywords: gene expression, machine learning, bioinformatics, microarray analysis, oncology, genomics consortium.

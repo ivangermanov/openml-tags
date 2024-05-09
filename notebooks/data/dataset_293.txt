@@ -1,15 +1,52 @@
-This dataset is one of forty-one drug design datasets. The datasets were formed using Adriana Code software, which is available online at www.molecular-networks.com/software/adrianacode. The molecules and outputs were taken from the original studies cited below.
+Covertype 
+Tags: Machine Learning, Physical Sciences 
 
-The Carbolenes dataset was taken from a study published in the Journal of Medicinal Chemistry in nineteen ninety-six. The MTP two dataset was taken from a study published in the Journal of Chemical Information and Computer Science in two thousand three. The Chang, Cristalli, Depreux, Doherty, Garrat two, Garrat, Heyl, Krystek, Lewis, Penning, Rosowsky, Siddiqi, Stevenson, Strupcz, Svensson, Thompson, Tsutumi, Uejling, Yokoyama one, and Yokoyama two datasets were taken from a study published in the Journal of Medicinal Chemistry in nineteen ninety-six.
+This is the famous Covertype dataset in its binary version. The dataset was preprocessed as follows: 
+each file column-wise according to specific rules; 
+if a column contained only one value (a constant feature), it was set to zero and thus removed by sparsity; 
+if a column contained two values (a binary feature), the value occurring more often was set to zero, and the other to one; 
+if a column contained more than two values (a multinary or real feature), the column was divided by its standard deviation. 
+Duplicate lines were finally removed.
 
-The MTP dataset was taken from a study published in the Journal of Chemical Information and Model in two thousand five. The Benzo thirty-two dataset was taken from a study published in the European Journal of Medicinal Chemistry in nineteen ninety-six. The PHENETYL one dataset was taken from a book titled QSAR: Hansch Analysis and Related Approaches, which was edited by H. Kubinyi and published by VCH in nineteen ninety-three.
+The dataset was transformed from multiclass into binary class.
 
-The PAH dataset was taken from a study published in the journal Chemometrics and Intelligent Laboratory Systems in nineteen ninety-five. The PDGFR dataset was taken from a study published in the Journal of Chemical Information and Computational Science in two thousand four. The Phen dataset was taken from a study published in the Journal of Medicinal Chemistry in nineteen seventy-two.
+Features include Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at nine am, Hillshade at Noon, Hillshade at three pm, Horizontal Distance to Fire Points, Wilderness Area, and Soil Type.
 
-The Topo two one and YProp four one datasets were taken from a study published in the Journal of Chemical Information and Computational Science in two thousand three. The QSABR one, QSABR two, QSARTOX, QSBR RW one, QSBR Y two, QSBRALKS, QSFRDHLS, QSFSR one, QSFSR two, and QSPRCMPX datasets were taken from various studies published between nineteen ninety-five and two thousand.
+Predicting forest cover type from cartographic variables only (no remotely sensed data). 
+The actual forest cover type for a given observation (thirty by thirty meter cell) was determined from United States Forest Service Region Two Resource Information System data. 
+Independent variables were derived from data originally obtained from United States Geological Survey and United States Forest Service data. 
+Data is in raw form (not scaled) and contains binary (zero or one) columns of data for qualitative independent variables (wilderness areas and soil types).
 
-The Selwood dataset was taken from a study published in the Journal of Medicinal Chemistry in nineteen ninety.
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. 
+These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices. 
+Some background information for these four wilderness areas: 
+Neota probably has the highest mean elevational value of the four wilderness areas. 
+Rawah and Comanche Peak would have a lower mean elevational value, while Cache la Poudre would have the lowest mean elevational value. 
+As for primary major tree species in these areas, Neota would have spruce fir, while Rawah and Comanche Peak would probably have lodgepole pine as their primary species, followed by spruce fir and aspen. 
+Cache la Poudre would tend to have ponderosa pine, Douglas fir, and cottonwood willow. 
+The Rawah and Comanche Peak areas would tend to be more typical of the overall dataset than either the Neota or Cache la Poudre, due to their assortment of tree species and range of predictive variable values (elevation, etc.). 
+Cache la Poudre would probably be more unique than the others, due to its relatively low elevation range and species composition.
 
-Features include ozone one, ozone two, ozone three, and so on up to ozone twenty-two.
+Has missing values? No.
 
-Keywords: drug design, Adriana Code, medicinal chemistry, chemical information, QSAR, biodegradability, toxicity, molecular descriptors.
+Additional variable information:
+Given is the attribute name, attribute type, the measurement unit, and a brief description. 
+The forest cover type is the classification problem. 
+The order of this listing corresponds to the order of numerals along the rows of the database.
+Elevation is a quantitative variable measured in meters, describing elevation in meters. 
+Aspect is a quantitative variable measured in azimuth, describing aspect in degrees azimuth. 
+Slope is a quantitative variable measured in degrees, describing slope in degrees. 
+Horizontal Distance to Hydrology is a quantitative variable measured in meters, describing horizontal distance to nearest surface water features. 
+Vertical Distance to Hydrology is a quantitative variable measured in meters, describing vertical distance to nearest surface water features. 
+Horizontal Distance to Roadways is a quantitative variable measured in meters, describing horizontal distance to nearest roadway. 
+Hillshade at nine am is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at nine am, summer solstice. 
+Hillshade at Noon is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at noon, summer solstice. 
+Hillshade at three pm is a quantitative variable measured on a zero to two hundred fifty-five index, describing hillshade index at three pm, summer solstice. 
+Horizontal Distance to Fire Points is a quantitative variable measured in meters, describing horizontal distance to nearest wildfire ignition points. 
+Wilderness Area is a qualitative variable measured in absence or presence, describing wilderness area designation. 
+Soil Type is a qualitative variable measured in absence or presence, describing soil type designation. 
+Cover Type is an integer variable measured from one to seven, describing forest cover type designation.
+
+Class labels include Spruce Fir, Lodgepole Pine, Ponderosa Pine, Cottonwood Willow, Aspen, Douglas Fir, and Krummholz.
+
+Keywords: forest cover type, cartographic variables, wilderness areas, soil types, tree species, ecological processes, forest management practices.

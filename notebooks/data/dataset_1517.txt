@@ -1,13 +1,30 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one zero three four five one, and it has twenty-seven rows and one thousand twenty-six features including IDs and class feature: molecule ChEMBL ID and median pXC fifty.
+Robot Execution Failures Data Set
 
-The features represent FCFP six one zero two four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the pipeline pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Abstract:
+This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
 
-Features include molecule ChEMBL ID, FCFP six one zero two four bit molecular fingerprints, and many others.
+Source:
+Original owner and donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal
 
-Scraped data includes information about the Angiotensin type two receptor, which is a single protein preferred name, also known as Angiotensin two type-two receptor, Type-two Angiotensin two receptor, and others. It belongs to the species Sus scrofa, and its protein target classification is one point Membrane receptor slash Family A G protein-coupled receptor slash Peptide receptor family A GPCR slash Short peptide receptor family A GPCR slash Angiotensin receptor.
+Data Set Information:
+The donation includes five data sets, each defining a different learning problem:
 
-Description includes relationship accession type-two Angiotensin two receptor Single Protein, and many others. It has gene ontology components including plasma membrane and membrane, gene ontology functions including G protein-coupled receptor activity and Angiotensin type two receptor activity, and gene ontology processes including inflammatory response, signal transduction, G protein-coupled receptor signaling pathway, Angiotensin-activated signaling pathway, regulation of apoptotic process, and blood vessel diameter maintenance.
+* LP One: failures in approach to grasp position
+* LP Two (this data set): failures in transfer of a part
+* LP Three: position of part after a transfer failure
+* LP Four: failures in approach to ungrasp position
+* LP Five: failures in motion with part
 
-It also includes UniProt information, InterPro information, and Pfam information.
+In order to improve classification accuracy, a set of five feature transformation strategies (based on statistical summary features, discrete Fourier transform, etc.) was defined and evaluated. This enabled an average improvement of twenty percent in accuracy.
 
-Keywords: QSAR, machine learning, medicine, MTLQSAR, ChEMBL, molecular fingerprints, Angiotensin type two receptor, G protein-coupled receptor, signal transduction, inflammatory response.
+Attribute Information:
+All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was of three hundred fifteen milliseconds. Each example is described as follows:
+
+class Force X One Force Y One Force Z One Torque X One Torque Y One Torque Z One ... Force X Fifteen Force Y Fifteen Force Z Fifteen Torque X Fifteen Torque Y Fifteen Torque Z Fifteen
+
+where Force X One to Force X Fifteen is the evolution of force FX in the observation window, the same for FY, FZ, and the torques; there is a total of ninety features.
+
+Relevant Papers:
+Feature Transformation Strategies for a Robot Learning Problem, Robot Learning at the Task Level: a Study in the Assembly Domain, Integration and Learning in Supervision of Flexible Assembly Systems.
+
+Keywords: robot execution failures, force measurements, torque measurements, failure detection, machine learning, classification accuracy.

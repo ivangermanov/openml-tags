@@ -1,5 +1,57 @@
-BNG Dataset Tags: Artificial, BNG, Chemistry, Life Science 
+Title: Class-Level Data for KC1 
 
-This dataset features an X Box and a Y Box with a specified Width and Height. Additionally, it includes On Pix, X Bar, Y Bar, X Squared Bar, Y Squared Bar, XY Bar, X Squared Y Bar, XY Squared Bar, X Edge, X Edge Vertical Y, Y Edge, and Y Edge Vertical X. The dataset also includes a classification category.
+This dataset includes a numeric attribute to indicate defectiveness.
 
-Keywords: Dataset, Artificial, Chemistry, Life Science, Classification
+Sources 
+The creator of this dataset is not specified.
+The date of creation is not specified.
+The contact information is not specified.
+
+Donor 
+The donor of this dataset is not specified.
+
+Past Usage 
+This dataset was used for investigating the effect of module size on defect prediction using static measures. Several machine learning algorithms were used to predict defective modules in five NASA products, namely, CM1, JM1, KC1, KC2, and PC1. A set of static measures were used as predictor variables. The results showed that a large portion of the modules were small, as measured by lines of code. When experimenting on the data subsets created by partitioning according to module size, higher prediction performance was obtained for the subsets that included larger modules. Additionally, defect prediction was performed using class-level data for KC1 rather than method-level data, resulting in improved prediction performance compared to using method-level data. These findings suggest that quality assurance activities can be guided even better if defect predictions are made by using data that belongs to larger modules.
+
+Features 
+The descriptions of the features are taken from a glossary.
+
+Feature Used as the Response Variable 
+The number of defects recorded for the class.
+
+Features at Class Level Originally 
+The percentage of data that is public and protected data in a class, which is a measure of encapsulation. 
+The amount of times that a class's public and protected data is accessed, which is a measure of encapsulation. 
+The number of distinct non-inheritance-related classes on which a class depends. 
+The level for a class, indicating at what level a class is located within its class hierarchy. 
+For each data field in a class, the percentage of the methods in the class using that data field, which indicates low or high percentage of cohesion. 
+The number of classes derived from a specified class. 
+Whether a class is dependent on a descendant. 
+A count of calls by higher modules. 
+A count of methods implemented within a class plus the number of methods accessible to an object class due to inheritance, which indicates greater polymorphism. 
+A count of methods implemented within a class, which indicates greater polymorphism.
+
+Features Transformed to Class Level 
+Transformation was achieved by obtaining minimum, maximum, sum, and average values over all the methods in a class. 
+Lines with only white space or no text content. 
+This metric is the number of branches for each module, which defines those edges that exit from a decision node. 
+Lines that contain both code and comment. 
+The number of lines in a module, including all blank lines, comment lines, and source lines. 
+It is a measure of the complexity of a module's decision structure, which is the number of linearly independent paths. 
+Design complexity is a measure of a module's decision structure as it relates to calls to other modules, quantifying the testing effort related to integration. 
+Essential complexity is a measure of the degree to which a module contains unstructured constructs. 
+Source lines of code that contain only code and white space. 
+Complexity of a given algorithm independent of the language used to express the algorithm. 
+Level of difficulty in the program. 
+Estimated mental effort required to develop the program. 
+Estimated number of errors in the program. 
+This is a Halstead metric that includes the total number of operator occurrences and total number of operand occurrences. 
+Level at which the program can be understood. 
+Estimated amount of time to implement the algorithm. 
+This is a Halstead metric that contains the minimum number of bits required for coding the program. 
+Variables and identifiers, constants, function names when used during calls. 
+Variables and identifiers, constants, function names when used during calls. 
+Number of unique operators. 
+Total Lines of Code.
+
+Keywords: defect prediction, software engineering, class-level data, machine learning algorithms, static measures, module size, lines of code, encapsulation, polymorphism, Halstead metrics.

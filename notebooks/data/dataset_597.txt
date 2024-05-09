@@ -1,5 +1,21 @@
-The PM10 dataset is a binarized regression problem that originates from the fields of Chemistry and Life Science. This particular version of the dataset is a modified rendition of the original, where the numeric target feature has been converted into a two-class nominal target feature. This was achieved by calculating the mean and subsequently categorizing all instances with a lower target value as Positive and all others as Negative.
+The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
 
-The dataset encompasses a range of features, including Concentration of PM10, Cars per Hour, Temperature at Two Meters, Wind Speed, Temperature Difference between Two Meters and Twenty-Five Meters, Wind Direction, and Hour of Day. These features have been carefully selected to provide a comprehensive understanding of the underlying phenomenon.
+The dataset names are coded according to their specific characteristics, including colinearity degree and sample number. 
 
-Keywords: PM10, Binarized Regression, Chemistry, Life Science, Air Quality, Environmental Factors.
+These datasets were created using the Friedman function, which includes both linear and nonlinear relationships between input and output, with a normalized noise added to the output. 
+
+This function is particularly useful because it allows researchers to generate datasets with specific properties, such as the ability to test the effects of nonrelated features or to measure an algorithm's robustness to colinearity.
+
+The Friedman function itself is complex, incorporating multiple variables and mathematical operations. It generates datasets with five features for input, which can then be expanded to include additional features that are independent from the output.
+
+To create these datasets, various parameters were manipulated, including the number of features, the number of samples, and the colinearity degree. 
+
+The number of features varied from five to one hundred, although only the first five features are actually related to the output. The remaining features are randomly generated.
+
+Similarly, the number of samples ranged from one hundred to one thousand. 
+
+The colinearity degree, which measures the number of features dependent on other features, ranged from zero to four.
+
+By varying these parameters, eighty unique datasets were generated, each with its own distinct characteristics.
+
+Keywords: Friedman Datasets, stochastic gradient boosting, colinearity degree, nonlinear relationships, artificial datasets.

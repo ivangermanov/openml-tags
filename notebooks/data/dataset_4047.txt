@@ -1,24 +1,11 @@
-Wine Quality
+The QSAR-TID-101225 dataset contains QSAR data showing activity values of several compounds on drug target TID: 101225. This dataset has seventy-nine rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-Tags: Machine Learning, Statistics
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset belongs to the "classification on numerical features" benchmark.
+This dataset was part of the MetaQSAR project in September two thousand fifteen.
 
-The Wine Quality dataset was transformed in the same way as the tabular data benchmark.
+The drug target is Myosin IIIA, also known as MYO three A or Myosin-three-a. It is a single protein and is classified as an enzyme, kinase, or protein kinase, specifically belonging to the STE protein kinase group and STE twenty family, and further classified into the STE protein kinase NinaC subfamily.
 
-Original Description:
+Myosin IIIA is found in Homo sapiens and is involved in various biological processes, including visual perception, sensory perception of sound, protein phosphorylation, and regulation of actin filament length. It is also associated with diseases such as deafness, autosomal recessive thirty.
 
-The Wine Quality dataset was created using red and white wine samples. The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert graded the wine quality between zero (very bad) and ten (very excellent).
-
-Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed, including Mean Absolute Deviation (MAD) and confusion matrix for a fixed error tolerance.
-
-The relative importance of the input variables was also measured by a sensitivity analysis procedure. The datasets can be viewed as either classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones.
-
-Outlier detection algorithms could be used to detect the few excellent or poor wines. It would also be interesting to test feature selection methods, as not all input variables may be relevant.
-
-The datasets are related to red and white variants of the Portuguese Vinho Verde wine. Due to privacy and logistic issues, only physiochemical and sensory variables are available, without any data about grape types, wine brands, or wine selling prices.
-
-Attribute Information:
-The input variables are based on physiochemical tests, including fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, and sulphates. The output variable is based on sensory data and represents the quality of the wine, scored between zero and ten.
-
-Keywords: Wine Quality, Physiochemical Tests, Sensory Data, Classification, Regression, Feature Selection, Outlier Detection.
+Keywords: QSAR, molecular fingerprints, Myosin IIIA, MetaQSAR, protein kinase, enzyme, Homo sapiens, biological processes, disease associations.

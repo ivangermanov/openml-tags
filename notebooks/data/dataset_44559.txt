@@ -1,0 +1,17 @@
+Name: Madeline Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+
+Tags: Agriculture, Chemistry 
+
+Subsampling of the dataset Madeline with seed equal to one arguments number rows equal to two thousand arguments number columns equal to one hundred arguments number classes equal to ten arguments no stratify equal to true generated with the following source code.
+
+The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification or not.
+
+The function first uniformly samples classes from the unique values in the target variable, ensuring that the selected classes are representative of the overall distribution. It then selects the indices where one of these classes is present and subsets the data accordingly.
+
+Next, the function uniformly samples columns from the feature set, selecting a specified number of columns without replacement. The selected columns are then used to create a new dataset.
+
+If the resulting dataset has more rows than the specified maximum, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is maintained.
+
+Finally, the function returns a new dataset object, containing the subsampled data, along with relevant metadata such as the column names and categorical mask.
+
+Keywords: subsampling, dataset, stratification, feature selection, class distribution.

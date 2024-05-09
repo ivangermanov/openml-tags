@@ -1,50 +1,25 @@
-El Nino Data
+This is one of forty-one drug design datasets. The datasets with eleven hundred forty-three features are formed using Adriana Code software. The molecules and outputs are taken from the original studies. The other datasets are taken exactly from the original studies. The last attribute in each file is the target.
 
-Data Type: Spatio-Temporal
+Original studies include Carbolenes, MTP Two, Chang, Cristalli, Depreux, Doherty, Garrat Two, Garrat, Heyl, Krystek, Lewis, Penning, Rosowsky, Siddiqi, Stevenson, Strupcz, Svensson, Thompson, Tsutumi, Uejling, Yokoyama One, and Yokoyama Two.
 
-Abstract:
-The dataset contains oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. The data is expected to aid in the understanding and prediction of El Nino/Southern Oscillation (ENSO) cycles.
+The Carbolenes dataset is derived from the study published in the Journal of Medicinal Chemistry in nineteen ninety-six, titled "Structure-Activity Relationships of Carbolenes". 
 
-Sources:
-Original Owner: Pacific Marine Environmental Laboratory, National Oceanic and Atmospheric Administration, US Department of Commerce
-Donor: Department of Statistics, Iowa State University
-Date Donated: June 1999
+The MTP Two dataset is derived from the study published in the Journal of Chemical Information and Computer Science in two thousand three, titled "General Melting Point Prediction Based on a Diverse Compound Dataset and Artificial Neural Networks".
 
-Data Characteristics:
-This data was collected with the Tropical Atmosphere Ocean (TAO) array, which was developed by the international Tropical Ocean Global Atmosphere (TOGA) program. The TAO array consists of nearly seventy moored buoys spanning the equatorial Pacific, measuring oceanographic and surface meteorological variables critical for improved detection, understanding, and prediction of seasonal-to-interannual climate variations originating in the tropics, most notably those related to the El Nino/Southern Oscillation (ENSO) cycles. The moorings were developed by the National Oceanic and Atmospheric Administration's Pacific Marine Environmental Laboratory (PMEL).
+The Chang dataset is part of a larger collection of datasets derived from the study published in the Journal of Medicinal Chemistry in nineteen ninety-six, titled "Neighborhood Behavior: A Useful Concept for Validation of Molecular Diversity Descriptors".
 
-Each mooring measures air temperature, relative humidity, surface winds, sea surface temperatures, and subsurface temperatures down to a depth of five hundred meters, and a few of the buoys measure currents, rainfall, and solar radiation. The data from the array, and current updates, can be viewed on the web.
+Benzo Thirty-Two is derived from the study published in the European Journal of Medicinal Chemistry in nineteen ninety-six, titled "Syntheses, Pharmacological Evaluation, and Molecular Modelling of Substituted Six-Alkoxyimidazo One Two-B Pyridazines as New Ligands for the Benzodiazepine Receptor".
 
-The data consists of the following variables: date, latitude, longitude, zonal winds, meridional winds, relative humidity, air temperature, sea surface temperature, and subsurface temperatures down to a depth of five hundred meters. Data taken from the buoys dates back to as early as nineteen eighty for some locations. Other data that was taken in various locations includes rainfall, solar radiation, current levels, and subsurface temperatures.
+Phenetyle One is part of a larger collection of datasets derived from the book "QSAR: Hansch Analysis and Related Approaches", published in nineteen ninety-three.
 
-Variable Characteristics:
-The latitude and longitude in the data showed that the buoys moved around to different locations. The latitude values stayed within a degree from the approximate location, yet the longitude values were sometimes as far as five degrees off of the approximate location.
+PAH is derived from the study published in the journal Chemometrics and Intelligent Laboratory Systems in nineteen ninety-five, titled "Weighted Holistic Invariant Molecular Descriptors. Part Two. Theory Development and Applications on Modelling Physiochemical Properties of Polycyclic Aromatic Hydrocarbons".
 
-Looking at the wind data, both the zonal and meridional winds fluctuated between minus ten meters per second and ten meters per second. The plot of the two wind variables showed no linear relationship. Also, the plots of each wind variable against the other three meteorological data showed no linear relationships.
+PDGFR is derived from the study published in the Journal of Chemical Information and Computer Science in two thousand four, titled "The Development of Linear, Ensemble, and Nonlinear Models for the Prediction and Interpretation of the Biological Activity of a Set of PDGFR Inhibitors".
 
-The relative humidity values in the tropical Pacific were typically between seventy percent and ninety percent. Both the air temperature and the sea surface temperature fluctuated between twenty and thirty degrees Celsius. The plot of the two temperature variables shows a positive linear relationship existing. The two temperatures when each plotted against time also have similar plot designs.
+Phen is derived from the study published in the Journal of Medicinal Chemistry in nineteen seventy-two, titled "Interrelationship of the Regression Models Used for Structure-Activity Analyses".
 
-Plots of the other meteorological variables against the temperature variables showed no linear relationship. There are missing values in the data. As mentioned earlier, not all buoys are able to measure currents, rainfall, and solar radiation, so these values are missing dependent on the individual buoy. The amount of data available is also dependent on the buoy, as certain buoys were commissioned earlier than others. All readings were taken at the same time of day.
+Topo Two One and YProp Four One are part of a larger collection of datasets derived from the study published in the Journal of Chemical Information and Computer Science in two thousand three, titled "Predictive Toxicology: Benchmarking Molecular Descriptors and Statistical Methods".
 
-Other Relevant Information:
-Background:
-The El Nino/Southern Oscillation (ENSO) cycle of nineteen eighty-two to nineteen eighty-three, the strongest of the century, created many problems throughout the world. Parts of the world such as Peru and the United States experienced destructive flooding from increased rainfalls while the western Pacific areas experienced drought and devastating brush fires. The ENSO cycle was neither predicted nor detected until it was near its peak. This highlighted the need for an ocean observing system to support studies of large-scale ocean-atmosphere interactions on seasonal-to-interannual time scales.
+QSAR BR One, QSAR BR Two, QSAR Tox, QSBR RW One, QSBR Y Two, QSBR Alks, QSFR DH LA, QSFSR One, and QSFSR Two are all part of a larger collection of datasets derived from various studies published between nineteen ninety-five and two thousand.
 
-Research Questions:
-How can the data be used to predict weather conditions throughout the world?
-How do the variables relate to each other?
-Which variables have a greater effect on the climate variations?
-Does the amount of movement of the buoy affect the reliability of the data?
-
-When performing an analysis of the data, one should pay attention to the possible effect of autocorrelation. Using a multiple regression approach to model the data would require a look at autoregression since the weather statistics of the previous days will affect today's weather.
-
-Data Format:
-The data is stored in ASCII files with one observation per line. Spaces separate fields and periods denote missing values.
-
-Past Usage:
-This data was used in the American Statistical Association Statistical Graphics and Computing Sections nineteen ninety-nine Data Exposition.
-
-References and Further Information:
-More information and data from the TAO array can be found at the Pacific Marine Environmental Laboratory TAO data webpage. Information on storm data is available here. This site contains data from January nineteen ninety-four to April nineteen ninety-eight in a chronological listing by state provided by the National Weather Service. The data includes hurricanes, tornadoes, thunderstorms, hail, floods, drought conditions, lightning, high winds, snow, and temperature extremes. Hurricane tracking data for the Atlantic is available here. The site contains a map showing the paths of the Atlantic hurricanes and also includes the storms' winds, pressure, and the category of the storm based on the Saffir-Simpson scale. Another site of interest related to the ENSO cycles is available here. This site contains information on twelve areas of the world that have demonstrated ENSO-precipitation relationships. Included in the site are maps of the areas and time series plots of actual daily precipitation and accumulated normal precipitation for the areas.
-
-Keywords: El Nino, Southern Oscillation, oceanographic, meteorological, Tropical Atmosphere Ocean, Tropical Ocean Global Atmosphere, Pacific Marine Environmental Laboratory, National Oceanic and Atmospheric Administration, climate variations.
+Keywords: Drug Design, QSAR, Molecular Descriptors, Adriana Code Software, Physiochemical Properties, Polycyclic Aromatic Hydrocarbons, PDGFR Inhibitors, Structure-Activity Analyses.

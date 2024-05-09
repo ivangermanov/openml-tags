@@ -1,16 +1,7 @@
-GEMLeR provides a comprehensive collection of gene expression datasets designed specifically for benchmarking gene expression-oriented machine learning algorithms. These datasets can be utilized for estimating various quality metrics, including accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
+The Arsenic Female Bladder dataset is a binarized regression problem related to chemistry and life science. This dataset is part of several studies, including Mythbusting One, Study One, Study Fifteen, Study Twenty, Study Forty-One, and Study Seven.
 
-This repository was inspired by the growing need within the machine learning and bioinformatics communities for a standardized collection of microarray classification problems that could be employed by diverse researchers. This enables the comparison of multiple classification or feature selection techniques on the same set of problems.
+This dataset has undergone a transformation where the numeric target feature has been converted into a two-class nominal target feature. This was achieved by calculating the mean and categorizing all instances with a lower target value as positive, denoted by 'Positive', and all others as negative, denoted by 'Negative'.
 
-The origin of the data lies within the Expression Project for Oncology (expO) repository, maintained by the International Genomics Consortium. The primary objective of expO and its consortium supporters is to procure tissue samples under standardized conditions and conduct gene expression analyses on a clinically annotated set of de-identified tumor samples. The resulting tumor data is updated with clinical outcomes and subsequently released into the public domain without any intellectual property restrictions.
+The dataset features include Group, Concentration, Age, and At Risk, which have been categorized accordingly based on their values.
 
-The availability of this information directly benefits patients, researchers, and pharmaceutical companies alike. Although numerous alternative sources of gene expression data exist, the decision to utilize data from the expO repository was driven by several factors, including the consistency of tissue sample processing procedures, the use of a single microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the access to a large number of samples across various tumor types.
-
-When publishing materials based on GEMLeR datasets, users are kindly requested to acknowledge the assistance received by utilizing this repository. This facilitates the replication of experiments by other researchers and enables them to access the same datasets.
-
-Features:
-
-* ID REF
-*...and many more...
-
-Keywords: gene expression, machine learning, bioinformatics, microarray analysis, oncology, genomics.
+Keywords: Arsenic, Female Bladder, Binarized Regression, Chemistry, Life Science, Mythbusting, Studies.

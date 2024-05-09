@@ -1,15 +1,9 @@
-Life Science, Machine Learning, MTLQSAR, Study Three
+The Artificial Characters dataset is a collection of artificially generated data that describes the structure of capital letters. Specifically, it focuses on the letters A, C, D, E, F, G, H, L, P, and R. Each letter's structure is broken down into a set of segments, resembling how an automatic program would segment an image. There are six hundred descriptions for each letter.
 
-The QSAR-TID-10701 dataset contains QSAR data showing activity values of several compounds on drug target TID: 10701. This dataset has 125 rows and 1026 features, including IDs and class feature.
+Originally, each instance of a letter was stored in a separate file, containing between one and seven segments, numbered zero through six. These files have since been merged, resulting in a single dataset. The first five instances describe the first five segments of the first segmentation of the first letter, followed by another seven instances describing another segmentation of the same letter, and so on.
 
-The features represent FCFP 1024 bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset contains several attributes that provide information about each segment. The object number indicates the number of the segment, ranging from zero to seven. The initial and final coordinates of a segment in a Cartesian plane are also included, represented by four variables: XX1, YY1, XX2, and YY2. Additionally, the size of each segment is calculated using the geometric distance between two points, A and B. Finally, the diagonal attribute represents the length of the diagonal of the smallest rectangle enclosing the character's picture, which remains constant across all objects.
 
-This dataset was obtained from the MetaQSAR project in September 2015.
+This dataset has been used in various research studies, including those focused on learning fuzzy concept definitions and learning quantitative features in symbolic environments.
 
-The data shows activity values of several compounds on drug target Methionine Aminopeptidase One, which is a single protein preferred name. It is also known as Map One, Metap One, and Peptidase M One.
-
-Methionine Aminopeptidase One is an enzyme/protease/metallo protease/metallo protease MG clan/metallo protease M24A subfamily. It is involved in various biological processes, including proteolysis, negative regulation of gene expression, protein processing, and protein modification process.
-
-This protein is located in the cytoplasm, cytosol, and cytoplasmic stress granule. It is also associated with various molecular functions, including mRNA binding, aminopeptidase activity, initiator methionyl aminopeptidase activity, peptidase activity, zinc ion binding, hydrolase activity, metal ion binding, and metalloaminopeptidase activity.
-
-Keywords: QSAR, machine learning, molecular fingerprints, Methionine Aminopeptidase One, enzyme, protease, metallo protease, biological processes, molecular functions.
+Keywords: Artificial Characters, capital letters, image segmentation, Cartesian plane, geometric distance, fuzzy concept definitions, symbolic environments.

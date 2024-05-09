@@ -1,15 +1,9 @@
-fl2000 Tags: **Author**: **Source**: 
+The SPECTF Heart dataset describes the diagnosis of cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient is classified into two categories: normal and abnormal. The database of SPECT image sets was processed to extract features that summarize the original SPECT images, resulting in forty-four continuous feature patterns created for each patient.
 
-County Data from the Presidential Election in Florida 
+The CLIP three algorithm was used to generate classification rules from these patterns, which were seventy-seven percent accurate when compared to cardiologists' diagnoses. This dataset is suitable for testing machine learning algorithms, comprising two hundred sixty-seven instances described by forty-five attributes. The predicted attribute is Overall Diagnosis, which is a binary class attribute.
 
-These data are derived from three sources. The candidate vote counts are the final certified counts reported by the Florida Division of Elections. These were obtained from the National Opinion Research Center website in the file Certified Results. Note that these do not include the federal absentee votes, so that Al Gore's total vote is actually higher here than George W. Bush's.
+There are no missing values in this dataset. The Overall Diagnosis attribute is binary, indicating whether the patient's diagnosis is normal or abnormal. The remaining attributes represent counts in different regions of interest during rest and stress tests, ranging from zero to one hundred.
 
-The undervote and overvote counts were extracted from the National Opinion Research Center ballot-level data. Since the aligned file is too large to work with in R, or almost any other program, a Unix program called cut was used to extract just the necessary columns. The results were then read into R and processed there.
+This dataset is divided into training and testing data, with eighty instances in the training set and one hundred eighty-seven instances in the testing set.
 
-The technology and columns data were extracted from the Media Group data from the National Opinion Research Center website. Technology refers to the type of voting machine used, and Columns refers to whether the ballot listed the presidential candidates in a single column on a single page, or spread over two columns or two pages of the ballot. These agree with some earlier data that were obtained from the New York Times website, except that in the Media Group data the Palm Beach County ballot, the famous butterfly ballot, was listed as having one column. It is definitely a two-column ballot, which is the designation recorded here. 
-
-Images of most of the ballots can be found on the New York Times website. 
-
-Features: county, technology, columns, undervote, overvote, candidate vote counts
-
-Keywords: Florida, Presidential Election, Voting Machines, Ballots, Vote Counts
+Keywords: SPECT, cardiac diagnosis, machine learning, classification, cardiac imaging.

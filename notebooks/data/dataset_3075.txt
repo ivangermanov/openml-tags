@@ -1,13 +1,55 @@
-The Bitcoin Heist Ransomware Dataset is a comprehensive collection of data extracted from the entire Bitcoin transaction graph from January 2009 to December 2018. Using a twenty-four hour time interval, daily transactions on the network were extracted and formed into the Bitcoin graph. To filter out irrelevant data, network edges that transferred less than a certain threshold were removed, as ransom amounts are rarely below this threshold.
+QSAR-TID-10378 Dataset 
 
-Ransomware addresses were obtained from three widely adopted studies, which provided a reliable source of labeled data. These addresses were then used to extract features from the Bitcoin graph, which included income, neighbors, weight, length, count, and loop. Each of these features was designed to quantify specific transaction patterns, providing insights into the behavior of ransomware addresses.
+Tags: Chemistry, Life Science, MTLQSAR, Study Three 
 
-For instance, the loop feature counted the number of transactions that split their coins, moved them through different paths, and finally merged them in a single address. This type of behavior is often indicative of money laundering or cashing out ill-gotten gains. The weight feature, on the other hand, quantified the merge behavior, where coins in multiple addresses were accumulated in a final address through a series of merging transactions.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10378, and it consists of one thousand three hundred thirty rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
 
-Similarly, the count feature represented the number of transactions involved in this merging pattern, while the length feature measured the number of mixing rounds used to obscure the origin of coins. By analyzing these features, researchers can identify patterns and anomalies that may indicate ransomware activity.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-One notable observation was that ransomware addresses exhibited more pronounced right-skewness in their distribution of feature values compared to non-ransomware addresses. This suggests that ransomware addresses tend to engage in more extreme behavior, such as larger transactions or more complex money laundering schemes.
+Features: Molecule ChEMBL ID, followed by one thousand twenty-four FCFP six one hundred twenty-four bit molecular fingerprint features.
 
-In total, twenty-four ransomware families were identified, with some addresses appearing in multiple twenty-four hour time windows. One address, associated with the CryptoLocker ransomware family, appeared an astonishing four hundred and twenty times.
+The dataset was created for the MetaQSAR project in September two thousand fifteen. Please cite this dataset when using it for your research.
 
-Keywords: Bitcoin Heist Ransomware, Bitcoin Transaction Graph, Ransomware Detection, Transaction Patterns, Money Laundering, Cash Out, Mixing Rounds.
+Single Protein Preferred Name: Cathepsin B 
+
+Synonyms: APP Secretase, Cathepsin B, Cathepsin B One, Cathepsin B Heavy Chain 
+
+Organism: Homo Sapiens 
+
+Species Group: No 
+
+Protein Target Classification: One Enzyme Protease Cysteine Protease Cysteine Protease CA Clan Cysteine Protease C One A Family 
+
+Description Relationship Accession: Cathepsin B Single Protein P zero seven eight five eight 
+
+Expression Atlas: One 
+
+Go Component: Extracellular Region, Extracellular Space, Lysosome, Plasma Membrane, External Side of Plasma Membrane, Membrane, Apical Plasma Membrane, Endolysosome Lumen, Melanosome, Perinuclear Region of Cytoplasm, Collagen Containing Extracellular Matrix, Extracellular Exosome, Peptidase Inhibitor Complex, Ficolin-One-Rich Granule Lumen 
+
+Go Function: Endopeptidase Activity, Cysteine-Type Endopeptidase Activity, Protein Binding, Collagen Binding, Peptidase Activity, Cysteine-Type Peptidase Activity, Hydrolase Activity, Proteoglycan Binding 
+
+Go Process: Proteolysis, Thyroid Hormone Generation, Negative Regulation of Peptidase Activity, Collagen Catabolic Process, Epithelial Cell Differentiation, Regulation of Apoptotic Process, Decidualization, Viral Entry into Host Cell, Regulation of Catalytic Activity, Proteolysis Involved in Protein Catabolic Process, Cellular Response to Thyroid Hormone Stimulus 
+
+Wikipedia: Cathepsin B 
+
+CanSAR-Target: P zero seven eight five eight 
+
+Guide To PHARMACOLOGY: Two Three Four Three 
+
+IntAct: P zero seven eight five eight 
+
+PharmGKB: Cathepsin B 
+
+Pharos: Tchem 
+
+Reactome: Collagen Degradation, Trafficking and Processing of Endosomal TLR, Assembly of Collagen Fibrils and Other Multimeric Structures, MHC Class Two Antigen Presentation, Neutrophil Degranulation 
+
+UniProt: B Three KQR Five, B Three KRR Five, P zero seven eight five eight, Q Five Zero Three A Six, Q Nine Six D Eight Seven 
+
+InterPro: Pept Cys AS, Peptidase C One A C, Propeptide C One A, Peptidase C One A, Pept His AS, Pept Asp AS, Papain-Like Cys Pep sf 
+
+Pfam: Peptidase C One, Propeptide C One 
+
+PDBe: One CSB, One GMY, One HUC, One PBH, Two IPP, Two PBH, Three AI Eight, Three CB J, Three CB K, Three K Nine M, Three PBH, Five MB L, Five MB M, Six AY Two 
+
+Keywords: QSAR, Cathepsin B, Drug Target, Molecular Fingerprints, SMILES Strings, Pipeline Pilot Program, MetaQSAR Project, ChEMBL ID, PXc50.

@@ -1,15 +1,13 @@
-ARCENE 
+GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Chemistry, Life Science 
+This repository was inspired by the growing need within the machine learning and bioinformatics communities for a unified collection of microarray classification problems that could be employed by diverse researchers. This allows numerous classification or feature selection techniques to be compared against one another on the same set of problems.
 
-This dataset is a two-class classification problem with continuous input variables, where the task is to distinguish cancer versus normal patterns from mass-spectrometric data.
+The origin of the data stems from the large, publicly available Expression Project for Oncology (expO) repository by the International Genomics Consortium. The primary objective of expO and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions. This availability of information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-The dataset was obtained by merging three mass-spectrometry datasets to obtain enough training and test data for a benchmark. The original features indicate the abundance of proteins in human sera having a given mass value. Based on these features, one must separate cancer patients from healthy patients.
+The decision to utilize data from the expO repository was driven by several factors, including the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for diverse tumor types.
 
-A number of distractor features, called probes, having no predictive power were added. The order of the features and patterns were randomized. This dataset is one of five datasets used in the feature selection challenge.
+When publishing material based on GEMLeR datasets, please acknowledge the assistance received by utilizing this repository. This will enable others to obtain the same datasets and replicate experiments.
 
-Features:
+Features include gene expression samples, which can be used for various machine learning applications.
 
-... 
-
-Keywords: Mass-Spectrometric Data, Cancer Patients, Proteins, Human Sera, Feature Selection Challenge
+Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology, genomics.

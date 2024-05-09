@@ -1,38 +1,24 @@
-QSAR-TID-247 Dataset
+**poker-hand**
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 247. It has numerous rows and features, including IDs and class feature.
+Tags: Chemistry, Life Science 
 
-The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The purpose of this dataset is to predict poker hands.
 
-Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Data Set Information:
+Each record is an example of a hand consisting of five playing cards drawn from a standard deck of fifty-two. Each card is described using two attributes, suit and rank, for a total of ten predictive attributes. There is one class attribute that describes the poker hand. The order of cards is important, which is why there are many possible royal flush hands as compared to only four, one for each suit.
 
-Features include MOLECULE CHEMBL ID and MEDIAN PX50.
+Attribute Information:
 
-Preferred Name: Endothelin Receptor ET-B
-Synonyms: EDNRB Endothelin Receptor Non-Selective Type, Endothelin Receptor Type B, ET-B, ET-BR
+* Suit of Card Number One is an ordinal attribute representing hearts, spades, diamonds, and clubs.
+* Rank of Card Number One is a numerical attribute representing ace, two, three, and so on up to queen and king.
+* Suit of Card Number Two is an ordinal attribute representing hearts, spades, diamonds, and clubs.
+* Rank of Card Number Two is a numerical attribute representing ace, two, three, and so on up to queen and king.
+* Suit of Card Number Three is an ordinal attribute representing hearts, spades, diamonds, and clubs.
+* Rank of Card Number Three is a numerical attribute representing ace, two, three, and so on up to queen and king.
+* Suit of Card Number Four is an ordinal attribute representing hearts, spades, diamonds, and clubs.
+* Rank of Card Number Four is a numerical attribute representing ace, two, three, and so on up to queen and king.
+* Suit of Card Number Five is an ordinal attribute representing hearts, spades, diamonds, and clubs.
+* Rank of Card Number Five is a numerical attribute representing ace, two, three, and so on up to queen and king.
+* Poker Hand is an ordinal class attribute describing the type of poker hand, including nothing in hand, one pair, two pairs, three of a kind, straight, flush, full house, four of a kind, straight flush, and royal flush.
 
-Organism: Homo sapiens
-Species Group: No
-Protein Target Classification: One Membrane Receptor Family A G Protein-Coupled Receptor Peptide Receptor Family A GPCR Short Peptide Receptor Family A GPCR Endothelin Receptor
-
-Description Relationship Accession Endothelin Receptor Type B Single Protein
-
-Items per page: Five One Showing One to Four out of Four Records Browse All 
-
-Parent Molecule ChEMBL ID Parent Molecule Name Parent Molecule Type Mechanism of Action Max Phase First Approval USAN Stem References
-
-Antibody Error: RG-Seven Six Three Six Antibody Endothelin Receptor ET-B Binding Agent
-
-Error: ENRASENTAN Small Molecule Endothelin Receptor ET-B Antagonist
-
-Error: DARUSENTAN Small Molecule Endothelin Receptor ET-B Antagonist
-
-Error: TEZOSENTAN Small Molecule Endothelin Receptor ET-B Antagonist
-
-Expression Atlas One P Two Four Five Thirty Go Component Three GO Zero Zero Zero Five Eight Eight Six Plasma Membrane GO One Six Zero Two Zero Membrane GO Zero Zero Three One Nine Six Five Nuclear Membrane 
-
-Go Function Five GO Zero Zero Zero Four Nine Three Zero G Protein-Coupled Receptor Activity GO Zero Zero Zero Four Nine Six Two Endothelin Receptor Activity GO Zero Zero Zero Five Five One Five Protein Binding GO Zero Zero One Seven Zero Four Peptide Hormone Binding GO Zero Zero Three One Seven Zero Two Type One Angiotensin Receptor Binding 
-
-Go Process Sixty-One GO Zero Zero Zero One Two Two Negative Regulation of Transcription by RNA Polymerase II GO Zero Zero Zero One Seven Five Neural Crest Cell Migration GO Zero Zero Zero One Nine Three Four Positive Regulation of Protein Phosphorylation 
-
-Keywords: QSAR, medicine, MTLQSAR, statistics, study three, endothelin receptor, ET-B, protein target classification, G protein-coupled receptor, peptide receptor.
+Keywords: Poker Hands, Playing Cards, Standard Deck, Predictive Attributes, Class Attribute, Order of Cards, Royal Flush.

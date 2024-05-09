@@ -1,23 +1,18 @@
-Worldwide Crop Production 
+Demographics, MTLQSAR, Study Three
 
-Tags: Machine Learning, Transportation 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Crop production relies heavily on the availability of arable land and is significantly impacted by factors such as yields, macroeconomic uncertainty, and consumption patterns. Moreover, it has a profound influence on the prices of agricultural commodities. The importance of crop production is closely tied to harvested areas, returns per hectare (yields), and quantities produced.
+The dataset contains QSAR data from ChEMBL, showing activity values of several compounds on drug target TID. The data consists of multiple rows and numerous features, including molecule identifiers and class feature, median PXc50. The features in this dataset are molecular fingerprints, specifically FCFP six one hundred twenty-four bit, which were generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. This method of generating fingerprints does not typically require missing value imputation, as all bits are generated during the process.
 
-Crop yields, which represent the harvested production per unit of harvested area for various crop products, are a crucial aspect of crop production. In most cases, yield data is not directly recorded but rather calculated by dividing production data by area harvested data. The actual yield achieved on farms depends on multiple factors, including the crop's genetic potential, the amount of sunlight, water, and nutrients absorbed by the crop, as well as the presence of weeds and pests.
+The MetaQSAR project provides this dataset, containing QSAR data from ChEMBL, with activity values of several compounds on drug target TID. The dataset consists of multiple rows and numerous features, including molecule identifiers and class feature, median PXc50. These features are molecular fingerprints, specifically FCFP six one hundred twenty-four bit, generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. This method of generating fingerprints does not typically require missing value imputation, as all bits are generated during the process.
 
-This indicator is presented for four major crops: wheat, maize, rice, and soybean. Crop production is typically measured in three ways: tonnes per hectare, thousand hectares, and thousand tonnes.
+Scraped Data:
+ID: 
+Type: Single Protein
+Preferred Name: Metastin Receptor
+Synonyms: Gpr fifty-four, G-protein Coupled Receptor fifty-four, G-protein Coupled Receptor OT Seven T One Seventy-five, Kiss-one R, KiSS-one Receptor
+Organism: Rattus Norvegicus
+Species Group: No
+Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Peptide Receptor, Short Peptide Receptor, RF Amide Receptor
 
-The accompanying CSV file contains five columns:
-
-Location represents the country code name.
-Subject denotes the type of crop being referenced (e.g., rice, soybean).
-Time indicates the year the data was recorded.
-Measure specifies the measuring metric employed.
-Value represents the numerical value corresponding to the measuring metric.
-
-Acknowledgement: https://data.oecd.org/agroutput/crop-production.htm
-
-Features: Location, Subject, Measure, Time, Value
-
-Keywords: crop production, arable land, yields, macroeconomic uncertainty, consumption patterns, agricultural commodities, harvested areas, crop yields, genetic potential, sunlight, water, nutrients, weeds, pests.
+Keywords: QSAR, drug target, molecular fingerprints, ChEMBL, MetaQSAR, G protein-coupled receptor, peptide receptor.

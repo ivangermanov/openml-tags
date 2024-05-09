@@ -1,17 +1,20 @@
-Name: Madeline Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+Parkinsons Telemonitoring 
 
-Tags: Agriculture, Chemistry 
+Tags: Health, Medicine 
 
-Subsampling of the dataset Madeline with seed equal to one arguments number rows equal to two thousand arguments number columns equal to one hundred arguments number classes equal to ten arguments no stratify equal to true generated with the following source code.
+This dataset is composed of a range of biomedical voice measurements from people with early-stage Parkinson's disease recruited to a six-month trial of a telemonitoring device for remote symptom progression monitoring. The recordings were automatically captured in the patients' homes. Columns in the table contain subject number, subject age, subject gender, time interval from baseline recruitment date, motor Unified Parkinson's Disease Rating Scale (UPDRS) score, total UPDRS score, and sixteen biomedical voice measures. Each row corresponds to one of the numerous voice recordings from these individuals. 
 
-The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification or not.
+The main aim of the data is to predict the motor and total UPDRS scores from the sixteen voice measures. The data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are approximately two hundred recordings per patient; the subject number of the patient is identified in the first column. 
 
-The function first uniformly samples classes from the unique values in the target variable, ensuring that the selected classes are representative of the overall distribution. It then selects the indices where one of these classes is present and subsets the data accordingly.
+Attribute Information:
 
-Next, the function uniformly samples columns from the feature set, selecting a specified number of columns without replacement. The selected columns are then used to create a new dataset.
+* Subject Number: An integer that uniquely identifies each subject.
+* Age: Subject age.
+* Sex: Subject gender, where zero represents male and one represents female.
+* Test Time: Time since recruitment into the trial, where the integer part is the number of days since recruitment.
+* Motor UPDRS Score: Clinician's motor UPDRS score, linearly interpolated.
+* Total UPDRS Score: Clinician's total UPDRS score, linearly interpolated.
 
-If the resulting dataset has more rows than the specified maximum, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is maintained.
+Biomedical voice measures include several measures of variation in fundamental frequency, such as jitter, and several measures of variation in amplitude, including shimmer. Additionally, there are two measures of ratio of noise to tonal components in the voice, namely Noise to Harmonic Ratio (NHR) and Harmonic to Noise Ratio (HNR), as well as a nonlinear dynamical complexity measure, namely Recurrence Period Density Entropy (RPDE), and a signal fractal scaling exponent, namely Detrended Fluctuation Analysis (DFA). Lastly, there is a nonlinear measure of fundamental frequency variation, namely Pitch Period Entropy (PPE).
 
-Finally, the function returns a new dataset object, containing the subsampled data, along with relevant metadata such as the column names and categorical mask.
-
-Keywords: subsampling, dataset, stratification, feature selection, class distribution.
+Keywords: Parkinson's disease, telemonitoring, biomedical voice measurements, Unified Parkinson's Disease Rating Scale (UPDRS), jitter, shimmer, Noise to Harmonic Ratio (NHR), Harmonic to Noise Ratio (HNR), Recurrence Period Density Entropy (RPDE), Detrended Fluctuation Analysis (DFA), Pitch Period Entropy (PPE)

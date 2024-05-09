@@ -1,9 +1,44 @@
-The QSAR-TID-20126 dataset contains QSAR data showing activity values of several compounds on drug target Neurokinin Two Receptor, also known as Neurokinin A Receptor, NK-Two R, or SKR Substance-K Receptor. It consists of one hundred eighty-two rows and one thousand twenty-six features, including molecule identifiers and a class feature named Median PX Fifty.
+The Steel Plates Faults Data Set is a collection of data related to steel plates' faults, categorized into seven distinct types. The primary objective of this dataset was to train machine learning models for automatic pattern recognition. This dataset comprises twenty-seven features that describe each fault, including location and size, as well as seven binary features that indicate the type of fault.
 
-The features represent Fingerprint Chemical Fragments, which were generated from Simplified Molecular Input Line Entry System strings using the Pipeline Pilot program, Dassault Systemes BIOVIA. Since generating fingerprints does not typically require missing value imputation, all bits were generated. 
+These binary features include Pastry, Z Scratch, K Scratch, Stains, Dirtiness, Bumps, and Other Faults. The latter is often used as a binary classification target, distinguishing between common and other faults.
 
-This dataset was part of the MetaQSAR project, published in September two thousand fifteen. It includes various chemical compounds with their corresponding molecular fingerprints, which can be used for machine learning models to predict their activities on the Neurokinin Two Receptor.
+Attribute information includes:
 
-The Neurokinin Two Receptor is a single protein and a member of the Family A G Protein-Coupled Receptor group. It is primarily found in the plasma membrane and is involved in signal transduction pathways, particularly those related to tachykinin receptors.
+* X Minimum
+* X Maximum
+* Y Minimum
+* Y Maximum
+* Pixels Areas
+* X Perimeter
+* Y Perimeter
+* Sum of Luminosity
+* Minimum of Luminosity
+* Maximum of Luminosity
+* Length of Conveyer
+* Type of Steel A Three Hundred
+* Type of Steel A Four Hundred
+* Steel Plate Thickness
+* Edges Index
+* Empty Index
+* Square Index
+* Outside X Index
+* Edges X Index
+* Edges Y Index
+* Outside Global Index
+* Log of Areas
+* Log X Index
+* Log Y Index
+* Orientation Index
+* Luminosity Index
+* Sigmoid of Areas
+* Pastry
+* Z Scratch
+* K Scratch
+* Stains
+* Dirtiness
+* Bumps
+* Class: Other Faults
 
-Keywords: QSAR, Neurokinin Two Receptor, Machine Learning, Fingerprint Chemical Fragments, MetaQSAR, Drug Target, Signal Transduction.
+This dataset has been referenced in several papers, including one on a new meta-classifier and another on the theory of independent judges.
+
+Keywords: Steel Plates, Faults, Machine Learning, Pattern Recognition, Binary Classification

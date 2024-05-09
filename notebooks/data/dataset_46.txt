@@ -1,30 +1,21 @@
-vehicle silhouettes
+Life Science and Machine Learning dataset: Splice 
 
-Purpose:
-The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
+The Splice dataset focuses on primate splice-junction gene sequences, comprising DNA sequences with associated imperfect domain theory. The primary objective is to identify, given a sequence of DNA, the boundaries between exons (parts of the DNA sequence retained after splicing) and introns (parts of the DNA sequence that are spliced out). This problem involves two subtasks: recognizing exon-intron boundaries (referred to as EI sites) and recognizing intron-exon boundaries (IE sites).
 
-Problem Type:
-Classification
+The dataset includes sixty-four categories, categorized into "ei" and "ie," encompassing every "split-gene" for primates in GenBank. Non-splice examples were obtained from sequences known not to contain a splicing site.
 
-Source:
-UCI
+Attribute information includes:
 
-Description:
-This dataset was originally gathered to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction. This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
+* One of three classes: n, ei, or ie, indicating the type of boundary
+* The instance name, serving as an identifier
+* Sixty remaining fields representing the sequence, starting thirty positions before and ending thirty positions after the boundary point; each field typically contains one of four characters: a, g, t, or c; other characters signify ambiguity among the standard characters
 
-History:
-The dataset was originally gathered at the Turing Institute in nineteen eighty-six to nineteen eighty-seven. It was partially financed by Barr and Stroud Limited. The original purpose was to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects.
+Features include instance name and sixty attributes representing the sequence.
 
-Features:
-The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Attribute Neural Tree System, which extracts a combination of scale-independent features utilizing both classical moments-based measures and heuristic measures.
+This dataset has no missing values.
 
-Four "Corgie" model vehicles were used for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
+Additional variable information describes various characteristics of the sequences, including signal sequence recognition methods, presence of charge on the N-terminus of predicted lipoproteins, scores of discriminant analysis of amino acid content, and scores of membrane-spanning region prediction programs.
 
-Images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface. The vehicles were painted matte black to minimize highlights. Images were captured using a frame store connected to a computer. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated, and thereafter subjected to shrink-expand-expand-shrink modules to remove "salt and pepper" image noise.
+Class labels denote different localizations within the cell, including cytoplasm, inner membrane, periplasm, and outer membrane.
 
-Vehicles were rotated and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to "head-on" and "rear" views respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
-
-Number of Classes:
-Four - Opel, Saab, Bus, Van
-
-Keywords: vehicle recognition, machine learning, classification, transportation, image processing, object recognition.
+Keywords: Splice junction, gene sequences, DNA, exons, introns, machine learning, life science, molecular biology.

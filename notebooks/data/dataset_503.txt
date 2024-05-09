@@ -1,19 +1,18 @@
-The Friedman Datasets 
+Wind Dataset 
 
-These eighty artificially generated datasets originate from stochastic gradient boosting. The dataset names are coded as "friedman colinearity degree sample number feature number". 
+The wind dataset contains daily average wind speeds from 1961 to 1978 at twelve synoptic meteorological stations in the Republic of Ireland. This dataset was analyzed in great detail in an article titled Space Time Modeling with Long Memory Dependence Assessing Irelands Wind Power Resource.
 
-Friedman's functions include both linear and nonlinear relationships between input and output, and a normalized noise is added to the output. The Friedman function is as follows: 
+Each line of the dataset corresponds to one day of data in the following format: year, month, day, average wind speed at each of the stations in a particular order. The stations are listed in a specific order as follows: Rosslare Harbour, Valentia Island, Roche's Point, Kilrush, Shannon Airport, Birr, Dublin Airport, Claremorris, Mullingar, Clarecastle, Belmullet, and Malin Head.
 
-y = ten times sin of pi x one x two plus twenty times x three minus zero point five squared equals ten X four plus five X five plus e 
+The data is presented in knots rather than meters per second. Users have been granted permission for unlimited distribution of this dataset. However, please report any anomalies found in the data to a specified email address.
 
-In the original Friedman function, there are five features for input. To measure the effects of non-related features, additional features are added to the datasets. These added features are independent from the output. However, to measure the algorithm's robustness to collinearity, the datasets are generated with five different collinearity degrees. 
+It is essential to note that the dataset is quite large, consisting of over half a megabyte of data. Therefore, users should ensure they have sufficient storage space and processing power before requesting the data.
 
-The collinearity degree is the number of features depending on other features. The generated Friedman dataset's parameters and values are given below: 
+Information About the Dataset 
 
-The number of features varies, and only the first five features are related to the output; the rest are completely random. The number of samples also varies. Collinearity degrees range from zero to four. 
+Class Type: Numeric 
+Class Index: None Specific 
 
-For the datasets with a collinearity degree of four, the number of features is generated as ten, twenty-five, fifty, and one hundred. The other datasets have five, ten, twenty-five, and fifty features. As a result, eighty artificial datasets are generated.
+Features: Year, Month, Day, Average Wind Speed at Various Stations 
 
-The last attribute in each file is the target.
-
-Keywords: Friedman Datasets, Artificial Intelligence, Chemistry, Life Science, Data Generation, Collinearity Degree
+Keywords: wind speed, meteorological stations, Republic of Ireland, synoptic data, climate modeling, renewable energy

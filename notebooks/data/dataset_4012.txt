@@ -1,45 +1,13 @@
-Eye Movements
+The QSAR-TID-215 dataset is a collection of Quantitative Structure-Activity Relationship (QSAR) data related to the Earth Science and Meteorology fields, specifically focused on the MetaQSAR project. This dataset contains QSAR data showing activity values of several compounds on drug target TID: 215.
 
-This dataset belongs to the "classification on categorical and numerical features" benchmark.
+The dataset has multiple rows and features, including IDs and class features such as MOLECULE CHEMBL ID and MEDIAN PX50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA.
 
-Original Description:
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset is a straightforward classification task. It provides precomputed feature vectors for each word in the eye movement trajectory, with class labels. The dataset consists of several assignments. Each assignment consists of a question followed by ten sentences (titles of news articles). One of the sentences is the correct answer to the question (Correct) and five of the sentences are irrelevant to the question (Irrelevant). Four of the sentences are relevant to the question (Relevant), but they do not answer it.
+This dataset is particularly useful for studying the Muscarinic Acetylcholine Receptor M5, which is a single protein preferred name with synonyms such as CHRM5 Muscarinic Acetylcholine Receptor M5.
 
-Features are in columns, and feature vectors are in rows. Each assignment is a time sequence of twenty-two dimensional feature vectors. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column: "Zero" for Irrelevant, "One" for Relevant, and "Two" for Correct.
+The receptor belongs to the species group Homo sapiens and is classified under the category of 1. Membrane receptor/Family A G protein-coupled receptor/Small molecule receptor (family A GPCR)/Monoamine receptor/Acetylcholine receptor.
 
-Each example (row) represents a single word. You are asked to return the classification of each read sentence. The twenty-two features provided are commonly used in psychological studies on eye movement. Not all of them are necessarily relevant in this context. The objective of the challenge is to predict the classification labels (Irrelevant, Relevant, Correct).
+The description of this receptor highlights its role in various biological processes, including gastric acid secretion, signal transduction, G protein-coupled receptor signaling pathways, and chemical synaptic transmission.
 
-Features:
-The values in columns marked with an asterisk are the same for all occurrences of the word.
-
-Column Name Description:
-Line Number is the line number.
-Assignment Number is the assignment number.
-Fixation Count is the number of fixations to the word.
-First Pass Count is the number of fixations to the word when it is first encountered.
-First Fixation is one if fixation occurred when the sentence the word was in was encountered the first time.
-Previous Fixation Duration is the duration of the previous fixation.
-First Fixation Duration is the duration of the first fixation when the word is first encountered.
-First Pass Fixation Duration is the sum of durations of fixations when the word is first encountered.
-Next Fixation Duration is the duration of the next fixation when gaze initially moves from the word.
-First Saccade Length is the length of the first saccade.
-Last Saccade Length is the distance between fixation on the word and the next fixation.
-Previous Fixation Position is the distance between the first fixation preceding the word and the beginning of the word.
-Landing Position is the distance between the first fixation on the word and the beginning of the word.
-Leaving Position is the distance between the last fixation on the word and the beginning of the word.
-Total Fixation Duration is the sum of all durations of fixations to the word.
-Mean Fixation Duration is the mean duration of the fixations to the word.
-Number of Regressions From is the number of regressions leaving from the word.
-Regression Length is the sum of durations of regressions initiating from this word.
-Next Word Regression is one if a regression initiated from the following word.
-Regression Duration is the sum of durations of the fixations on the word during regression.
-Maximum Pupil Diameter is the maximum pupil diameter.
-Maximum Pupil Diameter Lag is the maximum pupil diameter zero point five to one point five seconds after the beginning of fixation.
-Time Protection is the first fixation duration divided by the total number of fixations.
-Number of Words in Title is the number of words in the sentence (title) this word is in.
-Title Number is the title number.
-Word Number is the word number (ordinal) in this title.
-Label is the classification for training data (Zero equals Irrelevant, One equals Relevant, Two equals Correct).
-
-Keywords: Eye Movements, Classification, Psychological Studies, Feature Vectors, Class Labels, Assignments, Sentences, News Articles, Question, Answer, Relevant, Irrelevant, Correct.
+Keywords: QSAR, MetaQSAR, Muscarinic Acetylcholine Receptor M5, Earth Science, Meteorology, Molecular Fingerprints.

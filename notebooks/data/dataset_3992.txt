@@ -1,17 +1,33 @@
-The Diabetes 130 Hospitals dataset represents ten years of clinical care at 130 United States hospitals and delivery networks, collected from nineteen ninety-nine to two thousand eight. Each record represents the hospital admission record for a patient diagnosed with diabetes whose stay lasted between one to fourteen days.
+QSAR-TID-12104 Dataset
 
-The features describing each encounter include demographics, such as race, gender, and age, as well as admission source, time in hospital, medical specialty, laboratory procedures, procedures, medications, primary diagnosis, number of diagnoses, glucose serum level, hemoglobin A1C result, insulin, medication changes, and diabetic medication information. Additionally, the dataset includes information about the patient's payer, including Medicare and Medicaid, as well as details about their previous hospitalizations, emergency visits, and outpatient days.
+Tags: Demographics, Education, MTLQSAR, Study Three
 
-The target variable, readmitted, is binarized into whether the patient was readmitted within thirty days of their initial release. 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12104. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-There is no recommended data split for this dataset; however, a standard train-test split could be used, or a three-way holdout split could be employed for model selection purposes.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-It is important to note that this dataset contains sensitive information about the patients, including their age, gender, and race. 
+Scraped Data:
 
-This dataset represents a decade of clinical care at numerous hospitals across the country, providing valuable insights into patient outcomes and hospital performance. The data includes over fifty features, offering a comprehensive view of various aspects of healthcare.
+The preferred name of this single protein is Glucocorticoid Receptor. Its synonyms include Glucocorticoid Receptor Gr1, Nuclear Receptor Subfamily Three Group C Member One, and others. The species group is Rattus Norvegicus.
 
-The dataset was collected based on specific criteria, including inpatient encounters, diabetic diagnoses, laboratory tests, and medication administration. The resulting data provides a wealth of information about patient characteristics, hospital stays, and treatment outcomes.
+Protein Target Classification:
 
-Yes, the dataset does contain missing values. For more detailed information about each attribute, please refer to the corresponding table.
+The classification of this protein target is one, transcription factor/nuclear receptor/nuclear hormone receptor subfamily three/nuclear hormone receptor subfamily three group c/nuclear hormone receptor subfamily three group c member one.
 
-Keywords: diabetes, hospitals, healthcare, patient outcomes, hospital performance, demographics, laboratory tests, medications, readmission rates.
+Description Relationship Accession:
+
+Glucocorticoid receptor is a single protein with accession number P zero six five thirty-six.
+
+Go Component:
+
+The glucocorticoid receptor is involved in various cellular components, including nucleus, cytoplasm, mitochondrion, microtubule organizing center, spindle, cytosol, cytoskeleton, membrane, nuclear speck, protein-containing complex, dendritic spine, glutamatergic synapse, and postsynaptic density, intracellular component.
+
+Go Function:
+
+The glucocorticoid receptor performs various functions, including RNA polymerase two transcription regulatory region sequence-specific DNA binding, RNA polymerase two cis-regulatory region sequence-specific DNA binding, core promoter sequence-specific DNA binding, DNA-binding transcription repressor activity, RNA polymerase two-specific, DNA-binding transcription activator activity, RNA polymerase two-specific, DNA binding, chromatin binding, double-stranded DNA binding, DNA-binding transcription factor activity, transcription coactivator activity, nuclear receptor activity, nuclear glucocorticoid receptor activity, steroid binding, protein binding, zinc ion binding, lipid binding, protein kinase binding, heat shock protein binding, receptor tyrosine kinase binding, heat shock protein seventy protein binding, estrogen response element binding, hormone binding, identical protein binding, sequence-specific DNA binding, metal ion binding, heat shock protein ninety protein binding, molecular function activator activity, and steroid hormone binding.
+
+Go Process:
+
+The glucocorticoid receptor is involved in various biological processes, including negative regulation of transcription by RNA polymerase two, regulation of gluconeogenesis, chromatin organization, chromatin remodeling, regulation of DNA-templated transcription, regulation of transcription by RNA polymerase two, female pregnancy, circadian rhythm, androgen metabolic process, glucocorticoid metabolic process, gene expression, regulation of glucose metabolic process, microglia differentiation, positive regulation of glutamate secretion, response to activity, response to inactivity, muscle atrophy, lung development, adrenal gland development, intracellular steroid hormone receptor signaling pathway, negative regulation of synaptic plasticity, regulation of glucocorticoid biosynthetic process, response to insulin, synaptic transmission, glutamatergic, regulation of cell population proliferation, maternal behavior, glucocorticoid receptor signaling pathway, negative regulation of apoptotic process, negative regulation of vascular permeability, glucocorticoid-mediated signaling pathway, positive regulation of neuron apoptotic process, transcription initiation-coupled chromatin remodeling, negative regulation of DNA-templated transcription, positive regulation of transcription by RNA polymerase two, response to arsenic-containing substance, response to mercury ion, astrocyte differentiation, response to corticosterone, response to calcium ion, response to electrical stimulus, mammary gland duct morphogenesis, positive regulation of dendritic spine development, positive regulation of cell growth involved in cardiac muscle cell development, motor behavior, protein-containing complex assembly, cellular response to magnesium ion, cellular response to steroid hormone stimulus, cellular response to glucocorticoid stimulus, response to dexamethasone, cellular response to dexamethasone stimulus, cellular response to transforming growth factor beta stimulus, neuroinflammatory response, positive regulation of miRNA transcription, and positive regulation of glucocorticoid receptor signaling pathway.
+
+Keywords: Glucocorticoid Receptor, QSAR, Nuclear Hormone Receptor, Gene Expression, Transcription Regulation, Steroid Hormone Signaling.

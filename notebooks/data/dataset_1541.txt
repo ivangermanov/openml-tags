@@ -1,93 +1,13 @@
-Demographics, MTLQSAR, Study Three
+Volcanoes on Venus - JARtool Experiment Data Set 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one twenty-four seventy-four, and it has three hundred sixty rows and one thousand twenty-six features including IDs and class feature.
+The dataset consists of data collected by the Magellan spacecraft over a four-year period from nineteen ninety to nineteen ninety-four. The primary objective of the mission was to obtain global mapping of the surface of Venus using Synthetic Aperture Radar. This mission aimed to gather comprehensive data about the planet's surface features.
 
-The features represent fingerprints which were generated from smiles strings. They were obtained using the pipeline pilot program.
+There exist certain spatial dependencies within the data. For instance, background patches taken from within a single image tend to exhibit more similarity compared to those obtained from different images. Alongside these images, there are accompanying "ground truth" files that identify the locations of volcanoes within the images. It is essential to note that there is no absolute "ground truth" for this dataset, as no human expert has physically visited Venus, and the image quality does not allow for unambiguous identification of volcanoes.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset includes labels that provide a measure of subjective uncertainty, with ratings ranging from one (definitely a volcano) to four (only a pit is visible), indicating varying degrees of confidence in identifying volcanic formations.
 
-Features include molecule chembl id and fingerprint features.
+The images themselves are composed of one thousand twenty-four by one thousand twenty-four pixels, with pixel values ranging from zero to two hundred fifty-five. These pixel values correlate directly with the amount of energy reflected back to the radar from a specific spatial location. Consequently, higher pixel values signify greater backscatter, whereas lower pixel values indicate lesser backscatter. Topography and surface roughness relative to the radar wavelength significantly impact the amount of backscatter.
 
-The dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target one twenty-four seventy-four.
+Relevant publications provide further insights into the Magellan mission, its objectives, and the resulting data products. 
 
-The dataset has three hundred sixty rows and one thousand twenty-six features including IDs and class feature.
-
-The features represent fingerprints which were generated from smiles strings using the pipeline pilot program.
-
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
-
-The dataset was obtained from the MetaQSAR project in September two thousand fifteen.
-
-The dataset should be cited as MetaQSAR project - September two thousand fifteen.
-
-Scraped Data:
-
-ID: Chembl three fifteen
-Type: Single Protein
-Preferred Name: Alpha-One-B Adrenergic Receptor
-Synonyms: Adra-One-B, Alpha-One-B Adrenoceptor, Alpha-One-B Adrenoreceptor
-
-Organism: Rattus Norvegicus
-Species Group: No
-Protein Target Classification: One - Membrane Receptor / Family A G Protein-Coupled Receptor / Small Molecule Receptor / Monoamine Receptor / Adrenergic Receptor
-
-Description Relationship Accession Alpha-One-B Adrenergic Receptor Single Protein 
-
-ChEMBL ID Relationship Pref Name Target Type 
-
-Go Component:
-
-Nucleus
-Cytoplasm
-Plasma Membrane
-Caveola
-Intercalated Disc
-Membrane
-T-Tubule
-Nuclear Membrane
-
-Go Function:
-
-G Protein-Coupled Receptor Activity
-Adrenergic Receptor Activity
-Alpha-One-Adrenergic Receptor Activity
-Protein Heterodimerization Activity
-
-Go Process:
-
-Blood Vessel Remodeling
-Response to Amphetamine
-Vasoconstriction of Artery Involved in Baroreceptor Response to Lowering of Systemic Arterial Blood Pressure
-Positive Regulation of Heart Rate by Epinephrine-Norepinephrine
-Positive Regulation of the Force of Heart Contraction by Epinephrine-Norepinephrine
-Glycogen Catabolic Process
-Regulation of Muscle Contraction
-Signal Transduction
-G Protein-Coupled Receptor Signaling Pathway
-Phospholipase C-Activating G Protein-Coupled Receptor Signaling Pathway
-Positive Regulation of Cytosolic Calcium Ion Concentration
-Cell-Cell Signaling
-Adult Heart Development
-Locomotory Behavior
-Regulation of Blood Pressure
-Visual Learning
-Response to Xenobiotic Stimulus
-Response to Hormone
-Regulation of Vasoconstriction
-Negative Regulation of Rho Protein Signal Transduction
-Organ Growth
-Glucose Homeostasis
-Response to Morphine
-Positive Regulation of MAPK Cascade
-Response to Estrogen
-Negative Regulation of Glycogen Catabolic Process
-Positive Regulation of Glycogen Catabolic Process
-Behavioral Response to Cocaine
-Response to Steroid Hormone
-Regulation of Cardiac Muscle Contraction
-Cell Growth Involved in Cardiac Muscle Cell Development
-Adrenergic Receptor Signaling Pathway
-Adenylate Cyclase-Activating Adrenergic Receptor Signaling Pathway
-Neuron-Glial Cell Signaling
-
-Keywords: QSAR, MetaQSAR, Adrenergic Receptor, G Protein-Coupled Receptor, Signal Transduction, Glycogen Catabolic Process, Blood Vessel Remodeling, Cardiac Muscle Contraction.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Spatial Dependencies, Ground Truth, Uncertainty Ratings.

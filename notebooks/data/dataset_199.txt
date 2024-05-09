@@ -1,21 +1,11 @@
-Wine Quality
+Fruitfly Dataset
 
-Tags: Chemistry, Machine Learning, Study
+This dataset is a designed experiment that examines the relationship between sexual activity and the lifespan of male fruitflies. The experiment involves manipulating the sexual activity of male fruitflies by providing them with either one or eight receptive virgin females per day, and comparing their longevity to that of two control groups. One control group consists of males kept with one or eight newly inseminated females, while the other control group consists of males kept without females.
 
-The Wine Quality dataset was created by Paulo Cortez and others in 2009. It consists of two datasets, one for red wine and one for white wine, each containing physicochemical properties and sensory data.
+The dataset contains five variables: ID, Partners, Type, Longevity, and Thorax. The ID variable represents the serial number of each male fruitfly within its respective group. The Partners variable indicates the number of female companions each male has, which can be zero, one, or eight. The Type variable describes the type of companion, which can be a virgin female, a newly inseminated female, or no female. The Longevity variable measures the lifespan of each male fruitfly in days. The Thorax variable represents the length of each male fruitfly's thorax in millimeters.
 
-The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert grades the wine quality between zero, very bad, and ten, very excellent.
+The story behind the data is that the experiment was conducted to investigate whether increased sexual activity reduces the lifespan of male fruitflies, as has been observed in female fruitflies. The results showed that males supplied with eight virgin females per day had a shorter lifespan than those supplied with one virgin female per day, suggesting a cost of increased reproduction in terms of reduced longevity.
 
-Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Various metrics were computed, including mean absolute deviation and a confusion matrix for a fixed error tolerance.
+Teachers can use this dataset to teach various statistical concepts, including analysis of variance, classical analysis of covariance, and multiple regression. The dataset is particularly useful for illustrating the importance of considering confounding variables, such as thorax length, when analyzing the relationship between sexual activity and longevity. It also provides opportunities for discussing statistical interactions and the role of intermediate variables.
 
-A sensitivity analysis procedure was also performed to measure the relative importance of the input variables. The two datasets are related to red and white variants of the Portuguese Vinho Verde wine.
-
-Due to privacy and logistic issues, only physicochemical and sensory variables are available. There is no data about grape types, wine brand, or wine selling price. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones.
-
-Outlier detection algorithms could be used to detect the few excellent or poor wines. It would also be interesting to test feature selection methods, as it is unclear whether all input variables are relevant.
-
-The datasets contain eleven input variables and one output variable. The input variables are based on physicochemical tests, including fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol.
-
-The output variable is based on sensory data and represents the quality of the wine, scored between zero and ten. There are no missing attribute values in the datasets.
-
-Keywords: wine quality, physicochemical properties, sensory data, machine learning, regression, outlier detection, feature selection.
+Keywords: fruitfly, lifespan, sexual activity, longevity, thorax length, confounding variables, statistical interactions, intermediate variables.

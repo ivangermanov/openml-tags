@@ -1,13 +1,27 @@
-This work focuses on creating a dataset on Pandas Questions and Answers over Stack Overflow. Currently, there are numerous questions available on Stack Overflow that have been asked under the Pandas section. Many questions on Stack Overflow have poor quality or are duplicates of already answered questions. A new Stack Overflow user can ask a question that falls into any of these sections, such as low-quality, duplicate, spam, and so forth. Similarly, a new Stack Overflow user may not flag a question if it does not abide by Stack Overflow guidelines due to a lack of experience.
+QSAR-TID-11736 Dataset: Demographics, MTLQSAR, Study Three
 
-Therefore, users who have spent considerable time on Stack Overflow are the ones who provide high-quality answers, classify a question as a duplicate, can close them, downvote, and so on. We focus on expert users who have earned the Pandas Gold Tag on their profile, which means they have answered enough questions to at least evaluate an upcoming question's quality and decide whether to answer accordingly.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11736. It has numerous rows and features, including IDs and class feature.
 
-To create this dataset, we did not feel the need to perform web scraping to extract Stack Overflow data. Stack Overflow provides an online API where one can simply run SQL queries to obtain a downloadable CSV file.
+The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
 
-Acknowledgments go to the Stack Overflow Data API. All copyrights belong to Stack Overflow and its network sites, licensed under Creative Commons Attribution-ShareAlike 3.0.
+Features include molecule Chembl ID, molecular fingerprints, and median pxc fifty.
 
-With the given dataset, various tasks can be performed. Since all the questions and answers given by expert users have been extracted in the dataset, we can investigate what makes an answer acceptable when one of the associated tags is "Pandas". Additionally, we can explore reputation calculations.
+The dataset was sourced from the MetaQSAR project in September two thousand fifteen.
 
-The dataset features include post link, type, title, markdown, tags, created date, last edit date, edited by, score, favorites, views, answers, accepted status, community wiki status, and closed status.
+Please cite this dataset when using it for research purposes.
 
-Keywords: Pandas, Stack Overflow, Gold Tag, Dataset, Question Quality, Answer Acceptance, Reputation Calculation.
+The target is a single protein, specifically the Adenosine A2a Receptor, also known as Adora two a. It belongs to the species group Rattus norvegicus.
+
+The protein target classification is one point membrane receptor family a G protein coupled receptor small molecule receptor family a GPCR nucleotide like receptor family a GPCR adenosine receptor.
+
+Description relationship accession adenosine receptor A two a single protein.
+
+Rows per page fifty one to one of one Chembl ID relationship preferred name target type.
+
+Go component includes Golgi membrane intermediate filament plasma membrane membrane axon dendrite axolemma asymmetric synapse presynaptic membrane neuronal cell body postsynaptic membrane presynaptic active zone glutamatergic synapse cellular anatomical entity.
+
+Go function includes G protein coupled adenosine receptor activity G protein coupled receptor activity protein binding lipid binding enzyme binding type five metabotropic glutamate receptor binding identical protein binding protein containing complex binding alpha actinin binding.
+
+Go process includes synaptic transmission dopaminergic G protein coupled adenosine receptor signaling pathway response to amphetamine regulation of DNA templated transcription negative regulation of protein kinase activity signal transduction G protein coupled receptor signaling pathway adenylate cyclase activating G protein coupled receptor signaling pathway protein kinase C activating G protein coupled receptor signaling pathway synaptic transmission cholinergic locomotory behavior negative regulation of cell population proliferation response to xenobiotic stimulus response to inorganic substance regulation of cell communication positive regulation of glutamate secretion positive regulation of acetylcholine secretion neurotransmission regulation of norepinephrine secretion response to purine containing compound regulation of signaling positive regulation of synaptic transmission GABAergic synaptic transmission glutamatergic positive regulation of urine volume vasodilation eating behavior negative regulation of vascular permeability negative regulation of cysteine type endopeptidase activity involved in apoptotic process response to alkaloid negative regulation of neuron apoptotic process positive regulation of circadian sleep wake cycle sleep negative regulation of alpha beta T cell activation astrocyte activation neuron projection morphogenesis positive regulation of protein secretion negative regulation of inflammatory response response to stimulus regulation of mitochondrial membrane potential membrane depolarization regulation of calcium ion transport positive regulation of synaptic transmission glutamatergic excitatory postsynaptic potential inhibitory postsynaptic potential prepulse inhibition apoptotic signaling pathway presynaptic modulation of chemical synaptic transmission positive regulation of long term synaptic potentiation positive regulation of apoptotic signaling pathway.
+
+Keywords: QSAR, Adenosine A2a Receptor, MetaQSAR, Molecular Fingerprints, G Protein Coupled Receptor, Signal Transduction, Synaptic Transmission.

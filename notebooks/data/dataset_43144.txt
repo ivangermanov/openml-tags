@@ -1,0 +1,31 @@
+The SGEMM GPU Kernel Performance Dataset 
+
+Tags: Computer Systems, Machine Learning 
+
+This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand forty-eight by two thousand forty-eight, using a parameterizable Single Precision General Matrix Multiply GPU kernel with hundreds of thousands of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as separate columns. All times are measured in milliseconds. 
+
+There are fourteen parameters, the first ten of which are ordinal and can only take up to four different power-of-two values, and the remaining four variables are binary. Out of millions of total parameter combinations, only hundreds of thousands are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations.
+
+The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and a NVIDIA GeForce graphics processing unit. We use the gemm fast kernel from the automatic OpenCL kernel tuning library CLTune.
+
+Note: For this kind of dataset, it is usually better to work with the logarithm of the running times.
+
+Independent Variables:
+
+Per-matrix two-dimensional tiling at workgroup level 
+Inner dimension of two-dimensional tiling at workgroup level 
+Local workgroup size 
+Local memory shape 
+Kernel loop unrolling factor 
+Per-matrix vector widths for loading and storing 
+Enable stride for accessing off-chip memory within a single thread 
+Per-matrix manual caching of the two-dimensional workgroup tile
+
+Output:
+
+Performance times in milliseconds for four independent runs using the same parameters. They range between thirteen point twenty-five and three thousand three hundred ninety-seven point zero eight. The first run is used as the default target variable.
+
+Related Studies:
+Sobol Tensor Trains for Global Sensitivity Analysis
+
+Keywords: SGEMM, GPU kernel, matrix multiplication, OpenCL, kernel tuning, performance optimization

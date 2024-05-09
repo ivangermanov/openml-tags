@@ -1,0 +1,23 @@
+Traffic-counting-using-cameras 
+Tags: Manufacturing, Social Media 
+
+These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. The Telraam device is an innovative tool that allows individuals to participate in traffic monitoring. 
+
+This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France), and it is one of many devices deployed across the city. 
+
+So, what exactly does the Telraam measure? It counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and analyzed by the Raspberry Pi, a small computer on which the device is based. The analysis is quite simple, relying on the size and speed of the passing object.
+
+Each hour, the camera records the following data: 
+the percentage of camera activity; 
+the count of pedestrians, cars, bicycles, and trucks (total, as well as those moving to the left and right of the street); 
+and a histogram of car speeds for various intervals (from zero to ten kilometers per hour, ten to twenty, twenty to thirty, and so on up to seventy kilometers per hour and above).
+
+But why do we need to know the percentage of camera activity? Well, the Telraam device does not count during nighttime hours, when visibility is limited. Moreover, even during daylight hours, the camera is not always fully operational, so the percentage of activity is indicated to provide context for the recorded data. When the camera is only partially active, the counts are adjusted proportionally using this percentage to estimate the actual activity in the observed hour.
+
+The data have been flattened into a CSV file. The original data in JSON format can be retrieved in real-time via an API call. The API documentation provides detailed information on how to access these data.
+
+The dataset contains several columns, including time, ID, timezone, percentage of uptime, pedestrian count, bicycle count, car count, lorry count, and histograms of car speeds.
+
+This dataset offers exciting opportunities for time series forecasting, allowing researchers to predict traffic flow patterns and identify trends over time.
+
+Keywords: Telraam, traffic monitoring, pedestrian count, cyclist count, car count, freight vehicle count, camera activity, Raspberry Pi, time series forecasting.

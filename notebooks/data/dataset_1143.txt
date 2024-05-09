@@ -1,16 +1,15 @@
-Hill Valley Dataset 
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Artificial, Chemistry, Life Science, OpenML100, Study 
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be utilized by different researchers. This enables many different classification or feature selection techniques to be compared to each other on the same set of problems.
 
-Source: UCI 
+The origin of the data is from the Expression Project for Oncology (expO) repository by the International Genomics Consortium. The goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions. The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-This dataset represents one hundred points on a two dimensional graph. When plotted in order, from one through one hundred, as the y-coordinate, the points will create either a Hill, which is a bump in the terrain, or a Valley, which is a dip in the terrain. The original source provides some examples of these graphs. 
+Although there are various other sources of gene expression data available, the decision to utilize data from the expO repository was made due to the consistency of tissue sample processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-In its original form, this dataset consists of six files. This particular version is the non-noisy edition, with the training and test sets merged together.
+In the event of publishing material based on GEMLeR datasets, please note the assistance received by utilizing this repository. This will enable others to obtain the same datasets and replicate experiments.
 
-Attribute Information:
-The first one hundred attributes are labeled as X followed by a number, and consist of floating-point values, which represent the y-values of the graphs. The one hundred and first attribute is labeled as Class, and consists of binary values, zero or one, which represent either Valley or Hill respectively.
+Features include gene expressions.
 
-Features: Various numerical values representing the y-coordinates of the graphs.
+Tags: Chemistry, Life Science, Mythbusting, Study
 
-Keywords: Hill Valley, Graph, Terrain, Bump, Dip, Non-Noisy, Training Set, Test Set, Binary Values, Floating Point Values.
+Keywords: gene expression, machine learning, microarray, bioinformatics, oncology, genomics, phenotype, genotype, tumor samples.

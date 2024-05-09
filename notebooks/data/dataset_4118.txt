@@ -1,11 +1,13 @@
-Loan Default Prediction
+This dataset, named QSAR-TID-11780, contains QSAR data showing activity values of several compounds on drug target TID: 11780. It has fifty rows and one thousand twenty-six features, including IDs and class feature.
 
-This dataset belongs to the regression on categorical and numerical features benchmark. It originates from the Loan Default Prediction challenge, where participants were tasked with predicting losses for a given set of financial transactions associated with individuals.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The data has undergone standardization, detrending, and anonymization. With over two hundred thousand observations and nearly eight hundred features, each observation is independent from the previous one. A default trigger was recorded for each observation, along with the corresponding loss measurement, which ranges from zero to one hundred. In cases where a default occurred, the loss represents the percentage of the initial notional value of one hundred that was not reimbursed. Conversely, if the loan did not default, the loss was zero.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Missing feature values have been preserved in their original state, allowing competitors to develop strategies for filling these gaps. Some variables are categorical in nature, while others are numerical. Although the data has been stripped of its time dimensionality, the observations are still listed in chronological order from oldest to newest.
+The dataset contains information about the Muscarinic Acetylcholine Receptor M1, also known as Chrm1 or Chrm-one. It is a single protein preferred name, and its synonyms include Muscarinic Acetylcholine Receptor M1. The organism associated with this receptor is Mus musculus, and it belongs to the species group.
 
-Features include identification information, as well as various financial metrics and characteristics.
+This receptor is classified as a membrane receptor, family A G protein-coupled receptor, small molecule receptor, and monoamine receptor. Its description relates to the asymmetric synapse, dendrite, plasma membrane, and presynaptic membrane.
 
-Keywords: loan default prediction, financial transactions, regression, categorical features, numerical features, standardization, detrending, anonymization.
+The dataset also includes information about the expression atlas, go component, go function, and go process related to this receptor.
+
+Keywords: QSAR, Muscarinic Acetylcholine Receptor M1, molecular fingerprints, G protein-coupled receptor, membrane receptor, asymmetric synapse.

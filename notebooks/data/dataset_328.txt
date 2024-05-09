@@ -1,25 +1,41 @@
-Confidence Dataset Tags: Study One, Study One Two Three, Study Forty One
+Bridges
+Tags: 
 
-This dataset contains information on consumer confidence regarding business conditions, job prospects, and family income over various time periods.
+This version is derived from version two (the discretized version) by removing all instances with missing values in the last (target) attribute. The Bridges dataset is originally not a classification dataset, but it is used extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking results. Therefore, these instances have been removed.
 
-The data includes six items:
+Sources:
+Compiled from various sources.
+Date: August 1, 1990
 
-Item One: Business Conditions Six Months from Now, based on a survey conducted by the Conference Board.
-Item Two: Jobs Six Months from Now, also based on a survey conducted by the Conference Board.
-Item Three: Family Income Six Months from Now, again based on a survey conducted by the Conference Board.
-Item Four: Business Conditions a Year from Now, based on a survey conducted by the University of Michigan.
-Item Five: Jobs During the Coming Twelve Months, also based on a survey conducted by the University of Michigan.
-Item Six: Family Income During the Next Twelve Months, again based on a survey conducted by the University of Michigan.
+Attribute Information:
+The type field states whether a property is continuous/integer or nominal. For properties with continuous/integer and nominal types, the range of continuous numbers is given first, and the possible values of the nominal follow the semicolon.
 
-Respondents were asked to indicate their level of optimism regarding each item, with responses categorized as Pessimistic, Neutral, or Optimistic.
+Name | Type | Possible Values | Comments
+------|------|---------------|----------
+Identifier |  |  | Identifier of the examples
+River | Nominal | Allegheny, Monongahela, Ohio | 
+Location | Nominal | One to Fifty Two | 
+Erected | Continuous/Integer, Nominal | Eighteen eighteen to Nineteen eighty six; Craftsman, Emerging, Mature, Modern | 
+Purpose | Nominal | Walk, Aqueduct, Railroad, Highway | 
+Length | Continuous/Integer, Nominal | Eight hundred four to Four thousand five hundred fifty eight; Short, Medium, Long | 
+Lanes | Continuous/Integer, Nominal | One, Two, Four, Six; One, Two, Four, Six | 
+Clearance | Nominal | Normal, Greater | 
+Type of Construction | Nominal | Through, Deck | 
+Material | Nominal | Wood, Iron, Steel | 
+Span | Nominal | Short, Medium, Long | 
+Relative Level | Nominal | Similar, Similar to Flood, Flood | 
+Type | Nominal | Wood, Suspension, Simple Truss, Arch, Cantilever, Continuous Truss | 
 
-The dataset includes data from nineteen ninety-two.
+Features: Identifier, River, Location, Erected, Purpose, Length, Lanes, Clearance, Type of Construction, Material, Span, Relative Level, Type
 
-Permission has been granted by the Conference Board to include its three six-month items in StatLib. Similarly, permission has been granted by the Survey Research Center at the University of Michigan to include its three twelve-month items in StatLib.
+Scraped Data: 
+Dataset Information
+Additional Information
+There are two versions to the database: one contains the original examples, and the other contains descriptions after discretizing numeric properties. There are no classes in the domain. Rather, this is a design domain where five properties (design description) need to be predicted based on seven specification properties.
 
-Features:
+Has Missing Values? Yes
 
-* Item
-* Response (Pessimistic, Neutral, Optimistic)
+Additional Variable Information
+The type field states whether a property is continuous/integer or nominal. For properties with continuous/integer and nominal types, the range of continuous numbers is given first, and the possible values of the nominal follow the semicolon.
 
-Keywords: consumer confidence, business conditions, job prospects, family income, survey research, optimism, pessimism.
+Keywords: Bridges, Classification, Discretization, Design Domain, Numeric Properties

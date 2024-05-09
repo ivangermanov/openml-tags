@@ -1,30 +1,13 @@
-Leaf Dataset
+GEMLeR provides a comprehensive collection of gene expression datasets specifically designed for benchmarking gene expression-oriented machine learning algorithms. These datasets enable researchers to estimate various quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Chemistry, Life Science
+The repository was created to address the growing need in the machine learning and bioinformatics communities for a standardized collection of microarray classification problems. This allows researchers to compare different classification or feature selection techniques on the same set of problems.
 
-This dataset consists of a collection of shape and texture features extracted from digital images of leaf specimens originating from a total of forty different plant species.
+The origin of the data lies in the large publicly available Expression Project for Oncology (expO) repository maintained by the International Genomics Consortium. The primary goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions.
 
-The dataset was created using leaf specimens collected at the Faculty of Science, University of Porto, Portugal.
+The availability of this information has direct benefits for patients, researchers, and pharmaceutical companies alike. Although there are various other sources of gene expression data available, the decision to use data from the expO repository was made due to the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the large number of samples available for different tumor types.
 
-For further details on this dataset and/or its attributes, please refer to the accompanying ReadMe document and/or consult the Master's Thesis titled Development of a System for Automatic Plant Species Recognition.
+When publishing material based on GEMLeR datasets, users are requested to acknowledge the assistance they received by using this repository. This will enable others to obtain the same datasets and replicate the experiments.
 
-Attribute Information:
+Features include gene expression samples from various tumor types, each with corresponding clinical annotations.
 
-* Class, which represents the species of the leaf
-* Specimen Number, a unique identifier for each specimen
-* Eccentricity, a measure of how elliptical the leaf shape is
-* Aspect Ratio, the ratio of the leaf's length to its width
-* Elongation, a measure of how elongated the leaf shape is
-* Solidity, a measure of how much of the leaf's area is occupied by its convex hull
-* Stochastic Convexity, a statistical measure of the leaf's convexity
-* Isoperimetric Factor, a measure of the leaf's compactness
-* Maximal Indentation Depth, a measure of the depth of the leaf's indentations
-* Lobedness, a measure of how lobed the leaf shape is
-* Average Intensity, a measure of the average brightness of the leaf image
-* Average Contrast, a measure of the average contrast between the leaf and its background
-* Smoothness, a measure of how smooth the leaf's edges are
-* Third Moment, a statistical measure of the leaf's shape
-* Uniformity, a measure of how uniform the leaf's texture is
-* Entropy, a measure of the randomness of the leaf's texture
-
-Keywords: leaf, plant species, shape features, texture features, image processing, classification
+Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology, genomics, tumor samples.

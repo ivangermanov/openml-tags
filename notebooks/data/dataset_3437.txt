@@ -1,18 +1,15 @@
-Cause-effect is a growing database comprising two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+This dataset, known as QSAR-TID-102981, falls under the categories of Economics and Life Science, and is part of the MTLQSAR study three. It was obtained from the MetaQSAR project in September 2015.
 
-Some pairs are high-dimensional, and for machine readability, the relevant information about this is coded in metadata. Metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
+The dataset contains QSAR data showing activity values of several compounds on the drug target TID: 102981. There are thirty-two rows and one thousand twenty-six features, including IDs and class features, namely, Molecule ChEMBL ID and Median PXc50. 
 
-When using this dataset in a publication, please cite the corresponding paper, which also contains much more detailed information regarding this dataset in the supplement.
+These features represent FCFP six hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program from Dassault Systèmes BIOVIA. 
 
-Note that pairs from one to forty-one are taken from the University of California, Irvine Machine Learning Repository.
+Generating fingerprints does not usually require missing value imputation as all bits are generated. 
 
-Overview of all data pairs:
+The dataset is related to the A1 adenosine receptor, also known as Adenosine Receptor A1, which is a single protein and belongs to the species group Sus scrofa. 
 
-Variable one, Variable two, Dataset, Ground Truth
+It is classified as a membrane receptor, family A G protein-coupled receptor, small molecule receptor, and nucleotide-like receptor. Its function includes G protein-coupled adenosine receptor activity and G protein-coupled receptor activity. 
 
-Pair three: Longitude, Temperature, Deutscher Wetterdienst (German Weather Service), Longitude causes Temperature
+It is involved in various biological processes, including G protein-coupled adenosine receptor signaling pathway, signal transduction, G protein-coupled receptor signaling pathway, vasoconstriction, and response to stimulus.
 
-Information for Pair Three:
-The Deutscher Wetterdienst (German Weather Service) data was taken at three hundred forty-nine stations and can be found online. The data includes averaged values for the period between nineteen sixty-one and nineteen ninety.
-
-Keywords: Cause-effect, Database, Causal Inference, Machine Learning, German Weather Service, Climate Data, Longitude, Temperature
+Keywords: QSAR, adenosine receptor, molecular fingerprints, G protein-coupled receptor, signal transduction.

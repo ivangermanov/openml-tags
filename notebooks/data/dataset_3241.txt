@@ -1,35 +1,29 @@
-Segment Tags: Computer Systems, Education, Label Ranking
+MetaQSAR Project - September 
 
-Features:
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: Mitogen-Activated Protein Kinase Four, and it has eighty rows and one thousand twenty-six features including IDs and class feature.
 
-* Region Centroid Column: the column of the center pixel of the region
-* Region Centroid Row: the row of the center pixel of the region
-* Region Pixel Count: the number of pixels in a region, which is always nine
-* Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five with low contrast, less than or equal to five, go through the region
-* Short Line Density Two: similar to Short Line Density Five but counts lines of high contrast, greater than five
-* Vertical Edge Mean: a measure of the contrast of horizontally adjacent pixels in the region, used as a vertical edge detector
-* Vertical Edge Standard Deviation: the standard deviation of the contrast of horizontally adjacent pixels in the region
-* Horizontal Edge Mean: measures the contrast of vertically adjacent pixels, used for horizontal line detection
-* Horizontal Edge Standard Deviation: the standard deviation of the contrast of vertically adjacent pixels
-* Intensity Mean: the average over the region of the sum of the red, green, and blue values divided by three
-* Raw Red Mean: the average over the region of the red value
-* Raw Blue Mean: the average over the region of the blue value
-* Raw Green Mean: the average over the region of the green value
-* Excess Red Mean: a measure of the excess red, calculated as two times the red value minus the sum of the green and blue values
-* Excess Blue Mean: a measure of the excess blue, calculated as two times the blue value minus the sum of the red and green values
-* Excess Green Mean: a measure of the excess green, calculated as two times the green value minus the sum of the red and blue values
-* Value Mean: a three-dimensional nonlinear transformation of the red, green, and blue values
-* Saturation Mean: a measure of the saturation of the color in the region
-* Hue Mean: a measure of the hue of the color in the region
+The features represent FCFP Six One Thousand Twenty-Four Bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+
+Features include MOLECULE CHEMEBL ID, followed by nine hundred twenty-six more molecular fingerprints.
 
 Scraped Data:
-Dataset Information
 
-The instances were drawn randomly from a database of seven outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a three-by-three region.
+ID: CHEMEBL Five Seven Five Nine
+Type: Single Protein
+Preferred Name: Mitogen-Activated Protein Kinase Four
+Synonyms: Extracellular Signal-Regulated Kinase Four, Mitogen-Activated Protein Kinase Four, Map Kinase Four
+Organism: Homo Sapiens
+Species Group: No
+Protein Target Classification: One Enzyme Kinase Protein Kinase CMGC Protein Kinase Group CMGC Protein Kinase MAPK Family CMGC Protein Kinase ERK Three
 
-Has Missing Values?
-No
+Description Relationship Accession Mitogen-Activated Protein Kinase Four Single Protein P Three One One Five Two
 
-Additional Variable Information
+Rows per page: Fifty-One to One of One CHEMEBL ID Relationship Pref Name Target Type No data available Rows per page: Five–
 
-Keywords: computer systems, education, image processing, feature extraction, segmentation
+Expression Atlas One P Three One One Five Two Go Component Four GO Zero Zero Zero Five Six Three Four Nucleus GO Zero Zero Zero Five Six Four Nucleoplasm GO Zero Zero Zero Five Seven Three Seven Cytoplasm GO Zero Zero Zero Five Eight Two Nine Cytosol Go Function Twelve GO Zero Zero Zero Zero One Six Six Nucleotide Binding GO Zero Zero Zero Zero Four Six Seven Two Protein Kinase Activity GO Zero Zero Zero Zero Four Six Seven Four Protein Serine Threonine Kinase Activity GO Zero Zero Zero Zero Four Seven Zero Seven Map Kinase Activity GO Zero Zero Zero Zero Five Five One Five Protein Binding GO Zero Zero Zero Zero Five Five Two Four ATP Binding GO Zero Zero Zero One Six Three One Kinase Activity GO Zero Zero Zero One Six Seven Four Transferase Activity GO Zero Zero Zero One Nine Nine One Protein Kinase Binding GO Zero Zero Zero Four Two Eight Zero Protein Homodimerization Activity GO Zero Zero Zero Four Six Nine Eight Protein Heterodimerization Activity GO Zero Zero Zero Ten Six Three One Protein Serine Kinase Activity 
+
+Go Process Five GO Zero Zero Zero Zero One Six Five Mapk Cascade GO Zero Zero Zero Zero Six Four Six Eight Protein Phosphorylation GO Zero Zero Zero Zero Seven Zero Four Nine Cell Cycle GO Zero Zero Zero One Six Three One Phosphorylation GO Zero Zero Zero Three Five Five Six Intracellular Signal Transduction 
+
+Wikipedia One MAPK Four CanSAR-Target One P Three One One Five Two IntAct One P Three One One Five Two PharmGKB One Mitogen-Activated Protein Kinase Four Pharos One TBio Reactome One MAPK Six Slash MAPK Four Signaling UniProt Three A One A Four C Four P Three One One Five Two Q Zero VG Zero Four InterPro Five IPR Zero Zero Zero Zero Seven One Nine Prot_Kinase_Dom IPR Zero Zero Zero Eight Two Seven One Ser_Slash_Thr_Kinase_AS IPR Zero Zero Zero Eight Three Five Zero MAPK_ERK Three Slash Four IPR Zero Zero Zero Eleven Zero Zero Nine Kinase_Like_Dom_Sf IPR Zero Zero Zero Seventeen Four Four One Protein_Kinase_ATP_BS Pfam One PF Zero Zero Zero Six Nine Pkinase
+
+Keywords: QSAR, Machine Learning, MTLQSAR, MetaQSAR, Mitogen-Activated Protein Kinase Four, Drug Target, Molecular Fingerprints, SMILES Strings.

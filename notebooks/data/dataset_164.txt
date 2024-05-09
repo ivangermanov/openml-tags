@@ -1,11 +1,19 @@
-BNG Anneal ORIG Tags:
+Molecular Biology Promoters Dataset 
 
-Features: Family, Product Type, Steel, Carbon, Hardness, Temper Rolling Condition, Formability, Strength, Non-Ageing, Surface Finish, Surface Quality, Enamelability,
+Tags: Life Science, Machine Learning 
 
-This product has a distinct family classification and belongs to a specific product type. It is made of high-quality steel, which contains a certain amount of carbon. The hardness of this material is notable, and it has undergone temper rolling to achieve its desired condition. Its formability is impressive, allowing for various shapes and designs. Additionally, it boasts exceptional strength and is resistant to ageing.
+This dataset consists of E. coli promoter gene sequences, specifically compiled to recognize promoters in strings representing nucleotides (one of Adenine, Guanine, Thymine, or Cytosine). A promoter is a genetic region that initiates the first step in the expression of an adjacent gene through transcription.
 
-The surface finish of this material is smooth and even, contributing to its superior surface quality. It also exhibits excellent enamelability, making it suitable for various applications.
+The input features consist of fifty-seven sequential DNA nucleotides. The dataset comprises fifty-three sample promoters and fifty-three non-promoter sequences. The sample promoters were obtained from a compilation produced by Hawley and McClure (nineteen eighty-three). Negative training examples were derived by selecting contiguous substrings from a one-point-five kilobase sequence provided by Professor Record of the University of Wisconsin’s Chemistry Department. This sequence is a fragment from E. coli bacteriophage T7 isolated with the restriction enzyme HaeIII. Since this fragment does not bind RNA polymerase, it is believed to not contain any promoter sites.
 
-Other notable features include Blue/Bright/Varn/Clean, Lustre, Jurofm, S, P, Shape, Thickness, Width, Length, Oil, Bore, Packing Class.
+This dataset was developed to help evaluate a hybrid learning algorithm that uses examples to inductively refine pre-existing knowledge.
 
-Keywords: Steel, Carbon, Hardness, Strength, Formability, Surface Quality, Enamelability.
+Attribute Description:
+The first attribute indicates the class, either positive (+) for promoter or negative (-) for non-promoter.
+The second attribute is the instance name; non-promoters are named by their position in the one-point-five kilobase nucleotide sequence.
+
+Relevant Papers:
+Analysis of E. Coli Promoter Sequences.
+Refinement of Approximate Domain Theories by Knowledge-Based Artificial Neural Networks.
+
+Keywords: Molecular Biology, Promoters, Gene Sequences, E. coli, Transcription, DNA Nucleotides, Machine Learning, Hybrid Algorithm.

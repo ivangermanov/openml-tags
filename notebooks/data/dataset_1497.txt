@@ -1,18 +1,34 @@
-MetaQSAR Project Dataset: QSAR-TID-101348
-Tags: Machine Learning, Medicine, MTLQSAR, Study Three
+The Wall Following Robot Navigation Data dataset is categorized under Chemistry, Life Science, OpenML-CC18, OpenML100, study_123, study_14, study_34, study_52, study_7, and study_98.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101348. It has numerous rows and features, including IDs and class features.
+This dataset was collected as the SCITOS G5 robot navigated through a room following the wall in a clockwise direction for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. The data consists of raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings were sampled at a rate of nine samples per second. The class labels are Move Forward, Slight Right Turn, Sharp Right Turn, and Slight Left Turn.
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
+It is worth noting that the twenty-four ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows, one for each sampling time step. The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the Multilayer Perceptron network, are able to learn the task and command the robot successfully without collisions.
 
-The dataset contains information about the molecule ChEMBL ID, as well as various fingerprint features. It also includes data on the median pXC fifty value for each compound.
+Attribute information includes:
 
-The target protein is a serine-threonine protein kinase, also known as PRKX. It is a single protein and its preferred name is cAMP-dependent protein kinase catalytic subunit PRKX. It has several synonyms, including PKX one and protein kinase PKX one.
+Ultrasound Sensor at the Front of the Robot (Reference Angle: One Hundred Eighty Degrees)
+Ultrasound Reading (Reference Angle: Minus One Hundred Sixty-Five Degrees)
+Ultrasound Reading (Reference Angle: Minus One Hundred Fifty Degrees)
+Ultrasound Reading (Reference Angle: Minus One Hundred Thirty-Five Degrees)
+Ultrasound Reading (Reference Angle: Minus One Hundred Twenty Degrees)
+Ultrasound Reading (Reference Angle: Minus One Hundred Five Degrees)
+Ultrasound Reading (Reference Angle: Minus Ninety Degrees)
+Ultrasound Reading (Reference Angle: Minus Seventy-Five Degrees)
+Ultrasound Reading (Reference Angle: Minus Sixty Degrees)
+Ultrasound Reading (Reference Angle: Minus Forty-Five Degrees)
+Ultrasound Reading (Reference Angle: Minus Thirty Degrees)
+Ultrasound Reading (Reference Angle: Minus Fifteen Degrees)
+Reading of Ultrasound Sensor Situated at the Back of the Robot (Reference Angle: Zero Degrees)
+Ultrasound Reading (Reference Angle: Fifteen Degrees)
+Ultrasound Reading (Reference Angle: Thirty Degrees)
+Ultrasound Reading (Reference Angle: Forty-Five Degrees)
+Ultrasound Reading (Reference Angle: Sixty Degrees)
+Ultrasound Reading (Reference Angle: Seventy-Five Degrees)
+Ultrasound Reading (Reference Angle: Ninety Degrees)
+Ultrasound Reading (Reference Angle: One Hundred Five Degrees)
+Ultrasound Reading (Reference Angle: One Hundred Twenty Degrees)
+Ultrasound Reading (Reference Angle: One Hundred Thirty-Five Degrees)
+Ultrasound Reading (Reference Angle: One Hundred Fifty Degrees)
+Ultrasound Reading (Reference Angle: One Hundred Sixty-Five Degrees)
 
-The protein is found in humans and belongs to the enzyme-kinase-protein kinase-AGC protein kinase group-AGC protein kinase PKA family classification. It is involved in various biological processes, including angiogenesis, endothelial cell proliferation, protein phosphorylation, and cell adhesion.
-
-The protein has several functions, including nucleotide binding, protein kinase activity, protein serine-threonine kinase activity, cAMP-dependent protein kinase activity, protein binding, ATP binding, kinase activity, transferase activity, and protein serine kinase activity.
-
-It is localized in the nucleus, nucleoplasm, and cytoplasm, and is involved in various cellular components, including the nucleus, nucleoplasm, and cytoplasm.
-
-Keywords: QSAR, machine learning, medicine, protein kinase, PRKX, cAMP-dependent protein kinase, angiogenesis, endothelial cell proliferation, protein phosphorylation, cell adhesion.
+Keywords: robot navigation, ultrasound sensors, classification task, nonlinearly separable, linear classifiers, neural classifiers, collision avoidance.

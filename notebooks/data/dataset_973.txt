@@ -1,13 +1,11 @@
-GEMLeR provides a comprehensive collection of gene expression datasets specifically designed for benchmarking gene expression-oriented machine learning algorithms. These datasets enable researchers to estimate various quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
+Wine Dataset
 
-The repository was created to address the growing need in the machine learning and bioinformatics communities for a standardized collection of microarray classification problems. This allows researchers to compare different classification or feature selection techniques on the same set of problems.
+Tags: Chemistry, Life Science
 
-The origin of the data lies in the large publicly available Expression Project for Oncology (expO) repository maintained by the International Genomics Consortium. The primary goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions.
+This dataset has been binarized from the original version. The multi-class target feature has been converted into a two-class nominal target feature, where the majority class is labeled as Positive and all others are labeled as Negative.
 
-The availability of this information has direct benefits for patients, researchers, and pharmaceutical companies alike. Although there are various other sources of gene expression data available, the decision to use data from the expO repository was made due to the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the large number of samples available for different tumor types.
+The dataset originally consisted of various chemical properties of wines, including the levels of alcohol, malic acid, ash, and magnesium, among other compounds. These features have been retained in this binarized version.
 
-When publishing material based on GEMLeR datasets, users are requested to acknowledge the assistance they received by using this repository. This will enable others to obtain the same datasets and replicate the experiments.
+The resulting dataset has a binary class label, which simplifies the analysis and allows for easier classification.
 
-Features include gene expression samples from various tumor types, each with corresponding clinical annotations.
-
-Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology, genomics, tumor samples.
+Keywords: Wine, Chemistry, Life Science, Binary Classification, Chemical Properties

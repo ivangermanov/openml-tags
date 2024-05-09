@@ -1,11 +1,7 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one zero one zero four five, and it has seventy-nine rows and one thousand twenty-six features including IDs and class feature: molecule ChEMBL ID and median pXC fifty.
+The SensIT Vehicle Combined dataset is a multiclass dataset that combines chemistry and life science tags. This dataset is obtained from the LIBSVM data repository.
 
-The features represent FCFP six one twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Preprocessing involves regenerating features using the authors' MATLAB scripts, which can be found in Section C of Appendix A. Then, ten percent of instances from the noise class are randomly selected to achieve a class proportion of one to one to two for AAV, DW, and noise classes. The training and testing sets are obtained through a random eighty percent and twenty percent split of the data.
 
-Features include molecule ChEMBL ID, followed by numerous FCFP six one twenty-four bit molecular fingerprint features.
+This dataset contains a wide range of features, including various attributes from one to ninety-nine, which are essential for understanding the underlying chemistry and life science concepts. 
 
-This dataset is part of the MetaQSAR project, specifically the study three subset. It is tagged with machine learning, manufacturing, MTL QSAR.
-
-Scraped data includes information about the protein target, specifically serine threonine protein kinase Nek five, also known as never in mitosis A related kinase five or nimA related protein kinase five. It belongs to the species group Homo sapiens and has been classified as an enzyme kinase protein kinase other protein kinase group other protein kinase NEK family.
-
-Keywords: QSAR, molecular fingerprints, protein kinase, MetaQSAR, machine learning, manufacturing.
+Keywords: SensIT Vehicle Combined, LIBSVM, chemistry, life science, multiclass dataset, preprocessing, feature regeneration.

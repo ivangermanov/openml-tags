@@ -1,24 +1,16 @@
-To demonstrate the RFMTC marketing model, a modified version of RFM, this study adopted the donor database of Blood Transfusion Service Center in Hsin Chu City in Taiwan. The center passes its blood transfusion service bus to one university in Hsin Chu City to gather blood donations approximately every three months. 
+**QSAR-TID-12366**
+**Tags:** Machine Learning, MTLQSAR, Study Three, Transportation
+**Dataset:** MetaQSAR Project - September 2015
+**Citation:** This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12366.
 
-To build an FRMTC model, seven hundred forty-eight donors were randomly selected from the donor database. Each of these seven hundred forty-eight donor data included recency, which is the time period in months since the last donation, frequency, which is the total number of donations, monetary, which is the total amount of blood donated in cubic centimeters, time, which is the time period in months since the first donation, and a binary variable representing whether the individual donated blood in March two thousand seven. 
+The dataset has one hundred sixty-two rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent Fingerprint Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This binary variable is represented by one if the individual donated blood and zero if they did not donate blood. The Blood Transfusion Service Center is a classification problem.
+This dataset is related to the Hepatitis C Virus Polyprotein, specifically the genotype one a isolate one. The protein target classification is described as a single protein. The description relationship accession genome polyprotein is also classified as a single protein.
 
-The variables are described below. 
-Recency is a quantitative variable measured in months, which represents the time period since the last donation. 
-Frequency is also a quantitative variable, which measures the total number of donations made by an individual.
-Monetary is another quantitative variable, which represents the total amount of blood donated by an individual in cubic centimeters.
-Time is a quantitative variable measured in months, which represents the time period since the first donation.
+The scraped data includes information about the protein target, such as its preferred name, synonyms, organism, species group, and protein target classification. Additionally, there is information about the gene ontology, including biological processes, cellular components, and molecular functions.
 
-Table One displays the descriptive statistics of the data. 
-Five hundred data points were randomly selected as the training set, and the remaining two hundred forty-eight were used as the testing set. 
+The gene ontology biological processes include virus-host interaction, suppression of host innate immune response, and disruption of host antiviral defense response. The cellular components include host cell plasma membrane, host cell cytoplasm, and virion component. The molecular functions include nucleotide binding, RNA binding, and ATP binding.
 
-Table One: Descriptive Statistics of the Data
-Variable            Data Type        Measurement        Description        
-Recency            Quantitative     Months            Input            
-Frequency          Quantitative     Times            Input            
-Monetary           Quantitative     Cubic Centimeters Input            
-Time               Quantitative     Months            Input            
-Whether He/She Donated Blood in March Two Thousand Seven Binary         One equals yes, zero equals no Output            
+Furthermore, the dataset includes information about the protein-protein interactions, including interaction with host cell proteins and other viral proteins. There is also information about the protein structure, including its domains and motifs.
 
-Keywords: RFMTC, Marketing Model, Blood Transfusion, Donor Database, Classification Problem, Recency, Frequency, Monetary, Time.
+**Keywords:** QSAR, Machine Learning, Hepatitis C Virus, Polyprotein, Gene Ontology, Protein-Protein Interaction, Protein Structure.

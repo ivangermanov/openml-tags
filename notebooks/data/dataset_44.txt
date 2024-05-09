@@ -1,47 +1,19 @@
-INDUCE Trains Data Set
+SPAM Email Database
 
-Sources:
-Donor: Center for AI, Software Librarian
-Original Owners:
+The concept of spam is diverse, encompassing advertisements for products and websites, make money fast schemes, chain letters, pornography, and other forms of unwanted emails. Our collection of spam emails came from our postmaster and individuals who had filed spam complaints. On the other hand, our collection of non-spam emails came from filed work and personal emails.
 
-Date Received: 
-Date Updated:
+The classification task for this dataset is to determine whether a given email is spam or not. This is a challenging task due to the diversity of spam emails. However, certain indicators such as the presence of specific words or characters can be useful in constructing a personalized spam filter.
 
-Past Usage:
-This set most closely resembles the data sets described in the following two publications:
+One would need to either blind such non-spam indicators or gather a vast collection of non-spam emails to generate a general-purpose spam filter. For background information on spam, one can refer to the article "Spam!" by Cranor and LaMacchia.
 
-This dataset has ten attributes, no wheel or load color attributes.
-Both references describe a set of ten trains, five eastbound and five westbound.
-Both refer to the same ten trains as seen by the figures in these publications.
+Typical performance of a spam classifier on this dataset is around seven percent misclassification error. However, false positives, which involve marking legitimate emails as spam, are highly undesirable. In fact, if we insist on zero false positives in the training and testing sets, twenty to twenty-five percent of spam emails would pass through the filter undetected.
 
-Results:
-Found the following decision rules:
-There exists car one, car two, load one, and load two such that in front of car one, car two, load contains car one, load one, and load contains car two, load two, load shape load one equals triangle, load shape load two equals polygon implies direction equals east.
-There exists a car one such that length of car one equals short, car shape car one equals closed top implies direction equals east.
-Number of cars equals three or there exists a car one such that car shape car one equals jagged top implies direction equals west.
-There exists a car one such that number of cars length equals long equals two, car shape car one equals open trapezoid, u-shaped or location car one equals two, car shape car one equals closed, rectangle implies direction equals west.
+Attribute Information:
 
-Relevant Information:
-Additional background knowledge is supplied that provides a partial ordering on some of the attribute values.
-We are providing this dataset both in its original form and in a form similar to the more typical propositional datasets in our repository.
-Since the trains dataset records relations between attributes, this transformation was somewhat challenging.
-However, it may shed some insight on this problem for people who are more familiar with the simple one-instance-per-line dataset format.
-Hierarchy of values: if car shape is one of open rectangle, open trapezoid, u-shaped, double bottom open rectangle, then car shape is open top; if car shape is one of hexagon, ellipse, closed rectangle, jagged top, slope top, engine, then car shape is closed top.
-Prediction Task: Determine concise decision rules distinguishing trains traveling east from those traveling west.
+The dataset consists of various attributes that indicate whether a particular word or character was frequently occurring in the email. There are forty-eight continuous real attributes representing the frequency of specific words in the email. Additionally, there are six continuous real attributes representing the frequency of certain characters in the email. Furthermore, there are three attributes measuring the length of sequences of consecutive capital letters.
 
-Number of Instances: 
-Number of Attributes: Ten, not including the class attribute.
+Class Attribute:
 
-Attributes:
-Car contains train index one, car index two; number of cars in train index; relative positions of cars in train; absolute position of car in train; number of wheels of car index; length of car index; shape of car index; number of loads in car index; description of which cars hold which loads; description of load shape; class direction.
+The class attribute denotes whether the email was considered spam or not, with one indicating spam and zero indicating non-spam.
 
-Class: Direction, East or West.
-
-The Following Format Was Used for the Transformed Dataset Representation:
-Attributes: Thirty-three.
-One Instance Per Line.
-
-Attributes:
-Number of Cars; Number of Different Loads; Five Attributes for Each of Cars Two Through Five; Ten Boolean Attributes Describing Whether Two Types of Loads Are on Adjacent Cars of the Train; Class Attribute.
-
-Keywords: Machine Learning, Transportation, Trains, Classification, Decision Rules.
+Keywords: spam, email, classifier, machine learning, filter, misclassification error, false positives

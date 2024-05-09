@@ -1,15 +1,69 @@
-This database contains six basic emotions, namely happiness, surprise, anger, fear, disgust, and sadness, of normalized data collected from eighty-five undergraduate university students, fifty-five males and thirty females, aged between twenty and twenty-seven years with a mean age of twenty-four point five years. The data, which contained noises and other movement artifacts, were removed from the raw data.
+MetaQSAR Project 
 
-A built-in FaceTime HD camera in an Apple Mac Pro with a high resolution was used to collect the facial images in a controlled environment, specifically a room with a temperature of twenty-five degrees Celsius and fifty Lux lighting intensity, at thirty frames per second. All the subjects were seated comfortably in a chair in front of the camera, and the distance between the subject's face to the camera was approximately zero point ninety-five meters.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10679. It has multiple rows and features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
 
-A computerized PowerPoint slide presentation was used to instruct the subjects to express the facial emotional expression by looking into the International Affective Picture System images of six different emotions. The data file contains eleven columns, ten columns for the ten markers and the last column representing the label of emotion. 
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Each emotion had ten trials, and each trial had a duration of six seconds. In between the emotional expressions, a ten-second break was given to the subjects to feel calm by showing natural scenes. The PowerPoint show started with a set of instructions at the beginning of the experiment, which lasted for ten seconds. 
+Features include Molecule ChEMBL ID, followed by numerous FCFP six one hundred twenty-four bit molecular fingerprint features. 
 
-The computing system continuously recorded the marker positions and saved them in comma-separated values format for further processing. 
+Scraped Data:
 
-The dataset should be acknowledged by including a citation in all documents and papers that report on research that uses the FEER Dataset.
+ID: ChEMBL four zero eight zero
+Type: Single Protein
+Preferred Name: Bombesin Receptor Subtype-three
+Synonyms: Bombesin Receptor Subtype-three BRS three BRS minus three
 
-Features: emotion
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: One. Membrane receptor/Family A G protein-coupled receptor/Peptide receptor (family A GPCR)/Short peptide receptor (family A GPCR)/GRP-related receptor
 
-Keywords: FEER Dataset, Computer Systems, Machine Learning, Facial Emotion Recognition, Emotion Labels, Normalized Data.
+Description Relationship Accession Bombesin Receptor Subtype-three Single Protein P three two two four seven
+
+Rows per page: fifty-one minus one of one
+
+ChEMBL ID Relationship Pref Name Target Type
+ChEMBL four five two four zero one zero SUPERSET OF Bombesin Receptor PROTEIN FAMILY
+
+Rows per page: fifty-one minus one of one
+
+Go Component:
+Go Component plasma membrane
+Go Component membrane
+
+Go Function:
+Go Function G protein-coupled receptor activity
+Go Function bombesin receptor activity
+Go Function neuropeptide receptor activity
+Go Function G protein-coupled peptide receptor activity
+
+Go Process:
+Go Process glucose metabolic process
+Go Process signal transduction
+Go Process G protein-coupled receptor signaling pathway
+Go Process neuropeptide signaling pathway
+Go Process regulation of blood pressure
+Go Process adult feeding behavior
+Go Process bombesin receptor signaling pathway
+
+Wikipedia: Bombesin-like receptor three
+
+canSAR-Target: P three two two four seven
+
+GuideToPHARMACOLOGY: forty
+
+PharmGKB: bombesin-like receptor three
+
+Pharos: Tchem
+
+Reactome: Peptide ligand-binding receptors. G alpha q signalling events.
+
+UniProt: P three two two four seven
+
+InterPro: GPCR Rhodopsn.
+InterPro: Bombsn rcpt-like.
+InterPro: Bombesin rcpt three.
+InterPro: GPCR Rhodopsn seven TM.
+
+Pfam: seven tm one
+
+Keywords: QSAR, health, medicine, MTLQSAR, study, chembl, pipeline pilot, dassault systemes biavia, molecule, fingerprints, smiles, gpcr, peptide receptor, bombesin receptor, homo sapiens, protein target classification.

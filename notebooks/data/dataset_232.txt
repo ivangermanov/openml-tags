@@ -1,11 +1,26 @@
-This is the Poker dataset, retrieved from the libSVM website. In addition to the preprocessing done on the website (please refer to the libSVM website for details), this dataset was created as follows:
+**Fishcatch**
 
-The test and training datasets were joined together, using the non-scaled versions. The classes were relabeled so that class zero became the positive class, and classes one through nine became the negative class.
+Tags: Life Science, Statistics
 
-Each column in the dataset was normalized according to specific rules. If a column contained only one unique value, it was considered a constant feature and was set to zero, effectively removing it due to sparsity. If a column contained only two unique values, it was considered a binary feature, and the value that occurred most frequently was set to zero, while the other value was set to one. If a column contained more than two unique values, it was considered a multinary or real feature, and was divided by its standard deviation.
+This dataset contains 159 observations of seven species of fish caught from Lake Laengelmavesi near Tampere in Finland. Each observation includes eight variables.
 
-It is important to note that the Poker dataset has a mild redundancy issue, with approximately point two percent of duplicated data points within each file, both in the training and testing sets. These duplicated points have not been removed.
+The descriptive abstract explains that all the fish were caught from the same lake, and altogether there are eight variables.
 
-Features include Suit, Rank, and various combinations thereof.
+Variable descriptions:
 
-Keywords: Poker dataset, libSVM, normalization, preprocessing, redundancy, classification.
+1. Observation number
+2. Species: A numeric code representing seven species of fish, including Bream, Whitefish, Roach, Pike, Smelt, and Perch.
+3. Weight: The weight of the fish in grams.
+4. Length One: The length from the nose to the beginning of the tail in centimeters.
+5. Length Two: The length from the nose to the notch of the tail in centimeters.
+6. Length Three: The length from the nose to the end of the tail in centimeters.
+7. Height Percentage: The maximal height as a percentage of Length Three.
+8. Width Percentage: The maximal width as a percentage of Length Three.
+
+Special notes: Height and Width can be calculated by multiplying Height Percentage and Width Percentage with Length Three divided by 100.
+
+Pedagogical notes: Models and tests have been used, particularly with Species Seven, Perch. Questions include what is the proper weighting when using Length Three as a weighting variable?
+
+References: A source book about fish populations in Lake Laengelmavesi has been cited.
+
+Keywords: Fish species, Lake Laengelmavesi, Finland, Weight, Length, Height, Width, Statistics, Life Science.

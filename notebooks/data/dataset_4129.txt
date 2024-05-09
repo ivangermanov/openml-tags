@@ -1,18 +1,13 @@
-The Electricity dataset is a widely used collection of data points described and analyzed in various research papers. This dataset was compiled from the Australian New South Wales Electricity Market, where prices are determined by demand and supply forces and are adjusted every five minutes. To mitigate fluctuations, electricity transfers to and from the neighboring state of Victoria were conducted.
+QSAR-TID-12327 Dataset 
 
-The dataset, originally known as ELEC2, encompasses forty-five thousand three hundred twelve instances dating from May seventh nineteen ninety-six to December fifth nineteen ninety-eight. Each instance in the dataset corresponds to a thirty-minute period, resulting in forty-eight instances per day. Every data point in the dataset comprises five fields: the day of the week, the timestamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12327. It has forty-two rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA.
 
-The class label signifies the change in the price, either up or down, in New South Wales relative to a moving average of the previous twenty-four hours, thereby eliminating the influence of longer-term price trends. The data underwent normalization.
+The MetaQSAR project was conducted in September two thousand fifteen. This dataset should be cited when used.
 
-Attribute Information:
+The dataset contains demographic information about the compounds, including their molecule ChEMBL ID, which is a unique identifier for each compound. The Median PXc50 is a measure of the compound's activity on the target protein.
 
-* Date: represents dates between May seventh nineteen ninety-six and December fifth nineteen ninety-eight, normalized between zero and one.
-* Day: denotes the day of the week, ranging from one to seven.
-* Period: signifies the time of measurement, divided into forty-eight half-hour intervals over twenty-four hours, normalized between zero and one.
-* New South Wales Electricity Price: represents the New South Wales electricity price, normalized between zero and one.
-* New South Wales Electricity Demand: signifies the New South Wales electricity demand, normalized between zero and one.
-* Victoria Electricity Price: represents the Victoria electricity price, normalized between zero and one.
-* Victoria Electricity Demand: signifies the Victoria electricity demand, normalized between zero and one.
-* Scheduled Electricity Transfer: denotes the scheduled electricity transfer between both states, normalized between zero and one.
+The FCFP six one hundred twenty-four bit molecular fingerprints are a type of molecular descriptor that captures the structural properties of the compounds. These descriptors were generated from the SMILES strings of the compounds using the Pipeline Pilot program, Dassault Systemes BIOVIA.
 
-Keywords: Electricity Market, Price Fluctuations, Demand and Supply, Data Normalization, Class Label.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
+
+Keywords: QSAR, TID 12327, FCFP, molecular fingerprints, MetaQSAR, demographic data.

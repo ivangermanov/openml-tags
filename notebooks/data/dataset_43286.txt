@@ -1,0 +1,9 @@
+The Graph Inference Dataset is a collection of graphical models used in the article "Learning Functional Causal Models with Generative Neural Networks". This dataset is comprised of graph datasets in CSV format.
+
+There are two types of files in this dataset. The first type includes files named "*_numdata.csv", which contain data on approximately twenty variables connected in a graph without hidden variables. These files are further categorized into four groups based on the maximum number of parents each node has: G2, G3, G4, and G5. Each corresponding "*_target.csv" file contains the ground truth of the graph, depicting causal relationships from cause to effect.
+
+The second type of files includes those starting with "Big", which represent larger graphs consisting of one hundred variables. These files follow the same structure as the previous ones.
+
+In addition, there are files named "*_confounders_numdata.csv", which contain data on approximately twenty variables connected in a graph with three hidden variables. The corresponding "*_confounders_skeleton.csv" files contain the skeleton of the graph, including spurious links resulting from common hidden causes. Finally, the "*_confounders_target.csv" files provide the ground truth of the graph, illustrating direct visible causal relationships from cause to effect. The primary objective is to identify and remove spurious links from the skeleton, thereby recovering the direct visible causal relationships.
+
+Keywords: Graphical models, Machine learning, Causal models, Neural networks, Graph inference.

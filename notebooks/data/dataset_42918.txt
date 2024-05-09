@@ -1,0 +1,32 @@
+**Skillcraft One Master Table Dataset**
+
+This dataset aggregates screen movements into screen-fixations using a dispersion-threshold algorithm, and defines Perception Action Cycles (PACs) as fixations with at least one action. Time is recorded in terms of timestamps in the StarCraft Two replay file. When the game is played on faster, one real-time second is equivalent to roughly eighty-eight point five timestamps.
+
+The list of possible game actions is discussed in the related literature. This dataset has missing values.
+
+**Attribute Information**
+
+* Game ID: A unique identifier number for each game.
+* League Index: An ordinal value representing the league level of the player, ranging from bronze to professional.
+* Age: The age of each player.
+* Hours Per Week: The reported hours spent playing per week.
+* Total Hours: The reported total hours spent playing.
+* Actions Per Minute: The rate of actions performed by the player per minute.
+* Selections By Hotkeys: The number of unit or building selections made using hotkeys per timestamp.
+* Assignments To Hotkeys: The number of units or buildings assigned to hotkeys per timestamp.
+* Unique Hotkeys Used: The number of unique hotkeys used per timestamp.
+* Minimap Attacks: The number of attack actions on minimap per timestamp.
+* Minimap Right Clicks: The number of right-clicks on minimap per timestamp.
+* Number Of PACs: The number of PACs per timestamp.
+* Gap Between PACs: The mean duration in milliseconds between PACs.
+* Action Latency: The mean latency from the onset of a PAC to its first action in milliseconds.
+* Actions In PAC: The mean number of actions within each PAC.
+* Total Map Explored: The number of twenty-four by twenty-four game coordinate grids viewed by the player per timestamp.
+* Workers Made: The number of SCVs, drones, and probes trained per timestamp.
+* Unique Units Made: The number of unique units made per timestamp.
+* Complex Units Made: The number of ghosts, infestors, and high templars trained per timestamp.
+* Complex Abilities Used: The abilities requiring specific targeting instructions used per timestamp.
+
+**Tags:** Images, Life Science
+
+**Keywords:** Skillcraft, StarCraft, Gameplay, Player Behavior, Perception Action Cycles

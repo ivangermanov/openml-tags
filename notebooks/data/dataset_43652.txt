@@ -1,0 +1,7 @@
+Data is pulled from the Sloan Digital Sky Survey Sixteenth Data Release Skyserver using the following query.
+
+Select photo object id, right ascension, declination, u magnitude, g magnitude, r magnitude, i magnitude, z magnitude, observation run number, rerun number, camera column, field number, spectroscopic object id, class, redshift, plate id, observation date, fiber id into my database table from Photo Object table as photo object join Spectroscopic Object table as spectroscopic object on spectroscopic object best object id equals photo object id where photo object u magnitude is between zero and nineteen point six and g magnitude is between zero and twenty.
+
+Features include object identification information, celestial coordinates, magnitudes in various wavelengths, observation metadata, and spectroscopic information.
+
+Keywords: Sloan Digital Sky Survey, computer systems, machine learning, astronomical data, spectroscopy, photometry.

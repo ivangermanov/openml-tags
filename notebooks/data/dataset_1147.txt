@@ -1,39 +1,13 @@
-Localization Data for Person Activity Data Set
+GEMLeR provides a comprehensive collection of gene expression datasets specifically designed for benchmarking gene expression-oriented machine learning algorithms. These datasets enable researchers to estimate various quality metrics, including accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Abstract:
-This data set contains recordings of five individuals performing various daily activities. Each participant wore four sensors, also referred to as tags, while performing the same scenario multiple times.
+The inspiration behind creating this repository stems from the growing need within the machine learning and bioinformatics communities for a standardized collection of microarray classification problems. By utilizing these datasets, researchers can compare and evaluate different classification or feature selection techniques on the same set of problems.
 
-Dataset Title: Localization Data for Person Activity
-Tags: Chemistry, Concept Drift, Life Science
-Source: UCI
+Each gene expression sample included in the GEMLeR repository originates from the Expression Project for Oncology (expO), a large publicly available repository managed by the International Genomics Consortium. The primary objective of expO is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The resulting tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions. This open-access approach translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-Data Set Information:
-The participants involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance in the data set represents a localization reading for one of these tags, which can be identified using specific attributes.
+Several factors contributed to the decision to utilize data from the expO repository, including the consistency of tissue sample processing procedures, the uniform use of the same microarray platform across all samples, the availability of additional information for combined genotype-phenotype studies, and the access to a large number of samples representing diverse tumor types.
 
-Attribute Information:
-An instance example is comprised of the following attributes:
+When publishing materials based on GEMLeR datasets, researchers are kindly requested to acknowledge the assistance provided by this repository. This acknowledgment enables others to access the same datasets and replicate experiments.
 
-* Sequence Name: This attribute identifies the sequence of activities performed by each individual.
-* Tag Identifier: This attribute specifies the type of tag worn by the participant, including ankle left, ankle right, belt, and chest.
-* Timestamp: A unique numeric value representing the time of each reading.
-* Date: The date of each reading in the format day.month.year hour:minute:second:millisecond.
-* X Coordinate of the Tag: The x-axis coordinate of the tag's location.
-* Y Coordinate of the Tag: The y-axis coordinate of the tag's location.
-* Z Coordinate of the Tag: The z-axis coordinate of the tag's location.
-* Activity: The type of activity being performed by the participant, including walking, falling, lying down, sitting, standing up, and others.
+Features include gene expression profiles and related metadata.
 
-Relevant Papers:
-An agent-based approach to care in independent living has been explored using this data set.
-
-Features:
-(V1, V2, V3, V4, V5, V6, V7, Class)
-
-Scraped Data:
-Dataset Information
-Additional Information
-People involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance is a localization data for one of the tags. The tag can be identified by one of the attributes.
-
-Has Missing Values?
-No
-
-Keywords: person activity, localization data, sensor readings, daily activities, agent-based approach, independent living.
+Keywords: gene expression, machine learning, bioinformatics, microarray analysis, oncology, genomics, phenotype studies.

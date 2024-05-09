@@ -1,7 +1,11 @@
-The MiniBooNE dataset is part of the regression on numerical features benchmark and has been transformed in the same way as other datasets in this category. Originally, this dataset was used in the MiniBooNE experiment to distinguish between electron neutrinos, which are considered signals, and muon neutrinos, which are considered background noise. The dataset is ordered, with all signal observations followed by background observations.
+DEXTER is a text classification problem in a bag-of-words representation. This is a two-class classification problem with sparse continuous input variables. This dataset is one of five datasets of the NIPS feature selection challenge.
 
-This dataset belongs to the computer systems and mathematics categories. It was previously described in a research paper titled "Boosted Decision Trees, an Alternative to Artificial Neural Networks", which presented a new approach to analyzing particle physics data using machine learning algorithms.
+The original dataset was a subset of the well-known Reuters text categorization benchmark. The data was originally collected and labeled in the course of developing the CONSTRUE text categorization system. It is hosted by the UCI KDD repository.
 
-The dataset contains fifty particle identification features, which are numerical values representing various properties of subatomic particles. These features are used to train machine learning models to classify particles into either signal or background categories.
+We used the corporate acquisition text classification class pre-processed in the bag-of-words representation. There were features representing frequencies of occurrence of word stems in text. The task is to learn which Reuters articles are about corporate acquisitions. We added a number of distractor features called probes having no predictive power. The order of the features and patterns were randomized.
 
-Keywords: MiniBooNE, computer systems, mathematics, regression, numerical features, particle physics, machine learning, electron neutrinos, muon neutrinos.
+The dataset is split into training, validation, and test sets. Target values are provided only for the training and validation sets. The data are in the following format: parameters and statistics about the data, identities of the features, training set, validation set, test set, labels for training examples, validation set labels, and test set labels.
+
+The dataset has real features and probe features, totaling twenty thousand features. The data do not have missing values.
+
+Keywords: text classification, bag-of-words, Reuters, corporate acquisition, feature selection, NIPS challenge.

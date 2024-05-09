@@ -1,38 +1,13 @@
-This is a twenty-dimensional, two-class classification problem. Each class is drawn from a multivariate normal distribution. Class one has a mean of zero and a covariance four times the identity. Class two has a mean of (a, a, ..., a) and a unit covariance, where a equals two divided by the square root of twenty.
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, among others, for classification, feature selection, or clustering algorithms.
 
-Data Set Description:
-The RingNorm data set is an implementation of Leo Breiman's ring norm example. It is a twenty-dimensional, two-class classification example. Each class is drawn from a multivariate normal distribution. Class one has a mean of zero and a covariance four times the identity. Class two has a mean of (a, a, ..., a) and a unit covariance, where a equals two divided by the square root of twenty.
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be utilized by different researchers. This allows many different classification or feature selection techniques to be compared to each other on the same set of problems.
 
-Type:
-Classification
+Each gene expression sample in the GEMLeR repository originates from the large publicly available Expression Project for Oncology repository by the International Genomics Consortium. The goal of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions. The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-Origin:
-Laboratory
+A decision to utilize data from the Expression Project for Oncology repository was made due to the consistency of tissue sample processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-Instances:
-Seven thousand four hundred
+In case of publishing material based on GEMLeR datasets, please note the assistance received by utilizing this repository. This will enable others to obtain the same datasets and replicate experiments.
 
-Features:
-Twenty
+Features:... (skipped due to being unreadable)
 
-Classes:
-Two
-
-Missing Values:
-No
-
-Attributes Information:
-
-Relation: Ring
-
-Attribute One: Real-valued feature ranging from negative six thousand eight hundred seventy-nine point zero to six thousand two hundred eighty-five point zero.
-
-Attribute Two: Real-valued feature ranging from negative seven thousand one hundred forty-one point zero to six thousand nine hundred twenty-one point zero.
-
-... (skipping attributes three to nineteen)
-
-Attribute Twenty: Real-valued feature ranging from negative six thousand seven hundred twenty-two point zero to seven thousand six hundred twenty-seven point zero.
-
-Class Attribute: Binary class label taking on values zero or one.
-
-Keywords: RingNorm, classification, multivariate normal distribution, covariance, laboratory data, machine learning.
+Keywords: gene expression, machine learning, bioinformatics, microarray, classification, feature selection, clustering, genomics, oncology.

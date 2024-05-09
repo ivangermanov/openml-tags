@@ -1,13 +1,27 @@
-The Multiple Features Dataset: Morphological is one of a set of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Each dataset corresponds to the same original character. Two thousand instances have been digitized in binary images, with two hundred instances per class.
+Breast Cancer Wisconsin Original Data Set 
 
-This particular dataset represents these digits in terms of six morphological features, although the meaning of these features is mostly unknown. They are not explicitly named in the original files, and the relevant papers only discuss 'orphological features, such as the number of endpoints'.
+The Breast Cancer Wisconsin Original Data Set consists of features computed from a digitized image of a fine needle aspirate of a breast mass. These features describe characteristics of the cell nuclei present in the image. The target feature records the prognosis, which can be either malignant or benign.
 
-A slightly different version of the database was used in a study on handwritten digit recognition by combined classifiers. The current database has been utilized in a review of statistical pattern recognition.
+The data set was adapted to ARFF format from the UCI version, and sample code IDs were removed. Note that there is also a related Breast Cancer Wisconsin Diagnosis Data Set with a different set of features, better known as wdbc.
 
-The dataset consists of features of handwritten numerals extracted from a collection of Dutch utility maps. Two thousand patterns have been digitized in binary images, with two hundred patterns per class. These digits are represented in terms of six feature sets, including morphological features.
+Relevant papers on this topic include Nuclear Feature Extraction for Breast Tumor Diagnosis, Breast Cancer Diagnosis and Prognosis via Linear Programming, and others.
 
-In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one through nine. Corresponding patterns in different feature sets correspond to the same original character. Unfortunately, the source image dataset is lost. However, using the pixel dataset, sampled versions of the original images may be obtained.
+If you publish results using this database, please include an acknowledgment citing the source of the data set.
 
-There are no missing values in this dataset. Additionally, there are six files in total, each representing a different feature set.
+This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison. 
 
-Keywords: Multiple Features Dataset, Morphological, Handwritten Numerals, Feature Sets, Binary Images, Digit Recognition, Statistical Pattern Recognition.
+Features include clump thickness, cell size uniformity, cell shape uniformity, marginal adhesion, single epithelial cell size, bare nuclei, bland chromatin, normal nucleoli, and mitoses.
+
+Scraped data includes additional information about the samples, which arrived periodically as clinical cases were reported. The database reflects this chronological grouping of the data. 
+
+Group information has been removed from the data itself, but it is available separately. The total number of instances in the data set is six hundred ninety-nine points.
+
+Note that some instances were removed or revised due to missing or incorrect values.
+
+Has missing values? Yes.
+
+Additional variable information is available for each feature.
+
+Class labels are two for benign and four for malignant.
+
+Keywords: breast cancer, machine learning, medical, medicine, cancer diagnosis, prognosis, fine needle aspirate, cell nuclei, image analysis.

@@ -1,20 +1,13 @@
-**analcatdata whale**
+Vehicle SensIT Dataset
 
-A Collection of Data Sets Used in the Book Analyzing Categorical Data
+Tags: Concept Drift, Machine Learning, Mythbusting One, Study One, Study Fifteen, Study Twenty, Study Forty-One, Transportation
 
-The submission consists of a zip file containing two versions of each of the eighty-four data sets, plus this README file. Each data set is given in comma-delimited ASCII format, and Microsoft Excel format.
+This is the Vehicle SensIT combined dataset, retrieved from the LibSVM site. The dataset was created by joining the test and training datasets, relabeling classes one and two as positive and class three as negative, and normalizing each file column-wise.
 
-Notice: These data sets may be used freely for scientific, educational, and/or non-commercial purposes, provided suitable acknowledgment is given by citing the above-named reference.
+The normalization process involved setting constant features to zero and removing them due to sparsity. Binary features were normalized by setting the most frequent value to zero and the other to one. Multinary or real features were divided by their standard deviation.
 
-Further details concerning the book, including information on statistical software, are available at the website.
+The resulting dataset consists of various features, including Y, which represents the target variable.
 
-Information About the Dataset:
-Class Type: Numeric
-Class Index: None Specific
+The Vehicle SensIT dataset is useful for studying concept drift and machine learning algorithms in the context of transportation.
 
-Note: Quotes, single quotes, and backslashes were removed, blanks replaced with spaces.
-
-Features:
-Period Hudson, Bouts Hudson, Lockons Hudson, Daytime Hudson, Period Casey, Bouts Casey, Lockons Casey, Daytime Casey
-
-Keywords: categorical data, data sets, analytical book, scientific research, educational resources, statistical software
+Keywords: Vehicle Classification, Sensor Networks, Concept Drift, Machine Learning, Transportation.

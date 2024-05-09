@@ -1,22 +1,19 @@
-Covertype 
-Tags: Computer Systems, Machine Learning 
+QSAR-TID-12244
+MTLQSAR, study_3
+MetaQSAR project - September 
 
-This dataset is used in the tabular data benchmark and has been transformed in the same manner. It belongs to the classification on numerical features benchmark.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12244. It has ten rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-The original Covertype dataset has been sourced from the LibSVM repository. 
+Features: Molecule ChEMBL ID 
 
-To use this dataset, please cite the relevant paper, which describes the binarization process employed. 
+The dataset contains single protein preferred name: Estrogen Receptor Beta. It also has synonyms: Er-Beta, Esr two, Estrb, Estrogen Receptor Beta, Nr three a two. 
 
-This is the famous Covertype dataset in its binary version, retrieved from the LibSVM site. In addition to the preprocessing done previously, this dataset was created as follows: 
+Organism: Mus Musculus
+Species Group: No
+Protein Target Classification: One, Transcription Factor/Nuclear Receptor/Nuclear Hormone Receptor Subfamily Three/Nuclear Hormone Receptor Subfamily Three Group A/Nuclear Hormone Receptor Subfamily Three Group A Member Two 
 
-Firstly, the Covertype dataset was loaded in its unscaled form. Then, each file column was normalized according to specific rules. 
+Description Relationship Accession Estrogen Receptor Beta Single Protein 
 
-Columns containing only one value, known as constant features, were set to zero and subsequently removed due to sparsity. 
+The dataset also includes Expression Atlas, Go Component, Go Function, and Go Process information. 
 
-Columns containing two values, referred to as binary features, had the most frequently occurring value set to zero, while the other value was set to one. 
-
-Finally, columns containing more than two values, including multinomial and real features, were divided by their standard deviation. 
-
-Duplicate lines were ultimately removed from the dataset. 
-
-Preprocessing involved transforming the dataset from multiclass to binary class.
+Keywords: QSAR, Estrogen Receptor Beta, Mus Musculus, Nuclear Hormone Receptor, Transcription Factor.

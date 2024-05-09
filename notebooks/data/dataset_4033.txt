@@ -1,31 +1,95 @@
-Magic Telescope 
+**QSAR-TID-30047**
+**Tags:** MTLQSAR, study_3
 
-Tags: Machine Learning, Medicine 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 30047. It has ninety-seven rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
+The features represent Fixed Count Fingerprint six one thousand twenty-four bit Molecular Fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Original Description:
+**Scraped Data:**
+Type: Single Protein
+Preferred Name: TRAF two and NCK interacting kinase
+Synonyms: KIAA zero five five one, TNIK, TRAF two and NCK interacting protein kinase
 
-The Magic Telescope dataset is a collection of simulated data from a ground-based atmospheric Cherenkov gamma-ray telescope using the imaging technique. The data are generated to simulate registration of high-energy gamma particles in a Cherenkov gamma telescope. The Cherenkov radiation, which is of visible to ultraviolet wavelengths, leaks through the atmosphere and gets recorded in the detector, allowing reconstruction of the shower parameters.
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: One Enzyme/Kinase/Protein Kinase/STE protein kinase group/STE protein kinase STE twenty family/STE protein kinase MSN subfamily
 
-The available information consists of pulses left by the incoming Cherenkov photons on the photomultiplier tubes, arranged in a plane, the camera. Depending on the energy of the primary gamma, a total of few hundred to several thousand Cherenkov photons get collected, in patterns, allowing to discriminate statistically those caused by primary gammas (signal) from the images of hadronic showers initiated by cosmic rays in the upper atmosphere (background).
+Description Relationship Accession: TRAF two and NCK interacting protein kinase, Single Protein, Q nine U KE five
 
-Typically, the image of a shower after some preprocessing is an elongated cluster. Its long axis is oriented towards the camera center if the shower axis is parallel to the telescope's optical axis, i.e., if the telescope axis is directed towards a point source. A principal component analysis is performed in the camera plane, which results in a correlation axis and defines an ellipse. If the depositions were distributed as a bivariate Gaussian, this would be an equidensity ellipse. The characteristic parameters of this ellipse (often called Hillas parameters) are among the image parameters that can be used for discrimination.
+Expression Atlas: One
+Go Component: Twelve
+GO: nucleus
+GO: nucleoplasm
+GO: cytoplasm
+GO: endosome
+GO: cytosol
+GO: cytoskeleton
+GO: apical plasma membrane
+GO: recycling endosome
+GO: extracellular exosome
+GO: presynapse
+GO: glutamatergic synapse
+GO: postsynaptic density, intracellular component
 
-The energy depositions are typically asymmetric along the major axis, and this asymmetry can also be used in discrimination. There are, in addition, further discriminating characteristics, like the extent of the cluster in the image plane, or the total sum of depositions.
+Go Function: Eight
+GO: nucleotide binding
+GO: protein kinase activity
+GO: protein serine/threonine kinase activity
+GO: protein binding
+GO: ATP binding
+GO: kinase activity
+GO: transferase activity
+GO: protein serine kinase activity
 
-Attributes:
+Go Process: Seventeen
+GO: MAPK cascade
+GO: positive regulation of protein phosphorylation
+GO: protein phosphorylation
+GO: cytoskeleton organization
+GO: nervous system development
+GO: response to organonitrogen compound
+GO: Wnt signaling pathway
+GO: phosphorylation
+GO: microvillus assembly
+GO: actin cytoskeleton reorganization
+GO: intracellular signal transduction
+GO: regulation of MAPK cascade
+GO: positive regulation of JNK cascade
+GO: protein autophosphorylation
+GO: neuron projection morphogenesis
+GO: regulation of dendrite morphogenesis
+GO: protein localization to plasma membrane
 
-* Length of major axis of ellipse 
-* Width of minor axis of ellipse 
-* Size of ten logarithm of sum of content of all pixels 
-* Concentration ratio of sum of two highest pixels over size 
-* Concentration ratio of highest pixel over size 
-* Asymmetry distance from highest pixel to center, projected onto major axis 
-* Third root of third moment along major axis 
-* Third root of third moment along minor axis 
-* Angle of major axis with vector to origin 
-* Distance from origin to center of ellipse 
-* Class (gamma or hadron)
+Wikipedia: One
+TNIK can
 
-Keywords: Cherenkov Radiation, Gamma-Ray Telescope, Image Parameters, Principal Component Analysis, Hillas Parameters, Discrimination.
+canSAR-Target: One
+Q nine U KE five
+
+Guide To PHARMACOLOGY: Two hundred forty-four
+
+IntAct: One
+Q nine U KE five
+
+PharmGKB: One
+TRAF two and NCK interacting kinase
+
+Pharos: One
+Tchem
+
+Reactome: One
+Oxidative Stress Induced Senescence
+
+UniProt: Thirteen
+A seven E two A three, A eight K four U one, D three D N Q six, O six zero two ninety-eight, Q eight W U Y seven, Q nine U KD eight, Q nine U KD nine, Q nine U KE zero, Q nine U KE one, Q nine U KE two, Q nine U KE three, Q nine U KE four, Q nine U KE five
+
+InterPro: Five
+IPR zero zero zero seven one nine, IPR zero zero one one eighty, IPR zero zero eight two seventy-one, IPR zero one one zero zero nine, IPR zero one seven four four one
+
+Pfam: Two
+PF zero zero zero sixty-nine, PF zero zero seven eighty
+
+PDBe: Eight
+Two X seven F, Five AX nine, Five CWZ, Five D seven A, Six RA five, Six RA seven, Seven XZQ, Seven XZR
+
+Keywords: QSAR, drug target, molecular fingerprints, TRAF2, NCK, protein kinase, enzyme, Homo sapiens, protein phosphorylation, MAPK cascade.

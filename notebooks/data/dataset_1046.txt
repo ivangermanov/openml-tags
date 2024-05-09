@@ -1,6 +1,23 @@
-Name: Stagger Two 
-Tags: Chemistry, Life Science 
+This is a PROMISE Software Engineering Repository data set made publicly available in order to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE data sets, then please follow the acknowledgement guidelines posted on the PROMISE repository web page.
 
-This molecule has various characteristics including its size, color, and shape which are all important aspects of its chemical class.
+The data set is distributed under the Creative Commons Attribution-Share Alike License. You are free to share, copy, distribute, and transmit the work, as well as remix, adapt, or build upon it, under certain conditions.
 
-Keywords: molecule, chemistry, life science, characteristics
+Title: Recurrent Event Defect Fix and Size Data for Mozilla Classes
+
+This data set includes a binary attribute to show defect fix and is at the observation level. Each modification made to a C++ class was entered as an observation. A newly added class created an observation. The observation period was between May twenty-ninth, two thousand two, and February twenty-second, two thousand six.
+
+Sources:
+
+Creator: 
+Date: 
+Contact: 
+
+Donor: 
+
+Past Usage:
+This data set was used for studying the effect of size on defect proneness for open-source software. Previous research has found that there is generally a positive relationship between module size and defect proneness. Therefore, in open-source software development, it is important to monitor module size and understand its impact on defect proneness. However, traditional approaches to quality modeling, which measure specific system snapshots and obtain future defect counts, are not well-suited because open-source modules usually evolve and their size changes over time.
+
+Features:
+This data set is used to create a conditional Cox Proportional Hazards Model. It includes the following attributes: identification assigned to each separate C++ class, a time infinitesimally greater than the time of the modification that created this observation, either the time of the next modification, or the end of the observation period, or the time of deletion, whichever comes first, a binary attribute to show defect fix, the number of source lines of code of the C++ classes at the time of the modification, and a state attribute initially set to zero and becomes one after the class experiences an event.
+
+Keywords: PROMISE, software engineering, defect fix, open-source software, module size, defect proneness, Cox Proportional Hazards Model, Mozilla classes.

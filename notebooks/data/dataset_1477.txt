@@ -1,9 +1,27 @@
-The QSAR-TID-100817 dataset contains QSAR data showing activity values of several compounds on drug target TID: 100817, which is a G protein-coupled receptor forty-four. This receptor is also known as CD two ninety-four, Chemoattractant receptor-homologous molecule expressed on Th two cells, Crth two, and Gpr forty-four.
+Gas Drift Different Concentrations Dataset 
 
-This dataset has fourteen rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median Px C fifty. The features represent Fingerprint Chemical Fragments, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+This dataset contains thirteen thousand nine hundred ten measurements from sixteen chemical sensors exposed to six gases at different concentration levels. It is an extension of the Gas Sensor Array Drift Dataset, providing now the information about the concentration level at which the sensors were exposed for each measurement.
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive resource for QSAR modeling. The dataset is tagged with Machine Learning and MTL QSAR, indicating its potential application in machine learning-based QSAR modeling.
+The primary purpose of making this dataset freely accessible online is to provide an extensive dataset to the sensor and artificial intelligence research communities to develop and test strategies to solve a wide variety of tasks, including sensor drift, classification, regression, among others.
 
-The target protein, G protein-coupled receptor forty-four, is a single protein that belongs to the family A G protein-coupled receptor, specifically the lipid-like ligand receptor subfamily. It is primarily located in the plasma membrane and is involved in various biological processes, including chemotaxis, signal transduction, and G protein-coupled receptor signaling pathway.
+The dataset can be used exclusively for research purposes. Commercial purposes are fully excluded. 
 
-Keywords: QSAR, Machine Learning, MTL QSAR, G protein-coupled receptor, Chemotaxis, Signal Transduction.
+The dataset was gathered during a thirty-six-month period in a gas delivery platform facility situated at the ChemoSignals Laboratory in the BioCircuits Institute, University of California San Diego. 
+
+The measurement system platform provides versatility for obtaining the desired concentrations of the chemical substances of interest with high accuracy and in a highly reproducible manner, minimizing thereby the common mistakes caused by human intervention and making it possible to exclusively concentrate on the chemical sensors.
+
+The resulting dataset comprises recordings from six distinct pure gaseous substances, namely ammonia, acetaldehyde, acetone, ethylene, ethanol, and toluene, dosed at a wide variety of concentration levels. 
+
+Attribute Information:
+
+The responses of the said sensors are read in the form of the resistance across the active layer of each sensor; hence, each measurement produced a sixteen-channel time series, each represented by an aggregate of features reflecting the dynamic processes occurring at the sensor surface in reaction to the chemical substance being evaluated.
+
+In particular, two distinct types of features were considered in the creation of this dataset: 
+(i) the so-called steady-state feature, defined as the maximal resistance change with respect to the baseline and its normalized version.
+(ii) An aggregate of features reflecting the sensor dynamics of the increasing/decaying transient portion of the sensor response during the entire measurement. 
+
+Data Set Organization:
+
+For processing purposes, the dataset is organized into ten batches, each containing the number of measurements per class and month. This reorganization of data was done to ensure having a sufficient and as uniformly distributed as possible number of experiments in each batch.
+
+Keywords: gas sensor array, drift compensation, chemical sensing, machine learning, time series analysis.

@@ -1,9 +1,25 @@
-The PC Games 2020 dataset aims to utilize machine learning and chemistry principles to predict the level of success game developers can expect based on their game design details. By analyzing features such as whether the game was developed by an independent studio, whether it has a notable soundtrack, and what genres it belongs to, we can forecast the popularity of the game.
+QSAR-TID-101465 Dataset
 
-This dataset was compiled in July by scraping the Steam store from most popular to least popular games, which is evident from the correlation between the index and presence values, representing the number of online posts related to each game. During the scraping process, each game's data was supplemented by calling the RAWG API, adding around a dozen more features.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101465. The dataset has seventy-nine rows and one thousand twenty-six features, including identifiers and a class feature.
 
-The primary motivation behind creating this dataset is to highlight the significance of each feature in determining game success on the Steam store. This information can be invaluable for game developers, and it would be fascinating to develop a game using these insights to test the accuracy of the models.
+The features represent molecular fingerprints, which were generated from smiles strings using the pipeline pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset includes features such as Game Name, RAWG ID, Steam URL, Metacritic Score, Game Genres, Independent Studio Indicator, Online Presence, Supported Platforms, Graphics Quality, Storage Requirements, Memory Requirements, Rating Breakdown, Release Date, Notable Soundtrack Indicator, Franchise Status, Original Cost, Discounted Cost, Number of Players, Controller Support, Language Options, ESRB Rating, Achievements, Publisher, Game Description, and Tags.
+Demographics
+The dataset is part of the MetaQSAR project, which was created in September 2015. It is a single protein dataset, and its preferred name is Serine/threonine-protein kinase LATS1. It also has synonyms such as h-warts and Large tumor suppressor homolog 1. The organism is Homo sapiens, and it belongs to the species group.
 
-Keywords: Game Development, Steam Store, Popularity Prediction, Machine Learning, Game Design, Success Factors, RAWG API, Game Analytics.
+Description
+Serine/threonine-protein kinase LATS1 is an enzyme that plays a crucial role in various biological processes. It is involved in the regulation of cell cycle, protein phosphorylation, and hormone-mediated signaling pathways. It also regulates the activity of other proteins, including kinases and transcription factors.
+
+Expression Atlas
+The expression atlas shows that Serine/threonine-protein kinase LATS1 is expressed in various tissues, including the nucleus, cytoplasm, and microtubule organizing center.
+
+Go Component
+It is part of the spindle pole, nucleus, cytoplasm, microtubule organizing center, spindle, cytosol, and cytoskeleton.
+
+Go Function
+It has functions such as nucleotide binding, magnesium ion binding, protein kinase activity, protein serine/threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, and metal ion binding.
+
+Go Process
+It is involved in various biological processes, including G1/S transition of mitotic cell cycle, G2/M transition of mitotic cell cycle, sister chromatid segregation, inner cell mass cell fate commitment, inner cell mass cellular morphogenesis, protein phosphorylation, cell cycle, protein localization, hormone-mediated signaling pathway, phosphorylation, and regulation of transforming growth factor beta receptor signaling pathway.
+
+Keywords: QSAR, Serine/threonine-protein kinase LATS1, molecular fingerprints, MetaQSAR project, cell cycle, protein phosphorylation, hormone-mediated signaling pathways.

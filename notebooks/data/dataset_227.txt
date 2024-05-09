@@ -1,27 +1,11 @@
-White Clover Persistence Trials Data 
+The Computer Activity database is a comprehensive collection of computer systems activity measures. This dataset was collected from a Sun Sparcstation 20/712 with 128 megabytes of memory running in a multi-user university department, where users would typically engage in a wide range of activities, including accessing the internet, editing files, or running CPU-bound programs.
 
-The objective of this study was to determine the mechanisms that influence the persistence of white clover populations in summer dry hill land, specifically referencing the consequences of a severe summer dry period in nineteen ninety-three/nineteen ninety-four and its impact on the performance of three white clover cultivars in an ongoing experiment located at Whatawhata Research Centre.
+The data was collected continuously on two separate occasions, with system activity being gathered every five seconds on both occasions. The final dataset combines data from both collections, with an equal number of observations coming from each collection epoch.
 
-The machine learning objective was to predict the amount of white clover in nineteen ninety-four from the amount of white clover and other species in the years nineteen ninety-one to nineteen ninety-four, as well as information on the strata where the white clover was being grown.
+This dataset includes various system measures, including reads and writes between system memory and user memory, system calls, reads and writes, forks, executions, character transfers, page outs, page ins, and page faults. It also captures process run queue sizes, available memory pages, available disk blocks for page swapping, and CPU usage percentages in user mode, system mode, idle waiting for block I/O, and otherwise idle.
 
-Attribute Information:
+The two different regression tasks obtained from this dataset are predicting the percentage of time CPUs run in user mode from all attributes, and predicting the same using a restricted set of attributes excluding paging information.
 
-Strata is an enumerated attribute.
-Plot is an enumerated attribute.
-Paddock is an enumerated attribute.
-White Clover Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of white clover in nineteen ninety-one.
-Bare Ground Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of bare ground in nineteen ninety-one.
-Cocksfoot Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of cocksfoot in nineteen ninety-one.
-Other Grasses Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of other grasses in nineteen ninety-one.
-Other Legumes Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of other legumes in nineteen ninety-one.
-Ryegrass Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of ryegrass in nineteen ninety-one.
-Weeds Measurement in Nineteen Ninety-One is a real-valued attribute representing the measurement of weeds in nineteen ninety-one.
+Characteristics of this dataset include 8192 cases and 13 continuous attributes, featuring reads, writes, system calls, reads, writes, forks, executions, character transfers, process run queue sizes, available memory pages, and available disk blocks for page swapping.
 
-Similarly, there are measurements for each of these attributes in nineteen ninety-two and nineteen ninety-three.
-
-Strata Combined is an enumerated attribute.
-White Clover Measurement in Nineteen Ninety-Four is an enumerated attribute representing the target variable to be predicted.
-
-Tags: Agriculture, Machine Learning, Study One, Study Forty-One 
-
-Keywords: white clover, persistence trials, agriculture, machine learning, strata, cultivars, dry period, hill land.
+Keywords: computer systems, CPU usage, memory management, system calls, regression tasks, dataset characteristics.

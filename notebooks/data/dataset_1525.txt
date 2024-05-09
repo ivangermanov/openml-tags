@@ -1,19 +1,26 @@
-The QSAR-TID-10901 dataset contains QSAR data showing activity values of several compounds on drug target TID: 10901. This dataset has multiple rows and features, including IDs and class feature, and represents FCFP 1024bit Molecular Fingerprints generated from SMILES strings.
+Wall-Robot-Navigation Dataset 
 
-The features were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA, and do not typically require missing value imputation as all bits are generated. 
+Tags: Chemistry, Derived, Life Science, Study 
 
-This dataset is part of the MetaQSAR project, specifically the study number three. 
+The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. 
 
-The target classification for this dataset is Enzyme/Kinase/Protein Kinase/AGC protein kinase group/AGC protein kinase PKC family/AGC protein kinase PKC iota subfamily, and its preferred name is Protein Kinase C Iota. 
+Abstract:
+The Wall-Following Robot Navigation Data Set contains the raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of nine samples per second. 
 
-Synonyms for this target include aPKC-lambda/iota, Atypical Protein Kinase C-lambda/iota, DXS1179E, nPKC-iota, and PRKCI. 
+Data Set Information:
+The provided file contains the raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. 
 
-Organism classification for this target is Homo sapiens, species group No. 
+Attribute Information:
+Number of Attributes: two numeric attributes and the class.
 
-There are multiple relationships associated with this target, including being a subset of Protein Kinase C and Protein Kinase C iota type/zeta type. 
+For Each Attribute:
+File sensor_readings_data contains:
 
-The dataset also includes Gene Ontology components, functions, and processes, including Golgi membrane, nucleus, nucleoplasm, cytoplasm, and others. 
+One. Front Minimum Distance: minimum sensor reading within a sixty-degree arc located at the front of the robot - numeric real.
+Two. Left Minimum Distance: minimum sensor reading within a sixty-degree arc located at the left of the robot - numeric real.
+Three. Class: Move Forward, Slight Right Turn, Sharp Right Turn, Slight Left Turn.
 
-Additionally, there are multiple references to external databases, including ChEMBL, UniProt, IntAct, PharmGKB, and others. 
+Relevant Papers:
+Proceedings of the Sixth Latin American Robotics Symposium.
 
-Keywords: QSAR, TID, MetaQSAR, FCFP, Molecular Fingerprints, SMILES, Pipeline Pilot, Protein Kinase C Iota, AGC protein kinase, Homo sapiens.
+Keywords: robot navigation, ultrasound sensors, wall-following task, nonlinearly separable classification, neural networks, classification task.

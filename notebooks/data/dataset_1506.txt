@@ -1,11 +1,31 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID, and it has multiple rows and features including IDs and class feature. The features represent molecular fingerprints which were generated from SMILES strings.
+Thoracic Surgery Data Set
 
-The dataset is part of the MetaQSAR project and was released in September. It contains QSAR data from ChEMBL version, showing activity values of several compounds on drug target, and it has multiple rows and features including IDs and class feature.
+The data set is dedicated to a classification problem related to the postoperative life expectancy in lung cancer patients, specifically whether they will survive beyond one year after surgery or not.
 
-Features include molecule chembl id, and molecular fingerprints which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+The data was collected retrospectively at the Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer between two thousand seven and two thousand eleven. The centre is associated with the Department of Thoracic Surgery of the Medical University of Wroclaw and Lower Silesian Centre for Pulmonary Diseases, Poland, while the research database constitutes a part of the National Lung Cancer Registry, administered by the Institute of Tuberculosis and Pulmonary Diseases in Warsaw, Poland.
 
-The data is related to a single protein preferred name, Lysophosphatidic Acid Receptor Edg-7, also known as Edg7, Lpa3, Lpa-3, Lpar3, and Lpa Receptor. The protein is classified under membrane receptor family A G protein-coupled receptor small molecule receptor lipid-like ligand receptor Edg receptor.
+Attribute Information:
 
-The protein target classification is one, membrane receptor family A G protein-coupled receptor small molecule receptor lipid-like ligand receptor Edg receptor. The description relationship accession is Lysophosphatidic Acid Receptor three.
+Diagnosis is a specific combination of International Classification of Diseases tenth revision codes for primary and secondary as well as multiple tumors if any.
+Forced Vital Capacity is a numeric measurement.
+Volume that has been Exhaled at the End of the First Second of Forced Expiration is a numeric measurement.
+Performance Status is measured on the Zubrod Scale.
+Pain Before Surgery is a true or false value indicating whether pain was present before surgery.
+Haemoptysis Before Surgery is a true or false value indicating whether haemoptysis was present before surgery.
+Dyspnoea Before Surgery is a true or false value indicating whether dyspnoea was present before surgery.
+Cough Before Surgery is a true or false value indicating whether cough was present before surgery.
+Weakness Before Surgery is a true or false value indicating whether weakness was present before surgery.
+T in Clinical TNM is a measurement of the size of the original tumor, ranging from smallest to largest.
+Type Two Diabetes Mellitus is a true or false value indicating whether the patient had type two diabetes mellitus.
+Myocardial Infarction Up to Six Months is a true or false value indicating whether the patient had a myocardial infarction up to six months prior to surgery.
+Peripheral Arterial Diseases is a true or false value indicating whether the patient had peripheral arterial diseases.
+Smoking is a true or false value indicating whether the patient smoked.
+Asthma is a true or false value indicating whether the patient had asthma.
+Age at Surgery is a numeric measurement.
+One Year Survival Period is a true or false value indicating whether the patient survived beyond one year after surgery.
 
-Keywords: QSAR, MetaQSAR, ChEMBL, Molecular Fingerprints, SMILES, Lysophosphatidic Acid Receptor, Drug Target, Protein-Coupled Receptor.
+Class distribution is binary valued, with a class value indicating whether the patient survived beyond one year after surgery or not.
+
+Tags: Chemistry, Life Science
+
+Keywords: lung cancer, thoracic surgery, life expectancy, diagnosis, performance status, pulmonary diseases.

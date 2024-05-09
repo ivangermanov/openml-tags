@@ -1,9 +1,15 @@
-The NYC Taxi Green December 2016 dataset is a collection of Trip Record Data provided by the New York City Taxi and Limousine Commission. This dataset includes TLC trips of the green line in December and was downloaded on a specific date. For a detailed description of all variables in the dataset, please refer to the TLC homepage.
+QSAR-TID-101309 Dataset 
 
-The variable Tip Amount was chosen as the target variable. The variable Total Amount is ignored by default, otherwise the target could be predicted deterministically. The Date Variables Pickup DateTime and Dropoff DateTime, which are ignored by default, could be used to compute additional Time Features.
+This dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 101309. The dataset has seventy-three rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-In this version, we chose only trips with Payment Type equal to Credit Card, as tips are not included for most other payment types. We also removed the variables Trip Distance and Fare Amount to increase the importance of the categorical features Pickup Location ID and Dropoff Location ID.
+The features represent Folded Circular Fingerprint 1024 bit molecular fingerprints, which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation, as all bits are generated.
 
-Features include Vendor Identification, Store and Forward Flag, Rate Code Identification, Pickup Location ID, Dropoff Location ID, Passenger Count, Extra, MTA Tax, Tip Amount, Tolls Amount, Improvement Surcharge, Trip Type, Pickup Date Day, Pickup Date Hour, Pickup Date Minute, Dropoff Date Day, Dropoff Date Hour, and Dropoff Date Minute.
+The dataset is part of the MetaQSAR project, released in September 2015. It is recommended to cite this dataset when used in any research or publication.
 
-Keywords: NYC Taxi, Trip Record Data, Green Line, Credit Card, Categorical Features, Time Features, Payment Type.
+Scraped Data:
+
+The preferred name of the protein target is Cyclin-dependent Kinase-Like Two. It belongs to the species group of Homo sapiens and has been classified as a single protein. The protein target classification description shows its relationship with accession Q92772.
+
+Expression Atlas, Component, Go Function, Go Process, Wikipedia, canSAR-Target, IntAct, PharmGKB, Pharos, UniProt, InterPro, Pfam, and PDBe provide additional information about the protein target.
+
+Keywords: QSAR, drug target, molecular fingerprints, MetaQSAR, Cyclin-dependent Kinase-Like Two, protein target classification.

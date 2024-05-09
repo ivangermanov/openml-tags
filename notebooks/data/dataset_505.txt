@@ -1,29 +1,27 @@
-The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
+The Tecator Data Set:
 
-These datasets are coded as "friedman colinearity degree sample number feature number". 
+The task is to predict the fat content of a meat sample based on its near-infrared absorbance spectrum.
 
-The Friedman function includes both linear and nonlinear relations between input and output, and a normalized noise is added to the output. 
+Statement of Permission from Tecator (the Original Data Source):
 
-The Friedman function is as follows: output equals ten times sine of pi times input one times input two plus twenty times input three minus point five squared plus ten times input four plus five times input five plus noise.
+These data are recorded on a Tecator Infratec Food and Feed Analyzer working in the wavelength range eight hundred fifty to one thousand fifty nanometers by the Near-Infrared Transmission principle. Each sample contains finely chopped pure meat with different moisture, fat, and protein contents. If results from these data are used in a publication, we want you to mention the instrument and company name (Tecator) in the publication. In addition, please send a preprint of your article to Tecator AB, Box seventy, S-two sixty-three twenty-one Hoganas, Sweden.
 
-In the original Friedman function, there are five features for input. To measure the effects of nonrelated features, additional features are added to the datasets. 
+The data are available in the public domain with no responsibility from the original data source. The data can be redistributed as long as this permission note is attached. For more information about the instrument, call Perstorp Analytical's representative in your area.
 
-These added features are independent from the output. However, to measure the algorithm's robustness to colinearity, the datasets are generated with five different colinearity degrees. 
+Description of the Data File:
 
-Colinearity degree is the number of features depending on other features. 
+For each meat sample, the data consist of a one hundred channel spectrum of absorbances and the contents of moisture (water), fat, and protein. The absorbance is minus log ten of the transmittance measured by the spectrometer. The three contents, measured in percent, are determined by analytical chemistry. There are two hundred forty samples, which are divided into five data sets for the purpose of model validation and extrapolation studies. The data sets are: Training, Monitoring, Testing, Extrapolation, Fat, and Extrapolation, Protein.
 
-The generated Friedman dataset's parameters and values are given below: 
+The data for all two hundred forty samples appear at the end of this file - twenty-five lines per sample. The data sets appear in the order of the table above. The spectra are preprocessed using a Principal Component Analysis on the Training data set, and the first twenty-two Principal Components (scaled to unit variance) are included for each sample. Thus, if you want to use the data for a standard (interpolation) test of your algorithm, use samples one through one seventy-two for training and samples one seventy-three through two fifteen for testing (and ignore the last twenty-five samples), and use the first thirteen or so Principal Components to predict the fat content.
 
-The number of features varies, and only the first five features are related to the output; the rest are completely random. 
+Each line contains the one hundred absorbances followed by the twenty-two Principal Components and finally the contents of moisture, fat, and protein. Preceding the data lines, the following lines appear:
 
-The number of samples varies. 
+More Details on How to Use the Data:
 
-Colinearity degrees vary. 
+The data are made available as a benchmark for regression models. In order to compare models, it is practical to use the data set as follows: Training and Monitoring combined are used to tune (estimate, train) the model. Some approaches set aside some training data to control overfitting; these data should be a subset of Training plus Monitoring. In this approach, the subset Monitoring was used for this purpose. Testing is used to test the model once it has been tuned. If each model has an element of randomness (as is the case for neural networks), the most reliable measure of performance of a single model is obtained by selecting a handful of models on the basis of Training plus Monitoring and quoting the average of the performances on Testing. In the presence of randomness, it is bad practice to train a lot of models on Training plus Monitoring and then select the best of these on the basis of Testing. Training, Monitoring, and Testing are drawn from the same pool of data, so Testing is used to test the ability of the models to interpolate. The data sets Extrapolation, Fat, and Extrapolation, Protein contain more fat and protein, respectively, and are intended to be used to test the ability of the models to extrapolate.
 
-For the datasets with colinearity degree four, the number of features is generated differently. 
+Performance of Neural Network Models:
 
-As a result, eighty artificial datasets are generated by combining different feature numbers, sample numbers, and colinearity degrees. 
+The performance is measured as Standard Error of Prediction, which is the root mean square of the difference between the true and the predicted content. For the prediction of fat on the Testing data set, the following results were obtained.
 
-The last attribute in each file is the target.
-
-Keywords: Friedman Datasets, Artificial Data Generation, Colinearity Degree, Nonlinear Relations, Normalized Noise, Robustness Measurement.
+Keywords: Tecator, near-infrared absorbance, meat sample, fat content, Principal Component Analysis, regression models, interpolation, extrapolation.

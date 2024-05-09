@@ -1,17 +1,81 @@
-Wine Quality 
+QSAR-TID-10528 Dataset
 
-This dataset belongs to the "regression on numerical features" benchmark. 
+This dataset contains QSAR data showing activity values of several compounds on drug target Mu Opioid Receptor, and it has sixty-two rows and one thousand twenty-six features including IDs and class feature.
 
-The dataset consists of two sets of wine samples, one for red wine and another for white wine. The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert grades the wine quality between zero (very bad) and ten (very excellent).
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed, including Mean Absolute Deviation and a confusion matrix for a fixed error tolerance.
+Features include molecule ChEMBL ID and molecular fingerprints.
 
-The datasets are related to the red and white variants of the Portuguese Vinho Verde wine. Due to privacy and logistic issues, only physiochemical and sensory variables are available, with no data about grape types, wine brands, or wine selling prices. 
+Scraped Data:
 
-These datasets can be viewed as either classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones. Outlier detection algorithms could be used to detect the few excellent or poor wines. It would also be interesting to test feature selection methods, as not all input variables might be relevant.
+ID: ChEMBL three zero four one
+Type: Single Protein
+Preferred Name: Mu Opioid Receptor
+Synonyms: M OR one, MOR one, Mu type Opioid Receptor, OPRM one
 
-The datasets have eleven input variables, including fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol. The output variable is the quality of the wine, scored between zero and ten.
+Organism: Bos taurus
+Species Group: No
+Protein Target Classification: One, Membrane Receptor, Family A G Protein Coupled Receptor, Peptide Receptor, Family A GPCR, Short Peptide Receptor, Family A GPCR, Opioid Receptor
 
-Several of the attributes may be correlated, so applying feature selection methods might be useful. 
+Description Relationship Accession Mu type Opioid Receptor Single Protein P seven nine three five zero
 
-Keywords: wine quality, regression, data mining, physiochemical, sensory data, Vinho Verde, outlier detection, feature selection.
+Rows per page: fifty-one to one of one
+
+Go Component:
+
+Endosome
+Plasma Membrane
+Membrane
+Axon
+Dendrite
+Cell Projection
+Neuron Projection
+Perikaryon
+Synapse
+
+Go Function:
+
+G-Protein Alpha-Subunit Binding
+G Protein-Coupled Receptor Activity
+Beta-Endorphin Receptor Activity
+G Protein-Coupled Opioid Receptor Activity
+Voltage-Gated Calcium Channel Activity
+G-Protein Beta-Subunit Binding
+Morphine Receptor Activity
+Neuropeptide Binding
+
+Go Process:
+
+Signal Transduction
+G Protein-Coupled Receptor Signaling Pathway
+Adenylate Cyclase-Inhibiting G Protein-Coupled Acetylcholine Receptor Signaling Pathway
+Phospholipase C-Activating G Protein-Coupled Receptor Signaling Pathway
+Neuropeptide Signaling Pathway
+Sensory Perception of Pain
+G Protein-Coupled Opioid Receptor Signaling Pathway
+Negative Regulation of cAMP-Mediated Signaling
+Negative Regulation of Nitric Oxide Biosynthetic Process
+Positive Regulation of Neurogenesis
+Negative Regulation of Cytosolic Calcium Ion Concentration
+Negative Regulation of Wnt Protein Secretion
+Positive Regulation of ERK one and ERK two Cascade
+Calcium Ion Transmembrane Transport
+Cellular Response to Morphine
+Regulation of NMDA Receptor Activity
+
+canSAR-Target:
+P seven nine three five zero
+
+UniProt:
+P seven nine three five zero
+
+InterPro:
+Mu Opioid Rcpt
+GPCR Rhodpsn
+Opioid Rcpt
+GPCR Rhodpsn Seven TM
+
+Pfam:
+Seven tm one
+
+Keywords: QSAR, Mu Opioid Receptor, molecular fingerprints, SMILES strings, Pipeline Pilot, Dassault Systèmes BIOVIA, protein coupled receptor, signal transduction, neuropeptide signaling pathway.

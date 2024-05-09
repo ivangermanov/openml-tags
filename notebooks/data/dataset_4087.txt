@@ -1,27 +1,13 @@
-**Electricity**
+This dataset contains QSAR data showing activity values of several compounds on drug target TID. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PXC Fifty.
 
-This dataset belongs to the classification on categorical and numerical features benchmark.
+The features represent FCFP molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-The Electricity dataset is a widely used collection of data described and analyzed by researchers. This data was collected from the Australian New South Wales Electricity Market, where prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done.
+The dataset is part of the MetaQSAR project, a comprehensive resource for QSAR models and data. It provides a valuable tool for researchers and scientists working in the field of drug discovery and development.
 
-The dataset contains instances dated from May to December. Each example of the dataset refers to a period of thirty minutes, which means there are multiple instances for each time period of one day. Each example on the dataset has several fields, including the day of the week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. The class label identifies the change of the price in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends.
+The data includes information about a specific protein target, known as Ankyrin Repeat and Protein Kinase Domain-Containing Protein One. This protein is a single protein target, also referred to as ANKK One, PKK Two, and SgK Two Eighty-Eight. It belongs to the species group Homo sapiens and is classified as an enzyme, kinase, and protein kinase, specifically a TKL protein kinase belonging to the RIPK family.
 
-Attribute Information:
+The protein has various synonyms, including Ankyrin Repeat and Protein Kinase Domain-Containing Protein One, PKK Two, and SgK Two Eighty-Eight. It is associated with multiple gene ontology terms, including nucleus, cytoplasm, and cell projection, indicating its role in various cellular processes.
 
-* Date: a date between May and December, normalized.
-* Day: the day of the week.
-* Period: the time of the measurement in half-hour intervals over twenty-four hours, normalized.
-* New South Wales Electricity Price: normalized.
-* New South Wales Electricity Demand: normalized.
-* Victoria Electricity Price: normalized.
-* Victoria Electricity Demand: normalized.
-* Scheduled Electricity Transfer: normalized between zero and one.
+The protein also has multiple gene ontology functions, including nucleotide binding, protein kinase activity, protein serine threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, and protein serine kinase activity. Additionally, it is involved in various biological processes, such as protein phosphorylation, regulation of cell cycle process, and phosphorylation.
 
-Relevant Papers:
-
-Learning with Drift Detection.
-Splice-Two Comparative Evaluation: Electricity Pricing.
-
-Tags: Computer Systems, Social Media
-
-Keywords: Electricity, Market, Prices, Demand, Supply, Classification, Categorical, Numerical Features.
+Keywords: QSAR, MetaQSAR, FCFP, molecular fingerprints, SMILES, Ankyrin Repeat, Protein Kinase Domain-Containing Protein One, drug target, enzyme, kinase, protein kinase, gene ontology.

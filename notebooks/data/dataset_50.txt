@@ -1,27 +1,11 @@
-Ionosphere Database 
+The Tic Tac Toe dataset is a collection of data that encodes the complete set of possible board configurations at the end of Tic Tac Toe games, assuming player X makes the first move. The target concept is whether player X has won the game, which occurs when they have one of eight possible ways to create a three-in-a-row.
 
-Tags: Chemistry, Machine Learning, Mythbusting, Study 
+This dataset contains ten attributes that describe the state of the Tic Tac Toe board. These attributes include the top left square, top middle square, top right square, middle left square, middle middle square, middle right square, bottom left square, bottom middle square, and bottom right square. Each of these attributes can take on one of three values: X, O, or blank, indicating which player has placed a mark in that square or if the square is empty.
 
-This radar data was collected by a system located in Goose Bay, Labrador. The system consists of a phased array of sixteen high frequency antennas with a total transmitted power of approximately six point four kilowatts. For more detailed information, please refer to the relevant paper.
+The class attribute indicates whether the board configuration represents a win for player X or not. This attribute takes on one of two values: positive, indicating a win for X, or negative, indicating a loss or draw.
 
-The received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal. 
+The dataset does not contain any missing values.
 
-The targets were free electrons in the ionosphere. Good radar returns are those showing evidence of some type of structure in the ionosphere. Bad returns are those that do not; their signals pass through the ionosphere.
+Additional information about this dataset includes the fact that the estimated relative performance values were calculated using a linear regression method. Further details on this calculation can be found in the original article.
 
-Classification of Radar Returns from the Ionosphere Using Neural Networks is a relevant paper that provides more information about this topic.
-
-Features:
-
-* Thirty-four continuous attributes 
-* One binary classification attribute, which is either good or bad according to the definition summarized above.
-
-Additional Information:
-This radar data was collected by a system located in Goose Bay, Labrador. The system consists of a phased array of sixteen high frequency antennas with a total transmitted power of approximately six point four kilowatts. For more detailed information, please refer to the relevant paper.
-
-The targets were free electrons in the ionosphere. Good radar returns are those showing evidence of some type of structure in the ionosphere. Bad returns are those that do not; their signals pass through the ionosphere.
-
-Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal. 
-
-Has Missing Values? No
-
-Keywords: Ionosphere, Radar, Electromagnetic Signal, Autocorrelation Function, Pulse Number, Free Electrons, Structure, Classification.
+Keywords: Tic Tac Toe, machine learning, mathematics, game theory, board games, classification, dataset.

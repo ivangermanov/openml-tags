@@ -1,36 +1,26 @@
-This Automobile dataset consists of three types of entities: the specification of an automobile in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other automobiles. The second rating corresponds to the degree to which the automobile is more risky than its price indicates. Automobiles are initially assigned a risk factor symbol associated with its price. Then, if it is more risky or less, this symbol is adjusted by moving it up or down the scale. Actuarians call this process "symboling." A value of plus three indicates that the automobile is risky, minus three that it is probably pretty safe.
+Audiology Database
 
-The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all automobiles within a particular size classification, such as two-door small, station wagons, sports/specialty, etc., and represents the average loss per car per year. Several of the attributes in the database could be used as a class attribute.
+This database is a standardized version of the original audiology database. The non-standard set of attributes have been converted to a standard set of attributes according to the rules that follow.
 
-Sources include the 1985 Model Import Car and Truck Specifications, the 1985 Ward's Automotive Yearbook, Personal Auto Manuals from the Insurance Services Office, and the Insurance Collision Report from the Insurance Institute for Highway Safety.
+Each property that appears anywhere in the original data or test file has been represented as a separate attribute in this file. A property such as Age Greater Than Sixty is represented as a boolean attribute with values False and True. In most cases, a property of the form X(Y) is represented as a discrete attribute X whose possible values are the various Y's; Air is an example.
 
-Attribute information includes:
+There are two exceptions: when only one value of Y appears anywhere, for example Static Normal. In this case, X_Y appears as a boolean attribute. When one case can have two or more values of X, for example History. All possible values of History are treated as separate boolean attributes.
 
-* Symboling, ranging from minus three to plus three
-* Normalized Losses, a continuous value ranging from sixty-five to two hundred fifty-six
-* Make, including Alfa Romero, Audi, BMW, Chevrolet, Dodge, Honda, Isuzu, Jaguar, Mazda, Mercedes Benz, Mercury, Mitsubishi, Nissan, Peugeot, Plymouth, Porsche, Renault, Saab, Subaru, Toyota, Volkswagen, and Volvo
-* Fuel Type, either diesel or gas
-* Aspiration, either standard or turbo
-* Number of Doors, either four or two
-* Body Style, including hardtop, wagon, sedan, hatchback, and convertible
-* Drive Wheels, either four-wheel drive, front-wheel drive, or rear-wheel drive
-* Engine Location, either front or rear
-* Wheel Base, a continuous value ranging from eighty-six point six to one hundred twenty point nine
-* Length, a continuous value ranging from one hundred forty-one point one to two hundred eight point one
-* Width, a continuous value ranging from sixty point three to seventy-two point three
-* Height, a continuous value ranging from forty-seven point eight to fifty-nine point eight
-* Curb Weight, a continuous value ranging from one thousand four hundred eighty-eight to four thousand sixty-six
-* Engine Type, including DOHC, DOHCV, L, OHC, OHCF, OHCV, and rotor
-* Number of Cylinders, including eight, five, four, six, three, twelve, and two
-* Engine Size, a continuous value ranging from sixty-one to three hundred twenty-six
-* Fuel System, including one barrel, two barrels, four barrels, IDI, MFI, MPFI, SPDI, and SPFI
-* Bore, a continuous value ranging from two point five four to three point ninety-four
-* Stroke, a continuous value ranging from two point zero seven to four point one seven
-* Compression Ratio, a continuous value ranging from seven to twenty-three
-* Horsepower, a continuous value ranging from forty-eight to two hundred eighty-eight
-* Peak RPM, a continuous value ranging from four thousand one hundred fifty to six thousand six hundred
-* City MPG, a continuous value ranging from thirteen to forty-nine
-* Highway MPG, a continuous value ranging from sixteen to fifty-four
-* Price, a continuous value ranging from five thousand one hundred eighteen to forty-five thousand four hundred
+Since boolean attributes only appear as positive conditions, each boolean attribute is assumed to be False unless noted as True. The value of multi-value discrete attributes taken as Unknown unless a value is specified.
 
-Keywords: Automobile, Insurance Risk Rating, Normalized Losses, Symboling, Actuarian, Class Attribute, Vehicle Characteristics, Size Classification, Average Loss Payment.
+The original case identifications, Patient One to Patient Two Hundred in the data file and Test One to Test Twenty-Six in the test file, have been added as a unique identifier attribute.
+
+Attribute Information:
+
+Age Greater Than Sixty: False, True.
+Air: Mild, Moderate, Severe, Normal, Profound.
+Air Bone Gap: False, True.
+AR C: Normal, Elevated, Absent.
+AR U: Normal, Absent, Elevated.
+Bone: Mild, Moderate, Normal, Unmeasured.
+Bone Abnormal: False, True.
+BSER: Normal, Degraded.
+
+Class: Cochlear Unknown, Mixed Cochlear Age Fixation, Possible Central, Mixed Cochlear Age Otitis Media, Mixed Possible Noise OM, Cochlear Age, Normal Ear, Cochlear Possible Noise, Cochlear Age and Noise, Acoustic Neuroma, Mixed Cochlear Unknown Ser OM, Conductive Discontinuity, Retrocochlear Unknown, Conductive Fixation, Bell's Palsy, Cochlear Noise and Heredity, Mixed Cochlear Unknown Fixation, Otitis Media, Possible Meniere's, Possible Brainstem Disorder, Cochlear Age Plus Possible Meniere's, Mixed Cochlear Age S OM, Mixed Cochlear Unknown Discontinuity, Mixed Possible Central OM.
+
+Keywords: Audiology, Machine Learning, Medicine, Standardized Database, Boolean Attributes, Discrete Attributes.

@@ -1,0 +1,24 @@
+Spike Waveforms
+
+Tags: Computer Systems, Machine Learning
+
+Introduction
+Neurons in the brain utilize electrical signals for communication. Different spike waveforms correspond to distinct cell types or varying neuron morphologies. By examining diverse spike waveforms, we may identify disparate neuronal types within our sample.
+
+Content
+The dataset comprises one hundred fifty numerical categories corresponding to the sampling of a five millisecond extracellular voltage at thirty kilohertz. Since the extracellular voltage amplitude relates to the square of the distance to the cell, we normalize the entire trace to the minimal voltage, which corresponds to the peak of the spike.
+
+To Load into Python
+Import the necessary libraries and load the dataset using the following code:
+```
+import pandas as pd
+waveforms = pd.read_csv('waveforms.csv', index_col='uid')
+waveforms.info()
+waveforms.iloc[0, :-1].plot()
+```
+This code will load the dataset, display its information, and plot the first waveform.
+
+Features
+UID, Organoid
+
+Keywords: Spike Waveforms, Neuron Morphologies, Electrical Signals, Brain Communication, Extracellular Voltage, Normalization, Python Data Loading.

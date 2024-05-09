@@ -1,13 +1,13 @@
-Semeion Tags: Chemistry, Life Science, OpenML-CC18, OpenML100, Study One Two Three, Study Fourteen, Study Thirty-Four, Study Fifty, Study Seven, Study Ninety-Eight, Study Ninety-Nine, UCI
+GEMLeR provides a comprehensive collection of gene expression datasets specifically designed for benchmarking gene expression-oriented machine learning algorithms. These datasets enable the estimation of various quality metrics, including accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-The Semeion Handwritten Digit Data Set is a collection of one thousand five hundred ninety-three handwritten digits from approximately eighty individuals who were asked to write each digit from zero to nine twice, once normally and once quickly. The dataset was created by scanning these handwritten digits and documenting them.
+The inspiration behind creating this repository stems from the growing need in the machine learning and bioinformatics communities for a standardized collection of microarray classification problems. This allows researchers to compare and evaluate different classification or feature selection techniques on the same set of problems.
 
-The dataset was created by Tactile Srl, Brescia, Italy, and donated in nineteen ninety-four to the Semeion Research Center of Sciences of Communication, Rome, Italy, for machine learning research.
+Each gene expression sample in the GEMLeR repository originates from the large, publicly available Expression Project for Oncology (expO) repository maintained by the International Genomics Consortium. The primary objective of expO and its consortium supporters is to collect tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The resulting tumor data is updated with clinical outcomes and released into the public domain without any intellectual property restrictions.
 
-A total of one thousand five hundred ninety-three handwritten digits from around eighty persons were scanned, stretched in a rectangular box sixteen by sixteen in a grayscale of two hundred fifty-six values. Then each pixel of each image was scaled into a Boolean value using a fixed threshold. 
+The decision to utilize data from the expO repository was driven by several key factors, including the consistency of tissue sample processing procedures, the use of a single microarray platform for all samples, and the availability of additional information for combined genotype-phenotype studies. Furthermore, the expO repository offers a vast number of samples for various tumor types.
 
-This dataset consists of one thousand five hundred ninety-three records and two hundred fifty-six attributes. Each record represents a handwritten digit, originally scanned with a resolution of two hundred fifty-six grayscale. Each pixel of the each original scanned image was first stretched, and after scaled between zero and one.
+When publishing materials based on GEMLeR datasets, users are requested to acknowledge the assistance received by using this repository. This facilitates the replication of experiments and enables others to access the same datasets.
 
-The best validation protocol for this dataset seems to be a five-by-two cross-validation, with fifty percent tune and completely blind fifty percent validation.
+Features include gene identifiers and expression values.
 
-Keywords: Semeion, Handwritten Digits, Machine Learning, Grayscale, Boolean Value.
+Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology, genomics.

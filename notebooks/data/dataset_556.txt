@@ -1,66 +1,11 @@
-Background:
+**Tags:** Anal Cat Data Apnea Two
 
-In this paper, we develop an approach to data disclosure in survey settings by adopting a probabilistic definition of disclosure. Our approach is based on the principle that a data collection agency must consider disclosure from the perspective of an intruder in order to efficiently evaluate data disclosure limitation procedures. The probabilistic definition and our attempt to study optimal intruder behavior lead naturally to a Bayesian formulation.
+The Anal Cat Data Apnea Two dataset is part of a comprehensive collection of datasets used in the book Analyzing Categorical Data. This dataset is one of eighty-four datasets included in the collection.
 
-The Data:
+The dataset is provided in two formats: comma-delimited ASCII and Microsoft Excel files. Users are permitted to utilize these datasets for scientific, educational, and non-commercial purposes, provided they acknowledge the source.
 
-Our case study uses data from the survey data Elite Canadian Decision Makers collected by the Institute for Social Research at York University. This survey was conducted using telephone interviews, and there were respondents, but many of these did not supply complete data. We have extracted data on twelve variables, each of which was measured on a five-point scale.
+The Anal Cat Data Apnea Two dataset contains various variables, including Automatic, Scorer One, and Subject, which are essential for analysis.
 
-Civil Liberties:
-Free speech is just not worth it.
-We have gone too far in pushing equal rights in this country.
-It is better to live in an orderly society than to allow people so much freedom.
-Free speech ought to be allowed for all political groups.
+For further information regarding the dataset and the accompanying book, users can visit the website, which offers additional resources, including statistical software guidance and sample code.
 
-Attitudes Towards Jews:
-Most Jews don't care what happens to people who are not Jews.
-Jews are more willing than others to use shady practices to get ahead.
-
-Canada-US Relationship:
-Ensure independent Canada.
-Canada should have free trade with the USA.
-Canada's way of life is influenced strongly by the USA.
-Canada benefits from US investments.
-
-Personal Information:
-Income - Total family income before taxes (with top-coding).
-Age - Based on year of birth.
-
-We transformed the original survey data as follows to create a database of approximately continuous variables:
-
-We added categorical variables to increase the number of levels. The new variables are defined as follows:
-Civil Liberties equals C1 plus C2 plus C3 plus eight minus C5.
-Attitude equals A15 plus A18.
-Canada-US Relationship equals five minus CUS1 plus CUS5 plus five minus CUS6 plus CUS7.
-
-After we removed cases with missing observations and two cases involving young children, we had a database consisting of six hundred sixty-two observations.
-
-To enhance continuity, we took the following measures:
-Age: We added normally distributed variates, with zero mean and variance four to all observations.
-Income: We added uniform variates on the range of zero to ten thousand dollars to all incomes below eighty thousand dollars. Since all cases of incomes exceeding eighty thousand dollars were lumped together in the survey, we simulated their values by means of a t distribution. Drawing values from the upper thirty-eight percent tail of t, we evaluated the values of income as sixty thousand dollars plus twenty-five thousand times t.
-Other variables: We added normally distributed variates, with zero mean and variance point five to the variables.
-
-We assume that the agency releases information about all variables, except for Attitudes towards Jews, which is unavailable to the intruder and is at the center of the intruder's investigation. We denote the released data by Z with i equals one to six hundred sixty-two and j equals one to four. We assume that the intruder's data, X, are accurate and are related to Z via the following transformation: x equals z times theta plus xi, where theta is a bias-removing parameter normally distributed with mean one and variance v, and xi is normally distributed disturbance with zero mean and variance sigma squared.
-
-The following table provides the values of v and sigma squared used in the study:
-v   sigma squared
-Civil Liberties    0.1732   25
-Canada-US Relationship    0.1732   25
-Age    0.1732   9
-Income (in ten thousands of dollars)    0.1732   4
-
-Data Used in the Computations:
-
-We conducted a complete simulation of the procedures for the complete set of six hundred sixty-two cases. We considered four different scenarios for the simulation. 
-* The released data contains no bias or noise. 
-* The released data contains only noise. 
-* The released data contains only bias. 
-* The released data contains both bias and noise.
-
-Structure of the Datasets:
-
-Each attached dataset consists of four space-separated columns containing the data on Age, Civil Liberties, Canada-US Relationship, and Income respectively.
-
-Dataset: X_BIAS
-
-Keywords: data disclosure, probabilistic definition, Bayesian formulation, survey settings, intruder behavior, data collection agency, data limitation procedures.
+Keywords: categorical data, dataset, analysis, education, research, statistics, software.

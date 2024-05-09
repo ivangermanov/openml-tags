@@ -1,33 +1,28 @@
-**SGEMM GPU Kernel Performance**
+**QSAR-TID-10473**
+Tags: Government, MTLQSAR, study_3
+Source: MetaQSAR project - September 2015
+Please cite: 
 
-Tags: Computer Systems, Mathematics
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10473. The features represent FCFP 1024bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset measures the running time of a matrix-matrix product using a parameterizable Single Precision General Matrix Multiply (SGEMM) GPU kernel with multiple possible parameter combinations. Each tested combination was run four times, and the results are reported as separate columns. The times are measured in milliseconds.
+Features: MOLECULE CHEMBL ID, Molecular Fingerprints ...
 
-The dataset contains fourteen parameters, with the first ten being ordinal and able to take up to four different power-of-two values, while the last four are binary. Due to various kernel constraints, out of the total possible parameter combinations, only a subset is feasible. This dataset includes the results for all these feasible combinations.
+The dataset contains three hundred seventy-six rows and one thousand twenty-six features, including IDs and class feature.
 
-The experiment was conducted on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and an NVIDIA GeForce graphics processing unit. The gemm fast kernel from the automatic OpenCL kernel tuning library CLTune was used.
+The C-X-C chemokine receptor type four is a single protein preferred name. It has synonyms such as CD antigen equals CD one eighty-four, C-X-C chemokine receptor type four, CXCR four, CXC-R four, CXCR minus four.
 
-It is often beneficial to work with the logarithm of the running times when dealing with this type of data.
+The organism is Homo sapiens, species group is no, protein target classification is one point membrane receptor slash family A G protein-coupled receptor slash peptide receptor.
 
-**Attribute Description**
+Description relationship accession C-X-C chemokine receptor type four single protein.
 
-* Independent Variables:
-	+ Matrix dimensions at the workgroup level
-	+ Inner dimension of two-dimensional tiling at the workgroup level
-	+ Local workgroup size
-	+ Local memory shape
-	+ Kernel loop unrolling factor
-	+ Per-matrix vector widths for loading and storing
-	+ Enable stride for accessing off-chip memory within a single thread
-	+ Per-matrix manual caching of the two-dimensional workgroup tile
-* Output:
-	+ Performance times in milliseconds for four independent runs using the same parameters
+Browse all parent molecule ChEMBL ID parent molecule name parent molecule type mechanism of action max phase first approval USAN stem references.
 
-**Related Studies**
-Sobol Tensor Trains for Global Sensitivity Analysis
+Showing one to five out of eight records.
 
-**Citation**
-Please cite the relevant paper.
+The component includes cytoplasm, lysosome, endosome, early endosome, late endosome, plasma membrane, external side of plasma membrane, cell surface, membrane, cell leading edge, cytoplasmic vesicle, protein-containing complex, extracellular exosome, anchoring junction.
 
-Keywords: SGEMM, GPU kernel, matrix-matrix product, parameter tuning, OpenCL, kernel optimization, performance measurement
+The function includes virus receptor activity, actin binding, G protein-coupled receptor activity, chemokine receptor activity, protein binding, coreceptor activity, C-C chemokine receptor activity, C-X-C chemokine receptor activity, cytokine binding, C-C chemokine binding, ubiquitin protein ligase binding, myosin light chain binding, small molecule binding, C-X-C motif chemokine twelve receptor activity, ubiquitin binding.
+
+The process includes response to hypoxia, neuron migration, epithelial cell development, dendritic cell chemotaxis, apoptotic process, chemotaxis, inflammatory response, immune response, signal transduction, G protein-coupled receptor signaling pathway, positive regulation of cytosolic calcium ion concentration, brain development, neuron recognition, response to virus.
+
+Keywords: QSAR, molecular fingerprints, chemokine receptor, protein target classification, G protein-coupled receptor, signal transduction, chemotaxis, inflammatory response, immune response.

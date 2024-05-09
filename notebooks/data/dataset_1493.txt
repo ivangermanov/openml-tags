@@ -1,13 +1,30 @@
-QSAR-TID-100044 Dataset 
+Tags: Chemistry, Life Science, OpenML100, Study
 
-Tags: Images, Machine Learning, MTLQSAR, Study Three 
+Dataset Name: One Hundred Plants Texture
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred thousand forty-four, and it consists of one thousand five hundred forty-one rows and one thousand twenty-six features including IDs and class feature. The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
+Description:
+The One Hundred Plants Texture dataset is a collection of data related to the classification of one hundred plant species based on their leaf textures.
 
-The dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target Mu opioid receptor, also known as M-OR-one, MOR-one, Mu-type opioid receptor, and OPRM one. It belongs to the species group Cavia porcellus and is classified under membrane receptor, family A G protein-coupled receptor, peptide receptor, and short peptide receptor.
+Sources:
+The original owners of the color leaves samples are from the Royal Botanic Gardens, Kew, UK.
 
-The dataset is related to opioid receptor mu and kappa, mu/kappa opioid receptor, and is part of the protein family. It is involved in various biological processes, including signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-inhibiting G protein-coupled acetylcholine receptor signaling pathway, phospholipase C-activating G protein-coupled receptor signaling pathway, sensory perception of pain, and G protein-coupled opioid receptor signaling pathway.
+Dataset Information:
+The dataset consists of binary images (masks) of the leaf samples, excluding color images. There are three features for each image: Shape, Margin, and Texture. For each feature, a sixty-four element vector is given per leaf sample. These vectors are taken as a contiguous descriptor (for shape) or histograms (for texture and margin).
 
-Features: MOLECULE CHEMBL ID, and many others...
+The dataset is divided into three files, each corresponding to a specific feature problem:
 
-Keywords: QSAR, Machine Learning, Mu opioid receptor, G protein-coupled receptor, signal transduction, sensory perception of pain
+* Prediction based on shape
+* Prediction based on texture (provided in this dataset)
+* Prediction based on margin
+
+Each row in the dataset contains a sixty-four-element feature vector followed by the Class label. The dataset comprises a total of sixteen hundred samples with sixteen samples per leaf class, and no missing values.
+
+Attributes Information:
+Each sample in the dataset has three sixty-four-element feature vectors.
+
+Relevant Papers:
+Plant Leaf Classification Using Probabilistic Integration of Shape, Texture, and Margin Features.
+Shape and Texture-Based Plant Leaf Classification.
+Plant Texture Classification Using Gabor Co-Occurrences.
+
+Keywords: Plant Species, Leaf Texture, Classification, Shape, Margin, Feature Vectors, Histograms.

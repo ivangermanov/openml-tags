@@ -1,15 +1,13 @@
-Visualizing Ethanol 
+Bank Thirty-Two NH 
 
-Tags: Chemistry, Life Science, StatLib 
+Tags: OpenML-Reg Nineteen, Study One Thirty, Synthetic 
 
-This data dump contains multiple datasets from the book Visualizing Data published by Hobart Press. The dump was created using the data.dump function and can be read back into S using the data.restore function. Each dataset has been assigned a unique name, which corresponds to the name used in the book. To access a detailed description of each dataset, please refer to the index section of the book under the relevant data entry. For instance, one of the available datasets is titled Barley. To learn more about this particular dataset, readers are advised to consult the index section under the Barley entry.
+This dataset is part of a family of datasets synthetically generated from a simulation of how bank customers choose their banks. The primary task is to predict the fraction of bank customers who leave the bank due to full queues. This dataset was created using a simplistic simulator, specifically designed to generate a family of datasets for a particular purpose. This simulator models the queues in a series of banks, taking into account various factors such as customer behavior, bank location, and task complexity.
 
-File: ethanol csv 
+Customers in this simulation come from multiple residential areas and select their preferred bank based on distance and other factors. They have tasks of varying complexity and different levels of patience. Each bank has multiple queues that open and close according to demand, and the tellers have varying levels of effectiveness. If a customer's patience expires, they may switch queues.
 
-Information about the Dataset 
-Class Type: Numeric 
-Class Index: Not Specified 
+In the rejection protocol tasks, the goal is to predict the rate of rejections, i.e., the fraction of customers who are turned away from the bank because all open tellers have full queues. This dataset is part of a larger collection of regression datasets and is originally sourced from the DELVE repository of data.
 
-Features: Nitrogen Oxide Concentration, Carbon Concentration 
+Characteristics of this dataset include a large number of cases and numerous continuous attributes. These attributes include information about the banks and their locations, customer characteristics, and queue dynamics.
 
-Keywords: Visualization, Data Analysis, Statistical Library, Chemical Compounds
+Keywords: bank customers, queue simulation, customer behavior, regression dataset, synthetic data

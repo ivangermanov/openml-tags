@@ -1,35 +1,9 @@
-The KC3 dataset is a part of the NASA Metrics Data Program defect data sets, specifically designed for software defect prediction. This dataset contains unknown types of software, with data extracted from McCabe and Halstead features extractors of source code. These features were initially defined in the 1970s to objectively characterize code features associated with software quality.
+Colleges AAUP Dataset
 
-Attribute Information:
+Tags: Chemistry, Life Science, Mythbusting, Study 
 
-* Line Count of Code: a numerical value representing McCabe's line count of code
-* Cyclomatic Complexity: a numerical value representing McCabe's cyclomatic complexity
-* Essential Complexity: a numerical value representing McCabe's essential complexity
-* Design Complexity: a numerical value representing McCabe's design complexity
-* Total Operators and Operands: a numerical value representing Halstead's total operators plus operands
-* Volume: a numerical value representing Halstead's volume
-* Program Length: a numerical value representing Halstead's program length
-* Difficulty: a numerical value representing Halstead's difficulty
-* Intelligence: a numerical value representing Halstead's intelligence
-* Effort: a numerical value representing Halstead's effort
-* Time Estimator: a numerical value representing Halstead's time estimator
-* Line Count: a numerical value representing Halstead's line count
-* Lines of Comments: a numerical value representing Halstead's count of lines of comments
-* Blank Lines: a numerical value representing Halstead's count of blank lines
-* Code and Comment: a numerical value representing Halstead's code and comment
-* Unique Operators: a numerical value representing unique operators
-* Unique Operands: a numerical value representing unique operands
-* Total Operators: a numerical value representing total operators
-* Total Operands: a numerical value representing total operands
-* Branch Count: a numerical value representing the number of branches in the flow graph
-* Problems: a boolean value indicating whether the module has one or more reported defects
+This dataset is a binarized version of the original dataset. The numeric target feature has been converted to a two-class nominal target feature by calculating the mean and categorizing all instances with a lower target value as Positive and all others as Negative.
 
-Relevant Papers:
+The dataset includes features such as Federal Identification Code, College Name, State, Institution Type, Average Salary for Full Professors, Average Compensation for Associate Professors, Number of Assistant Professors, and more.
 
-Data Quality: Some Comments on the NASA Software Defect Datasets
-How Good is Your Blind Spot Sampling Policy?
-Assessing Predictors of Software Defects
-
-Tags: Chemistry, Life Science, MythBusting, PROMISE, Study
-
-Keywords: software defect prediction, McCabe features, Halstead features, software quality, code characteristics
+Keywords: Colleges, Faculty Salaries, Academic Institutions, Higher Education, Data Analysis

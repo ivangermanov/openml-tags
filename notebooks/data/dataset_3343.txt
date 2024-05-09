@@ -1,26 +1,22 @@
-The Dow Jones Index Data Set
+QSAR-TID-14037 Dataset
 
-In our research, each record represents data for a week, and each record includes the percentage of return that stock has in the following week, which is denoted as percent change next weeks price. Ideally, you want to determine which stock will produce the greatest rate of return in the following week, and this can help you train and test your algorithm.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 14037.
 
-Some of these attributes might not be used in your research. They were originally added to our database to perform calculations. The attributes that were used in previous research include percent change price, percent change volume over last week, days to next dividend, and percent return next dividend. We left the other attributes in the dataset in case you wanted to use any of them. Of course, what you want to maximize is percent change next weeks price.
+The dataset has several features representing FCFP 1024bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-When it comes to training data versus test data, we used quarter one data for training and quarter two data for testing. An interesting data point to note is that if you use quarter two data for testing, you will notice that in the week ending May twenty-seventh, two thousand eleven, every Dow Jones Index stock lost money.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Attribute Information:
+This dataset is part of the MetaQSAR project.
 
-* Quarter: The yearly quarter, which can be either January to March or April to June.
-* Stock: The stock symbol.
-* Date: The last business day of the week, which is typically a Friday.
-* Open: The price of the stock at the beginning of the week.
-* High: The highest price of the stock during the week.
-* Low: The lowest price of the stock during the week.
-* Close: The price of the stock at the end of the week.
-* Volume: The number of shares of stock that traded hands in the week.
-* Percent Change Price: The percentage change in price throughout the week.
-* Previous Weeks Volume: The number of shares of stock that traded hands in the previous week.
-* Next Weeks Open: The opening price of the stock in the following week.
-* Next Weeks Close: The closing price of the stock in the following week.
-* Days to Next Dividend: The number of days until the next dividend.
-* Percent Return Next Dividend: The percentage of return on the next dividend.
+Tags: Machine Learning, Manufacturing, MTLQSAR, Study Three
 
-Keywords: Dow Jones Index, stock market, predictive modeling, algorithm training, financial analysis, data set.
+Description
+The Dopamine D2 Receptor is a single protein and is also known as D(2) Dopamine Receptor, Dopamine D2 Receptor, and Drd2. It belongs to the species group Rattus Norvegicus and is classified as a membrane receptor, family A G protein-coupled receptor, small molecule receptor, monoamine receptor, and dopamine receptor.
+
+This receptor is involved in various biological processes, including temperature homeostasis, response to hypoxia, neuron migration, negative regulation of protein phosphorylation, startle response, response to amphetamine, nervous system process involved in regulation of systemic arterial blood pressure, and regulation of heart rate.
+
+It is also involved in signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-modulating G protein-coupled receptor signaling pathway, negative regulation of adenylate cyclase activity, adenylate cyclase-inhibiting dopamine receptor signaling pathway, and dopamine receptor signaling pathway.
+
+Additionally, this receptor plays a role in neuron-neuron synaptic transmission, neuroblast proliferation, axonogenesis, synapse assembly, sensory perception of smell, behavior, long-term memory, grooming behavior, locomotory behavior, adult walking behavior, feeding behavior, and protein localization.
+
+Keywords: Dopamine D2 Receptor, QSAR, Machine Learning, G Protein-Coupled Receptor, Signal Transduction, Neurotransmission.

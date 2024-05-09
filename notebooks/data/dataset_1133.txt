@@ -1,16 +1,14 @@
-Cardiotocography
+GEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression-oriented machine learning algorithms. These datasets can be utilized for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Chemistry, Life Science, OpenML100, Study
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be used by different researchers. This way, many different classification or feature selection techniques can finally be compared to each other on the same set of problems.
 
-Source: UCI Machine Learning Repository
+Each gene expression sample in the GEMLeR repository comes from the large, publicly available Expression Project for Oncology repository by the International Genomics Consortium. The goal of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions. The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-The Cardiotocography dataset contains two thousand one hundred twenty-six fetal cardiotocograms that were automatically processed and the respective diagnostic features measured. These cardiotocograms were also classified by expert obstetricians and a consensus classification label was assigned to each of them. Classification was done with respect to a morphologic pattern and to a fetal state.
+A decision to use data from the Expression Project for Oncology repository was made due to the consistency of tissue samples processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-Attribute Information:
+In case of publishing material based on GEMLeR datasets, please note the assistance received by using this repository. This will help others to obtain the same datasets and replicate experiments.
 
-Fetal Heart Rate Baseline, Number of Accelerations per Second, Number of Fetal Movements per Second, Number of Uterine Contractions per Second, Number of Light Decelerations per Second, Number of Severe Decelerations per Second, Number of Prolonged Decelerations per Second, Percentage of Time with Abnormal Short Term Variability, Mean Value of Short Term Variability, Percentage of Time with Abnormal Long Term Variability, Mean Value of Long Term Variability, Width of Fetal Heart Rate Histogram, Minimum of Fetal Heart Rate Histogram, Maximum of Fetal Heart Rate Histogram, Number of Histogram Peaks, Number of Histogram Zeros, Histogram Mode, Histogram Mean, Histogram Median, Histogram Variance, Histogram Tendency, Fetal Heart Rate Pattern Class Code, Fetal State Class Code
+Features:
+ID Reference, and several thousand more gene expressions 
 
-Relevant Papers:
-SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms.
-
-Keywords: Cardiotocography, Fetal Cardiotocograms, Diagnostic Features, Morphologic Pattern, Fetal State, Fetal Heart Rate.
+Keywords: gene expression, machine learning, bioinformatics, microarray classification, genomics, oncology, tumor samples, genotype-phenotype studies.

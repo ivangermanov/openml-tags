@@ -1,0 +1,24 @@
+The World Happiness Ranking focuses on the social, urban, and natural environment. Specifically, the ranking relies on self-reports from residents of how they weigh the quality of life they are currently experiencing, which encompasses three main points: current life evaluation, expected future life evaluation, and positive and negative affect (emotion).
+
+Half of the underlying data comes from multiple Gallup world polls, which asked people to give their assessment of the previously mentioned points, and the other half of the data is comprised of six variables that could be used to try to explain the individuals' perception in their answers.
+
+The data sources datasets were obtained in two different formats. The World Happiness Ranking Dataset is a comma-separated values file with multiple columns (for the different variables and the score) and a row for each of the analyzed countries. The rankings of national happiness are based on a Cantril ladder survey. Nationally representative samples of respondents are asked to think of a ladder, with the best possible life for them being a ten, and the worst possible life being zero. They are then asked to rate their own current lives on that zero to ten scale.
+
+The report correlates the results with various life factors. Gross Domestic Product per capita is in terms of Purchasing Power Parity adjusted to constant international dollars, taken from the World Development Indicators released by the World Bank. The equation uses the natural logarithm of Gross Domestic Product per capita, as this form fits the data significantly better than Gross Domestic Product per capita.
+
+The time series of healthy life expectancy at birth are constructed based on data from the World Health Organization Global Health Observatory data repository. To match this report's sample period, interpolation and extrapolation are used.
+
+Social support is the national average of the binary responses to the Gallup World Poll question, "If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?" Freedom to make life choices is the national average of binary responses to the Gallup World Poll question, "Are you satisfied or dissatisfied with your freedom to choose what you do with your life?" Generosity is the residual of regressing the national average of Gallup World Poll responses to the question, "Have you donated money to a charity in the past month?" on Gross Domestic Product per capita.
+
+Perceptions of corruption are the average of binary answers to two Gallup World Poll questions: "Is corruption widespread throughout the government or not?" and "Is corruption widespread within businesses or not?" Where data for government corruption are missing, the perception of business corruption is used as the overall corruption-perception measure.
+
+Positive affect is defined as the average of previous-day affect measures for happiness, laughter, and enjoyment for Gallup World Poll waves. It is defined as the average of laughter and enjoyment for other waves where the happiness question was not asked. The general form for the affect questions is: "Did you experience the following feelings during a lot of the day yesterday?"
+
+Negative affect is defined as the average of previous-day affect measures for worry, sadness, and anger in all years.
+
+The goal is to find the relationship between the ladder score and the other pieces of data.
+
+Features:
+Country Name, Regional Indicator, Ladder Score, Standard Error of Ladder Score, Upper Whisker, Lower Whisker, Logged Gross Domestic Product per Capita, Social Support, Healthy Life Expectancy, Freedom to Make Life Choices, Generosity, Perceptions of Corruption, Ladder Score in Dystopia
+
+Keywords: happiness ranking, social environment, urban environment, natural environment, life evaluation, affect, gross domestic product, social support, healthy life expectancy, freedom to make life choices, generosity, perceptions of corruption

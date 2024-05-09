@@ -1,27 +1,13 @@
-QSAR-TID-11058 
+Credit Card Dataset 
 
-Tags: Life Science, Machine Learning, MTLQSAR, Study 
+Tags: Chemistry, Classification, Credit Card, Fraud, Life Science, Unbalanced, Web Analytics 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11058. The data has forty-one rows and one thousand twenty-six features, including IDs and class features, namely MOLECULE CHEMBL ID and MEDIAN PX50. The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The Credit Card dataset contains transactions made by European credit card holders in September 2013. This dataset presents transactions that occurred over a period of two days, featuring a total of 492 fraudulent transactions out of 284,807 transactions. The dataset is highly unbalanced, with the positive class (frauds) accounting for a mere fraction of all transactions.
 
-Scraped Data:
+The dataset comprises solely numerical input variables, which are the result of a Principal Component Analysis (PCA) transformation. Due to confidentiality concerns, the original features and additional background information regarding the data cannot be disclosed.
 
-The preferred name of this protein is Metabotropic Glutamate Receptor eight. It also has synonyms, including Gprc one h, Grm eight, Metabotropic Glutamate Receptor eight, mGluR eight, and Mglur eight. The organism is Rattus Norvegicus, and the species group is No. The protein target classification is One, Membrane Receptor, Family C G Protein Coupled Receptor, Small Molecule Receptor, Neurotransmitter Receptor.
+The dataset includes features such as Time, which represents the number of seconds elapsed between each transaction and the first transaction in the dataset, and Amount, which denotes the transaction amount. This latter feature can be utilized for example-dependent cost-sensitive learning. The Class feature serves as the response variable, taking on a value of one in cases of fraud and zero otherwise.
 
-Description:
+This dataset was compiled and analyzed during a collaborative research effort between Worldline and the Machine Learning Group of the Université Libre de Bruxelles on big data mining and fraud detection. Further information on ongoing and past projects related to these topics can be accessed via the following websites: BruFence and ARTML.
 
-Metabotropic Glutamate Receptor eight is a single protein. It is related to accession P seven zero five seventy-nine. Rows per page are fifty-one, and there is only one page.
-
-Go Component:
-
-The go components include plasma membrane, membrane, presynaptic membrane, neuronal cell body, postsynaptic membrane, presynaptic active zone membrane, glutamatergic synapse, GABA-ergic synapse, and cellular anatomical entity.
-
-Go Function:
-
-The go functions include group three metabotropic glutamate receptor activity, G protein coupled receptor activity, and glutamate receptor activity.
-
-Go Process:
-
-The go processes include cell communication, signal transduction, G protein coupled receptor signaling pathway, adenylate cyclase inhibiting G protein coupled receptor signaling pathway, adenylate cyclase inhibiting G protein coupled glutamate receptor signaling pathway, G protein coupled glutamate receptor signaling pathway, chemical synaptic transmission, sensory perception of pain, signaling, synaptic transmission glutamatergic, regulation of neurotransmitter secretion, response to stimulus, detection of mechanical stimulus involved in sensory perception of pain, regulation of synaptic transmission glutamatergic, presynaptic modulation of chemical synaptic transmission, and regulation of neuron death.
-
-Keywords: QSAR, machine learning, molecular fingerprints, metabotropic glutamate receptor, G protein coupled receptor, signal transduction, synaptic transmission.
+Keywords: Credit Card, Fraud Detection, Unbalanced Dataset, Principal Component Analysis, Cost-Sensitive Learning, Big Data Mining

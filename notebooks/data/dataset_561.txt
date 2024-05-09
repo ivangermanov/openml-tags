@@ -1,7 +1,19 @@
-Fruit Fly Dataset 
+Relative CPU Performance Data
 
-Tags: Binarized, Chemistry, Life Science, Mythbusting, Study 
+This dataset provides information about the relative performance of different computer systems. It contains data on various characteristics of these systems, including the vendor, model name, machine cycle time, minimum and maximum main memory, cache memory, minimum and maximum channels, and published and estimated relative performance.
 
-This dataset is a binarized version of the original dataset. The numeric target feature has been converted into a two-class nominal target feature by calculating the mean and categorizing all instances with a lower target value as Positive and all others as Negative. This conversion enables a more straightforward analysis of the data. The dataset includes various features that describe the characteristics of fruit flies, including their Partners, Type, Thorax, and Sleep patterns. These features provide valuable insights into the biology and behavior of these organisms.
+The dataset was created using a linear regression method to estimate the relative performance values. This method is described in detail in the original article.
 
-Keywords: Fruit Fly, Binarized Data, Life Science, Chemistry, Nominal Target Feature
+There are two hundred nine instances in this dataset, each representing a different computer system. Each instance has ten attributes, including six predictive attributes, two non-predictive attributes, one goal field, and the linear regression's guess.
+
+The attributes include vendor name, model name, machine cycle time in nanoseconds, minimum main memory in kilobytes, maximum main memory in kilobytes, cache memory in kilobytes, minimum channels in units, maximum channels in units, published relative performance, and estimated relative performance from the original article.
+
+There are no missing attribute values in this dataset. The class distribution is continuous, with published relative performance values ranging from zero to over one thousand.
+
+Summary statistics are available for each attribute, including minimum, maximum, mean, standard deviation, and correlation with published relative performance.
+
+This dataset has been used in previous studies, including linear regression prediction of relative CPU performance and instance-based prediction of real-valued attributes.
+
+Tags: Chemistry, Life Science, UCI
+
+Keywords: Computer Systems, Relative Performance, Linear Regression, Machine Cycle Time, Main Memory, Cache Memory, Channels, Published Relative Performance, Estimated Relative Performance.

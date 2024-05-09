@@ -1,15 +1,21 @@
-GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for the estimation of different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, among others, for classification, feature selection, or clustering algorithms.
+Spectrometer Dataset 
 
-This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be used by different researchers. This way, many different classification or feature selection techniques can finally be compared to each other on the same set of problems.
+Tags: Chemistry, Life Science, Mythbusting, Study 
 
-The origin of the data is rooted in the Expression Project for Oncology (expO) repository by the International Genomics Consortium. The goal of expO and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions.
+This dataset is a binarized version of the original dataset. The multi-class target feature has been converted to a two-class nominal target feature by relabeling the majority class as Positive and all others as Negative.
 
-The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
+Features:
 
-Although there are various other sources of gene expression data available, a decision to use data from the expO repository was made due to the consistency of tissue sample processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
+* Light Reception System Name
+* Identification Type
+* Right Ascension
+* Declination
+* Scale Factor
 
-In the event of publishing material based on GEMLeR datasets, please note the assistance received by using this repository. This will help others to obtain the same datasets and replicate experiments.
+The dataset also includes various flux measurements for both blue and red bands.
 
-Features include IDs and gene expressions.
+The blue band flux measurements range from one to forty-four, providing a comprehensive spectrum analysis.
 
-Keywords: gene expression, machine learning, bioinformatics, microarray analysis, oncology, genomics, classification, feature selection, clustering.
+Similarly, the red band flux measurements range from one to forty-seven, offering an extensive range of spectral data.
+
+Keywords: Spectrometer, Chemistry, Life Science, Spectrum Analysis, Flux Measurements

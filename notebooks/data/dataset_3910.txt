@@ -1,18 +1,19 @@
-The 2020 Pokémon Dataset
-Tags: Life Science, Medicine
+This dataset contains QSAR data showing activity values of several compounds on drug target Cannabinoid CB2 Receptor, and it has multiple rows and features including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-I embarked on a fascinating journey in the realm of data science, starting with basic data visualization techniques. During my search for suitable datasets online, I stumbled upon a Pokémon dataset that immediately caught my attention. As an avid fan of the Pokémon franchise since childhood, having played every main series game, I was thrilled to begin my data visualization endeavors with a dataset that resonated with my passion.
+The features represent Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-However, upon delving deeper into the analysis, I discovered that the existing dataset had several missing values and only featured information on Pokémon from the first seven generations. Given the age of the dataset, this limitation was somewhat anticipated, especially considering the latest generation was introduced recently. I felt compelled to update the data to ensure its relevance and comprehensiveness.
+This dataset is part of the MetaQSAR project and was published in September two thousand fifteen.
 
-Fortunately, my proficiency in web scraping enabled me to tackle this challenge head-on. I extracted data from reputable sources, including PokémonDB.net and Bulbapedia, over the course of two days. Developing the scraping logic, debugging, and refining the code required meticulous effort, particularly when dealing with complex scenarios like iterating through a single page multiple times and accessing data hidden behind buttons. Once the file was generated, I manually reviewed and corrected any names containing unsupported symbols and rearranged the columns for optimal organization.
+The Cannabinoid CB2 Receptor is a single protein preferred name, also known as Cannabinoid Receptor Two, CB Two, CB-Two, Cnr Two, and rCB Two. It belongs to the species group Rattus Norvegicus and is classified as a one Membrane Receptor Family A G Protein-Coupled Receptor Small Molecule Receptor Family A GPCR Lipid-Like Ligand Receptor Family A GPCR Cannabinoid Receptor.
 
-This enriched dataset encompasses a wide range of attributes, including Pokémon names, Pokédex numbers, generations, abilities, physical statistics such as height and weight, typing, defense multipliers against various types, and more. Notably, it incorporates data on all Mega Evolutions, Galarian, Alolan, and alternate forms, bringing the total count to an impressive array of Pokémon. To facilitate filtering and analysis, I added columns indicating whether a Pokémon is legendary, mythical, or a Mega Evolution.
+It has various synonyms, including Cannabinoid Receptor Two, CB Two, CB-Two, Cnr Two, and rCB Two.
 
-Acknowledgments:
-Data sourced from PokémonDB.net and Bulbapedia.
+The dataset is related to the description of the Cannabinoid Receptor Two, which is a Single Protein.
 
-Features:
-Pokédex Number, Name, Generation, Classification, Abilities, Height, Weight, Type, Base Total, HP, Attack, Defense, Special Attack, Special Defense, Speed, Capture Rate, Base Egg Steps, Base Happiness, Legendary Status, Mythical Status, Mega Evolution Status
+In the Expression Atlas, there is one entry for this receptor. In the Go Component section, there are nine entries, including cytoplasm, endoplasmic reticulum, plasma membrane, membrane, dendrite, extrinsic component of cytoplasmic side of plasma membrane, cell projection, neuronal cell body, and perikaryon.
 
-Keywords: Pokémon, Data Visualization, Web Scraping, Dataset, PokémonDB, Bulbapedia, Mega Evolutions, Galarian Forms, Alolan Forms, Alternate Forms, Legendary Pokémon, Mythical Pokémon.
+In the Go Function section, there are two entries, including G Protein-Coupled Receptor Activity and Cannabinoid Receptor Activity.
+
+In the Go Process section, there are fourteen entries, including Response to Amphetamine, Inflammatory Response, Signal Transduction, G Protein-Coupled Receptor Signaling Pathway, Adenylate Cyclase-Activating G Protein-Coupled Receptor Signaling Pathway, Regulation of Metabolic Process, Leukocyte Chemotaxis, Negative Regulation of Synaptic Transmission GABAergic, Response to Lipopolysaccharide, Negative Regulation of Mast Cell Activation, Cannabinoid Signaling Pathway, Negative Regulation of Action Potential, Response to Stimulus, and Negative Regulation of Nitric-Oxide Synthase Activity.
+
+Keywords: Cannabinoid CB2 Receptor, QSAR, MetaQSAR, G Protein-Coupled Receptor, Signal Transduction, Inflammatory Response, Cannabinoid Signaling Pathway.

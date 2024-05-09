@@ -1,79 +1,18 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred four thousand three hundred eighty-five, and it has twenty-four rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXC Fifty.
+This is the original version of the famous Covertype dataset. 
 
-The features represent Folded Chemical Fragment Phase six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Predicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation (thirty by thirty meter cell) was determined from United States Forest Service Region Two Resource Information System data. Independent variables were derived from data originally obtained from United States Geological Survey and United States Forest Service data. 
 
-Scraped Data:
+Data is in raw form (not scaled) and contains binary (zero or one) columns of data for qualitative independent variables (wilderness areas and soil types). 
 
-ID: ChEMBL nineteen twenty-six four nine zero
-Type: Single Protein
-Preferred Name: Alpha-One A Adrenergic Receptor
-Synonyms: ADRA One A Alpha-One A Adrenergic Receptor Alpha-One C Adrenergic Receptor
-Organism: Sus Scrofa
-Species Group: No
-Protein Target Classification: One. Membrane Receptor Family A G-Protein Coupled Receptor Small Molecule Receptor Monoamine Receptor Adrenergic Receptor
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices.
 
-Description Relationship Accession Alpha-One A Adrenergic Receptor Single Protein
+Some background information for these four wilderness areas: Neota probably has the highest mean elevational value of the four wilderness areas. Rawah and Comanche Peak would have a lower mean elevational value, while Cache La Poudre would have the lowest mean elevational value. As for primary major tree species in these areas, Neota would have spruce/fir, while Rawah and Comanche Peak would probably have lodgepole pine as their primary species, followed by spruce/fir and aspen. Cache La Poudre would tend to have Ponderosa pine, Douglas-fir, and cottonwood/willow. 
 
-Go Component:
-Nucleus
-Nucleoplasm
-Cytoplasm
-Cytosol
-Plasma Membrane
-Caveola
-Membrane
-Nuclear Membrane
-Intracellular Membrane-Bounded Organelle
+The Rawah and Comanche Peak areas would tend to be more typical of the overall dataset than either the Neota or Cache La Poudre, due to their assortment of tree species and range of predictive variable values (elevation, etc.). Cache La Poudre would probably be more unique than the others, due to its relatively low elevation range and species composition.
 
-Go Function:
-G-Protein Coupled Receptor Activity
-Adrenergic Receptor Activity
-Alpha One-Adrenergic Receptor Activity
-Protein Heterodimerization Activity
+Attribute Information: 
+Given is the attribute name, attribute type, the measurement unit, and a brief description. The forest cover type is the classification problem. The order of this listing corresponds to the order of numerals along the rows of the database.
 
-Go Process:
-MAPK Cascade
-Negative Regulation of Heart Rate Involved in Baroreceptor Response to Increased Systemic Arterial Blood Pressure
-Norepinephrine-Epinephrine Vasoconstriction Involved in Regulation of Systemic Arterial Blood Pressure
-Positive Regulation of Heart Rate by Epinephrine-Norepinephrine
-Positive Regulation of the Force of Heart Contraction by Epinephrine-Norepinephrine
-Regulation of Muscle Contraction
-Signal Transduction
-G-Protein Coupled Receptor Signaling Pathway
-Phospholipase C-Activating G-Protein Coupled Receptor Signaling Pathway
-Positive Regulation of Cytosolic Calcium Ion Concentration
-Cell-Cell Signaling
-Adult Heart Development
-Regulation of Blood Pressure
-Negative Regulation of Autophagy
-Positive Regulation of Cardiac Muscle Hypertrophy
-Regulation of Vasoconstriction
-Organ Growth
-Positive Regulation of MAPK Cascade
-Positive Regulation of Vasoconstriction
-Positive Regulation of Smooth Muscle Contraction
-Regulation of Cardiac Muscle Contraction
-Cell Growth Involved in Cardiac Muscle Cell Development
-Adenylate Cyclase-Activating Adrenergic Receptor Signaling Pathway
-Pilomotor Reflex
-Neuron-Glial Cell Signaling
-Positive Regulation of Non-Membrane Spanning Protein Tyrosine Kinase Activity
+Elevation is a quantitative measurement in meters, describing elevation in meters. Aspect is a quantitative measurement in azimuth, describing aspect in degrees azimuth. Slope is a quantitative measurement in degrees, describing slope in degrees. Horizontal Distance To Hydrology is a quantitative measurement in meters, describing horizontal distance to nearest surface water features. Vertical Distance To Hydrology is a quantitative measurement in meters, describing vertical distance to nearest surface water features. Horizontal Distance To Roadways is a quantitative measurement in meters, describing horizontal distance to nearest roadway. Hillshade Nine Am is a quantitative measurement, describing hillshade index at nine am, summer solstice. Hillshade Noon is a quantitative measurement, describing hillshade index at noon, summer solstice. Hillshade Three Pm is a quantitative measurement, describing hillshade index at three pm, summer solstice. Horizontal Distance To Fire Points is a quantitative measurement in meters, describing horizontal distance to nearest wildfire ignition points.
 
-Reactome:
-Adrenoceptors
-G Alpha q Signalling Events
-G Alpha Twelve Thirteen Signalling Events
-
-UniProt:
-Q Nine TS W Seven
-
-InterPro:
-GPCR Rhodopsin
-ADRA One A Receptor
-ADR Family
-GPCR Rhodopsin Seven TM
-
-Pfam:
-Seven TM One
-
-Keywords: QSAR, machine learning, molecular fingerprints, drug target, adrenergic receptor, signal transduction, G-protein coupled receptor, cardiac muscle contraction.
+Keywords: forest cover type, cartographic variables, wilderness areas, soil types, Roosevelt National Forest, ecological processes, forest management practices.

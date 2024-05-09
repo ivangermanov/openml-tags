@@ -1,11 +1,15 @@
-The Superconduct Dataset is categorized under Agriculture and Computer Systems. This dataset belongs to the classification on numerical features benchmark.
+MetaQSAR Project Dataset: QSAR-TID-11287
 
-The dataset contains information on superconductors. It has eighty-one columns containing extracted features and one column containing the critical temperature, which is used as the target variable. The original data from which the features were extracted comes from a public source.
+Tags: Machine Learning, Medicine, MTLQSAR, Study Three
 
-Studies related to this dataset have been published, including an article on Frontiers in Materials.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11287. It has one hundred rows and one thousand twenty-six features, including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50.
 
-The dataset was sourced from the University of California, Irvine (UCI).
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Features include mean atomic mass, weighted mean atomic mass, geometric mean atomic mass, weighted geometric mean atomic mass, entropy of atomic mass, weighted entropy of atomic mass, range of atomic mass, weighted range of atomic mass, standard deviation of atomic mass, and weighted standard deviation of atomic mass. Other features include mean first ionization energy, weighted mean first ionization energy, geometric mean first ionization energy, weighted geometric mean first ionization energy, entropy of first ionization energy, weighted entropy of first ionization energy, range of first ionization energy, weighted range of first ionization energy, and standard deviation of first ionization energy. Additionally, there are features for mean atomic radius, density, electron affinity, fusion heat, thermal conductivity, and valence.
+MOLECULE_CHEMBL_ID is an identifier for each molecule in the ChEMBL database. MEDIAN_PXC50 is the median of the negative logarithm of the half maximal inhibitory concentration, which is a measure of the potency of a compound.
 
-Keywords: superconductors, critical temperature, materials science, numerical features, classification benchmark.
+The dataset is related to Coagulation Factor Eleven, also known as Plasma Thromboplastin Component, which is a serine protease involved in the blood clotting process. It is synthesized in the liver and circulates in the plasma as an inactive zymogen. Upon activation, it cleaves and activates other clotting factors, leading to the formation of a blood clot.
+
+Several compounds have been identified as inhibitors of Coagulation Factor Eleven, including antibodies, enzymes, and small molecules. These inhibitors have potential therapeutic applications in the treatment of thrombotic disorders.
+
+Keywords: QSAR, Coagulation Factor Eleven, Blood Clotting, Serine Protease, Inhibitors, Thrombotic Disorders.

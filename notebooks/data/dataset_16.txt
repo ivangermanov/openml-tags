@@ -1,11 +1,17 @@
-**Multiple Features Dataset: Pixel**
+The Multiple Features Dataset: Karhunen is one of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character. 
 
-This dataset is one of a set of six datasets that describe features of handwritten numerals (zero through nine) extracted from a collection of Dutch utility maps. The maps were scanned in eight-bit grey value at a density of four hundred dots per inch, sharpened, and then thresholded. Corresponding patterns in different datasets correspond to the same original character. Two thousand instances, two hundred per class, have been digitized in binary images.
+This dataset consists of two thousand instances, with two hundred instances per class, digitized in binary images. 
 
-Using this dataset, sampled versions of the original images may be obtained, with a resolution of fifteen by sixteen pixels. The Multiple Features Dataset represents two hundred forty pixel averages in two by three windows.
+The attribute information represents sixty-four descriptors from the Karhunen-Loève Transform, a linear transformation corresponding to the projection of the images on the eigenvectors of a covariance matrix.
 
-This dataset has been used in various studies, including hand-written digit recognition by combined classifiers and statistical pattern recognition.
+A relevant paper uses a slightly different version of the database, discussing handwritten digit recognition by combined classifiers. Another paper uses the database as is, reviewing statistical pattern recognition.
 
-The Multiple Features Dataset has been divided into six files, each representing a different feature set. These feature sets include Fourier coefficients of the character shapes, profile correlations, Karhunen-Love coefficients, pixel averages in two by three windows, Zernike moments, and morphological features.
+The dataset has six files, each containing two thousand patterns stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one through nine. Corresponding patterns in different feature sets correspond to the same original character. 
 
-Keywords: Multiple Features Dataset, handwritten numerals, pixel averages, image recognition, pattern analysis.
+The source image dataset is lost. However, using the pixel dataset, sampled versions of the original images may be obtained. 
+
+Has Missing Values? No.
+
+Additional Variable Information: Six files contain different feature sets, including Fourier coefficients of the character shapes, profile correlations, Karhunen-Loève coefficients, pixel averages in two-by-three windows, Zernike moments, and morphological features.
+
+Keywords: handwritten numerals, Karhunen-Loève Transform, covariance matrix, digit recognition, statistical pattern recognition, ASCII, pixel dataset.

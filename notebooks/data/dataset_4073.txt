@@ -1,11 +1,13 @@
-The NYC Taxi Green December 2016 dataset is a machine learning and statistics dataset used in the tabular data benchmark, transformed in the same way. It belongs to the regression on numerical features benchmark.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: Ecdysone Receptor, and it has eighteen rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-This dataset originates from the Trip Record Data provided by the New York City Taxi and Limousine Commission, which includes TLC trips of the green line in December. The data was downloaded from the commission's website.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-For a detailed description of all variables in the dataset, please refer to the commission's homepage. The variable 'tip amount' has been chosen as the target variable. Note that the variable 'total amount' is ignored by default, as the target could be predicted deterministically if it were included. Additionally, the date variables 'pickup datetime' and 'drop-off datetime', although ignored by default, could be used to compute additional time features.
+Features include Molecule ChEMBL ID, and many others.
 
-In this version, only trips with 'payment type' equal to credit card have been selected, as tips are not included for most other payment types. Furthermore, the variables 'trip distance' and 'fare amount' have been removed to increase the importance of the categorical features 'pickup location ID' and 'drop-off location ID'.
+This dataset is part of the MetaQSAR project, tagged as Demographics, MTLQSAR, and study three.
 
-Features include passenger count, tolls amount, pickup datetime day, pickup datetime hour, pickup datetime minute, drop-off datetime day, drop-off datetime hour, and drop-off datetime minute.
+The ecdysone receptor is a single protein preferred name, also known as twenty hydroxy ecdysone receptor, ecdysone receptor, ecdysteroid receptor, EcR, and EcRH. It is found in the species Choristoneura fumiferana, and is classified as a transcription factor, nuclear receptor, nuclear hormone receptor subfamily one, nuclear hormone receptor subfamily one group H, and nuclear hormone receptor subfamily one group H member one.
 
-Keywords: NYC Taxi, machine learning, statistics, tabular data, regression, numerical features, trip record data, taxi commission, tip amount.
+The ecdysone receptor is involved in many biological processes, including DNA templated transcription, regulation of DNA templated transcription, and ecdysone receptor mediated signaling pathway. It has many molecular functions, including DNA binding, DNA binding transcription factor activity, nuclear receptor activity, zinc ion binding, ecdysone binding, sequence specific DNA binding, and metal ion binding.
+
+Keywords: QSAR, Ecdysone Receptor, Molecular Fingerprints, MetaQSAR, Transcription Factor, Nuclear Receptor, DNA Binding.

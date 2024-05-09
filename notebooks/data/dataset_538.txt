@@ -1,17 +1,48 @@
-Visualizing Galaxy 
+The USNews dataset for the ASA Statistical Graphics Section's Data Analysis Exposition contains information on over thirteen hundred American colleges and universities. The data may be obtained in either of two formats. USNews DATA contains the raw data in comma delimited fields with a single data line for each school. The order of variables is the same as given below for the fixed column version, although the spacing varies for each school. USNews Three DATA has the data arranged in fixed columns, with three data lines for each school and a maximum line length of eighty characters. This dataset is taken from the US News and World Report's Guide to America's Best Colleges. This dataset is protected by copyright, is reproduced with permission of the copyright holder, and may not be downloaded or otherwise copied, except solely for the purpose of analysis in connection with the American Statistical Association's Data Analysis Exposition.
 
-Tags: Chemistry, Life Science, Statistics Library 
+KEY FOR USNews Three DATA
 
-This data dump contains multiple datasets from the book Visualizing Data published by Hobart Press. The dump was generated using the data.dump function and can be restored into an S environment using the data.restore function. Each dataset in this dump corresponds to a specific dataset used in the book. 
+Fixed column format with three data lines per school
 
-To access a detailed description of each dataset, refer to the index section of the book under the heading 'Data' followed by the name of the dataset. For instance, if you want to learn more about the Barley dataset, simply look up 'Data, Barley' in the index.
+Line One: Federal Identification Number, College Name, State Postal Code
 
-File location: ../data/visualizing/galaxy.csv 
+Line Two: Public Private Indicator, Average Math SAT Score, Average Verbal SAT Score, Average Combined SAT Score, Average ACT Score, First Quartile Math SAT, Third Quartile Math SAT, First Quartile Verbal SAT, Third Quartile Verbal SAT, First Quartile ACT, Third Quartile ACT, Number of Applications Received, Number of Applicants Accepted, Number of New Students Enrolled, Percent of New Students from Top Ten Percent of High School Class, Percent of New Students from Top Twenty Five Percent of High School Class
 
-Information about the dataset 
-Classification Type: Numeric 
-Class Index: Not Applicable 
+Line Three: Number of Full Time Undergraduates, Number of Part Time Undergraduates, In-State Tuition, Out-of-State Tuition, Room and Board Costs, Room Costs, Board Costs, Additional Fees, Estimated Book Costs, Estimated Personal Spending, Percent of Faculty with PhDs, Percent of Faculty with Terminal Degree, Student Faculty Ratio, Percent Alumni Who Donate, Instructional Expenditure Per Student, Graduation Rate
 
-Features include East West direction, North South direction, Angle measurement, Radial Positioning, and Velocity measurement.
+Missing values are denoted with an asterisk.
 
-Keywords: Visualizing Data, Dataset, Statistics Library, Hobart Press, Chemistry, Life Science.
+To obtain the dataset from StatLib, send one of the single-line messages below to the address statlib@lib.stat.cmu.edu:
+
+send usnews.data from colleges
+send usnews-three.data from colleges
+
+For more information on the ASA Statistical Graphics Section's Data Analysis Exposition, send the message:
+
+send readme from colleges
+
+WHAT'S WHAT AMONG AMERICAN COLLEGES AND UNIVERSITIES?
+
+This is the subject of the Data Analysis Exposition sponsored by the Statistical Graphics Section of the American Statistical Association. The purpose of the Exposition is to encourage statisticians to demonstrate techniques, especially graphical, for analyzing data and displaying the results of an analysis. Individuals and groups will work with the same set of data and present their analyses at a special session as part of the annual Joint Statistical Meetings.
+
+The datasets for this Exposition are drawn from two sources: US News and World Report's Guide to America's Best Colleges and the American Association of University Professors' Salary Survey. The US News data contains information on tuition, room and board costs, SAT or ACT scores, application acceptance rates, graduation rate, student faculty ratio, spending per student, and a number of other variables for over thirteen hundred schools.
+
+The raw data and documentation are contained in the files described below. To obtain any of these files, send a message to statlib@lib.stat.cmu.edu of the following form:
+
+send XXXXX from colleges
+
+Available files:
+
+usnews doc: Documentation for the US News data
+usnews data: US News data in comma delimited format
+usnews-three data: US News data in fixed column format
+
+Two versions of each dataset are provided to accommodate users with different software constraints. The comma delimited versions contain information for each college on a separate line with values delimited by commas. The fixed column versions use two or three data lines per school and a maximum line length of eighty characters.
+
+To participate in the Data Analysis Exposition, you must send an abstract form to the American Statistical Association. Information is available from the ASA Meetings Department.
+
+You may choose your own path to proceed in analyzing the data or use some of the suggested questions below to get started. How well can we model tuition using the other variables? How might we cluster colleges into similar comparison groups? How can we best display faculty salary structure? Can we find a reasonable way to rank the schools?
+
+You may work on your own or put together a team. Show off the capabilities of your favorite software package or use the data for a class project and display your students' results. You may choose to consider just a subset of schools or examine regional patterns. The main point is to find innovative ways to display the interesting features of the data.
+
+Keywords: colleges, universities, data analysis, statistical graphics, education, tuition, SAT scores, faculty salaries.

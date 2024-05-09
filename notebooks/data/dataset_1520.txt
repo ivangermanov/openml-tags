@@ -1,17 +1,19 @@
-QSAR-TID-100854 Dataset 
+Robot Execution Failures Data Set
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: Maternal Embryonic Leucine Zipper Kinase, and it has multiple rows and features including IDs and class feature. 
+Abstract:
+This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
 
-The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Data Set Information:
+The donation includes five data sets, each of which defines a different learning problem. The five learning problems include failures in approach to grasp position, failures in transfer of a part, position of part after a transfer failure, failures in approach to ungrasp position, and failures in motion with part.
 
-Features include molecule ChEMBL ID, molecular fingerprints, and median pseudo pCI50.
+To improve classification accuracy, a set of five feature transformation strategies was defined and evaluated. These strategies were based on statistical summary features, discrete Fourier transform, and other methods. This enabled an average improvement of twenty percent in accuracy.
 
-This dataset was obtained from the MetaQSAR project in September 2015.
+Attribute Information:
+All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection. Each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection. The total observation window for each failure instance was three hundred fifteen milliseconds. 
 
-Maternal Embryonic Leucine Zipper Kinase is a single protein also known as hMELK, hPK38, KIAA0175, and belongs to the species Homo sapiens. It is classified under enzyme/kinase/protein kinase/CAMK protein kinase group/CAMK protein kinase CAMK1 family/CAMK protein kinase MELK subfamily.
+Relevant Papers:
+Feature Transformation Strategies for a Robot Learning Problem was published in Feature Extraction, Construction and Selection. A Data Mining Perspective. Integration and Learning in Supervision of Flexible Assembly Systems was published in IEEE Transactions on Robotics and Automation.
 
-It is expressed in cytoplasm, plasma membrane, cell cortex, and membrane. Its functions include nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, protein tyrosine kinase activity, non-membrane spanning protein tyrosine kinase activity, calcium ion binding, protein binding, ATP binding, lipid binding, kinase activity, transferase activity, and protein serine kinase activity.
+Tags: Chemistry, Life Science
 
-Its biological processes include G2/M transition of mitotic cell cycle, protein phosphorylation, apoptotic process, cell cycle, cell population proliferation, intrinsic apoptotic signaling pathway in response to oxidative stress, phosphorylation, hemopoiesis, intracellular signal transduction, positive regulation of apoptotic process, protein autophosphorylation, and neural precursor cell proliferation.
-
-Keywords: QSAR, Maternal Embryonic Leucine Zipper Kinase, molecular fingerprints, Pipeline Pilot, MetaQSAR, protein kinase, apoptotic process, cell cycle.
+Keywords: robot execution failures, force and torque measurements, failure detection, learning problems, feature transformation strategies.

@@ -1,13 +1,51 @@
-Normalized Form of Cod RNA Dataset
+PC4 Software Defect Prediction
 
-This dataset belongs to the categories of Chemistry and Life Science.
+One of the NASA Metrics Data Program defect datasets, PC4 contains data from flight software for an Earth-orbiting satellite. This dataset comes from McCabe and Halstead features extractors of source code, which were defined in the seventies in an attempt to objectively characterize code features associated with software quality.
 
-The source of this dataset is the original website, which provides detailed information about the preprocessing steps.
+Relevant Papers:
 
-To create this dataset, the test, train, and rest datasets were joined together. Each file column was normalized according to specific rules. If a column contained only one value, it was considered a constant feature and set to zero, effectively removing it due to sparsity. If a column had two values, it was considered a binary feature, and the more frequently occurring value was set to zero, while the other was set to one. For columns containing more than two values, considered multinary or real features, the column was divided by its standard deviation.
+Data Quality: Some Comments on the NASA Software Defect Datasets
+How Good is Your Blind Spot Sampling Policy?
+Assessing Predictors of Software Defects
 
-Note that this dataset still contains many duplicate data points within each file and across files, which have not been removed.
+Features:
 
-Features include various attributes related to Cod RNA.
+* Lines of Blank Code
+* Branch Count
+* Call Pairs
+* Lines of Code and Comment
+* Lines of Comments
+* Condition Count
+* Cyclomatic Complexity
+* Cyclomatic Density
+* Decision Count
+* Decision Density
+* Design Complexity
+* Design Density
+* Edge Count
+* Essential Complexity
+* Essential Density
+* Lines of Executable Code
+* Parameter Count
+* Halstead Content
+* Halstead Difficulty
+* Halstead Effort
+* Halstead Error Estimate
+* Halstead Length
+* Halstead Level
+* Halstead Program Time
+* Halstead Volume
+* Maintenance Severity
+* Modified Condition Count
+* Multiple Condition Count
+* Node Count
+* Normalized Cyclomatic Complexity
+* Number of Operands
+* Number of Operators
+* Number of Unique Operands
+* Number of Unique Operators
+* Total Number of Lines
+* Percent Comments
+* Total Lines of Code
 
-Keywords: chemistry, life science, RNA, normalization, preprocessing, dataset.
+Keywords: Software Defect Prediction, NASA Metrics Data, Flight Software, Earth-orbiting Satellite, McCabe and Halstead Features, Source Code Analysis, Software Quality.

@@ -1,31 +1,17 @@
-Traffic-counting-using-cameras 
+QSAR-TID-12659 Dataset 
 
-Tags: Economics, Social Media 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12659. It has five hundred seventy-seven rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
 
-These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France).
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-What exactly does the Telraam measure? 
-Telraam counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and the analysis performed by the Raspberry Pi, a small computer on which the device is based. The analysis simply uses the size and speed of the passing object.
+Dataset Source: MetaQSAR project - September two thousand fifteen
 
-Each hour, the camera records the following data:
-Percentage of camera activity 
-Counting of pedestrians, cars, bicycles, trucks (total, left, and right of the street) 
-Histogram of car speeds for the intervals zero to ten, ten to twenty, twenty to thirty, and so forth up to seventy and more.
+Dataset Tags: Government, MTLQSAR, study three
 
-Why a percentage of camera activity? 
-Telraam does not count when it is dark. This camera has constraints because to perform the counts, it does image recognition: 
-The camera is not active at night 
-The camera is not active one hundred percent of the time in daylight; therefore, the percentage of activity is indicated. 
-When the camera is partially active, the counts are prorated using this percentage to estimate the activity in the observed hour.
-The camera may be out of service for a period.
+Dataset Description:
 
-Content 
-The data have been flattened in a CSV file. The original data (JSON) can be retrieved in real-time here with a POST request.
+This dataset provides information about the Prostanoid DP receptor, also known as PGD two receptor or PGD receptor. The Prostanoid DP receptor is a single protein, specifically a membrane receptor, belonging to Family A G protein-coupled receptor and classified under Small molecule receptor. It is involved in various biological processes, including inflammatory response, signal transduction, G protein-coupled receptor signaling pathway, positive regulation of cytosolic calcium ion concentration, male sex determination, sleep, mast cell degranulation, adenosine metabolic process, and cellular response to prostaglandin D stimulus.
 
-Inspiration 
-Time series forecasting: predict traffic flow.
+Some of the molecules associated with this receptor include ASAPIPRANT, VIDUPIPRANT, and LAROPIPRANT, which act as Prostanoid DP receptor antagonists.
 
-Features:
-(time, id, timezone, pct up, pedestrian, bike, car, lorry, pedestrian left, bike left, car left, lorry left, pedestrian right, bike right, car right, lorry right, car speed zero to ten, car speed ten to twenty, ...)
-
-Keywords: traffic counting, cameras, Telraam, pedestrians, cyclists, cars, freight vehicles, image recognition, Raspberry Pi, time series forecasting, traffic flow.
+Keywords: QSAR, Prostanoid DP receptor, G protein-coupled receptor, membrane receptor, inflammatory response, signal transduction, G protein-coupled receptor signaling pathway.

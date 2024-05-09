@@ -1,27 +1,17 @@
-This dataset is based on the Student Grade Prediction dataset. 
+This dataset, named QSAR-TID-103446, belongs to the categories of Economics, Life Science, and MTLQSAR. It was created as part of the MetaQSAR project in September 2015.
 
-General Information 
-The data approach student achievement in secondary education of two Portuguese schools. The data attributes include student grades, demographic, social, and school-related features, and it was collected by using school reports and questionnaires. Two datasets are provided regarding the performance in two distinct subjects: Mathematics and Portuguese Language. 
+The dataset contains QSAR data from ChEMBL version seventeen, showcasing activity values measured in pseudo-pCI50 units for various compounds against the drug target TID: 103446. There are seventy-three rows and one thousand twenty-six features, including IDs and a class feature called MOLECULE_CHEMBL_ID and MEDIAN_PXC50. These features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program developed by Dassault Systèmes BIOVIA. 
 
-Important Note 
-The target attribute Final Year Grade has a strong correlation with First Period Grade and Second Period Grade. This occurs because Final Year Grade is the final year grade issued at the third period, while First Period Grade and Second Period Grade correspond to the first and second period grades. It is more difficult to predict Final Year Grade without First Period Grade and Second Period Grade, but such prediction is much more useful.
+Generating fingerprints typically does not require missing value imputation because all bits are generated. The features include MOLECULE_CHEMBL_ID, followed by numerous FCFP six one hundred twenty-four bit molecular fingerprint features.
 
-Attribute Information 
-Important Note Unlike the original dataset, this one converted all binary values to numerical boolean values. Moreover, it does not have attributes Mother's Job, Father's Job, Reason, Guardian, School, Student's School, which is a binary value indicating whether the student's school is Gabriel Pereira or Mousinho da Silveira.
+The drug target, also known as Cyclin-dependent Kinase-Like Three, is a single protein found in Homo sapiens. Its synonyms are not available. 
 
-Student's Sex is a binary value indicating whether the student is Female or Male. Age is the student's age. Address is a binary value indicating whether the student's home address type is Urban or Rural. Family Size is a binary value indicating whether the family size is Less or Equal to Three or Greater Than Three. Parent's Cohabitation Status is a binary value indicating whether the parents are Living Together or Apart.
+According to ChEMBL, there is no data available for this target. However, Expression Atlas provides information about this gene. Additionally, Go Component reveals that this gene is involved in nucleus and cytoplasm cellular components. 
 
-Mother's Education is the mother's education level. Father's Education is the father's education level. Travel Time is the home to school travel time. Study Time is the weekly study time. Failures is the number of past class failures. Extra Educational Support is a binary value indicating whether the student received extra educational support. Family Educational Support is a binary value indicating whether the family provided educational support.
+Go Function further elucidates its role in nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, cyclin-dependent protein serine/threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, and protein serine kinase activity.
 
-Extra Paid Classes is a binary value indicating whether the student took extra paid classes within the course subject. Extra Curricular Activities is a binary value indicating whether the student participated in extra curricular activities. Nursery is a binary value indicating whether the student attended nursery school. Higher Education is a binary value indicating whether the student wants to take higher education.
+Furthermore, Go Process indicates its involvement in protein phosphorylation, phosphorylation, negative regulation of axon extension, protein modification process, positive regulation of dendrite morphogenesis, regulation of cell cycle, and dendrite extension.
 
-Internet Access is a binary value indicating whether the student has internet access at home. Romantic Relationship is a binary value indicating whether the student is in a romantic relationship. Quality of Family Relationships is the quality of family relationships. Free Time is the amount of free time after school. Going Out is the frequency of going out with friends.
+Other databases, such as canSAR-Target, IntAct, PharmGKB, Pharos, Tchem, UniProt, InterPro, Pfam, and PDBe, also provide information about this gene.
 
-Workday Alcohol Consumption is the frequency of alcohol consumption during workdays. Weekend Alcohol Consumption is the frequency of alcohol consumption during weekends. Health Status is the current health status. Absences is the number of school absences. First Period Grade is the first period grade. Second Period Grade is the second period grade. Final Year Grade is the final year grade.
-
-Pass is a binary value indicating whether the student passed or failed.
-
-Task 
-With all attributes except Final Year Grade, please predict Pass.
-
-Keywords: student, grade, prediction, mathematics, portuguese, education, school, demographics, social, family, health, internet, relationships, alcohol, attendance.
+Keywords: QSAR, ChEMBL, drug target, Cyclin-dependent Kinase-Like Three, molecular fingerprints, SMILES strings, protein kinase activity, phosphorylation.

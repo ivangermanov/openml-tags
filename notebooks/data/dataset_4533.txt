@@ -1,41 +1,16 @@
-Name: Madeline Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+KEGG Metabolic Reaction Network
 
-Tags: Life Science, Statistics 
+Tags: Geography, Life Science
 
-Subsampling of the dataset Madeline with seed equal to three arguments number of rows maximum equal to two thousand arguments number of columns maximum equal to one hundred arguments number of classes maximum equal to ten arguments no stratify equal to true generated with the following source code:
+Data Set Information:
+KEGG metabolic pathways can be realized into a network. Two kinds of networks or graphs can be formed, including Reaction Networks and Relation Networks. In Reaction networks, substrate or product compounds are considered as nodes, and genes are treated as edges. On the other hand, in relation networks, substrate and product compounds are considered as edges, while enzymes and genes are placed as nodes. We took a large number of metabolic pathways from KEGG XML and modeled them into graphs as described above. With the help of the Cytoscape tool, a variety of network features were computed.
 
-def subsample(self, seed: int, number_of_rows_maximum: int = two thousand, number_of_columns_maximum: int = one hundred, number_of_classes_maximum: int = ten, stratified: bool = true) -> Dataset:
-random_number_generator = numpy random default random generator with seed 
-features_data = self features_data 
-target_data = self target_data 
+Attribute Information:
+The pathway text is accompanied by several attributes, including connected components, diameter, radius, centralization, shortest path, characteristic path length, average number of neighbors, density, heterogeneity, isolated nodes, number of self-loops, multi-edge node pairs, neighborhood connectivity, number of directed edges, stress, self-loops, partner of multi-edged node pairs, degree, topological coefficient, betweenness centrality, radiality, eccentricity, number of undirected edges, closeness centrality, average shortest path length, clustering coefficient, node count, and edge count.
 
-uniformly sample classes equals target data unique 
-if length of classes greater than number of classes maximum 
-value counts equals target data value counts 
-selected_classes equals random_number_generator choice with size number of classes maximum replacement false probability value counts divided by sum of value counts 
-select the indices where one of these classes is present equals target_data index with target_data is in selected_classes 
-features_data equals features_data iloc with select the indices 
-target_data equals target_data iloc with select the indices 
+Relevant Papers:
+Cytoscape is a software environment for integrated models of biomolecular interaction networks, which was used in this study.
 
-uniformly sample columns if required 
-if length of features_data columns greater than number of columns maximum 
-column indexes equals random_number_generator choice with size number of columns maximum replacement false 
-sorted column indexes equals sorted column indexes 
-selected_columns equals list of features_data columns with sorted column indexes 
-features_data equals features_data with selected columns 
-else 
-sorted column indexes equals list range length of features_data columns 
-if length of features_data greater than number of rows maximum 
-stratify accordingly target name equals target_data name 
-data equals pandas concatenate with features_data and target_data along columns axis 
-train test split equals sklearn model selection train test split with data test size number of rows maximum stratify data target name shuffle true random state seed 
-features_data equals train test split drop target name along columns axis 
-target_data equals train test split target name 
-we need to convert categorical columns to string for openml 
-categorical mask equals list of self categorical mask with i in sorted column indexes 
-columns equals list of features_data columns 
-return dataset with dataset equals self dataset features_data equals features_data target_data equals target_data categorical mask equals categorical mask columns equals columns
+The dataset includes various network features, including pathway text, connected components, diameter, radius, centralization, shortest path, characteristic path length, and many others.
 
-Features: ...skipped...
-
-Keywords: subsampling, dataset, life science, statistics, stratification, machine learning
+Keywords: KEGG, metabolic pathways, reaction networks, relation networks, Cytoscape, network features, biomolecular interaction networks.

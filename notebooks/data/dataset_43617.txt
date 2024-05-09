@@ -1,0 +1,39 @@
+The No-Show Problem in Healthcare Industry
+
+The no-show problem is one of the biggest challenges facing the healthcare industry, where approximately thirty percent of patients fail to attend their scheduled appointments. This issue has significant consequences, including wasted resources, delayed treatment, and compromised patient care.
+
+Medical Appointment Dataset
+
+This dataset contains sixty-one thousand data points collected from January 1st to April 30th, featuring nineteen attributes that can be leveraged to develop predictive models. 
+
+Data Dictionary:
+
+* Specialty: the type of specialist the patient is scheduled to see (e.g., dermatologist)
+* Age: the patient's age
+* Sex: the patient's gender (male or female)
+* Reservation Month Discrete: a discrete value representing the month of the scheduled appointment
+* Reservation Month Continuous: a continuous value representing the month of the scheduled appointment, calculated using the formula COS(2 * Reservation Month Discrete * Pi / 12)
+* Reservation Day of Week Discrete: a discrete value representing the day of the week for the scheduled appointment
+* Reservation Day of Week Continuous: a continuous value representing the day of the week for the scheduled appointment, calculated using the formula COS(2 * Reservation Day of Week Discrete * Pi / 7)
+* Reservation Hour Discrete: a discrete value representing the hour of the scheduled appointment
+* Reservation Hour Continuous: a continuous value representing the hour of the scheduled appointment, calculated using the formula COS(2 * Reservation Hour Discrete * Pi / 24)
+
+and similarly for the creation of the appointment:
+
+* Creation Month Discrete
+* Creation Month Continuous
+* Creation Day of Week Discrete
+* Creation Day of Week Continuous
+* Creation Hour Discrete
+* Creation Hour Continuous
+
+Additionally, the dataset includes:
+
+* Latency: the number of days between the scheduled appointment and its creation date
+* Channel: the method used to create the appointment (call center, personal, web)
+* Type: the type of appointment (medical or procedure)
+* Show: a binary indicator of whether the patient attended the appointment or not
+
+Can machine learning algorithms be employed to predict the likelihood of a patient attending their scheduled appointment based on these attributes?
+
+Keywords: no-show problem, healthcare industry, predictive modeling, machine learning, appointment scheduling.

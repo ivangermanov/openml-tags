@@ -1,27 +1,41 @@
-Breast Cancer Wisconsin Original Data Set 
+Breast Cancer Domain
 
-The Breast Cancer Wisconsin Original Data Set consists of features computed from a digitized image of a fine needle aspirate of a breast mass. These features describe characteristics of the cell nuclei present in the image. The target feature records the prognosis, which can be either malignant or benign.
+This Breast Cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. The data set includes two hundred one instances of one class and eighty five instances of another class. The instances are described by nine attributes, some of which are linear and some are nominal.
 
-The data set was adapted to ARFF format from the UCI version, and sample code IDs were removed. Note that there is also a related Breast Cancer Wisconsin Diagnosis Data Set with a different set of features, better known as wdbc.
+Title: Breast Cancer Data
 
-Relevant papers on this topic include Nuclear Feature Extraction for Breast Tumor Diagnosis, Breast Cancer Diagnosis and Prognosis via Linear Programming, and others.
+Sources:
+University Medical Center Ljubljana, Yugoslavia
 
-If you publish results using this database, please include an acknowledgment citing the source of the data set.
+Past Usage:
+The data set has been used in several studies, including Michalski et al. (1986), Clark and Niblett (1987), Tan and Eshelman (1988), and Cestnik et al. (1987).
 
-This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison. 
+Relevant Information:
+This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature.
 
-Features include clump thickness, cell size uniformity, cell shape uniformity, marginal adhesion, single epithelial cell size, bare nuclei, bland chromatin, normal nucleoli, and mitoses.
+Number of Instances: 
+The data set consists of two hundred eighty six instances.
 
-Scraped data includes additional information about the samples, which arrived periodically as clinical cases were reported. The database reflects this chronological grouping of the data. 
+Number of Attributes: 
+There are ten attributes in total, including the class attribute.
 
-Group information has been removed from the data itself, but it is available separately. The total number of instances in the data set is six hundred ninety-nine points.
+Attribute Information:
 
-Note that some instances were removed or revised due to missing or incorrect values.
+* Class: The class attribute has two values - no recurrence events and recurrence events.
+* Age: The age attribute ranges from ten to ninety-nine years old.
+* Menopause: The menopause attribute has three values - less than forty, greater than or equal to forty, and premenopausal.
+* Tumor Size: The tumor size attribute ranges from zero to fifty-nine.
+* Inv Nodes: The inv nodes attribute ranges from zero to thirty-nine.
+* Node Caps: The node caps attribute has two values - yes and no.
+* Deg Malig: The deg malig attribute has three values - one, two, and three.
+* Breast: The breast attribute has two values - left and right.
+* Breast Quad: The breast quad attribute has five values - left up, left low, right up, right low, and central.
+* Irradiat: The irradiat attribute has two values - yes and no.
 
-Has missing values? Yes.
+Missing Attribute Values:
+There are nine missing attribute values in total, denoted by "?".
 
-Additional variable information is available for each feature.
+Class Distribution:
+The class distribution is sixty-five percent no recurrence events and thirty-five percent recurrence events.
 
-Class labels are two for benign and four for malignant.
-
-Keywords: breast cancer, machine learning, medical, medicine, cancer diagnosis, prognosis, fine needle aspirate, cell nuclei, image analysis.
+Keywords: breast cancer, machine learning, medicine, oncology, Yugoslavia

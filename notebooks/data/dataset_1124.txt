@@ -1,13 +1,13 @@
-The Amazon Commerce Reviews dataset is tagged with Chemistry, Life Science, and Study. This dataset was derived from customer reviews on the Amazon Commerce website for authorship identification.
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, among others, for classification, feature selection, or clustering algorithms.
 
-Most previous studies conducted identification experiments for a limited number of authors, typically between two to ten. However, in an online context, reviews to be identified usually have many more potential authors. Moreover, classification algorithms are often not adapted to handle a large number of target classes. 
+The inspiration behind creating this repository arose from an increasing need within the machine learning and bioinformatics communities for a comprehensive collection of microarray classification problems that could be shared among researchers. This allows for the comparison of diverse classification or feature selection techniques on the same set of problems.
 
-To examine the robustness of classification algorithms, this dataset was created by identifying fifty of the most active users who frequently posted reviews. Each user is represented by a unique identifier and username. The dataset includes thirty reviews collected for each author.
+Each gene expression sample in the GEMLeR repository originates from the large, publicly available Expression Project for Oncology repository by the International Genomics Consortium. The primary objective of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is subsequently updated with clinical outcomes and released into the public domain without any intellectual property restrictions.
 
-The attributes included in this dataset encompass various aspects of an author's linguistic style. These include the usage of digits, punctuation, word length, sentence length, and the frequency of word usage.
+The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike. Although various other sources of gene expression data are available, the decision to utilize data from the Expression Project for Oncology repository was made due to the consistency of tissue sample processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-The dataset consists of numerous features that capture the nuances of an author's writing style.
+When publishing material based on GEMLeR datasets, please acknowledge the assistance received by utilizing this repository. This enables others to obtain the same datasets and replicate experiments.
 
-This comprehensive dataset provides a valuable resource for researchers and developers working on authorship identification tasks, particularly in the context of online reviews.
+Features include ID Reference and numerous gene expression samples.
 
-Keywords: Authorship Identification, Online Reviews, Classification Algorithms, Linguistic Style, Writing Analysis
+Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology, genomics.

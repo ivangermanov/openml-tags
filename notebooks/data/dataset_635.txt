@@ -1,7 +1,21 @@
-The Fri C One Hundred Dataset is classified under the categories of Chemistry, Life Science, Mythbusting, Study One, Study Twelve Seven, Study Fifteen, Study Twenty, Study Forty One, Study Seven, and Study Eighty Eight.
+The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
 
-This dataset is a binarized version of the original dataset. It converts the numeric target feature into a two-class nominal target feature by calculating the mean and categorizing all instances with a lower target value as Positive and all others as Negative.
+These datasets' names are coded according to their characteristics, specifically, their level of collinearity, sample number, and feature number. 
 
-Features included in this dataset are One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, and Binary Class.
+The Friedman function is a widely used method for generating data, which includes both linear and nonlinear relationships between inputs and outputs, and adds a normalized noise to the output. 
 
-Keywords: Dataset, Chemistry, Life Science, Mythbusting, Nominal Target Feature, Binary Class.
+The Friedman function itself consists of several components: ten times the sine of pi times x1 and x2, plus twenty times the square of x3 minus point five, plus ten times X4, plus five times X5, plus the normalized noise.
+
+In its original form, the Friedman function takes five features as inputs. To test the effect of unrelated features, additional features are added to the datasets, which are independent of the output. 
+
+However, to test an algorithm's robustness to collinearity, the datasets are generated with varying degrees of collinearity, meaning some features depend on others.
+
+The generated Friedman datasets' parameters vary according to the number of features, sample size, and level of collinearity. 
+
+The number of features ranges from five to one hundred, although only the first five features are actually related to the output, while the rest are randomly generated. 
+
+Sample sizes range from one hundred to one thousand. 
+
+There are five levels of collinearity, ranging from zero to four, where a higher level means more features depend on others.
+
+Keywords: Artificial Datasets, Data Generation, Friedman Function, Collinearity, Robustness Testing

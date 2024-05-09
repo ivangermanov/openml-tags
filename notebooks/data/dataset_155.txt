@@ -1,7 +1,27 @@
-The Puma8NH dataset family consists of synthetically generated datasets from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. This particular dataset family is comprised of eight datasets, although only two of them are included in this repository. All datasets in this family are variations of the same model, which is a realistic simulation of the dynamics of a Puma 560 robot arm. The primary task in these datasets is to predict the angular acceleration of one of the robot arm's links.
+Normalized Version of the Poker Hand Data Set
 
-The input features include the angular positions, velocities, and torques of the robot arm. This dataset family was specifically designed for the Delve environment, with each dataset spanning the corners of a cube representing three key dimensions: the number of inputs, the degree of nonlinearity (ranging from fairly linear to nonlinear), and the amount of noise in the output (ranging from moderate to high).
+The Poker Hand dataset is a collection of examples, where each record represents a hand consisting of five playing cards drawn from a standard deck of fifty-two cards. Each card is described using two attributes: suit and rank, resulting in a total of ten predictive attributes. Additionally, there is one Class attribute that categorizes the hand into a specific type of poker hand.
 
-This dataset has several characteristics, including a total of cases and nine continuous variables. The dataset is particularly useful for regression tasks.
+The order of cards is crucial, which explains why there are four hundred eighty possible Royal Flush hands, as opposed to four, one for each suit.
 
-Keywords: Puma 560 robot arm, angular acceleration, Delve environment, nonlinear, regression.
+This dataset does not contain any missing values.
+
+The attributes include:
+
+* Suit of Card Number One, represented on an ordinal scale from one to four, denoting Hearts, Spades, Diamonds, and Clubs.
+* Rank of Card Number One, represented on a numerical scale from one to thirteen, denoting Ace, Two, Three, ..., Queen, and King.
+* Similarly, the suits and ranks of the remaining four cards are also represented using ordinal and numerical scales, respectively.
+
+The Class attribute categorizes the hand into one of ten possible types of poker hands, including:
+* Nothing in Hand, indicating that the hand does not form a recognized poker hand.
+* One Pair, indicating that the hand contains one pair of equal ranks within the five cards.
+* Two Pairs, indicating that the hand contains two pairs of equal ranks within the five cards.
+* Three of a Kind, indicating that the hand contains three equal ranks within the five cards.
+* Straight, indicating that the hand contains five cards, sequentially ranked with no gaps.
+* Flush, indicating that the hand contains five cards with the same suit.
+* Full House, indicating that the hand contains a pair and a different rank three of a kind.
+* Four of a Kind, indicating that the hand contains four equal ranks within the five cards.
+* Straight Flush, indicating that the hand contains a straight and a flush.
+* Royal Flush, indicating that the hand contains an Ace, King, Queen, Jack, and Ten, all of the same suit.
+
+Keywords: Poker Hand, Machine Learning, Suit, Rank, Class Attribute, Royal Flush.

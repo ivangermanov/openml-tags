@@ -1,9 +1,23 @@
-This dataset, known as QSAR-TID-11104, falls under the categories of Images, Machine Learning, and MTLQSAR, and is part of the MetaQSAR project dating back to September 2015.
+Climate Model Simulation Crashes Dataset 
 
-The dataset contains QSAR data showing activity values of various compounds on the drug target TID: 11104. It consists of twenty-nine rows and one thousand twenty-six features, including IDs and a class feature. 
+Tags: Chemistry, Life Science, OpenML100 
 
-The features represent FCFP six hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating these fingerprints does not typically require missing value imputation, as all bits are generated.
+Source: University of California, Irvine 
 
-Some of the features include molecule ChEMBL ID and median PXc fifty. 
+This dataset contains records of simulation crashes encountered during climate model uncertainty quantification ensembles. The ensemble members were constructed using a Latin Hypercube method in Lawrence Livermore National Laboratory's Uncertainty Quantification Pipeline software system to sample the uncertainties of eighteen model parameters within the Parallel Ocean Program component of the Community Climate System Model. Three separate Latin Hypercube ensembles were conducted, each containing one hundred eighty ensemble members. Forty-six out of the five hundred forty simulations failed for numerical reasons at combinations of parameter values.
 
-Keywords: QSAR, machine learning, molecular fingerprints, MetaQSAR project, drug target, compound activity.
+The goal is to use classification to predict simulation outcomes, either fail or succeed, from input parameter values, and to use sensitivity analysis and feature selection to determine the causes of simulation crashes. 
+
+Attribute Information:
+
+The goal is to predict climate model simulation outcomes given scaled values of climate model input parameters. The dataset consists of twenty-one columns. The first column represents the Latin Hypercube study identification number, ranging from Study One to Study Three. The second column represents the simulation identification number, ranging from Run One to Run One Hundred Eighty. Columns three through twenty represent the values of eighteen climate model parameters scaled in the interval between zero and one. The twenty-first column represents the simulation outcome, where zero indicates failure and one indicates success.
+
+Relevant Papers:
+
+Failure Analysis of Parameter-Induced Simulation Crashes in Climate Models 
+
+Features:
+
+(not included due to unreadability)
+
+Keywords: climate model, simulation crashes, uncertainty quantification, Latin Hypercube, parameter values, sensitivity analysis, feature selection

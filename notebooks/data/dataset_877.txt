@@ -1,11 +1,11 @@
-Eye Movements Dataset
+Fri C2 Dataset
 
-This dataset is a straight-forward classification task where we provide pre-computed feature vectors for each word in the eye movement trajectory, along with class labels. The dataset consists of several assignments, each consisting of a question followed by ten sentences, which are titles of news articles. One of the sentences is the correct answer to the question, five sentences are irrelevant to the question, and four sentences are relevant to the question but do not answer it.
+Tags: Chemistry, Life Science, Mythbusting, Study 
 
-Each assignment is a time sequence of twenty-two dimensional feature vectors, where features are in columns and feature vectors are in rows. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column, which is zero for irrelevant, one for relevant, and two for the correct answer. Each example, or row, represents a single word, and we ask you to return the classification of each read sentence.
+This dataset is a binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative. 
 
-The twenty-two features provided are commonly used in psychological studies on eye movement, although not all of them may be relevant in this context. The objective of the challenge is to predict the classification labels, which are irrelevant, relevant, or correct answer.
+The dataset contains numerous features including various chemical properties. 
 
-The features include the number of fixations to the word, the number of fixations to the word when it is first encountered, whether a fixation occurred when the sentence containing the word was encountered the first or second time, the duration of previous fixation, and many others. These features capture various aspects of eye movement behavior, such as the frequency and duration of fixations, the order in which words are read, and the pupil diameter.
+Binary Class 
 
-Keywords: eye movements, classification, psychological studies, relevance prediction, feature extraction.
+Keywords: chemistry, life science, mythbusting, study, dataset, binarized, classification.

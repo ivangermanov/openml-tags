@@ -1,21 +1,17 @@
-The CNN Stock Prediction dataset covers features from various categories of technical indicators, futures contracts, prices of commodities, important indices of markets around the world, prices of major companies in the US market, and treasury bill rates. This dataset only contains information from the S&P.
+QSAR-TID-12755 Tags: Machine Learning, MTLQSAR, study_3, Transportation 
 
-Features include date, close, volume, momentum, rate of change, exponential moving average, treasury bill rates, oil prices, gold prices, and exchange rates. Additionally, there are features related to major company stocks, international indices, and commodity prices.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12755. The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset was scraped from various sources, and a thorough description of the features can be found in the paper "CNNpred: CNN-based stock market prediction using a diverse set of variables."
+The dataset has thirty rows and one thousand twenty-six features, including IDs and class feature. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-On the other hand, the HTRU2 dataset describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey. Pulsars are a rare type of neutron star that produce radio emission detectable on Earth. They are of considerable scientific interest as probes of space-time, the interstellar medium, and states of matter.
+The preferred name of the target is Dopamine D5 Receptor, also known as D(1B) Dopamine Receptor, D(5) Dopamine Receptor, and Dopamine D5 Receptor Drd5. It belongs to the species group Rattus Norvegicus and is classified as a single protein, specifically a membrane receptor, family A G protein-coupled receptor, small molecule receptor, and monoamine receptor.
 
-Each pulsar produces a unique emission pattern, which varies slightly with each rotation. Therefore, pulsar search involves looking for periodic radio signals with large radio telescopes. A potential signal detection, known as a candidate, is averaged over many rotations of the pulsar, as determined by the length of an observation.
+The description of the target highlights its relationship with accessions, particularly P25115. Additionally, it is part of a subset of dopamine receptors.
 
-In the absence of additional information, each candidate could potentially describe a real pulsar. However, in practice, almost all detections are caused by radio frequency interference and noise, making legitimate signals hard to find. Machine learning tools are now being used to automatically label pulsar candidates to facilitate rapid analysis.
+Go Component annotations include plasma membrane, cilium, membrane, axon, dendrite, brush border membrane, neuronal cell body, dendritic spine, ciliary membrane, non-motile cilium, postsynaptic density membrane, and glutamatergic synapse.
 
-Classification systems, in particular, are being widely adopted, which treat the candidate data sets as binary classification problems. Here, the legitimate pulsar examples are a minority positive class, and spurious examples are the majority negative class.
+Go Function annotations include dopamine neurotransmitter receptor activity, coupled via Gs, G-protein alpha-subunit binding, G protein-coupled receptor activity, dopamine neurotransmitter receptor activity, protein binding, and dopamine binding.
 
-The dataset contains sixteen thousand two hundred fifty-nine spurious examples caused by radio frequency interference and noise, and one thousand six hundred thirty-nine real pulsar examples. These examples have all been checked by human annotators. The data is presented in two formats: CSV and ARFF.
+Go Process annotations encompass various biological processes, including synaptic transmission, response to amphetamine, regulation of systemic arterial blood pressure, signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-activating G protein-coupled receptor signaling pathway, adenylate cyclase-activating dopamine receptor signaling pathway, dopamine receptor signaling pathway, behavior, mating behavior, associative learning, visual learning, transmission of nerve impulse, negative regulation of cell migration, negative regulation of NAD(P)H oxidase activity, regulation of locomotion, wound healing, response to cocaine, negative regulation of blood pressure, regulation of female receptivity, sensitization, long-term synaptic depression, regulation of biological quality, cellular response to catecholamine stimulus, and adenylate cyclase-activating adrenergic receptor signaling pathway.
 
-Candidates are stored in both files in separate rows. Each row lists the variables first, and the class label is the final entry. The class labels used are zero for negative and one for positive. Please note that the data contains no positional information or other astronomical details. It is simply feature data extracted from candidate files using the Pulsar Feature Lab tool.
-
-Each candidate is described by eight continuous variables and a single class variable. The first four variables are simple statistics obtained from the integrated pulse profile. The remaining four variables are similarly obtained from the DM-SNR curve.
-
-Keywords: stock market prediction, pulsar candidates, machine learning, binary classification, radio frequency interference, neutron stars, space-time, interstellar medium, states of matter.
+Keywords: QSAR, machine learning, molecular fingerprints, dopamine receptor, G protein-coupled receptor, signal transduction, synaptic transmission.

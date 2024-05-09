@@ -1,51 +1,7 @@
-This is a PROMISE Software Engineering Repository data set made publicly available in order to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
+The Hip Dataset is a binarized version of the original dataset. This conversion involves taking the numeric target feature and transforming it into a two-class nominal target feature. To achieve this, the mean of the target values is calculated, and then all instances with a lower target value are classified as Positive, denoted by 'P', while all others are classified as Negative, denoted by 'N'. 
 
-Title: Class-Level Data for KC1 
+This dataset contains several features, including Control One, Control Two, Control Three, Control Four, Treatment One, Treatment Two, and Treatment Three, which are used to classify instances into either Positive or Negative categories.
 
-This data set includes a true/false attribute, Defect Level, to indicate defectiveness. 
+Tags: Binarized, Chemistry, Life Science, Mythbusting, Study
 
-Sources:
-
-Creator: 
-Date: 
-Contact: 
-
-Donor: 
-
-Past Usage:
-This data was used for investigating the effect of module size on defect prediction using static measures. Several machine learning algorithms were used to predict the defective modules in five NASA products, namely, CM1, JM1, KC1, KC2, and PC1. A set of static measures were used as predictor variables. While doing so, it was observed that a large portion of the modules were small, as measured by lines of code. When experimenting on the data subsets created by partitioning according to module size, higher prediction performance was obtained for the subsets that included larger modules. Defect prediction was also performed using class-level data for KC1 rather than method-level data. In this case, the use of class-level data resulted in improved prediction performance compared to using method-level data. These findings suggest that quality assurance activities can be guided even better if defect predictions are made by using data that belongs to larger modules.
-
-Features:
-The descriptions of the features are taken from the MDP Glossary.
-
-Feature Used as the Response Variable:
-
-Defect Level - True if the class contains one or more defects, False otherwise.
-
-Features at Class Level Originally:
-
-Percent Public Data - The percentage of data that is public and protected data in a class. In general, lower values indicate greater encapsulation. It is a measure of encapsulation.
-
-Access to Public Data - The amount of times that a class's public and protected data is accessed. In general, lower values indicate greater encapsulation. It is a measure of encapsulation.
-
-Coupling Between Objects - The number of distinct non-inheritance-related classes on which a class depends. If a class that is heavily dependent on many classes outside of its hierarchy is introduced into a library, all the classes upon which it depends need to be introduced as well.
-
-Depth - The level for a class. For instance, if a parent has one child the depth for the child is two. Depth indicates at what level a class is located within its class hierarchy. In general, inheritance increases when depth increases.
-
-Lack of Cohesion of Methods - For each data field in a class, the percentage of the methods in the class using that data field; the percentages are averaged then subtracted from 100%. The Lack of Cohesion of Methods metric indicates low or high percentage of cohesion. If the percentage is low, the class is cohesive. If it is high, it may indicate that the class could be split into separate classes that will individually have greater cohesion.
-
-Number of Children - The number of classes derived from a specified class.
-
-Dependent on Child - Whether a class is dependent on a descendant.
-
-Fan In - This is a count of calls by higher modules.
-
-Response for Class - A count of methods implemented within a class plus the number of methods accessible to an object class due to inheritance. In general, lower values indicate greater polymorphism.
-
-Weighted Methods per Class - A count of methods implemented within a class (rather than all methods accessible within the class hierarchy). In general, lower values indicate greater polymorphism.
-
-Features Transformed to Class Level (Originally at Method Level):
-
-Transformation was achieved by obtaining min, max, sum, and average values over all the methods in a class.
-
-Keywords: software engineering, defect prediction, class-level data, method-level data, module size, static measures, machine learning algorithms, NASA products, quality assurance activities.
+Keywords: Dataset, Binarized, Numeric Target Feature, Nominal Target Feature, Classification, Positive, Negative, Features, Chemistry, Life Science

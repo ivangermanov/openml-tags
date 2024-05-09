@@ -1,47 +1,7 @@
-QSAR-TID-12569 Dataset
+The Twonorm dataset is an implementation of a twenty-dimensional, two-class classification example. Each class is drawn from a multivariate normal distribution with unit variance. One class has a mean where all values are equal to a certain value, whereas the other class has a mean where all values are equal to the negative of that certain value. 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID 12569. The dataset has multiple rows and numerous features, including molecule identifiers and class features.
+This dataset is particularly interesting because it has been reported that the theoretical expected misclassification rate for this dataset is very low, specifically around two point three percent. In practice, however, when using three hundred training examples with a specific decision tree learning algorithm called CART, the error rate was much higher, at twenty-two point one percent.
 
-The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The dataset consists of twenty features, although they have not been given descriptive names. 
 
-Dataset Information:
-
-* Dataset name: QSAR-TID-12569
-* Tags: Computer Systems, Machine Learning, MTLQSAR, Study Three
-* Source: MetaQSAR project - September 2015
-* Citation: Please cite this dataset when using it for your research purposes.
-
-Compound Information:
-
-* ID: CHEMBL4566
-* Type: Single Protein
-* Preferred Name: Endothelin Receptor ETA
-* Synonyms: Ednra, Endothelin-One Receptor, Endothelin Receptor Type A, ET-A, ET-AR
-* Organism: Rattus Norvegicus
-* Species Group: No
-* Protein Target Classification: One, Membrane Receptor, Family A G-Protein-Coupled Receptor, Peptide Receptor, Short Peptide Receptor
-
-Description and Relationship Accession:
-
-* Endothelin-One Receptor is a single protein.
-* It belongs to the protein family classified under membrane receptor, family A G-protein-coupled receptor, peptide receptor, and short peptide receptor.
-
-Gene Ontology Annotations:
-
-* Cellular Component:
-	+ Plasma membrane
-	+ Membrane
-	+ T-tubule
-	+ Nuclear membrane
-	+ Cell periphery
-* Molecular Function:
-	+ G protein-coupled receptor activity
-	+ Endothelin receptor activity
-* Biological Process:
-	+ Mitotic cell cycle
-	+ Angiogenesis
-	+ Branching involved in blood vessel morphogenesis
-	+ Response to hypoxia
-	+ In utero embryonic development
-
-Keywords: QSAR, Machine Learning, MTLQSAR, Endothelin Receptor, ETA, G-Protein-Coupled Receptor, Peptide Receptor, Short Peptide Receptor, Membrane Receptor, Gene Ontology Annotations.
+Keywords: Twonorm, classification, multivariate normal distribution, unit variance, decision tree learning, CART.

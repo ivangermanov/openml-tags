@@ -1,0 +1,13 @@
+Name: Wine Seed One 
+
+Tags: Computer Systems, Statistics 
+
+Subsampling of the dataset Wine with a specified seed value, generating a new dataset with a maximum number of rows, columns, and classes. The generated dataset has been created using a specific source code.
+
+The function used for subsampling takes into account several parameters, including the seed value, the maximum number of rows, columns, and classes, as well as whether to use stratified sampling or not. The source code implements a uniform sampling approach to select the desired number of classes, columns, and rows from the original dataset.
+
+In the case where the number of unique classes exceeds the specified maximum, the function selects the desired number of classes based on their frequency distribution. Similarly, when the number of columns exceeds the maximum allowed, the function randomly selects the desired number of columns. Finally, if the number of rows exceeds the maximum allowed, the function uses stratified sampling to ensure an even distribution of classes in the resulting dataset.
+
+The resulting dataset contains a subset of the original features, which include acidity levels, sugar content, sulfite levels, density, pH levels, sulfates, and alcohol content.
+
+Keywords: subsampling, dataset generation, stratified sampling, uniform sampling, feature selection.

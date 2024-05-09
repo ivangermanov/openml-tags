@@ -1,0 +1,13 @@
+The Bitcoin Heist Ransomware Dataset is a comprehensive collection of data extracted from the entire Bitcoin transaction graph from January 2009 to December 2018. Using a twenty-four hour time interval, daily transactions on the network were extracted and formed into the Bitcoin graph. To filter out irrelevant data, network edges that transferred less than a certain threshold were removed, as ransom amounts are rarely below this threshold.
+
+Ransomware addresses were obtained from three widely adopted studies, which provided a reliable source of labeled data. These addresses were then used to extract features from the Bitcoin graph, which included income, neighbors, weight, length, count, and loop. Each of these features was designed to quantify specific transaction patterns, providing insights into the behavior of ransomware addresses.
+
+For instance, the loop feature counted the number of transactions that split their coins, moved them through different paths, and finally merged them in a single address. This type of behavior is often indicative of money laundering or cashing out ill-gotten gains. The weight feature, on the other hand, quantified the merge behavior, where coins in multiple addresses were accumulated in a final address through a series of merging transactions.
+
+Similarly, the count feature represented the number of transactions involved in this merging pattern, while the length feature measured the number of mixing rounds used to obscure the origin of coins. By analyzing these features, researchers can identify patterns and anomalies that may indicate ransomware activity.
+
+One notable observation was that ransomware addresses exhibited more pronounced right-skewness in their distribution of feature values compared to non-ransomware addresses. This suggests that ransomware addresses tend to engage in more extreme behavior, such as larger transactions or more complex money laundering schemes.
+
+In total, twenty-four ransomware families were identified, with some addresses appearing in multiple twenty-four hour time windows. One address, associated with the CryptoLocker ransomware family, appeared an astonishing four hundred and twenty times.
+
+Keywords: Bitcoin Heist Ransomware, Bitcoin Transaction Graph, Ransomware Detection, Transaction Patterns, Money Laundering, Cash Out, Mixing Rounds.

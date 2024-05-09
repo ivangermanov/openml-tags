@@ -1,21 +1,25 @@
-Eucalyptus Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+Spoken Arabic Digit Dataset 
 
-Tags: Computer Systems, Machine Learning
+Tags: Abstract 
 
-Subsampling of the dataset Eucalyptus with Seed equals Three arguments N Rows Max equals Two Thousand arguments N Cols Max equals One Hundred arguments N Classes Max equals Ten arguments No Stratify equals False.
+This dataset contains time series of mel frequency cepstrum coefficients corresponding to spoken Arabic digits. It includes data from eighty-eight native Arabic speakers, forty-four males and forty-four females, who were asked to repeat each digit ten times. 
 
-Generated with the following source code:
+Source 
+The data was collected by the Laboratory of Automatic and Signals, University of Badji-Mokhtar Annaba, Algeria.
 
-The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not, and returns a dataset.
+Data Set Information 
+The dataset consists of eight thousand eight hundred time series of thirteen frequency cepstral coefficients had taken from eighty-eight Arabic native speakers to represent ten spoken Arabic digits.
 
-The uniform sampling of classes involves selecting unique classes from the target variable, and if the number of unique classes exceeds the maximum allowed, then the function selects a specified number of classes based on their frequency of occurrence.
+Attribute Information 
+Each line on the database represents thirteen mel frequency cepstral coefficients in the increasing order separated by spaces. This corresponds to one analysis frame. The thirteen mel frequency cepstral coefficients were computed with the following conditions: sampling rate of eleven thousand twenty-five hertz, sixteen bits window applied, hamming filter pre-emphasized.
 
-The uniform sampling of columns involves selecting a specified number of columns randomly, and if the number of columns exceeds the maximum allowed, then the function selects a specified number of columns randomly.
+Relevant Papers 
+Please refer to the relevant papers published in conferences.
 
-If the number of rows exceeds the maximum allowed, then the function applies stratified sampling to select a specified number of rows, ensuring that the class distribution is maintained.
+Citation Request 
+Please refer to the machine learning repository's citation policy.
 
-Finally, the function converts categorical columns to strings and returns the resulting dataset.
+Features 
+Mel frequency cepstral coefficients.
 
-Features: Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, Plantation Management Company Number, Diameter at Breast Height, Height, Survival, Vigor, Inspection Result, Stem Form, Crown Form, Branch Form, Utility.
-
-Keywords: Subsampling, Eucalyptus, Seed, Stratify, Classes, Columns, Rows, Sampling, Machine Learning.
+Keywords: Spoken Arabic Digits, Mel Frequency Cepstrum Coefficients, Native Arabic Speakers, Time Series, Signal Processing, Speech Recognition.

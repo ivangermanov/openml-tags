@@ -1,15 +1,16 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target Tyrosine-Protein Kinase SYK.
+Hill Valley Dataset 
 
-The dataset has one thousand and four rows and one thousand and twenty-six features, including IDs and class feature MOLECULE CHEMBL ID and MEDIAN PX50.
+Tags: Artificial, Chemistry, Life Science, OpenML100, Study 
 
-Features represent FCFP six one thousand and twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA.
+Source: UCI 
 
-Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+This dataset represents one hundred points on a two dimensional graph. When plotted in order, from one through one hundred, as the y-coordinate, the points will create either a Hill, which is a bump in the terrain, or a Valley, which is a dip in the terrain. The original source provides some examples of these graphs. 
 
-The dataset contains information about Tyrosine-Protein Kinase SYK, also known as spleen tyrosine kinase, which is a single protein enzyme kinase protein kinase group tyrosine protein kinase Syk family.
+In its original form, this dataset consists of six files. This particular version is the non-noisy edition, with the training and test sets merged together.
 
-It plays a crucial role in various biological processes, including angiogenesis, adaptive immune response, and positive regulation of cytokine production.
+Attribute Information:
+The first one hundred attributes are labeled as X followed by a number, and consist of floating-point values, which represent the y-values of the graphs. The one hundred and first attribute is labeled as Class, and consists of binary values, zero or one, which represent either Valley or Hill respectively.
 
-In addition, it is involved in stimulatory C-type lectin receptor signaling pathways, positive regulation of receptor internalization, and regulation of superoxide anion generation.
+Features: Various numerical values representing the y-coordinates of the graphs.
 
-Keywords: QSAR, machine learning, mathematics, MTLQSAR, Tyrosine-Protein Kinase SYK, enzyme, kinase, protein kinase, angiogenesis, adaptive immune response.
+Keywords: Hill Valley, Graph, Terrain, Bump, Dip, Non-Noisy, Training Set, Test Set, Binary Values, Floating Point Values.

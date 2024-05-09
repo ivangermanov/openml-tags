@@ -1,24 +1,9 @@
-Click Prediction Small Dataset
+The GINA dataset is a digital recognition database focused on handwritten digit recognition tasks. This dataset consists of a non-sparse data type with numerous features. There are a total number of examples and a corresponding checksum.
 
-Tags: Chemistry, Derived, Life Science
+The primary objective of this dataset is to recognize handwritten digits, which is a crucial aspect of life science and chemistry studies. It is essential for researchers and scientists to analyze and understand the characteristics of handwritten digits to develop efficient recognition systems.
 
-This dataset is derived from the KDD Cup Challenge. It is a subset of the original data, containing only one percent of the total instances, with the majority class (click equals zero) downsampled to achieve a reasonable balance of five to one.
+The dataset comprises numerous features, including pixel values that represent the visual appearance of handwritten digits. These features play a vital role in recognizing and classifying digits accurately.
 
-The dataset focuses on online advertising, specifically predicting whether a user will click on a particular advertisement displayed alongside search results. Each search session includes information on the user ID, query issued by the user, ads displayed, and the target feature indicating whether the user clicked on any of the ads in the session.
+This dataset was modified by TunedIT and converted into an ARFF format, making it easily accessible for research purposes. It is available for download from the Agnostic Learning versus Prior Knowledge Challenge website.
 
-An ad is characterized by its title, description, and display URL. Additionally, each ad and user have supplementary properties stored in separate files, accessible via IDs in the instances.
-
-The dataset comprises various features, including:
-
-* Click, a binary variable signifying whether a user clicked on at least one ad
-* Impression, representing the number of search sessions where an Ad ID was impressed by a User ID issuing a Query
-* URL Hash, a hashed version of the URL for anonymity
-* Ad ID and Advertiser ID, with some advertisers consistently optimizing their ads to make them more appealing
-* Depth, the number of ads displayed to a user in a session
-* Position, the order of an ad in the displayed list
-* Query ID, a key referencing the data file containing query tokens
-* Keyword ID, a key linking to purchased keyword tokens
-* Title ID and Description ID, keys referencing title and description tokens respectively
-* User ID, also serving as a key for user profiles, with a special value of zero denoting unidentified users
-
-Keywords: online advertising, click prediction, search results, user behavior, advertising optimization.
+Keywords: Handwritten Digit Recognition, Life Science, Chemistry, Digital Recognition Database, Non-Sparse Data Type, Pixel Values

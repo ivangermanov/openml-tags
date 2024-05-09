@@ -1,32 +1,34 @@
-Glass Identification Database
+Dermatology Database
 
-This dataset contains information about different types of glass, including their chemical composition and physical properties. The study of classification of types of glass was motivated by criminological investigation, where glass left at the scene of the crime can be used as evidence if it is correctly identified.
+Source Information:
+Original Owners: 
+Donor: 
+Date: January 1998
 
-The dataset consists of two hundred fourteen instances, each described by ten attributes, including an identification number, refractive index, and concentrations of various elements such as sodium, magnesium, aluminum, silicon, potassium, calcium, barium, and iron. The class attribute indicates the type of glass, which can be one of seven categories: building windows float processed, building windows non-float processed, vehicle windows float processed, vehicle windows non-float processed, containers, tableware, or headlamps.
+Past Usage:
+The aim is to determine the type of Erythemato-Squamous Disease.
 
-A comparison test was conducted to evaluate the performance of different classification algorithms, including a rule-based system called BEAGLE, the nearest-neighbor algorithm, and discriminant analysis. The results showed that the nearest-neighbor algorithm performed well compared to the rule-based system.
+Relevant Information:
+This database contains thirty-four attributes, thirty-three of which are linear valued and one of them is nominal. The differential diagnosis of erythemato-squamous diseases is a real problem in dermatology. They all share the clinical features of erythema and scaling, with very little differences. The diseases in this group are Psoriasis, Seborrheic Dermatitis, Lichen Planus, Pityriasis Rosea, Chronic Dermatitis, and Pityriasis Rubra Pilaris. Usually, a biopsy is necessary for the diagnosis, but unfortunately, these diseases share many histopathological features as well. Another difficulty for the differential diagnosis is that a disease may show the features of another disease at the beginning stage and may have the characteristic features at the following stages. 
 
-The attributes included in the dataset are:
+Patients were first evaluated clinically with twelve features. Afterwards, skin samples were taken for the evaluation of twenty-two histopathological features. The values of the histopathological features are determined by an analysis of the samples under a microscope. 
 
-* Identification number
-* Refractive index
-* Concentration of sodium
-* Concentration of magnesium
-* Concentration of aluminum
-* Concentration of silicon
-* Concentration of potassium
-* Concentration of calcium
-* Concentration of barium
-* Concentration of iron
-* Type of glass
+In the dataset constructed for this domain, the Family History feature has the value one if any of these diseases has been observed in the family, and zero otherwise. The Age feature simply represents the age of the patient. Every other feature, both clinical and histopathological, was given a degree in the range of zero to three. Here, zero indicates that the feature was not present, three indicates the largest amount possible, and one, two indicate the relative intermediate values.
 
-Summary statistics for the attributes include minimum, maximum, mean, standard deviation, and correlation with the class attribute.
+Number of Instances: 
+Number of Attributes: 
 
-There are no missing attribute values in the dataset.
+Attribute Information:
+Clinical Attributes take values zero, one, two, three, unless otherwise indicated.
+Erythema, Scaling, Definite Borders, Itching, Koebner Phenomenon, Polygonal Papules, Follicular Papules, Oral Mucosal Involvement, Knee and Elbow Involvement, Scalp Involvement, Family History, and Age.
+Histopathological Attributes take values zero, one, two, three.
+Melanin Incontinence, Eosinophils in the Infiltrate, PNL Infiltrate, Fibrosis of the Papillary Dermis, Exocytosis, Acanthosis, Hyperkeratosis, Parakeratosis, Clubbing of the Rete Ridges, Elongation of the Rete Ridges, Thinning of the Suprapapillary Epidermis, Spongiform Pustule, Munro Microabcess, Focal Hypergranulosis, Disappearance of the Granular Layer, Vacuolisation and Damage of Basal Layer, Spongiosis, Saw-Tooth Appearance of Retes, Follicular Horn Plug, Perifollicular Parakeratosis, Inflammatory Monoluclear Infiltrate, Band-Like Infiltrate.
 
-Class distribution:
+Missing Attribute Values:
+Eight in Age attribute, distinguished with question mark.
 
-* One hundred sixty-three instances are window glass, including eighty-seven float processed and seventy-six non-float processed.
-* Fifty-one instances are non-window glass, including thirteen containers, nine tableware, and twenty-nine headlamps.
+Class Distribution:
+Database: Dermatology
+Class Code: Class: Number of Instances: Psoriasis, Seborrheic Dermatitis, Lichen Planus, Pityriasis Rosea, Chronic Dermatitis, Pityriasis Rubra Pilaris.
 
-Keywords: glass identification, criminological investigation, chemical composition, physical properties, classification algorithms, BEAGLE, nearest-neighbor algorithm, discriminant analysis.
+Keywords: dermatology, erythemato-squamous diseases, psoriasis, seborrheic dermatitis, lichen planus, pityriasis rosea, chronic dermatitis, pityriasis rubra pilaris, clinical attributes, histopathological attributes.

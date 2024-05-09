@@ -1,29 +1,21 @@
-This is one of forty-one drug design datasets. The datasets with eleven hundred forty-three features are formed using Adriana Code software. The molecules and outputs are taken from the original studies.
+Wine Quality
 
-The carbolenes dataset is taken from the study published in the Journal of Medicinal Chemistry in nineteen ninety-six.
+Tags: Chemistry, Machine Learning, Study
 
-The mtp two dataset is taken from the study published in the Journal of Chemical Information and Computer Science in two thousand three.
+The Wine Quality dataset was created by Paulo Cortez and others in 2009. It consists of two datasets, one for red wine and one for white wine, each containing physicochemical properties and sensory data.
 
-The chang, cristalli, depreux, doherty, garrat two, garrat, heyl, krystek, lewis, penning, rosowsky, siddiqi, stevenson, strupcz, svensson, thompson, tsutumi, uejling, yokoyama one, and yokoyama two datasets are taken from the study published in the Journal of Medicinal Chemistry in nineteen ninety-six.
+The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert grades the wine quality between zero, very bad, and ten, very excellent.
 
-The mtp dataset is taken from the study published in the Journal of Chemical Information and Model in two thousand five.
+Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Various metrics were computed, including mean absolute deviation and a confusion matrix for a fixed error tolerance.
 
-The benzo thirty-two dataset is taken from the study published in the European Journal of Medicinal Chemistry in nineteen ninety-six.
+A sensitivity analysis procedure was also performed to measure the relative importance of the input variables. The two datasets are related to red and white variants of the Portuguese Vinho Verde wine.
 
-The phenetyle one dataset is taken from the book QSAR Hansch Analysis and Related Approaches published in nineteen ninety-three.
+Due to privacy and logistic issues, only physicochemical and sensory variables are available. There is no data about grape types, wine brand, or wine selling price. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones.
 
-The pah dataset is taken from the study published in the journal Chemometrics and Intelligent Laboratory Systems in nineteen ninety-five.
+Outlier detection algorithms could be used to detect the few excellent or poor wines. It would also be interesting to test feature selection methods, as it is unclear whether all input variables are relevant.
 
-The pdgfr dataset is taken from the study published in the Journal of Chemical Information and Computational Science in two thousand four.
+The datasets contain eleven input variables and one output variable. The input variables are based on physicochemical tests, including fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol.
 
-The phen dataset is taken from the study published in the Journal of Medicinal Chemistry in nineteen seventy-two.
+The output variable is based on sensory data and represents the quality of the wine, scored between zero and ten. There are no missing attribute values in the datasets.
 
-The topo two one and yprop four one datasets are taken from the study published in the Journal of Chemical Information and Computational Science in two thousand three.
-
-The qsar br one, qsar br two, qsartox, qsbr rw one, qsbr y two, qsbralks, qsfrdhla, qsfsr one, qsfsr two, and qspr cmpx datasets are taken from various studies published in different journals and books.
-
-The selwood dataset is taken from the study published in the Journal of Medicinal Chemistry in nineteen ninety.
-
-Features include molecular descriptors and properties.
-
-Keywords: drug design, machine learning, mathematics, molecular descriptors, quantitative structure-activity relationships.
+Keywords: wine quality, physicochemical properties, sensory data, machine learning, regression, outlier detection, feature selection.

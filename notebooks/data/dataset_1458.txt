@@ -1,31 +1,15 @@
-MetaQSAR Project Dataset: QSAR-TID-103101 
+ARCENE 
 
-Tags: Education, Machine Learning, MTLQSAR, Study Three 
+Tags: Chemistry, Life Science 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred three thousand one hundred one, and it has ten rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc Fifty. 
+This dataset is a two-class classification problem with continuous input variables, where the task is to distinguish cancer versus normal patterns from mass-spectrometric data.
 
-The features represent FCFP six one thousand twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset was obtained by merging three mass-spectrometry datasets to obtain enough training and test data for a benchmark. The original features indicate the abundance of proteins in human sera having a given mass value. Based on these features, one must separate cancer patients from healthy patients.
 
-Features include Molecule ChEMBL ID.
+A number of distractor features, called probes, having no predictive power were added. The order of the features and patterns were randomized. This dataset is one of five datasets used in the feature selection challenge.
 
-Scraped Data:
+Features:
 
-ID: ChEMBL ten million seven hundred fifty-one six hundred sixty-two
+... 
 
-Type: Single Protein
-
-Preferred Name: Uracil Nucleotide/Cysteinyl Leukotriene Receptor
-
-Synonyms: GPR seventeen, G-Protein Coupled Receptor seventeen, P two Y-Like Receptor R twelve, UDP/CysLT Receptor.
-
-Organism: Homo sapiens
-
-Species Group: No
-
-Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Small Molecule Receptor, Lipid-Like Ligand Receptor, Leukotriene Receptor.
-
-Description Relationship Accession: Uracil Nucleotide/Cysteinyl Leukotriene Receptor Single Protein.
-
-Expression Atlas, Component, Go Function, and Go Process information are also available for this receptor.
-
-Keywords: QSAR, machine learning, molecular fingerprints, drug target, uracil nucleotide, cysteinyl leukotriene receptor, G protein-coupled receptor, membrane receptor.
+Keywords: Mass-Spectrometric Data, Cancer Patients, Proteins, Human Sera, Feature Selection Challenge

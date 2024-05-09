@@ -1,20 +1,17 @@
-AI Simulated Games of Machi Koro 
-Tags: Context 
+QSAR-TID-64 Dataset 
 
-This data is the result of utilizing neural networks and reinforcement learning to simulate the popular board game Machi Koro. 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: sixty-four, and it has three hundred fifty-eight rows and one thousand twenty-six features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PX C fifty.
 
-Each row represents a single turn in a game, corresponding to the state at the beginning of the turn, and there are multiple games total. There are four players, so all columns except for Game ID and Turn ID reference a specific player. Each player takes turns performing actions, which can involve gaining coins, losing coins to other players, building properties, stealing coins from other players, and possibly switching properties with another player. The results of each turn largely depend on a single or double dice roll. The ultimate goal of the game is to build four specific properties, which are represented by the variables Station, Shopping Mall, Amusement Park, and Radio Tower, where each variable corresponds to the player who owns it.
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Variables: 
-Game ID - Unique identifier for the game being played 
-Turn ID - Turn number of the game, with an additional turn added at the end of each game to display the final state. 
-The following attributes have a prefix Player, where the Player refers to the ID of the player, which also corresponds to the turn order. 
-Win - Indicates whether the player has won the game 
-Coins - The number of coins the player possesses 
-The remaining attributes correspond to the number of properties a player has constructed by this point in the game.
+Features: MOLECULE CHEMBL ID, FCFP Six One Thousand Twenty-Four Bit Molecular Fingerprints 
 
-Inspiration behind creating this dataset was to explore whether it is possible to teach an Artificial Intelligence the game, given its relatively simple rules. It is a fairly straightforward game, and the intention was to record the game history so that insights could be extracted, such as strategy and overall usefulness of certain properties or cards.
+This dataset is part of the MetaQSAR project.
 
-Features include Game ID, Turn ID, and various properties owned by each player, including Amusement Park, Apple Orchard, Bakery, Business Center, Cafe, Cheese Factory, Convenience Store, Family Restaurant, Forest, Fruit and Vegetable Market, Furniture Factory, Mine, Radio Tower, Ranch, Shopping Mall, Stadium, Station, TV Station, Wheat Field, Coins, and Win status.
+This dataset contains information about the Vitamin D receptor, also known as Nuclear receptor subfamily one group I member one, VDR, and Vitamin D three receptor. It is a single protein and its preferred name is Vitamin D receptor. It belongs to the species group of Homo sapiens and its classification is one, Transcription factor/Nuclear receptor/Nuclear hormone receptor subfamily one/Nuclear hormone receptor subfamily one group I/Nuclear hormone receptor subfamily one group I member one.
 
-Keywords: Machi Koro, Board Game, Artificial Intelligence, Reinforcement Learning, Neural Networks, Simulation, Strategy, Properties.
+The Vitamin D receptor is targeted by various small molecules, such as Calcifediol, Ergocalciferol, Paricalcitol, and Calcitriol, which act as Vitamin D receptor agonists. These small molecules have different mechanisms of action and have been approved for different phases.
+
+The Vitamin D receptor is involved in various biological processes, such as cell morphogenesis, skeletal system development, regulation of DNA-templated transcription, calcium ion transport, intracellular calcium ion homeostasis, lactation, negative regulation of cell population proliferation, animal organ morphogenesis, positive regulation of gene expression, negative regulation of keratinocyte proliferation, positive regulation of bone mineralization, phosphate ion transmembrane transport, bile acid signaling pathway, mRNA transcription by RNA polymerase two, positive regulation of keratinocyte differentiation, negative regulation of DNA-templated transcription, positive regulation of transcription by RNA polymerase two, decidualization, intestinal absorption, apoptotic process involved in mammary gland involution, and mammary gland branching involved in pregnancy.
+
+Keywords: QSAR, Vitamin D receptor, Nuclear receptor, Transcription factor, Hormone receptor, Calcium ion transport, Gene expression, Cell morphogenesis, Skeletal system development.

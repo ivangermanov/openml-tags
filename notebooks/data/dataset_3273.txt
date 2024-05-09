@@ -1,18 +1,54 @@
-Tags: Cesarean Section
+QSAR-TID-102401 Dataset: Machine Learning, Mathematics, MTLQSAR Study 
 
-We have chosen five parameters for our analysis, namely, Age, Number of Deliveries, Time of Delivery, Blood Pressure, and Heart Status. The Time of Delivery is classified into three categories: Premature, Timely, and Latecomer. Similarly, the Blood Pressure is categorized into three states: Low, Normal, and High. The Heart Status is classified as either Apt or Inept.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID 102401. It consists of seventy-eight rows and one thousand twenty-six features, including IDs and class features: Molecule ChEMBL ID and Median PXc50. 
 
-@attribute 'Age'
-@attribute 'Number of Deliveries'
-@attribute 'Time of Delivery' -> {Timely, Premature, Latecomer}
-@attribute 'Blood Pressure' -> {Low, Normal, High}
-@attribute 'Heart Status' -> {Apt, Inept}
-@attribute Cesarean -> {No, Yes}
+The features represent Fixed Count Fingerprint 1024 bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
 
-Dataset Information
-Has Missing Values? No
+Features include Molecule ChEMBL ID and other molecular fingerprint features.
 
-Additional Variable Information
-We have selected five parameters, namely, Age, Number of Deliveries, Time of Delivery, Blood Pressure, and Heart Status. The Time of Delivery is categorized into three classes: Premature, Timely, and Latecomer. Likewise, the Blood Pressure is considered in three states: Low, Normal, and High. The Heart Status is classified as either Apt or Inept.
+Scraped Data:
 
-Keywords: Cesarean Section, Pregnancy, Delivery Time, Blood Pressure, Heart Status
+Type: Single Protein
+Preferred Name: Renin
+Synonyms: Angiotensinogenase
+Organism: Callithrix jacchus
+Species Group: No
+Protein Target Classification: Enzyme Protease Aspartic protease Aspartic protease AA clan Aspartic protease A1A subfamily
+
+Description Relationship Accession: Renin Single Protein
+
+Component:
+
+* Extracellular region
+* Extracellular space
+* Membrane
+* Apical part of cell
+
+Function:
+
+* Endopeptidase activity
+* Aspartic-type endopeptidase activity
+* Signaling receptor binding
+* Peptidase activity
+* Hydrolase activity
+
+Process:
+
+* Kidney development
+* Mesonephros development
+* Angiotensin maturation
+* Regulation of blood volume by renin-angiotensin
+* Regulation of aldosterone production
+* Proteolysis
+* Regulation of blood pressure
+* Male gonad development
+* Hormone-mediated signaling pathway
+* Response to organic substance
+* Regulation of MAPK cascade
+* Cell maturation
+
+canSAR-Target:
+UniProt:
+InterPro:
+
+Keywords: QSAR, machine learning, molecular fingerprints, protein target classification, enzyme protease, angiotensinogenase, kidney development, hormone-mediated signaling pathway.

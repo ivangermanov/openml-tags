@@ -1,13 +1,19 @@
-The Libras dataset is categorized under Agriculture and Partial Label Ranking, with a focus on Transportation. It consists of ninety features, including coordinates of movement, and one feature for the class, which is an integer.
+The QSAR-TID-12752 dataset contains QSAR data showing activity values of several compounds on drug target TID: 12752. This dataset has forty-nine rows and one thousand twenty-six features, including IDs and class feature.
 
-The dataset contains fifteen classes, each referencing a specific hand movement type in Libras, a Brazilian sign language. Each class has twenty-four instances, resulting in a total of three hundred sixty instances.
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints do not usually require missing value imputation as all bits are generated.
 
-In the video preprocessing stage, time normalization was carried out by selecting forty-five frames from each video, following a uniform distribution. For each frame, the centroid pixels of the segmented objects, namely the hand, were found, composing the discrete version of the curve F with forty-five points. All curves were then normalized in the unitary space.
+This dataset was obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-To prepare the movements for analysis by algorithms, a mapping operation was performed, where each curve F was mapped into a representation with ninety features, representing the coordinates of movement.
+The dataset is part of the MetaQSAR project, published in September two thousand fifteen.
 
-Several sub-datasets are offered to support comparisons of results.
+This dataset contains QSAR data showing activity values of several compounds on drug target Vitamin D receptor, also known as Nuclear receptor subfamily one group I member one.
 
-This dataset does not contain missing values.
+The Vitamin D receptor is a single protein preferred name, also known as one point two five dihydroxyvitamin D three receptor, Nr one i one, and Vdr.
 
-Keywords: Libras, Partial Label Ranking, Agriculture, Transportation, Hand Movement Recognition, Brazilian Sign Language
+This receptor is an organism of Rattus norvegicus species group, classified under protein target classification as one point Transcription factor slash Nuclear receptor slash Nuclear hormone receptor subfamily one slash Nuclear hormone receptor subfamily one group I slash Nuclear hormone receptor subfamily one group I member one.
+
+The description of this receptor is a nuclear receptor for vitamin D, which plays a crucial role in maintaining calcium homeostasis and regulating bone mineralization.
+
+The dataset also includes information about the Gene Ontology, including cellular components, molecular functions, biological processes, and protein-protein interactions.
+
+Keywords: QSAR, Vitamin D receptor, molecular fingerprints, MetaQSAR project, nuclear receptor, calcium homeostasis, bone mineralization.

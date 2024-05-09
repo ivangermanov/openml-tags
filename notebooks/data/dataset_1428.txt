@@ -1,29 +1,13 @@
-QSAR-TID-100590 Dataset 
+**Adult Dataset**
 
-Tags: MTLQSAR, Study Three, Transportation 
+This dataset is tagged under Chemistry and Life Science.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred ninety. It has eleven rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median Pseudo pCI Fifty. 
+The original Adult data set has fourteen features, among which six are continuous and eight are categorical. In this dataset, continuous features are discretized into quantiles, and each quantile is represented by a binary feature. Additionally, a categorical feature with multiple categories is converted to multiple binary features.
 
-The features represent Extended Connectivity Circular Finger Print six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Details on how each feature is converted can be found in the beginning of each file from this page.
 
-Features include Molecule ChEMBL ID.
+Features include age, work class, education level, marital status, occupation, relationship, race, sex, capital gain, capital loss, hours per week, and native country, among others.
 
-Scraped Data:
+**Please cite:** http://archive.ics.uci.edu/ml/datasets/Adult
 
-ID: ChEMBL Three Four Eight Eight
-Type: Single Protein
-Preferred Name: Falcipain Two B
-Synonyms: Falcipain Two B FP Two B
-Organism: Plasmodium Falciparum
-Species Group: No
-Protein Target Classification: One Enzyme Protease Cysteine Protease Cysteine Protease CA Clan Cysteine Protease C One A Family
-Description Relationship Accession Falcipain Two B Single Protein.
-
-Functions include cysteine type peptidase activity.
-Go Processes include proteolysis.
-Can SAR Targets include accession.
-UniProt includes accession.
-InterPro includes Pept cys AS, Peptidase C One A C, Peptidase C One A, Pept his AS, Papain like cys pep sf, and Peptidase C One A papain like.
-Pfam includes Peptidase C One.
-
-Keywords: QSAR, molecular fingerprints, drug target, protein classification, enzyme, protease, cysteine protease.
+Keywords: adult dataset, chemistry, life science, categorical features, continuous features, binary features.

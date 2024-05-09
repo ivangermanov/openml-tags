@@ -1,11 +1,24 @@
-Hill Valley Dataset
+Click Prediction Small Dataset
 
-This dataset is an artificial life science study focusing on chemistry-derived concepts. It is a noiseless version of the original data set.
+Tags: Chemistry, Derived, Life Science
 
-The Hill Valley dataset is tagged under Artificial, Chemistry, Derived, Life Science, and Study.
+This dataset is derived from the KDD Cup Challenge. It is a subset of the original data, containing only one percent of the total instances, with the majority class (click equals zero) downsampled to achieve a reasonable balance of five to one.
 
-Features of this dataset include various variables, although their exact meanings are not explicitly stated.
+The dataset focuses on online advertising, specifically predicting whether a user will click on a particular advertisement displayed alongside search results. Each search session includes information on the user ID, query issued by the user, ads displayed, and the target feature indicating whether the user clicked on any of the ads in the session.
 
-This dataset was sourced from the University of California, Irvine.
+An ad is characterized by its title, description, and display URL. Additionally, each ad and user have supplementary properties stored in separate files, accessible via IDs in the instances.
 
-**Keywords:** Artificial, Chemistry, Life Science, Noiseless, Variables
+The dataset comprises various features, including:
+
+* Click, a binary variable signifying whether a user clicked on at least one ad
+* Impression, representing the number of search sessions where an Ad ID was impressed by a User ID issuing a Query
+* URL Hash, a hashed version of the URL for anonymity
+* Ad ID and Advertiser ID, with some advertisers consistently optimizing their ads to make them more appealing
+* Depth, the number of ads displayed to a user in a session
+* Position, the order of an ad in the displayed list
+* Query ID, a key referencing the data file containing query tokens
+* Keyword ID, a key linking to purchased keyword tokens
+* Title ID and Description ID, keys referencing title and description tokens respectively
+* User ID, also serving as a key for user profiles, with a special value of zero denoting unidentified users
+
+Keywords: online advertising, click prediction, search results, user behavior, advertising optimization.

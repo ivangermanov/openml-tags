@@ -1,39 +1,53 @@
-The No-Show Problem in Healthcare Industry
+QSAR-TID-12017 Dataset
 
-The no-show problem is one of the biggest challenges facing the healthcare industry, where approximately thirty percent of patients fail to attend their scheduled appointments. This issue has significant consequences, including wasted resources, delayed treatment, and compromised patient care.
+Tags: Computer Systems, Machine Learning, MTLQSAR, Study Three
 
-Medical Appointment Dataset
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12017. It has sixty-two rows and one thousand twenty-six features, including IDs and class feature: molecule ChEMBL ID and median PXc fifty.
 
-This dataset contains sixty-one thousand data points collected from January 1st to April 30th, featuring nineteen attributes that can be leveraged to develop predictive models. 
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Data Dictionary:
+Features include molecule ChEMBL ID, followed by nine hundred ninety-six FCFP six one thousand twenty-four bit molecular fingerprint features.
 
-* Specialty: the type of specialist the patient is scheduled to see (e.g., dermatologist)
-* Age: the patient's age
-* Sex: the patient's gender (male or female)
-* Reservation Month Discrete: a discrete value representing the month of the scheduled appointment
-* Reservation Month Continuous: a continuous value representing the month of the scheduled appointment, calculated using the formula COS(2 * Reservation Month Discrete * Pi / 12)
-* Reservation Day of Week Discrete: a discrete value representing the day of the week for the scheduled appointment
-* Reservation Day of Week Continuous: a continuous value representing the day of the week for the scheduled appointment, calculated using the formula COS(2 * Reservation Day of Week Discrete * Pi / 7)
-* Reservation Hour Discrete: a discrete value representing the hour of the scheduled appointment
-* Reservation Hour Continuous: a continuous value representing the hour of the scheduled appointment, calculated using the formula COS(2 * Reservation Hour Discrete * Pi / 24)
+Scraped Data:
 
-and similarly for the creation of the appointment:
+ID: ChEMBL three thousand three hundred nine
+Type: Single Protein
+Preferred Name: Neuropeptide Y Receptor Type Two
+Synonyms: Neuropeptide Y Receptor Type Two, Npy two r, NPY-Y two Receptor
 
-* Creation Month Discrete
-* Creation Month Continuous
-* Creation Day of Week Discrete
-* Creation Day of Week Continuous
-* Creation Hour Discrete
-* Creation Hour Continuous
+Organism: Rattus norvegicus
+Species Group: No
+Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Peptide Receptor, Family A GPCR, Short Peptide Receptor, Family A GPCR, Neuropeptide Y Receptor
 
-Additionally, the dataset includes:
+Description Relationship Accession Neuropeptide Y Receptor Type Two Single Protein Q nine ERC zero
 
-* Latency: the number of days between the scheduled appointment and its creation date
-* Channel: the method used to create the appointment (call center, personal, web)
-* Type: the type of appointment (medical or procedure)
-* Show: a binary indicator of whether the patient attended the appointment or not
+Rows per Page: Fifty-One to One of One
 
-Can machine learning algorithms be employed to predict the likelihood of a patient attending their scheduled appointment based on these attributes?
+Go Component:
+Go Component includes plasma membrane, cilium, membrane, non-motile cilium, presynapse, and glutamatergic synapse.
 
-Keywords: no-show problem, healthcare industry, predictive modeling, machine learning, appointment scheduling.
+Go Function:
+Go Function includes peptide YY receptor activity, G protein-coupled receptor activity, and neuropeptide Y receptor activity.
+
+Go Process:
+Go Process includes behavioral fear response, positive regulation of peptide secretion, outflow tract morphogenesis, cardiac left ventricle morphogenesis, signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-inhibiting G protein-coupled receptor signaling pathway, positive regulation of cytosolic calcium ion concentration, neuropeptide signaling pathway, nitric oxide mediated signal transduction, positive regulation of cell-substrate adhesion, negative regulation of nervous system process, positive regulation of dopamine secretion, negative regulation of cAMP-mediated signaling, positive regulation of smooth muscle contraction, positive regulation of circadian sleep/wake cycle, non-REM sleep, secretion, negative regulation of synaptic transmission, negative regulation of synaptic transmission, glutamatergic, negative regulation of excitatory postsynaptic potential, synaptic signaling via neuropeptide, and negative regulation of feeding behavior.
+
+canSAR-Target:
+canSAR-Target includes Q nine ERC zero.
+
+GuideToPHARMACOLOGY:
+GuideToPHARMACOLOGY includes three hundred six.
+
+Reactome:
+Reactome includes peptide ligand-binding receptors and G alpha i signalling events.
+
+UniProt:
+UniProt includes Q nine ERC zero.
+
+InterPro:
+InterPro includes GPCR Rhodopsin, NPY rcpt, NPY two rcpt, and GPCR Rhodopsin seven TM.
+
+Pfam:
+Pfam includes seven tm one.
+
+Keywords: QSAR, Machine Learning, MTLQSAR, Neuropeptide Y Receptor, G Protein-Coupled Receptor, Peptide Receptor, Signal Transduction, Synaptic Transmission.

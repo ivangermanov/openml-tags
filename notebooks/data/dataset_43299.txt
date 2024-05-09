@@ -1,0 +1,25 @@
+Cause-Effect Pairs is a growing database of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+
+Some pairs are high-dimensional; for machine readability, the relevant information about this is coded in metadata. Metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
+
+When using this dataset in a publication, please cite the paper "Distinguishing cause from effect using observational data: methods and benchmarks" published in the Journal of Machine Learning Research.
+
+Overview of all data pairs:
+
+* Pair one: Altitude and Temperature from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Temperature.
+* Pair two: Altitude and Precipitation from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Precipitation.
+* Pair three: Longitude and Temperature from the German Weather Service (Deutscher Wetterdienst), where Longitude causes Temperature.
+* Pair four: Altitude and Sunshine Hours from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Sunshine Hours.
+* Pair five: Abalone dataset, where Age causes Shell Length.
+
+Information for the Abalone dataset:
+The Abalone dataset was originally owned by the Marine Resources Division, Marine Research Laboratories - Taroona, Department of Primary Industry and Fisheries, Tasmania. The dataset was donated by the University of Tasmania. It was received in December nineteen ninety-five.
+
+Attribute information for the Abalone dataset:
+Given is the attribute name, attribute type, the measurement unit, and a brief description. 
+Age is an integer value that gives the age in years plus one point five. 
+Length is a continuous value measured in millimeters representing the longest shell measurement.
+
+Tags: Computer Systems, Graphical Models, Machine Learning, MaRDI, TA3
+
+Keywords: cause-effect pairs, metadata, dataset weight, causal inference, observational data, abalone dataset, age, shell length.

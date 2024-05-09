@@ -1,41 +1,7 @@
-Bridges
-Tags: 
+The Elevators dataset is related to the task of controlling an F-16 aircraft, although the target variable and attributes differ from the Ailerons domain. In this particular case, the goal variable is associated with an action taken on the elevators of the aircraft.
 
-This version is derived from version two (the discretized version) by removing all instances with missing values in the last (target) attribute. The Bridges dataset is originally not a classification dataset, but it is used extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking results. Therefore, these instances have been removed.
+This dataset aims to analyze various factors influencing the control of elevators, which play a crucial role in ensuring the safe and efficient operation of an aircraft. The dataset comprises several features, including Climb Rate, Speed, Pitch, Yaw, Current Roll, Absolute Roll, Differential Climb, Differential Roll Rate, Differential Differential Climb, Speed Acceleration Time, and Speed Acceleration Difference.
 
-Sources:
-Compiled from various sources.
-Date: August 1, 1990
+Understanding the relationships between these features and their impact on the elevator control is essential for developing effective strategies for aircraft operation. By examining the interactions among these variables, researchers can gain valuable insights into optimizing elevator performance, ultimately leading to improved safety and efficiency in aviation.
 
-Attribute Information:
-The type field states whether a property is continuous/integer or nominal. For properties with continuous/integer and nominal types, the range of continuous numbers is given first, and the possible values of the nominal follow the semicolon.
-
-Name | Type | Possible Values | Comments
-------|------|---------------|----------
-Identifier |  |  | Identifier of the examples
-River | Nominal | Allegheny, Monongahela, Ohio | 
-Location | Nominal | One to Fifty Two | 
-Erected | Continuous/Integer, Nominal | Eighteen eighteen to Nineteen eighty six; Craftsman, Emerging, Mature, Modern | 
-Purpose | Nominal | Walk, Aqueduct, Railroad, Highway | 
-Length | Continuous/Integer, Nominal | Eight hundred four to Four thousand five hundred fifty eight; Short, Medium, Long | 
-Lanes | Continuous/Integer, Nominal | One, Two, Four, Six; One, Two, Four, Six | 
-Clearance | Nominal | Normal, Greater | 
-Type of Construction | Nominal | Through, Deck | 
-Material | Nominal | Wood, Iron, Steel | 
-Span | Nominal | Short, Medium, Long | 
-Relative Level | Nominal | Similar, Similar to Flood, Flood | 
-Type | Nominal | Wood, Suspension, Simple Truss, Arch, Cantilever, Continuous Truss | 
-
-Features: Identifier, River, Location, Erected, Purpose, Length, Lanes, Clearance, Type of Construction, Material, Span, Relative Level, Type
-
-Scraped Data: 
-Dataset Information
-Additional Information
-There are two versions to the database: one contains the original examples, and the other contains descriptions after discretizing numeric properties. There are no classes in the domain. Rather, this is a design domain where five properties (design description) need to be predicted based on seven specification properties.
-
-Has Missing Values? Yes
-
-Additional Variable Information
-The type field states whether a property is continuous/integer or nominal. For properties with continuous/integer and nominal types, the range of continuous numbers is given first, and the possible values of the nominal follow the semicolon.
-
-Keywords: Bridges, Classification, Discretization, Design Domain, Numeric Properties
+Keywords: Elevators, Aircraft Control, Aviation, Safety, Efficiency

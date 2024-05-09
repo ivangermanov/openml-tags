@@ -1,0 +1,13 @@
+Machine Learning and Mathematics dataset named Madeline has undergone subsampling with specific parameters. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size.
+
+The original dataset had a large number of rows and columns, which were reduced to a maximum of two thousand rows and one hundred columns, respectively. Additionally, the number of classes was limited to ten.
+
+To ensure representative sampling, the classes were first uniformly sampled based on their frequency in the dataset. Then, the columns were uniformly sampled without replacement.
+
+If the number of rows exceeded the maximum allowed, the dataset was further split using stratified sampling to maintain class balance. This involved concatenating the features and target variable, followed by splitting the data into subsets using the target variable as the stratification criterion.
+
+Finally, the categorical columns were converted to strings, and the resulting subsampled dataset was returned along with its metadata, including the column names and categorical mask.
+
+Features include various variables such as demographic information, financial metrics, and other relevant attributes.
+
+Keywords: machine learning, mathematics, dataset subsampling, stratified sampling, class balance, feature selection.

@@ -1,31 +1,17 @@
-The SGEMM GPU Kernel Performance Dataset 
+The QSAR-TID-20032 dataset contains QSAR data showing activity values of several compounds on drug target TID: 20032. This dataset has multiple rows and features, including IDs and class features, such as molecule ChEMBL ID and median pXC50.
 
-Tags: Computer Systems, Machine Learning 
+The features in this dataset represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand forty-eight by two thousand forty-eight, using a parameterizable Single Precision General Matrix Multiply GPU kernel with hundreds of thousands of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as separate columns. All times are measured in milliseconds. 
+This dataset was obtained from the MetaQSAR project in September two thousand fifteen.
 
-There are fourteen parameters, the first ten of which are ordinal and can only take up to four different power-of-two values, and the remaining four variables are binary. Out of millions of total parameter combinations, only hundreds of thousands are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations.
+The target of this dataset is Neuropeptide Y receptor type five, also known as Npy five, Npy five R, and NPY five R. It is a single protein preferred name and belongs to the species group Mus musculus.
 
-The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and a NVIDIA GeForce graphics processing unit. We use the gemm fast kernel from the automatic OpenCL kernel tuning library CLTune.
+This protein target classification is one point membrane receptor family A G protein coupled receptor peptide receptor family A GPCR short peptide receptor family A GPCR Neuropeptide Y receptor.
 
-Note: For this kind of dataset, it is usually better to work with the logarithm of the running times.
+It has multiple descriptions, relationships, accession, expression atlas, component, function, process, and canSAR-target information available.
 
-Independent Variables:
+Some of its functions include peptide YY receptor activity, pancreatic polypeptide receptor activity, G protein coupled receptor activity, Neuropeptide Y receptor activity, and Neuropeptide binding.
 
-Per-matrix two-dimensional tiling at workgroup level 
-Inner dimension of two-dimensional tiling at workgroup level 
-Local workgroup size 
-Local memory shape 
-Kernel loop unrolling factor 
-Per-matrix vector widths for loading and storing 
-Enable stride for accessing off-chip memory within a single thread 
-Per-matrix manual caching of the two-dimensional workgroup tile
+It is involved in multiple biological processes, such as positive regulation of acute inflammatory response, negative regulation of acute inflammatory response to antigenic stimulus, outflow tract morphogenesis, cardiac left ventricle morphogenesis, signal transduction, G protein coupled receptor signaling pathway, Neuropeptide signaling pathway, chemical synaptic transmission, positive regulation of cell population proliferation, negative regulation of glutamate secretion, negative regulation of synaptic transmission GABAergic, eating behavior, negative regulation of apoptotic process, positive regulation of smooth muscle cell proliferation, generation of ovulation cycle rhythm, positive regulation of ERK one and ERK two cascade, and synaptic signaling via Neuropeptide.
 
-Output:
-
-Performance times in milliseconds for four independent runs using the same parameters. They range between thirteen point twenty-five and three thousand three hundred ninety-seven point zero eight. The first run is used as the default target variable.
-
-Related Studies:
-Sobol Tensor Trains for Global Sensitivity Analysis
-
-Keywords: SGEMM, GPU kernel, matrix multiplication, OpenCL, kernel tuning, performance optimization
+Keywords: QSAR, machine learning, meteorology, MTLQSAR, Neuropeptide Y receptor type five, G protein coupled receptor, peptide receptor, molecular fingerprints, MetaQSAR project.

@@ -1,13 +1,11 @@
-The Jannis dataset belongs to the classification on numerical features benchmark. It was transformed in the same way as the other datasets in the tabular data benchmark. 
+The QSAR-TID-30014 dataset is part of the MetaQSAR project and was published in September 2015. It contains QSAR data showing activity values of several compounds on the drug target TID: 30014. The dataset has 987 rows and 1026 features, including molecule identifiers and class features.
 
-The primary objective of this challenge is to introduce the research community to real-world datasets of significant interest, formatted uniformly despite differing types of data. These datasets are presented as preprocessed matrices, enabling participants to concentrate on classification, while also allowing them to employ additional feature extraction procedures as long as they do not breach any rules.
+The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation, as all bits are generated.
 
-All problems posed are binary classification challenges, assessed using the normalized Area Under the Receiver Operating Characteristic Curve metric. The identity of these datasets and their respective data types remain concealed, although their structures are revealed. 
+This dataset is related to the dual specificity protein kinase CLK2, also known as CDC-like kinase 2, which belongs to the CMGC protein kinase group and the CMGC protein kinase CLK family. It is involved in various biological processes, including protein phosphorylation, response to ionizing radiation, phosphorylation, peptidyl-tyrosine phosphorylation, regulation of RNA splicing, negative regulation of gluconeogenesis, and protein autophosphorylation.
 
-Ultimately, the final score will be derived from the average of rankings across all testing datasets, generating a ranking, and determining winners accordingly. These tasks operate within predetermined time constraints, utilizing the Codalab platform's shared computational resources. 
+CLK2 is primarily located in the nucleus and nucleoplasm and plays a role in nuclear bodies and nuclear specks. It has been shown to bind to proteins and ATP and has kinase activity, transferase activity, and protein serine/threonine kinase activity.
 
-Each submitted code will execute in a compute worker equipped with specific characteristics, including two cores, eight gigabytes of memory, forty gigabytes of solid-state drive storage, and an Ubuntu operating system. To guarantee fair evaluation, each code submission's execution time is restricted.
+The dataset can be used for machine learning and QSAR modeling to predict the activity of compounds against the CLK2 target.
 
-Features include various variables such as class.
-
-Keywords: machine learning, statistics, classification, numerical features, area under curve, binary classification, feature extraction, computational resources, time constraints.
+Keywords: QSAR, machine learning, CLK2, protein kinase, CMGC protein kinase group, molecular fingerprints, SMILES strings, biological processes, protein phosphorylation.

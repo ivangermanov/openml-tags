@@ -1,17 +1,22 @@
-QSAR-TID-12755 Tags: Machine Learning, MTLQSAR, study_3, Transportation 
+Volcanoes on Venus - JARtool Experiment Data Set Experiment: E Three
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12755. The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+Data Set Information:
+The data was collected by the Magellan spacecraft over an approximately four-year period from nineteen ninety to nineteen ninety-four. The objective of the mission was to obtain global mapping of the surface of Venus using synthetic aperture radar. A more detailed discussion of the mission and objectives is available at JPL's Magellan webpage. There are some spatial dependencies, for instance, background patches from within a single image are likely to be more similar than background patches taken across different images.
 
-The dataset has thirty rows and one thousand twenty-six features, including IDs and class feature. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts.
 
-The preferred name of the target is Dopamine D5 Receptor, also known as D(1B) Dopamine Receptor, D(5) Dopamine Receptor, and Dopamine D5 Receptor Drd5. It belongs to the species group Rattus Norvegicus and is classified as a single protein, specifically a membrane receptor, family A G protein-coupled receptor, small molecule receptor, and monoamine receptor.
+There are labels that provide some measure of subjective uncertainty, which ranges from definitely a volcano to only a pit is visible. This labeling uncertainty problem is discussed further in relevant papers.
 
-The description of the target highlights its relationship with accessions, particularly P25115. Additionally, it is part of a subset of dopamine receptors.
+Attribute Information:
+The images are one thousand twenty-four by one thousand twenty-four pixels. The pixel values are in the range from zero to two fifty-five. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter, whereas lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-Go Component annotations include plasma membrane, cilium, membrane, axon, dendrite, brush border membrane, neuronal cell body, dendritic spine, ciliary membrane, non-motile cilium, postsynaptic density membrane, and glutamatergic synapse.
+Relevant Papers:
+Magellan: Radar Performance and Data Products, Science.
+Magellan Mission Summary, Journal of Geophysical Research Planets.
+Learning to Recognize Volcanoes on Venus, Machine Learning.
+Knowledge Discovery in Large Image Databases: Dealing with Uncertainties in Ground Truth, Advances in Knowledge Discovery and Data Mining.
 
-Go Function annotations include dopamine neurotransmitter receptor activity, coupled via Gs, G-protein alpha-subunit binding, G protein-coupled receptor activity, dopamine neurotransmitter receptor activity, protein binding, and dopamine binding.
+Features:
+Class
 
-Go Process annotations encompass various biological processes, including synaptic transmission, response to amphetamine, regulation of systemic arterial blood pressure, signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-activating G protein-coupled receptor signaling pathway, adenylate cyclase-activating dopamine receptor signaling pathway, dopamine receptor signaling pathway, behavior, mating behavior, associative learning, visual learning, transmission of nerve impulse, negative regulation of cell migration, negative regulation of NAD(P)H oxidase activity, regulation of locomotion, wound healing, response to cocaine, negative regulation of blood pressure, regulation of female receptivity, sensitization, long-term synaptic depression, regulation of biological quality, cellular response to catecholamine stimulus, and adenylate cyclase-activating adrenergic receptor signaling pathway.
-
-Keywords: QSAR, machine learning, molecular fingerprints, dopamine receptor, G protein-coupled receptor, signal transduction, synaptic transmission.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Global Mapping, Magellan Spacecraft, Image Quality, Labeling Uncertainty, Backscatter.

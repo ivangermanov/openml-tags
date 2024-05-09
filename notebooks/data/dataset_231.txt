@@ -1,11 +1,19 @@
-The CodRNA dataset is categorized under Life Science and Machine Learning. It originated from the original source http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets.
+Heart Disease Databases 
 
-This dataset is based on the research paper titled "Detection of Non-Coding RNAs on the Basis of Predicted Secondary Structure Formation Free Energy Change." The paper focuses on predicting the formation of secondary structures in non-coding RNA molecules.
+The heart disease databases contain four datasets concerning heart disease diagnosis. All attributes are numeric-valued. The data was collected from four different locations: Cleveland Clinic Foundation, Hungarian Institute of Cardiology in Budapest, V.A. Medical Center in Long Beach, California, and University Hospital in Zurich, Switzerland. 
 
-To create this dataset, the test, train, and rest datasets were combined into a single dataset. Each column in the dataset was then normalized according to specific rules. Columns containing only one value were set to zero, effectively removing them due to sparsity. Columns with two values were converted into binary features, where the most frequent value was set to zero and the less frequent value was set to one. Columns with more than two values were divided by their standard deviation.
+Each database has the same instance format. While the databases have seventy-six raw attributes, only fourteen of them are actually used. Two copies of each database have been made: one with all the attributes and one with the fourteen attributes actually used in past experiments.
 
-It is important to note that the CodRNA dataset contains duplicate data points both within each file and across different files. These duplicates have not been removed.
+The databases have been previously used in several studies. One study applied a new probability algorithm for the diagnosis of coronary artery disease, achieving approximately seventy-seven percent correct classification accuracy with a logistic-regression-derived discriminant function. Another study used an instance-based approach to predict heart disease presence with the Cleveland database, achieving seventy-seven point zero percent accuracy. A third study used a conceptual clustering system to achieve seventy-eight point nine percent accuracy on the Cleveland database.
 
-The dataset consists of various features, including those related to the RNA molecule's properties.
+This database contains seventy-six attributes, but all published experiments refer to using a subset of fourteen of them. The goal field refers to the presence of heart disease in the patient. It is integer valued from zero (no presence) to four. Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence from absence.
 
-Keywords: Non-Coding RNA, Secondary Structure, Free Energy Change, Normalization, Binary Features, Standard Deviation.
+One file has been processed, containing the Cleveland database. All four unprocessed files also exist in this directory. The names and social security numbers of the patients were recently removed from the database, replaced with dummy values.
+
+There are five hundred twenty instances in total across the four databases. The number of instances for each database is three hundred three for Cleveland, two hundred ninety-four for Hungarian, one hundred twenty-three for Switzerland, and two hundred for Long Beach VA.
+
+There are seventy-six attributes in total, including the predicted attribute. However, only fourteen attributes are actually used. These attributes include age, sex, chest pain type, resting blood pressure, serum cholesterol, fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise induced angina, old peak, slope, number of major vessels colored by fluoroscopy, and diagnosis of heart disease.
+
+Several attribute values are missing, distinguished with a value of negative nine point zero. The class distribution varies across the four databases. For example, in the Cleveland database, there are one hundred sixty-four instances with no presence of heart disease, fifty-five instances with a presence level of one, thirty-six instances with a presence level of two, thirty-five instances with a presence level of three, and thirteen instances with a presence level of four.
+
+Keywords: heart disease, diagnosis, datasets, attributes, classification accuracy, algorithms.

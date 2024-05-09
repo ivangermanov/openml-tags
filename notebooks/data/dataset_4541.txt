@@ -1,50 +1,15 @@
-Subsampling of the dataset Ada with Seed equals One 
-Tags: Subsampling of the dataset Ada 
+Diabetes130US Tags: Geography, Life Science 
 
-Generated with the following source code:
+This dataset has been prepared to analyze factors related to readmission as well as other outcomes pertaining to patients with diabetes.
 
-def subsample(self, Seed, Maximum Number of Rows, Maximum Number of Columns, Maximum Number of Classes, Stratified) -> Dataset:
- 
-random number generator = numpy random default random generator(Seed)
-features = self features
-target variable = self target variable
- 
-uniformly sample classes = target variable unique()
-if length of classes is greater than Maximum Number of Classes:
-    value counts = target variable value counts()
-    selected classes = random number generator choice(classes, size equals Maximum Number of Classes, replace equals False, probability equals value counts divided by sum of value counts,)
- 
-select the indices where one of these classes is present 
-indices = target variable index where target variable is in selected classes
-features = features iloc indices
-target variable = target variable iloc indices
- 
-uniformly sample columns if required
-if length of features columns is greater than Maximum Number of Columns:
-    column indices = random number generator choice(list range length of features columns), size equals Maximum Number of Columns, replace equals False,)
-    sorted column indices = sorted column indices
-    selected columns = list features columns sorted column indices
-    features = features selected columns
-else:
-    sorted column indices = list range length of features columns
-    
-if length of features is greater than Maximum Number of Rows:
-    stratify accordingly 
-    target name = target variable name
-    data = pandas concat features and target variable along columns axis
-    _, subset = sklearn model selection train test split(data, test size equals Maximum Number of Rows, stratify equals data target name, shuffle equals True, random state equals Seed,)
-    features = subset drop target name along columns axis
-    target variable = subset target name
-    
-convert categorical columns to string for OpenML 
-categorical mask = list of self categorical mask for i in sorted column indices
-column names = list features column names
-return Dataset(
-    dataset equals self dataset,
-    features equals features,
-    target variable equals target variable,
-    categorical mask equals categorical mask,
-    column names equals column names,
-)
+The data are submitted on behalf of the Center for Clinical and Translational Research, Virginia Commonwealth University, a recipient of National Institutes of Health Clinical and Translational Science Award grant. 
 
-Keywords: dataset, subsampling, stratification, feature selection, random sampling
+The dataset represents ten years of clinical care at one hundred thirty United States hospitals and integrated delivery networks. It includes over fifty features representing patient and hospital outcomes. Information was extracted from the database for encounters that satisfied the following criteria: it is an inpatient encounter, that is, a hospital admission; it is a diabetic encounter, that is, one during which any kind of diabetes was entered to the system as a diagnosis; the length of stay was at least one day and at most fourteen days; laboratory tests were performed during the encounter; and medications were administered during the encounter.
+
+The data contains attributes such as patient number, race, gender, age, admission type, time in hospital, medical specialty of admitting physician, number of lab test performed, Hemoglobin A1c test result, diagnosis, number of medication, diabetic medications, number of outpatient, inpatient, and emergency visits in the year before the hospitalization, and so forth.
+
+Detailed description of all the attributes is provided in the paper. 
+
+This dataset is relevant to research on the impact of Hemoglobin A1c measurement on hospital readmission rates.
+
+Keywords: diabetes, hospital readmission, patient outcomes, clinical care, United States hospitals.

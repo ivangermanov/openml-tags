@@ -1,40 +1,15 @@
-Vehicle Classification Dataset
+Life Science, Machine Learning, MTLQSAR, Study Three
 
-The primary goal of this dataset is to categorize a given silhouette as one of four types of vehicles, utilizing a set of features extracted from the silhouette. The vehicle may be viewed from various angles.
+The QSAR-TID-10701 dataset contains QSAR data showing activity values of several compounds on drug target TID: 10701. This dataset has 125 rows and 1026 features, including IDs and class feature.
 
-This dataset was originally gathered to discover a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measurements of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree through computer induction. This object recognition strategy was successfully employed to differentiate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
+The features represent FCFP 1024 bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Description:
+This dataset was obtained from the MetaQSAR project in September 2015.
 
-The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Attribute Noise Tolerance and Type Suite, which extracts a combination of scale-independent features utilizing both classical moments-based measures such as scaled variance, skewness, and kurtosis about the major and minor axes, and heuristic measures like hollows, circularity, rectangularity, and compactness.
+The data shows activity values of several compounds on drug target Methionine Aminopeptidase One, which is a single protein preferred name. It is also known as Map One, Metap One, and Peptidase M One.
 
-Four "Corgie" model vehicles were utilized for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was selected with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more challenging to differentiate between the cars.
+Methionine Aminopeptidase One is an enzyme/protease/metallo protease/metallo protease MG clan/metallo protease M24A subfamily. It is involved in various biological processes, including proteolysis, negative regulation of gene expression, protein processing, and protein modification process.
 
-The images were acquired by a camera looking downward at the model vehicle from a fixed angle of elevation. The vehicles were positioned on a diffuse backlit surface, and they were painted matte black to minimize highlights. The images were captured using a frame store connected to a workstation. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated to comply with the processing requirements of Binary Attribute Noise Tolerance and Type Suite, and thereafter subjected to shrink-expand-expand-shrink Hierarchical Image Processing System modules to eliminate salt-and-pepper image noise.
+This protein is located in the cytoplasm, cytosol, and cytoplasmic stress granule. It is also associated with various molecular functions, including mRNA binding, aminopeptidase activity, initiator methionyl aminopeptidase activity, peptidase activity, zinc ion binding, hydrolase activity, metal ion binding, and metalloaminopeptidase activity.
 
-The vehicles were rotated, and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to head-on and rear views, respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
-
-Two sets of images, each set covering a full three hundred sixty-degree rotation, were captured for each vehicle. The vehicle was rotated by a fixed angle between images. These datasets are known as Experiment Two and Experiment Three, respectively. A further two sets of images were captured with the camera at elevations of thirty-seven point five degrees and thirty point eight degrees, respectively.
-
-Attributes:
-
-Compactness
-Circularity
-Distance Circularity
-Radius Ratio
-Pr Axis Aspect Ratio
-Max Length Aspect Ratio
-Scatter Ratio
-Elongatedness
-Pr Axis Rectangularity
-Max Length Rectangularity
-Scaled Variance Along Major Axis
-Scaled Variance Along Minor Axis
-Scaled Radius of Gyration
-Skewness About Major Axis
-Skewness About Minor Axis
-Kurtosis About Major Axis
-Kurtosis About Minor Axis
-Hollows Ratio
-
-Keywords: Vehicle Classification, Shape Feature Extraction, Silhouette Analysis, Object Recognition, Computer Vision, Machine Learning
+Keywords: QSAR, machine learning, molecular fingerprints, Methionine Aminopeptidase One, enzyme, protease, metallo protease, biological processes, molecular functions.

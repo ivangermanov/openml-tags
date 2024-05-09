@@ -1,13 +1,11 @@
-House Eight L Dataset: Demographics, Economics 
+The Electricity dataset is a widely used collection of data described and analyzed in various studies. This data was collected from the Australian New South Wales Electricity Market, where prices are not fixed and are affected by the demand and supply of the market, being set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done. 
 
-This database was carefully crafted based on information provided by the United States Census Bureau, specifically from the Summary Tape File One, which was collected as part of the Nineteen Ninety US census. The data consists mainly of counts accumulated at various survey levels, with a focus on the State-Place level. Information from all fifty states was gathered for this dataset. To make the data more meaningful, most of the counts were transformed into suitable proportions.
+The dataset contains a large number of instances, dated from May seventh nineteen ninety-six to December fifth nineteen ninety-eight. Each example of the dataset refers to a period of thirty minutes, resulting in forty-eight instances for each time period of one day. 
 
-There are four distinct datasets derived from this database: House Eight H, House Eight L, House Sixteen H, and House Sixteen L. All of these datasets share a common goal – to predict the median price of houses in a given region based on its demographic makeup and the state of its housing market. The number in each dataset's name indicates the number of attributes present, while the letter suffix provides a rough estimate of the task's difficulty level. Datasets labeled as Low have attributes that are more closely correlated, making the task easier, whereas those labeled as High have attributes with higher variance or lower correlation, making the task more challenging.
+Each example on the dataset has several fields: the day of the week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. The class label identifies the change of the price, either up or down, in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends.
 
-The original source of this dataset is the DELVE repository of data, which has been made available through a collection of regression datasets.
+The data was normalized to facilitate analysis. 
 
-Characteristics of this dataset include twenty-two thousand seven hundred eighty-four cases and nine continuous attributes.
+Attribute information includes the date, which is normalized between zero and one; the day of the week; the period, which is the time of the measurement in half-hour intervals over twenty-four hours, also normalized between zero and one; the New South Wales electricity price, normalized between zero and one; the New South Wales electricity demand, normalized between zero and one; the Victoria electricity price, normalized between zero and one; the Victoria electricity demand, normalized between zero and one; and the scheduled electricity transfer between both states, normalized between zero and one.
 
-Features of interest include population characteristics and housing market indicators.
-
-Keywords: demographics, economics, census data, housing market, median house price, regression analysis.
+Keywords: Electricity, Australian New South Wales Electricity Market, Demand, Supply, Price Trends.

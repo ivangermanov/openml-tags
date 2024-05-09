@@ -1,36 +1,13 @@
-Vehicle Classification Dataset
+This dataset contains QSAR data showing activity values of several compounds on drug target Interleukin-one Receptor Associated Kinase One. It has multiple rows and numerous features including IDs and class feature, and the features represent FCFP six one hundred twenty-four bit Molecular Fingerprints which were generated from SMILES strings.
 
-Tags: Demographics, Partial Label Ranking
+The features were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Features:
+This dataset is part of the MetaQSAR project, which aims to provide a comprehensive repository of QSAR models and datasets for various biological targets.
 
-Compactness (average perimeter squared divided by area)
-Circularity (average radius squared divided by area)
-Distance Circularity (area divided by average distance from border squared)
-Radius Ratio (maximum radius minus minimum radius divided by average radius)
-Pr Axis Aspect Ratio (minor axis divided by major axis)
-Max Length Aspect Ratio (length perpendicular to maximum length divided by maximum length)
-Scatter Ratio (inertia about minor axis divided by inertia about major axis)
-Elongatedness (area divided by shrink width squared)
-Pr Axis Rectangularity (area divided by pr axis length times pr axis width)
-Max Length Rectangularity (area divided by maximum length times length perpendicular to this)
-Scaled Variance (second order moment about minor axis divided by area along major axis)
-Scaled Variance (second order moment about major axis divided by area along minor axis)
-Scaled Radius of Gyration (mavar plus mivar divided by area)
-Skewness About Major Axis (third order moment about major axis divided by sigma min cubed)
-Skewness About Minor Axis (third order moment about minor axis divided by sigma maj cubed)
-Kurtosis About Major Axis (fourth order moment about major axis divided by sigma min to the power of four)
-Kurtosis About Minor Axis (fourth order moment about minor axis divided by sigma maj to the power of four)
-Hollows Ratio (area of hollows divided by area of bounding polygon)
+The Interleukin-one Receptor Associated Kinase One is a single protein that plays a crucial role in various cellular processes, including inflammation, immune response, and cell signaling.
 
-The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
+It has been implicated in several diseases, including cancer, inflammatory disorders, and autoimmune diseases, making it an attractive target for therapeutic intervention.
 
-The dataset was originally gathered to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction.
+The QSAR model developed using this dataset can be used to predict the activity of new compounds against Interleukin-one Receptor Associated Kinase One, facilitating the discovery of novel therapeutics.
 
-The dataset consists of four "Corgi" model vehicles: a double decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
-
-The images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface, and the vehicles were painted matte black to minimize highlights. The images were captured using a framestore connected to a computer. All images were captured with a spatial resolution of pixels quantized to grey levels. These images were thresholded to produce binary vehicle silhouettes, negated, and thereafter subjected to shrink-expand-expand-shrink modules to remove image noise.
-
-The vehicles were rotated, and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to "head-on" and "rear" views respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions. Two sets of images, each set covering a full three hundred sixty-degree rotation, were captured for each vehicle.
-
-Keywords: Vehicle Classification, Shape Feature Extraction, Silhouette Analysis, Computer Vision, Object Recognition
+Keywords: QSAR, Interleukin-one Receptor Associated Kinase One, MetaQSAR, Molecular Fingerprints, Drug Target, Therapeutic Intervention.

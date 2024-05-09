@@ -1,15 +1,35 @@
-analcatdata dmft 
+Hayes-Roth Dataset 
 
-Tags: OpenML CC Eighteen, OpenML One Hundred, Study One, Study One Twenty Three, Study One Thirty Five, Study One Four, Study Thirty Four, Study Forty One, Study Fifty, Study Fifty Two, Study Seven, Study Ninety Eight, Study Ninety Nine 
+This dataset is a merged version of the separate training and test sets. The training-test split can be found as one of the possible tasks.
 
-This dataset is one of the datasets used in the book Analyzing Categorical Data. It contains data on the Decayed, Missing, and Filled Teeth Index before and after different prevention strategies. The prevention strategy is commonly used as the categorical target.
+The dataset contains five attributes: Hobby, Age, Educational Level, Marital Status, and Class. The Hobby attribute has nominal values, while the Age, Educational Level, and Marital Status attributes also have nominal values. The Class attribute has nominal values between one and three.
 
-Attribute Information:
+Detailed Description of the Experiment:
 
-* Decayed, Missing, and Filled Teeth Index before and after the prevention strategy 
-* Gender of the individual 
-* Ethnicity of the individual 
+The classification task involves three categories: Class One, Class Two, and Neither. Some instances could be classified into either Class One or Class Two, and these instances have been evenly distributed between the two classes. 
 
-Features: Decayed, Missing, and Filled Teeth Index at the beginning, Decayed, Missing, and Filled Teeth Index at the end, gender, ethnicity, prevention strategy
+There are five attributes: Name, Hobby, Age, Educational Level, and Marital Status. The Name attribute is a randomly generated number and is not diagnostic. The Hobby attribute is also randomly generated and is not diagnostic. The Age, Educational Level, and Marital Status attributes are diagnostic.
 
-Keywords: categorical data, decayed teeth, missing teeth, filled teeth, prevention strategy, gender, ethnicity.
+Classification Rules:
+
+* Class Neither: If a four occurs for any attribute Age, Educational Level, or Marital Status.
+* Class One: Otherwise, if the number of ones exceeds the number of twos for attributes Age, Educational Level, and Marital Status.
+* Class Two: Otherwise, if the number of twos exceeds the number of ones for attributes Age, Educational Level, and Marital Status.
+* Either Class One or Class Two: Otherwise, if the number of twos equals the number of ones for attributes Age, Educational Level, and Marital Status.
+
+Prototypes:
+* Class One: One-One-One
+* Class Two: Two-Two-Two
+* Class Either: Three-Three-Three
+* Class Neither: Four-Four-Four
+
+Additional Information:
+This dataset contains five numeric-valued attributes. Only a subset of three attributes is used during testing, specifically the latter three attributes. Furthermore, only two of the three concepts are used during testing, namely those with the prototypes Zero-Zero-Zero and One-One-One. 
+
+Some instances could be placed in either category Zero or One. These instances have been placed in each category with equal probability, following the authors’ suggestion.
+
+The actual values of the attributes have been replaced with numeric values. This may be unfair since the subjects were able to bring background knowledge to bear on the attribute values and their relationships, whereas the algorithms were provided with no such knowledge.
+
+It is unclear whether the two distractor attributes, Name and Hobby, are presented to the algorithms during testing. However, it is clear that only the Age, Educational Status, and Marital Status attributes are given during the human subjects’ transfer tests.
+
+Keywords: machine learning, education, classification, attributes, prototypes, diagnostic attributes

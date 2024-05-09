@@ -1,26 +1,19 @@
-Audiology Database
+Arrhythmia 
 
-This database is a standardized version of the original audiology database. The non-standard set of attributes have been converted to a standard set of attributes according to the rules that follow.
+Tags: Machine Learning, Medicine, Sport 
 
-Each property that appears anywhere in the original data or test file has been represented as a separate attribute in this file. A property such as Age Greater Than Sixty is represented as a boolean attribute with values False and True. In most cases, a property of the form X(Y) is represented as a discrete attribute X whose possible values are the various Y's; Air is an example.
+Cardiac Arrhythmia Database 
 
-There are two exceptions: when only one value of Y appears anywhere, for example Static Normal. In this case, X_Y appears as a boolean attribute. When one case can have two or more values of X, for example History. All possible values of History are treated as separate boolean attributes.
+The aim of this database is to determine the type of arrhythmia from electrocardiogram recordings. This database contains two hundred seventy-nine attributes, two hundred six of which are linear valued and the rest are nominal.
 
-Since boolean attributes only appear as positive conditions, each boolean attribute is assumed to be False unless noted as True. The value of multi-value discrete attributes taken as Unknown unless a value is specified.
+Concerning the study, the aim is to distinguish between the presence and absence of cardiac arrhythmia and to classify it into one of sixteen groups. Class one refers to normal electrocardiogram classes, classes two to fifteen refer to different classes of arrhythmia, and class sixteen refers to the rest of unclassified ones.
 
-The original case identifications, Patient One to Patient Two Hundred in the data file and Test One to Test Twenty-Six in the test file, have been added as a unique identifier attribute.
+For the time being, there exists a computer program that makes such a classification. However, there are differences between the cardiologist's and the program's classification. Taking the cardiologist's as a gold standard, we aim to minimize this difference by means of machine learning tools.
 
-Attribute Information:
+The database contains information about patients, including their age, sex, height, weight, QRS duration, P-R interval, Q-T interval, T interval, P interval, vector angles, and heart rate. Additionally, it includes information about the average width of various waves, including Q wave, R wave, S wave, R' wave, S' wave, and others, as well as the existence of certain characteristics, such as ragged R wave, diphasic derivation of R wave, and others.
 
-Age Greater Than Sixty: False, True.
-Air: Mild, Moderate, Severe, Normal, Profound.
-Air Bone Gap: False, True.
-AR C: Normal, Elevated, Absent.
-AR U: Normal, Absent, Elevated.
-Bone: Mild, Moderate, Normal, Unmeasured.
-Bone Abnormal: False, True.
-BSER: Normal, Degraded.
+There are also amplitude values for various waves, including JJ wave, Q wave, R wave, S wave, R' wave, S' wave, P wave, and T wave. Furthermore, the database includes information about the sum of areas of all segments divided by ten and other calculations related to wave forms.
 
-Class: Cochlear Unknown, Mixed Cochlear Age Fixation, Possible Central, Mixed Cochlear Age Otitis Media, Mixed Possible Noise OM, Cochlear Age, Normal Ear, Cochlear Possible Noise, Cochlear Age and Noise, Acoustic Neuroma, Mixed Cochlear Unknown Ser OM, Conductive Discontinuity, Retrocochlear Unknown, Conductive Fixation, Bell's Palsy, Cochlear Noise and Heredity, Mixed Cochlear Unknown Fixation, Otitis Media, Possible Meniere's, Possible Brainstem Disorder, Cochlear Age Plus Possible Meniere's, Mixed Cochlear Age S OM, Mixed Cochlear Unknown Discontinuity, Mixed Possible Central OM.
+Class labels include normal, ischemic changes, old anterior myocardial infarction, old inferior myocardial infarction, sinus tachycardia, sinus bradycardia, ventricular premature contraction, supraventricular premature contraction, left bundle branch block, right bundle branch block, first-degree atrioventricular block, second-degree atrioventricular block, third-degree atrioventricular block, left ventricle hypertrophy, atrial fibrillation or flutter, and others.
 
-Keywords: Audiology, Machine Learning, Medicine, Standardized Database, Boolean Attributes, Discrete Attributes.
+Keywords: Cardiac Arrhythmia, Electrocardiogram, Machine Learning, Classification, Medicine.

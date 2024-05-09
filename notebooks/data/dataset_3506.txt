@@ -1,29 +1,15 @@
-Intel Stock Prices Historical Data (INTC)
-Tags: Machine Learning, Manufacturing
+This dataset contains QSAR data showing activity values of several compounds on drug target Mitogen-Activated Protein Kinase Kinase Kinase Three, and it has seventy-five rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median Pseudo-pCI Fifty.
 
-Context 
-Intel Corporation designs, manufactures, and sells essential technologies for the cloud, smart, and connected devices worldwide. The company operates through several business segments, including Data Center Group, Internet of Things Group, Mobileye, NAND Flash Memory and Storage Solutions Group, Programmable Solutions Group, Client Computing Group, and others. 
+The features represent FCFP Six One Thousand Twenty-Four Bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-It offers a wide range of platform products, such as central processing units and chipsets, as well as system-on-chip and multichip packages. Additionally, the company provides non-platform or adjacent products, which include accelerators, boards and systems, connectivity products, and memory and storage products.
+Features: Molecule ChEMBL ID, and nine hundred twenty-six more...
 
-Moreover, Intel Corporation offers Internet of things products, comprising high-performance compute solutions for targeted verticals and embedded applications. The company also provides computer vision and machine learning-based sensing, data analysis, localization, mapping, and driving policy technology. Its customers include original equipment manufacturers, original design manufacturers, and cloud service providers.
+This dataset is part of the MetaQSAR project. Please cite this dataset when using it.
 
-The company has collaborated with various organizations, such as University of California San Francisco's Center for Digital Health Innovation, Fortanix, and Microsoft Azure, to establish a computing platform with privacy-preserving analytics to accelerate the development and validation of clinical algorithms. Another collaboration is with Inventec Corporation.
+The dataset is related to economics, life science, and MTL QSAR, and it belongs to the study three.
 
-Intel Corporation was founded and is headquartered in Santa Clara, California.
+Mitogen-Activated Protein Kinase Kinase Kinase Three is a single protein preferred name, also known as MAP Three K Three, MAPK/ERK Kinase Kinase Three, and MEKK Three. It is an enzyme, kinase, protein kinase, and STE protein kinase group, specifically STE protein kinase STE Eleven family, and STE protein kinase MEKK Two.
 
-Code 
-To download historical stock price data, a simple Python script can be used:
+The organism is Homo sapiens, and it is classified under enzyme, kinase, protein kinase, STE protein kinase group, and STE protein kinase STE Eleven family.
 
-import yfinance as yf
-df = yf.download(tickers="INTC")
-df.to_csv('INTC.csv')
-
-Acknowledgements 
-This historical data was collected using a single line of Python code leveraging the Yahoo Finance API and the yfinance library.
-
-Features 
-The dataset includes several columns, namely date, open, high, low, close, adjusted close, and volume.
-
-Keywords: 
-Intel Corporation, Cloud Computing, Machine Learning, Internet of Things, Computer Vision, Manufacturing
+Keywords: QSAR, Mitogen-Activated Protein Kinase Kinase Kinase Three, FCFP, Molecular Fingerprints, MetaQSAR, economics, life science, MTL QSAR.

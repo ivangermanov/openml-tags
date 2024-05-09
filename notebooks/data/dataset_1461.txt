@@ -1,16 +1,9 @@
-**QSAR-TID-12366**
-**Tags:** Machine Learning, MTLQSAR, Study Three, Transportation
-**Dataset:** MetaQSAR Project - September 2015
-**Citation:** This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12366.
+The Bank Marketing dataset is related to direct marketing campaigns of a Portuguese banking institution. These marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to assess whether the product, namely a bank term deposit, would be subscribed or not.
 
-The dataset has one hundred sixty-two rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent Fingerprint Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+The classification goal is to predict if the client will subscribe a term deposit. This dataset contains seventeen input variables and one output variable. The input variables include bank client data, such as age, job, marital status, education, and whether they have credit in default. It also includes information related to the last contact of the current campaign, including the contact communication type, day, and month of the last contact, as well as the duration of the last contact. Additionally, there are other attributes, including the number of contacts performed during this campaign and for this client, the number of days that passed by after the client was last contacted from a previous campaign, the number of contacts performed before this campaign and for this client, and the outcome of the previous marketing campaign.
 
-This dataset is related to the Hepatitis C Virus Polyprotein, specifically the genotype one a isolate one. The protein target classification is described as a single protein. The description relationship accession genome polyprotein is also classified as a single protein.
+The output variable is whether the client has subscribed a term deposit. This dataset does not contain any missing values.
 
-The scraped data includes information about the protein target, such as its preferred name, synonyms, organism, species group, and protein target classification. Additionally, there is information about the gene ontology, including biological processes, cellular components, and molecular functions.
+There are four versions of this dataset, including bank-additional-full with all examples and twenty inputs, bank-additional with ten percent of the examples and twenty inputs, bank-full with all examples and seventeen inputs, and bank with ten percent of the examples and seventeen inputs. The smaller datasets are provided to test more computationally demanding machine learning algorithms.
 
-The gene ontology biological processes include virus-host interaction, suppression of host innate immune response, and disruption of host antiviral defense response. The cellular components include host cell plasma membrane, host cell cytoplasm, and virion component. The molecular functions include nucleotide binding, RNA binding, and ATP binding.
-
-Furthermore, the dataset includes information about the protein-protein interactions, including interaction with host cell proteins and other viral proteins. There is also information about the protein structure, including its domains and motifs.
-
-**Keywords:** QSAR, Machine Learning, Hepatitis C Virus, Polyprotein, Gene Ontology, Protein-Protein Interaction, Protein Structure.
+Keywords: Bank Marketing, direct marketing, term deposit, Portuguese banking institution, phone calls.

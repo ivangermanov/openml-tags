@@ -1,17 +1,15 @@
-Cause-Effect Pairs Database is a growing collection of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+This dataset contains QSAR data showing activity values of several compounds on drug target Alpha One A Adrenergic Receptor, and it has multiple rows and numerous features representing FCFP molecular fingerprints which were generated from SMILES strings.
 
-Some pairs have high-dimensional variables, and for machine readability, the relevant information about these variables is encoded in metadata. This metadata contains essential details, including the number of pairs, the first and last columns of the cause variable, the first and last columns of the effect variable, and the dataset weight.
+The features do not usually require missing value imputation as all bits are generated. They include MOLECULE CHEMBL ID and MEDIAN PXC Fifty.
 
-The dataset weight is crucial when calculating the average performance of causal inference methods to prevent bias introduced by having multiple copies of essentially the same data. For instance, pairs fifty-six to sixty-three are examples of this scenario.
+The dataset was obtained through the MetaQSAR project in September and contains information about the Alpha One A Adrenergic Receptor, which is a single protein with multiple synonyms including ADRA One A, Alpha One A Adrenoreceptor, and others.
 
-When utilizing this dataset in a publication, please cite the corresponding paper, which provides more detailed information about the dataset in its supplement. This comprehensive resource offers valuable insights into distinguishing cause from effect using observational data, along with various methods and benchmarks.
+The receptor is primarily found in the Oryctolagus cuniculus species group and belongs to the one membrane receptor family, specifically the small molecule receptor subfamily, and the monoamine receptor sub-subfamily.
 
-The datasets, ranging from pair0001 to pair0041, originate from the UCI Machine Learning Repository. These datasets were initially published by the University of California, School of Information and Computer Science.
+The receptor is described as having multiple relationships, including being a component of the nucleus, nucleoplasm, cytoplasm, cytosol, plasma membrane, caveola, membrane, nuclear membrane, and intracellular membrane-bounded organelle.
 
-An overview of all data pairs reveals the following:
+It also has multiple functions, including G protein-coupled receptor activity, adrenergic receptor activity, alpha one adrenergic receptor activity, and protein heterodimerization activity.
 
-Variable one and Variable two are paired together from various datasets, accompanied by their corresponding ground truth values. For instance, pair0004 consists of Altitude and Sunshine Hours from the German Weather Service (DWD) dataset, where Altitude has a causal effect on Sunshine Hours.
+Furthermore, the receptor is involved in various biological processes, including the MAPK cascade, negative regulation of heart rate involved in baroreceptor response to increased systemic arterial blood pressure, norepinephrine-epinephrine vasoconstriction involved in regulation of systemic arterial blood pressure, positive regulation of heart rate by epinephrine-norepinephrine, and many others.
 
-The German Weather Service dataset was obtained from three hundred forty-nine weather stations across Germany. The data was accessed through the official website of the Deutscher Wetterdienst.
-
-Keywords: Cause-Effect Pairs, Causal Inference, Machine Learning, Graphical Models, Computer Systems, MaRDI, TA3
+Keywords: QSAR, Alpha One A Adrenergic Receptor, FCFP molecular fingerprints, MetaQSAR project, G protein-coupled receptor activity, adrenergic receptor activity, biological processes.

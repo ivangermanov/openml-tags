@@ -1,36 +1,13 @@
-Monks Problems One
+House Eight L Dataset: Demographics, Economics 
 
-The Monks Problems were created during the Second European Summer School on Machine Learning, which took place in July nineteen ninety-one at the Corsendonk Priory. The attendees, consisting of monks from the priory, were overwhelmed by the vast array of machine learning algorithms presented during the event. They sought to find a way to compare these algorithms and determine which ones were optimal and which ones should be avoided.
+This database was carefully crafted based on information provided by the United States Census Bureau, specifically from the Summary Tape File One, which was collected as part of the Nineteen Ninety US census. The data consists mainly of counts accumulated at various survey levels, with a focus on the State-Place level. Information from all fifty states was gathered for this dataset. To make the data more meaningful, most of the counts were transformed into suitable proportions.
 
-As a result, they designed a simple task, known as the Monks Problems, to evaluate the performance of different machine learning algorithms. The first problem, also referred to as Monk-One, involves a binary outcome based on a logical formula. This formula states that either attribute one equals attribute two, or attribute five equals one.
+There are four distinct datasets derived from this database: House Eight H, House Eight L, House Sixteen H, and House Sixteen L. All of these datasets share a common goal – to predict the median price of houses in a given region based on its demographic makeup and the state of its housing market. The number in each dataset's name indicates the number of attributes present, while the letter suffix provides a rough estimate of the task's difficulty level. Datasets labeled as Low have attributes that are more closely correlated, making the task easier, whereas those labeled as High have attributes with higher variance or lower correlation, making the task more challenging.
 
-This dataset combines the original training and test sets, allowing for alternative sampling procedures. The original train-test splits can still be accessed through one of the OpenML tasks.
+The original source of this dataset is the DELVE repository of data, which has been made available through a collection of regression datasets.
 
-Attribute Information:
+Characteristics of this dataset include twenty-two thousand seven hundred eighty-four cases and nine continuous attributes.
 
-* Attribute One: takes on values one, two, or three
-* Attribute Two: takes on values one, two, or three
-* Attribute Three: takes on values one or two
-* Attribute Four: takes on values one, two, or three
-* Attribute Five: takes on values one, two, three, or four
-* Attribute Six: takes on values one or two
+Features of interest include population characteristics and housing market indicators.
 
-Relevant Papers:
-
-The Monks Problems - A Performance Comparison of Different Learning Algorithms
-
-Features:
-
-class, Attribute One, Attribute Two, Attribute Three, Attribute Four, Attribute Five, Attribute Six
-
-Dataset Information:
-
-Additional Information:
-
-The Monks Problems served as the foundation for the first international comparison of machine learning algorithms. The outcome of this comparison is summarized in a technical report. One notable aspect of this comparison is that it was conducted by a group of researchers, each advocating for the technique they tested. This approach reduces bias and provides a more accurate reflection of the generalization behavior of the learning techniques when applied by knowledgeable users.
-
-There are three Monks Problems, all sharing the same domain. One of the problems includes added noise. Each problem has been divided into a training and test set.
-
-Has Missing Values?: No
-
-Keywords: Monks Problems, machine learning, algorithms, comparison, performance, evaluation.
+Keywords: demographics, economics, census data, housing market, median house price, regression analysis.

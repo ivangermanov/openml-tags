@@ -1,29 +1,31 @@
-Indian Card Payment Data Set 
+This dataset contains QSAR data showing activity values of several compounds on drug target Insulin Receptor, and it has multiple rows and features including IDs and class feature.
 
-Tags: Agriculture, Machine Learning 
+The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
 
-Context 
-The card payments data is published by the Reserve Bank of India on a monthly basis. This comprehensive dataset provides valuable insights into the methods of payment used in retail transactions and ATM transactions across India. Specifically, it covers payments made via debit cards, credit cards, and ATMs, offering a detailed understanding of the trends and patterns of card-based payments in India.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Content 
-This extensive dataset contains monthly statistics from April 2011 to August 2019, encompassing a wide range of information. This includes:
+This dataset is part of the MetaQSAR project.
 
-* The total number of ATMs deployed on-site by banks.
-* The total number of ATMs deployed off-site by banks.
-* The total number of Point of Sale (POS) terminals deployed online by banks.
-* The total number of POS terminals deployed offline by banks.
-* The total number of outstanding credit cards issued, adjusted for withdrawn or cancelled cards.
-* The total number of financial transactions conducted using credit cards at ATMs.
-* The total number of financial transactions conducted using credit cards at POS terminals.
-* The total value of financial transactions conducted using credit cards at ATMs.
-* The total value of financial transactions conducted using credit cards at POS terminals.
-* The total number of outstanding debit cards issued, adjusted for withdrawn or cancelled cards.
-* The total number of financial transactions conducted using debit cards at ATMs.
-* The total number of financial transactions conducted using debit cards at POS terminals.
-* The total value of financial transactions conducted using debit cards at ATMs.
-* The total value of financial transactions conducted using debit cards at POS terminals.
+The insulin receptor is a transmembrane receptor that plays a crucial role in various cellular processes including glucose uptake, fat metabolism, and protein synthesis. It is activated by insulin and insulin-like growth factors, leading to a cascade of downstream signaling events.
 
-Acknowledgments 
-The data is sourced from the Reserve Bank of India's monthly statistics.
+In this dataset, the activity values are expressed as pseudo-pCI50, which is a measure of the potency of a compound in inhibiting or activating the insulin receptor.
 
-Keywords: card payments, Reserve Bank of India, debit cards, credit cards, ATMs, Point of Sale terminals, financial transactions.
+The molecular fingerprints used in this dataset are based on the FCFP6 algorithm, which generates a binary vector representing the presence or absence of particular molecular features.
+
+The insulin receptor is a key therapeutic target for the treatment of diabetes and related disorders, and QSAR models can be used to predict the activity of novel compounds against this target.
+
+Expression Atlas provides information on gene expression levels of the insulin receptor gene in different tissues and conditions.
+
+Go Component provides information on the cellular component ontology annotations associated with the insulin receptor gene.
+
+Go Function provides information on the molecular function ontology annotations associated with the insulin receptor gene.
+
+Go Process provides information on the biological process ontology annotations associated with the insulin receptor gene.
+
+PharmGKB provides information on the pharmacogenomics of the insulin receptor gene.
+
+Reactome provides information on the pathways and reactions involving the insulin receptor gene.
+
+UniProt provides information on the protein sequence and structure of the insulin receptor gene.
+
+Keywords: QSAR, insulin receptor, molecular fingerprints, FCFP6, diabetes, gene expression, cellular component, molecular function, biological process, pharmacogenomics, pathways.

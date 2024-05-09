@@ -1,0 +1,37 @@
+Communities and Crime 
+
+The data combines socioeconomic data from the US Census, law enforcement data from the US Law Enforcement Management and Administrative Statistics Survey, and crime data from the FBI Uniform Crime Report.
+
+Data Set Characteristics:
+
+Multivariate
+Attribute Characteristics: Real
+Associated Tasks: Regression
+Missing Values: Yes
+Area: Social
+Date Donated: 
+Source:
+
+Data Set Information:
+
+Many variables are included so that algorithms that select or learn weights for attributes could be tested. Clearly unrelated attributes were not included; attributes were picked if there was any plausible connection to crime, plus the attribute to be predicted, Per Capita Violent Crimes. 
+
+The variables included in the dataset involve the community, such as the percentage of the population considered urban, and the median family income, and involving law enforcement, such as per capita number of police officers, and percentage of officers assigned to drug units. 
+
+The Per Capita Violent Crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault. 
+
+There was apparently some controversy in some states concerning the counting of rapes. These resulted in missing values for rape, which resulted in incorrect values for Per Capita Violent Crime. These cities are not included in the dataset. 
+
+Many of these omitted communities were from the Midwestern United States.
+
+Data is described below based on original values. All numeric data was normalized into the decimal range zero point zero to one point zero using an unsupervised, equal interval binning method. 
+
+Attributes retain their distribution and skew. For example, an attribute described as Mean People per Household is actually the normalized version of that value. 
+
+The normalization preserves rough ratios of values within an attribute, but does not preserve relationships between values between attributes.
+
+A limitation was that the Law Enforcement Management and Administrative Statistics Survey was of the police departments with at least one hundred officers, plus a random sample of smaller departments. 
+
+For our purposes, communities not found in both census and crime datasets were omitted. Many communities are missing Law Enforcement Management and Administrative Statistics Survey data.
+
+Keywords: socioeconomic data, law enforcement data, crime data, regression, multivariate analysis, social area.

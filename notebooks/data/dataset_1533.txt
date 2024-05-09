@@ -1,35 +1,15 @@
-QSAR-TID-186 Tags: Computer Systems, Human Activities, MTLQSAR, study_3 
+Volcanoes on Venus - JARtool Experiment Data Set Experiment: B Three
 
-This dataset contains QSAR data showing activity values of several compounds on drug target Tetanus Toxin, and it has fourteen rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+The data was collected by the Magellan spacecraft over an approximately four-year period from nineteen ninety to nineteen ninety-four. The objective of the mission was to obtain global mapping of the surface of Venus using Synthetic Aperture Radar. A more detailed discussion of the mission and objectives is available at Jet Propulsion Laboratory's Magellan webpage.
 
-Features: Molecule ChEMBL ID, six hundred twenty-four bit molecular fingerprint zero, six hundred twenty-four bit molecular fingerprint one, six hundred twenty-four bit molecular fingerprint two, and so on up to nine hundred twenty-six.
+There are some spatial dependencies. For example, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts. There are labels that provide some measure of subjective uncertainty (definitely a volcano, probably, possibly, only a pit is visible).
 
-Scraped Data: 
-ID: ChEMBL two thousand thirty-six 
-Type: Single Protein 
-Preferred Name: Tetanus Toxin 
-Synonyms: Tentoxylysin, Tetanus Toxin, Tetanus Toxin Chain H, Tetanus Toxin Chain L, Tetanus Toxin Heavy Chain 
+The images are one thousand twenty-four by one thousand twenty-four pixels. The pixel values are in the range from zero to two fifty-five. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter. Lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-Organism: Clostridium Tetani strain Massachusetts slash E eighty-eight 
-Species Group: No 
-Protein Target Classification: 
+Relevant papers include those discussing the Magellan mission summary, radar performance, and data products, as well as learning to recognize volcanoes on Venus and knowledge discovery in large image databases dealing with uncertainties in ground truth.
 
-Description Relationship Accession Tetanus Toxin Single Protein 
+Tags: Chemistry, Life Science, Study Fifty-Two, Study Seven
 
-Rows per page: fifty-one to one of one 
+Features: 
 
-Go Component: extracellular region, cytosol, plasma membrane, endocytic vesicle membrane, clathrin-coated endocytic vesicle membrane 
-
-Go Function: metalloendopeptidase activity, protein binding, peptidase activity, metallopeptidase activity, zinc ion binding, protein transmembrane transporter activity, hydrolase activity, metal ion binding, toxin activity 
-
-Go Process: proteolysis, modulation of process of another organism, negative regulation of neurotransmitter secretion, protein transmembrane transport 
-
-canSAR-Target: P zero four nine five eight 
-IntAct: P zero four nine five eight 
-Reactome: Toxicity of Tetanus Toxin tet X 
-UniProt: P zero four nine five eight 
-InterPro: Bot slash tet X LC, Kunitz inhibitor STI-like superfamily, Toxin trans, Toxin rcpt-bd N, Toxin rcpt-bd C, ConA-like dom sf, Clostridium toxin transloc 
-Pfam: Peptidase M twenty-seven, Toxin R bind C, Toxin trans, Toxin R bind N 
-PDBe: one A eight D, one AF nine, one D zero H, one DF Q, one DI W, one DLL, one F V two, one F V three, one Y VG, one Y X W, one YY N, one Z seven H, three H MY, three H N one, four J one L, five N zero B, five N zero C, seven BY four, seven BY five
-
-Keywords: QSAR, Tetanus Toxin, Molecular Fingerprints, SMILES Strings, Pipeline Pilot Program, Metallopeptidase Activity, Proteolysis, Neurotransmitter Secretion, Toxin Activity.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Global Mapping, Image Quality, Ground Truth, Uncertainty, Topography, Surface Roughness.

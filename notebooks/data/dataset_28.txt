@@ -1,19 +1,17 @@
-Postoperative Patient Data
+Optical Recognition of Handwritten Digits 
 
-Tags: Health, Medicine, Study One, Study Forty-One, UCI
+Tags: Images, Machine Learning, OpenML-CC18, OpenML100, study_1, study_123, study_14, study_34, study_37, study_41, study_50, study_52, study_7, study_70, study_76, study_98, study_99, UCI 
 
-The classification task of this database is to determine where patients in a postoperative recovery area should be sent to next. This decision is crucial because hypothermia is a significant concern after surgery. As a result, the attributes correspond roughly to body temperature measurements.
+The optical recognition of handwritten digits database is a collection of images of handwritten digits. 
 
-The dataset was created in June 1993 and has been used in various studies, including one published in Proceedings of the Fourth International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems, and another published in Computers in Nursing.
+We used preprocessing programs made available by National Institute of Standards and Technology to extract normalized bitmaps of handwritten digits from a preprinted form. Thirty people contributed to the training set and thirteen to the test set. Thirty-two by thirty-two bitmaps are divided into non-overlapping blocks of four by four and the number of on pixels are counted in each block. This generates an input matrix of eight by eight where each element is an integer in the range zero to sixteen. This reduces dimensionality and gives invariance to small distortions.
 
-Relevant information about this dataset includes the fact that it contains ninety instances and nine attributes, including the decision or class attribute. The attributes include the patient's internal temperature, surface temperature, oxygen saturation, last measurement of blood pressure, stability of surface temperature, stability of core temperature, stability of blood pressure, perceived comfort at discharge, and discharge decision.
+The database has been previously used in various studies, including methods of combining multiple classifiers and their applications to handwritten digit recognition.
 
-The patient's internal temperature is categorized as high if it is greater than thirty-seven degrees Celsius, mid if it is greater than or equal to thirty-six and less than or equal to thirty-seven, and low if it is less than thirty-six. The patient's surface temperature is categorized as high if it is greater than thirty-six point five, mid if it is greater than or equal to thirty-six point five and less than or equal to thirty-five, and low if it is less than thirty-five.
+There are sixty-four input attributes and one class attribute in this database. All input attributes are integers in the range zero to sixteen. The last attribute is the class code ranging from zero to nine.
 
-Oxygen saturation is categorized as excellent if it is greater than or equal to ninety-eight percent, good if it is greater than or equal to ninety and less than ninety-eight, fair if it is greater than or equal to eighty and less than ninety, and poor if it is less than eighty. Blood pressure is categorized as high if it is greater than one hundred thirty over ninety, mid if it is less than or equal to one hundred thirty over ninety and greater than or equal to ninety over seventy, and low if it is less than ninety over seventy.
+There are no missing attribute values in this database.
 
-Stability of surface temperature, core temperature, and blood pressure are each categorized as stable, moderately stable, or unstable. Perceived comfort at discharge is measured as an integer between zero and twenty. Discharge decision is categorized as I if the patient is sent to the intensive care unit, S if the patient is prepared to go home, and A if the patient is sent to the general hospital floor.
+Class distribution is as follows: class zero has three hundred seventy-six examples in the training set, class one has three hundred eighty-nine examples, class two has three hundred eighty examples, class three has three hundred eighty-nine examples, class four has three hundred eighty-seven examples, class five has three hundred seventy-six examples, class six has three hundred seventy-seven examples, class seven has three hundred eighty-seven examples, class eight has three hundred eighty examples, and class nine has three hundred eighty-two examples.
 
-There are three missing values in the comfort attribute. The class distribution is two for I, twenty-four for S, and sixty-four for A.
-
-Keywords: postoperative patient data, hypothermia, body temperature, oxygen saturation, blood pressure, discharge decision, comfort level, medical diagnosis.
+Keywords: handwritten digits, image recognition, machine learning, National Institute of Standards and Technology, classification.

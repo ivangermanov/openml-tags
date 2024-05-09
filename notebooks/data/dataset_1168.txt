@@ -1,44 +1,13 @@
-The Steel Plates Faults Data Set is a collection of data related to steel plates' faults, categorized into seven distinct types. The primary objective of this dataset was to train machine learning models for automatic pattern recognition. This dataset comprises twenty-seven features that describe each fault, including location and size, as well as seven binary features that indicate the type of fault.
+We consider the problem of scheduling tasks on multiple servers, each with limited capacity for central processing unit, memory, and input/output attributes. These tasks have specific durations, earliest start times, and latest end times, as well as resource requirements for central processing unit, memory, and input/output attributes. The tasks can be scheduled on any of the multiple servers, as long as the total resource consumption does not exceed the server's capacity.
 
-These binary features include Pastry, Z Scratch, K Scratch, Stains, Dirtiness, Bumps, and Other Faults. The latter is often used as a binary classification target, distinguishing between common and other faults.
+All tasks must be completed within their specified time frames, which do not extend beyond midnight between two consecutive days. Once a task is started, it cannot be interrupted and must run for its entire duration. Furthermore, if a server is utilized by a task, it must be operational during that time.
 
-Attribute information includes:
+In addition to the costs associated with running the allocated tasks, the server also consumes idle power when it is turned on. There are also startup and shutdown costs incurred every time a server is powered on or off. At the beginning and end of the planning period, all servers are turned off.
 
-* X Minimum
-* X Maximum
-* Y Minimum
-* Y Maximum
-* Pixels Areas
-* X Perimeter
-* Y Perimeter
-* Sum of Luminosity
-* Minimum of Luminosity
-* Maximum of Luminosity
-* Length of Conveyer
-* Type of Steel A Three Hundred
-* Type of Steel A Four Hundred
-* Steel Plate Thickness
-* Edges Index
-* Empty Index
-* Square Index
-* Outside X Index
-* Edges X Index
-* Edges Y Index
-* Outside Global Index
-* Log of Areas
-* Log X Index
-* Log Y Index
-* Orientation Index
-* Luminosity Index
-* Sigmoid of Areas
-* Pastry
-* Z Scratch
-* K Scratch
-* Stains
-* Dirtiness
-* Bumps
-* Class: Other Faults
+The electricity price for the data center varies throughout the day and is unknown in advance. A forecast is used to generate a schedule, and the actual cost is determined after the fact by applying the real-time electricity price to the energy consumption in each time period. A single forecast of the price is provided, but there may be significant discrepancies between the forecast and actual prices, allowing for opportunities to create more accurate forecasts using historical data on demand and prices, as well as prior forecast information. It is important to note that a highly accurate forecast does not necessarily guarantee a low-cost schedule.
 
-This dataset has been referenced in several papers, including one on a new meta-classifier and another on the theory of independent judges.
+In the forecasting problem, we aim to predict the actual electricity price for the next day based on historical and forecasted data. Historical data is available from September 2011 onward, with missing values denoted by question marks.
 
-Keywords: Steel Plates, Faults, Machine Learning, Pattern Recognition, Binary Classification
+The data includes various fields, including date and time, holiday information, day of the week, week of the year, day, month, year, half-hour period of the day, forecasted wind production, national load forecast, price forecast, actual temperature, actual wind speed, carbon dioxide intensity, actual wind energy production, actual national system load, and actual price.
+
+Keywords: scheduling, forecasting, electricity price, cloud computing, resource allocation, energy consumption.

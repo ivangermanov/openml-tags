@@ -1,9 +1,15 @@
-Bridges Version One 
+Shuttle Landing Control Dataset 
 
-Tags: Artificial, Study 
+Tags: Astronomy, Computer Systems, Myth Busting, Study 
 
-Features: Identification, River, Location, Erected, Purpose, Length, Lanes, Clearance Gauge, Type or Design, Material, Span, Relative Level, Type 
+The Shuttle Landing Control dataset is a small database that contains information about the conditions under which an autolanding would be preferable to manual control of the spacecraft during space shuttle landings.
 
-(Note: I've kept the features that were readable and skipped the ones that weren't, such as REL-L, T-OR-D, CLEAR-G)
+The autolander design team at NASA used a system called Rulemaster to generate comprehensive rules for determining these conditions. These rules were intended to provide clear guidance on when to use automatic control versus manual control during landing.
 
-Keywords: Bridges, Artificial, Study, Identification, River, Location
+The dataset contains seven attributes, including the class attribute, which indicates whether to use manual or automatic control. The other attributes include stability, error, sign, wind, magnitude, and visibility. Each of these attributes has a specific set of values, some of which may be marked as "don't care" values, indicating that they are not relevant to the decision-making process.
+
+There are no missing attribute values in the dataset, but several attributes have multiple "don't care" values. The class distribution is also provided, showing that the majority of instances fall into the category of using automatic control.
+
+The Shuttle Landing Control dataset is a valuable resource for researchers and developers working on autonomous systems, particularly those involved in space exploration and astronautics.
+
+Keywords: Space Shuttle, Autolanding, Autonomous Systems, Astronautics, Manual Control, Automatic Control, Rule-Based Systems

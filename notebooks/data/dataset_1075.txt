@@ -1,3 +1,31 @@
-The dataset named Binary Next Generation, tagged with Artificial, BNG, Chemistry, and Life Science, contains various features including X Box, Y Box, Width, Height, On Pixel, X Bar, Y Bar, X Squared Bar, Y Squared Bar, XY Bar, X Squared Y Bar, XY Squared Bar, X Edge, X Edge Variance for Y, Y Edge, and Y Edge Variance for X.
+This is a PROMISE Software Engineering Repository data set made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE data sets, then please follow the acknowledgment guidelines posted on the PROMISE repository webpage.
 
-Keywords: Binary Next Generation, Artificial, Chemistry, Life Science, Dataset Features
+The Transition of the DataTrievE Product from Version Six Point Zero to Version Six Point One
+
+Sources:
+The DataTrievE project carried out at Digital Engineering Italy.
+
+Past Usage:
+A hybrid approach to analyze empirical software engineering data and its application to predict module fault-proneness in maintenance.
+
+Relevant Information:
+The DataTrievE product underwent both adaptive maintenance (transferred from platform Open VMS/VAX to platform Open VMS/Alpha) and corrective maintenance (fixing failures reported from customers) at the Gallarate site of Digital Engineering in Italy. The product was originally developed in the Bliss language, an expression language that is block-structured, with exception handling facilities, coroutines, and a macro system. Later, some parts were added or rewritten in the C language. Therefore, the overall structure of DataTrievE consists of C functions and Bliss subroutines. The empirical study reports only the Bliss part, which is the larger one. In this context, we refer to a Bliss module as a set of declarations and subroutines usually belonging to one file. Over one hundred Bliss modules were studied.
+
+It was essential for the DataTrievE team to comprehend how the characteristics of the modules and transition process correlated with code quality. The objective of the data analysis was to investigate whether it was possible to classify modules as non-faulty or faulty based on a set of measures collected during the project.
+
+Attribute Information:
+
+* Lines of Code Six Point Zero: the number of lines of code of module m in version six point zero.
+* Lines of Code Six Point One: the number of lines of code of module m in version six point one.
+* Added Lines of Code: the number of lines of code added to module m in version six point one that were not present in module m in version six point zero.
+* Deleted Lines of Code: the number of lines of code deleted from module m in version six point zero that were no longer present in module m in version six point one.
+* Different Blocks: the number of different blocks in module m between versions six point zero and six point one.
+* Modification Rate: the rate of modification of module m, calculated as (added lines of code plus deleted lines of code) divided by (lines of code six point zero plus added lines of code).
+* Module Knowledge: a subjective variable expressing the project team's knowledge on module m (low or high).
+* Reused Lines of Code: the number of lines of code of module m in version six point zero reused in module m in version six point one.
+* Faulty Six Point One: its value is zero for modules with no faults found and one for modules with faults.
+
+Class Distribution:
+Non-faulty modules account for ninety-one point five four percent, while faulty modules account for eight point four six percent.
+
+Keywords: DataTrievE, software engineering, fault-proneness, maintenance, code quality, module classification.

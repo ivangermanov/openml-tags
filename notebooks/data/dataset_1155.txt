@@ -1,15 +1,21 @@
-The One Hundred Plants Margin dataset is classified under the tags Chemistry, Life Science, and OpenML100. This dataset was sourced from the University of California, Irvine (UCI).
+GEMLeR provides a comprehensive collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating diverse quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, for classification, feature selection, or clustering algorithms.
 
-The description of this dataset is that it contains one hundred plant species leaves data set, specifically focusing on the margin of the leaves.
+The inspiration behind creating this repository stemmed from the growing need in the machine learning and bioinformatics communities for a unified collection of microarray classification problems that could be utilized by different researchers. This allows numerous classification or feature selection techniques to be compared to one another on the same set of problems.
 
-The sources of this dataset include the original owners of the color leaves samples, who collected the leaves at the Royal Botanic Gardens, Kew, UK.
+Each gene expression sample in the GEMLeR repository originates from the large, publicly available Expression Project for Oncology repository by the International Genomics Consortium. The primary objective of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions.
 
-This dataset provides information about the leaves, including their shape, texture, and margin features. Each feature is represented by a sixty-four element vector per leaf sample, which are taken as a contiguous descriptor for shape or histograms for texture and margin. There are three separate files, each corresponding to a specific feature problem: data based on shape, data based on texture, and data based on margin.
+The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-Each row in the dataset contains a sixty-four-element feature vector followed by the class label. There are a total of sixteen hundred samples, with sixteen samples per leaf class, and no missing values.
+Although numerous sources of gene expression data are available, the decision to utilize data from the Expression Project for Oncology repository was made due to several reasons, including:
 
-The attributes of this dataset include three sixty-four element feature vectors per sample.
+* Consistency of tissue sample processing procedures
+* Use of the same microarray platform for all samples
+* Availability of additional information for combined genotype-phenotype studies
+* Availability of a large number of samples for different tumor types
 
-Relevant papers related to this dataset include Plant Leaf Classification Using Probabilistic Integration of Shape, Texture and Margin Features, Plant Texture Classification Using Gabor Co-Occurrences, and Shape and Texture-Based Plant Leaf Classification.
+When publishing material based on GEMLeR datasets, please acknowledge the assistance received by utilizing this repository. This will facilitate others in obtaining the same datasets and replicating experiments.
 
-Keywords: plant species, leaves, margin, shape, texture, classification, botany, chemistry, life science.
+Features:
+ID Reference, and several other gene identifiers
+
+Keywords: gene expression, machine learning, microarray analysis, bioinformatics, oncology

@@ -1,20 +1,13 @@
-Banknote Authentication Dataset
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, for classification, feature selection, or clustering algorithms.
 
-Tags: Chemistry, Life Science, OpenML-CC18, OpenML100, Study
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be used by different researchers. This way, many different classification or feature selection techniques can finally be compared to each other on the same set of problems.
 
-Source: UCI Machine Learning Repository
+The origin of the data lies in the fact that each gene expression sample in the GEMLeR repository comes from a large publicly available Expression Project for Oncology repository by the International Genomics Consortium. The goal of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions.
 
-This dataset is concerned with distinguishing between genuine and forged banknotes. The data was extracted from images taken from genuine and forged banknote-like specimens. To achieve this, an industrial camera typically used for print inspection was employed. The resulting images had a high resolution of four hundred by four hundred pixels. Furthermore, due to the object lens and distance to the investigated object, grayscale pictures with a high resolution of approximately six hundred sixty dots per inch were obtained.
+The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-A wavelet transform tool was utilized to extract features from these images. This process allowed for the identification of key characteristics that could be used to differentiate between genuine and forged banknotes.
+Although there are various other sources of gene expression data available, a decision to use data from the Expression Project for Oncology repository was made due to the consistency of tissue samples processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-The dataset consists of four attributes, which are:
+In case of publishing material based on GEMLeR datasets, please note the assistance you received by using this repository. This will help others to obtain the same datasets and replicate your experiments.
 
-* Variance of the wavelet transformed image, a continuous value
-* Skewness of the wavelet transformed image, a continuous value
-* Curtosis of the wavelet transformed image, a continuous value
-* Entropy of the image, a continuous value
-
-The class attribute serves as the target variable, presumably taking on a value of one for genuine banknotes and two for forged ones.
-
-Keywords: Banknote authentication, wavelet transform, image processing, forgery detection, machine learning.
+Keywords: gene expression datasets, machine learning algorithms, microarray classification, bioinformatics, Expression Project for Oncology, gene expression analysis, tumor samples, genotype-phenotype studies.

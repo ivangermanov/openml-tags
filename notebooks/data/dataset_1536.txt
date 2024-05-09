@@ -1,13 +1,11 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: three thousand thirty-five, and it has numerous rows and features including IDs and class feature.
+Volcanoes on Venus - JARtool Experiment Data Set Experiment: B Six
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from smiles strings. They were obtained using the pipeline pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The data was collected by the Magellan spacecraft over an approximately four-year period from nineteen ninety to nineteen ninety-four. The objective of the mission was to obtain global mapping of the surface of Venus using Synthetic Aperture Radar. A more detailed discussion of the mission and objectives is available at Jet Propulsion Laboratory's Magellan webpage.
 
-The dataset is part of the MetaQSAR project, and it was published in September two thousand fifteen. It should be cited accordingly.
+There are some spatial dependencies. For example, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts.
 
-The drug target is a single protein, specifically serine threonine protein kinase two, also known as CTCL tumor antigen se twenty-nine, hSLK, KIAA zero two zero four, and other synonyms. It belongs to the species group of homo sapiens, and its protein target classification is enzyme kinase protein kinase STE protein kinase group STE protein kinase STE twenty family STE protein kinase SLK subfamily.
+There are labels that provide some measure of subjective uncertainty, ranging from definitely a volcano to only a pit is visible. This labeling uncertainty problem is discussed further in relevant papers.
 
-It is described as a STE twenty-like serine threonine protein kinase, and it has relationships with other proteins. Its expression atlas shows various components, functions, and processes. Specifically, it is involved in nucleotide binding, protein kinase activity, protein serine threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, identical protein binding, protein homodimerization activity, cadherin binding, and protein serine kinase activity.
+The images are one thousand twenty-four by one thousand twenty-four pixels. The pixel values are in the range from zero to two hundred fifty-five. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter, while lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-Additionally, it participates in various biological processes, including protein phosphorylation, apoptotic process, phosphorylation, regulation of cell migration, cytoplasmic microtubule organization, regulation of apoptotic process, protein autophosphorylation, and regulation of focal adhesion assembly.
-
-Keywords: QSAR, machine learning, molecular fingerprints, serine threonine protein kinase, MetaQSAR project, drug target, protein kinase activity, biological processes.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Ground Truth, Labeling Uncertainty

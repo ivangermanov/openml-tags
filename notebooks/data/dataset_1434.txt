@@ -1,9 +1,13 @@
-The QSAR-TID-20151 dataset contains QSAR data showing activity values of several compounds on drug target Dipeptidyl Peptidase VIII. This dataset has multiple rows and features, including IDs and a class feature, namely, MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+**Duke Breast Cancer**
 
-The dataset was generated from the ChEMBL database, specifically from version seventeen. It consists of one thousand four hundred twenty-seven rows and one thousand twenty-six features. The features do not require missing value imputation since all bits are generated.
+Tags: Chemistry, Life Science
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive repository of QSAR datasets for machine learning modeling. The dataset is suitable for machine learning and statistical analysis.
+This dataset comes from the LIBSVM data repository. It has undergone preprocessing, which includes instance-wise normalization to mean zero and variance one, followed by feature-wise normalization to mean zero and variance one.
 
-Dipeptidyl Peptidase VIII is an enzyme that belongs to the serine protease family. It is involved in various biological processes, including proteolysis, immune response, and apoptotic process. Inhibitors of this enzyme have potential therapeutic applications.
+The original dataset consisted of forty-nine instances. However, five were removed due to conflicting classification results obtained through immunohistochemistry and protein immunoblotting assays. Additionally, two instances were rejected because of failed array hybridization. The remaining data was then split into training and validation sets, comprising thirty-eight and four instances, respectively.
 
-Keywords: QSAR, Dipeptidyl Peptidase VIII, machine learning, molecular fingerprints, ChEMBL database, MetaQSAR project, serine protease, proteolysis, immune response, apoptotic process.
+The dataset features a large number of attributes, including gene expressions.
+
+**Please cite:** A simple and efficient algorithm for gene selection using sparse logistic regression. Bioinformatics.
+
+Keywords: breast cancer, gene expression, logistic regression, bioinformatics, dataset, LIBSVM

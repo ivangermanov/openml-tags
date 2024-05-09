@@ -1,27 +1,36 @@
-Balance Scale Tags: Artificial, Machine Learning, OpenML-CC18, OpenML100, Shark-Tutorial-Demo-Tag, Study One, Study One Hundred Twenty Three, Study One Hundred Thirty Five, Study Fourteen, Study Thirty Four, Study Thirty Seven, Study Forty One, Study Fifty, Study Fifty Two, Study Seven, Study Seventy, Study Ninety Eight, Study Ninety Nine, UCI 
+This Automobile dataset consists of three types of entities: the specification of an automobile in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other automobiles. The second rating corresponds to the degree to which the automobile is more risky than its price indicates. Automobiles are initially assigned a risk factor symbol associated with its price. Then, if it is more risky or less, this symbol is adjusted by moving it up or down the scale. Actuarians call this process "symboling." A value of plus three indicates that the automobile is risky, minus three that it is probably pretty safe.
 
-The Balance Scale Weight and Distance Database was generated to model psychological experimental results. Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. 
+The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all automobiles within a particular size classification, such as two-door small, station wagons, sports/specialty, etc., and represents the average loss per car per year. Several of the attributes in the database could be used as a class attribute.
 
-The correct way to find the class is the greater of the product of the left distance and the left weight, and the product of the right distance and the right weight. If these two products are equal, then the balance scale is balanced.
+Sources include the 1985 Model Import Car and Truck Specifications, the 1985 Ward's Automotive Yearbook, Personal Auto Manuals from the Insurance Services Office, and the Insurance Collision Report from the Insurance Institute for Highway Safety.
 
-Attribute Description
-The attributes are the left weight, the left distance, the right weight, and the right distance.
+Attribute information includes:
 
-Relevant Papers 
-This database was created based on cognitive development models related to balance scale phenomena.
+* Symboling, ranging from minus three to plus three
+* Normalized Losses, a continuous value ranging from sixty-five to two hundred fifty-six
+* Make, including Alfa Romero, Audi, BMW, Chevrolet, Dodge, Honda, Isuzu, Jaguar, Mazda, Mercedes Benz, Mercury, Mitsubishi, Nissan, Peugeot, Plymouth, Porsche, Renault, Saab, Subaru, Toyota, Volkswagen, and Volvo
+* Fuel Type, either diesel or gas
+* Aspiration, either standard or turbo
+* Number of Doors, either four or two
+* Body Style, including hardtop, wagon, sedan, hatchback, and convertible
+* Drive Wheels, either four-wheel drive, front-wheel drive, or rear-wheel drive
+* Engine Location, either front or rear
+* Wheel Base, a continuous value ranging from eighty-six point six to one hundred twenty point nine
+* Length, a continuous value ranging from one hundred forty-one point one to two hundred eight point one
+* Width, a continuous value ranging from sixty point three to seventy-two point three
+* Height, a continuous value ranging from forty-seven point eight to fifty-nine point eight
+* Curb Weight, a continuous value ranging from one thousand four hundred eighty-eight to four thousand sixty-six
+* Engine Type, including DOHC, DOHCV, L, OHC, OHCF, OHCV, and rotor
+* Number of Cylinders, including eight, five, four, six, three, twelve, and two
+* Engine Size, a continuous value ranging from sixty-one to three hundred twenty-six
+* Fuel System, including one barrel, two barrels, four barrels, IDI, MFI, MPFI, SPDI, and SPFI
+* Bore, a continuous value ranging from two point five four to three point ninety-four
+* Stroke, a continuous value ranging from two point zero seven to four point one seven
+* Compression Ratio, a continuous value ranging from seven to twenty-three
+* Horsepower, a continuous value ranging from forty-eight to two hundred eighty-eight
+* Peak RPM, a continuous value ranging from four thousand one hundred fifty to six thousand six hundred
+* City MPG, a continuous value ranging from thirteen to forty-nine
+* Highway MPG, a continuous value ranging from sixteen to fifty-four
+* Price, a continuous value ranging from five thousand one hundred eighteen to forty-five thousand four hundred
 
-Dataset Information 
-Additional Information 
-This data set was generated to model psychological experimental results. Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. The correct way to find the class is the greater of the product of the left distance and the left weight, and the product of the right distance and the right weight. If these two products are equal, then the balance scale is balanced.
-
-Has Missing Values?
-No 
-
-Additional Variable Information 
-Class Name has three possible values: Left, Balanced, and Right.
-Left Weight has five possible values.
-Left Distance has five possible values.
-Right Weight has five possible values.
-Right Distance has five possible values.
-
-Keywords: Balance Scale, Psychological Experimental Results, Weight, Distance, Classification, Cognitive Development Models.
+Keywords: Automobile, Insurance Risk Rating, Normalized Losses, Symboling, Actuarian, Class Attribute, Vehicle Characteristics, Size Classification, Average Loss Payment.

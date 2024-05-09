@@ -1,0 +1,13 @@
+Covertype 
+
+Tags: Computer Systems, Social Media 
+
+This dataset is part of the tabular data benchmark and has been transformed in the same way. It belongs to the regression on numerical features benchmark.
+
+The Covertype dataset was originally sourced from the LibSVM repository. To use this dataset, please cite the relevant paper.
+
+The Covertype dataset has undergone several transformations to prepare it for use. First, the dataset was loaded in its unscaled form. Then, each column was normalized according to specific rules. Columns containing only one value, known as constant features, were set to zero and removed due to sparsity. Columns containing two values, known as binary features, had the most frequently occurring value set to zero, while the other value was set to one. Columns containing more than two values, known as multinary or real features, were divided by their standard deviation. Finally, duplicate lines were removed from the dataset.
+
+The Covertype dataset was also transformed from a multiclass classification problem into a binary classification problem.
+
+Keywords: Covertype, Tabular Data Benchmark, Regression, Numerical Features, Normalization, Standard Deviation, Binary Classification

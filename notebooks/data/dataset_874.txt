@@ -1,9 +1,7 @@
-Sylva Prior is a dataset derived from the Cover Type dataset, focusing on Ecology and Life Science. The primary task of Sylva is to classify forest cover types, specifically distinguishing between Ponderosa Pine and other types.
+Rabe Dataset Tags: Binarized, Chemistry, Life Science, Myth Busting, Study 
 
-The dataset originates from the United States Forest Service (USFS) Region 2 Resource Information System (RIS) data, where the forest cover type for thirty-by-thirty-meter cells is obtained. This has been transformed into a two-class classification problem.
+This dataset is a binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative. This classification system allows for a more simplified analysis of the data. The resulting classes are labeled as either Positive or Negative.
 
-There are two tracks in this dataset: the Agnostic Learning Track and the Prior Knowledge Track. The Agnostic Learning Track data consists of 216 input variables, where each pattern comprises four records: two true records matching the target and two randomly selected records. As a result, half of the features are distractors. On the other hand, the Prior Knowledge Track data is identical to the Agnostic Learning Track data, except that the distractors have been removed, and the feature identities have been revealed. In the Prior Knowledge Track, the original forest cover IDs are disclosed for training data.
+Features: The dataset includes several columns, although their specific titles are not descriptive.
 
-This dataset contains a total of 108 features, which include elevation, aspect, slope, horizontal distance to hydrology, vertical distance to hydrology, horizontal distance to roadways, hill shade at 9 am, noon, and 3 pm, horizontal distance to fire points, and various wilderness areas. Additionally, there are multiple soil types, ranging from Soil Type 1 to Soil Type 40, along with duplicate features of the aforementioned variables.
-
-Keywords: Ecology, Life Science, Forest Cover Types, Ponderosa Pine, Classification Problem, Distractors, Feature Identities, Wilderness Areas, Soil Types.
+Keywords: Binarized, Dataset, Classification, Target Feature, Nominal Target Feature, Mean, Positive, Negative

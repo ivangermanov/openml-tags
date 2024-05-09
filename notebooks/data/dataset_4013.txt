@@ -1,15 +1,13 @@
-KDD Cup 2009 Up Selling Dataset
+This dataset contains QSAR data showing activity values of several compounds on drug target TID 12268. It has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset belongs to the classification on categorical and numerical features benchmark.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Customer Relationship Management (CRM) is a crucial element of modern marketing strategies. The KDD Cup 2009 provides an opportunity to work on large marketing databases from the French Telecom company Orange to predict the propensity of customers to switch providers (churn), buy new products or services (appetency), or buy upgrades or add-ons proposed to them to make the sale more profitable (up-selling).
+Features include Molecule ChEMBL ID, followed by multiple FCFP six one hundred twenty-four bit molecular fingerprint features.
 
-The most practical way, in a CRM system, to build knowledge on customer behavior is to produce scores. A score, which is the output of a model, is an evaluation for all instances of a target variable to explain, such as churn, appetency, or up-selling. Tools that produce scores allow projecting quantifiable information onto a given population. The score is computed using input variables that describe instances. Scores are then used by the Information System (IS), for instance, to personalize the customer relationship.
+The dataset is part of the MetaQSAR project and contains QSAR data from ChEMBL version seventeen.
 
-An industrial customer analysis platform able to build prediction models with a very large number of input variables has been developed by Orange Labs. This platform implements several processing methods for instances and variables selection, prediction, and indexation based on an efficient model combined with variable selection regularization and model averaging method. The main characteristic of this platform is its ability to scale on very large datasets with numerous instances and variables. The rapid and robust detection of the variables that have most contributed to the output prediction can be a key factor in a marketing application.
+The target is a single protein, specifically dipeptidyl peptidase two, also known as dipeptidyl aminopeptidase two, dipeptidyl peptidase seven, and other synonyms. It is an enzyme, a protease, and a serine protease, belonging to the serine protease SC clan and serine protease S twenty-eight family.
 
-Up-selling is a sales technique whereby a salesman attempts to have the customer purchase more expensive items, upgrades, or other add-ons in an attempt to make a more profitable sale. Up-selling usually involves marketing more profitable services or products, but up-selling can also be simply exposing the customer to other options they may not have considered previously. Up-selling can imply selling something additional, or selling something that is more profitable or otherwise preferable for the seller instead of the original sale.
+The dataset is related to the organism Homo sapiens and is classified under enzyme, protease, serine protease, serine protease SC clan, and serine protease S twenty-eight family.
 
-The dataset contains numerous examples. The first predictive variables are numerical and the last predictive variables are categorical. The last target variable is binary.
-
-Keywords: Customer Relationship Management, Up-selling, Marketing Strategies, Prediction Models, Sales Technique, Data Analysis.
+Keywords: QSAR, MetaQSAR, dipeptidyl peptidase, molecular fingerprints,Pipeline Pilot, Dassault Systèmes BIOVIA.

@@ -1,11 +1,38 @@
-Lung Cancer Shedden Dataset 
+This is a PROMISE Software Engineering Repository data set made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
 
-Tags: Chemistry, Life Science 
+Title/Topic: COCOMONASA/Software Cost Estimation
 
-This dataset is based on a multi-site blinded validation study on gene expression-based survival prediction in lung adenocarcinoma. The study aimed to develop a molecular assay to predict survival in resected non-squamous, non-small-cell lung cancer patients.
+Sources:
 
-The dataset contains several features, including overall survival years, overall survival event, histology, age, sex, and various gene expressions. These gene expressions were normalized using the fRMA method and only include the so-called "Kratz genes".
+Creators: Sixty NASA projects from different centers collected by JPL, NASA.
+Donor: 
+Date: 
 
-This research is part of the Director's Challenge Consortium for the Molecular Classification of Lung Adenocarcinoma and has been published in Nature Medicine. An international validation study was also conducted and published in The Lancet.
+Past Usage:
+Validation Methods for Calibrating Software Effort Models. Given background knowledge on sixty prior projects, a new cost model can be tuned to local data using as little as twenty new projects. A very simple calibration method can achieve good prediction rates after twenty projects. Two cost models are compared; one based on just lines of code and one using over a dozen effort multipliers. 
 
-Keywords: Lung Adenocarcinoma, Gene Expression, Survival Prediction, Molecular Assay, Non-Squamous Non-Small-Cell Lung Cancer, fRMA Normalization, Kratz Genes.
+Additional Usage:
+Feature Subset Selection Can Improve Software Cost Estimation Accuracy. To the best of our knowledge, this is the first report of applying feature subset selection to software effort data. Feature subset selection can dramatically improve cost estimation. 
+
+Relevant Information:
+The COCOMO software cost model measures effort in calendar months of one hundred fifty-two hours and includes development and management hours. COCOMO assumes that the effort grows more than linearly on software size. The effort multipliers are classified into three groups: those that are positively correlated to more effort, those that are negatively correlated to more effort, and a third group containing just schedule information. 
+
+In COCOMO One, the exponent on KSLOC was a single value ranging from one point zero five to one point two. In COCOMO Two, the exponent "b" was divided into a constant, plus the sum of five scale factors which modeled issues such as have we built this kind of system before. The COCOMO Two effort multipliers are similar but COCOMO Two dropped one of the effort multiplier parameters, renamed some others, and added a few more. 
+
+The numeric values of the effort multipliers are given in a table. The last column of the table shows the maximum effect of a single effort multiplier. For example, increasing analyst experience from very low to very high will most decrease effort while increasing required reliability from very low to very high will most increase effort. 
+
+There is much more to COCOMO than the above description. The COCOMO Two text is over five hundred pages long and offers all the details needed to implement data capture and analysis of COCOMO in an industrial context. Most of the validation work on COCOMO has focused on the effort model. 
+
+The value of an effort predictor can be reported many ways including Mean Magnitude of Relative Error and Prediction. Mean Magnitude of Relative Error and Prediction are computed from the relative error, or the relative size of the difference between the actual and estimated value. 
+
+Further Classification of the Projects:
+The projects can be classified into different project categories, task categories, and centers. The criteria for classification are unknown and they are disjoint. 
+
+Number of Instances: Sixty
+Number of Attributes: Seventeen 
+Attribute Information:
+Missing Attributes: None
+Class Distribution: 
+The class value is continuous. After sorting all the instances on the actual effort, the following distribution was found.
+
+Keywords: COCOMONASA, Software Cost Estimation, PROMISE, NASA, COCOMO, Effort Multipliers, Lines of Code, Predictive Models.

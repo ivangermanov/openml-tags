@@ -1,46 +1,11 @@
-Ozone Level Detection Dataset
+GEMLeR provides a collection of gene expression datasets that can be utilized for benchmarking gene expression-oriented machine learning algorithms. These datasets can be employed for estimating different quality metrics, such as accuracy, precision, and area under the receiver operating characteristic curve, among others, for classification, feature selection, or clustering algorithms.
 
-Abstract:
-This collection includes two ground ozone level datasets, namely the eight-hour peak set and the one-hour peak set. These datasets were gathered between 1998 and 2004 in the Houston, Galveston, and Brazoria areas.
+This repository was inspired by an increasing need within the machine learning and bioinformatics communities for a comprehensive collection of microarray classification problems that could be utilized by diverse researchers. This enables many distinct classification or feature selection techniques to be compared to one another on the same set of problems.
 
-Data Set Information:
-The datasets consist of various attributes, including temperature measurements taken at different times throughout the day, denoted by the prefix "T", and wind speed measurements denoted by the prefix "WS". Specifically, the attributes include:
+The origin of the data lies in the large publicly available Expression Project for Oncology repository by the International Genomics Consortium. The primary objective of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standardized conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions. This availability of information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-* Peek Wind Speed, which represents the resultant wind speed (i.e., the average of the wind vector)
-* Average Wind Speed
-* Peak Temperature
-* Average Temperature
-* Temperature at 850 hPa level (approximately 1500 meters high)
-* Relative Humidity at 850 hPa
-* East-West Direction Wind at 850 hPa
-* North-South Direction Wind at 850 hPa
-* Geopotential Height at 850 hPa
-* Temperature at 700 hPa level (approximately 3100 meters high)
-* Relative Humidity at 700 hPa
-* East-West Direction Wind at 700 hPa
-* North-South Direction Wind at 700 hPa
-* Geopotential Height at 700 hPa
-* Temperature at 500 hPa level (approximately 5500 meters high)
-* Relative Humidity at 500 hPa
-* East-West Direction Wind at 500 hPa
-* North-South Direction Wind at 500 hPa
-* Geopotential Height at 500 hPa
-* K-Index, a measure of atmospheric instability
-* T-Totals, a measure of atmospheric instability
-* Sea Level Pressure
-* Change in Sea Level Pressure from the Previous Day
-* Precipitation
+A decision was made to utilize data from the Expression Project for Oncology repository due to several factors, including the consistency of tissue sample processing procedures, the use of the same microarray platform for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for diverse tumor types.
 
-Attribute Information:
-The Texas Commission on Environmental Quality (TCEQ) places significant importance on several key attributes, including:
+When publishing material based on GEMLeR datasets, please note the assistance received by utilizing this repository. This will enable others to obtain the same datasets and replicate experiments.
 
-* Local Ozone Peak Prediction
-* Upwind Ozone Background Level
-* Precursor Emissions Related Factor
-* Maximum Temperature in Degrees Fahrenheit
-* Base Temperature Where Net Ozone Production Begins (50°F)
-* Solar Radiation Total for the Day
-* Wind Speed Near Sunrise
-* Wind Speed Mid-Day
-
-Keywords: ozone level detection, temperature measurement, wind speed, atmospheric instability, sea level pressure, precipitation, local ozone peak prediction, upwind ozone background level, precursor emissions related factor, maximum temperature, base temperature, solar radiation total, wind speed near sunrise, wind speed mid-day
+Keywords: gene expression, machine learning, microarray analysis, oncology, bioinformatics, genomics, classification, feature selection, clustering.

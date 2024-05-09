@@ -1,29 +1,35 @@
-QSAR-TID-17061 Dataset 
+The KR vs K Chess Endgame Dataset represents positions on a chessboard featuring the white king, the white rook, and the black king. The primary objective is to determine the optimal number of turns required for white to emerge victorious, considering that the game may culminate in a draw if it exceeds sixteen turns.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 17061. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PX C Fifty.
+Attributes Details:
 
-The features represent FCFP Six One Hundred Twenty Four bit Molecular Fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
+1. The column of the white king, ranging from a to h.
+2. The row of the white king, spanning from one to eight.
+3. The column of the white rook, ranging from a to h.
+4. The row of the white rook, spanning from one to eight.
+5. The column of the black king, ranging from a to h.
+6. The class label denotes the outcome of the game, categorized as either a draw or the number of turns needed for white to win, up to a maximum of sixteen turns.
 
-Tags: Life Science, MTL QSAR, Study Three, Transportation 
+Class labels include:
 
-Source: Meta QSAR Project - September Two Thousand Fifteen 
+* Draw
+* Zero
+* One
+* Two
+* Three
+* Four
+* Five
+* Six
+* Seven
+* Eight
+* Nine
+* Ten
+* Eleven
+* Twelve
+* Thirteen
+* Fourteen
+* Fifteen
+* Sixteen
 
-Please cite this dataset when using it for your research purposes.
+Tags: Chemistry, Life Science
 
-Dataset Description:
-
-The dataset contains QSAR data showing activity values of several compounds on drug target TID: 17061. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PX C Fifty.
-
-Compound Details:
-
-The compound details include the molecule ChEMBL ID, which serves as a unique identifier for each compound. Additionally, the median PX C fifty value represents the activity of each compound on the drug target.
-
-Molecular Fingerprints:
-
-The molecular fingerprints were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. These fingerprints represent the chemical structure of each compound and are used to predict their biological activity.
-
-Target Information:
-
-The target information includes the preferred name, synonyms, and classification of the drug target. The preferred name is Alpha One B Adrenergic Receptor, and it belongs to the family of G protein coupled receptors.
-
-Keywords: QSAR, Drug Target, Molecular Fingerprints, Compound Activity, Biological Activity, G Protein Coupled Receptors.
+Keywords: Chess, Endgame, KR vs K, Optimal Turns, Game Outcome, Draw, Victory.

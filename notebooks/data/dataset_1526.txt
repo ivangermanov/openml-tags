@@ -1,37 +1,27 @@
-QSAR-TID-102389 Dataset
+Wall-Robot-Navigation 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 102389. It has twelve rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
+Tags: Chemistry, Derived, Life Science, Study 
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Dataset Title: Wall Following Robot Navigation Data Set 
 
-Features include Molecule ChEMBL ID, followed by nine hundred ninety-four molecular fingerprint features.
+Abstract: 
+The data was collected while the SCITOS G5 robot navigated through the room following the wall in a clockwise direction, for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. 
 
-This dataset was created as part of the MetaQSAR project in September two thousand fifteen.
+Source: 
+The creators of the dataset are affiliated with the Department of Teleinformatics Engineering, Federal University of Ceará, Fortaleza, Ceará, Brazil. The donors of the database are also affiliated with the same institution.
 
-Tags: Machine Learning, MTLQSAR, Study Three
+Data Set Information: 
+The provided file contains the raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of nine samples per second. It is worth mentioning that the twenty-four ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows, one for each sampling time step. 
 
-Scraped Data:
+The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the Multilayer Perceptron network, are able to learn the task and command the robot successfully without collisions. If some kind of short-term memory mechanism is provided to the neural classifiers, their performances are improved in general. For example, if past inputs are provided together with current sensor readings, even the Perceptron becomes able to learn the task and command the robot successfully. If a recurrent neural network, such as the Elman network, is used to learn the task, the resulting dynamical classifier is able to learn the task using less hidden neurons than the Multilayer Perceptron network.
 
-The protein target is Candidapepsin-two, also known as ACP two, Aspartate Protease two, PRA eleven, and PRA two. It is an enzyme belonging to the Aspartic Protease AA clan and Aspartic Protease A one A subfamily.
+Attribute Information: 
+There are five attributes in total, including the class attribute. These attributes are described below:
 
-Organism: Candida Albicans
-Species Group: No
-Protein Target Classification: One, Enzyme, Protease, Aspartic Protease, Aspartic Protease AA Clan, Aspartic Protease A one A Subfamily
+Front Distance: minimum sensor reading within a sixty-degree arc located at the front of the robot.
+Left Distance: minimum sensor reading within a sixty-degree arc located at the left of the robot.
+Right Distance: minimum sensor reading within a sixty-degree arc located at the right of the robot.
+Back Distance: minimum sensor reading within a sixty-degree arc located at the back of the robot.
+Class: This attribute represents the action that the robot should take, which can be one of the following: Move Forward, Slight Right Turn, Sharp Right Turn, Slight Left Turn.
 
-Description: Candidapepsin-two is a single protein.
-Relationship: Accession, P zero C S eighty-three
-Rows per page: fifty-one, one of one
-
-Component: GO, zero zero zero five five seven six, extracellular region
-Go Function: GO, zero zero zero four one nine zero, aspartic-type endopeptidase activity, GO, zero zero zero eight two three, peptidase activity, GO, zero zero one six seven eight seven, hydrolase activity
-Go Process: GO, zero zero zero six five zero eight, proteolysis
-
-UniProt: P zero C S eighty-three, P two eight eight seventy-one, P four thirty ninety-seven, Q fifty-nine M V eight, Q eight N K F zero, Q eight N K F one
-
-InterPro: IPR zero zero one four six one, Aspartic Peptidase A one, IPR zero zero one nine sixty-nine, Aspartic Peptidase AS, IPR zero two one one oh nine, Peptidase Aspartic Domain Superfamily, IPR zero three three one twenty-one, PEPTIDASE A one, IPR zero three three eight seventy-six, SAP-like
-
-Pfam: PF zero zero zero twenty-six, Asp
-
-PDBe: one E A G, one Z A P, three P V K, three Q seventy
-
-Keywords: QSAR, Machine Learning, MTLQSAR, MetaQSAR, Candidapepsin-two, Aspartic Protease, Peptidase Activity, Hydrolase Activity, Proteolysis.
+Keywords: robot navigation, wall-following task, nonlinearly separable classification, neural networks, short-term memory mechanism, recurrent neural networks.

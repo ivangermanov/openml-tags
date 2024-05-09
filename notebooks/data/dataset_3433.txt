@@ -1,9 +1,17 @@
-The Graph Inference Dataset is a collection of graphical models used in the article "Learning Functional Causal Models with Generative Neural Networks". This dataset is comprised of graph datasets in CSV format.
+The QSAR-TID-12824 dataset contains QSAR data showing activity values of several compounds on drug target TID: 12824. This dataset has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-There are two types of files in this dataset. The first type includes files named "*_numdata.csv", which contain data on approximately twenty variables connected in a graph without hidden variables. These files are further categorized into four groups based on the maximum number of parents each node has: G2, G3, G4, and G5. Each corresponding "*_target.csv" file contains the ground truth of the graph, depicting causal relationships from cause to effect.
+Generating Fingerprints does not usually require missing value imputation as all bits are generated. The dataset contains multiple features, including molecule ChEMBL ID, fingerprint features, and median PXc50.
 
-The second type of files includes those starting with "Big", which represent larger graphs consisting of one hundred variables. These files follow the same structure as the previous ones.
+This dataset was obtained from the MetaQSAR project in September two thousand fifteen. It is recommended to cite this dataset when using it for research purposes.
 
-In addition, there are files named "*_confounders_numdata.csv", which contain data on approximately twenty variables connected in a graph with three hidden variables. The corresponding "*_confounders_skeleton.csv" files contain the skeleton of the graph, including spurious links resulting from common hidden causes. Finally, the "*_confounders_target.csv" files provide the ground truth of the graph, illustrating direct visible causal relationships from cause to effect. The primary objective is to identify and remove spurious links from the skeleton, thereby recovering the direct visible causal relationships.
+The dataset is related to the single protein preferred name Cholecystokinin A receptor, which has multiple synonyms, including CCK one R, Cckar, CCK AR, CCK A receptor, and Cholecystokinin one receptor. This receptor is classified under membrane receptor, family A G protein coupled receptor, peptide receptor, and short peptide receptor.
 
-Keywords: Graphical models, Machine learning, Causal models, Neural networks, Graph inference.
+The dataset also provides information about the organism, species group, and protein target classification. It includes description, relationships, accession, and target type.
+
+Additionally, the dataset provides information about Gene Ontology components, functions, and processes. It includes multiple gene ontology components, such as endosome, plasma membrane, membrane, and terminal bouton. It also includes multiple gene ontology functions, such as G protein coupled receptor activity, cholecystokinin receptor activity, peptide hormone binding, and peptide binding.
+
+Furthermore, the dataset provides information about gene ontology processes, including temperature homeostasis, gastric acid secretion, neuron migration, reduction of food intake in response to dietary excess, signal transduction, and G protein coupled receptor signaling pathway.
+
+The dataset also includes information about canSAR-Target, GuideToPHARMACOLOGY, Reactome, UniProt, InterPro, and Pfam.
+
+Keywords: QSAR, TID, ChEMBL, MetaQSAR, Cholecystokinin A receptor, G protein coupled receptor, peptide receptor, Gene Ontology, membrane receptor.

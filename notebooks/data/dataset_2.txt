@@ -1,52 +1,50 @@
-**Labor Negotiations**
+Anneal 
+Tags: Manufacturing, Study One, Study Fourteen, Study Thirty-Four, Study Thirty-Seven, Study Forty-One, Study Seventy, Study Seventy-Six, Test, UCI 
 
-This dataset pertains to the final settlements in labor negotiations in the Canadian industry, specifically focusing on the business and personal services sector.
+The Annealing dataset from UCI is an original dataset. The exact meaning of the features and classes is largely unknown.
 
-**Source Information**
+Annealing, in metallurgy and materials science, is a heat treatment that alters the physical and sometimes chemical properties of a material to increase its ductility and reduce its hardness, making it more workable. It involves heating a material to above its recrystallization temperature, maintaining a suitable temperature, and then cooling.
 
-The data was collected from the Collective Bargaining Review, a monthly publication by Labour Canada's Industrial Relations Information Service, located in Ottawa, Ontario.
+Attribute Information:
 
-**Dataset Description**
+Family refers to the type of steel alloy used, including GB, GK, GS, TN, ZA, ZF, ZH, ZM, and ZS.
 
-The dataset comprises all collective agreements reached in the business and personal services sector for locals with at least five hundred members, including teachers, nurses, university staff, police, and others, in Canada during 1987 and the first quarter of 1988.
+Product Type describes the category of the steel product, which can be either C, H, or G.
 
-**Past Usage**
+Steel Type specifies the type of steel, which includes R, A, U, K, M, S, W, V, or not applicable.
 
-This dataset has been utilized for testing concept learning software, particularly an experimental method to learn two-tiered concept descriptions. The goal was to learn the description of an acceptable and unacceptable contract. Unacceptable contracts were either obtained by interviewing experts or by inventing near misses.
+Carbon Content is a continuous feature representing the percentage of carbon in the steel alloy.
 
-**Relevant Information**
+Hardness is a continuous feature measuring the steel's resistance to scratching or abrasion.
 
-The data was employed to test the two-tier approach with learning from positive and negative examples.
+Temper Rolling indicates whether the steel has undergone temper rolling, which can either be true or false.
 
-**Number of Instances and Attributes**
+Condition specifies the condition of the steel, which can be either S, A, X, or not applicable.
 
-There are fifty-seven instances and sixteen attributes in this dataset.
+Formability measures the ease with which the steel can be shaped or formed, ranging from one to five.
 
-**Attribute Information**
+Strength is a continuous feature representing the steel's ability to withstand stress or pressure.
 
-1. Duration of Agreement
-2. Wage Increase in First Year of Contract
-3. Wage Increase in Second Year of Contract
-4. Wage Increase in Third Year of Contract
-5. Cost of Living Allowance
-6. Number of Working Hours During Week
-7. Employer Contributions to Pension Plan
-8. Standby Pay
-9. Shift Differential Supplement
-10. Education Allowance
-11. Number of Statutory Holidays
-12. Paid Vacation Days
-13. Employer's Help During Employee Long-term Disability
-14. Employer's Contribution Towards Dental Plan
-15. Bereavement Assistance
-16. Employer's Contribution Towards Health Plan
+Non-Ageing indicates whether the steel is resistant to ageing, which can either be true or false.
 
-**Class Distribution**
+Surface Finish describes the texture or appearance of the steel's surface, which can be either P, M, or not applicable.
 
-No information available.
+Surface Quality evaluates the overall quality of the steel's surface, ranging from D to G.
 
-**Exceptions from Format Instructions**
+Enamelability measures the steel's ability to be coated with enamel, ranging from one to five.
 
-No commas separate attribute values.
+BC, BF, BT, BW/ME, BL, M, Chrom, Phos, CBond, Marvi, Exptl, Ferro, Corr, Blue/Bright/Varn/Clean, Lustre, Jurofm, S, and P are all binary features indicating the presence or absence of certain characteristics or properties.
 
-Keywords: Labor Negotiations, Collective Bargaining, Canadian Industry, Business and Personal Services Sector, Concept Learning Software, Two-Tier Approach, Positive and Negative Examples
+Shape describes the physical shape of the steel product, which can either be Coil or Sheet.
+
+Thickness, Width, and Length are continuous features measuring the dimensions of the steel product.
+
+Oil specifies whether the steel product is coated with oil, which can either be yes, no, or not applicable.
+
+Bore refers to the diameter of the steel product's hole or opening, measured in increments of 500.
+
+Packing indicates how the steel products are packaged, ranging from one to three.
+
+Classes categorize the steel products into one of five categories or Unknown.
+
+Keywords: Annealing, Metallurgy, Materials Science, Steel Alloy, Heat Treatment, Ductility, Hardness.

@@ -1,24 +1,9 @@
-Forest Fires Data Set Portugal 
-Tags: Abstract 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID, and it has multiple rows and features including IDs and class feature. The features represent Fingerprint Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This is a challenging regression task, where the objective is to predict the burned area of forest fires in the northeast region of Portugal, by utilizing meteorological and other relevant data. 
+The dataset is part of the MetaQSAR project and was released in September. It is recommended to cite this dataset when used in any research or publication.
 
-Data Set Information:
+The molecular fingerprints used in this dataset are Fixed Count Fingerprint six, also known as FCFP six, which is a type of molecular fingerprint that uses a fixed count of bits to describe the molecular structure. These fingerprints are commonly used in cheminformatics and QSAR modeling.
 
-The data set characteristics are multivariate, and it contains five hundred seventeen instances. The area of focus is physical, and the attribute characteristics are real. There are thirteen attributes in total. The data was donated in two thousand eight.
-
-Associated tasks include regression, and there are no missing values.
-
-In previous research, the output 'area' was initially transformed with a natural logarithm function plus one. Subsequently, various data mining methods were applied. After fitting the models, the outputs were post processed with the inverse of the natural logarithm plus one transform. Four distinct input setups were utilized.
-
-The experiments were conducted using a ten fold cross validation method, repeated thirty times. Two regression metrics were measured, including mean absolute deviation and root mean squared error.
-
-A Gaussian support vector machine, fed with four direct weather conditions, obtained the best mean absolute deviation value. The best root mean squared error was attained by the naive mean predictor. An analysis of the regression error curve reveals that the support vector machine model predicts more examples within a lower admitted error. In effect, the support vector machine model predicts smaller fires more accurately, which comprise the majority.
-
-Source: Department of Information Systems, University of Minho, Portugal.
-
-Relevant papers include a data mining approach to predict forest fires using meteorological data.
-
-Features: Month, Day, Temperature, Relative Humidity, Wind, Rain, Burned Area.
-
-Keywords: Forest Fires, Portugal, Regression Task, Meteorological Data, Support Vector Machine, Data Mining, Mean Absolute Deviation, Root Mean Squared Error.
+Tags: Life Science, Machine Learning, Multi Task QSAR, Study Three
+Dataset Name: QSAR-TID-One Hundred Fourteen
+Keywords: QSAR, Machine Learning, Molecular Fingerprints, Cheminformatics, Drug Target, MetaQSAR

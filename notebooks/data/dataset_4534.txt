@@ -1,13 +1,17 @@
-Machine Learning and Mathematics dataset named Madeline has undergone subsampling with specific parameters. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size.
+**Phishing Websites**
 
-The original dataset had a large number of rows and columns, which were reduced to a maximum of two thousand rows and one hundred columns, respectively. Additionally, the number of classes was limited to ten.
+Tags: Geography, Life Science, OpenML-CC18, OpenML100, study_123, study_14, study_144, study_34, study_52, study_98, study_99
 
-To ensure representative sampling, the classes were first uniformly sampled based on their frequency in the dataset. Then, the columns were uniformly sampled without replacement.
+**Source**: UCI
 
-If the number of rows exceeded the maximum allowed, the dataset was further split using stratified sampling to maintain class balance. This involved concatenating the features and target variable, followed by splitting the data into subsets using the target variable as the stratification criterion.
+**Please Cite**: Please refer to the Machine Learning Repository's citation policy.
 
-Finally, the categorical columns were converted to strings, and the resulting subsampled dataset was returned along with its metadata, including the column names and categorical mask.
+This dataset sheds light on the important features that have proven to be sound and effective in predicting phishing websites. The lack of reliable training datasets has long been a challenge for researchers in this field. Although numerous articles have been published on predicting phishing websites, no reliable training dataset has been made publicly available due to the lack of consensus on the definitive features that characterize phishing web pages.
 
-Features include various variables such as demographic information, financial metrics, and other relevant attributes.
+In this dataset, we propose some new features and highlight the importance of certain characteristics that have proven to be effective in identifying phishing websites. The attributes included in this dataset are crucial for developing accurate predictive models.
 
-Keywords: machine learning, mathematics, dataset subsampling, stratified sampling, class balance, feature selection.
+The dataset includes attributes such as having an IP address, URL length, use of shortening services, presence of "at" symbols, redirection through double slashes, prefix and suffix usage, subdomain existence, SSL final state, domain registration length, favicon presence, port usage, HTTPS token presence, request URL, anchor URL, links in tags, server form handler, submitting to email, abnormal URLs, redirects, mouseover effects, right-click functionality, popup windows, iframe usage, domain age, DNS records, web traffic, page rank, Google index, links pointing to pages, statistical reports, and results.
+
+Relevant papers have been published on this topic, including an assessment of features related to phishing websites using automated techniques and predicting phishing websites based on self-structuring neural networks.
+
+Keywords: phishing websites, predictive models, feature selection, machine learning, cybersecurity.

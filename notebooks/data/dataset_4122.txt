@@ -1,35 +1,23 @@
-Bank Marketing
+QSAR-TID-138 Dataset Information:
 
-The Bank Marketing dataset is related to direct marketing campaigns of a Portuguese banking institution. These marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to assess if the product, namely a bank term deposit, would be or not subscribed.
+The QSAR-TID-138 dataset is a collection of QSAR data related to the activity values of various compounds on the drug target TID: 138. This dataset contains 1426 rows and 1026 features, including identifiers and class features.
 
-The classification goal is to predict if the client will subscribe a term deposit. 
+Features:
 
-Attribute Information
+* MOLECULE_CHEMBL_ID
+* FCFP6 Molecular Fingerprints (generated from SMILES strings using the Pipeline Pilot program)
 
-Input variables include:
+Description:
+The nociceptin receptor, also known as the kappa-type three opioid receptor, is a single protein that belongs to the family of G protein-coupled receptors. It is primarily found in the plasma membrane and plays a crucial role in signal transduction pathways, particularly in response to nociceptin stimulation.
 
-* Bank Client Data:
-    + Age, which is numeric.
-    + Job Type, which is categorical and may be administration, unknown, unemployed, management, housemaid, entrepreneur, student, blue collar, self employed, retired, technician, or services.
-    + Marital Status, which is categorical and may be married, divorced, or single; note that divorced means divorced or widowed.
-    + Education Level, which is categorical and may be unknown, secondary, primary, or tertiary.
-    + Default Status, which is binary and indicates whether the client has credit in default or not.
-    + Average Yearly Balance, which is numeric and represents the average yearly balance in euros.
-    + Housing Loan Status, which is binary and indicates whether the client has a housing loan or not.
-    + Personal Loan Status, which is binary and indicates whether the client has a personal loan or not.
-* Last Contact Information:
-    + Contact Communication Type, which is categorical and may be unknown, telephone, or cellular.
-    + Last Contact Day, which is numeric and represents the day of the month when the last contact was made.
-    + Last Contact Month, which is categorical and may be January, February, March, April, May, June, July, August, September, October, November, or December.
-    + Last Contact Duration, which is numeric and represents the duration of the last contact in seconds.
-* Other Attributes:
-    + Number of Contacts, which is numeric and represents the number of contacts performed during this campaign and for this client; this includes the last contact.
-    + Number of Days Since Last Contact, which is numeric and represents the number of days that have passed since the client was last contacted from a previous campaign; a value of minus one means the client was not previously contacted.
-    + Previous Number of Contacts, which is numeric and represents the number of contacts performed before this campaign and for this client.
-    + Previous Campaign Outcome, which is categorical and may be unknown, other, failure, or success.
+Scraped Data:
 
-Output Variable:
+* ID: CHEMBL2014
+* Type: SINGLE PROTEIN
+* Preferred Name: Nociceptin Receptor
+* Synonyms: Kappa-type Three Opioid Receptor, KOR-3, Nociceptin Receptor, OOR, OPRL1
+* Organism: Homo sapiens
+* Species Group: No
+* Protein Target Classification: 1. Membrane receptor / Family A G protein-coupled receptor / Peptide receptor (family A GPCR) / Short peptide receptor (family A GPCR) / Opioid receptor
 
-* Has the Client Subscribed a Term Deposit?, which is binary and indicates whether the client has subscribed a term deposit or not.
-
-Keywords: Bank Marketing, Direct Marketing, Phone Calls, Term Deposit, Client Subscription Prediction.
+Keywords: nociceptin receptor, kappa-type three opioid receptor, G protein-coupled receptor, signal transduction, opioid receptor, Homo sapiens.

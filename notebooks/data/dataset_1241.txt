@@ -1,7 +1,13 @@
-The W Six A dataset is categorized under Chemistry and Life Science. This dataset is sourced from the LIBSVM data repository.
+Normalized Form of Cod RNA Dataset
 
-The dataset features a range of attributes including various chemical and biological properties. The attributes are not explicitly defined, but they appear to be numerical values representing different characteristics of molecules or biological systems.
+This dataset belongs to the categories of Chemistry and Life Science.
 
-To utilize this dataset, please cite the source as the Dataset from the LIBSVM data repository.
+The source of this dataset is the original website, which provides detailed information about the preprocessing steps.
 
-Keywords: LIBSVM, Chemistry, Life Science, Dataset, Chemical Properties, Biological Systems.
+To create this dataset, the test, train, and rest datasets were joined together. Each file column was normalized according to specific rules. If a column contained only one value, it was considered a constant feature and set to zero, effectively removing it due to sparsity. If a column had two values, it was considered a binary feature, and the more frequently occurring value was set to zero, while the other was set to one. For columns containing more than two values, considered multinary or real features, the column was divided by its standard deviation.
+
+Note that this dataset still contains many duplicate data points within each file and across files, which have not been removed.
+
+Features include various attributes related to Cod RNA.
+
+Keywords: chemistry, life science, RNA, normalization, preprocessing, dataset.

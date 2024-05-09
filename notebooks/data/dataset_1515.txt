@@ -1,17 +1,20 @@
-QSAR-TID-10909 Dataset
+MicroMass (Pure Spectra Version)
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10909. It has multiple rows and numerous features, including IDs and class feature.
+Tags: Chemistry, Life Science, OpenML100, Study One Twenty Three, Study One Thirty Five, Study Fourteen, Study Seven
 
-The features represent FCFP 1024 bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Description:
+The MicroMass dataset explores machine learning approaches for identifying microorganisms from mass spectrometry data.
 
-Features include molecule Chembl ID and median pxc fifty. The rest of the features are FCFP six one thousand twenty-four bit molecular fingerprints, which are not human-readable.
+Source:
+University of California, Irvine (UCI)
 
-Scraped Data:
+Data Set Information:
+This MALDI-TOF dataset consists of a reference panel of twenty gram-positive and gram-negative bacterial species covering nine genera. Several species are known to be difficult to discriminate using mass spectrometry. Each species is represented by eleven to sixty mass spectra obtained from seven to twenty bacterial strains, constituting a total dataset of five hundred seventy-one spectra obtained from two hundred thirteen strains. The spectra were obtained using the standard culture-based workflow used in clinical routines, where the microorganism is first grown on an agar plate for twenty-four to forty-eight hours before a portion of the colony is picked, spotted on a MALDI slide, and a mass spectrum is acquired.
 
-The preferred name for this protein target is beta-chymotrypsin. It also has synonyms such as chymotrypsin B chain A, chymotrypsin B chain B, and chymotrypsin B chain C. The organism associated with this target is Homo sapiens.
+Based on this reference panel, a dedicated in vitro mock-up mixture dataset was constituted. Ten pairs of species of various taxonomic proximities were selected: four mixtures involve species belonging to the same genus; two mixtures involve species belonging to distinct genera but the same gram type; and four mixtures involve species belonging to distinct gram types. Each mixture is represented by two pairs of strains mixed according to nine concentration ratios. Two replicate spectra were acquired for each concentration ratio and each pair of strains, resulting in a dataset of three hundred sixty spectra, eighty of which are pure sample spectra.
 
-This protein target belongs to the enzyme/protease/serine protease/serine protease PA clan/serine protease S1A subfamily classification. It has multiple relationships, including being a single protein and a subset of chymotrypsin protein family.
+Relevant Papers:
+Automatic Identification of Mixed Bacterial Species Fingerprints in a MALDI-TOF Mass-Spectrum
+A Benchmark of Support Vector Machines Strategies for Microbial Identification by Mass-Spectrometry Data
 
-Expression Atlas, Go Component, Go Function, and Go Process provide additional information about this target. There are also cross-references to canSAR-target, IntAct, Pharos, Reactome, UniProt, and InterPro.
-
-Keywords: QSAR, machine learning, MTLQSAR, transportation, Chembl, molecular fingerprints, beta-chymotrypsin, serine protease, enzyme, protease.
+Keywords: machine learning, mass spectrometry, microorganisms, MALDI-TOF, bacterial species, gram-positive, gram-negative, genera, taxonomy, concentration ratios.

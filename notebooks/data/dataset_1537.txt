@@ -1,32 +1,15 @@
-QSAR-TID-100969 Dataset: MetaQSAR Project 
+Volcanoes on Venus - JARtool Experiment Data Set 
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100969. It has seventy-nine rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
+Experiment: C1 
 
-The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Tags: Chemistry, Life Science, Study 
 
-Features include Molecule ChEMBL ID.
+Dataset Title: Volcanoes on Venus - JARtool Experiment Data Set 
 
-Scraped Data:
+The data was collected by the Magellan spacecraft over a period of approximately four years from nineteen ninety to nineteen ninety-four. The primary objective of the mission was to obtain a global mapping of the surface of Venus using synthetic aperture radar. A more detailed discussion of the mission and its objectives is available at NASA's Jet Propulsion Laboratory's Magellan webpage.
 
-Type: Single Protein
-Preferred Name: Serine Threonine Protein Kinase Tousled Like One
-Synonyms: KIAA thirteen seventy-seven, PKU-beta, Serine Threonine Protein Kinase Tousled Like One, TLK One, Tousled-Like Kinase One
-Organism: Homo Sapiens
-Species Group: No
-Protein Target Classification: One, Enzyme Kinase Protein Kinase Other Protein Kinase Group Other Protein Kinase TLK Family
+There are certain spatial dependencies present in the data. For instance, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are ground truth files that specify the locations of volcanoes within the images. It is essential to note that there is no absolute ground truth for this data set, as no one has physically visited Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts. There are labels provided that offer a measure of subjective uncertainty, ranging from definitely a volcano to only a pit being visible. This labeling uncertainty problem is discussed in further detail in relevant papers.
 
-Description Relationship Accession: Serine Threonine Protein Kinase Tousled Like One, Single Protein
-Expression Atlas: One
-Go Component: Nucleus, Nucleoplasm
-Go Function: Nucleotide Binding, Protein Kinase Activity, Protein Serine Threonine Kinase Activity, Protein Binding, ATP Binding, Kinase Activity, Transferase Activity, Protein Serine Kinase Activity
-Go Process: Chromatin Organization, Protein Phosphorylation, Intracellular Protein Transport, DNA Damage Response, Cell Cycle, Chromosome Segregation, Phosphorylation, Peptidyl-Serine Phosphorylation, Intracellular Signal Transduction, Regulation of Chromatin Organization
-Wikipedia: TLK One can
-CanSAR-Target: Q nine UKI eight
-IntAct: Q nine UKI eight
-PharmGKB: Tousled-Like Kinase One
-Pharos: Tchem
-UniProt: B three KR fifteen, B four DX eighty-seven, Q fourteen one fifty, Q eight N five ninety-one, Q nine NYH two, Q nine UKI eight, Q nine Y four F six
-InterPro: Prot Kinase Dom, Ser Thr Kinase AS, Kinase-Like Domain Sf, Protein Kinase ATP BS
-Pfam: Pkinase
+The images are comprised of one thousand twenty-four by one thousand twenty-four pixels. The pixel values range from zero to two fifty-five. The pixel value is directly related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate a greater amount of backscatter, whereas lower pixel values indicate a lesser amount of backscatter. Both topography and surface roughness relative to the radar wavelength have a significant impact on the amount of backscatter.
 
-Keywords: QSAR, MetaQSAR, Drug Target, TID, FCFP, Molecular Fingerprints, SMILES, Pipeline Pilot, BIOVIA, Serine Threonine Protein Kinase, Tousled Like Kinase, Homo Sapiens, Protein Kinase Activity.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Global Mapping, Spatial Dependencies, Ground Truth, Labeling Uncertainty

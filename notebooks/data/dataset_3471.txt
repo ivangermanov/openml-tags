@@ -1,14 +1,19 @@
-Mammographic Mass Data Set 
-Tags: Computer Systems, Machine Learning 
+This dataset contains QSAR data showing activity values of several compounds on drug target Discoidin Domain Containing Receptor Two, and it has multiple rows and numerous features including IDs and class feature.
 
-Mammography is the most effective method for breast cancer screening available today. However, the low positive predictive value of breast biopsy resulting from mammogram interpretation leads to a significant number of unnecessary biopsies with benign outcomes. In order to reduce the high number of unnecessary breast biopsies, several computer-aided diagnosis systems have been proposed over the years. These systems assist physicians in their decision to perform a breast biopsy on a suspicious lesion seen in a mammogram or to perform a short-term follow-up examination instead.
+The features represent molecular fingerprints which were generated from smiles strings. They were obtained using the Pipeline Pilot program.
 
-This data set can be used to predict the severity, whether benign or malignant, of a mammographic mass lesion from Breast Imaging-Reporting and Data System attributes and the patient's age. It contains a Breast Imaging-Reporting and Data System assessment, the patient's age, and three Breast Imaging-Reporting and Data System attributes together with the ground truth, which is the severity field, for a large number of benign and malignant masses that have been identified on full-field digital mammograms collected at the Institute of Radiology of the University Erlangen-Nuremberg over a certain period of time.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Each instance has an associated Breast Imaging-Reporting and Data System assessment, ranging from definitely benign to highly suggestive of malignancy, assigned in a double-review process by physicians. By assuming that all cases with Breast Imaging-Reporting and Data System assessments greater than or equal to a certain value, varying from one to five, are malignant and the other cases are benign, sensitivities and associated specificities can be calculated. These calculations can serve as an indication of how well a computer-aided diagnosis system performs compared to radiologists.
+Features include molecule chembl id, and numerous other features that are difficult to read due to their technical nature.
 
-The class distribution consists of a large number of benign cases and a slightly smaller number of malignant cases. There are six attributes in total, including one goal field, one non-predictive attribute, and four predictive attributes. The Breast Imaging-Reporting and Data System assessment is an ordinal, non-predictive attribute, while the patient's age is an integer. The shape, margin, and density of the mass are nominal and ordinal attributes, respectively. The severity field is a binomial, goal field.
+This dataset is part of the MetaQSAR project and was created in September 2015.
 
-There are some missing attribute values, specifically in the Breast Imaging-Reporting and Data System assessment, age, shape, margin, density, and severity fields. 
+It contains information about the drug target, including its synonyms, description, and relationship to other proteins.
 
-Keywords: Mammography, Breast Cancer Screening, Computer-Aided Diagnosis, Breast Imaging-Reporting and Data System, Mass Lesion, Benign, Malignant.
+The drug target is classified as an enzyme, kinase, protein kinase, and tyrosine protein kinase, and it belongs to the DDR family.
+
+It has been involved in numerous biological processes, including ossification, endochondral bone growth, protein phosphorylation, and cell adhesion.
+
+It has also been implicated in various diseases, including spondylometaepiphyseal dysplasia, and has been targeted by numerous small molecules, including regorafenib.
+
+Keywords: QSAR, Discoidin Domain Containing Receptor Two, MetaQSAR, molecular fingerprints, Pipeline Pilot, protein kinase, tyrosine protein kinase, ossification, endochondral bone growth, protein phosphorylation, cell adhesion, spondylometaepiphyseal dysplasia, regorafenib.

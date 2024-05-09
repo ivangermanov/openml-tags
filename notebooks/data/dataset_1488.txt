@@ -1,57 +1,24 @@
-**MetaQSAR Project**
+Oxford Parkinson's Disease Detection Dataset
 
-This dataset contains QSAR data showing activity values of several compounds on drug target Matrix Metalloproteinase Eleven. The dataset has thirty-one rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXC Fifty.
+This dataset comprises a range of biomedical voice measurements from individuals, with the primary objective of discriminating between healthy people and those suffering from Parkinson's disease. The dataset consists of recordings from thirty-one people, twenty-three of whom have been diagnosed with Parkinson's disease.
 
-The features represent Folded Circular Fingerprint One Thousand Twenty-Four Bit Molecular Fingerprints, which were generated from Simplified Molecular Input Line Entry System strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Each column in the table represents a specific voice measurement, while each row corresponds to one of the nineteen-five voice recordings from these individuals. The "name" column contains the subject's name and recording number.
 
-Features include Molecule ChEMBL ID, Folded Circular Fingerprint Six One Thousand Twenty-Four Bit Zero, Folded Circular Fingerprint Six One Thousand Twenty-Four Bit One, Folded Circular Fingerprint Six One Thousand Twenty-Four Bit Two, and so on.
+The main aim of this dataset is to differentiate between healthy individuals and those afflicted with Parkinson's disease, based on the "status" column, which is set to zero for healthy individuals and one for those with Parkinson's disease.
 
-**Scraped Data**
+The attribute information includes matrix column entries, such as:
 
-Matrix Metalloproteinase Eleven is a Single Protein with a Preferred Name of Matrix Metalloproteinase Eleven. It also has synonyms such as Matrix Metalloproteinase-Eleven, Mmp Eleven, MMP-Eleven, Sl Three, St Three, and others. It belongs to the species Mus Musculus and is classified under the group of Enzyme-Protease-Metallo Protease-Metallo Protease Mam Clan-Metallo Protease M Ten A Subfamily.
+* Name: ASCII subject name and recording number
+* MDVP Fo (Hertz): average vocal fundamental frequency
+* MDVP Fhi (Hertz): maximum vocal fundamental frequency
+* MDVP Flo (Hertz): minimum vocal fundamental frequency
+* MDVP Jitter (percent) and MDVP Jitter (Absolute): several measures of variation in fundamental frequency
+* MDVP RAP and MDVP PPQ and Jitter DDP: measures of variation in fundamental frequency
+* MDVP Shimmer and MDVP Shimmer decibel and Shimmer APQ three and Shimmer APQ five and MDVP APQ and Shimmer DDA: several measures of variation in amplitude
+* NHR and HNR: two measures of ratio of noise to tonal components in the voice
+* Status: health status of the subject (one indicates Parkinson's disease, zero indicates healthy)
+* RPDE and D two: two nonlinear dynamical complexity measures
+* DFA: signal fractal scaling exponent
+* Spread one, spread two, PPE: three nonlinear measures of fundamental frequency variation
 
-**Description**
-
-Matrix Metalloproteinase Eleven is also known as Stromelysin-Three. It has an accession number of Q Zero Two Eight Five Three.
-
-**Expression Atlas**
-
-It has an expression atlas of Q Zero Two Eight Five Three.
-
-**Go Component**
-
-It has go components including Extracellular Region, Extracellular Space, and Extracellular Matrix.
-
-**Go Function**
-
-It has go functions including Metalloendopeptidase Activity, Peptidase Activity, Metallopeptidase Activity, Zinc Ion Binding, Hydrolase Activity, and Metal Ion Binding.
-
-**Go Process**
-
-It has go processes including Proteolysis, Extracellular Matrix Organization, Collagen Fibril Organization, Collagen Catabolic Process, Negative Regulation of Fat Cell Differentiation, and Basement Membrane Organization.
-
-**CanSAR-Target**
-
-It has a canSAR-target of Q Zero Two Eight Five Three.
-
-**Reactome**
-
-It has reactomes including Collagen Degradation, Degradation of the Extracellular Matrix, and Activation of Matrix Metalloproteinases.
-
-**UniProt**
-
-It has a uniProt of Q Zero Two Eight Five Three.
-
-**InterPro**
-
-It has interPros including Hemopexin-Like Domain, Pept M Ten Metallopeptidase, Peptidase Metallo, Hemopexin CS, Hemopexin-Like Repeat, Pept M Ten A, MetalloPept Cat Dom Sf, M Ten A MMP, and Hemopexin-Like Domain Sf.
-
-**Pfam**
-
-It has pfams including Hemopexin and Peptidase M Ten.
-
-**PDBe**
-
-It has a pdbE of One HV Five.
-
-Keywords: QSAR, Machine Learning, MTLQSAR, Matrix Metalloproteinase Eleven, Molecular Fingerprints, Simplified Molecular Input Line Entry System, Pipeline Pilot Program, Dassault Systèmes BIOVIA.
+Keywords: Parkinson's disease, voice disorder detection, biomedical voice measurements, signal fractal scaling exponent, nonlinear dynamical complexity measures.

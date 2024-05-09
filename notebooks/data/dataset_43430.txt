@@ -1,0 +1,34 @@
+CSGO Round Winner Classification
+
+Tags: Computer Systems, Machine Learning
+
+Context:
+Counter Strike Global Offensive (CSGO) is a tactical first-person shooter game where two teams, Counter-Terrorists (CT) and Terrorists, compete against each other in a best-of-thirty-round match. Each round lasts approximately one minute and fifty-five seconds. The teams consist of five players each, and the first team to win sixteen rounds wins the game. The teams switch sides after fifteen rounds.
+
+The dataset, originally published by Skybox as part of their CSGO AI Challenge, contains seven hundred high-level tournament gameplay demonstrations from 2019 and 2020. The demonstrations have been pre-processed and flattened to enhance readability and facilitate algorithmic processing. A total of 122,411 snapshots were recorded every twenty seconds until the round concluded.
+
+The objective is to develop machine learning models that accurately predict the winning team based on various features extracted from the gameplay snapshots. These features include the time remaining in the round, the current scores of both teams, the map being played on, whether the bomb has been planted, the total health and armor of each team, and the number of alive players on each team.
+
+Additionally, the dataset includes information about the weapons and grenades held by each team, including assault rifles, pistols, shotguns, and sniper rifles. The ultimate goal is to identify the most indicative features that influence the outcome of each round and develop effective strategies for winning.
+
+Data Dictionary:
+
+* Time Left: The time remaining in the current round.
+* Counter-Terrorist Score: The current score of the Counter-Terrorist team.
+* Terrorist Score: The current score of the Terrorist team.
+* Map: The map being played on, such as Dust II, Inferno, or Overpass.
+* Bomb Planted: Whether the bomb has been planted or not.
+* Counter-Terrorist Health: The total health of all Counter-Terrorist players.
+* Terrorist Health: The total health of all Terrorist players.
+* Counter-Terrorist Armor: The total armor of all Counter-Terrorist players.
+* Terrorist Armor: The total armor of all Terrorist players.
+* Counter-Terrorist Money: The total bankroll of all Counter-Terrorist players.
+* Terrorist Money: The total bankroll of all Terrorist players.
+* Counter-Terrorist Helmets: The number of helmets held by the Counter-Terrorist team.
+* Terrorist Helmets: The number of helmets held by the Terrorist team.
+* Counter-Terrorist Defuse Kits: The number of defuse kits held by the Counter-Terrorist team.
+* Counter-Terrorist Players Alive: The number of alive players on the Counter-Terrorist team.
+* Terrorist Players Alive: The number of alive players on the Terrorist team.
+* Various weapon and grenade counts for each team.
+
+Keywords: CSGO, machine learning, gameplay analysis, team strategy, counter-terrorism, tactical shooter.

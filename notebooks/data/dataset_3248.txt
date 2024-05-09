@@ -1,25 +1,25 @@
-**Dataset Information**
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred four thousand four hundred ninety-nine, and it has twenty-four rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
 
-To demonstrate the Recency, Frequency, Monetary, Time, and Compliance marketing model, this study adopted the donor database of the Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donations approximately every three months.
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-To build an RFMTC model, we randomly selected seven hundred forty-eight donors from the donor database. Each donor's data included recency, frequency, monetary value, time, and a binary variable representing whether they donated blood in March two thousand seven.
+Features include Molecule ChEMBL ID, and nine hundred twenty-six more molecular fingerprints. 
 
-**Descriptive Statistics of the Data**
+Scraped Data includes ID, Type, Preferred Name, Synonyms, Organism, Species Group, Protein Target Classification, and Description. 
 
-The table below shows the descriptive statistics of the data.
+Preferred Name is C-X-C chemokine receptor type seven, also known as ACKR three Atypical chemokine receptor three, Chemokine orphan receptor one, CMKOR one, and ten more synonyms. 
 
-| Variable | Data Type | Measurement | Description |
-| --- | --- | --- | --- |
-| Recency | Quantitative | Months | Months since last donation |
-| Frequency | Quantitative | Times | Total number of donations |
-| Monetary Value | Quantitative | cc blood | Total blood donated |
-| Time | Quantitative | Months | Months since first donation |
-| Donation in March 2007 | Binary | 1=yes, 0=no | Whether they donated blood in March 2007 |
+Organism is Homo sapiens, Species Group is No, and Protein Target Classification is One point Membrane receptor slash Family A G protein-coupled receptor slash Peptide receptor family A GPCR slash Chemokine receptor slash CXC chemokine receptor. 
 
-We randomly selected five hundred data points as the training set, and the remaining two hundred forty-eight as the testing set.
+Description shows Relationship Accession Atypical chemokine receptor three Single Protein. 
 
-**Tags:** Demographics, Partial Label Ranking
-**Features:** A1, A2,..., A10, L1, L2,..., L11
-**Scraped Data:** Blood Transfusion Service Center
+Expression Atlas includes one item. Component includes nine items, such as Endosome, Early Endosome, Plasma Membrane, Clathrin-Coated Pit, External Side of Plasma Membrane, Cell Surface, Membrane, Intracellular Membrane-Bounded Organelle, and Recycling Endosome. 
 
-**Keywords:** Blood Transfusion, RFMTC Model, Marketing, Donor Database, Compliance, Recency, Frequency, Monetary Value, Time.
+Function includes nine items, such as G Protein-Coupled Receptor Activity, Scavenger Receptor Activity, Protein Binding, Coreceptor Activity, C-C Chemokine Receptor Activity, C-X-C Chemokine Receptor Activity, Chemokine Binding, C-C Chemokine Binding, and C-X-C Chemokine Binding. 
+
+Process includes seventeen items, such as Angiogenesis, Vasculogenesis, Chemotaxis, Immune Response, Cell Adhesion, Signal Transduction, G Protein-Coupled Receptor Signaling Pathway, Positive Regulation of Cytosolic Calcium Ion Concentration, Negative Regulation of Cell Population Proliferation, Calcium-Mediated Signaling, Oculomotor Nerve Development, Receptor Internalization, Cell Chemotaxis, Chemokine-Mediated Signaling Pathway, Positive Regulation of ERK One and ERK Two Cascade, Negative Regulation of Intrinsic Apoptotic Signaling Pathway in Response to DNA Damage, and Positive Regulation of Mesenchymal Stem Cell Migration. 
+
+Guide To PHARMACOLOGY includes one item, IntAct includes one item, PharmGKB includes one item, Pharos includes one item, Reactome includes two items, and UniProt includes six items. 
+
+InterPro includes four items, Pfam includes one item, and PDBe includes one item.
+
+Keywords: QSAR, Machine Learning, MTLQSAR, Chemokine Receptors, G Protein-Coupled Receptors, Chemotaxis, Immune Response, Signal Transduction.

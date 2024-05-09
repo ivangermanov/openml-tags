@@ -1,23 +1,15 @@
-Sleuth Case One Two Zero One
+The MNIST Database of Handwritten Digits 
 
-Tags: Chemistry, Life Science, StatLib
+This dataset is tagged with AzurePilot, OpenML-CC18, OpenML100, study_1, study_123, study_41, and study_99, and belongs to the vision category.
 
-This dataset contains one hundred ten data sets from the book The Statistical Sleuth.
+The MNIST database of handwritten digits consists of seven hundred eighty-four features and provides raw data available at the MNIST website. This dataset can be divided into a training set consisting of the first sixty thousand examples, and a test set consisting of ten thousand examples. It is a subset of a larger set available from the National Institute of Standards and Technology (NIST).
 
-The source of this dataset is unknown.
+The dataset is ideal for researchers who wish to apply learning techniques and pattern recognition methods to real-world data without investing excessive time in preprocessing and formatting. The original black and white images from NIST were size-normalized to fit within a twenty-by-twenty pixel box, preserving their aspect ratio. As a result of the anti-aliasing technique employed during normalization, the images now contain gray levels. The images were subsequently centered in a twenty-eight-by-twenty-eight image by calculating the center of mass of the pixels and translating the image to position this point at the center of the twenty-eight-by-twenty-eight field.
 
-Please cite the original source when using this dataset.
+Some classification methods, particularly template-based methods like Support Vector Machines and K-Nearest Neighbors, exhibit improved error rates when the digits are centered using bounding boxes instead of the center of mass approach. Researchers should report any such preprocessing steps in their publications.
 
-This dataset was originally published in the book The Statistical Sleuth by Duxbury Press in nineteen ninety-seven.
+The MNIST database was constructed from NIST's Special Database Three (SD-3) and Special Database One (SD-1). SD-3 was initially designated as the training set, whereas SD-1 served as the test set. However, SD-3 proved to be much cleaner and easier to recognize compared to SD-1 due to its collection among Census Bureau employees, whereas SD-1 was collected among high school students. To ensure drawing sensible conclusions from learning experiments, it became essential to create a new database by combining NIST's datasets.
 
-A description of this dataset was taken from the website http colon forward slash forward slash lib dot stat dot cmu dot edu forward slash datasets.
+The MNIST training set consists of thirty thousand patterns from SD-3 and thirty thousand patterns from SD-1. The test set comprises five thousand patterns from SD-3 and five thousand patterns from SD-1. The sixty-thousand-pattern training set includes examples from approximately two hundred fifty writers, ensuring that the sets of writers for both the training and test sets remained disjoint. 
 
-The file containing this dataset is located at dot dot dot forward slash data forward slash sleuth forward slash case one two zero one dot asc.
-
-Information about the dataset includes the following:
-
-Class type is numeric.
-There is no specific class index.
-Features of this dataset include state, SAT scores, number of test takers, income, years, public information, expenditures, and rank.
-
-Keywords: statistical analysis, chemistry, life science, data sets, book publication.
+Keywords: MNIST, handwritten digits, vision, machine learning, pattern recognition, NIST

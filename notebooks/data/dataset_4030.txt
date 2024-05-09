@@ -1,9 +1,18 @@
-Pol Dataset is a machine learning dataset specifically designed for classification tasks involving numerical features. It belongs to the "Classification on Numerical Features" benchmark, which is part of a larger tabular data benchmark.
+**QSAR-TID-17086**
+**Tags:** MTLQSAR, study_3
 
-This dataset has undergone transformation, where the numeric target feature was converted into a two-class nominal target feature. The conversion process involved computing the mean and categorizing all instances with a lower target value as Positive and all others as Negative.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 17086. It consists of seventy-four rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-The dataset consists of various features, including those related to medical information. Unfortunately, the exact meaning of these features is unclear due to their obscure naming conventions. However, they are essential components of this dataset.
+The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-The Pol Dataset is a binarized version of its original counterpart, ensuring consistency and ease of use for machine learning models.
+The dataset is part of the MetaQSAR project, published in September 2015.
 
-Keywords: machine learning, medicine, classification, numerical features, tabular data, benchmark, binarized dataset.
+**Scraped Data:**
+
+The adenosine A2a receptor is a single protein target, also known as adenosine receptor A2a or ADORA2A. It belongs to the species group Cavia porcellus and is classified as a membrane receptor, family A G protein-coupled receptor, small molecule receptor, nucleotide-like receptor.
+
+The adenosine A2a receptor is associated with various gene ontology components, functions, and processes. These include plasma membrane, membrane, cellular anatomical entity, G protein-coupled adenosine receptor activity, G protein-coupled receptor activity, G protein-coupled adenosine receptor signaling pathway, signal transduction, G protein-coupled receptor signaling pathway, regulation of cell communication, regulation of signaling, and response to stimulus.
+
+Additionally, the adenosine A2a receptor is linked to UniProt accession number P46616, InterPro entries IPR000276, IPR001513, IPR001634, and IPR017452, and Pfam family PF00001.
+
+Keywords: QSAR, adenosine A2a receptor, molecular fingerprints, MetaQSAR project, G protein-coupled receptor, signal transduction, gene ontology.

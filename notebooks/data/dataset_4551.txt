@@ -1,11 +1,26 @@
-The Diabetes One Thirty US dataset has been subsampled using a specific set of parameters to create a new dataset. This process involves selecting a random subset of the original data while ensuring that certain conditions are met.
+Waveform Database Generator
 
-The subsampling process begins by uniformly selecting classes from the unique values present in the target variable. In cases where there are more classes than the specified maximum, a random selection is made based on the value counts of each class. The indices corresponding to the selected classes are then used to filter the data.
+Tags: Computer Systems, Physical Sciences
 
-Next, the columns are sampled uniformly if their number exceeds the specified maximum. This is done by randomly choosing column indices and sorting them to maintain their original order.
+Abstract: The waveform domains presented in the CART book.
 
-Finally, the number of rows is reduced to the specified maximum if necessary. To ensure that the resulting dataset remains representative, stratified sampling is employed according to the target variable.
+Source: Original
 
-The resulting dataset contains a subset of the original features, including demographic information, medical history, and treatment details. These features are crucial in understanding the complexities of diabetes management and predicting patient outcomes.
+Owners:
 
-Keywords: Diabetes Management, Data Subsampling, Stratified Sampling, Feature Selection, Medical Data Analysis
+Data Set Information:
+The dataset consists of three classes of waves, each with twenty-one attributes, all of which include noise. For a detailed explanation, please refer to the book.
+
+Attribute Information:
+Each class is generated from a combination of two of three base waves. Each instance is generated with added noise, having a mean of zero and a variance of one, in each attribute. For further information, please see the book.
+
+Relevant Papers:
+Classification and Regression Trees.
+
+Citation Policy:
+Please refer to the Machine Learning Repository's citation policy.
+
+Features: 
+The dataset includes twenty-one attributes, including various waveform characteristics.
+
+Keywords: waveform database, classification, regression trees, computer systems, physical sciences, machine learning repository.

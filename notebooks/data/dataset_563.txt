@@ -1,7 +1,50 @@
-The Fri C Three One Hundred Fifty Dataset has been binarized into a two-class nominal target feature. This was achieved by calculating the mean and categorizing all instances with a lower target value as Positive and all others as Negative. 
+El Nino Data
 
-This dataset contains numerous features including various ozone measurements. The resulting binary class feature enables more straightforward analysis and comparison.
+Data Type: Spatio-Temporal
 
-Tags: Chemistry, Life Science, Mythbusting, Study 
+Abstract:
+The dataset contains oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific. The data is expected to aid in the understanding and prediction of El Nino/Southern Oscillation (ENSO) cycles.
 
-Keywords: Binarization, Ozone Measurements, Target Feature, Nominal Classification, Chemistry, Life Science
+Sources:
+Original Owner: Pacific Marine Environmental Laboratory, National Oceanic and Atmospheric Administration, US Department of Commerce
+Donor: Department of Statistics, Iowa State University
+Date Donated: June 1999
+
+Data Characteristics:
+This data was collected with the Tropical Atmosphere Ocean (TAO) array, which was developed by the international Tropical Ocean Global Atmosphere (TOGA) program. The TAO array consists of nearly seventy moored buoys spanning the equatorial Pacific, measuring oceanographic and surface meteorological variables critical for improved detection, understanding, and prediction of seasonal-to-interannual climate variations originating in the tropics, most notably those related to the El Nino/Southern Oscillation (ENSO) cycles. The moorings were developed by the National Oceanic and Atmospheric Administration's Pacific Marine Environmental Laboratory (PMEL).
+
+Each mooring measures air temperature, relative humidity, surface winds, sea surface temperatures, and subsurface temperatures down to a depth of five hundred meters, and a few of the buoys measure currents, rainfall, and solar radiation. The data from the array, and current updates, can be viewed on the web.
+
+The data consists of the following variables: date, latitude, longitude, zonal winds, meridional winds, relative humidity, air temperature, sea surface temperature, and subsurface temperatures down to a depth of five hundred meters. Data taken from the buoys dates back to as early as nineteen eighty for some locations. Other data that was taken in various locations includes rainfall, solar radiation, current levels, and subsurface temperatures.
+
+Variable Characteristics:
+The latitude and longitude in the data showed that the buoys moved around to different locations. The latitude values stayed within a degree from the approximate location, yet the longitude values were sometimes as far as five degrees off of the approximate location.
+
+Looking at the wind data, both the zonal and meridional winds fluctuated between minus ten meters per second and ten meters per second. The plot of the two wind variables showed no linear relationship. Also, the plots of each wind variable against the other three meteorological data showed no linear relationships.
+
+The relative humidity values in the tropical Pacific were typically between seventy percent and ninety percent. Both the air temperature and the sea surface temperature fluctuated between twenty and thirty degrees Celsius. The plot of the two temperature variables shows a positive linear relationship existing. The two temperatures when each plotted against time also have similar plot designs.
+
+Plots of the other meteorological variables against the temperature variables showed no linear relationship. There are missing values in the data. As mentioned earlier, not all buoys are able to measure currents, rainfall, and solar radiation, so these values are missing dependent on the individual buoy. The amount of data available is also dependent on the buoy, as certain buoys were commissioned earlier than others. All readings were taken at the same time of day.
+
+Other Relevant Information:
+Background:
+The El Nino/Southern Oscillation (ENSO) cycle of nineteen eighty-two to nineteen eighty-three, the strongest of the century, created many problems throughout the world. Parts of the world such as Peru and the United States experienced destructive flooding from increased rainfalls while the western Pacific areas experienced drought and devastating brush fires. The ENSO cycle was neither predicted nor detected until it was near its peak. This highlighted the need for an ocean observing system to support studies of large-scale ocean-atmosphere interactions on seasonal-to-interannual time scales.
+
+Research Questions:
+How can the data be used to predict weather conditions throughout the world?
+How do the variables relate to each other?
+Which variables have a greater effect on the climate variations?
+Does the amount of movement of the buoy affect the reliability of the data?
+
+When performing an analysis of the data, one should pay attention to the possible effect of autocorrelation. Using a multiple regression approach to model the data would require a look at autoregression since the weather statistics of the previous days will affect today's weather.
+
+Data Format:
+The data is stored in ASCII files with one observation per line. Spaces separate fields and periods denote missing values.
+
+Past Usage:
+This data was used in the American Statistical Association Statistical Graphics and Computing Sections nineteen ninety-nine Data Exposition.
+
+References and Further Information:
+More information and data from the TAO array can be found at the Pacific Marine Environmental Laboratory TAO data webpage. Information on storm data is available here. This site contains data from January nineteen ninety-four to April nineteen ninety-eight in a chronological listing by state provided by the National Weather Service. The data includes hurricanes, tornadoes, thunderstorms, hail, floods, drought conditions, lightning, high winds, snow, and temperature extremes. Hurricane tracking data for the Atlantic is available here. The site contains a map showing the paths of the Atlantic hurricanes and also includes the storms' winds, pressure, and the category of the storm based on the Saffir-Simpson scale. Another site of interest related to the ENSO cycles is available here. This site contains information on twelve areas of the world that have demonstrated ENSO-precipitation relationships. Included in the site are maps of the areas and time series plots of actual daily precipitation and accumulated normal precipitation for the areas.
+
+Keywords: El Nino, Southern Oscillation, oceanographic, meteorological, Tropical Atmosphere Ocean, Tropical Ocean Global Atmosphere, Pacific Marine Environmental Laboratory, National Oceanic and Atmospheric Administration, climate variations.

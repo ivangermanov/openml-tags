@@ -1,36 +1,29 @@
-**acp-lung-cancer**
-Tags: Images, Manufacturing
+QSAR-TID-17061 Dataset 
 
-Peptides with experimental annotations on their anticancer action on lung cancer cells.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 17061. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PX C Fifty.
 
-Membranolytic anticancer peptides are drawing increasing attention as potential future therapeutics against cancer, due to their ability to hinder the development of cellular resistance and their potential to overcome common hurdles of chemotherapy, such as side effects and cytotoxicity.
+The features represent FCFP Six One Hundred Twenty Four bit Molecular Fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
 
-This dataset contains information on peptides annotated for their one-letter amino acid code and their anticancer activity on lung cancer cell lines.
+Tags: Life Science, MTL QSAR, Study Three, Transportation 
 
-### Attribute Information:
+Source: Meta QSAR Project - September Two Thousand Fifteen 
 
-The dataset contains three attributes:
+Please cite this dataset when using it for your research purposes.
 
-1. Peptide Identification
-2. One-letter amino acid sequence
-3. Class (active, moderately active, experimental inactive, virtual inactive)
+Dataset Description:
 
-Features: identification, sequence, class
+The dataset contains QSAR data showing activity values of several compounds on drug target TID: 17061. It has multiple rows and numerous features, including IDs and class feature: Molecule ChEMBL ID and Median PX C Fifty.
 
-Scraped Data: Dataset Information
+Compound Details:
 
-Additional Information
+The compound details include the molecule ChEMBL ID, which serves as a unique identifier for each compound. Additionally, the median PX C fifty value represents the activity of each compound on the drug target.
 
-Membranolytic anticancer peptides are drawing increasing attention as potential future therapeutics against cancer, due to their ability to hinder the development of cellular resistance and their potential to overcome common hurdles of chemotherapy, such as side effects and cytotoxicity.
+Molecular Fingerprints:
 
-This dataset contains information on peptides annotated for their one-letter amino acid code and their anticancer activity on lung cancer cell lines.
+The molecular fingerprints were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. These fingerprints represent the chemical structure of each compound and are used to predict their biological activity.
 
-Two peptide datasets targeting lung cancer cells were assembled and curated manually from CancerPPD. Annotations on lung cancer cells were retained; values were converted to micromolar units. Linear and L-chiral peptides were retained, while cyclic, mixed or D-chiral peptides were discarded.
+Target Information:
 
-In the presence of both amidated and non-amidated data for the same sequence, only the value referred to the amidated peptide was retained. Peptides were split into three classes for model training: very active, moderately active, and inactive peptides.
+The target information includes the preferred name, synonyms, and classification of the drug target. The preferred name is Alpha One B Adrenergic Receptor, and it belongs to the family of G protein coupled receptors.
 
-Duplicates with conflicting class annotations were compared manually to the original sources, and, if necessary, corrected. If multiple class annotations were present for the same sequence, the most frequently represented class was chosen; in case of ties, the less active class was chosen.
-
-Since the CancerPPD is biased towards the annotation of active peptides, a set of presumably inactive peptides was built by randomly extracting alpha-helical sequences from crystal structures deposited in the Protein Data Bank.
-
-Keywords: Anticancer peptides, Lung cancer, Chemotherapy, Cellular resistance, Cytotoxicity, Amino acid sequence, Cancer treatment.
+Keywords: QSAR, Drug Target, Molecular Fingerprints, Compound Activity, Biological Activity, G Protein Coupled Receptors.

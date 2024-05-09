@@ -1,37 +1,11 @@
-**Bridges**
-Tags: Transportation, UCI
+The Two D Planes dataset is a machine learning and statistics dataset, specifically designed for regression analysis, belonging to the OpenML-Reg nineteen collection and study one thirty.
 
-This dataset is derived from the original version by removing all instances with missing values in the last attribute. The Bridges dataset is originally not a classification dataset, but it is used extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking results. Therefore, these instances have been removed.
+This artificial dataset is described in a research paper, with variance one instead of two. The ten attributes are generated independently using specific probability distributions. The first attribute has a fifty percent chance of being minus one or one. The remaining nine attributes have a one-third probability of being minus one, zero, or one.
 
-The Bridges dataset is compiled from various sources and was created on August 1, 1990.
+The target variable Y is obtained using a predefined rule based on the value of the first attribute. If the first attribute is one, then Y is calculated as three plus three times the second attribute, plus two times the third attribute, plus the fourth attribute, plus a random error term with a standard deviation of one. If the first attribute is minus one, then Y is calculated as minus three plus three times the fifth attribute, plus two times the sixth attribute, plus the seventh attribute, plus a random error term with a standard deviation of one.
 
-Attribute Information:
+This dataset consists of forty thousand seven hundred sixty-eight cases, each with eleven continuous attributes. It is part of a collection of regression datasets available online.
 
-The type field states whether a property is continuous or integer (continuous) or nominal. For properties with continuous and nominal types, the range of continuous numbers is given first, followed by the possible values of the nominal.
+Features: x one, x two, x three, x four, x five, x six, x seven, x eight, x nine, x ten, target variable Y
 
-* Identifier of the examples
-* River location, categorized as A, M, or O
-* Location, ranging from 1 to 52
-* Year erected, ranging from 1818 to 1986, categorized as Crafts, Emerging, Mature, or Modern
-* Purpose, categorized as Walk, Aqueduct, Railroad, or Highway
-* Length, ranging from 804 to 4558, categorized as Short, Medium, or Long
-* Number of lanes, categorized as 1, 2, 4, or 6
-* Clearance grade, categorized as N or G
-* Type of bridge design, categorized as Through or Deck
-* Material used, categorized as Wood, Iron, or Steel
-* Span length, categorized as Short, Medium, or Long
-* Relative level, categorized as S, S-F, or F
-* Bridge type, categorized as Wood, Suspension, Simple-T, Arch, Cantilever, or Continuous-T
-
-Features:
-Identifier, River Location, Location, Year Erected, Purpose, Length, Number of Lanes, Clearance Grade, Bridge Design, Material Used, Span Length, Relative Level, Bridge Type
-
-Scraped Data:
-Dataset Information
-Additional Information
-There are two versions to the database: one contains the original examples, and the other contains descriptions after discretizing numeric properties. There are no classes in the domain; rather, this is a design domain where five properties (design description) need to be predicted based on seven specification properties.
-
-Has Missing Values?
-No
-
-Keywords: Bridges, Transportation, UCI, Classification, Design Domain
+Keywords: machine learning, regression analysis, statistics, synthetic dataset, probability distribution, target variable, random error term, continuous attributes, dataset collection.

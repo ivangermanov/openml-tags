@@ -1,13 +1,27 @@
-Tags: **Papir 1**
+Machine Learning Dataset: MV
 
-This dataset is one of two multivariate regression datasets from the paper industry, originating from an experiment conducted at the paper plant Norske Skog, located in Skogn, Norway.
+Tags: Machine Learning, Mathematics, OpenML-Reg19, Study Thirteen Zero, Synthetic
 
-The dataset has been thoroughly described and analyzed in a research paper titled "Moderate Projection Pursuit Regression for Multivariate Response Data," which was published in the journal Computational Statistics and Data Analysis.
+This is an artificial data set with complex dependencies between the attribute values. The cases are generated using a specific method, which involves the creation of ten attributes and one target variable.
 
-It comprises thirty observations and twenty-two variables, although it is essential to note that all response variables are missing for the twenty-eighth observation. The first thirteen columns consist of response variables that describe various qualities of the paper, while the remaining nine columns represent predictor variables.
+The first attribute, X One, is uniformly distributed over the range from negative five to five. The second attribute, X Two, is uniformly distributed over the range from negative fifteen to negative ten. 
 
-Three predictor variables were systematically varied throughout the experiment, taking on specific values. The subsequent three predictor variables were constructed as squares of the initial three variables, followed by the last three predictor variables, which were created as products of the initial three variables.
+The third attribute, X Three, depends on the value of X One. If X One is greater than zero, then X Three is assigned the value "green". Otherwise, X Three is assigned the value "red" with a probability of point four, and "brown" with a probability of point six.
 
-Features: response one, response two, response three, response four, response five, response six, response seven, response eight, response nine, response ten, response eleven, response twelve, response thirteen, variable one, variable two, variable three
+The fourth attribute, X Four, depends on the value of X Three. If X Three is equal to "green", then X Four is calculated as X One plus two times X Two. Otherwise, X Four is calculated as half of X One with a probability of point three, and half of X Two with a probability of point seven.
 
-Keywords: Papir 1, Multivariate Regression, Paper Industry, Experiment, Predictor Variables, Response Variables
+The fifth attribute, X Five, is uniformly distributed over the range from negative one to one. 
+
+The sixth attribute, X Six, is calculated as X Four multiplied by a random error term, which is uniformly distributed over the range from zero to five.
+
+The seventh attribute, X Seven, is a binary variable, taking the value "yes" with a probability of point three, and "no" with a probability of point seven.
+
+The eighth attribute, X Eight, depends on the value of X Five. If X Five is less than point five, then X Eight is assigned the value "normal". Otherwise, X Eight is assigned the value "large".
+
+The ninth attribute, X Nine, is uniformly distributed over the range from one hundred to five hundred. 
+
+The tenth attribute, X Ten, is a uniformly distributed integer over the range from one thousand to twelve hundred.
+
+The target variable, Y, is obtained using a complex set of rules, which depend on the values of X Two, X Four, X Seven, and X Eight.
+
+Keywords: artificial dataset, attribute dependencies, machine learning, mathematics, regression analysis, synthetic data.

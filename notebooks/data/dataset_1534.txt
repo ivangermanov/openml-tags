@@ -1,15 +1,21 @@
-The QSAR-TID-101411 dataset contains QSAR data showing activity values of several compounds on drug target TID: 101411. This dataset has seventy-four rows and one thousand twenty-six features, including IDs and class feature.
+Volcanoes on Venus - JARtool Experiment Data Set Experiment: B Four
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The data was collected by the Magellan spacecraft over an approximately four-year period from nineteen ninety to nineteen ninety-four. The objective of the mission was to obtain global mapping of the surface of Venus using synthetic aperture radar. A more detailed discussion of the mission and objectives is available at Jet Propulsion Laboratory's Magellan webpage.
 
-This dataset is part of the MetaQSAR project, published in September two thousand fifteen.
+There are some spatial dependencies. For example, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus, and the image quality does not permit one hundred percent, unambiguous identification of the volcanoes, even by human experts.
 
-The drug target is a single protein, also known as Serine Threonine-Protein Kinase ULK One. It is an enzyme, specifically a protein kinase, involved in various cellular processes such as autophagy, protein phosphorylation, and signal transduction.
+There are labels that provide some measure of subjective uncertainty, ranging from definitely a volcano to only a pit is visible. See reference for more information on the labeling uncertainty problem. There are also files that specify the exact set of experiments used in the published evaluations of the JARtool system.
 
-Autophagy is a catabolic process in which cells recycle damaged or dysfunctional cellular components, such as proteins and organelles. ULK One plays a crucial role in the initiation of autophagy by phosphorylating and activating other proteins involved in this process.
+Attribute Information:
+The images are one thousand twenty-four by one thousand twenty-four pixels. The pixel values are in the range zero to two fifty-five. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter, while lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-The dataset is annotated with various terms from Gene Ontology, including biological processes, cellular components, and molecular functions. These annotations provide insights into the functions and localizations of ULK One and its interactions with other proteins.
+Relevant Papers:
+Magellan: Radar Performance and Data Products
+Magellan Mission Summary
+Learning to Recognize Volcanoes on Venus
+Knowledge Discovery in Large Image Databases: Dealing with Uncertainties in Ground Truth
 
-In addition to Gene Ontology, the dataset is also annotated with terms from other databases, such as UniProt, InterPro, and Pfam, providing further information about the structure and function of ULK One.
+Features: 
+Class
 
-Keywords: QSAR, drug target, Serine Threonine-Protein Kinase ULK One, autophagy, protein phosphorylation, signal transduction, Gene Ontology, molecular fingerprints.
+Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Image Processing, Uncertainty Problem, Labeling Uncertainty, Radar Wavelength, Topography, Surface Roughness.

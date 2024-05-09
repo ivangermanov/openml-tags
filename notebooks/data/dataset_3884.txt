@@ -1,23 +1,15 @@
-Traffic-counting-using-cameras 
-Tags: Manufacturing, Social Media 
+The QSAR-TID-103081 dataset, tagged as Machine Learning, Manufacturing, and MTLQSAR, is part of the MetaQSAR project. It contains QSAR data showing activity values of several compounds on drug target TID: 103081.
 
-These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. The Telraam device is an innovative tool that allows individuals to participate in traffic monitoring. 
+This dataset has forty-three rows and one thousand twenty-six features, including IDs and class features, specifically MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA.
 
-This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France), and it is one of many devices deployed across the city. 
+Generating fingerprints typically does not require missing value imputation since all bits are generated. The dataset includes various features, such as molecule Chembl ID, fingerprint six one hundred twenty-four zero, fingerprint six one hundred twenty-four one, and so on.
 
-So, what exactly does the Telraam measure? It counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and analyzed by the Raspberry Pi, a small computer on which the device is based. The analysis is quite simple, relying on the size and speed of the passing object.
+This dataset is related to Pseudolysin, also known as elastase lasB, neutral metalloproteinase PAE, pro-elastase, and other synonyms. It belongs to the species group Pseudomonas aeruginosa, strain ATCC fifteen thousand six hundred ninety-two slash PAO one slash one C slash PRS one hundred one slash LMG twelve thousand two hundred twenty-eight.
 
-Each hour, the camera records the following data: 
-the percentage of camera activity; 
-the count of pedestrians, cars, bicycles, and trucks (total, as well as those moving to the left and right of the street); 
-and a histogram of car speeds for various intervals (from zero to ten kilometers per hour, ten to twenty, twenty to thirty, and so on up to seventy kilometers per hour and above).
+The protein target classification is enzyme, protease, metalloprotease, MAE clan, and metalloprotease M four family. The description relationship accession is elastase single protein P fourteen thousand seven hundred fifty-six.
 
-But why do we need to know the percentage of camera activity? Well, the Telraam device does not count during nighttime hours, when visibility is limited. Moreover, even during daylight hours, the camera is not always fully operational, so the percentage of activity is indicated to provide context for the recorded data. When the camera is only partially active, the counts are adjusted proportionally using this percentage to estimate the actual activity in the observed hour.
+There are various go components, functions, and processes associated with this dataset, including extracellular region, endopeptidase activity, metalloendopeptidase activity, peptidase activity, metallopeptidase activity, hydrolase activity, metal ion binding, proteolysis, protein secretion by the type two secretion system, protein transport by the sec complex, single-species biofilm formation, and bacterial-type flagellum-dependent swarming motility.
 
-The data have been flattened into a CSV file. The original data in JSON format can be retrieved in real-time via an API call. The API documentation provides detailed information on how to access these data.
+Additionally, there are connections to canSAR-target, UniProt, InterPro, Pfam, and PDBe.
 
-The dataset contains several columns, including time, ID, timezone, percentage of uptime, pedestrian count, bicycle count, car count, lorry count, and histograms of car speeds.
-
-This dataset offers exciting opportunities for time series forecasting, allowing researchers to predict traffic flow patterns and identify trends over time.
-
-Keywords: Telraam, traffic monitoring, pedestrian count, cyclist count, car count, freight vehicle count, camera activity, Raspberry Pi, time series forecasting.
+Keywords: QSAR, machine learning, manufacturing, MetaQSAR, molecular fingerprints, Pseudolysin, metalloprotease, enzyme, protease, protein target classification.

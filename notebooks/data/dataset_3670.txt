@@ -1,29 +1,45 @@
-All-Time Premier League Player Statistics 
-Tags: Computer Systems, Machine Learning 
+QSAR-TID-19907 Tags: Earth Science, Meteorology, MTLQSAR, study 3 
 
-As a massive football fan, the Premier League is one of my favorite football leagues. Therefore, I thought it would be an excellent opportunity to create a dataset of player statistics from all seasons of the Premier League. The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. It operates on a system of promotion and relegation with the English Football League, contested by twenty clubs.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 19907. It has thirteen rows and one thousand twenty-six features including IDs and class feature: Molecule ChEMBL ID and Median PXC Fifty. The features represent Finger Print Counting Power six hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Home to some of the most renowned clubs, players, managers, and stadiums in world football, the Premier League is the most-watched league globally, broadcast in one billion homes across one hundred eighty-eight countries. The league takes place between August and May, involving the teams playing each other home and away throughout the season, totaling three hundred eighty matches. Three points are awarded for a win, one point for a draw, and none for a defeat, with the team accumulating the most points at the end of the season claiming the Premier League title.
+Features: Molecule ChEMBL ID
 
-Some players of specific positions may not possess certain statistics – for instance, a goalkeeper might not have a statistic for shot accuracy.
+The dataset contains QSAR data from ChEMBL version seventeen showing activity values of several compounds on drug target TID nineteen thousand ninety-seven. This dataset was part of the MetaQSAR project in September two thousand fifteen.
 
-Details About the Dataset
+Scraped Data:
 
-I acquired the data from premierleague.com using a BeautifulSoup4 web scraper in Python3, which automatically generates a CSV file containing all player statistics. The runtime of the file varies depending on internet bandwidth, taking around twenty minutes to complete. To ensure the dataset remains up-to-date, I designed the program to update weekly, as player statistics change following each match.
+Preferred Name: Calmodulin Kinase One Alpha
+Synonyms: Calcium Dependent Protein Kinase, ZmCDPK One
+Organism: Zea Mays
+Species Group: No
+Protein Target Classification: One Enzyme, Kinase, Protein Kinase, Calmodulin Dependent Protein Kinase One Family
 
-Planning this project took two days, while creating the program in Python3 required seven days, and testing and bug fixing took an additional five days. The project was completed within a span of two weeks.
+Description Relationship Accession: Calcium Dependent Protein Kinase Single Protein
+Expression Atlas: One
+Go Function: Eight
+Nucleotide Binding
+Protein Kinase Activity
+Protein Serine Threonine Kinase Activity
+Calcium Ion Binding
+ATP Binding
+Kinase Activity
+Transferase Activity
+Metal Ion Binding
+Go Process: Two
+Protein Phosphorylation
+Phosphorylation
+CanSAR Target: One
+UniProt: One
+InterPro: Seven
+Prot Kinase Domain
+EF Hand Domain
+Ser Thr Kinase AS
+Kinase Like Domain Superfamily
+EF Hand Domain Pair
+Protein Kinase ATP Binding Site
+EF Hand One Calcium Binding Site
+Pfam: Two
+Pkinase
+EF Hand Seven
 
-Acknowledgments 
-Source Credits: premierleague.com 
-Image Credits: rb.gy/wuiwth 
-
-Inspiration 
-How do variables such as age, nationality, and club affect player performance?
-
-Known Issues in the Dataset 
-Goals per match display an abnormally high value for a few players due to incorrect values displayed during the initial few milliseconds of loading the webpage. I am attempting to resolve this issue analytically rather than scraping directly from the website.
-
-Features: 
-Name, Jersey Number, Club, Position, Nationality, Age, Appearances, Wins, Losses, Goals, Headed Goals, Goals with Right Foot, Goals with Left Foot, Penalties Scored, Free Kicks Scored, Shots, Shots on Target, Shooting Accuracy Percentage, Hit Woodwork, Big Chances Missed, Clean Sheets, Goals Conceded, Tackles, Tackle Success Percentage, Last Man Tackles, Blocked Shots, Interceptions, Clearances, Headed Clearance, Clearances off Line, Recoveries, Duels Won, Duels Lost, Successful Fifty/Fifty, Aerial Battles Won, Aerial Battles Lost, Own Goals, Errors Leading to Goal, Assists, Passes, Passes per Match, Big Chances Created, Crosses, Cross Accuracy Percentage, Through Balls, Accurate Long Balls, Saves, Penalties Saved, Punches, High Claims, Catches, Sweeper Clearances, Throw Outs, Goal Kicks, Yellow Cards, Red Cards, Fouls, Offsides 
-
-Keywords: Premier League, football, player statistics, machine learning, computer systems, web scraping, dataset.
+Keywords: QSAR, molecular fingerprints, Pipeline Pilot, MetaQSAR, Calmodulin Kinase, Calcium Dependent Protein Kinase

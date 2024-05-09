@@ -1,15 +1,33 @@
-Liver Disorders
+Title: Letter Image Recognition Data
 
-Tags: Health, Medicine
+The objective of this dataset is to identify each of a large number of black and white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet.
 
-This dataset consists of records of single male individuals, each containing six blood test results that are believed to be indicative of liver disorders potentially caused by excessive alcohol consumption.
+The character images were based on twenty different fonts and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, including statistical moments and edge counts, which were then scaled to fit into a range of integer values from zero to fifteen.
 
-The first five variables are all blood tests, including mean corpuscular volume, alkaline phosphatase, alanine aminotransferase, aspartate aminotransferase, and gamma-glutamyl transpeptidase. These tests are thought to be sensitive to liver disorders that may arise from excessive drinking.
+We typically train on the first part of the data and then use the resulting model to predict the letter category for the remaining part. See the referenced article for more details.
 
-It is important to note that the seventh field, often referred to as the selector, has been widely misinterpreted in the past as a dependent variable representing the presence or absence of a liver disorder. However, this interpretation is incorrect. The seventh field was actually created by researchers to split the data into training and testing sets. Therefore, it is not suitable as a dependent variable for classification purposes.
+Features:
 
-Unfortunately, the dataset does not contain any variable that directly indicates the presence or absence of a liver disorder. To overcome this limitation, researchers have used the sixth field, which represents the number of half-pint equivalents of alcoholic beverages consumed daily, as a dependent variable for classification after dichotomizing it.
+* Horizontal Position of Box
+* Vertical Position of Box
+* Width of Box
+* Height of Box
+* Total Number of On Pixels
+* Mean X of On Pixels in Box
+* Mean Y of On Pixels in Box
+* Mean X Variance
+* Mean Y Variance
+* Mean X Y Correlation
+* Edge Count Left to Right
+* Correlation of Edge Count with Y
+* Edge Count Bottom to Top
+* Correlation of Edge Count with X
+* Class
 
-Because of the widespread misinterpretation of the seventh field in the past, researchers should exercise caution when using this dataset as a classification benchmark and clearly state their methodology to avoid confusion.
+Dataset Information:
+This dataset does not have missing values.
 
-Keywords: Liver Disorders, Blood Tests, Excessive Alcohol Consumption, Classification Benchmark, Dependent Variable.
+Additional Information:
+The dataset consists of twenty-six classes, one for each capital letter in the English alphabet.
+
+Keywords: letter recognition, image classification, machine learning, font recognition, pixel display, statistical moments, edge counts

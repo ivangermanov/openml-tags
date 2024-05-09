@@ -1,71 +1,39 @@
-QSAR-TID-11142 Tags: Machine Learning, Mathematics, MTLQSAR, study_3 
+Localization Data for Person Activity Data Set
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11142, and it has multiple rows and numerous features including IDs and class feature. The features represent FCFP molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
+Abstract:
+This data set contains recordings of five individuals performing various daily activities. Each participant wore four sensors, also referred to as tags, while performing the same scenario multiple times.
 
-The dataset was created as part of the MetaQSAR project in September 2015. It is essential to cite this dataset when using it for any purpose.
+Dataset Title: Localization Data for Person Activity
+Tags: Chemistry, Concept Drift, Life Science
+Source: UCI
 
-This dataset shows activity values of several compounds on drug target TID: 11142. It has multiple rows and numerous features including IDs and class feature. 
+Data Set Information:
+The participants involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance in the data set represents a localization reading for one of these tags, which can be identified using specific attributes.
 
-Features include molecule ChEMBL ID and median pXC50. The features represent FCFP molecular fingerprints which were generated from SMILES strings. Generating fingerprints does not usually require missing value imputation as all bits are generated. 
+Attribute Information:
+An instance example is comprised of the following attributes:
+
+* Sequence Name: This attribute identifies the sequence of activities performed by each individual.
+* Tag Identifier: This attribute specifies the type of tag worn by the participant, including ankle left, ankle right, belt, and chest.
+* Timestamp: A unique numeric value representing the time of each reading.
+* Date: The date of each reading in the format day.month.year hour:minute:second:millisecond.
+* X Coordinate of the Tag: The x-axis coordinate of the tag's location.
+* Y Coordinate of the Tag: The y-axis coordinate of the tag's location.
+* Z Coordinate of the Tag: The z-axis coordinate of the tag's location.
+* Activity: The type of activity being performed by the participant, including walking, falling, lying down, sitting, standing up, and others.
+
+Relevant Papers:
+An agent-based approach to care in independent living has been explored using this data set.
+
+Features:
+(V1, V2, V3, V4, V5, V6, V7, Class)
 
 Scraped Data:
-Type: Single Protein
-Preferred Name: Glucagon Receptor
-Synonyms: Gcgr, GL-R, Glucagon Receptor
-Organism: Rattus Norvegicus
-Species Group: No
-Protein Target Classification: One Membrane Receptor Family B G Protein-Coupled Receptor Peptide Receptor Family B GPCR Glucagon-Like Receptor Glucagon Receptor
+Dataset Information
+Additional Information
+People involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance is a localization data for one of the tags. The tag can be identified by one of the attributes.
 
-Description Relationship Accession Glucagon Receptor Single Protein
+Has Missing Values?
+No
 
-Expression Atlas: One
-Go Component: Three
-GO: Endosome
-GO: Plasma Membrane
-GO: Membrane
-
-Go Function: Six
-GO: Transmembrane Signaling Receptor Activity
-GO: G Protein-Coupled Receptor Activity
-GO: Glucagon Receptor Activity
-GO: GTPase Activator Activity
-GO: Peptide Hormone Binding
-GO: Signaling Receptor Activity
-
-Go Process: Thirteen
-GO: Exocytosis
-GO: Signal Transduction
-GO: Cell Surface Receptor Signaling Pathway
-GO: G Protein-Coupled Receptor Signaling Pathway
-GO: Adenylate Cyclase-Modulating G Protein-Coupled Receptor Signaling Pathway
-GO: Adenylate Cyclase-Activating G Protein-Coupled Receptor Signaling Pathway
-GO: Cellular Response to Starvation
-GO: Hormone-Mediated Signaling Pathway
-GO: Positive Regulation of Gene Expression
-GO: Glucose Homeostasis
-GO: Response to Starvation
-GO: Regulation of Glycogen Metabolic Process
-GO: Cellular Response to Glucagon Stimulus
-
-canSAR-Target: One
-Guide To PHARMACOLOGY: Two Hundred Fifty-One
-Reactome: Three
-Glucagon Signaling in Metabolic Regulation
-G Alpha Q Signalling Events
-Glucagon-Type Ligand Receptors
-
-UniProt: One
-InterPro: Seven
-Ipr Gpcr Two Secretin Like
-Ipr Gpcr Two Extracellular Dom
-Ipr Gpcr Two Glp One Glucagon RcPt
-Ipr Gpcr Two Glucagon RcPt
-Ipr Seventeen Ninety Eight One Gpcr Two Like Tm
-Ipr Seventeen Ninety Eight Three Gpcr Two Secretin Like Cs
-Ipr Thirty-Six Thousand Four Forty-Five Gpcr Two Extracell Dom Sf
-
-Pfam: Two
-Pf Zero Zero Zero Zero Two Seventm Two
-Pf Zero Two Seven Ninety-Three Hrm
-
-Keywords: QSAR, Machine Learning, Mathematics, MTLQSAR, Glucagon Receptor, G Protein-Coupled Receptor, Peptide Receptor, Glucagon Signaling, Metabolic Regulation.
+Keywords: person activity, localization data, sensor readings, daily activities, agent-based approach, independent living.

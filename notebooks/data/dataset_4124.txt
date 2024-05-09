@@ -1,32 +1,25 @@
-Magic Telescope 
+QSAR-TID-56 Dataset 
 
-Tags: Computer Systems, Machine Learning 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 56. It has numerous rows and features, including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP 1024 bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset belongs to the regression on numerical features benchmark. 
+Demographics 
 
-The Magic Telescope dataset is a collection of simulated data from a Cherenkov gamma-ray telescope, designed to classify high-energy gamma particles into signal and background events. The data is generated using a Monte Carlo program to simulate the registration of these particles in a ground-based atmospheric Cherenkov gamma telescope. 
+The androgen receptor is a single protein preferred name, also known as androgen receptor AR, DHTR, dihydrotestosterone receptor, NR3C4. It belongs to the species group of Homo sapiens and is classified under transcription factor/nuclear receptor/nuclear hormone receptor subfamily three/nuclear hormone receptor subfamily three group C/nuclear hormone receptor subfamily three group C member four.
 
-Cherenkov gamma telescopes observe high-energy gamma rays by detecting the radiation emitted by charged particles produced inside electromagnetic showers initiated by these gamma rays. This radiation, of visible to ultraviolet wavelengths, leaks through the atmosphere and is recorded by the detector, allowing reconstruction of the shower parameters. 
+Description Relationship Accession 
 
-The available information consists of pulses left by the incoming Cherenkov photons on the photomultiplier tubes, arranged in a plane, the camera. Depending on the energy of the primary gamma, a total of few hundred to several thousand Cherenkov photons are collected, forming patterns, or shower images, that allow discrimination between signal and background events. 
+Androgen receptor is a single protein, and its description relationship accession is P10275.
 
-Typically, the image of a shower after preprocessing is an elongated cluster, whose long axis is oriented towards the camera center if the shower axis is parallel to the telescope's optical axis. A principal component analysis is performed in the camera plane, resulting in a correlation axis and defining an ellipse. If the depositions were distributed as a bivariate Gaussian, this would be an equidensity ellipse. 
+Rows per Page 
 
-The characteristic parameters of this ellipse, often referred to as Hillas parameters, are among the image parameters used for discrimination. The energy depositions are typically asymmetric along the major axis, and this asymmetry can also be used in discrimination. Additionally, there are further discriminating characteristics, such as the extent of the cluster in the image plane, or the total sum of depositions. 
+There are numerous records, and they are displayed five at a time, with options to browse all records.
 
-Attribute Information:
+Parent Molecule 
 
-fLength: length of the major axis of the ellipse 
-fWidth: width of the minor axis of the ellipse 
-fSize: ten times the logarithm of the sum of the content of all pixels 
-fConc: ratio of the sum of the two highest pixels over fSize 
-fConc1: ratio of the highest pixel over fSize 
-fAsym: distance from the highest pixel to the center, projected onto the major axis 
-fM3Long: third root of the third moment along the major axis 
-fM3Trans: third root of the third moment along the minor axis 
-fAlpha: angle of the major axis with the vector to the origin 
-fDist: distance from the origin to the center of the ellipse 
+The parent molecules include oxandrolone, glpg0492, fluoxymesterone, danazol, and testosterone undecanoate, among others. These molecules have different mechanisms of action and max phases, and some have been approved by the FDA.
 
-Class labels: gamma (signal) and hadron (background)
+Expression Atlas 
 
-Keywords: Cherenkov gamma-ray telescope, Monte Carlo simulation, machine learning, regression, numerical features, gamma particles, background events.
+The expression atlas includes various components, functions, and processes related to the androgen receptor.
+
+Keywords: QSAR, androgen receptor, molecular fingerprints, demographics, transcription factor, nuclear receptor, hormone receptor.

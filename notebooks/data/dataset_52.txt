@@ -1,11 +1,47 @@
-The Iris Plants Database is perhaps the most well-known database in the pattern recognition literature. This dataset is a classic in the field and is frequently referenced to this day.
+INDUCE Trains Data Set
 
-The data set contains three classes of iris plants, where each class refers to a specific type of iris plant. One class is linearly separable from the other two, whereas the latter are not linearly separable from each other. The predicted attribute is the class of iris plant.
+Sources:
+Donor: Center for AI, Software Librarian
+Original Owners:
 
-This dataset is exceedingly simple and has been widely used in statistics and machine learning. It is one of the earliest datasets used in the literature on classification methods.
+Date Received: 
+Date Updated:
 
-Each instance in the dataset represents a plant. There are five attributes associated with each instance: sepal length in centimeters, sepal width in centimeters, petal length in centimeters, petal width in centimeters, and class.
+Past Usage:
+This set most closely resembles the data sets described in the following two publications:
 
-There are no missing values in the dataset.
+This dataset has ten attributes, no wheel or load color attributes.
+Both references describe a set of ten trains, five eastbound and five westbound.
+Both refer to the same ten trains as seen by the figures in these publications.
 
-Keywords: Iris Plants Database, pattern recognition, classification methods, statistics, machine learning, plants, classification.
+Results:
+Found the following decision rules:
+There exists car one, car two, load one, and load two such that in front of car one, car two, load contains car one, load one, and load contains car two, load two, load shape load one equals triangle, load shape load two equals polygon implies direction equals east.
+There exists a car one such that length of car one equals short, car shape car one equals closed top implies direction equals east.
+Number of cars equals three or there exists a car one such that car shape car one equals jagged top implies direction equals west.
+There exists a car one such that number of cars length equals long equals two, car shape car one equals open trapezoid, u-shaped or location car one equals two, car shape car one equals closed, rectangle implies direction equals west.
+
+Relevant Information:
+Additional background knowledge is supplied that provides a partial ordering on some of the attribute values.
+We are providing this dataset both in its original form and in a form similar to the more typical propositional datasets in our repository.
+Since the trains dataset records relations between attributes, this transformation was somewhat challenging.
+However, it may shed some insight on this problem for people who are more familiar with the simple one-instance-per-line dataset format.
+Hierarchy of values: if car shape is one of open rectangle, open trapezoid, u-shaped, double bottom open rectangle, then car shape is open top; if car shape is one of hexagon, ellipse, closed rectangle, jagged top, slope top, engine, then car shape is closed top.
+Prediction Task: Determine concise decision rules distinguishing trains traveling east from those traveling west.
+
+Number of Instances: 
+Number of Attributes: Ten, not including the class attribute.
+
+Attributes:
+Car contains train index one, car index two; number of cars in train index; relative positions of cars in train; absolute position of car in train; number of wheels of car index; length of car index; shape of car index; number of loads in car index; description of which cars hold which loads; description of load shape; class direction.
+
+Class: Direction, East or West.
+
+The Following Format Was Used for the Transformed Dataset Representation:
+Attributes: Thirty-three.
+One Instance Per Line.
+
+Attributes:
+Number of Cars; Number of Different Loads; Five Attributes for Each of Cars Two Through Five; Ten Boolean Attributes Describing Whether Two Types of Loads Are on Adjacent Cars of the Train; Class Attribute.
+
+Keywords: Machine Learning, Transportation, Trains, Classification, Decision Rules.

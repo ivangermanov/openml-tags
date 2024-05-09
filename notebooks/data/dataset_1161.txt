@@ -1,34 +1,13 @@
-The Wall Following Robot Navigation Data dataset is categorized under Chemistry, Life Science, OpenML-CC18, OpenML100, study_123, study_14, study_34, study_52, study_7, and study_98.
+GEMLeR provides a collection of gene expression datasets that can be used for benchmarking gene expression-oriented machine learning algorithms. These datasets can be utilized for estimating different quality metrics, such as accuracy, precision, and area under the Receiver Operating Characteristic curve, for classification, feature selection, or clustering algorithms.
 
-This dataset was collected as the SCITOS G5 robot navigated through a room following the wall in a clockwise direction for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. The data consists of raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings were sampled at a rate of nine samples per second. The class labels are Move Forward, Slight Right Turn, Sharp Right Turn, and Slight Left Turn.
+This repository was inspired by an increasing need in the machine learning and bioinformatics communities for a collection of microarray classification problems that could be used by different researchers. This way, many different classification or feature selection techniques can finally be compared to each other on the same set of problems.
 
-It is worth noting that the twenty-four ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows, one for each sampling time step. The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the Multilayer Perceptron network, are able to learn the task and command the robot successfully without collisions.
+Each gene expression sample in the GEMLeR repository comes from a large publicly available Expression Project for Oncology repository by the International Genomics Consortium. The goal of the Expression Project for Oncology and its consortium supporters is to procure tissue samples under standard conditions and perform gene expression analyses on a clinically annotated set of de-identified tumor samples. The tumor data is updated with clinical outcomes and is released into the public domain without intellectual property restrictions. The availability of this information translates into direct benefits for patients, researchers, and pharmaceutical companies alike.
 
-Attribute information includes:
+A decision to use data from the Expression Project for Oncology repository was made due to the consistency of tissue samples processing procedures, the same microarray platform being used for all samples, the availability of additional information for combined genotype-phenotype studies, and the availability of a large number of samples for different tumor types.
 
-Ultrasound Sensor at the Front of the Robot (Reference Angle: One Hundred Eighty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Sixty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Fifty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Thirty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Twenty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Ninety Degrees)
-Ultrasound Reading (Reference Angle: Minus Seventy-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Sixty Degrees)
-Ultrasound Reading (Reference Angle: Minus Forty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Thirty Degrees)
-Ultrasound Reading (Reference Angle: Minus Fifteen Degrees)
-Reading of Ultrasound Sensor Situated at the Back of the Robot (Reference Angle: Zero Degrees)
-Ultrasound Reading (Reference Angle: Fifteen Degrees)
-Ultrasound Reading (Reference Angle: Thirty Degrees)
-Ultrasound Reading (Reference Angle: Forty-Five Degrees)
-Ultrasound Reading (Reference Angle: Sixty Degrees)
-Ultrasound Reading (Reference Angle: Seventy-Five Degrees)
-Ultrasound Reading (Reference Angle: Ninety Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Five Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Twenty Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Thirty-Five Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Fifty Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Sixty-Five Degrees)
+When publishing material based on GEMLeR datasets, please note the assistance received by using this repository. This will help others to obtain the same datasets and replicate experiments.
 
-Keywords: robot navigation, ultrasound sensors, classification task, nonlinearly separable, linear classifiers, neural classifiers, collision avoidance.
+The datasets contain features such as gene identifiers and expression levels.
+
+Keywords: gene expression, machine learning, microarray, bioinformatics, classification, feature selection, clustering, oncology, genomics.

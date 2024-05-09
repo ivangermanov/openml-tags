@@ -1,39 +1,16 @@
-Tags: Images, Language
+MetaQSAR Project Dataset: QSAR-TID-12587
+Tags: Machine Learning, Medicine, MTLQSAR, Study Three
 
-Australian Open Men 2013
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12587. It has multiple rows and features, including IDs and class features: Molecule ChEMBL ID and Median PXC50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset is part of a collection of eight files containing match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has forty-two columns and a minimum of seventy-six rows. This file contains the statistics for the Australian Open Men's Edition for 2013.
+The dataset was obtained from the ChEMBL version seventeen database. It is essential for machine learning models in medicine, particularly in the development of QSAR models for predicting the biological activities of molecules.
 
-Attribute Information:
+The molecular fingerprints were generated without requiring missing value imputation, as all bits are generated. This dataset is crucial for researchers working on machine learning models for predicting the biological activities of molecules.
 
-Player One Name refers to the name of the first player.
-Player Two Name refers to the name of the second player.
-Result refers to the outcome of the match, where one indicates that Player One wins, and zero indicates that Player One loses.
-First Serve Percentage for Player One refers to the percentage of successful first serves made by Player One during the match.
-First Serve Won by Player One refers to the number of times Player One won a point immediately after their first serve.
-Second Serve Percentage for Player One refers to the percentage of successful second serves made by Player One during the match.
-Second Serve Won by Player One refers to the number of times Player One won a point immediately after their second serve.
-Aces Won by Player One refers to the number of aces served by Player One during the match.
-Double Faults Committed by Player One refers to the number of double faults committed by Player One during the match.
-Winners Earned by Player One refers to the number of winners hit by Player One during the match.
-Unforced Errors Committed by Player One refers to the number of unforced errors committed by Player One during the match.
-Break Points Created by Player One refers to the number of break points created by Player One during the match.
-Break Points Won by Player One refers to the number of break points won by Player One during the match.
-Net Points Attempted by Player One refers to the number of net points attempted by Player One during the match.
-Net Points Won by Player One refers to the number of net points won by Player One during the match.
-Total Points Won by Player One refers to the total number of points won by Player One during the match.
-Set One Result for Player One refers to the result of the first set for Player One.
-Set Two Result for Player One refers to the result of the second set for Player One.
-Set Three Result for Player One refers to the result of the third set for Player One.
-Set Four Result for Player One refers to the result of the fourth set for Player One.
-Set Five Result for Player One refers to the result of the fifth set for Player One.
-Final Number of Games Won by Player One refers to the total number of games won by Player One during the match.
+The features included in this dataset are Molecule ChEMBL ID and multiple FCFP6 1024-bit molecular fingerprint features. These features are essential for developing accurate QSAR models.
 
-The same attributes are also available for Player Two, with the prefix changed to reflect the second player.
+The target protein is Cathepsin L2, also known as Cathepsin L2, Cathepsin U, Cathepsin V, CATL2, and CTSL2. It belongs to the species group Homo sapiens and is classified under the enzyme/protease/cysteine protease/cysteine protease CA clan/cysteine protease C1A family category.
 
-Round refers to the round of the tournament at which the game was played.
+Cathepsin L2 is involved in various biological processes, including proteolysis, apoptotic process, immune response, positive regulation of peptidase activity, antigen processing and presentation of exogenous peptide antigen via MHC class II, extracellular matrix disassembly, and proteolysis involved in protein catabolic process.
 
-Dataset Information:
-Has Missing Values? Yes
-
-Keywords: Tennis, Australian Open, Men's Edition, Match Statistics, Player Performance.
+Keywords: QSAR, Machine Learning, Medicine, MTLQSAR, Cathepsin L2, Proteolysis, Apoptotic Process, Immune Response.

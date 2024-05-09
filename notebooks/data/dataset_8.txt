@@ -1,49 +1,15 @@
-Lymphography Domain
+Liver Disorders
 
-This lymphography domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.
+Tags: Health, Medicine
 
-Title: Lymphography Domain
-Sources: 
-Date: November 1988
+This dataset consists of records of single male individuals, each containing six blood test results that are believed to be indicative of liver disorders potentially caused by excessive alcohol consumption.
 
-Past Usage:
-This domain has repeatedly appeared in the machine learning literature.
+The first five variables are all blood tests, including mean corpuscular volume, alkaline phosphatase, alanine aminotransferase, aspartate aminotransferase, and gamma-glutamyl transpeptidase. These tests are thought to be sensitive to liver disorders that may arise from excessive drinking.
 
-Relevant Information:
-This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature. 
+It is important to note that the seventh field, often referred to as the selector, has been widely misinterpreted in the past as a dependent variable representing the presence or absence of a liver disorder. However, this interpretation is incorrect. The seventh field was actually created by researchers to split the data into training and testing sets. Therefore, it is not suitable as a dependent variable for classification purposes.
 
-Number of Instances: 
-Number of Attributes: nineteen including the class attribute
+Unfortunately, the dataset does not contain any variable that directly indicates the presence or absence of a liver disorder. To overcome this limitation, researchers have used the sixth field, which represents the number of half-pint equivalents of alcoholic beverages consumed daily, as a dependent variable for classification after dichotomizing it.
 
-Attribute Information:
-All attribute values in the database have been entered as numeric values corresponding to their index in the list of attribute values for that attribute domain as given below.
-Class: normal find, metastases, malign lymph, fibrosis
-Lymphatics: normal, arched, deformed, displaced
-Block of Affere: no, yes
-Block of Lymph C: no, yes
-Block of Lymph S: no, yes
-By Pass: no, yes
-Extravasates: no, yes
-Regeneration Of: no, yes
-Early Uptake In: no, yes
-Lymph Nodes Dimin: zero to three
-Lymph Nodes Enlar: one to four
-Changes in Lymph: bean, oval, round
-Defect in Node: no, lacunar, lacunar marginal, lacunar central
-Changes in Node: no, lacunar, lacunar margin, lacunar central
-Changes in Structure: no, grainy, drop-like, coarse, diluted, reticular, stripped, faint
-Special Forms: no, chalices, vesicles
-Dislocation Of: no, yes
-Exclusion of No: no, yes
-No of Nodes In: zero to nine, ten to nineteen, twenty to twenty-nine, thirty to thirty-nine, forty to forty-nine, fifty to fifty-nine, sixty to sixty-nine, seventy or more
+Because of the widespread misinterpretation of the seventh field in the past, researchers should exercise caution when using this dataset as a classification benchmark and clearly state their methodology to avoid confusion.
 
-Missing Attribute Values: none
-
-Class Distribution:
-Class: number of instances
-normal find
-metastases
-malign lymph
-fibrosis
-
-Keywords: lymphography, machine learning, medicine, oncology, lymph nodes
+Keywords: Liver Disorders, Blood Tests, Excessive Alcohol Consumption, Classification Benchmark, Dependent Variable.

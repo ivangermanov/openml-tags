@@ -1,0 +1,36 @@
+**acp-lung-cancer**
+Tags: Images, Manufacturing
+
+Peptides with experimental annotations on their anticancer action on lung cancer cells.
+
+Membranolytic anticancer peptides are drawing increasing attention as potential future therapeutics against cancer, due to their ability to hinder the development of cellular resistance and their potential to overcome common hurdles of chemotherapy, such as side effects and cytotoxicity.
+
+This dataset contains information on peptides annotated for their one-letter amino acid code and their anticancer activity on lung cancer cell lines.
+
+### Attribute Information:
+
+The dataset contains three attributes:
+
+1. Peptide Identification
+2. One-letter amino acid sequence
+3. Class (active, moderately active, experimental inactive, virtual inactive)
+
+Features: identification, sequence, class
+
+Scraped Data: Dataset Information
+
+Additional Information
+
+Membranolytic anticancer peptides are drawing increasing attention as potential future therapeutics against cancer, due to their ability to hinder the development of cellular resistance and their potential to overcome common hurdles of chemotherapy, such as side effects and cytotoxicity.
+
+This dataset contains information on peptides annotated for their one-letter amino acid code and their anticancer activity on lung cancer cell lines.
+
+Two peptide datasets targeting lung cancer cells were assembled and curated manually from CancerPPD. Annotations on lung cancer cells were retained; values were converted to micromolar units. Linear and L-chiral peptides were retained, while cyclic, mixed or D-chiral peptides were discarded.
+
+In the presence of both amidated and non-amidated data for the same sequence, only the value referred to the amidated peptide was retained. Peptides were split into three classes for model training: very active, moderately active, and inactive peptides.
+
+Duplicates with conflicting class annotations were compared manually to the original sources, and, if necessary, corrected. If multiple class annotations were present for the same sequence, the most frequently represented class was chosen; in case of ties, the less active class was chosen.
+
+Since the CancerPPD is biased towards the annotation of active peptides, a set of presumably inactive peptides was built by randomly extracting alpha-helical sequences from crystal structures deposited in the Protein Data Bank.
+
+Keywords: Anticancer peptides, Lung cancer, Chemotherapy, Cellular resistance, Cytotoxicity, Amino acid sequence, Cancer treatment.

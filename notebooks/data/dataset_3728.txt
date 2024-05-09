@@ -1,21 +1,19 @@
-California Environmental Conditions Dataset
-Tags: Computer Systems, Machine Learning Context
+MetaQSAR Project Dataset: QSAR-TID-11337
 
-Explore an environmental conditions dataframe scraped from California Irrigation Management Information System (CIMIS) weather stations using a Selenium ChromeDriver. With California's wildfires setting records in recent years, it is worthwhile to explore factors that may contribute to creating at-risk environments.
+This dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 11337. It has eleven rows and one thousand twenty-six features, including IDs and class feature.
 
-This dataset was used in conjunction with building an Extreme Gradient Boosting Classifier to accurately predict the probability of fire given environmental condition features. The dataset consists of approximately fourteen numerical features for exploratory data analysis. Advanced users can utilize the date feature for time series analysis.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The target column corresponds to fires on the respective observation date, in the observation region. Each observation is associated with a unique Station ID, which corresponds to California weather station IDs.
+Generating fingerprints does not usually require missing value imputation as all bits are generated.
 
-Acknowledgments: California Irrigation Management Information System (CIMIS)
+This dataset contains information about a single protein preferred name, Subtilisin/Kexin Type Five, also known as hPC Six, PC Five, PC Six, PCSK Five, and Proprotein Convertase Five.
 
-Inspiration:
+The organism is Homo sapiens, and the species group is no protein target classification. It belongs to enzyme/protease/serine protease/serine protease SB clan/serine protease S eight B subfamily.
 
-* What additional features would be valuable in determining fire risk?
-* What features are most important for specific models in determining the target?
-* Is there an accurate Long Short-Term Memory (LSTM) model to determine feature predictions and ultimately determine fire risk in the future?
+Description, Relationship, Accession, and Proprotein Convertase Subtilisin/Kexin Type Five are part of this dataset.
 
-Features:
-Station ID, Station Name, CIMIS Region, Date, Evapotranspiration, Precipitation, Solar Radiation, Average Vapour Pressure, Maximum Air Temperature, Minimum Air Temperature, Average Air Temperature, Maximum Relative Humidity, Minimum Relative Humidity, Average Relative Humidity, Dew Point, Average Wind Speed, Wind Run, Average Soil Temperature, Target
+Expression Atlas, Go Component, Go Function, and Go Process are also included. Go Component consists of extracellular region, extracellular space, Golgi apparatus, Golgi lumen, trans-Golgi network, endomembrane system, and membrane. Go Function includes endopeptidase activity, serine-type endopeptidase activity, protein binding, peptidase activity, serine-type peptidase activity, hydrolase activity, and peptide binding. Go Process consists of kidney development, renin secretion into blood stream, signal peptide processing, proteolysis, cell-cell signaling, heart development, female pregnancy, embryo implantation, anterior/posterior pattern specification, protein processing, peptide hormone processing, viral life cycle, respiratory tube development, limb morphogenesis, peptide biosynthetic process, embryonic digestive tract development, embryonic skeletal system development, regulation of catalytic activity, regulation of lipoprotein lipase activity, and cytokine precursor processing.
 
-Keywords: Wildfires, Environmental Conditions, Machine Learning, California, Weather Stations, Fire Risk Analysis, Feature Importance, Time Series Analysis
+Wikipedia, Guide to Pharmacology, IntAct, PharmGKB, Pharos, Tchem, Reactome, UniProt, and InterPro are part of this dataset.
+
+Keywords: QSAR, TID 11337, MetaQSAR, FCFP, molecular fingerprints, Subtilisin/Kexin Type Five, Proprotein Convertase Five, Homo sapiens, enzyme, protease, serine protease.

@@ -1,19 +1,55 @@
-**Pima Indians Diabetes Database**
+Credit German dataset classifies individuals described by a set of attributes as good or bad credit risks. This dataset comes with a cost matrix:
 
-Tags: Health, Medicine, Mythbusting, Study
+Good     Bad 
+(predicted)
+Good     0       1 
+(actual)
+Bad      5       0
 
-This dataset is related to the diagnosis of diabetes based on personal and medical characteristics. The goal is to predict whether a person has signs of diabetes according to the World Health Organization criteria.
+It is worse to classify a customer as good when they are bad (five), than it is to classify a customer as bad when they are good (one).
 
-The dataset was obtained from the National Institute of Diabetes and Digestive and Kidney Diseases and donated by the Research Center, RMI Group Leader, Applied Physics Laboratory, The Johns Hopkins University.
+Attribute Description:
 
-In the past, this dataset has been used to develop and test algorithms for predicting the onset of diabetes mellitus. One such algorithm, called ADAP, was developed to forecast the onset of diabetes based on various attributes. The results showed a sensitivity and specificity of seventy-six percent when using a cutoff of 0.448.
+The first attribute represents the status of an individual's existing checking account in Deutsche Mark.
 
-The dataset consists of eight attributes, including the number of times pregnant, plasma glucose concentration, diastolic blood pressure, triceps skin fold thickness, two-hour serum insulin, body mass index, diabetes pedigree function, and age. The class variable indicates whether the person has been tested positive for diabetes or not.
+Duration in months is the second attribute.
 
-Several constraints were placed on the selection of instances from a larger database. All patients in this dataset are female, at least twenty-one years old, and of Pima Indian heritage.
+The third attribute represents an individual's credit history, including credits taken, paid back duly, delays, and critical accounts.
 
-There are no missing attribute values in the dataset. The class distribution shows that five hundred instances have been tested negative for diabetes, while two hundred sixty-eight instances have been tested positive.
+The fourth attribute describes the purpose of the credit, such as a car, television, or other purposes.
 
-A brief statistical analysis of the attributes reveals the mean and standard deviation for each attribute.
+Credit amount is the fifth attribute.
 
-Keywords: Diabetes, Diagnosis, Prediction, Algorithm, Attributes, Class Variable, Sensitivity, Specificity, Forecasting.
+Status of savings account/bonds in Deutsche Mark is the sixth attribute.
+
+Present employment in number of years is the seventh attribute.
+
+Installment rate in percentage of disposable income is the eighth attribute.
+
+Personal status, including marital status and sex, is the ninth attribute.
+
+Other debtors/guarantors is the tenth attribute.
+
+Present residence since a certain number of years is the eleventh attribute.
+
+Property, such as real estate, is the twelfth attribute.
+
+Age in years is the thirteenth attribute.
+
+Other installment plans, including banks and stores, is the fourteenth attribute.
+
+Housing, including renting, owning, or living for free, is the fifteenth attribute.
+
+Number of existing credits at this bank is the sixteenth attribute.
+
+Job, including unemployed, unskilled, skilled, and management positions, is the seventeenth attribute.
+
+Number of people being liable to provide maintenance for is the eighteenth attribute.
+
+Telephone availability is the nineteenth attribute.
+
+Foreign worker status is the twentieth attribute.
+
+Tags: credit scoring, economics, finance problem, human activities, mythbusting, openml-cc18, openml100, study
+
+Keywords: credit risk, cost matrix, credit history, credit amount, employment, installment rate, personal status, property, age, housing, job, telephone, foreign worker.

@@ -1,20 +1,38 @@
-I am currently building a short-term electric load forecasting model for Goa, with a significant portion being domestic household load. Temperature and Humidity can be used to estimate the heat index, which can be utilized as one of the input variables for the model. Therefore, predicting future temperature and humidity values is crucial.
+QSAR-TID-10649 Dataset
 
-The historical weather data of Goa, India, contains the following information from July 1st to July 31st, with a fifteen-minute resolution:
+Tags: Economics, Life Science, MTLQSAR, Study Three
 
-* Temperature, measured at two meters above ground
-* Relative Humidity, measured at two meters above ground
-* Atmospheric Pressure, measured at ground level
-* Wind Speed, measured at ten meters above ground
-* Wind Direction, measured at ten meters above ground, with zero degrees indicating wind coming from the north and ninety degrees indicating wind coming from the east
-* Rainfall, measured as rainfall mass density per square meter area
-* Short-Wave Irradiation, measured as surface incoming short-wave irradiation, broadband
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10649. It has fourteen rows and one thousand twenty-six features, including identifiers and a class feature.
 
-This data was downloaded from the website soda-pro.com, courtesy of the National Aeronautics and Space Administration (NASA) and the Goddard Space Flight Center. For more information, please visit gmao.gsfc.nasa.gov/reanalysis/MERRA-2. The licenses for this data can be found at soda-pro.com/documents/10157/326300/CAMS-data-license.pdf and soda-pro.com/documents/10157/326300/SoDa-license.pdf.
+The features represent Fingerprint Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The goal is to use this historical data to predict future humidity and temperature values.
+Features include MOLECULE CHEMBL ID and MEDIAN PX50.
 
-Features:
-Date, Time, Temperature, Relative Humidity, Atmospheric Pressure, Wind Speed, Wind Direction, Rainfall, Short-Wave Irradiation
+Scraped Data:
 
-Keywords: Electric Load Forecasting, Weather Data, Temperature, Humidity, Heat Index, Machine Learning, Computer Systems
+ID: CHEMBL Five Thousand One Hundred Five
+Type: Single Protein
+Preferred Name: Muscarinic Acetylcholine Receptor M Three
+Synonyms: Chrm Three, Chrm-Minus Three, Mm Three, mAChR, Muscarinic Acetylcholine Receptor M Three
+Organism: Mus Musculus
+Species Group: No
+Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Small Molecule Receptor, Monoamine Receptor, Acetylcholine Receptor
+
+Description Relationship Accession Muscarinic Acetylcholine Receptor M Three Single Protein Q Nine ERZ Three
+
+Rows per page: Fifty-One to One of One
+
+Expression Atlas: One
+Go Component: Fourteen entries including Endoplasmic Reticulum, Plasma Membrane, Basal Plasma Membrane, Membrane, Basolateral Plasma Membrane, Dendrite, Asymmetric Synapse, Presynaptic Membrane, Axon Terminus, Synapse, Postsynaptic Membrane, Postsynaptic Density Membrane, Glutamatergic Synapse
+
+Go Function: Seven entries including G Protein-Coupled Receptor Activity, G Protein-Coupled Serotonin Receptor Activity, Protein Binding, G Protein-Coupled Acetylcholine Receptor Activity, G Protein-Coupled Acetylcholine Receptor Binding, Acetylcholine Binding, Quaternary Ammonium Group Binding
+
+Go Process: Twenty-Three entries including Regulation of Vascular Associated Smooth Muscle Contraction, Negative Regulation of Heart Rate by Acetylcholine, Smooth Muscle Contraction, Signal Transduction, G Protein-Coupled Receptor Signaling Pathway, Adenylate Cyclase-Inhibiting G Protein-Coupled Acetylcholine Receptor Signaling Pathway, Phospholipase C-Activating G Protein-Coupled Acetylcholine Receptor Signaling Pathway, Chemical Synaptic Transmission, Synaptic Transmission Cholinergic, Calcium-Mediated Signaling, Positive Regulation of Insulin Secretion, Regulation of Monoatomic Ion Transmembrane Transporter Activity, Positive Regulation of Vasoconstriction, Positive Regulation of Smooth Muscle Contraction, Saliva Secretion, Acetylcholine Receptor Signaling Pathway, G Protein-Coupled Serotonin Receptor Signaling Pathway, Ion Channel Modulating G Protein-Coupled Receptor Signaling Pathway, Positive Regulation of Vascular Associated Smooth Muscle Contraction, Response to Acetylcholine, Ligand-Gated Ion Channel Signaling Pathway
+
+CanSAR-Target: One entry Q Nine ERZ Three
+Reactome: Two entries Muscarinic Acetylcholine Receptors, G Alpha Q Signalling Events
+UniProt: Two entries Q Six Four Zero Fifty-Five, Q Nine ERZ Three
+InterPro: Four entries GPCR Rhodopsin, Musac Ach Rcpt, Musac Ach M Three Rcpt, GPCR Rhodopsn Seven TM
+Pfam: One entry PF Zero Zero Zero Zero One Seven tm One
+
+Keywords: QSAR, Muscarinic Acetylcholine Receptor, Fingerprint Molecular Fingerprints, SMILES Strings, Pipeline Pilot Program, Drug Target, G Protein-Coupled Receptor, Signal Transduction, Synaptic Transmission, Acetylcholine Receptor Signaling Pathway

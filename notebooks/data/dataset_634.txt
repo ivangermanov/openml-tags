@@ -1,11 +1,15 @@
-Triazines Dataset 
+The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
 
-Tags: Binarized, Chemistry, Life Science, Myth Busting, Study 
+The dataset names are coded as "Friedman Colinearity Degree Sample Number Feature Number". This dataset is one of the most widely used functions for data generation. It includes both linear and nonlinear relations between input and output, and a normalized noise is added to the output.
 
-This dataset is a binarized version of the original dataset. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative. 
+The Friedman function is a mathematical equation that generates the output based on five input features. The function includes a sine term, an exponential term, and a linear term, with a normalized noise added to the output.
 
-The dataset includes various chemical properties and features, including polarity, size, flexibility, hydrogen donor and acceptor abilities, pi donor and acceptor abilities, polarisability, sigma, and branching patterns for six different positions in a molecule. 
+To measure the effects of non-related features, additional features are added to the datasets. These added features are independent from the output. However, to measure the algorithm's robustness to collinearity, the datasets are generated with five different collinearity degrees. 
 
-These features are used to classify molecules into Positive and Negative classes based on their chemical properties.
+Collinearity degree refers to the number of features depending on other features. The generated Friedman dataset's parameters are varied to create different scenarios. 
 
-Keywords: Triazines, Binarized, Chemistry, Chemical Properties, Classification
+The number of features varies from a small set to a large set, with some features being relevant to the output and others being completely random. Similarly, the number of samples also varies from a small size to a larger size. 
+
+Different collinearity degrees are also applied to the datasets, ranging from zero to four. The combination of these variations results in eighty artificial datasets.
+
+Keywords: Friedman Datasets, Artificially Generated, Data Generation, Collinearity Degree, Normalized Noise, Linear Relations, Nonlinear Relations.

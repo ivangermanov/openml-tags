@@ -1,0 +1,18 @@
+Machine Learning and Mathematics
+
+Subsampling of the dataset Ada with a random seed generated a new dataset.
+
+The new dataset was created using the following parameters: maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification.
+
+The function used to create the new dataset first uniformly sampled the classes. If there were more classes than the specified maximum, it selected a subset of classes based on their frequency in the original dataset. It then selected the indices where one of these classes was present.
+
+Next, the function uniformly sampled the columns. If there were more columns than the specified maximum, it randomly chose a subset of column indices and selected the corresponding columns.
+
+Finally, the function sampled the rows. If there were more rows than the specified maximum, it used stratified sampling to select a subset of rows.
+
+The resulting dataset has the same characteristics as the original dataset but with a reduced number of rows, columns, and classes.
+
+Features:
+Variable One, Variable Two, ..., Variable Forty Eight, Class
+
+Keywords: machine learning, mathematics, dataset, subsampling, stratification, classes, columns, rows

@@ -1,51 +1,15 @@
-Comprehensive Database of Minerals
-Tags: Machine Learning, Statistics
+QSAR-TID-12131 Dataset 
 
-This dataset is a collection of minerals, their chemical compositions, crystal structures, physical and optical properties.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID 12131. It has multiple rows and numerous features including IDs and class feature, namely MOLECULE CHEMBL ID and MEDIAN PXc50. 
 
-The term dielectric is applied to a class of materials, usually solids, that are poor conductors of electricity. Dielectrics are of significant technological and industrial importance, being essential functional components of almost all electronic devices. For most of these applications, they are required to be mechanically tough and thermally robust.
+The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. 
 
-The defining physical attribute of a dielectric is electric polarizability, which is the tendency for charges to be non-uniformly distributed across a chemical bond. Most dielectrics contain dipoles due to their ionic bonds or covalent bonds with strong ionic nature. At a macroscopic scale, this implies that an external electric field can interact with these charges and result in various optical and electric phenomena.
+Generating fingerprints does not usually require missing value imputation as all bits are generated. 
 
-Optically, dielectrics can be transparent, opaque, or vitreous. They can also be isotropic, biaxial, or fully anisotropic. The luster of gem minerals such as emeralds, sapphires, and rubies is due to their high refractive index, which causes white light to be split into its components. The presence of two refractive indices in a material can result in an incident beam being split into two rays that interfere with each other. This common phenomenon is called birefringence.
+The dataset includes information about Renin, also known as Angiotensinogenase, which is an enzyme belonging to the Aspartic protease family. It plays a crucial role in the renin-angiotensin system, a physiological pathway involved in regulating blood pressure and electrolyte balance. 
 
-These effects are made use of in many commercially important applications such as transparent conductive oxides, liquid crystal displays, medical diagnostics, stress sensing, light modulation, and others. As an example, transparent conducting oxides are derived from dielectrics by doping oxides with impurity atoms. Transparent Conducting Oxides do not absorb light in the visible spectrum, rendering them transparent, and are also conductors of charge.
+Expression Atlas provides information about gene expression across different tissues and organisms. Gene Ontology annotations provide insights into the biological processes, cellular components, and molecular functions associated with this protein. 
 
-The most important application of Transparent Conducting Oxides is as the top electrode of solar cells, where they allow light to fall on a semiconducting layer while capturing the released hole/electron to generate current. Airplane windshields have a thin coating of a Transparent Conducting Oxide material on them that is used to generate heat by passing a current. This is necessary to keep the glass defrosted, allowing the pilot visibility to navigate. Other applications of Transparent Conducting Oxides include substrates in electronics, flexible displays, high-definition TVs, and the screens of mobile smart devices.
+Reactome, UniProt, InterPro, Pfam, and PDBe provide additional information about protein function, structure, and interactions.
 
-The figure of merit for optical phenomena is the refractive index, which is defined as the ratio of the speed of light in the medium to the speed of light in vacuum.
-
-Provenance of Data
-The list of minerals with individual pages in Wikipedia is given. The get method of the requests library is used to retrieve this page, and the content is parsed using BeautifulSoup, a Python library specifically engineered for parsing HTML and XML content. The URLs for all the minerals given in this page are extracted using their href attribute and are stored in a dictionary, along with the mineral name.
-
-Each of the webpages has textual information on the mineral, including origin, etymology, variety, and history, as well as images, including cleavages, and other data, as well as an InfoBox on the right that tabulates some common mineral properties, such as category, formula, Strunz classification, crystal structure, unit cell, Mohs hardness, color, cleavage, fracture, luster, diaphaneity, specific gravity, and optical properties, including refractive index.
-
-The soup object for the page is retrieved, and the table element with class name InfoBox is extracted. The specified row heading and row data are then read into a dictionary, which is wrapped in a class object. A class method writes this data into a CSV file, while another method writes the text from the webpage into a text file.
-
-The American Mineralogist Crystal Structure Database has a list of over four thousand minerals with their CIF files. The name and the URL of all these minerals are found. From here, each mineral name and the corresponding URL is extracted using the approach outlined above. Accessing each page, we find the crystallographic information of the mineral. The a, b, c edge lengths and alpha, beta, gamma-unit cell angles are given at the top, followed by a list of all atoms and their x, y, z positions.
-
-The header is extracted and stored in a pandas DataFrame, while the atomic species and their positions are saved into a separate CSV file. This is repeated for all the minerals.
-
-Before inclusion into the machine learning stage of this study, each of these CIF files are read and parsed into a vector with each cell corresponding to an element of the periodic table, and the number of atoms of the element in the formula is counted as the cell value.
-
-Dispersion values of minerals have been hard to find. Dispersion values of sixty minerals were found.
-
-Chemical Formula
-The chemical formula has been parsed so that the number of each element has been separated and tabulated. For example, the mineral quartz has the formula SiO2 - so that the corresponding entry for the column Silicon is one, and the entry for Oxygen is two. The entries for all the other elements are zero. In this way, the chemical formula for each mineral is converted into a vector where each column corresponds to an element in the periodic table, and the value corresponds to the number of atoms of the element in a formula unit of the mineral.
-
-Molar Mass
-The molar mass of the mineral is calculated by adding together the mass of each atom in a mole of the mineral. Molar mass equals the summation of the number of atoms multiplied by the mass of each atom.
-
-Molar Volume
-The molar volume of the mineral is calculated by adding together the volume of each atom in a mole of the mineral. Molar volume equals the summation of the number of atoms multiplied by the volume of each atom.
-
-Refractive Index
-The refractive index of the mineral is defined as the ratio of the speed of light in the mineral to the speed of light in free space. This is a function of the frequency of light. The RI of blue light is not the same as the RI of red light in the same mineral. This variation is measured by dispersion.
-
-Mohs Hardness
-Mohs hardness is a qualitative measure for the hardness of a mineral that is frequently used by geologists. Diamond, the hardest mineral, is given the highest value of ten, and talc, the softest mineral, is given the value of one. A mineral that can scratch a second mineral has a higher Mohs hardness. In this way, all the minerals can be ranked on a relative scale of hardness. It is not exactly clear what physical parameter is represented by the Mohs Hardness. Several absolute scales for hardness, such as toughness, yield strength, and others, are known from the mechanics of materials; however, none of them seem to correspond exactly to Mohs Hardness. However, this remains a very intuitive way to understand the physical property of a material.
-
-Features:
-Name, Crystal Structure, Mohs Hardness, Diaphaneity, Specific Gravity, Optical, Refractive Index, Dispersion,...
-
-Keywords: dielectric, refractive index, birefringence, transparent conducting oxides, machine learning, statistics, minerals, crystal structure, physical properties, optical properties.
+Keywords: QSAR, drug target, Renin, Angiotensinogenase, Aspartic protease, gene expression, protein function.
