@@ -9,7 +9,7 @@ from transformers import pipeline
 from transformers.pipelines.base import Pipeline
 
 DEFAULT_PROMPT = """
-I have topic that contains the following documents: \n[DOCUMENTS]
+I have topic that contains the following documents: [DOCUMENTS]
 The topic is described by the following keywords: [KEYWORDS]
 """
 
@@ -27,13 +27,14 @@ class ZeroShotClassification(BaseRepresentation):
                          when it is called. NOTE: Use `{"multi_label": True}`
                          to extract multiple labels for each topic.
         min_prob: The minimum probability to assign a candidate label to a topic
+        max_length: The maximum length of the prompt, including documents and keywords
 
     Usage:
 
     ```python
     # Create your representation model
     candidate_topics = ["space and nasa", "bicycles", "sports"]
-    representation_model = ZeroShotClassification(candidate_topics, model="facebook/bart-large-mnli")
+    representation_model = ZeroShotClassification(candidate_topics, model="facebook/bart-large-mnli", max_length=8000)
 
     # Use the representation model in BERTopic on top of the default pipeline
     topic_model = BERTopic(representation_model=representation_model)
@@ -41,8 +42,9 @@ class ZeroShotClassification(BaseRepresentation):
     """
 
     def __init__(self, candidate_topics: List[str], model: str = "facebook/bart-large-mnli",
-                 pipeline_kwargs: Mapping[str, Any] = {}, min_prob: float = 0.5, prompt: str = None, nr_docs: int = 8,
-                 diversity: float = None, doc_length: int = None, tokenizer: Union[str, Callable] = None):
+                 pipeline_kwargs: Mapping[str, Any] = {}, min_prob: float = 0.5, prompt: str = None,
+                 max_length: int = 8000, diversity: float = None, doc_length: int = None,
+                 tokenizer: Union[str, Callable] = None):
         self.candidate_topics = candidate_topics
         if isinstance(model, str):
             self.model = pipeline("zero-shot-classification", model=model)
@@ -55,7 +57,7 @@ class ZeroShotClassification(BaseRepresentation):
         self.pipeline_kwargs = pipeline_kwargs
         self.min_prob = min_prob
         self.prompt = prompt if prompt is not None else DEFAULT_PROMPT
-        self.nr_docs = nr_docs
+        self.max_length = max_length
         self.diversity = diversity
         self.doc_length = doc_length
         self.tokenizer = tokenizer
@@ -75,19 +77,24 @@ class ZeroShotClassification(BaseRepresentation):
         Returns:
             updated_topics: Updated topic representations
         """
-        # Classify topics
-        # topic_descriptions = [" ".join(list(zip(*topics[topic]))[0]) for topic in topics.keys()]
-        # classifications = self.model(topic_descriptions, self.candidate_topics, **self.pipeline_kwargs)
         repr_docs_mappings, _, _, _ = topic_model._extract_representative_docs(c_tf_idf, documents, topics, 500,
-                                                                               self.nr_docs, self.diversity)
+                                                                               500, self.diversity)
 
-        # Extract labels
         updated_topics = {}
-        # for topic, classification in zip(topics.keys(), classifications):
         for topic, docs in tqdm(repr_docs_mappings.items(), disable=not topic_model.verbose):
             topic_description = topics[topic]
             # Prepare prompt
-            truncated_docs = [truncate_document(topic_model, self.doc_length, self.tokenizer, doc) for doc in docs]
+            truncated_docs = []
+            current_length = 0
+            for doc in docs:
+                truncated_doc = truncate_document(topic_model, self.doc_length, self.tokenizer, doc)
+                doc_length = len(truncated_doc)
+                if current_length + doc_length <= self.max_length:
+                    truncated_docs.append(truncated_doc)
+                    current_length += doc_length
+                else:
+                    break
+
             prompt = self._create_prompt(truncated_docs, topic, topics)
             self.prompts_.append(prompt)
             classification = self.model(prompt, self.candidate_topics, **self.pipeline_kwargs)
@@ -98,16 +105,21 @@ class ZeroShotClassification(BaseRepresentation):
                 for label, score in zip(classification["labels"], classification["scores"]):
                     if score > self.min_prob:
                         topic_description.append((label, score))
+                if len(topic_description) == 0:
+                    max_prob_index = classification["scores"].index(max(classification["scores"]))
+                    topic_description = [
+                        (classification["labels"][max_prob_index], classification["scores"][max_prob_index])]
 
             # Single label assignment
-            elif classification["scores"][0] > self.min_prob:
-                topic_description = [(classification["labels"][0], classification["scores"][0])]
+            else:
+                if classification["scores"][0] > self.min_prob:
+                    topic_description = [(classification["labels"][0], classification["scores"][0])]
+                else:
+                    # Assign the label with the highest probability
+                    max_prob_index = classification["scores"].index(max(classification["scores"]))
+                    topic_description = [
+                        (classification["labels"][max_prob_index], classification["scores"][max_prob_index])]
 
-            # Make sure that 10 items are returned
-            if len(topic_description) == 0:
-                topic_description = topics[topic]
-            elif len(topic_description) < 10:
-                topic_description += [("", 0) for _ in range(10 - len(topic_description))]
             updated_topics[topic] = topic_description
 
         return updated_topics
