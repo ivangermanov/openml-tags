@@ -61,8 +61,7 @@ class BERTopic(AbstractModel):
                                  seed_topic_list=hyperparameters.get("seed_topic_list", None),
                                  zeroshot_topic_list=hyperparameters.get("zeroshot_topic_list", None),
                                  zeroshot_min_similarity=hyperparameters.get("zeroshot_min_similarity", 0.9),
-                                 embedding_model=self.embedding_model,
-                                 umap_model=umap_model,
+                                 embedding_model=self.embedding_model, umap_model=umap_model,
                                  hdbscan_model=hdbscan_model, vectorizer_model=vectorizer_model,
                                  ctfidf_model=ctfidf_model,
                                  representation_model=hyperparameters.get("representation_model", None),
@@ -75,7 +74,14 @@ class BERTopic(AbstractModel):
             [vals[0] if vals[0] in all_words else all_words[0] for vals in self.model.get_topic(i)[:self.topk]] for i in
             range(len(set(topics)) - 1)]
 
-        print("brah", bertopic_topics)
-        output_tm = {"topics": bertopic_topics}
+        print("Topics: ", bertopic_topics)
+
+        umap_embeddings = self.model.umap_model.transform(self.embeddings)
+        indices = [index for index, topic in enumerate(topics) if topic != -1]
+        document_embeddings = umap_embeddings[np.array(indices)].tolist()
+        cluster_labels = [topic for index, topic in enumerate(topics) if topic != -1]
+
+        output_tm = {"topics": bertopic_topics, "document_embeddings": document_embeddings,
+                     "cluster_labels": cluster_labels}
 
         return output_tm

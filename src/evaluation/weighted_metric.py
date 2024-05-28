@@ -1,5 +1,3 @@
-from collections import Counter
-
 import numpy as np
 from octis.evaluation_metrics.coherence_metrics import Coherence
 from octis.evaluation_metrics.diversity_metrics import TopicDiversity
@@ -64,7 +62,9 @@ class WeightedMetric(AbstractMetric):
         log_diversity_score = np.log(normalized_diversity_score + epsilon)
         log_coherence_score = np.log(normalized_coherence_score + epsilon)
 
-        print("coherence", coherence_score, normalized_coherence_score, log_coherence_score)
-        print("diversity", diversity_score, normalized_diversity_score, log_diversity_score)
+        print("Coherence score: ", coherence_score, "Normalized coherence score: ", normalized_coherence_score,
+              "Log coherence score: ", log_coherence_score)
+        print("Diversity score: ", diversity_score, "Normalized diversity score: ", normalized_diversity_score,
+              "Log diversity score: ", log_diversity_score)
 
         return [log_coherence_score, log_diversity_score]

@@ -1,10 +1,11 @@
-import os
 import json
-import numpy as np
-import pandas as pd
+import os
+from typing import Mapping, List
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tck
-from typing import Mapping, List
+import numpy as np
+import pandas as pd
 
 
 class Results:
@@ -277,7 +278,7 @@ class Results:
                 ]
 
         # Making sure they have the correct type
-        for column in ["npmi", "diversity"]:
+        for column in ["npmi", "diversity", "ComputationTime"]:
             results[column] = results[column].astype(float)
 
         self.basic_results[dataset] = results
@@ -370,13 +371,15 @@ class Results:
             ylabel: str = None,
             figsize: tuple = (10, 5),
             confidence_interval: bool = False,
+            with_ctm: bool = True,
     ):
 
         results = self.basic_results[dataset].copy()
-
         fig, ax = plt.subplots(figsize=figsize)
 
         for model in results.Model.unique():
+            if "CTM" in model and not with_ctm:
+                continue
             selection = results.loc[results.Model == model, :]
 
             if confidence_interval:

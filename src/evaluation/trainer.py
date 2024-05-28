@@ -1,11 +1,11 @@
+import itertools
 import json
 import time
-import itertools
+from typing import Mapping, Any, List, Tuple
+
 import numpy as np
 import pandas as pd
-
 from sklearn.feature_extraction.text import CountVectorizer
-from typing import Mapping, Any, List, Tuple
 
 # from src.octis.bertopic import BERTopic
 
@@ -180,6 +180,13 @@ class Trainer:
 
         if save:
             with open(f"{save}.json", "w") as f:
+                for result in results:
+                    if "embedding_model" in result["Params"]:
+                        del result["Params"]["embedding_model"]
+                    if "vectorizer_model" in result["Params"]:
+                        del result["Params"]["vectorizer_model"]
+                    if "representation_model" in result["Params"]:
+                        del result["Params"]["representation_model"]
                 json.dump(results, f)
 
             try:
@@ -315,6 +322,7 @@ class Trainer:
         output_tm = {
             "topics": topics,
         }
+        print(output_tm)
         return output_tm, computation_time
 
     def _train_ctm(self, params) -> Tuple[Mapping[str, Any], float]:
@@ -328,6 +336,7 @@ class Trainer:
         computation_time = float(end - start)
 
         topics = ctm.get_topics(10)
+        print("CTM Topics: ", topics)
         topics = [topics[x] for x in topics]
 
         output_tm = {
