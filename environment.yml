@@ -4,30 +4,30 @@ channels:
   - plotly
   - defaults
 dependencies:
-  - python==3.11.9
+  - python==3.10.14
   - pip==24.0
   - matplotlib==3.8.4
-  - scikit-learn==1.5.0
   - jupyter==1.0.0
-  - spacy==3.7.3
+  # Install specific spacy version for your platform - https://spacy.io/usage
+  # - spacy==3.7.3
   - nltk==3.8.1
-  - numpy==1.26.4
-  - pandas==2.2.2
-  - seaborn==0.13.2
-  - gensim==4.3.2
-  - plotly==5.22.0
-  - pyldavis==3.4.1
-  - wordcloud==1.9.3
-  - textstat==0.7.3
-  - datashader=0.16.1
-  - bokeh=3.4.1
-  - holoviews=1.18.3
+  # - gensim==4.3.2
+  # - plotly==5.22.0
+  # - pyldavis==3.4.1
+  # - wordcloud==1.9.3
+  # - textstat==0.7.3
+  # - datashader=0.16.1
+  # - bokeh=3.4.1
+  # - holoviews=1.18.3
   - python-dotenv=1.0.1
   - scrapy=2.11.2
   - pip:
       - bertopic==0.16.1
       - openml==0.14.2
-      - spacy-transformers==1.3.5
+      # - spacy-transformers==1.3.5
+      # - seaborn==0.13.2
       - urlextract==1.9.0
+      - together==1.2.0
       # make sure to install llama-cpp-python based on your own configuration
       # - llama-cpp-python==0.2.62
+      # For MacOS M2: CMAKE_ARGS="-DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_APPLE_SILICON_PROCESSOR=arm64 -DLLAMA_METAL=on" pip install --upgrade --verbose --force-reinstall --no-cache-dir llama-cpp-python

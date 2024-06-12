@@ -31,6 +31,6 @@ class LLMPromptAugmenter:
                 print(f"Removing row {index} from the DataFrame.")
                 indices_to_remove.append(index)
 
-        df.drop(indices_to_remove, inplace=True)
+        df.drop(df.index[indices_to_remove], inplace=True)
 
         return df

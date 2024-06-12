@@ -16,7 +16,7 @@ The topic is described by the following keywords: '[KEYWORDS]'.
 Based on the above information, can you give a short label of the topic?
 A: """
 
-
+    # TODO: Class needs to be updated same as together.py 
 class LlamaCPP(BaseRepresentation):
     """ A llama.cpp implementation to use as a representation model.
 

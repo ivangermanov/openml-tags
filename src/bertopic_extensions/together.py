@@ -6,7 +6,7 @@ from typing import Mapping, List, Tuple, Any, Union, Callable
 from bertopic.representation._base import BaseRepresentation
 from bertopic.representation._utils import truncate_document
 from together import Together
-
+from requests.exceptions import ChunkedEncodingError
 
 DEFAULT_PROMPT = """
 This is a list of texts where each collection of texts describe a topic. After each collection of texts, the name of the topic they represent is mentioned as a short-highly-descriptive title
@@ -41,13 +41,33 @@ I have a topic that contains the following documents:
 [DOCUMENTS]
 The topic is described by the following keywords: [KEYWORDS]
 
-Based on the information above, extract a short topic label in the following format:
-topic: <topic label>
+Based on the above information, can you give a short label of the topic?
 """
 
 
+def fetch_response_with_retry(
+    client, model, messages, generator_kwargs, max_retries=3, delay=2
+):
+    retries = 0
+    while retries < max_retries:
+        try:
+            kwargs = {"model": model, "messages": messages, **generator_kwargs}
+            stream = client.chat.completions.create(stream=True, **kwargs)
+            output_text = ""
+            for chunk in stream:
+                output_text += chunk.choices[0].delta.content or ""
+            return output_text
+        except ChunkedEncodingError:
+            retries += 1
+            if retries < max_retries:
+                print(f"Retrying... ({retries}/{max_retries})")
+                time.sleep(delay)
+            else:
+                raise
+
+
 class TogetherAI(BaseRepresentation):
-    """ Using the TogetherAI API to generate topic labels based
+    """Using the TogetherAI API to generate topic labels based
     on one of their chat models.
 
     Arguments:
@@ -113,18 +133,20 @@ class TogetherAI(BaseRepresentation):
     representation_model = TogetherAI(client, prompt=prompt, delay_in_seconds=5)
     ```
     """
-    def __init__(self,
-                 client,
-                 model: str = "meta-llama/Llama-3-70b-chat-hf",
-                 prompt: str = None,
-                 generator_kwargs: Mapping[str, Any] = {},
-                 delay_in_seconds: float = None,
-                 nr_docs: int = 4,
-                 diversity: float = None,
-                 doc_length: int = None,
-                 tokenizer: Union[str, Callable] = None,
-                 max_length: int = 2048
-                 ):
+
+    def __init__(
+        self,
+        client,
+        model: str = "meta-llama/Llama-3-70b-chat-hf",
+        prompt: str = None,
+        generator_kwargs: Mapping[str, Any] = {},
+        delay_in_seconds: float = None,
+        nr_docs: int = 4,
+        diversity: float = None,
+        doc_length: int = None,
+        tokenizer: Union[str, Callable] = None,
+        max_length: int = 2048,
+    ):
         self.client = client
         self.model = model
 
@@ -148,13 +170,14 @@ class TogetherAI(BaseRepresentation):
         if self.generator_kwargs.get("prompt"):
             del self.generator_kwargs["prompt"]
 
-    def extract_topics(self,
-                       topic_model,
-                       documents: pd.DataFrame,
-                       c_tf_idf: csr_matrix,
-                       topics: Mapping[str, List[Tuple[str, float]]]
-                       ) -> Mapping[str, List[Tuple[str, float]]]:
-        """ Extract topics
+    def extract_topics(
+        self,
+        topic_model,
+        documents: pd.DataFrame,
+        c_tf_idf: csr_matrix,
+        topics: Mapping[str, List[Tuple[str, float]]],
+    ) -> Mapping[str, List[Tuple[str, float]]]:
+        """Extract topics
 
         Arguments:
             topic_model: A BERTopic model
@@ -167,15 +190,21 @@ class TogetherAI(BaseRepresentation):
         """
         print("Extracting")
         # Extract the top n representative documents per topic
-        repr_docs_mappings, _, _, _ = topic_model._extract_representative_docs(c_tf_idf, documents, topics, 500, self.nr_docs, self.diversity)
+        repr_docs_mappings, _, _, _ = topic_model._extract_representative_docs(
+            c_tf_idf, documents, topics, 500, self.nr_docs, self.diversity
+        )
 
         # Generate using TogetherAI's Language Model
         updated_topics = {}
-        for topic, docs in tqdm(repr_docs_mappings.items(), disable=not topic_model.verbose):
+        for topic, docs in tqdm(
+            repr_docs_mappings.items(), disable=not topic_model.verbose
+        ):
             truncated_docs = []
             current_length = 0
             for doc in docs:
-                truncated_doc = truncate_document(topic_model, self.doc_length, self.tokenizer, doc)
+                truncated_doc = truncate_document(
+                    topic_model, self.doc_length, self.tokenizer, doc
+                )
                 doc_length = len(self.tokenizer.encode(truncated_doc))
                 if current_length + doc_length <= self.max_length:
                     truncated_docs.append(truncated_doc)
@@ -184,6 +213,7 @@ class TogetherAI(BaseRepresentation):
                     break
 
             prompt = self._create_prompt(truncated_docs, topic, topics)
+            print(prompt)
             self.prompts_.append(prompt)
 
             # Delay
@@ -191,19 +221,17 @@ class TogetherAI(BaseRepresentation):
                 time.sleep(self.delay_in_seconds)
 
             messages = [
-                {"role": "system", "content": "You are a helpful assistant."},
+                # {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
             ]
-            # print(prompt)
-            kwargs = {"model": self.model, "messages": messages, **self.generator_kwargs}
-            stream = self.client.chat.completions.create(stream=True, **kwargs)
-            output_text = ""
-            for chunk in stream:
-                output_text += chunk.choices[0].delta.content or ""
-
-            print(output_text)
-            label = output_text.strip().replace("topic: ", "")
-            updated_topics[topic] = [(label, 1)]
+            try:
+                max_retries = 3
+                output_text = fetch_response_with_retry(self.client, self.model, messages, self.generator_kwargs, max_retries=max_retries)
+                print(output_text)
+                label = output_text.strip().replace("topic: ", "")
+                updated_topics[topic] = [(label, 1)]
+            except ChunkedEncodingError:
+                updated_topics[topic] = [(label, 1)]
 
         return updated_topics
 
@@ -230,6 +258,6 @@ class TogetherAI(BaseRepresentation):
     def _replace_documents(prompt, docs):
         to_replace = ""
         for doc in docs:
-            to_replace += f"- {doc}\n"
+            to_replace += f"- {doc}\n---\n"
         prompt = prompt.replace("[DOCUMENTS]", to_replace)
         return prompt
