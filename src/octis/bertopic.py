@@ -10,11 +10,12 @@ from umap import UMAP
 
 
 class BERTopic(AbstractModel):
-    def __init__(self, vectorizer_tokenizer=None, embeddings: np.ndarray = None, embedding_model=None, verbose=False,
+    def __init__(self, vectorizer_tokenizer=None, embeddings: np.ndarray = None, embedding_model=None, representation_model=None, verbose=False,
                  topk=10, use_partitions=False):
         super().__init__()
         self.embeddings = embeddings
         self.embedding_model = embedding_model
+        self.representation_model = representation_model
         self.vectorizer_tokenizer = vectorizer_tokenizer
         self.verbose = verbose
         self.topk = topk
@@ -26,6 +27,7 @@ class BERTopic(AbstractModel):
             hyperparameters = {}
 
         super().set_hyperparameters(**hyperparameters)
+        print("Current params: ", hyperparameters)
 
         data = dataset.get_corpus()
         data = [" ".join(words) for words in data]
@@ -52,8 +54,6 @@ class BERTopic(AbstractModel):
                                  top_n_words=hyperparameters.get("top_n_words", 10),
                                  n_gram_range=hyperparameters.get("n_gram_range", (1, 1)),
                                  min_topic_size=hyperparameters.get("min_topic_size", 10),
-                                 # nr_topics=int(hyperparameters.get("nr_topics", None)),
-                                 # same, but if nr_topics (which is a str) exists, then cast to int, otherwise None
                                  nr_topics=int(hyperparameters.get("nr_topics")) if hyperparameters.get("nr_topics",
                                                                                                         None) else None,
                                  low_memory=hyperparameters.get("low_memory", False),
@@ -64,11 +64,19 @@ class BERTopic(AbstractModel):
                                  embedding_model=self.embedding_model, umap_model=umap_model,
                                  hdbscan_model=hdbscan_model, vectorizer_model=vectorizer_model,
                                  ctfidf_model=ctfidf_model,
-                                 representation_model=hyperparameters.get("representation_model", None),
+                                 representation_model=self.representation_model,
                                  verbose=self.verbose)
 
-        topics, _ = self.model.fit_transform(data, self.embeddings)
-        print("Current params: ", hyperparameters)
+        topics, probs = self.model.fit_transform(data, self.embeddings)
+        
+        if hyperparameters.get("outliers_strategy", "none") != "none":
+            try:
+                topics = self.model.reduce_outliers(data, topics, probabilities=probs, embeddings=self.embeddings, strategy=hyperparameters.get("outliers_strategy", "probabilities"))
+                self.model.update_topics(data, topics=topics)
+            except Exception as e:
+                print('Error in outliers reduction', e)
+                hyperparameters['outliers_strategy'] = 'none'
+        
         all_words = [word for words in dataset.get_corpus() for word in words]
         bertopic_topics = [
             [vals[0] if vals[0] in all_words else all_words[0] for vals in self.model.get_topic(i)[:self.topk]] for i in

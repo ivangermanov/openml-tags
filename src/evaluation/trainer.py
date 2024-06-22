@@ -102,6 +102,7 @@ class Trainer:
         bt_timestamps: List[str] = None,
         bt_nr_bins: int = None,
         custom_model=None,
+        reduce_outliers: bool = False,
         verbose: bool = True,
     ):
         self.dataset = dataset
@@ -114,6 +115,7 @@ class Trainer:
         self.embeddings = bt_embeddings
         self.ctm_preprocessed_docs = None
         self.custom_model = custom_model
+        self.reduce_outliers = reduce_outliers
         self.verbose = verbose
 
         # Prepare data and metrics
@@ -177,7 +179,6 @@ class Trainer:
             }
             results.append(result)
             print(result)
-
         if save:
             with open(f"{save}.json", "w") as f:
                 for result in results:
@@ -187,6 +188,12 @@ class Trainer:
                         del result["Params"]["vectorizer_model"]
                     if "representation_model" in result["Params"]:
                         del result["Params"]["representation_model"]
+                    if "umap_model" in result["Params"]:
+                        del result["Params"]["umap_model"]
+                    if "ctfidf_model" in result["Params"]:
+                        del result["Params"]["ctfidf_model"]
+                    if "hdbscan_model" in result["Params"]:
+                        del result["Params"]["hdbscan_model"]
                 json.dump(results, f)
 
             try:
@@ -421,7 +428,11 @@ class Trainer:
             model = BERTopic(**params)
 
         start = time.time()
-        topics, _ = model.fit_transform(data, self.embeddings)
+        topics, probs = model.fit_transform(data, self.embeddings)
+        
+        if self.reduce_outliers:
+            topics = model.reduce_outliers(data, topics, probabilities=probs, embeddings=self.embeddings, strategy="probabilities")
+            model.update_topics(data, topics=topics)
 
         # Dynamic Topic Modeling
         if self.timestamps:

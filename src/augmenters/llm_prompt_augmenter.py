@@ -6,7 +6,7 @@ data_folder = '../notebooks/data'
 class LLMPromptAugmenter:
     def __init__(self, prompt_description_column: str):
         """
-        Initializes the ScrapyAugmenter with the names of the description, scraped, and augmented columns.
+        Initializes the LLMPromptAugmenter with the name of the prompt description column.
 
         :param prompt_description_column: The name of the column to put the prompt description.
         """
@@ -14,7 +14,7 @@ class LLMPromptAugmenter:
 
     def __call__(self, df: pd.DataFrame):
         """
-        Augments a DataFrame by updating a custom column with the prompt description in a new column 'prompt_description'.
+        Augments a DataFrame by updating a custom column with the prompt description in a new column 'prompt_description_column'.
         :param df: A pandas DataFrame.
         :return: The augmented pandas DataFrame with an updated custom column.
         """
