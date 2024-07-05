@@ -1,11 +1,14 @@
-The QSAR-TID-102421 dataset contains quantitative structure-activity relationship (QSAR) data showing activity values of several compounds on drug target TID: 102421. This dataset has seventy-four rows and one thousand twenty-six features, including IDs and class features such as molecule ChEMBL ID and median pXC50.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The features represent fingerprints of molecular structures, which were generated from smiles strings using the pipeline pilot program, Dassault Systemes BIOVIA. These fingerprints do not typically require missing value imputation since all bits are generated.
+This dataset contains QSAR data from ChEMBL showing activity values (in pseudo pCI units) of various compounds on drug target TID. The dataset comprises rows and features, including molecule identifiers and median activity values. The features represent FCFP bit Molecular Fingerprints generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-This dataset was sourced from the MetaQSAR project in September 2015 and contains QSAR data from ChEMBL version seventeen. The data shows activity values of several compounds on drug target TID: 102421.
+The dataset focuses on the Serine/threonine protein kinase Nek, also known as HSPK, NEK, Never in mitosis A related kinase, NimA related protein kinase, and Serine/threonine protein kinase Nek. This protein is found in Homo sapiens and belongs to the Enzyme/Kinase/Protein Kinase/Other protein kinase group/Other protein kinase NEK family/Other protein kinase Nek classification.
 
-The target is a single protein, specifically serine/threonine-protein kinase Nek three, also known as HSPK thirty-six or Never in Mitosis A-related Kinase three. It belongs to the enzyme/kinase/protein kinase/other protein kinase group, specifically the Nek family.
+The protein is associated with various cellular components including the nucleus, cytoplasm, axon, and cell projections. Its functions encompass nucleotide binding, protein kinase activity, ATP binding, and metal ion binding. The protein is involved in biological processes such as the mitotic cell cycle, protein phosphorylation, cell division, and regulation of tubulin deacetylation.
 
-This protein is involved in various biological processes, including the mitotic cell cycle, protein phosphorylation, and cell division. It is expressed in the nucleus, cytoplasm, axon, and cell projections, and its functions include nucleotide binding, protein kinase activity, and metal ion binding.
+Cross references for this protein target are available in multiple databases including ExpressionAtlas, Gene Ontology, Wikipedia, canSAR Target, GuideToPHARMACOLOGY, IntAct, PharmGKB, Pharos, UniProt, InterPro, and Pfam. These resources provide additional information on the protein's structure, function, and interactions.
 
-Keywords: QSAR, drug target, molecular fingerprints, serine/threonine-protein kinase, Nek family, biological processes, protein function.
+The dataset is part of the MetaQSAR project and serves as a valuable resource for quantitative structure activity relationship studies in drug discovery and development.
+
+Keywords: QSAR, molecular fingerprints, protein kinase, drug target, ChEMBL, cell cycle, phosphorylation, bioinformatics

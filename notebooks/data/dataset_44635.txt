@@ -1,15 +1,19 @@
-Segment Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Segment Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Statistics 
+This is a subsampling of the dataset segment with a seed of two. The subsampling was done with the following arguments: the maximum number of rows is two thousand, the maximum number of columns is one hundred, the maximum number of classes is ten, and stratification is true.
 
-Sub-sampling of the dataset segment with a seed equals two arguments. The sub-sampling function generates a dataset by randomly selecting a specified number of rows, columns, and classes from the original dataset while maintaining the original class distribution.
+The subsampling was generated with the following source code:
 
-The function first selects a specified number of unique classes from the dataset, ensuring that the selected classes are representative of the original class distribution. It then selects the corresponding rows where these classes are present.
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Next, the function uniformly samples columns from the dataset, ensuring that the selected columns are representative of the original column distribution. Finally, the function applies stratified sampling to select a specified number of rows while maintaining the original class distribution.
+The function first gets the unique classes in the dataset. If there are more classes than the maximum number of classes, it selects the maximum number of classes using a random choice with probabilities based on the value counts of the classes. It then selects the indices where one of these classes is present.
 
-The resulting sub-sampled dataset is then returned along with its corresponding metadata, including the column names and categorical mask.
+Next, the function uniformly samples columns if required. If the number of columns is more than the maximum number of columns, it selects the maximum number of columns using a random choice.
 
-Features: Short Line Density Five, Short Line Density Two, Vegde Mean, Vegde Standard Deviation, Hedge Mean, Hedge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Ex Red Mean, Ex Blue Mean, Ex Green Mean, Value Mean, Saturation Mean, Hue Mean, Class.
+Finally, the function stratifies the data accordingly. If the number of rows is more than the maximum number of rows, it uses train test split to get a subset of the data with the maximum number of rows, stratifying by the target name.
 
-Keywords: Sub-sampling, Machine Learning, Statistics, Data Preprocessing, Stratified Sampling, Class Distribution, Column Selection.
+The resulting dataset has the same dataset name, but with the subsampled x, y, categorical mask, and columns.
+
+Features: short line density, vertical edge mean, vertical edge standard deviation, horizontal edge mean, horizontal edge standard deviation, intensity mean, raw red mean, raw blue mean, raw green mean, excess red mean, excess blue mean, excess green mean, value mean, saturation mean, hue mean, class.
+
+Keywords: dataset subsampling, stratification, random sampling, feature selection.

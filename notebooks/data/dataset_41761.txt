@@ -1,24 +1,15 @@
-**FOREX Euro/Swedish Krona Minute Close**
+Name: Forex Eursek Minute Close
 
-Tags: Economics, Finance, Forex, Forex Close, Forex Minute, Government
+Tags: finance, forex, forex close, forex minute
 
-This dataset contains historical price data of the Forex Euro/Swedish Krona currency pair from Dukascopy. Each instance represents one candlestick of one minute duration. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is based on the Europe/Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The class attribute represents the direction of the mean close price in relation to the subsequent minute. It indicates whether the mean close price will increase (True) or decrease/stay the same (False) in the following minute.
+Data Description
+This dataset contains historical price data of the Forex Eursek from Dukascopy. Each instance, or row, represents one candlestick of one minute. The entire dataset spans a specific time period and does not include weekends, as the Forex market is not traded on weekends. The timezone of the feature Timestamp is Europe Amsterdam.
 
-**Data Attributes**
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following minute, and the class attribute is False when the mean Close price is going down or stays the same in the following minute.
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
-* Bid Open: The bid price at the beginning of the time interval.
-* Bid High: The highest bid price recorded during the time interval.
-* Bid Low: The lowest bid price recorded during the time interval.
-* Bid Close: The bid price at the end of the time interval.
-* Bid Volume: The number of times the bid price changed within the time interval.
-* Ask Open: The ask price at the beginning of the time interval.
-* Ask High: The highest ask price recorded during the time interval.
-* Ask Low: The lowest ask price recorded during the time interval.
-* Ask Close: The ask price at the end of the time interval.
-* Ask Volume: The number of times the ask price changed within the time interval.
-* Class: Whether the average price will increase during the next interval.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-Keywords: Forex, Currency Pair, Historical Data, Candlestick, Time Series, Financial Markets, Trading.
+Keywords: Forex, Eursek, historical data, candlestick, finance, trading

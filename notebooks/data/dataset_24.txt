@@ -1,42 +1,24 @@
-Mushroom Dataset 
+Mushroom Dataset
 
-Tags: Life Science, Machine Learning, Mythbusting 
+Tags: mythbusting, OpenML100, study, trivial, uci
 
-This dataset describes mushrooms in terms of their physical characteristics. They are classified into either poisonous or edible.
+Source: UCI - 1981
 
-The dataset includes descriptions of hypothetical samples corresponding to twenty-three species of gilled mushrooms in the Agaricus and Lepiota Family. Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended. 
+Please cite: The Audubon Society Field Guide to North American Mushrooms (1981). New York: Alfred A. Knopf
 
-The dataset was created based on The Audubon Society Field Guide to North American Mushrooms. The guide clearly states that there is no simple rule for determining the edibility of a mushroom; no rule like "leaflets three, let it be" for Poisonous Oak and Ivy.
+Description:
+This dataset describes mushrooms in terms of their physical characteristics. They are classified into two categories: poisonous or edible. The data originates from The Audubon Society Field Guide to North American Mushrooms, published in 1981. It includes descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family. Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended. The latter class was combined with the poisonous category.
+
+The Guide explicitly states that there is no simple rule for determining the edibility of a mushroom; no rule like "leaflets three, let it be" for Poisonous Oak and Ivy. This underscores the complexity of mushroom classification and the importance of expert knowledge in this domain.
 
 Attributes Information:
+The dataset contains numerous attributes describing various physical characteristics of mushrooms. These include cap shape, cap surface, cap color, presence of bruises, odor, gill attachment, gill spacing, gill size, gill color, stalk shape, stalk root, stalk surface above and below the ring, stalk color above and below the ring, veil type, veil color, ring number, ring type, spore print color, population, and habitat.
 
-Cap shape can be bell-shaped, conical, convex, flat, knobbed, or sunken.
-Cap surface can be fibrous, have grooves, be scaly, or smooth.
-Cap color can be brown, buff, cinnamon, gray, green, pink, purple, red, white, or yellow.
-Bruises refers to whether the mushroom bruises or not.
-Odor can be almond-like, anise-like, creosote-like, fishy, foul, musty, none, pungent, or spicy.
+Each attribute has multiple possible values, represented by single letter codes. For example, cap shapes can be bell, conical, convex, flat, knobbed, or sunken. Cap surfaces may be fibrous, grooved, scaly, or smooth. The dataset provides a comprehensive encoding scheme for all attributes, allowing for detailed mushroom descriptions.
 
-Gill attachment can be attached, descending, free, or notched.
-Gill spacing can be close, crowded, or distant.
-Gill size can be broad or narrow.
-Gill color can be black, brown, buff, chocolate, gray, green, orange, pink, purple, red, white, or yellow.
+Relevant Papers:
+Several research papers have utilized this dataset for various machine learning and data mining studies. These include works on concept acquisition, trading off simplicity and coverage in incremental concept learning, and extraction of logical rules from training data using neural networks.
 
-Stalk shape can be enlarging or tapering.
-Stalk root can be bulbous, club-shaped, cup-shaped, equal, rhizomorphs, rooted, or missing.
-Stalk surface above ring can be fibrous, scaly, silky, or smooth.
-Stalk surface below ring can be fibrous, scaly, silky, or smooth.
-Stalk color above ring can be brown, buff, cinnamon, gray, orange, pink, purple, red, white, or yellow.
-Stalk color below ring can be brown, buff, cinnamon, gray, orange, pink, purple, red, white, or yellow.
+The mushroom dataset has proven valuable for testing and developing various machine learning algorithms, particularly in the areas of classification and rule extraction. Its rich attribute set and binary classification problem make it an interesting challenge for researchers in the field of artificial intelligence and data science.
 
-Veil type can be partial or universal.
-Veil color can be brown, orange, white, or yellow.
-Ring number can be none, one, or two.
-Ring type can be cobwebby, evanescent, flaring, large, none, pendant, sheathing, or zone.
-
-Spore print color can be black, brown, buff, chocolate, green, orange, purple, red, white, or yellow.
-Population can be abundant, clustered, numerous, scattered, several, or solitary.
-Habitat can be grasses, leaves, meadows, paths, urban, waste, or woods.
-
-Class labels are edible or poisonous.
-
-Keywords: Mushroom, Edible, Poisonous, Physical Characteristics, Gill, Stalk, Veil, Ring, Spore Print, Population, Habitat.
+Keywords: mushrooms, edibility classification, physical characteristics, machine learning, data mining, rule extraction, Agaricus, Lepiota

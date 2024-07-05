@@ -1,13 +1,11 @@
-Machine Learning, Mathematics
+Name: Yeast Seed One Dataset
 
-The Yeast dataset has been subsampled using a specific set of arguments. The resulting dataset has undergone uniform sampling of classes, ensuring that only a maximum number of classes are retained. This process involves selecting the indices where one of the chosen classes is present, thereby reducing the number of classes.
+Tags: Subsampling of the Yeast dataset with seed equals one, arguments include number of rows, number of columns, number of classes, and stratify equals true.
 
-Uniform sampling of columns has also been applied to the dataset, ensuring that only a maximum number of columns are retained. This process involves selecting a specified number of column indices randomly and then sorting them to ensure consistency.
+Generated with the following source code:
 
-Furthermore, the dataset has undergone uniform sampling of rows, ensuring that only a maximum number of rows are retained. This process involves concatenating the data and target variables, followed by applying a stratified split to achieve the desired number of rows.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it uses stratified sampling to select a subset of the data.
 
-The resulting dataset consists of a subset of the original Yeast dataset, with reduced dimensions and carefully sampled data points. The dataset retains its original characteristics, including the categorical mask and column information.
+The dataset includes features such as protein localization.
 
-Features: Protein Localization
-
-Keywords: Yeast dataset, machine learning, uniform sampling, stratified split, dataset subsampling, protein localization.
+Keywords: Yeast dataset, subsampling, stratified sampling, dataset generation.

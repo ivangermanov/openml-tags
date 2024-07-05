@@ -1,17 +1,26 @@
-Timing Attack Dataset - Ten Micro Seconds Delay - Created on Eighteenth September Two Thousand Twenty-Two
+Timing Attack Dataset: Ten Microsecond Delay Created on September Eighteenth, Two Thousand Twenty-Two
 
 Tags: Bleichenbacher Timing Attack
 
+This dataset contains features extracted from network traffic related to the Bleichenbacher timing attack. The attack is a type of side-channel attack that targets the RSA decryption process.
+
 Attribute Descriptions:
 
-This dataset contains various attributes related to Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages.
+The dataset includes attributes related to the Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages. These attributes describe various aspects of the TCP and TLS protocols, such as source and destination ports, sequence numbers, acknowledgment numbers, window sizes, and flags.
 
-The attributes include source port, destination port, port, stream index, segment length, sequence number, next sequence number, acknowledgment number, header length, reserved flags, nonce flags, congestion window reduced flags, explicit congestion notification echo flags, urgent flags, acknowledgment flags, push flags, reset flags, synchronize flags, finish flags, window size value, calculated window size, window size scale factor, checksum status, urgent pointer, option kind, option length, timestamp value, time delta, message order, record content type, record length, alert message level, and alert message description.
+The Change Cipher Spec TCP Acknowledgement attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags.
 
-These attributes provide detailed information about the packets exchanged during the Bleichenbacher timing attack.
+The TLS Alert attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags, as well as the TLS record content type, length, alert message level, and description.
 
-The dataset is divided into three main categories: CCS0 (Change Cipher Spec TCP Acknowledgement), TLS0 (TLS Alert), and DISC0/DISC1 (TCP Disconnect).
+The TCP Disconnect attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags.
 
-Each category has its own set of attributes, providing a comprehensive view of the packet exchange process.
+Features:
 
-Keywords: Bleichenbacher timing attack, Change Cipher Spec TCP Acknowledgement, TLS Alert, TCP Disconnect, packet analysis, network security.
+* Label
+* Change Cipher Spec TCP Acknowledgement attributes
+* TLS Alert attributes
+* TCP Disconnect attributes
+
+Fold ID and vulnerable classes are also included in the dataset.
+
+Keywords: Bleichenbacher timing attack, RSA decryption, side-channel attack, network traffic, TCP protocol, TLS protocol.

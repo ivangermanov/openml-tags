@@ -1,13 +1,15 @@
-Subsampling of the dataset Riccardo with seed equal to two arguments number rows maximum equal to two thousand arguments number columns maximum equal to one hundred arguments number classes maximum equal to ten arguments no stratify equal to true generated with the following source code.
+Subsampling of the dataset Riccardo with seed equals two, maximum number of rows equals two thousand, maximum number of columns equals one hundred, maximum number of classes equals ten, and stratify equals True.
 
-This function takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It then uses numpy's default random generator to select classes, columns, and rows uniformly at random while ensuring that the specified maximum values are not exceeded. 
+Generated with the following source code:
 
-If there are more unique classes than the specified maximum, it selects the most common ones based on their frequency in the dataset. Similarly, if there are more columns than the specified maximum, it selects a subset of them randomly. 
+The function subsample takes in parameters such as seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not. It returns a dataset.
 
-Finally, if there are more rows than the specified maximum, it uses scikit-learn's train test split function to select a stratified subset of the data while respecting the specified maximum number of rows.
+The function first uniformly samples classes from the unique classes present in the dataset. If the number of unique classes is more than the maximum number of classes, it selects the required number of classes based on their frequency in the dataset.
 
-The resulting dataset consists of the Riccardo dataset, the sampled features, the target variable, a mask indicating which features are categorical, and the column names.
+Next, it selects the indices where one of these classes is present and filters the data accordingly. Then, it uniformly samples columns if required. If the number of columns is more than the maximum number of columns, it selects the required number of columns randomly.
 
-Tags: Machine Learning, Mathematics
+After that, it stratifies the data accordingly if the number of rows is more than the maximum number of rows. It uses the train test split function from scikit learn to achieve this.
 
-Keywords: subsampling, dataset, stratification, machine learning, mathematics
+Finally, it returns a dataset with the filtered data, categorical mask, and column names.
+
+Keywords: dataset subsampling, stratified sampling, column selection, class selection, data filtering.

@@ -1,7 +1,12 @@
-The Twonorm dataset is an implementation of a twenty-dimensional, two-class classification example. Each class is drawn from a multivariate normal distribution with unit variance. One class has a mean where all values are equal to a certain value, whereas the other class has a mean where all values are equal to the negative of that certain value. 
+Twonorm Dataset
+Tags: artificial, study fifty two, study seven
 
-This dataset is particularly interesting because it has been reported that the theoretical expected misclassification rate for this dataset is very low, specifically around two point three percent. In practice, however, when using three hundred training examples with a specific decision tree learning algorithm called CART, the error rate was much higher, at twenty-two point one percent.
+Source: http://www.cs.toronto.edu/~delve/data/twonorm/desc.html
 
-The dataset consists of twenty features, although they have not been given descriptive names. 
+Please cite: Twonorm dataset
 
-Keywords: Twonorm, classification, multivariate normal distribution, unit variance, decision tree learning, CART.
+This dataset is an implementation of the twonorm example. It is a twenty dimensional, two class classification example. Each class is drawn from a multivariate normal distribution with unit variance. Class one has a mean of (a,a,..a) while Class two has a mean of (negative a, negative a,..negative a), where a equals two divided by the square root of twenty. The theoretical expected misclassification rate is reported to be two point three percent. When using three hundred training examples with CART, an error of twenty two point one percent was found.
+
+Features: V one, V two, V three, V four, V five, V six, V seven, V eight, V nine, V ten, V eleven, V twelve, V thirteen, V fourteen, V fifteen, V sixteen, V seventeen, V eighteen, V nineteen, V twenty, Class
+
+Keywords: twonorm, classification, multivariate normal distribution, misclassification rate, CART

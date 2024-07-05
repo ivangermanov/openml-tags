@@ -1,11 +1,11 @@
-Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with a specific seed generated a new dataset. This new dataset is a statistically significant representation of the original dataset, with a focus on education and statistics.
+Name: KDD IPUMS LA Ninety Seven Small Seed Three
 
-The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the new dataset had a balanced representation of all classes. The number of classes was capped to prevent any single class from dominating the dataset.
+Tags: Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equal to three, arguments number of rows equal to two thousand, arguments number of columns equal to one hundred, arguments number of classes equal to ten, and arguments no stratify equal to true.
 
-Next, the columns were uniformly sampled to reduce the dimensionality of the dataset. This step helped to eliminate any redundant or irrelevant features, resulting in a more concise and meaningful dataset.
+Generated with the following source code:
 
-Finally, the rows were sampled using a stratified approach to ensure that the new dataset retained the same distribution of classes as the original dataset. This step guaranteed that the new dataset was a representative sample of the original dataset.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to uniformly sample classes, columns, and rows from the original dataset. If the number of unique classes is greater than the maximum number of classes, it selects the classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly. If the number of columns is greater than the maximum number of columns, it uniformly samples the columns. If the number of rows is greater than the maximum number of rows, it uses stratified sampling to select the rows. Finally, it returns a new dataset with the sampled data and the corresponding categorical mask and column names.
 
-The resulting dataset has a range of features, including value, rent, family size, number of children, occupation score, and income-related variables. These features provide a comprehensive understanding of the demographic and socioeconomic characteristics of the population.
+Features: value, rent, family size, number of children, elderly children, young children, number of siblings, age, occupation score, socioeconomic index, total income, wage income, business income, farm income, social security income, welfare income, other income, poverty, and binary class.
 
-Keywords: Education, Statistics, Data Sampling, Dataset Generation, Feature Selection.
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling, column sampling, row sampling.

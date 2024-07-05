@@ -1,28 +1,26 @@
-**FOREX aud sgd Hour High**
+FOREX AUD/SGD Hourly High Tags: finance, forex, forex high, forex hour
 
-Tags: Economics, Finance, Forex, Forex High, Forex Hour
+Data Description
+This dataset contains the historical price data of the FOREX Australian Dollar/Singapore Dollar from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans from January to December and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Data Description**
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following hour, and the class attribute is False when the mean High price is going down or stays the same the following hour.
 
-This dataset contains the historical price data of the Forex Australian Dollar/Singapore Dollar exchange rate from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January to December and excludes weekends, as the Forex market is closed during these periods. The timestamp feature is based on the Europe/Amsterdam timezone.
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-The class attribute denotes the direction of the mean high price in the subsequent hour relative to the current hour's mean high price. In other words, if the mean high price is expected to increase in the next hour, the class attribute is true; otherwise, it is false.
+Attributes
+The dataset contains the following attributes:
 
-**Note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies require predicting Close attributes, which are also available in this dataset.**
+Timestamp: The time of the current data point in Europe/Amsterdam timezone
+Bid Open: The bid price at the start of this time interval
+Bid High: The highest bid price during this time interval
+Bid Low: The lowest bid price during this time interval
+Bid Close: The bid price at the end of this time interval
+Bid Volume: The number of times the Bid Price changed within this time interval
+Ask Open: The ask price at the start of this time interval
+Ask High: The highest ask price during this time interval
+Ask Low: The lowest ask price during this time interval
+Ask Close: The ask price at the end of this time interval
+Ask Volume: The number of times the Ask Price changed within this time interval
+Class: Whether the average price will go up during the next interval
 
-**Attributes**
-
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The frequency of changes in the bid price within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The frequency of changes in the ask price within this time interval.
-* **Class**: Indicates whether the mean high price will rise in the next hour.
-
-Keywords: Forex, Australian Dollar, Singapore Dollar, Exchange Rate, Candlestick, Time Series, Financial Markets, Trading Strategies.
+Keywords: FOREX, Australian Dollar, Singapore Dollar, historical price data, candlestick, timezone, class attribute, trade strategies.

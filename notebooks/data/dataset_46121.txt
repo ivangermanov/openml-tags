@@ -1,0 +1,5 @@
+BitInfoCharts Clean Preprocessed Tags: Bitcoin data scraped from BitInfoCharts, with preprocessing. This dataset comprises several Bitcoin-related data points scraped directly from BitInfoCharts. The date column is in the format Year-Month-Day. We have only retained the rows between the maximum dates with non-NaN values of each column and the minimum dates with non-NaN values of each column, which leaves us with dates between April ninth, two thousand fourteen, and March fourteenth, two thousand twenty-three.
+
+Preprocessing involved several steps. Firstly, we renamed columns to 'date' and 'value' followed by a numerical identifier, ranging from zero to eighteen, corresponding to the original dataset's column count. Secondly, we created columns 'time step' and 'id series'. Notably, there is only one 'id series', which is zero. Thirdly, we filled NaN values by propagating the last valid observation to the next valid one using the forward fill method. The columns with some missing values were 'confirmation time', 'tweets', 'active addresses', and 'top one hundred cap'.
+
+The dataset features include the date, along with various Bitcoin-related metrics.

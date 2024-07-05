@@ -1,15 +1,17 @@
-The Sloan Digital Sky Survey, currently in its sixteenth data release, provides a vast repository of data on galaxies, stars, and quasars. This dataset is licensed under the Creative Commons Attribution license.
+Sloan Digital Sky Survey DR16
 
-The presented table is the result of a query that joins two tables: PhotoObj, containing photometric data, and SpecObj, containing spectral data. The resulting table consists of sixteen variables of type double and one additional variable of type char, namely 'class'.
+The Sloan Digital Sky Survey is a current data release that provides access to a vast amount of data on galaxies, stars, and quasars. This dataset is licensed under the Creative Commons Attribution license.
 
-Each object in the dataset is characterized by a unique identifier, known as objid, as well as its position in the sky, specified by its right ascension and declination values. The dataset also provides photometric measurements in different bands, including u, g, r, i, and z.
+The table presented is the result of a query that joins two tables: PhotoObj, which contains photometric data, and SpecObj, which contains spectral data. The resulting table has sixteen variables and one additional variable, class, which can be predicted from the other sixteen variables.
 
-In addition to these photometric measurements, the dataset includes information about the observation process, such as the run number, rerun number, camera column, and field number. These values identify the specific image and location within the image where the object was observed.
+The variables in the table include object identifier, J2000 right ascension, J2000 declination, and magnitudes in different bands such as u, g, r, i, and z. Additionally, the table includes run number, rerun number, camera column, field number, object identifier, class, final redshift, plate number, MJD of observation, and fiber ID.
 
-The class variable categorizes each object into one of three classes: galaxy, star, or quasar. The dataset also provides spectral data, including the redshift value, which describes the degree of shift in the object's spectrum due to its velocity.
+The Sloan Digital Sky Survey uses a four-color UVGR intermediate-band photometric system, which is discussed in a paper by Thuan and Gunn. The survey also employs a five-color wide-band CCD system, which is described in a paper by Fukugita et al.
 
-The Sloan Digital Sky Survey employs a four-color UVGR intermediate-band photometric system, as well as a five-color wide-band CCD system, which is described in detail in various references.
+The variables run, rerun, camcol, and field describe a field within an image taken by the Sloan Digital Sky Survey. A field is a part of the entire image corresponding to 2048 by 1489 pixels. A field can be identified by its run number, camera column, and field number.
 
-To access this dataset, users can utilize the SkyServer SQL Search tool, which allows them to execute queries and retrieve the desired data. The dataset is maintained by the SDSS collaboration, and its creation has enabled the development of the most detailed three-dimensional maps of the universe to date.
+The class variable identifies an object as either a galaxy, star, or quasar. The Sloan Digital Sky Survey has created the most detailed three-dimensional maps of the universe ever made, with deep multi-color images of one-third of the sky and spectra for more than three million astronomical objects.
 
-Keywords: Sloan Digital Sky Survey, galaxies, stars, quasars, photometry, spectroscopy, machine learning, health.
+The data can be obtained using the SkyServer SQL Search with a specific command. The Sloan Digital Sky Survey collaboration is acknowledged for their work on this dataset.
+
+Keywords: Sloan Digital Sky Survey, galaxies, stars, quasars, photometric data, spectral data, astronomical objects.

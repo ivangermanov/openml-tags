@@ -1,33 +1,23 @@
-**Machine Learning, Manufacturing, MTLQSAR Study**
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset, named QSAR-TID-20139, contains QSAR data showing activity values of several compounds on drug target TID: 20139. It consists of one hundred eight rows and one thousand twenty-six features, including IDs and class feature.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The target is a serine protein kinase ATR, also known as ataxia telangiectasia and Rad related protein ATR, FRAP related protein, FRP, or serine/threonine protein kinase ATR. It is found in Homo sapiens and classified as an enzyme/kinase/protein kinase in the atypical protein kinase PIKK family.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Several compounds targeting this protein are in development, including elimusertib, berzosertib, M, and ceralasertib. These are small molecule serine protein kinase ATR inhibitors in various phases of clinical trials.
 
-**Scraped Data**
+The protein is involved in numerous biological processes, including DNA damage checkpoint signaling, telomere maintenance, DNA replication and repair, protein phosphorylation, and cellular responses to stress and UV radiation. It is found in cellular components such as the nucleus, chromosome telomeric regions, and Golgi apparatus.
 
-The preferred name of this single protein is Serine-Protein Kinase ATR, also known as Ataxia Telangiectasia and Rad Three-Related Protein ATR, FRAP-Related Protein One, FRP One, and Serine Threonine-Protein Kinase ATR.
+The dataset provides information on the protein's gene ontology classifications, including its molecular functions like ATP binding and protein kinase activity, as well as its roles in biological processes such as DNA damage response and regulation of cellular stress responses.
 
-It belongs to the species group of Homo sapiens and is classified as an enzyme kinase protein kinase atypical protein kinase group atypical protein kinase PIKK family.
-
-The description relationship accession is Serine Threonine-Protein Kinase ATR single protein.
-
-**Browse All**
-
-Showing one to four out of four records, this dataset includes molecules such as Elimusertib, Berzosertib, M Four Three Four, and Ceralasertib, which are small molecules and Serine-Protein Kinase ATR inhibitors.
-
-**Expression Atlas**
-
-It has expression atlas data available, along with component data, including chromosomal telomeric regions, nucleus, nucleoplasm, chromosomes, Golgi apparatus, and PML bodies.
-
-**Go Component**
-
-It also has go component data available, including nucleotide binding, DNA binding, protein kinase activity, protein serine threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, MutL alpha complex binding, and MutS alpha complex binding.
-
-**Go Function**
-
-Additionally, it has go function data available, including DNA damage checkpoint signaling, telomere maintenance, nucleobase-containing compound metabolic processes, DNA replication, DNA repair, protein phosphorylation, DNA damage response, negative regulation of DNA replication, response to xenobiotic stimulus, phosphorylation, peptidyl-serine phosphorylation, regulation of nucleobase-containing compound metabolic processes, replication fork processing, positive regulation of telomere maintenance via telomerase, cellular responses to stress, interstrand cross-link repair, protein autophosphorylation, regulation of cellular responses to stimuli, and establishment of RNA localization to telomere.
-
-**Keywords:** QSAR, machine learning, manufacturing, MTLQSAR, Serine-Protein Kinase ATR, small molecules, inhibitors, DNA damage, protein phosphorylation, telomere maintenance, DNA replication, DNA repair.
+Keywords:
+QSAR
+Protein kinase
+DNA damage response
+Molecular fingerprints
+Drug discovery
+Enzyme inhibitors
+Cellular stress
+Telomere maintenance
+Clinical trials

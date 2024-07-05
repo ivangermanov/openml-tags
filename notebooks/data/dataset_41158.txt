@@ -1,13 +1,9 @@
-The goal of this ChaLearn challenge is to expose the research community to real-world datasets of interest to Four Paradigm, providing a unique opportunity for researchers to work on practical problems. All datasets are formatted uniformly, although the type of data may differ. The data is provided as preprocessed matrices, allowing participants to focus on classification, while also giving them the freedom to use additional feature extraction procedures as needed.
+The goal of this challenge is to expose the research community to real-world datasets of interest to Four Paradigm. All datasets are formatted in a uniform way, although the type of data might differ. The data are provided as preprocessed matrices, so that participants can focus on classification, although participants are welcome to use additional feature extraction procedures as long as they do not violate any rule of the challenge.
 
-All problems presented in this challenge are binary classification problems, and they are assessed using the normalized Area Under the Receiver Operating Characteristic Curve metric. The identity of the datasets and the type of data is concealed, but its structure is revealed, adding an extra layer of complexity to the challenge.
+All problems are binary classification problems and are assessed with the normalized Area Under the Receiver Operating Characteristic Curve metric. The identity of the datasets and the type of data is concealed, though its structure is revealed. The final score in phase two will be the average of rankings on all testing datasets, a ranking will be generated from such results, and winners will be determined according to such ranking.
 
-The final score will be determined by the average of rankings on all testing datasets, with a ranking generated based on the results. Winners will be determined according to this ranking. To add an extra level of difficulty, each task is constrained by a time budget.
+The tasks are constrained by a time budget. The Codalab platform provides computational resources shared by all participants. Each code submission will be executed in a compute worker with the following characteristics: two cores, eight gigabytes of memory, and forty gigabytes of solid-state drive with Ubuntu operating system. To ensure the fairness of the evaluation, when a code submission is evaluated, its execution time is limited.
 
-The Codalab platform provides shared computational resources for all participants, ensuring a fair and equal environment for everyone. Each code submission will be executed in a compute worker with specific characteristics, including two cores, eight gigabytes of memory, and forty gigabytes of solid-state drive storage, running on an Ubuntu operating system.
+The ChaLearn dataset features a class label and numerous variables.
 
-To ensure the fairness of the evaluation process, each code submission is subject to a time limit during execution. This ensures that all participants have an equal amount of time to complete their tasks.
-
-Features include class labels and various variables, such as velocity, volume, and other attributes specific to each dataset.
-
-Keywords: ChaLearn, education, transportation, binary classification, feature extraction, Area Under the Receiver Operating Characteristic Curve.
+Keywords: binary classification, feature extraction, computational resources, time budget, fairness evaluation.

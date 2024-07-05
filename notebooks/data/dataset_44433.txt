@@ -1,15 +1,15 @@
-Electricity Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Electricity Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Computer Systems, Machine Learning 
+Tags: Subsampling of the dataset Electricity with seed equal to zero, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-The subsampling of the dataset Electricity with a seed equal to zero has been performed. The arguments used for subsampling include the maximum number of rows, which is two thousand, the maximum number of columns, which is one hundred, and the maximum number of classes, which is ten. Additionally, the argument no stratify has been set to false.
+Generated with the following source code:
 
-The subsample function generates a new dataset by uniformly sampling classes and columns from the original dataset. It starts by selecting classes using their value counts as probabilities. Then, it selects the indices where one of these classes is present and filters the data accordingly.
+The function subsample takes in a dataset and returns a new dataset that has been subsampled. It uses a random number generator with a specified seed to ensure reproducibility. The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset.
 
-Next, it uniformly samples columns if required. It does this by choosing column indices randomly and sorting them to ensure consistency. Finally, it selects the corresponding columns from the data.
+Next, the function uniformly samples columns from the subsetted dataset, ensuring that the number of columns does not exceed the maximum allowed. If the number of rows in the subsetted dataset exceeds the maximum allowed, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is preserved.
 
-If the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to reduce the number of rows. This ensures that the class distribution remains consistent.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-The generated dataset is then returned with the specified features, including Date, Day, Period, and Class.
+Features: Date, Day, Period, New South Wales Price, New South Wales Demand, Victoria Price, Victoria Demand, Transfer, Class
 
-Keywords: Electricity, Subsampling, Stratify, Computer Systems, Machine Learning
+Keywords: Electricity, Subsampling, Stratified Sampling, Dataset, Random Number Generator, Reproducibility

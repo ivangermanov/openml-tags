@@ -1,0 +1,28 @@
+Pedestrian Counting System Melbourne Preprocessed
+
+This dataset contains hourly pedestrian counts since 2009 from pedestrian sensor devices located across the city. The data is updated on a monthly basis and can be used to determine variations in pedestrian activity throughout the day. The sensor ID column can be used to merge the data with the Pedestrian Counting System Sensor Locations dataset, which details the location, status, and directional readings of sensors. Any changes to sensor locations are important to consider when analyzing and interpreting pedestrian counts over time.
+
+Important notes about this dataset:
+
+* Where no pedestrians have passed underneath a sensor during an hour, a count of zero will be shown for the sensor for that hour.
+* Directional readings are not included, though we hope to make this available later in the year. Directional readings are provided in the Pedestrian Counting System Past Hour dataset.
+
+The Pedestrian Counting System helps to understand how people use different city locations at different times of day to better inform decision-making and plan for the future. A representation of pedestrian volume, which compares each location on any given day and time, can be found in our Online Visualization.
+
+We have acquired the data by scraping the website, as the data seems to be incomplete from the original source.
+
+Preprocessing:
+
+* Standardized the date to the format Year-Month-Day Hour:Minute:Second.
+* Replaced values 'not available' and 'undefined' to Not a Number (NaN) and casted value columns to float. Even though the values are integers, we use float to accommodate NaN values.
+* Coalesced columns that we judged to be the same into a single column.
+* Replaced negative values with NaN.
+* Dropped columns with the last non-NaN value before 2024.
+* Dropped columns with the first non-NaN value after 2018.
+* Selected the data between the years 2019 and 2023.
+* Renamed value columns to 'value' followed by a number, where the number is between 0 and 50.
+* Created a column 'id series' with a value of 0, as there is only one multivariate series, and a column 'time step' with increasing values of the time step.
+
+Features: date, id series, time steps
+
+Keywords: Pedestrian Counting, Melbourne, Sensor Data, Hourly Counts, City Planning

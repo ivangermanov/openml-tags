@@ -1,19 +1,18 @@
-Arrhythmia 
+Arrhythmia Dataset
+Tags: sport, study, UCI
 
-Tags: Machine Learning, Medicine, Sport 
+Cardiac Arrhythmia Database
 
-Cardiac Arrhythmia Database 
+This dataset aims to determine the type of arrhythmia from ECG recordings. It contains numerous attributes, both linear valued and nominal. The goal is to distinguish between the presence and absence of cardiac arrhythmia and classify it into one of sixteen groups. Class refers to 'normal' ECG classes, while the other classes refer to different types of arrhythmia, with the final class encompassing unclassified cases.
 
-The aim of this database is to determine the type of arrhythmia from electrocardiogram recordings. This database contains two hundred seventy-nine attributes, two hundred six of which are linear valued and the rest are nominal.
+Currently, a computer program exists that performs such classification. However, discrepancies arise between the cardiologist's classification and the program's output. Using the cardiologist's assessment as the gold standard, the objective is to minimize these differences through machine learning techniques.
 
-Concerning the study, the aim is to distinguish between the presence and absence of cardiac arrhythmia and to classify it into one of sixteen groups. Class one refers to normal electrocardiogram classes, classes two to fifteen refer to different classes of arrhythmia, and class sixteen refers to the rest of unclassified ones.
+The database includes a wide range of attributes, including age, sex, height, weight, and various ECG measurements such as QRS duration, PR interval, QT interval, T interval, and P interval. It also contains vector angles in degrees on the front plane for QRS, T, P, QRST, and J, as well as heart rate.
 
-For the time being, there exists a computer program that makes such a classification. However, there are differences between the cardiologist's and the program's classification. Taking the cardiologist's as a gold standard, we aim to minimize this difference by means of machine learning tools.
+Multiple channels (DI, DII, DIII, AVR, AVL, AVF, V to V) are analyzed, measuring wave characteristics like Q wave, R wave, S wave, R' wave, and S' wave. The existence of ragged waves and diphasic derivations are also noted. Amplitude measurements and area calculations (QRSA and QRSTA) are included for each channel.
 
-The database contains information about patients, including their age, sex, height, weight, QRS duration, P-R interval, Q-T interval, T interval, P interval, vector angles, and heart rate. Additionally, it includes information about the average width of various waves, including Q wave, R wave, S wave, R' wave, S' wave, and others, as well as the existence of certain characteristics, such as ragged R wave, diphasic derivation of R wave, and others.
+The class labels range from normal ECG to various arrhythmia types, including ischemic changes, myocardial infarction, sinus tachycardia, sinus bradycardia, premature contractions, bundle branch blocks, AV blocks, ventricular hypertrophy, and atrial fibrillation or flutter.
 
-There are also amplitude values for various waves, including JJ wave, Q wave, R wave, S wave, R' wave, S' wave, P wave, and T wave. Furthermore, the database includes information about the sum of areas of all segments divided by ten and other calculations related to wave forms.
+This comprehensive dataset provides a wealth of information for researchers and medical professionals studying cardiac arrhythmias and developing improved diagnostic tools.
 
-Class labels include normal, ischemic changes, old anterior myocardial infarction, old inferior myocardial infarction, sinus tachycardia, sinus bradycardia, ventricular premature contraction, supraventricular premature contraction, left bundle branch block, right bundle branch block, first-degree atrioventricular block, second-degree atrioventricular block, third-degree atrioventricular block, left ventricle hypertrophy, atrial fibrillation or flutter, and others.
-
-Keywords: Cardiac Arrhythmia, Electrocardiogram, Machine Learning, Classification, Medicine.
+Keywords: arrhythmia, ECG, cardiac, classification, machine learning, electrocardiogram, heart disease, medical diagnosis

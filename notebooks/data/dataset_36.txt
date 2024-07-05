@@ -1,59 +1,30 @@
-The Image Segmentation Data Set 
+Image Segmentation Data Set
 
-The instances were drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every single pixel. Each instance is a three-by-three region.
+Tags: OpenML, study, uci
 
-### Attribute Information 
+The instances for this dataset were randomly selected from a database containing seven outdoor images. Each image was manually segmented to create a classification for every pixel, with each instance representing a three by three region.
 
-One. Region Centroid Column: the column of the center pixel of the region.
-Two. Region Centroid Row: the row of the center pixel of the region.
-Three. Region Pixel Count: the number of pixels in a region equals nine.
-Four. Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five (any orientation) with low contrast, less than or equal to five, go through the region.
-Five. Short Line Density Two: same as Short Line Density Five but counts lines of high contrast, greater than five.
-Six. Vertical Edge Mean: measures the contrast of horizontally adjacent pixels in the region. There are six; the mean and standard deviation are given. This attribute is used as a vertical edge detector.
-Seven. Vertical Edge Standard Deviation: (see Six).
-Eight. Horizontal Edge Mean: measures the contrast of vertically adjacent pixels. Used for horizontal line detection.
-Nine. Horizontal Edge Standard Deviation: (see Eight).
-Ten. Intensity Mean: the average over the region of Red plus Green plus Blue divided by three.
-Eleven. Raw Red Mean: the average over the region of the Red value.
-Twelve. Raw Blue Mean: the average over the region of the Blue value.
-Thirteen. Raw Green Mean: the average over the region of the Green value.
-Fourteen. Excess Red Mean: measures the excess red: two times Red minus Green plus Blue.
-Fifteen. Excess Blue Mean: measures the excess blue: two times Blue minus Green plus Red.
-Sixteen. Excess Green Mean: measures the excess green: two times Green minus Red plus Blue.
-Seventeen. Value Mean: three-dimensional nonlinear transformation of Red, Green, and Blue. 
-Eighteen. Saturation Mean: (see Seventeen).
-Nineteen. Hue Mean: (see Seventeen).
+Attribute Information:
+Region centroid column: the column of the center pixel of the region.
+Region centroid row: the row of the center pixel of the region.
+Region pixel count: the number of pixels in a region, which is always nine.
+Short line density five: results from a line extraction algorithm counting low contrast lines of length five in any orientation passing through the region.
+Short line density two: similar to short line density five but counts high contrast lines.
+Vertical edge mean: measures contrast of horizontally adjacent pixels, used as a vertical edge detector.
+Vertical edge standard deviation: related to vertical edge mean.
+Horizontal edge mean: measures contrast of vertically adjacent pixels for horizontal line detection.
+Horizontal edge standard deviation: related to horizontal edge mean.
+Intensity mean: average of red, green, and blue values divided by three across the region.
+Raw red mean: average red value in the region.
+Raw blue mean: average blue value in the region.
+Raw green mean: average green value in the region.
+Excess red mean: measures excess red as twice red minus green plus blue.
+Excess blue mean: measures excess blue as twice blue minus green plus red.
+Excess green mean: measures excess green as twice green minus red plus blue.
+Value mean: three dimensional nonlinear transformation of RGB.
+Saturation mean: related to value mean.
+Hue mean: also related to value mean.
 
-Class 
+The dataset does not contain any missing values. Each instance represents a small region from outdoor imagery, with various attributes describing color, contrast, and edge characteristics. These features are used to classify different segments of the images.
 
-### Scraped Data 
-Dataset Information 
-
-Additional Information 
-The instances were drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every single pixel. Each instance is a three-by-three region.
-
-Has Missing Values? 
-No 
-
-### Additional Variable Information 
-One. Region Centroid Column: the column of the center pixel of the region.
-Two. Region Centroid Row: the row of the center pixel of the region.
-Three. Region Pixel Count: the number of pixels in a region equals nine.
-Four. Short Line Density Five: the results of a line extraction algorithm that counts how many lines of length five (any orientation) with low contrast, less than or equal to five, go through the region.
-Five. Short Line Density Two: same as Short Line Density Five but counts lines of high contrast, greater than five.
-Six. Vertical Edge Mean: measures the contrast of horizontally adjacent pixels in the region. There are six; the mean and standard deviation are given. This attribute is used as a vertical edge detector.
-Seven. Vertical Edge Standard Deviation: (see Six).
-Eight. Horizontal Edge Mean: measures the contrast of vertically adjacent pixels. Used for horizontal line detection.
-Nine. Horizontal Edge Standard Deviation: (see Eight).
-Ten. Intensity Mean: the average over the region of Red plus Green plus Blue divided by three.
-Eleven. Raw Red Mean: the average over the region of the Red value.
-Twelve. Raw Blue Mean: the average over the region of the Blue value.
-Thirteen. Raw Green Mean: the average over the region of the Green value.
-Fourteen. Excess Red Mean: measures the excess red: two times Red minus Green plus Blue.
-Fifteen. Excess Blue Mean: measures the excess blue: two times Blue minus Green plus Red.
-Sixteen. Excess Green Mean: measures the excess green: two times Green minus Red plus Blue.
-Seventeen. Value Mean: three-dimensional nonlinear transformation of Red, Green, and Blue. 
-Eighteen. Saturation Mean: (see Seventeen).
-Nineteen. Hue Mean: (see Seventeen).
-
-Keywords: image segmentation, machine learning, outdoor images, hand-segmented, pixel classification, feature extraction, edge detection, color analysis.
+Keywords: image segmentation, outdoor imagery, pixel classification, color analysis, edge detection, contrast measurement, RGB transformation

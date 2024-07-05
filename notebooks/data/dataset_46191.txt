@@ -1,0 +1,9 @@
+Hospital Tags: Monthly Patient Count for Products Related to Medical Problems
+
+The dataset contains monthly patient count for products related to medical problems. There are time series that had a mean count of at least ten and no zeros.
+
+The dataset was extracted from the expsmooth R package, and a CSV file is available on the official website. The preprocessing steps involved melting the dataset with identifiers, obtaining columns for date and value. The date was standardized to the format year-month-day. The columns were renamed to make them more readable. A new column was created from the identifiers, and another column was created with increasing values for the time step. The value column was cast to integer, and certain columns were defined as categories.
+
+The dataset features include covariates, date, value, series identifier, and time steps.
+
+Keywords: hospital, medical problems, patient count, time series, preprocessing, dataset.

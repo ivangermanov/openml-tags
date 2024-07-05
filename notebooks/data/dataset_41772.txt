@@ -1,25 +1,15 @@
-**FOREX aud/chf Minute High**
-Tags: Finance, Forex, Forex High, Forex Minute, Health, Medicine
+FOREX AUD/CHF Minute High Tags: finance, forex, forex high, forex minute
 
-This dataset contains historical price data of the Forex aud/chf currency pair from Dukascopy. Each instance represents one candlestick of one minute duration. The dataset covers the period from January to December and excludes weekends, as the Forex market is not active during these days. The timestamp feature is based on the Europe/Amsterdam time zone.
+Source: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
 
-The class attribute is defined as the direction of the mean high price of the subsequent minute relative to the mean high price of the current minute. In other words, if the mean high price increases in the following minute, the class attribute is labeled as true; otherwise, it is labeled as false.
+Data Description
+This is the historical price data of the FOREX Australian Dollar/Swiss Franc from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range and does not include weekends, since the FOREX is not traded on weekends. The time zone of the feature Timestamp is Europe/Amsterdam.
 
-Please note that this dataset is intended for scientific purposes only and should not be used for real-world trading strategies. For realistic trading applications, predictions based on close attributes (also available) would be more suitable.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and the High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following minute, and the class attribute is False when the mean High price is going down, or stays the same, the following minute.
 
-The dataset consists of various attributes, including:
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, also available.
 
-* Timestamp: The time of each data point in the Europe/Amsterdam time zone.
-* Bid Open: The bid price at the beginning of each time interval.
-* Bid High: The highest bid price recorded during each time interval.
-* Bid Low: The lowest bid price recorded during each time interval.
-* Bid Close: The bid price at the end of each time interval.
-* Bid Volume: The frequency of changes in the bid price within each time interval.
-* Ask Open: The ask price at the beginning of each time interval.
-* Ask High: The highest ask price recorded during each time interval.
-* Ask Low: The lowest ask price recorded during each time interval.
-* Ask Close: The ask price at the end of each time interval.
-* Ask Volume: The frequency of changes in the ask price within each time interval.
-* Class: The direction of the mean high price change in the subsequent minute.
+Attributes
+The Timestamp is the time of the current data point, in the Europe/Amsterdam time zone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-Keywords: Forex, aud/chf, Currency Pair, Historical Data, Trading Strategy, Financial Market, Time Series Analysis.
+Keywords: FOREX, Australian Dollar, Swiss Franc, historical price data, candlestick, minute interval, Europe/Amsterdam time zone, bid price, ask price, class attribute.

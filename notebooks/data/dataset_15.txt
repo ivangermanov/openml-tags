@@ -1,27 +1,19 @@
-Breast Cancer Wisconsin Original Data Set 
+Breast Cancer Wisconsin (Original) Data Set
 
-The Breast Cancer Wisconsin Original Data Set consists of features computed from a digitized image of a fine needle aspirate of a breast mass. These features describe characteristics of the cell nuclei present in the image. The target feature records the prognosis, which can be either malignant or benign.
+Tags: cancer, medical, mythbusting, OpenML-CC, OpenML, study
 
-The data set was adapted to ARFF format from the UCI version, and sample code IDs were removed. Note that there is also a related Breast Cancer Wisconsin Diagnosis Data Set with a different set of features, better known as wdbc.
+This dataset contains features computed from digitized images of fine needle aspirates of breast masses. The features describe characteristics of cell nuclei present in the images. The target feature records the prognosis as either malignant or benign.
 
-Relevant papers on this topic include Nuclear Feature Extraction for Breast Tumor Diagnosis, Breast Cancer Diagnosis and Prognosis via Linear Programming, and others.
+The original data is available from the University of Wisconsin. The current dataset was adapted to ARFF format from the UCI version, with sample code identifiers removed. It's important to note that there is a related Breast Cancer Wisconsin (Diagnosis) Data Set with a different set of features, better known as wdbc.
 
-If you publish results using this database, please include an acknowledgment citing the source of the data set.
+The database was obtained from the University of Wisconsin Hospitals, Madison. If you publish results using this database, please include this information in your acknowledgments and cite the relevant papers listed in the original source.
 
-This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison. 
+The dataset reflects a chronological grouping of data as samples arrived periodically from clinical cases. The data was collected over several years, with multiple groups of instances added at different time points. Some revisions were made to the original data, including replacing zero values, removing certain records, and changing specific field values.
 
-Features include clump thickness, cell size uniformity, cell shape uniformity, marginal adhesion, single epithelial cell size, bare nuclei, bland chromatin, normal nucleoli, and mitoses.
+Features in the dataset include Clump Thickness, Cell Size Uniformity, Cell Shape Uniformity, Marginal Adhesion, Single Epithelial Cell Size, Bare Nuclei, Bland Chromatin, Normal Nucleoli, and Mitoses. The class variable indicates whether the sample is benign or malignant.
 
-Scraped data includes additional information about the samples, which arrived periodically as clinical cases were reported. The database reflects this chronological grouping of the data. 
+The dataset contains missing values. Each feature is rated on a scale of one to ten. The class labels are represented as two for benign and four for malignant.
 
-Group information has been removed from the data itself, but it is available separately. The total number of instances in the data set is six hundred ninety-nine points.
+This breast cancer database has been widely used in research and has been cited in numerous academic papers focusing on pattern recognition, medical diagnosis, and machine learning applications in healthcare.
 
-Note that some instances were removed or revised due to missing or incorrect values.
-
-Has missing values? Yes.
-
-Additional variable information is available for each feature.
-
-Class labels are two for benign and four for malignant.
-
-Keywords: breast cancer, machine learning, medical, medicine, cancer diagnosis, prognosis, fine needle aspirate, cell nuclei, image analysis.
+Keywords: breast cancer, medical imaging, cell nuclei, prognosis, machine learning, pattern recognition, medical diagnosis

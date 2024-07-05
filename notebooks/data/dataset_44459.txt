@@ -1,13 +1,11 @@
-Subsampling of the dataset Compass with a specified seed value generates a subset of the original data. This process involves uniformly sampling classes and columns from the dataset, ensuring a balanced representation of each category.
+Compass Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-The dataset Compass consists of multiple features, including Sex, Age, Race, Juvenile Felony Count, Juvenile Misdemeanor Count, Prior Convictions Count, Days Between Screening and Arrest, and Decile Score, among others.
+This dataset is a subsample of the Compass dataset, generated with a specific set of arguments. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were then used to filter the data, retaining only the instances where one of these classes was present.
 
-To generate the subsampled dataset, a random number generator is used to select a specified number of classes and columns from the original dataset. The selection process is based on the value counts of each class and column, ensuring a representative sample.
+Next, the columns were uniformly sampled, reducing the number of columns to one hundred. The dataset was further subsampled to contain a maximum of two thousand rows, while maintaining the stratification of the classes.
 
-Once the classes and columns are selected, the corresponding indices are used to subset the original dataset. This results in a new dataset with the specified number of rows, columns, and classes.
+The resulting dataset contains a range of features, including demographic information, criminal history, and assessment scores. These features are crucial in understanding the complexities of the Compass dataset and can be used to develop predictive models that take into account the nuances of the data.
 
-Stratification is applied to ensure that the subsampled dataset maintains the same proportion of each class as the original dataset. This is achieved by using a stratified sampling approach, which takes into account the class distribution when selecting the samples.
+Features: sex, age, age category, race, juvenile felony count, juvenile misdemeanor count, juvenile other count, prior count, days between screening and arrest, days from Compass, charge degree, decile score, score text, type of assessment, decile score, score text, end, and is recid.
 
-The resulting subsampled dataset is a new instance of the Compass dataset, with the specified number of rows, columns, and classes. The features of the dataset remain the same, but with a reduced number of instances.
-
-Keywords: Subsampling, Compass dataset, Stratified Sampling, Feature Selection, Class Balance.
+Keywords: Compass dataset, subsampling, stratification, class selection, column sampling, demographic features, criminal history, assessment scores.

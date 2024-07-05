@@ -1,14 +1,14 @@
-Dutch Twitter Dataset 
-Tags: Life Science, Machine Learning 
+Dutch Twitter Dataset
+Tags: Context
 
-A Collection of Tweets and Features 
+A collection of tweets in Dutch and features gathered in April using the Twitter API. A small portion of the tweets are annotated by volunteer annotators. The main task is to identify which of the tweets are rumors, based on the features and the labeled examples in the dataset.
 
-This dataset contains a collection of tweets in Dutch, along with their corresponding features, gathered in April using the Twitter Application Programming Interface (API). A small portion of these tweets have been annotated by volunteer annotators. The primary objective of this dataset is to identify which of these tweets are rumors, based on the provided features and labeled examples.
+Content
 
-Tweet Features 
+The dataset includes various features that describe the tweets and the accounts that posted them. These features include the number of users following the account, the number of tweets by the account, the presence of question marks, and whether the account is verified or not. Additionally, the dataset includes features such as the account's life, the ratio of followers to users followed, the presence of exclamation marks, and the ratio of capital to lowercase letters.
 
-The features associated with each tweet include the follower count, which represents the number of users following the account; the total number of tweets posted by the account; the presence of question marks in the tweet; whether the account is verified or not; the age of the account at the time of posting; the follower-to-following ratio of the account; the presence of exclamation marks; the ratio of capital to lowercase letters in the tweet; the total number of retweets on the tweet; the presence of the hashtag symbol; the total number of users the account follows; the length of the tweet text; the number of lists the account is included in; the presence of emoticons; the total number of likes on the tweet; the duration between the account creation and the tweet posting; and the overall activity level of the account.
+Other features include the number of retweets on the tweet, the presence of hashtags, the number of users the account follows, the length of the text, the number of lists the account is in, the presence of emoticons, and the number of likes on the tweet. The dataset also includes features such as the time the account existed before posting the tweet, the account's activity, and the text of the tweet itself.
 
-Additionally, each tweet includes its corresponding text, the specific Twitter hashtag it belongs to (#jinek, #vleestaks, or #inflatie), and an upsample group feature that enables sampling of each hashtag-label combination in equal proportions. Each tweet is also assigned a label indicating whether it is a rumor (1), non-rumor (0), or unannotated (-1).
+The tweets are categorized into three hashtags: Jinek, Vleestaks, and Inflatie. The dataset also includes an upsample group feature to allow for equal sampling of each combination of hashtag and label. The label feature indicates whether the tweet is a rumor or not, with one indicating a rumor, zero indicating a non-rumor, and negative one indicating an unannotated tweet.
 
-Keywords: Twitter, Rumor Detection, Machine Learning, Dutch Language, Hashtags, Account Features
+Keywords: Twitter, Dutch, Rumors, Hashtags, Features, Annotation, Dataset

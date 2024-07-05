@@ -1,15 +1,11 @@
-Subsampling of the Amazon Commerce Reviews dataset with a seed value of zero. This dataset has been generated using the following source code.
+Amazon Commerce Reviews Dataset Subsampling with Seed Zero
 
-The subsample function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function uses NumPy's default random number generator to uniformly sample classes, columns, and rows from the original dataset.
+This dataset is a subsampling of the Amazon Commerce Reviews dataset with a seed of zero. The subsampling was done using a specific set of arguments, including the number of rows, number of columns, and number of classes.
 
-First, the function selects a subset of classes from the unique values in the target variable. It does this by calculating the value counts of each class and then choosing the desired number of classes using a weighted random choice. The weights are based on the proportion of each class in the original dataset.
+The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then stratifying the data accordingly. The goal was to create a smaller dataset that still maintains the overall characteristics of the original dataset.
 
-Next, the function selects a subset of columns from the feature matrix. It does this by uniformly choosing the desired number of column indices and then selecting the corresponding columns.
+The resulting dataset has a specific set of features, including product reviews and ratings. The features are a combination of categorical and numerical variables, which can be used for training machine learning models.
 
-Finally, the function selects a subset of rows from the dataset. If stratification is required, it uses scikit-learn's train-test split function to ensure that the resulting sample has the same class distribution as the original dataset.
+The dataset is useful for tasks such as sentiment analysis, product recommendation, and customer review analysis.
 
-The resulting dataset is returned as an instance of the Dataset class, which includes the sampled data, the categorical mask, and the column names.
-
-Features: Product Rating, Review Length, Review Sentiment, and many others.
-
-Keywords: Subsampling, Amazon Commerce Reviews, Machine Learning, Stratified Sampling, Feature Selection.
+Keywords: Amazon Commerce Reviews, dataset subsampling, machine learning, sentiment analysis, product recommendation.

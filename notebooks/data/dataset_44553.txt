@@ -1,11 +1,17 @@
-Vehicle Seed Zero Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Strategically Sampled 
+Name: Vehicle Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset is a strategically sampled subset of the Vehicle dataset. The sampling process involved uniformly selecting ten classes from the available categories, followed by a random selection of one hundred columns from the total feature set. Additionally, the dataset was limited to two thousand rows to ensure a manageable size.
+Tags: Subsampling of the dataset Vehicle with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-The sampling process was performed using a random number generator with a seed value of zero. This ensured reproducibility and consistency across different iterations of the sampling process.
+Generated with the following source code:
 
-The features in this dataset include compactness, circularity, distance circularity, radius ratio, principal axis aspect ratio, maximum length aspect ratio, scatter ratio, elongatedness, principal axis rectangularity, maximum length rectangularity, scaled variance major, scaled variance minor, scaled radius of gyration, skewness about major, skewness about minor, kurtosis about major, kurtosis about minor, and hollows ratio.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments, and returns a dataset. It uses a random number generator with the given seed to sample classes, columns, and rows from the original dataset.
 
-Tags: Health, Statistics 
+The function first samples classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: Vehicle dataset, strategic sampling, class selection, feature selection, reproducibility, health statistics
+Next, it samples columns uniformly, selecting a specified number of columns randomly. If the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data, ensuring that the class distribution is preserved.
+
+Finally, it converts categorical columns to string format and returns a new dataset with the sampled data, categorical mask, and column names.
+
+Features: Compactness, Circularity, Distance Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, and Class.
+
+Keywords: Vehicle Dataset, Subsampling, Stratified Sampling, Feature Selection, Class Distribution.

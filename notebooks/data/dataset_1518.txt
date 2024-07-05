@@ -1,33 +1,25 @@
-The Robot Execution Failures Data Set 
+Robot Failures LP Dataset
 
-Abstract:
-This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
+Tags: mf less than, study
 
-Source:
-Original Owner and Donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal 
+This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by force/torque samples collected at regular time intervals.
 
-Data Set Information:
-The donation includes five datasets, each of them defining a different learning problem: 
-failures in approach to grasp position 
-failures in transfer of a part 
-position of part after a transfer failure 
-failures in approach to ungrasp position 
-failures in motion with part 
+The dataset includes multiple subsets, each defining a different learning problem:
 
-In order to improve classification accuracy, a set of five feature transformation strategies based on statistical summary features, discrete Fourier transform, etc. was defined and evaluated. This enabled an average improvement of twenty percent in accuracy.
+- Failures in approach to grasp position
+- Failures in transfer of a part
+- Position of part after a transfer failure (This specific dataset)
+- Failures in approach to ungrasp position
+- Failures in motion with part
 
-Attribute Information:
-All features are numeric although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; The total observation window for each failure instance was of three hundred fifteen milliseconds. Each example is described as follows: 
-class Force X one Force Y one Force Z one Torque X one Torque Y one Torque Z one 
-Force X two Force Y two Force Z two Torque X two Torque Y two Torque Z two 
-... 
-Force X fifteen Force Y fifteen Force Z fifteen Torque X fifteen Torque Y fifteen Torque Z fifteen 
+To improve classification accuracy, a set of feature transformation strategies was defined and evaluated. These strategies, based on statistical summary features and discrete Fourier transform, enabled an average improvement of accuracy.
 
-Relevant Papers:
-Feature Transformation Strategies for a Robot Learning Problem, 
-Integration and Learning in Supervision of Flexible Assembly Systems, 
-Robot Learning at the Task Level: a Study in the Assembly Domain 
+All features are numeric, although they are integer valued only. Each feature represents a force or a torque measured after failure detection. Each failure instance is characterized in terms of force/torque samples collected at regular time intervals starting immediately after failure detection. The total observation window for each failure instance was of milliseconds.
 
-Tags: Chemistry, Life Science 
+Each example is described with the evolution of forces and torques in the observation window. There is a total of features, representing the changes in forces and torques over time.
 
-Keywords: robot execution failures, force measurements, torque measurements, failure detection, classification accuracy, feature transformation strategies
+This dataset is part of a larger study on robot learning at the task level, focusing on the assembly domain. It explores integration and learning in supervision of flexible assembly systems, as well as feature transformation strategies for robot learning problems.
+
+The data can be used to analyze and predict robot execution failures, particularly in tasks involving grasping, transferring, and moving parts. By studying the force and torque patterns, researchers can develop better algorithms for detecting and preventing failures in robotic systems.
+
+Keywords: robot failures, force measurements, torque measurements, assembly tasks, feature transformation, classification accuracy, flexible assembly systems, robotic learning

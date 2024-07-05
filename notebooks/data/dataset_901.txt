@@ -1,9 +1,17 @@
-Fried Dataset 
+Name: Fried
 
-Tags: Binarized Regression Problem, Chemistry, Life Science, Mythbusting, Study 
+Tags: binarized regression problem, mythbusting, study
 
-This is a binarized version of the original dataset. In this version, the numeric target feature has been converted into a two-class nominal target feature. This was achieved by computing the mean and then classifying all instances with a lower target value as Positive and all others as Negative. 
+Source: Unknown - Date unknown
 
-The dataset consists of various features, including those related to chemical properties and life sciences. The goal of this dataset is to facilitate research and analysis in these fields.
+Please cite: Binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: Binarized Regression, Chemistry, Life Science, Nominal Target Feature, Chemical Properties
+This dataset is a modified version of an original dataset, focusing on creating a binary classification problem from a regression task. The transformation process involves calculating the mean of the target variable and then categorizing instances into two classes based on their relation to this mean value. Instances with target values below the mean are labeled as positive, while those above or equal to the mean are labeled as negative.
+
+The dataset contains multiple features, labeled from X1 to X10, which represent various attributes relevant to the problem at hand. The final feature, binaryClass, represents the transformed target variable, now consisting of only two possible values: 'P' for positive instances and 'N' for negative instances.
+
+This binarized version of the dataset is particularly useful for researchers and data scientists interested in exploring binary classification problems, especially in contexts where the original data was continuous. It provides an opportunity to apply and compare various classification algorithms and techniques on a dataset that has been specifically prepared for such purposes.
+
+The dataset's association with mythbusting and various studies suggests its potential use in challenging common assumptions or testing hypotheses across different research areas. Its versatility makes it a valuable resource for both academic research and practical machine learning applications.
+
+Keywords: binarized dataset, binary classification, data transformation, regression to classification, mean-based categorization, feature analysis, machine learning resource

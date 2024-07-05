@@ -1,13 +1,15 @@
-Machine Learning Dataset: RL Seed Zero with Two Thousand Rows, Ten Classes, and One Hundred Columns using Stratification
+Name: RL Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset is a subsampled version of the RL dataset, which originally had forty-four thousand one hundred sixty samples. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows.
+Tags: Subsampling of the dataset RL with seed equal to zero, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-The subsampling function used a random number generator with a specified seed value to ensure reproducibility. It first identified the unique classes present in the original dataset and selected a specified maximum number of classes using a probability proportional to their frequency. The function then selected the indices corresponding to these chosen classes.
+Generated with the following source code:
 
-Next, the function uniformly sampled columns from the dataset, ensuring that the specified maximum number of columns was not exceeded. If the number of rows in the resulting dataset still exceeded the specified maximum, the function employed stratified sampling to select a representative subset of rows.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses a random number generator to select a subset of the data. The function first selects a subset of the classes, then selects a subset of the columns, and finally selects a subset of the rows. The selection of classes and columns is done uniformly at random, while the selection of rows is done using stratified sampling to ensure that the classes are represented in the same proportion as in the original dataset.
 
-The resulting dataset contains ten classes and one hundred columns, with two thousand samples. The categorical mask has been applied to the relevant columns to facilitate further analysis.
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, the maximum number of columns, and the maximum number of classes. It also takes in a boolean argument stratified, which determines whether to use stratified sampling or not.
 
-Features: V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, V Twenty-Two, Class
+The function returns a new dataset that is a subsample of the original. The new dataset has the same structure as the original, but with fewer rows, columns, and classes.
 
-Keywords: machine learning, statistics, subsampling, stratification, dataset, classification
+Features: The dataset contains several features, including V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, V Twenty-Two, and a class feature.
+
+Keywords: dataset subsampling, stratified sampling, random number generator, feature selection, class representation.

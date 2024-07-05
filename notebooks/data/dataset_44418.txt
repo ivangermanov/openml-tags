@@ -1,15 +1,17 @@
-Subsampling of the dataset Higgs with seed equals one. The function takes several arguments including number rows maximum, number columns maximum, number classes maximum, and whether to use stratification.
+Name: Higgs Seed One Number of Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True
 
-The function begins by setting up a random number generator using the given seed. It then selects the data and target arrays from the dataset. The unique classes in the target array are determined and if there are more than the maximum allowed, a selection of classes is made using a weighted random choice based on their frequency in the dataset. The indices of the samples corresponding to these selected classes are identified and used to subset the data and target arrays.
+Tags: Subsampling of the dataset Higgs generated with the following source code:
 
-If the number of columns exceeds the maximum allowed, a uniform random sampling of columns is performed. The column indices are randomly chosen and sorted, and the corresponding column names are used to subset the data array.
+This function subsamples a dataset. It takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Finally, if the number of rows still exceeds the maximum allowed, a stratified sampling of rows is performed using a train-test split function from scikit-learn. This ensures that the class balance is preserved in the sampled dataset.
+The function first uniformly samples classes from the dataset. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
 
-The resulting dataset is returned with the relevant metadata, including the column names and a mask indicating which columns are categorical.
+Next, the function uniformly samples columns from the dataset. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns.
 
-Tags: Subsampling of the dataset Higgs, Stratify True
+Finally, the function subsamples the dataset based on the number of rows. If the number of rows is greater than the maximum number of rows, it stratifies the dataset accordingly and selects a subset of the data.
 
-Features: Lepton Transverse Momentum, Lepton Eta, Lepton Phi, Missing Energy Magnitude, Missing Energy Phi
+The function returns a dataset with the subsampled data, the target variable, and a mask indicating which columns are categorical.
 
-Keywords: Subsampling, Higgs dataset, Stratified sampling, Random sampling, Class balance preservation.
+Features: lepton transverse momentum, lepton eta, lepton phi, missing energy magnitude, missing energy phi, jet one pt, jet one eta, jet one phi, jet two pt, jet two eta, jet two phi, jet three pt, jet three eta, jet three phi, jet four pt, jet four eta, jet four phi, mass jj, mass jjj, mass lv, mass jlv, mass bb, mass wbb, mass wwbb, target
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling, column sampling, row sampling

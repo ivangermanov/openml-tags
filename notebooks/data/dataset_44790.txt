@@ -1,17 +1,19 @@
-KDD Cup 09 Upselling Seed 2 Dataset 
+Name: KDD Cup 09 Upselling Seed 2
 
-This dataset is a subsampling of the KDD Cup 09 Upselling dataset with a seed value of two. It belongs to the categories of Agriculture and Life Science.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-The subsampling process involved uniformly selecting classes from the original dataset. The number of classes was capped at ten. The classes were chosen based on their frequency of occurrence, with more frequent classes having a higher chance of being selected.
+Generated with the following source code:
 
-Once the classes were selected, the corresponding rows from the original dataset were retained. The remaining rows were discarded.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling.
 
-Next, the columns of the dataset were uniformly sampled. The maximum number of columns was set at one hundred. The columns were chosen randomly without replacement.
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-If the resulting dataset had more than two thousand rows, stratification was applied to ensure that the class distribution remained consistent. This involved splitting the dataset into training and testing sets using stratified sampling.
+Next, it uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting column indices and sorting them to ensure consistency.
 
-The resulting dataset contains only the selected columns and rows. The categorical columns have been converted to strings to facilitate processing.
+If the number of rows still exceeds the maximum allowed, the function stratifies the data and samples a subset of rows. This is done using a train-test split function, which ensures that the sampled data maintains the same class distribution as the original data.
 
-Features: Various agricultural and life science related variables.
+Finally, the function converts categorical columns to strings and returns a new dataset with the subsampled data.
 
-Keywords: KDD Cup 09 Upselling, Agriculture, Life Science, Subsampling, Stratification.
+Features: (omitted due to unreadability)
+
+Keywords: dataset subsampling, stratified sampling, class distribution, data reduction

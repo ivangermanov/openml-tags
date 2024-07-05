@@ -1,9 +1,5 @@
-The Supply Chain Management dataset is derived from the Trading Agent Competition in Supply Chain Management tournament. This dataset corresponds to the Product Future prediction type. Each row in the dataset represents an observation day in the tournament, with a total of two hundred twenty days in each game and eighteen tournament games in a tournament.
+The Supply Chain Management dataset is derived from the Trading Agent Competition in Supply Chain Management tournament. The data preprocessing and normalization methods are described in detail. This dataset corresponds to the Product Future prediction type. Each row corresponds to an observation day in the tournament. The input variables in this domain are observed prices for a specific tournament day. In addition, four time-delayed observations are included for each observed product and component to facilitate some anticipation of trends going forward. The dataset contains sixteen regression targets, each target corresponds to the next day mean price or mean price for twenty days in the future for each product in the simulation. Days with no target values are excluded from the dataset.
 
-The input variables in this domain consist of observed prices for a specific tournament day, along with four time-delayed observations for each observed product and component to facilitate anticipation of trends going forward. These time-delayed observations include one, two, four, and eight days delayed.
+The dataset features include time unit, storage cost, interest rate, and various component indices with different time delays. 
 
-The dataset contains sixteen regression targets, each corresponding to the next day mean price or mean price for twenty days in the future for each product in the simulation. Days with no target values are excluded from the dataset, meaning days with labels that are beyond the end of the game are not included.
-
-The dataset has been preprocessed and normalized according to established methods.
-
-Keywords: Supply Chain Management, multivariate regression, machine learning, education.
+Keywords: Supply Chain Management, Multivariate Regression, Time-Delayed Observations, Product Future Prediction.

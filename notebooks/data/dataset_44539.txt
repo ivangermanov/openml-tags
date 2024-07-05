@@ -1,19 +1,11 @@
-Name: Albert 
+Subsampling of the dataset Albert with a random seed, resulting in a dataset with a maximum of two thousand rows, one hundred columns, and ten classes. The subsampling process involves uniformly sampling classes, columns, and rows to achieve the desired dataset size.
 
-Tags: Economics, Life Sciences 
+The subsampling function takes in several parameters, including the random seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function first samples classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Subsampling of the dataset Albert with parameters generated using the following source code:
+Next, the function samples columns uniformly, selecting a specified number of columns randomly. If the number of rows exceeds the maximum allowed, the function stratifies the sampling based on the target variable, ensuring that the sampled data maintains the same class distribution as the original dataset.
 
-This function subsamples the dataset according to specified parameters. The function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling.
+The resulting dataset is a subset of the original Albert dataset, with a reduced number of rows, columns, and classes. The dataset includes a categorical mask, indicating which columns contain categorical variables, and a list of column names.
 
-First, the function selects a uniform sample of classes from the available classes in the dataset. If the number of unique classes exceeds the maximum allowed, the function randomly selects the specified number of classes based on their frequency in the dataset.
+Tags: Subsampling of the dataset Albert
 
-Next, the function uniformly samples columns from the dataset. If the number of columns exceeds the maximum allowed, the function randomly selects the specified number of columns.
-
-Then, the function stratifies the sampling of rows according to the selected classes. This ensures that the sampled rows represent the distribution of classes in the original dataset.
-
-Finally, the function returns a new dataset consisting of the subsampled data, along with metadata including the categorical mask and column names.
-
-Features: Several numeric features have been omitted for brevity.
-
-Keywords: Subsampling, Dataset, Stratification, Random Sampling, Classes, Columns, Rows.
+Keywords: dataset subsampling, stratified sampling, class sampling, column sampling, row sampling

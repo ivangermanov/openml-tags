@@ -1,16 +1,14 @@
-Online News Popularity Dataset
+Online News Popularity Tags: **Author**
 
-Tags: Computer Systems, Machine Learning
+This dataset summarizes a heterogeneous set of features about articles published by Mashable over a period of two years. The goal is to predict the number of shares in social networks, or popularity. The articles were published by Mashable and their content, as the rights to reproduce it, belongs to them. Hence, this dataset does not share the original content but some statistics associated with it. The original content can be publicly accessed and retrieved using the provided URLs.
 
-This dataset summarizes a heterogeneous set of features about articles published by Mashable over a period of two years. The goal is to predict the number of shares in social networks, also known as popularity.
+Acquisition Date: January 8, 2015
 
-The articles were published by Mashable and their content, as well as the rights to reproduce it, belong to them. Hence, this dataset does not share the original content but provides some statistics associated with it. The original content can be publicly accessed and retrieved using the provided URLs.
+The estimated relative performance values were estimated using a Random Forest classifier and a rolling windows as assessment method. See the article for more details on how the relative performance values were set.
+
+Attribute Information: The dataset contains sixty-one attributes, including fifty-eight predictive attributes, two non-predictive attributes, and one goal field.
 
 Attribute Information:
-
-The dataset contains sixty-one attributes, including fifty-eight predictive attributes, two non-predictive attributes, and one goal field.
-
-Attribute Information includes:
 
 * URL of the article (non-predictive)
 * Days between the article publication and the dataset acquisition (non-predictive)
@@ -25,17 +23,55 @@ Attribute Information includes:
 * Number of videos
 * Average length of the words in the content
 * Number of keywords in the metadata
-* Data channel is Lifestyle?
-* Data channel is Entertainment?
-* Data channel is Business?
-* Data channel is Social Media?
-* Data channel is Tech?
-* Data channel is World?
+* Is data channel Lifestyle?
+* Is data channel Entertainment?
+* Is data channel Business?
+* Is data channel Social Media?
+* Is data channel Tech?
+* Is data channel World?
+* Worst keyword (minimum shares)
+* Worst keyword (maximum shares)
+* Worst keyword (average shares)
+* Best keyword (minimum shares)
+* Best keyword (maximum shares)
+* Best keyword (average shares)
+* Average keyword (minimum shares)
+* Average keyword (maximum shares)
+* Average keyword (average shares)
+* Minimum shares of referenced articles in Mashable
+* Maximum shares of referenced articles in Mashable
+* Average shares of referenced articles in Mashable
+* Was the article published on a Monday?
+* Was the article published on a Tuesday?
+* Was the article published on a Wednesday?
+* Was the article published on a Thursday?
+* Was the article published on a Friday?
+* Was the article published on a Saturday?
+* Was the article published on a Sunday?
+* Was the article published on the weekend?
+* Closeness to Latent Dirichlet Allocation topic
+* Text subjectivity
+* Text sentiment polarity
+* Rate of positive words in the content
+* Rate of negative words in the content
+* Rate of positive words among non-neutral tokens
+* Rate of negative words among non-neutral tokens
+* Average polarity of positive words
+* Minimum polarity of positive words
+* Maximum polarity of positive words
+* Average polarity of negative words
+* Minimum polarity of negative words
+* Maximum polarity of negative words
+* Title subjectivity
+* Title sentiment polarity
+* Absolute subjectivity level
+* Absolute polarity level
+* Number of shares (target)
 
-Other features include various keyword metrics, self-reference metrics, weekday metrics, Latent Dirichlet Allocation (LDA) topics, global subjectivity, global sentiment polarity, rate of positive and negative words, and title subjectivity and sentiment polarity.
+Relevant Papers:
 
-The target variable is the number of shares.
+Citation Request:
 
-Relevant papers provide more information on the dataset and its applications.
+Features: URL, days between article publication and dataset acquisition, number of words in title, number of words in content, rate of unique words, rate of non-stop words, rate of unique non-stop words, number of links, number of links to other Mashable articles, number of images, number of videos, average token length, number of keywords, data channel, keyword metrics, self-reference metrics, weekday metrics, Latent Dirichlet Allocation metrics, text sentiment metrics, title metrics, shares
 
-Keywords: online news, popularity prediction, social networks, machine learning, computer systems
+Keywords: online news, popularity, social networks, article features, text analysis, sentiment analysis, keyword extraction, Latent Dirichlet Allocation, machine learning.

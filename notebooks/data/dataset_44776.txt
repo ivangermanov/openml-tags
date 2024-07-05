@@ -1,19 +1,11 @@
-Name: SF Police Incidents Seed Three 
+Name: sf-police-incidents Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Images, Machine Learning 
+Tags: Subsampling of the dataset sf-police-incidents with seed equal to three, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-Subsampling of the dataset SF Police Incidents generated with the following source code:
+Generated with the following source code:
 
-The function subsample takes in several parameters, including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification. It uses NumPy's default random generator to select a uniform sample of classes, columns, and rows from the original dataset.
+The function subsample takes in self, seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses numpy's random default random generator with the given seed. It then selects the features x and target y from the dataset. If the number of unique classes in the target is greater than the maximum number of classes, it selects the classes using random choice with probabilities based on the value counts of the classes. It then selects the indices where one of these classes is present and updates the features and target accordingly. If the number of columns in the features is greater than the maximum number of columns, it uniformly samples the columns. If the number of rows in the features is greater than the maximum number of rows, it uses train test split with stratification based on the target to select the subset of rows. Finally, it returns a dataset with the updated features, target, categorical mask, and columns.
 
-First, it selects a uniform sample of classes from the unique values in the target variable. If the number of unique classes exceeds the maximum allowed, it uses value counts to weight the probability of selection. It then selects the indices where one of these classes is present and filters the data accordingly.
+Features: Hour of the Day, Day of the Week, Month of the Year, Year, Police District, Address, X Coordinate, Y Coordinate, Violent Crime
 
-Next, it uniformly samples columns if required. If the number of columns exceeds the maximum allowed, it randomly selects the specified number of column indices, sorts them, and filters the data to include only those columns.
-
-Finally, if the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data. It concatenates the data and target variable, performs a train-test split with stratification on the target variable, and separates the resulting subset back into data and target variables.
-
-The function returns a new dataset with the sampled data, target variable, categorical mask, and column names.
-
-Features: Hour, Day of Week, Month, Year, Police District, Address 
-
-Keywords: subsampling, machine learning, dataset, stratification, random sampling
+Keywords: sf-police-incidents, subsampling, stratification, feature selection, class selection, row selection

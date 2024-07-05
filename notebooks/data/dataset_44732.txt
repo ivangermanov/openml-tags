@@ -1,15 +1,43 @@
-Machine Learning Dataset: Helena 
+Subsampling of the dataset Helena with seed equals four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-This dataset is a subsampled version of the original Helena dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset. 
+Generated with the following source code:
 
-The Helena dataset underwent uniform sampling of its classes, ensuring that all classes were represented proportionally. This was achieved by selecting a specified number of classes using their value counts as probabilities. The resulting classes were then used to filter the dataset, retaining only the samples belonging to the chosen classes.
+def subsample(self, seed, number of rows maximum, number of columns maximum, number of classes maximum, stratified) -> Dataset:
+random number generator = numpy random default random generator with seed
+x equals self x
+y equals self y
 
-Subsequently, the dataset underwent column selection, where a specified number of columns were randomly chosen. This selection was performed uniformly, without any bias towards specific columns. The resulting columns formed the new feature set for the subsampled dataset.
+Uniformly sample classes equals y unique
+if length of classes is greater than number of classes maximum:
+value counts equals y value counts
+selected classes equals random number generator choice of classes, size equals number of classes maximum, replace equals false, probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present equals y index of y is in selected classes
+x equals x iloc of select the indices
+y equals y iloc of select the indices
 
-Finally, the dataset underwent row sampling, where a specified number of samples were randomly chosen while maintaining the proportional representation of classes. This ensured that the subsampled dataset retained the original class distribution.
+Uniformly sample columns if required
+if length of x columns is greater than number of columns maximum:
+columns indexes equals random number generator choice of list of range of length of x columns, size equals number of columns maximum, replace equals false
+sorted column indexes equals sorted of columns indexes
+selected columns equals list of x columns of sorted column indexes
+x equals x of selected columns
+else:
+sorted column indexes equals list of range of length of x columns
 
-Features: twenty-four variables, class variable
+if length of x is greater than number of rows maximum:
+Stratify accordingly
+target name equals y name
+data equals pandas concat of x and y, axis equals columns
+_, subset equals train test split of data, test size equals number of rows maximum, stratify equals data of target name, shuffle equals true, random state equals seed
+x equals subset drop of target name, axis equals columns
+y equals subset of target name
 
-Tags: Machine Learning, Mathematics
+We need to convert categorical columns to string for openml
+categorical mask equals list of self categorical mask of i for i in sorted column indexes
+columns equals list of x columns
+return Dataset of dataset equals self dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns
 
-Keywords: subsampling, machine learning, dataset, uniform sampling, proportional representation, class distribution
+Features: 
+class
+
+Keywords: Subsampling, Helena dataset, Stratified sampling, Feature selection, Random sampling

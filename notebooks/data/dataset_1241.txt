@@ -1,13 +1,16 @@
-Normalized Form of Cod RNA Dataset
+Name: Codrna Norm
+Tags: study
 
-This dataset belongs to the categories of Chemistry and Life Science.
+This dataset is a normalized form of Codrna. It originates from the LibSVM website and is related to the detection of non-coding RNAs based on predicted secondary structure formation free energy change. The dataset was created by combining test, train, and rest datasets, then normalizing each file columnwise according to specific rules:
 
-The source of this dataset is the original website, which provides detailed information about the preprocessing steps.
+- Constant features (columns with only one value) were set to zero and removed due to sparsity.
+- Binary features (columns with two values) had the more frequent value set to zero and the less frequent value set to one.
+- Multinary or real features (columns with more than two values) were divided by their standard deviation.
 
-To create this dataset, the test, train, and rest datasets were joined together. Each file column was normalized according to specific rules. If a column contained only one value, it was considered a constant feature and set to zero, effectively removing it due to sparsity. If a column had two values, it was considered a binary feature, and the more frequently occurring value was set to zero, while the other was set to one. For columns containing more than two values, considered multinary or real features, the column was divided by its standard deviation.
+It's important to note that this dataset contains many duplicated data points, both within each file (train, test, rest) and across these files. These duplicated points were not removed during the preprocessing.
 
-Note that this dataset still contains many duplicate data points within each file and across files, which have not been removed.
+The dataset is based on research in bioinformatics, specifically focusing on RNA structure prediction and classification. It has applications in genomics and computational biology, potentially aiding in the identification and characterization of non-coding RNA sequences.
 
-Features include various attributes related to Cod RNA.
+Users of this dataset should be aware of its preprocessing steps and the presence of duplicates when conducting analyses or developing models. The normalization process applied to the features may impact the interpretation of results and should be considered when drawing conclusions from studies using this dataset.
 
-Keywords: chemistry, life science, RNA, normalization, preprocessing, dataset.
+Keywords: RNA detection, secondary structure, energy change, bioinformatics, data normalization, feature preprocessing, genomics, computational biology, non-coding RNA

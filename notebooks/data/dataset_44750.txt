@@ -1,7 +1,17 @@
-The guillermo dataset has been subsampled with the following parameters: seed equals two, maximum number of rows equals two thousand, maximum number of columns equals one hundred, maximum number of classes equals ten, and stratified sampling has been set to true.
+Subsampling of the dataset Guillermo with seed equals two. Tags: Subsampling of the dataset Guillermo.
 
-This subsampling process has generated a new dataset with the following characteristics: the uniform sampling of classes ensures that all classes have an equal representation in the dataset; the uniform sampling of columns reduces the dimensionality of the dataset while preserving the most important features; and the stratified sampling of rows maintains the class balance in the dataset.
+Generated with the following source code:
 
-The resulting dataset contains a subset of the original features, which are: 
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Tags: Physical Sciences, Statistics
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, it uniformly samples columns if required. If the number of columns in the dataset exceeds the specified maximum, it randomly selects the desired number of columns.
+
+Finally, if the number of rows in the dataset exceeds the specified maximum, it uses stratified sampling to select the desired number of rows. This ensures that the new dataset maintains the original distribution of the data.
+
+The resulting dataset is then returned with the selected data, categorical mask, and column names.
+
+Features: (omitted due to unreadability)
+
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, column selection.

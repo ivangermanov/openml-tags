@@ -1,9 +1,13 @@
-The CPMP 2015 Runtime Classification dataset is an extension of the 2013 Premarshalling dataset, featuring more characteristics and a set of test instances. This dataset comprises three sets of characteristics: one containing the full set of characteristics from the second iteration of the Latent Feature Analysis process; another containing only the characteristics after the first iteration; and a third containing the characteristics used in the Premarshalling Astar 2013 dataset.
+CPMP 2015 Runtime Classification
 
-Each set of characteristics has a corresponding test data file, following an identical naming convention. Notably, the characteristics for the Premarshalling Problem are extremely easy and fast to compute, so the feature costs file has been omitted.
+This dataset is an extension of the 2013 pre-marshalling dataset, featuring a more comprehensive set of features and a collection of test instances. The dataset includes three distinct sets of features: the full set of features derived from the second iteration of our latent feature analysis process, a reduced set of features obtained after the first iteration, and the original features used in the 2013 pre-marshalling dataset.
 
-The dataset provides a comprehensive set of characteristics, including the number of stacks, tiers, stack-to-tier ratio, container density, percentage of empty stacks, percentage of overstowed stacks, percentage of overstowed stacks with two containers, minimum, maximum, mean, and standard deviation of groups with the same characteristics, minimum, maximum, mean, and standard deviation of good containers on top, percentage of overstowage, bottom floor left behind, left density, tier-weighted groups, average L1 top-left large group, containers empty greater than estimated stack, and percentage of bottom containers on top.
+The features for the pre-marshalling problem are remarkably easy and fast to compute, which is why the feature costs file has been omitted, as it would indicate a computation time of zero for every feature, regardless of the feature set used.
 
-Tags: Algorithm Selection, Health, Medicine
+The dataset provides test data with an identical naming scheme, and the feature computation code is available online. Note that the scenario was previously referred to as Pre-Marshalling-AStar 2015, but has been renamed to conserve space.
 
-Keywords: Premarshalling, Container, Stack, Tier, Overstowage, Algorithm Selection, Feature Analysis
+The features included in this dataset are stacks, tiers, stack to tier ratio, container density, percentage of empty stacks, percentage of overstowing stacks, percentage of stacks with two containers overstowing, minimum, maximum, mean, and standard deviation of groups with the same characteristics, minimum, maximum, mean, and standard deviation of top good containers, percentage of overstowage, and bottom floor left behind.
+
+Tags: Algorithm Selection
+
+Keywords: Container Pre-Marshalling, Algorithm Selection, Runtime Classification, Latent Feature Analysis, Pre-Marshalling Problem.

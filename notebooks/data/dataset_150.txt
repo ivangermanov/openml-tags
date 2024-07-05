@@ -1,32 +1,36 @@
-Covertype 
-Tags: Machine Learning, Physical Sciences 
+Covertype Dataset
+Tags: study
 
-The normalized version of the Forest Covertype dataset contains the forest cover type for thirty by thirty meter cells obtained from the United States Forest Service Region Two Resource Information System data. It consists of instances and attributes, and has been utilized in multiple research papers focusing on data stream classification.
+Source: MOA - 
 
-Features include Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at nine am, Hillshade at Noon, Hillshade at three pm, Horizontal Distance to Fire Points, Wilderness Area designations, and Soil Type designations.
+Please cite: Normalized version of the Forest Covertype dataset (see version ), so that the numerical values are between  and . Contains the forest cover type for  x  meter cells obtained from US Forest Service (USFS) Region  Resource Information System (RIS) data. It contains , instances and  attributes, and it has been used in several papers on data stream classification.
 
-This dataset aims to predict forest cover type from cartographic variables solely, excluding any remotely sensed data. The actual forest cover type for a given observation was determined from United States Forest Service Region Two Resource Information System data. Independent variables were derived from data initially acquired from the United States Geological Survey and United States Forest Service data. 
+Features: Elevation, Aspect, Slope, Horizontal Distance To Hydrology, Vertical Distance To Hydrology, Horizontal Distance To Roadways, Hillshade am, Hillshade Noon, Hillshade pm, Horizontal Distance To Fire Points, Wilderness Area, Wilderness Area, Wilderness Area, Wilderness Area, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, Soil Type, class
 
-The study area encompasses four wilderness areas situated within the Roosevelt National Forest of Northern Colorado. These regions exemplify forests with minimal human-induced disturbances, thus the existing forest cover types are primarily the outcome of ecological processes rather than forest management practices. 
+Dataset Information
+Additional Information
+Predicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation ( x  meter cell) was determined from US Forest Service (USFS) Region  Resource Information System (RIS) data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains binary ( or ) columns of data for qualitative independent variables (wilderness areas and soil types).
 
-Some essential background information regarding these four wilderness areas is as follows: Neota probably possesses the highest mean elevational value among the four wilderness areas. Rawah and Comanche Peak would exhibit a lower mean elevational value, whereas Cache la Poudre would display the lowest mean elevational value. Concerning primary major tree species within these areas, Neota would feature Spruce-Fir, while Rawah and Comanche Peak would likely feature Lodgepole Pine, succeeded by Spruce-Fir and Aspen. Cache la Poudre would typically exhibit Ponderosa Pine, Douglas-Fir, and Cottonwood-Willow.
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices.
 
-The Rawah and Comanche Peak areas would tend to be more representative of the overall dataset compared to Neota or Cache la Poudre, owing to their diverse array of tree species and range of predictive variable values, including elevation. Cache la Poudre would likely be more distinct compared to the others, attributed to its relatively low elevation range and species composition.
+Some background information for these four wilderness areas: Neota (area ) probably has the highest mean elevational value of the  wilderness areas. Rawah (area ) and Comanche Peak (area ) would have a lower mean elevational value, while Cache la Poudre (area ) would have the lowest mean elevational value.
 
-This dataset does not contain any missing values.
+As for primary major tree species in these areas, Neota would have spruce/fir (type ), while Rawah and Comanche Peak would probably have lodgepole pine (type ) as their primary species, followed by spruce/fir and aspen (type ). Cache la Poudre would tend to have Ponderosa pine (type ), Douglas fir (type ), and cottonwood/willow (type ).
 
-Given is the attribute name, attribute type, measurement unit, and a concise description. The forest cover type represents the classification problem. The order of this listing corresponds to the order of numerals along the rows of the database.
+The Rawah and Comanche Peak areas would tend to be more typical of the overall dataset than either the Neota or Cache la Poudre, due to their assortment of tree species and range of predictive variable values (elevation, etc.) Cache la Poudre would probably be more unique than the others, due to its relatively low elevation range and species composition.
 
-Elevation is a quantitative measure expressed in meters, denoting the elevation in meters. Aspect is a quantitative measure expressed in azimuth, signifying the aspect in degrees azimuth. Slope is a quantitative measure expressed in degrees, representing the slope in degrees. 
+Has Missing Values? No
 
-Horizontal Distance to Hydrology is a quantitative measure expressed in meters, indicating the horizontal distance to the nearest surface water features. Vertical Distance to Hydrology is a quantitative measure expressed in meters, signifying the vertical distance to the nearest surface water features. Horizontal Distance to Roadways is a quantitative measure expressed in meters, representing the horizontal distance to the nearest roadways.
+Additional Variable Information
+Given is the attribute name, attribute type, the measurement unit and a brief description. The forest cover type is the classification problem. The order of this listing corresponds to the order of numerals along the rows of the database.
 
-Hillshade at nine am is a quantitative measure ranging from zero to two hundred fifty-five index, signifying the hillshade index at nine am during the summer solstice. Hillshade at Noon is a quantitative measure ranging from zero to two hundred fifty-five index, representing the hillshade index at noon during the summer solstice. Hillshade at three pm is a quantitative measure ranging from zero to two hundred fifty-five index, indicating the hillshade index at three pm during the summer solstice.
-
-Horizontal Distance to Fire Points is a quantitative measure expressed in meters, signifying the horizontal distance to the nearest wildfire ignition points. Wilderness Area designations consist of four binary columns, featuring qualitative measures denoting the absence or presence of wilderness area designations. Soil Type designations comprise forty binary columns, featuring qualitative measures signifying the absence or presence of soil type designations.
-
-Forest Cover Type designations consist of seven types, represented by an integer ranging from one to seven.
-
-Class labels consist of Spruce-Fir, Lodgepole Pine, Ponderosa Pine, Cottonwood-Willow, Aspen, Douglas-Fir, and Krummholz.
-
-Keywords: Forest Covertype, Cartographic Variables, Wilderness Areas, Soil Types, Tree Species, Ecological Processes, Forest Management Practices.
+Name / Data Type / Measurement / Description
+Elevation / quantitative /meters / Elevation in meters
+Aspect / quantitative / azimuth / Aspect in degrees azimuth
+Slope / quantitative / degrees / Slope in degrees
+Horizontal Distance To Hydrology / quantitative / meters / Horizontal Distance to nearest surface water features
+Vertical Distance To Hydrology / quantitative / meters / Vertical Distance to nearest surface water features
+Horizontal Distance To Roadways / quantitative / meters / Horizontal Distance to nearest roadway
+Hillshade am / quantitative /  to  index / Hillshade index at am, summer solstice
+Hillshade Noon / quantitative /  to  index / Hillshade index at noon, summer solstice
+Hillshade pm / quantitative /  to  index / Hillsh

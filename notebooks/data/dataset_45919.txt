@@ -1,105 +1,21 @@
-Padding Attack Dataset Facebook 
-Tags: Bleichenbacher Padding Attack 
+Padding Attack Dataset Facebook
 
-Dataset created with server Facebook 
+Tags: Bleichenbacher Padding Attack
 
-Attribute Names: 
-Connection Key Exchange Src Port 
-Connection Key Exchange Dst Port 
-Connection Key Exchange Port 
-Connection Key Exchange Stream 
-Connection Key Exchange Length 
-Connection Key Exchange Sequence Number 
-Connection Key Exchange Next Sequence Number 
-Connection Key Exchange Acknowledgment Number 
-Connection Key Exchange Header Length 
-Connection Key Exchange Flags Reserved 
-Connection Key Exchange Flags Nonce Sum 
-Connection Key Exchange Flags Congestion Window Reduced 
-Connection Key Exchange Flags Explicit Congestion Notification 
-Connection Key Exchange Flags Urgent 
-Connection Key Exchange Flags Acknowledgment 
-Connection Key Exchange Flags Push 
-Connection Key Exchange Flags Reset 
-Connection Key Exchange Flags Synchronize 
-Connection Key Exchange Flags Finish 
-Connection Key Exchange Window Size Value 
-Connection Key Exchange Window Size 
-Connection Key Exchange Window Size Scale Factor 
-Connection Key Exchange Checksum Status 
-Connection Key Exchange Urgent Pointer 
-Connection Key Exchange Options No Operation 
-Connection Key Exchange Option Kind 
-Connection Key Exchange Option Length 
-Connection Key Exchange Options Timestamp Time Stamp Value 
-Connection Key Exchange Time Delta 
-Order 
+This dataset was created on December fifth, two thousand twenty-three, with a server named Facebook.
 
-Disconnect Src Port 
-Disconnect Dst Port 
-Disconnect Port 
-Disconnect Stream 
-Disconnect Length 
-Disconnect Sequence Number 
-Disconnect Next Sequence Number 
-Disconnect Acknowledgment Number 
-Disconnect Header Length 
-Disconnect Flags Reserved 
-Disconnect Flags Nonce Sum 
-Disconnect Flags Congestion Window Reduced 
-Disconnect Flags Explicit Congestion Notification 
-Disconnect Flags Urgent 
-Disconnect Flags Acknowledgment 
-Disconnect Flags Push 
-Disconnect Flags Reset 
-Disconnect Flags Synchronize 
-Disconnect Flags Finish 
-Disconnect Window Size Value 
-Disconnect Window Size 
-Disconnect Window Size Scale Factor 
-Disconnect Checksum Status 
-Disconnect Urgent Pointer 
-Disconnect Options No Operation 
-Disconnect Option Kind 
-Disconnect Option Length 
-Disconnect Options Timestamp Time Stamp Value 
-Disconnect Time Delta 
-Order 
+Attribute Names:
 
-Vulnerable Classes 
-In PKCS Number One Padding first eight bytes after zero zero two, zero zero in some padding byte, correctly formatted PKCS number one premaster secret message but one byte shorter, no zero zero in message, wrong first byte zero zero set to seventeen, wrong second byte zero two set to seventeen 
+The dataset contains various attributes related to TCP packets, including source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, flags, window size value, window size, window size scale factor, checksum status, urgent pointer, options, and timestamp.
 
-Features 
-label 
-connection key exchange source port 
-connection key exchange destination port 
-connection key exchange port 
-connection key exchange stream 
-connection key exchange length 
-connection key exchange sequence number 
-connection key exchange next sequence number 
-connection key exchange acknowledgment number 
-connection key exchange header length 
-connection key exchange flags reserved 
-connection key exchange flags nonce sum 
-connection key exchange flags congestion window reduced 
-connection key exchange flags explicit congestion notification 
-connection key exchange flags urgent 
-connection key exchange flags acknowledgment 
-connection key exchange flags push 
-connection key exchange flags reset 
-connection key exchange flags synchronize 
-connection key exchange flags finish 
-connection key exchange window size value 
-connection key exchange window size 
-connection key exchange window size scale factor 
-connection key exchange checksum status 
-connection key exchange urgent pointer 
-connection key exchange options no operation 
-connection key exchange option kind 
-connection key exchange option length 
-connection key exchange options timestamp time stamp value 
-connection key exchange time delta 
-order 
+The dataset also includes attributes related to the order of packets and the presence of certain bytes in the message.
 
-Keywords: Padding Attack, Bleichenbacher, PKCS Number One, Premaster Secret, Vulnerable Classes, Connection Key Exchange, Flags, Checksum Status.
+Vulnerable Classes:
+
+The dataset includes classes that are vulnerable to padding attacks, including packets with incorrect PKCS#1 padding, packets with incorrect message length, packets with incorrect first byte, and packets with incorrect second byte.
+
+Features:
+
+The dataset includes a wide range of features related to TCP packets, including source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, flags, window size value, window size, window size scale factor, checksum status, urgent pointer, options, timestamp, and order.
+
+Keywords: Padding Attack, TCP Packets, PKCS#1, Bleichenbacher Attack, Facebook Server

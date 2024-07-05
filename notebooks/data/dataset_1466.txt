@@ -1,16 +1,38 @@
 Cardiotocography
+Tags: OpenML, study, trivial
 
-Tags: Chemistry, Life Science, OpenML100, Study
+Source: UCI
 
-Source: UCI Machine Learning Repository
+Please cite: Ayres de Campos et al. SisPorto A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med, UCI
 
-The Cardiotocography dataset contains two thousand one hundred twenty-six fetal cardiotocograms that were automatically processed and the respective diagnostic features measured. These cardiotocograms were also classified by expert obstetricians and a consensus classification label was assigned to each of them. Classification was done with respect to a morphologic pattern and to a fetal state.
+A large number of fetal cardiotocograms (CTGs) were automatically processed and their respective diagnostic features measured. The CTGs were also classified by expert obstetricians, and a consensus classification label was assigned to each of them. Classification was performed with respect to both morphologic pattern (A, B, C, etc.) and fetal state (Normal, Suspect, Pathologic). Consequently, the dataset can be utilized for either ten-class or three-class experiments.
 
 Attribute Information:
-
-Fetal Heart Rate Baseline, Number of Accelerations per Second, Number of Fetal Movements per Second, Number of Uterine Contractions per Second, Number of Light Decelerations per Second, Number of Severe Decelerations per Second, Number of Prolonged Decelerations per Second, Percentage of Time with Abnormal Short Term Variability, Mean Value of Short Term Variability, Percentage of Time with Abnormal Long Term Variability, Mean Value of Long Term Variability, Width of Fetal Heart Rate Histogram, Minimum of Fetal Heart Rate Histogram, Maximum of Fetal Heart Rate Histogram, Number of Histogram Peaks, Number of Histogram Zeros, Histogram Mode, Histogram Mean, Histogram Median, Histogram Variance, Histogram Tendency, Fetal Heart Rate Pattern Class Code, Fetal State Class Code
+- FHR baseline (beats per minute)
+- Number of accelerations per second
+- Number of fetal movements per second
+- Number of uterine contractions per second
+- Number of light decelerations per second
+- Number of severe decelerations per second
+- Number of prolonged decelerations per second
+- Percentage of time with abnormal short term variability
+- Mean value of short term variability
+- Percentage of time with abnormal long term variability
+- Mean value of long term variability
+- Width of FHR histogram
+- Minimum of FHR histogram
+- Maximum of FHR histogram
+- Number of histogram peaks
+- Number of histogram zeros
+- Histogram mode
+- Histogram mean
+- Histogram median
+- Histogram variance
+- Histogram tendency
+- FHR pattern class code
+- Fetal state class code (Normal, Suspect, Pathologic)
 
 Relevant Papers:
-SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms.
+Ayres de Campos et al. SisPorto A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med
 
-Keywords: Cardiotocography, Fetal Cardiotocograms, Diagnostic Features, Morphologic Pattern, Fetal State, Fetal Heart Rate.
+Keywords: cardiotocography, fetal heart rate, classification, obstetrics, medical diagnosis, data analysis, machine learning

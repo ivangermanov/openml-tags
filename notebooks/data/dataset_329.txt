@@ -1,35 +1,34 @@
-Hayes-Roth Dataset 
+The Hayes-Roth Database is a merged version of separate train and test sets typically distributed. On OpenML, this train-test split can be found as one of the possible tasks. The dataset originates from the UCI Machine Learning Repository.
 
-This dataset is a merged version of the separate training and test sets. The training-test split can be found as one of the possible tasks.
+This database contains numeric-valued attributes, with only a subset used during testing. Furthermore, only two of the three concepts are utilized during testing (those with the prototypes zero and one-one-one). All values have been mapped to their zero-indexing equivalents. Some instances could be placed in either category zero or one, and following the authors' suggestion, they have been placed in each category with equal probability.
 
-The dataset contains five attributes: Hobby, Age, Educational Level, Marital Status, and Class. The Hobby attribute has nominal values, while the Age, Educational Level, and Marital Status attributes also have nominal values. The Class attribute has nominal values between one and three.
+The actual values of the attributes (e.g., hobby having values chess, sports, and stamps) have been replaced with numeric values. This approach may be considered unfair, as while human subjects could apply background knowledge to the attribute values and their relationships, algorithms were not provided with such knowledge.
 
-Detailed Description of the Experiment:
+It is unclear whether the two distractor attributes (name and hobby) are presented to the algorithms during testing. However, it is evident that only the age, educational status, and marital status attributes are given during the human subjects' transfer tests.
 
-The classification task involves three categories: Class One, Class Two, and Neither. Some instances could be classified into either Class One or Class Two, and these instances have been evenly distributed between the two classes. 
+The dataset includes the following attributes:
 
-There are five attributes: Name, Hobby, Age, Educational Level, and Marital Status. The Name attribute is a randomly generated number and is not diagnostic. The Hobby attribute is also randomly generated and is not diagnostic. The Age, Educational Level, and Marital Status attributes are diagnostic.
+- Name: distinct for each instance and represented numerically
+- Hobby: nominal values ranging between one and three
+- Age: nominal values ranging between one and four
+- Educational level: nominal values ranging between one and four
+- Marital status: nominal values ranging between one and four
+- Class: nominal value between one and three
 
-Classification Rules:
+The classification rules are as follows:
 
-* Class Neither: If a four occurs for any attribute Age, Educational Level, or Marital Status.
-* Class One: Otherwise, if the number of ones exceeds the number of twos for attributes Age, Educational Level, and Marital Status.
-* Class Two: Otherwise, if the number of twos exceeds the number of ones for attributes Age, Educational Level, and Marital Status.
-* Either Class One or Class Two: Otherwise, if the number of twos equals the number of ones for attributes Age, Educational Level, and Marital Status.
+- Class Neither: if a four occurs for any attribute C-E
+- Class One: Otherwise, if the number of ones is greater than the number of twos for attributes C-E
+- Class Two: Otherwise, if the number of twos is greater than the number of ones for attributes C-E
+- Either One or Two: Otherwise, if the number of twos equals the number of ones for attributes C-E
 
-Prototypes:
-* Class One: One-One-One
-* Class Two: Two-Two-Two
-* Class Either: Three-Three-Three
-* Class Neither: Four-Four-Four
+Prototypes for each class are defined as:
 
-Additional Information:
-This dataset contains five numeric-valued attributes. Only a subset of three attributes is used during testing, specifically the latter three attributes. Furthermore, only two of the three concepts are used during testing, namely those with the prototypes Zero-Zero-Zero and One-One-One. 
+- Class One: one-one-one
+- Class Two: two-two-two
+- Class Either: three-three-three
+- Class Neither: four-four-four
 
-Some instances could be placed in either category Zero or One. These instances have been placed in each category with equal probability, following the authors’ suggestion.
+The dataset does not contain any missing values.
 
-The actual values of the attributes have been replaced with numeric values. This may be unfair since the subjects were able to bring background knowledge to bear on the attribute values and their relationships, whereas the algorithms were provided with no such knowledge.
-
-It is unclear whether the two distractor attributes, Name and Hobby, are presented to the algorithms during testing. However, it is clear that only the Age, Educational Status, and Marital Status attributes are given during the human subjects’ transfer tests.
-
-Keywords: machine learning, education, classification, attributes, prototypes, diagnostic attributes
+Keywords: Hayes-Roth Database, UCI Machine Learning Repository, numeric attributes, classification, prototypes, nominal values, train-test split, attribute mapping, background knowledge

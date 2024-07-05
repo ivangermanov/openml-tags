@@ -1,11 +1,11 @@
-Subsampling of the dataset Satellite with a specific set of parameters. This dataset has been generated using a specific source code that involves various machine learning and statistical techniques.
+Name: Satellite Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The subsample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification. The function first samples classes uniformly and then selects the indices where one of these classes is present. It then samples columns uniformly if required.
+Tags: Subsampling of the dataset Satellite with seed one, arguments n rows max equals two thousand, n columns max equals one hundred, n classes max equals ten, and no stratify equals true.
 
-If the number of rows exceeds the maximum limit, the function uses stratified sampling to select a subset of the data. This ensures that the class distribution is maintained in the subsampled data. Finally, the function returns a new dataset object with the subsampled data, along with metadata such as the column names and categorical mask.
+Generated with the following source code:
 
-Tags: Machine Learning, Statistics
+The subsample function takes in a seed, n rows max, n columns max, n classes max, and stratified as parameters. It returns a dataset. The function uses numpy's random default random generator with the given seed. It then selects the x and y values from the dataset. If the number of unique classes in y is greater than n classes max, it selects n classes max classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and updates x and y accordingly. If the number of columns in x is greater than n columns max, it uniformly samples n columns max columns. If the number of rows in x is greater than n rows max, it uses train test split with stratification to sample n rows max rows. Finally, it returns a dataset with the updated x, y, categorical mask, and columns.
 
-Features: Various numerical variables
+Features: 
 
-Keywords: subsampling, machine learning, statistics, stratification, class distribution
+Target

@@ -1,15 +1,13 @@
-Subsampling of the dataset Albert with Seed Equal to Two
+Subsampling of the dataset Albert with a random seed of two, maximum number of rows of two thousand, maximum number of columns of one hundred, and maximum number of classes of ten, with stratification set to true.
 
-This dataset is a subsampled version of the original Albert dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to create a smaller dataset.
+Generated with the following source code:
 
-The original dataset had a large number of classes, but only ten were selected for this subsampled version. These classes were chosen randomly, with probability proportional to their frequency in the original dataset.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It first uniformly samples the classes, then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples the columns. If the number of rows is greater than the maximum, it stratifies the data accordingly and selects a subset.
 
-Similarly, the number of columns was reduced to one hundred, again through uniform random sampling. This ensures that the resulting dataset has a good representation of the original features.
+The function returns a new dataset with the selected features, target variable, and categorical mask.
 
-Finally, the number of rows was limited to two thousand, with stratified sampling used to ensure that the class distribution remains consistent.
+Features: 
 
-Computer Systems and Statistics are the primary tags associated with this dataset.
+Tags: Subsampling of the dataset Albert
 
-Features: Various variables from one to seventy-eight, Class
-
-Keywords: Subsampling, Dataset, Classes, Columns, Rows, Stratified Sampling, Computer Systems, Statistics
+Keywords: Subsampling, Dataset, Stratification, Random Seed, Maximum Rows, Maximum Columns, Maximum Classes

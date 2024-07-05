@@ -1,26 +1,30 @@
-**FOREX aud sgd Day High**
+**FOREX AUD/SGD Day High**
 
-Tags: Chemistry, Finance, Forex, Forex Day, Forex High, Machine Learning
+Tags: finance, forex, forex day, forex high
 
-This dataset contains historical price data of the Forex aud sgd currency pair from Dukascopy. Each instance represents one candlestick of one day, without including weekends since Forex markets are closed during this period. The entire dataset spans a specific timeframe and does not account for weekends.
+**Source**: Dukascopy Historical Data Feed
 
-The timezone of the feature Timestamp is set to Europe Amsterdam. The class attribute is determined by the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is true when the mean High price is increasing the following day, and false when the mean High price is decreasing or remains stagnant the following day.
+**Data Description**
 
-Please note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies should only be applied to predictions based on Close attributes, which are also available.
+This dataset contains historical price data of the FOREX AUD/SGD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
+
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: Represents the time of the current data point, set to the Europe Amsterdam timezone.
-* **Bid Open**: The bid price at the beginning of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the Bid Price changed within this time interval.
-* **Ask Open**: The ask price at the beginning of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the Ask Price changed within this time interval.
-* **Class**: Indicates whether the average price will increase during the next interval.
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, aud sgd, historical data, machine learning, chemistry, finance
+Keywords: FOREX, AUD/SGD, historical data, candlestick, finance, trading

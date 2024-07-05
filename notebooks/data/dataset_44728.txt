@@ -1,23 +1,11 @@
-Subsampling of the Helena dataset with the Seed Equal to Zero 
+Subsampling of the dataset Helena with a random seed. This dataset was generated with the following source code.
 
-Tags: Subsampling of the dataset Helena 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. The function first uniformly samples classes from the original dataset, then selects the indices where one of these classes is present. It then uniformly samples columns if required, and finally stratifies the data accordingly.
 
-Generated with the following source code:
+The resulting dataset has a specified number of rows, columns, and classes. The categorical columns are converted to string for OpenML.
 
-The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification. 
+Features: Twenty-seven variables, including class.
 
-The function first uses the numpy random default generator to ensure reproducibility. It then selects the input features and output variable from the dataset. 
+Tags: Subsampling of the dataset Helena.
 
-If there are more unique classes than the maximum allowed, it uses value counts to determine the probability of each class being selected, and then randomly chooses the allowed number of classes. It then selects the indices where one of these chosen classes is present.
-
-If there are more columns than the maximum allowed, it uniformly samples the column indices without replacement.
-
-If there are more rows than the maximum allowed, it uses the train test split function from scikit learn to split the data into two subsets, with the test size equal to the maximum allowed number of rows. It does this while ensuring the subsets have the same class distribution using stratification.
-
-Finally, it returns a new dataset object with the subsampled data, along with the categorical mask and column names.
-
-Features: 
-
-class
-
-Keywords: subsampling, dataset, Helena, stratification, sampling, classes, columns, rows
+Keywords: Subsampling, dataset, stratification, random sampling, data preprocessing.

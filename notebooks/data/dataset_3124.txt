@@ -1,29 +1,14 @@
-QSAR-TID-30010 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-Tags: Machine Learning, MTLQSAR, Physical Sciences, study_3 
+This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 30010, and it has multiple rows and features including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset focuses on the Ephrin type A receptor, also known as EEK, EK, EPHA, EPH and ELK related kinase, EPH like kinase. This protein is found in Homo sapiens and belongs to the Enzyme/Kinase/Protein Kinase/TK protein kinase group/Tyrosine protein kinase Eph family classification.
 
-Features: MOLECULE_CHEMBL_ID, followed by multiple fingerprint features.
+The Ephrin type A receptor is associated with various cellular components including endosomes, plasma membranes, dendrites, and neuron projections. Its functions encompass nucleotide binding, protein kinase activity, tyrosine kinase activity, ATP binding, and growth factor binding. The receptor is involved in numerous biological processes such as protein phosphorylation, cell migration, cell adhesion, axon guidance, neuron remodeling, and regulation of cell adhesion mediated by integrin.
 
-The dataset was scraped from ChEMBL version seventeen and contains information about the Ephrin type-A receptor eight, including its preferred name, synonyms, organism, species group, protein target classification, description, relationship, accession, and gene ontology components, functions, processes, and other related information.
+This protein is referenced in multiple databases including UniProt, InterPro, Pfam, and PDBe. It is associated with several Gene Ontology terms related to its cellular components, molecular functions, and biological processes. The Ephrin type A receptor plays crucial roles in nervous system development, MAPK cascade regulation, and ephrin receptor signaling pathways.
 
-Scraped Data:
+The dataset provides valuable information for quantitative structure activity relationship studies, potentially aiding in drug discovery and development targeting the Ephrin type A receptor.
 
-ID: CHEMBL four one three four
-Type: Single Protein
-Preferred Name: Ephrin type-A receptor eight
-Synonyms: EEK, EK three, EPHA eight, EPH- and ELK-related kinase, EPH-like kinase three, and others.
-Organism: Homo sapiens
-Species Group: No
-Protein Target Classification: One point Enzyme/Kinase/Protein Kinase/TK protein kinase group/Tyrosine protein kinase Eph family
-
-Description:
-Relationship:
-Accession: P two nine three twenty-two
-
-Gene Ontology Components: endosome, plasma membrane, membrane, dendrite, early endosome membrane, cell projection, neuron projection, and others.
-Gene Ontology Functions: nucleotide binding, protein kinase activity, protein tyrosine kinase activity, transmembrane receptor protein tyrosine kinase activity, ephrin receptor activity, GPI-linked ephrin receptor activity, transmembrane-ephrin receptor activity, ATP binding, kinase activity, transferase activity, growth factor binding, and others.
-Gene Ontology Processes: protein phosphorylation, substrate-dependent cell migration, cell adhesion, transmembrane receptor protein tyrosine kinase signaling pathway, nervous system development, axon guidance, phosphorylation, neuron remodeling, regulation of cell adhesion, neuron projection development, regulation of cell adhesion mediated by integrin, positive regulation of MAPK cascade, positive regulation of phosphatidylinositol three-kinase activity, protein autophosphorylation, ephrin receptor signaling pathway, cellular response to follicle-stimulating hormone stimulus, and others.
-
-Keywords: QSAR, machine learning, physical sciences, drug target, Ephrin type-A receptor, gene ontology, protein kinase activity.
+Keywords: QSAR, Ephrin receptor, protein kinase, cell signaling, drug target, molecular fingerprints, ChEMBL

@@ -1,19 +1,15 @@
-Machine Learning, Mathematics
+Name: Micro Mass Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Subsampling of the dataset Micro Mass with seed equal to two arguments number of rows maximum equals two thousand arguments number of columns maximum equals one hundred arguments number of classes maximum equals ten arguments no stratify equals true.
+Tags: Subsampling of the dataset Micro Mass with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses numpy's random default random generator to generate random indices for sampling.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-The function first samples the classes uniformly. If there are more classes than the maximum allowed, it selects the required number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and subsets the data accordingly. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it stratifies the data according to the target variable and selects a specified number of rows to keep.
 
-Next, the function samples the columns uniformly if required. If there are more columns than the maximum allowed, it selects the required number of columns randomly.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-If the resulting dataset has more rows than the maximum allowed, it stratifies the dataset accordingly using train test split from scikit learn.
+Features: (omitted due to unreadability)
 
-Finally, the function converts categorical columns to strings for OpenML compatibility and returns the resulting dataset.
-
-Features: 
-
-Keywords: Subsampling, Machine Learning, Dataset, Stratification, Random Sampling
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row selection

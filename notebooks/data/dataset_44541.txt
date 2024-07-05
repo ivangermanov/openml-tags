@@ -1,15 +1,9 @@
-Subsampling of the dataset Albert with seed equals three, argument number rows equals two thousand, argument number columns equals one hundred, argument number classes equals ten, and argument no stratify equals true.
+Subsampling of the dataset Albert with a random seed, resulting in a subset of the original data. This subsampled dataset has been generated with the following parameters: the maximum number of rows has been set, the maximum number of columns has been limited, and the maximum number of classes has been restricted. Additionally, the stratification of the data has been taken into account during the subsampling process.
 
-Generated with the following source code:
+The original dataset has been uniformly sampled to select a subset of classes, and then the indices where one of these classes is present have been selected. The columns have also been uniformly sampled if required, and the resulting dataset has been stratified accordingly.
 
-The function subsample takes in parameters including seed, maximum number rows, maximum number columns, maximum number classes, and whether to use stratification or not. It returns a dataset.
+The dataset features a selection of variables, including variables one through seventy eight, and a class variable.
 
-Within the function, it first sets up a random number generator using the given seed. Then, it gets the unique classes from the target variable y. If there are more classes than the maximum allowed, it selects a subset of classes based on their frequency distribution. It then filters the data to only include instances belonging to the selected classes.
+Tags: Subsampling of the dataset Albert
 
-Next, if the number of columns exceeds the maximum allowed, it randomly selects a subset of columns. Otherwise, it uses all columns. If the number of rows exceeds the maximum allowed, it performs stratified sampling to select a subset of instances. Finally, it returns a new dataset with the sampled data and corresponding metadata.
-
-Features include various variables from one to seventy eight, as well as the class label.
-
-Tags: Subsampling of the dataset Albert.
-
-Keywords: subsampling, dataset, stratification, sampling, machine learning.
+Keywords: Subsampling, Dataset, Stratification, Classes, Columns, Rows

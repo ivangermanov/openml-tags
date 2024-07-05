@@ -1,38 +1,19 @@
-This is a PROMISE Software Engineering Repository data set made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
+The COCOMO numeric dataset is part of the PROMISE Software Engineering Repository, made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. Users publishing material based on PROMISE datasets should follow the acknowledgment guidelines posted on the PROMISE repository web page.
 
-Title/Topic: COCOMONASA/Software Cost Estimation
+This dataset focuses on software cost estimation using the COCOMO model. It contains data from NASA projects from different centers during the 1980s and 1990s. The COCOMO model measures effort in calendar months of 152 hours, including development and management hours. It assumes that effort grows more than linearly with software size, using the formula: months = a * KSLOC^b * c, where "a" and "b" are domain-specific parameters, "KSLOC" is estimated directly or computed from function point analysis, and "c" is the product of over a dozen "effort multipliers."
 
-Sources:
+The effort multipliers are divided into categories that increase or decrease effort. These include factors such as analyst capability, programmer capability, application experience, modern programming practices, use of software tools, virtual machine experience, language experience, schedule constraints, memory constraints, database size, time constraints, turnaround time, machine volatility, process complexity, and required software reliability.
 
-Creators: Sixty NASA projects from different centers collected by JPL, NASA.
-Donor: 
-Date: 
+The dataset includes numeric values for these effort multipliers, ranging from very low to extra high. The overall effect of each multiplier is shown, demonstrating how changes in factors like analyst experience or required reliability can significantly impact effort estimates.
 
-Past Usage:
-Validation Methods for Calibrating Software Effort Models. Given background knowledge on sixty prior projects, a new cost model can be tuned to local data using as little as twenty new projects. A very simple calibration method can achieve good prediction rates after twenty projects. Two cost models are compared; one based on just lines of code and one using over a dozen effort multipliers. 
+The COCOMO II model expanded on the original, dividing the exponent "b" into a constant plus the sum of five "scale factors" addressing issues such as prior experience with similar systems. It also modified some effort multipliers and added new ones for required level of reuse, multiple-site development, and schedule pressure.
 
-Additional Usage:
-Feature Subset Selection Can Improve Software Cost Estimation Accuracy. To the best of our knowledge, this is the first report of applying feature subset selection to software effort data. Feature subset selection can dramatically improve cost estimation. 
+The dataset contains 60 instances with 17 attributes, including 15 discrete attributes ranging from Very Low to Extra High, one lines of code measure, and one goal field representing actual effort in person months. There are no missing attributes.
 
-Relevant Information:
-The COCOMO software cost model measures effort in calendar months of one hundred fifty-two hours and includes development and management hours. COCOMO assumes that the effort grows more than linearly on software size. The effort multipliers are classified into three groups: those that are positively correlated to more effort, those that are negatively correlated to more effort, and a third group containing just schedule information. 
+The projects in the dataset are classified into different categories based on project type, task category, and NASA center. These classifications provide additional context for analyzing the data and understanding variations in effort across different types of projects and organizational units.
 
-In COCOMO One, the exponent on KSLOC was a single value ranging from one point zero five to one point two. In COCOMO Two, the exponent "b" was divided into a constant, plus the sum of five scale factors which modeled issues such as have we built this kind of system before. The COCOMO Two effort multipliers are similar but COCOMO Two dropped one of the effort multiplier parameters, renamed some others, and added a few more. 
+Evaluation metrics for effort prediction models include Mean Magnitude of Relative Error (MMRE) and PRED(N), which measure the accuracy of estimates compared to actual values. These metrics help assess the performance of different cost estimation approaches and calibration methods.
 
-The numeric values of the effort multipliers are given in a table. The last column of the table shows the maximum effect of a single effort multiplier. For example, increasing analyst experience from very low to very high will most decrease effort while increasing required reliability from very low to very high will most increase effort. 
+The COCOMO model and this dataset have been used in various studies to improve software cost estimation accuracy, including research on feature subset selection and model calibration techniques.
 
-There is much more to COCOMO than the above description. The COCOMO Two text is over five hundred pages long and offers all the details needed to implement data capture and analysis of COCOMO in an industrial context. Most of the validation work on COCOMO has focused on the effort model. 
-
-The value of an effort predictor can be reported many ways including Mean Magnitude of Relative Error and Prediction. Mean Magnitude of Relative Error and Prediction are computed from the relative error, or the relative size of the difference between the actual and estimated value. 
-
-Further Classification of the Projects:
-The projects can be classified into different project categories, task categories, and centers. The criteria for classification are unknown and they are disjoint. 
-
-Number of Instances: Sixty
-Number of Attributes: Seventeen 
-Attribute Information:
-Missing Attributes: None
-Class Distribution: 
-The class value is continuous. After sorting all the instances on the actual effort, the following distribution was found.
-
-Keywords: COCOMONASA, Software Cost Estimation, PROMISE, NASA, COCOMO, Effort Multipliers, Lines of Code, Predictive Models.
+Keywords: COCOMO, software cost estimation, effort multipliers, NASA projects, MMRE, PRED, project classification, effort prediction, function point analysis

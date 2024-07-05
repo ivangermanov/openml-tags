@@ -1,17 +1,21 @@
-Subsampling of the dataset Christine with Seed equals Zero arguments Number Rows equals Two Thousand arguments Number Columns equals One Hundred arguments Number Classes equals Ten arguments No Stratify equals False.
+Subsampling of the dataset Christine with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals True. 
 
-Generated with the following source code:
+Generated with the following source code: 
 
-The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It returns a new dataset.
+The function subsample takes in self, seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified as parameters. It returns a dataset. 
 
-The function first gets the unique classes from the target variable and selects a specified number of them randomly based on their frequency. Then, it gets the indices where these classes are present and subsets the data using these indices.
+First, it sets up a random number generator with the given seed. Then, it gets the features and target from the dataset. 
 
-Next, the function uniformly samples the columns if required. It does this by randomly selecting a specified number of column indices and then getting the corresponding columns.
+It uniformly samples classes from the target. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes based on their frequency in the target. 
 
-After that, the function checks if the length of the data exceeds the maximum number of rows. If so, it uses stratified sampling to get a subset of the data with the specified number of rows.
+It then selects the indices where one of these classes is present and updates the features and target accordingly. 
 
-Finally, the function converts any categorical columns to strings and returns the new dataset along with its metadata.
+Next, it uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns randomly. 
 
-Features: 
+After that, it checks if the number of rows is greater than the maximum number of rows. If so, it stratifies the data accordingly and splits it into a subset of the maximum number of rows. 
 
-Keywords: subsampling, dataset, stratification, sampling, classification
+Finally, it converts categorical columns to string for OpenML, creates a new dataset with the updated features, target, categorical mask, and columns, and returns it.
+
+Features: (skipped due to unreadability)
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, random sampling.

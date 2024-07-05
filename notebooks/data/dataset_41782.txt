@@ -1,26 +1,17 @@
-**FOREX US Dollar Japanese Yen Hourly Close**
+FOREX USD/JPY Hourly Close Data
 
-Tags: Computer Systems, Finance, Forex, Forex Close, Forex Hour
+Tags: finance, forex, forex close, forex hour
 
-This dataset contains the historical price data of the US Dollar Japanese Yen currency pair from Dukascopy. Each instance represents one hourly candlestick, with the entire dataset spanning from January first to December thirteenth. Since the Forex market is not traded on weekends, these days are excluded from the dataset. The timestamp feature is set to the Europe Amsterdam time zone.
+Source: Dukascopy Historical Data Feed
 
-The dataset provides a comprehensive view of the US Dollar Japanese Yen exchange rate, with each row representing an hourly interval. The features included are the bid and ask prices at the open, high, low, and close of each interval, as well as the volume of trades for both bid and ask prices.
+Data Description
 
-The class attribute is determined by the direction of the mean close price of the following hour, relative to the mean close price of the current hour. In other words, if the mean close price is expected to increase in the next hour, the class attribute is true, and if it is expected to decrease or remain the same, the class attribute is false.
+This dataset contains the historical price data of the FOREX USD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a range of dates, excluding weekends, since the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Attributes**
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-* Timestamp: The time of the current data point in the Europe Amsterdam time zone.
-* Bid Open: The bid price at the start of the hourly interval.
-* Bid High: The highest bid price during the hourly interval.
-* Bid Low: The lowest bid price during the hourly interval.
-* Bid Close: The bid price at the end of the hourly interval.
-* Bid Volume: The number of times the bid price changed within the hourly interval.
-* Ask Open: The ask price at the start of the hourly interval.
-* Ask High: The highest ask price during the hourly interval.
-* Ask Low: The lowest ask price during the hourly interval.
-* Ask Close: The ask price at the end of the hourly interval.
-* Ask Volume: The number of times the ask price changed within the hourly interval.
-* Class: Whether the average price will increase during the next hourly interval.
+Attributes
 
-Keywords: Forex, US Dollar, Japanese Yen, Currency Pair, Historical Data, Candlestick, Time Series Analysis
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
+
+Keywords: FOREX, USD/JPY, hourly close, finance, market data

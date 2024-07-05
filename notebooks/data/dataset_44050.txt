@@ -1,15 +1,11 @@
-NYC Taxi Green Dec 2016
+The NYC Taxi Green December 2016 dataset is used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on categorical and numerical features" benchmark. 
 
-Tags: Computer Systems, Mathematics
+The original dataset includes trip record data provided by the New York City Taxi and Limousine Commission. The dataset includes trips of the green line in December. The data was downloaded from the commission's website. For a description of all variables in the dataset, check out the commission's homepage. 
 
-This dataset is part of the tabular data benchmark, specifically designed for regression on categorical and numerical features. It has been transformed in the same way as the original dataset.
+The variable "tip amount" was chosen as the target variable. The variable "total amount" is ignored by default, otherwise the target could be predicted deterministically. The date variables "pickup datetime" and "dropoff datetime" could be used to compute additional time features. 
 
-The NYC Taxi Green Dec 2016 dataset contains Trip Record Data provided by the New York City Taxi and Limousine Commission. It includes TLC trips of the green line for the month of December. The data was downloaded from the commission's website.
+In this version, we chose only trips with "payment type" equal to credit card, as tips are not included for most other payment types. We also removed the variables "trip distance" and "fare amount" to increase the importance of the categorical features "pickup location ID" and "dropoff location ID". 
 
-For a detailed description of all variables in the dataset, please refer to the commission's homepage. The target variable chosen for this dataset is Tip Amount. The Total Amount variable has been ignored to prevent deterministic prediction. Date variables, such as Pickup Datetime and Dropoff Datetime, have also been ignored, but they could be used to compute additional time features.
+Features include vendor ID, store and forward flag, rate code ID, passenger count, extra, MTA tax, tolls amount, improvement surcharge, trip type, pickup datetime day, pickup datetime hour, pickup datetime minute, dropoff datetime day, dropoff datetime hour, dropoff datetime minute, and tip amount.
 
-In this version, only trips with Credit Card as the Payment Type have been selected, as tips are not included for most other payment types. Additionally, the variables Trip Distance and Fare Amount have been removed to increase the importance of the categorical features Pickup Location ID and Dropoff Location ID.
-
-Features include Vendor Identification, Store and Forward Flag, Rate Code Identification, Passenger Count, Extra Charges, MTA Tax, Tolls Amount, Improvement Surcharge, Trip Type, Pickup Datetime Day, Pickup Datetime Hour, Pickup Datetime Minute, Dropoff Datetime Day, Dropoff Datetime Hour, and Dropoff Datetime Minute.
-
-Keywords: NYC Taxi, Regression, Categorical Features, Numerical Features, Tabular Data Benchmark, Tip Prediction, Payment Types, Location IDs
+Keywords: NYC Taxi, Green Line, December, Regression, Categorical Features, Numerical Features, Tip Amount, Payment Type.

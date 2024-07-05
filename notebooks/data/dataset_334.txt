@@ -1,45 +1,38 @@
-Monks Problems Two 
+The Monk's Problems: Problem Two
 
-Once upon a time, in July nineteen ninety-one, the monks of Corsendonk Priory were faced with a school held in their priory, namely the Second European Summer School on Machine Learning. After listening for more than one week to a wide variety of learning algorithms, they felt rather confused: which algorithm would be optimal? And which one to avoid? As a consequence of this dilemma, they created a simple task on which all learning algorithms ought to be compared: the three Monks Problems.
+Dataset Name: monks problems two
+Tags: artificial, mythbusting, OpenML, study, uci
 
-The target concept associated with the second Monks problem is the binary outcome of the logical formula: exactly two of the attributes are equal to one.
+Once upon a time, in July, the monks of Corsendonk Priory were faced with a school held in their priory, namely the European Summer School on Machine Learning. After listening for more than one week to a wide variety of learning algorithms, they felt rather confused: Which algorithm would be optimal? And which one to avoid? As a consequence of this dilemma, they created a simple task on which all learning algorithms ought to be compared: the three Monk's problems.
 
-In this dataset, the original train and test sets were merged to allow other sampling procedures. However, the original train-test splits can be found as one of the Open ML tasks.
+The target concept associated with the second Monk's problem is the binary outcome of the logical formula: MONK TWO: EXACTLY TWO of {attribute one equals one, attribute two equals one, attribute three equals one, attribute four equals one, attribute five equals one, attribute six equals one}
+
+In this dataset, the original train and test sets were merged to allow other sampling procedures. However, the original train test splits can be found as one of the OpenML tasks.
 
 Attribute information:
+- attribute one: one, two, three
+- attribute two: one, two, three
+- attribute three: one, two
+- attribute four: one, two, three
+- attribute five: one, two, three, four
+- attribute six: one, two
 
-* attribute one: one, two, three
-* attribute two: one, two, three
-* attribute three: one, two
-* attribute four: one, two, three
-* attribute five: one, two, three, four
-* attribute six: one, two
+The Monk's problems were the basis of a first international comparison of learning algorithms. The result of this comparison is summarized in "The Monk's Problems - A Performance Comparison of Different Learning Algorithms" which has been published as a Technical Report at Carnegie Mellon University.
 
-Relevant Papers 
+One significant characteristic of this comparison is that it was performed by a collection of researchers, each of whom was an advocate of the technique they tested (often they were the creators of the various methods). In this sense, the results are less biased than in comparisons performed by a single person advocating a specific learning method, and more accurately reflect the generalization behavior of the learning techniques as applied by knowledgeable users.
 
-The Monks Problems - A Performance Comparison of Different Learning Algorithms.
+There are three Monk's problems. The domains for all Monk's problems are the same. One of the Monk's problems has noise added. For each problem, the domain has been partitioned into a train and test set.
 
-Features: class, attribute one, attribute two, attribute three, attribute four, attribute five, attribute six
+This dataset does not have missing values.
 
-Dataset Information 
+Additional Variable Information:
+- class: zero, one
+- attribute one: one, two, three
+- attribute two: one, two, three
+- attribute three: one, two
+- attribute four: one, two, three
+- attribute five: one, two, three, four
+- attribute six: one, two
+- Id: (A unique symbol for each instance)
 
-Additional Information 
-
-The Monks problems were the basis of a first international comparison of learning algorithms. The result of this comparison is summarized in a technical report. One significant characteristic of this comparison is that it was performed by a collection of researchers, each of whom was an advocate of the technique they tested. In this sense, the results are less biased than in comparisons performed by a single person advocating a specific learning method, and more accurately reflect the generalization behavior of the learning techniques as applied by knowledgeable users.
-
-There are three Monks problems. The domains for all Monks problems are the same. One of the Monks problems has noise added. For each problem, the domain has been partitioned into a train and test set.
-
-Has Missing Values? No
-
-Additional Variable Information 
-
-One. Class: zero, one 
-Two. Attribute one: one, two, three 
-Three. Attribute two: one, two, three 
-Four. Attribute three: one, two 
-Five. Attribute four: one, two, three 
-Six. Attribute five: one, two, three, four 
-Seven. Attribute six: one, two 
-Eight. Identification: a unique symbol for each instance
-
-Keywords: machine learning, artificial intelligence, Monks problems, performance comparison, learning algorithms, classification, datasets.
+Keywords: machine learning, classification, logical formula, attribute comparison, algorithm evaluation, international comparison, generalization behavior, train test split

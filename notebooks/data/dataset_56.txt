@@ -1,15 +1,54 @@
-**Vote**
+Name: Vote
+Tags: mythbusting, study, uci
 
-**Tags:** Government, Mythbusting, Politics, Study
+Source: Unknown
 
-The 1984 United States Congressional Voting Records Database includes votes for each of the US House of Representatives congressmen on the sixteen key votes identified by the Congressional Quarterly Almanac. These votes were categorized into nine different types, including voted for, paired for, and announced for, which were simplified to "yes", voted against, paired against, and announced against, which were simplified to "no", voted present, voted present to avoid conflict of interest, and did not vote or otherwise make a position known, which were simplified to an unknown disposition.
+Please cite:
+Title: United States Congressional Voting Records Database
+Source Information:
+Source: Congressional Quarterly Almanac, Congress, nd session, Volume XL: Congressional Quarterly Inc. Washington, D.C.
+Date: April
 
-This dataset has four hundred thirty-five instances, consisting of two hundred sixty-seven Democrats and one hundred sixty-eight Republicans. There are seventeen attributes, including the class name, which indicates whether the congressman is a Democrat or Republican. The other sixteen attributes represent the sixteen key votes, each having a value of either "yes" or "no".
+Past Usage - Publications:
+Results: about accuracy appears to be STAGGER's asymptote
+Predicted attribute: party affiliation (classes)
 
-The dataset has missing values, denoted by "?", which do not indicate that the value of the attribute is unknown, but rather that the value is not "yes" or "no". There are varying numbers of missing values for each attribute, ranging from zero to twenty-eight.
+Relevant Information:
+This data set includes votes for each of the U.S. House of Representatives Congressmen on the key votes identified by the CQA. The CQA lists nine different types of votes: voted for, paired for, and announced for (these three simplified to yea), voted against, paired against, and announced against (these three simplified to nay), voted present, voted present to avoid conflict of interest, and did not vote or otherwise make a position known (these three simplified to an unknown disposition).
 
-The class distribution is forty-five point two percent Democrats and fifty-four point eight percent Republicans. Each attribute has been analyzed for its predictiveness and predictability, providing insight into how well each attribute predicts the class and vice versa.
+Number of Instances: (democrats, republicans)
+Number of Attributes: + class name = (all Boolean valued)
 
-The dataset provides valuable information for studying congressional voting patterns and can be used to develop models that predict a congressman's party affiliation based on their voting record.
+Attribute Information:
+Class Name: (democrat, republican)
+handicapped infants: (y,n)
+water project cost sharing: (y,n)
+adoption of the budget resolution: (y,n)
+physician fee freeze: (y,n)
+el salvador aid: (y,n)
+religious groups in schools: (y,n)
+anti satellite test ban: (y,n)
+aid to nicaraguan contras: (y,n)
+mx missile: (y,n)
+immigration: (y,n)
+synfuels corporation cutback: (y,n)
+education spending: (y,n)
+superfund right to sue: (y,n)
+crime: (y,n)
+duty free exports: (y,n)
+export administration act south africa: (y,n)
 
-**Keywords:** Congressional Voting Records, Party Affiliation, Political Analysis, Vote Prediction
+Missing Attribute Values:
+Denoted by "?"
+NOTE: It is important to recognize that "?" in this database does not mean that the value of the attribute is unknown. It means simply, that the value is not "yea" or "nay" (see "Relevant Information" section above).
+
+Class Distribution: (classes)
+percent are democrat
+percent are republican
+
+Class predictiveness and predictability: Pr(C|A=V) and Pr(A=V|C)
+
+Features:
+handicapped infants, water project cost sharing, adoption of the budget resolution, physician fee freeze, el salvador aid, religious groups in schools, anti satellite test ban, aid to nicaraguan contras, mx missile, immigration, synfuels corporation cutback, education spending, superfund right to sue, crime, duty free exports, export administration act south africa, Class
+
+Keywords: Congressional voting records, political party affiliation, legislative issues, missing data, class distribution

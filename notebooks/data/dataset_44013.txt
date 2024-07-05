@@ -1,15 +1,9 @@
-**Houses**
+Houses Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark.
 
-Tags: Machine Learning, Statistics
+Original description: This dataset was collected from all the block groups in California from the 1990 Census. A block group, on average, includes a geographically compact area with a population of approximately one thousand four hundred twenty-five individuals. The geographical area included varies inversely with the population density. We computed distances among the centroids of each block group as measured in latitude and longitude. We excluded all the block groups reporting zero entries for the independent and dependent variables. The final data contained a large number of observations on nine variables. The dependent variable is the natural logarithm of the median house value.
 
-Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark.
+The analysis revealed that median income has a significant positive effect on the median house value. The relationship between median income and median house value is not linear, as the square and cube of median income also have a significant impact. The natural logarithm of the median age of the houses also has a positive effect on the median house value. Furthermore, the natural logarithm of the total rooms per population and the natural logarithm of the bedrooms per population have a significant negative and positive effect, respectively, on the median house value. Additionally, the natural logarithm of the population per household and the natural logarithm of the households have a significant negative and positive effect, respectively, on the median house value.
 
-Original Description:
+Features: median income, housing median age, total rooms, total bedrooms, population, households, latitude, longitude, median house value
 
-This dataset was collected from all the block groups in California from the nineteen ninety census. A block group, on average, includes individuals living in a geographically compact area. The geographical area included varies inversely with the population density. Distances among the centroids of each block group were computed as measured in latitude and longitude. All block groups reporting zero entries for the independent and dependent variables were excluded. The final data contained observations on nine variables. The dependent variable is the natural logarithm of the median house value.
-
-The variables were found to be significant in the following ways: Median Income has a positive effect; Median Income squared has a negative effect; Median Income cubed has a slight negative effect; the natural logarithm of Median Age has a positive effect; the natural logarithm of Total Rooms per Population has a strong negative effect; the natural logarithm of Bedrooms per Population has a strong positive effect; the natural logarithm of Population per Households has a moderate negative effect; and the natural logarithm of Households has a slight positive effect.
-
-Features: Median Income, Housing Median Age, Total Rooms, Total Bedrooms, Population, Households, Latitude, Longitude, Median House Value
-
-Keywords: Houses, Regression, Numerical Features, Census, Block Groups, Population Density, Geographical Area, Median House Value.
+Keywords: California census data, house value prediction, demographic analysis, geographic features, regression model.

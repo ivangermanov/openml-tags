@@ -1,0 +1,13 @@
+CIF 2016 Time Series Forecasting Competition
+
+The competition data format is a text file where each row contains a single time series data record. The items in the row are delimited with a semicolon, and the first item is an identifier of the time series. The second item determines the forecasting horizon, which is the number of values to be forecasted. The third item determines the frequency of the time series, which is monthly for this year's competition. The rest of the row contains numeric data of the time series, and the number of values in each row may differ because each time series is of different length.
+
+An example of the competition data format is as follows: ts1;4;yearly;26.5;38.2;5.3 ts2;12;monthly;1;2;4;5;5;6;8;9;10 ... ts72;12;daily;1;2;4;5;5;6;8;9;10.
+
+The data was preprocessed in the following manner: the first three columns were renamed to id series, horizon, and period, and the other columns were renamed to reflect the actual time step of the time series. The data was then melted, obtaining columns time step and value. Any nan values were dropped, which corresponded to time series that were shorter than the time series with maximum length. There were no nan values in the middle of a time series. The id series column was defined as a category, and the time step column was cast to an integer.
+
+The same preprocessing steps were applied to the test set. Finally, the training and test sets were concatenated.
+
+The resulting dataset has the following features: id series, time step, and value.
+
+Keywords: time series forecasting, monthly data, competition, preprocessing, data format.

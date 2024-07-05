@@ -1,13 +1,15 @@
-Machine Learning, Transportation 
+Name: Eucalyptus Seed One
 
-Subsampling of the dataset Eucalyptus with a specified seed value generated a new dataset. This new dataset was created using a function that takes several parameters including the maximum number of rows, columns, and classes, as well as a boolean indicating whether to use stratification.
+Tags: Subsampling of the dataset Eucalyptus with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-The function first uniformly samples the classes present in the dataset. If there are more classes than the specified maximum, it selects the desired number of classes based on their frequency in the dataset. It then selects the rows where any of these chosen classes are present.
+Generated with the following source code:
 
-Next, the function uniformly samples the columns of the dataset if necessary. If the number of columns exceeds the specified maximum, it randomly chooses the desired number of columns.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments. It uses a random number generator to uniformly sample classes from the unique values in the target variable y. If the number of unique classes exceeds nclasses max, it selects the top nclasses max classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Finally, if the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to select the desired number of rows. The resulting dataset is then returned, along with information about which columns contain categorical data.
+Next, it uniformly samples columns if required. If the number of columns exceeds ncols max, it randomly selects ncols max columns and subsets the data. It then checks if the number of rows exceeds nrows max. If so, it uses stratified sampling to select a subset of nrows max rows.
 
-Features of this dataset include Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Specific Property, Plantation Management Corporation Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, and Utility.
+The function returns a dataset with the subsampled data, including the categorical mask and column names.
 
-Keywords: Machine Learning, Transportation, Subsampling, Stratification, Eucalyptus, Dataset.
+Features: Abbreviation, Rep, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, PMC Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, Utility.
+
+Keywords: Eucalyptus, subsampling, stratified sampling, dataset, random sampling.

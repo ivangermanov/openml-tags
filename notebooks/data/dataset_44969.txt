@@ -1,13 +1,37 @@
-Naval Propulsion Plant
+**Data Description**
 
-Tags: Agriculture, Machine Learning
+The dataset has been generated from a sophisticated simulator of a Gas Turbine, mounted on a Frigate characterized by a Combined Diesel Electric And Gas propulsion plant type. The propulsion system behavior has been described with three parameters: ship speed, which is a linear function of the lever position; compressor degradation coefficient; and turbine degradation coefficient. Each possible degradation state can be described by a combination of these three parameters. A series of measures, which indirectly represent the state of the system subject to performance decay, has been acquired and stored in the dataset over the parameter's space. The goal is to estimate the gas turbine compressor decay state coefficient from the given measurements.
 
-The Naval Propulsion Plant dataset contains simulated data from a Gas Turbine mounted on a Frigate with a Combined Diesel Electric And Gas propulsion plant type. The behavior of the propulsion system is described using three parameters: ship speed, compressor degradation coefficient, and turbine degradation coefficient. These parameters combine to form a unique triple describing each possible degradation state.
+**Attribute Description**
 
-Sixteen features, which indirectly represent the state of the system subject to performance decay, have been measured and stored in the dataset across the parameter space. These features include lever position, ship speed, gas turbine shaft torque, gas turbine rate of revolutions, gas generator rate of revolutions, starboard propeller torque, port propeller torque, high-pressure turbine exit temperature, gas turbine compressor outlet air temperature, high-pressure turbine exit pressure, gas turbine compressor outlet air pressure, gas turbine exhaust gas pressure, turbine injection control, and fuel flow.
+The dataset consists of sixteen features, which are:
 
-The goal is to estimate the gas turbine compressor decay state coefficient from these measurements. Two columns, gas turbine compressor inlet air pressure and gas turbine compressor inlet air temperature, were removed from the original dataset due to their constant values.
+* Lever position
+* Ship speed
+* Gas turbine shaft torque
+* Gas turbine rate of revolutions
+* Gas generator rate of revolutions
+* Starboard propeller torque
+* Port propeller torque
+* High pressure turbine exit temperature
+* Gas turbine compressor outlet air temperature
+* High pressure turbine exit pressure
+* Gas turbine compressor outlet air pressure
+* Gas turbine exhaust gas pressure
+* Turbine injection control
+* Fuel flow
+* Gas turbine compressor decay state coefficient (target feature)
+* Gas turbine turbine decay state coefficient (alternate target feature)
 
-The dataset was generated using a sophisticated simulator of a naval vessel, which has been fine-tuned over the years based on several similar real propulsion plants. As a result, the available data agree with a possible real vessel. The simulator takes into account the performance decay over time of the gas turbine components, including the gas turbine compressor and turbines. The range of decay of the compressor and turbine has been sampled with a uniform grid to provide a good granularity of representation.
+**Dataset Information**
 
-Keywords: naval propulsion plant, gas turbine, compressor degradation, turbine degradation, machine learning, agriculture.
+The experiments have been carried out by means of a numerical simulator of a naval vessel, characterized by a Gas Turbine propulsion plant. The different blocks forming the complete simulator, including the propeller, hull, gas turbine, gear box, and controller, have been developed and fine-tuned over the years on several similar real propulsion plants. The available data are in agreement with a possible real vessel. The propulsion system behavior has been described with three parameters: ship speed, compressor degradation coefficient, and turbine degradation coefficient. Each possible degradation state can be described by a combination of these three parameters. The range of decay of compressor and turbine has been sampled with a uniform grid of high precision, so as to have a good granularity of representation. In particular, the compressor decay state has been investigated in the domain of high to low degradation, and the turbine coefficient in the domain of high to moderate degradation. Ship speed has been investigated sampling the range of feasible speeds from low to high speeds with a granularity of representation equal to three knots. A series of measures, which indirectly represent the state of the system subject to performance decay, has been acquired and stored in the dataset over the parameter's space.
+
+**Keywords**
+
+* Gas Turbine
+* Propulsion Plant
+* Compressor Decay
+* Turbine Decay
+* Ship Speed
+* Naval Vessel

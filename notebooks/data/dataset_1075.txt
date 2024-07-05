@@ -1,31 +1,44 @@
-This is a PROMISE Software Engineering Repository data set made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE data sets, then please follow the acknowledgment guidelines posted on the PROMISE repository webpage.
+Name: Datatrieve
+Tags: mythbusting_1, study_1, study_123, study_15, study_20, study_41, study_52, study_7, study_88
 
-The Transition of the DataTrievE Product from Version Six Point Zero to Version Six Point One
+Source: Unknown - Date unknown
+
+Please cite: This is a PROMISE Software Engineering Repository data set made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE data sets, please follow the acknowledgment guidelines posted on the PROMISE repository web page.
+
+Title/Topic: The transition of the DATATRIEVE product from version 6.0 to version 6.1
 
 Sources:
-The DataTrievE project carried out at Digital Engineering Italy.
+- Creators: DATATRIEVE project carried out at Digital Engineering Italy
+- Donor: [Redacted]
+- Date: January 15, 2005
 
-Past Usage:
-A hybrid approach to analyze empirical software engineering data and its application to predict module fault-proneness in maintenance.
+Past usage: A hybrid approach to analyze empirical software engineering data and its application to predict module fault proneness in maintenance
+Source: Journal of Systems and Software archive
+Volume: 53, Issue 3 (September 2000)
+Pages: 225 - 237
+Year of Publication: 2000
+ISSN: 0164-1212
 
-Relevant Information:
-The DataTrievE product underwent both adaptive maintenance (transferred from platform Open VMS/VAX to platform Open VMS/Alpha) and corrective maintenance (fixing failures reported from customers) at the Gallarate site of Digital Engineering in Italy. The product was originally developed in the Bliss language, an expression language that is block-structured, with exception handling facilities, coroutines, and a macro system. Later, some parts were added or rewritten in the C language. Therefore, the overall structure of DataTrievE consists of C functions and Bliss subroutines. The empirical study reports only the Bliss part, which is the larger one. In this context, we refer to a Bliss module as a set of declarations and subroutines usually belonging to one file. Over one hundred Bliss modules were studied.
+Relevant information: The DATATRIEVE product was undergoing both adaptive and corrective maintenance at the Gallarate (Italy) site of Digital Engineering. It was being transferred from platform OpenVMS/VAX to platform OpenVMS/Alpha, and failures reported from customers were being fixed. The product was originally developed in the BLISS language, an expression language that is block structured, with exception handling facilities, coroutines, and a macro system. It was one of the first non assembly languages for operating system implementation. Some parts were later added or rewritten in the C language. The overall structure of DATATRIEVE is composed of C functions and BLISS subroutines. The empirical study of this data set reports only the BLISS part, which is by far the larger one. In this context, "module" refers to a BLISS module, i.e., a set of declarations and subroutines usually belonging to one file. More than 100 BLISS modules have been studied. It was important to the DATATRIEVE team to better understand how the characteristics of the modules and transition process were correlated with code quality. The objective of the data analysis was to study whether it was possible to classify modules as non faulty or faulty, based on a set of measures collected on the project.
 
-It was essential for the DataTrievE team to comprehend how the characteristics of the modules and transition process correlated with code quality. The objective of the data analysis was to investigate whether it was possible to classify modules as non-faulty or faulty based on a set of measures collected during the project.
+Number of records: 130
+Number of attributes: 9 (8 condition attributes, 1 decision attribute)
 
 Attribute Information:
+- Lines of code of module in version 6.0
+- Lines of code of module in version 6.1
+- Number of lines of code added to module in version 6.1
+- Number of lines of code deleted from module in version 6.0
+- Number of different blocks module between versions 6.0 and 6.1
+- Rate of modification of module
+- Subjective variable expressing project team's knowledge on module (low or high)
+- Number of lines of code of module in version 6.0 reused in version 6.1
+- Faulty status (0 for modules with no faults, 1 for other modules)
 
-* Lines of Code Six Point Zero: the number of lines of code of module m in version six point zero.
-* Lines of Code Six Point One: the number of lines of code of module m in version six point one.
-* Added Lines of Code: the number of lines of code added to module m in version six point one that were not present in module m in version six point zero.
-* Deleted Lines of Code: the number of lines of code deleted from module m in version six point zero that were no longer present in module m in version six point one.
-* Different Blocks: the number of different blocks in module m between versions six point zero and six point one.
-* Modification Rate: the rate of modification of module m, calculated as (added lines of code plus deleted lines of code) divided by (lines of code six point zero plus added lines of code).
-* Module Knowledge: a subjective variable expressing the project team's knowledge on module m (low or high).
-* Reused Lines of Code: the number of lines of code of module m in version six point zero reused in module m in version six point one.
-* Faulty Six Point One: its value is zero for modules with no faults found and one for modules with faults.
+Missing attributes: none
 
 Class Distribution:
-Non-faulty modules account for ninety-one point five four percent, while faulty modules account for eight point four six percent.
+Non faulty: 91.54%
+Faulty: 8.46%
 
-Keywords: DataTrievE, software engineering, fault-proneness, maintenance, code quality, module classification.
+Keywords: software engineering, DATATRIEVE, maintenance, fault prediction, BLISS language, module analysis, code quality, empirical study

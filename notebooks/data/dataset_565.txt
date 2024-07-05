@@ -1,26 +1,63 @@
-Water Treatment Dataset
+Water Treatment Study
 
-Title: Faults in an Urban Waste Water Treatment Plant
+Source: Unknown - Date unknown
+
+Please cite:
+Title: Faults in a urban waste water treatment plant
 
 Source Information:
-The dataset comes from the daily measures of sensors in an urban waste water treatment plant.
+Creators: Unitat d'Enginyeria Quimica Universitat Autonoma de Barcelona. Bellaterra. Barcelona; Spain
+Donor: Dept. Llenguatges i Sistemes Informatics; Universitat Politecnica de Catalunya. Barcelona; Spain
+Date: June, 1993
 
 Past Usage:
-The dataset was previously used to compare the classification of plant situations using cluster analysis and conceptual clustering. It was also used to develop a classification methodology for ill-structured domains and to diagnose waste water treatment plant problems.
+"Avaluacio de tecniques de classificacio per a la gestio de Bioprocessos: Aplicacio a un reactor de fangs activats" Master Thesis. Dept. de Quimica. Unitat d'Enginyeria Quimica. Universitat Autonoma de Barcelona. Bellaterra (Barcelona). 1993.
+Results: Comparison between the classification of plant situations using cluster analysis and conceptual clustering. The induced classes are exposed and contrasted.
+
+"LINNEO+: A Classification Methodology for Ill structured Domains". Research report RT 93 10 R. Dept. Llenguatges i Sistemes Informatics. Barcelona. 1993.
+Results: The conceptual clustering algorithm used in the first reference is exposed. Some results are given about the use of a priori expert knowledge to bias the classification process in the plant domain.
+
+"A knowledge based system for the diagnosis of waste water treatment plant". Proceedings of the 5th international conference of industrial and engineering applications of AI and Expert Systems IEA/AIE 92. Ed Springer Verlag. Paderborn, Germany, June 92.
+Results: Explanation of the waste water treatment plant diagnosis problems Not directly related to the dataset.
 
 Relevant Information:
-This dataset aims to classify the operational state of the plant in order to predict faults through the state variables of the plant at each stage of the treatment process. The domain has been stated as an ill-structured domain.
+This dataset comes from the daily measures of sensors in a urban waste water treatment plant. The objective is to classify the operational state of the plant in order to predict faults through the state variables of the plant at each of the stages of the treatment process. This domain has been stated as an ill structured domain.
 
-Number of Instances: 
-Number of Attributes:
+Number of instances: 527
+Number of Attributes: 38
+There are some missing values, all are unknown information.
 
 Attribute Information:
-All attributes are numeric and continuous. They include input flow to the plant, input zinc to the plant, input pH to the plant, input biological demand of oxygen to the plant, input chemical demand of oxygen to the plant, input suspended solids to the plant, input volatile suspended solids to the plant, input sediments to the plant, input conductivity to the plant, and others.
+All attributes are numeric and continuous
+
+Statistics:
+Minimum, maximum, mean, and standard deviation values are provided for each attribute.
 
 Missing Attribute Values:
-There are several missing values in the dataset, which are represented as unknown information.
+The number of missing values for each attribute is listed.
 
 Class Distribution:
-The dataset includes thirteen classes, which are normal situation, secondary settler problems one, secondary settler problems two, secondary settler problems three, normal situation with performance over the mean, solids overload one, secondary settler problems four, storm one, normal situation with low influent, storm two, normal situation, storm three, and solids overload two.
+These are the classes induced by the conceptual clustering algorithm:
 
-Keywords: water treatment, waste water, urban waste, treatment plant, faults prediction, classification, cluster analysis.
+Class 1: Normal situation
+Class 2: Secondary settler problems 1
+Class 3: Secondary settler problems 2
+Class 4: Secondary settler problems 3
+Class 5: Normal situation with performance over the mean
+Class 6: Solids overload 1
+Class 7: Secondary settler problems 4
+Class 8: Storm 1
+Class 9: Normal situation with low influent
+Class 10: Storm 2
+Class 11: Normal situation
+Class 12: Storm 3
+Class 13: Solids overload 2
+
+Comments to the data file:
+The first element of each line is the day of the data, the rest are the attribute values
+
+Information about the dataset
+CLASSTYPE: numeric
+CLASSINDEX: none specific
+
+Keywords: wastewater treatment, fault detection, sensor data, urban waste, operational state classification, conceptual clustering, environmental monitoring

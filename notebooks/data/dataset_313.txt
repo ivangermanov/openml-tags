@@ -1,54 +1,11 @@
-Part of the Infrared Astronomical Satellite Low Resolution Spectrometer Database 
+The spectrometer dataset contains information from the Infra-Red Astronomy Satellite (IRAS) Low Resolution Spectrometer Database. This dataset was created in approximately March 1988 and was donated by an individual from a NASA research group. The IRAS project was groundbreaking as it represented the first attempt to map the entire sky at infrared wavelengths, which was impossible from ground-based observatories due to atmospheric absorption of large portions of the infrared spectrum.
 
-Sources 
+The primary observing program of IRAS involved high-resolution sky mapping by scanning at four frequencies. Additionally, the Low Resolution Observation program observed high-intensity sources across two continuous spectral bands. This particular database is derived from a subset of higher-quality LRS observations taken between 12 and 24 hours right ascension.
 
-The Infrared Astronomical Satellite Project Database 
+The dataset comprises 531 high-quality spectra from the IRAS-LRS database. Originally, the data contained 100 spectral measurements in each of two overlapping bands. However, only 44 blue band and 49 red band channels containing usable flux measurements are included in this dataset. The original spectral intensity values were compressed to four digits, with each spectrum including five rescaling parameters. These values were then rescaled to units of spectral intensity (Janskys) using the LRS-specified algorithm. To eliminate total intensity differences, each spectrum was normalized to a mean value of 5000.
 
-Past Usage 
+This database was initially obtained for the development and testing of the AutoClass system for Bayesian classification. While the results from this development were not retained, efforts were concentrated on a larger 5425-element version of the same data. Classifications were based on simultaneous modeling of all 93 spectral intensities. The larger database allowed for the identification of classes corresponding to known spectral types associated with particular stellar types, as well as classes matching spectra expected from certain stellar processes under investigation by astronomers. These classifications significantly expanded the set of stars being studied by researchers.
 
-Unknown -- a research group concerned with unsupervised learning tasks may have used this database during their empirical studies of their algorithm/system. 
+The dataset contains various attributes including LRS name, LRS class, ID type, right ascension, declination, scale factor, blue base coefficients, red base coefficients, and flux measurements from both blue-band and red-band channel wavelengths. The LRS class values range from 0 to 99, with the tens digit indicating the basic class and the ones digit indicating the subclass. These classes are based on features such as peaks, valleys, and trends of the spectral curves.
 
-Relevant Information 
-
-The Infrared Astronomical Satellite was the first attempt to map the full sky at infrared wavelengths. This could not be done from ground observatories because large portions of the infrared spectrum are absorbed by the atmosphere. The primary observing program was the full high-resolution sky mapping performed by scanning at four frequencies. The Low Resolution Observation program observed high-intensity sources over two continuous spectral bands. This database derives from a subset of the higher-quality Low Resolution Observations taken between twelve hours and twenty-four hours right ascension. 
-
-This database contains five hundred thirty-one high-quality spectra derived from the Low Resolution Observations database. The original data contained one hundred spectral measurements in each of two overlapping bands. Of these, forty-four blue band and forty-nine red band channels contain usable flux measurements. Only these are included here. The original spectral intensities values are compressed, and each spectrum includes five rescaling parameters. We have used the Low Resolution Observations specified algorithm to rescale these to units of spectral intensity. Total intensity differences have been eliminated by normalizing each spectrum to a mean value. 
-
-This database was originally obtained for use in development and testing of an AutoClass system for Bayesian classification. We have not retained any results from this development, having concentrated our efforts on a larger version of the same data. Our classifications were based upon simultaneous modeling of all ninety-three spectral intensities. With the larger database, we were able to find classes that correspond well with known spectral types associated with particular stellar types. We also found classes that match with the spectra expected of certain stellar processes under investigation. These classes have considerably enlarged the set of stars being investigated.
-
-Original Data 
-
-The original Fortran data file is given. The file contains information about the data file contents and how to rescale the compressed spectral intensities. 
-
-Number of Instances 
-
-Five hundred thirty-one 
-
-Number of Attributes 
-
-One hundred three 
-
-Attribute Information 
-
-Low Resolution Spectrometer Name 
-Low Resolution Spectrometer Class 
-Identification Type 
-Right Ascension 
-Declination 
-Scale Factor 
-Blue Base One 
-Blue Base Two 
-Red Base One 
-Red Base Two 
-Forty-four Blue Band Flux Measurements 
-Forty-nine Red Band Flux Measurements 
-
-UCI 
-
-http://archive.ics.uci.edu/ml/datasets/Low+Resolution+Spectrometer 
-
-Features 
-
-Low Resolution Spectrometer Name, Low Resolution Spectrometer Class, Identification Type, Right Ascension, Declination, Scale Factor, Blue Base One, Blue Base Two, Red Base One, Red Base Two, Forty-four Blue Band Flux Measurements, Forty-nine Red Band Flux Measurements 
-
-Keywords: Infrared Astronomical Satellite, Low Resolution Spectrometer, Bayesian Classification, Stellar Types, Spectral Intensities, Astronomical Longitude, Astronomical Latitude.
+Keywords: infrared astronomy, spectral analysis, stellar classification, IRAS, low resolution spectrometer, Bayesian classification, flux measurements, spectral intensity

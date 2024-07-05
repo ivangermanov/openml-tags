@@ -1,7 +1,11 @@
-The Puma8NH dataset family consists of synthetically generated datasets from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. This particular dataset family is comprised of eight datasets, although only two of them are included in this repository. All datasets in this family are variations of the same model, which is a realistic simulation of the dynamics of a Puma 560 robot arm. The primary task in these datasets is to predict the angular acceleration of one of the robot arm's links.
+Name: puma Tags: 
 
-The input features include the angular positions, velocities, and torques of the robot arm. This dataset family was specifically designed for the Delve environment, with each dataset spanning the corners of a cube representing three key dimensions: the number of inputs, the degree of nonlinearity (ranging from fairly linear to nonlinear), and the amount of noise in the output (ranging from moderate to high).
+This is a family of datasets synthetically generated from a realistic simulation of the dynamics of a Unimation Puma robot arm. There are multiple datasets in this family, with variations on the same model simulating the dynamics of a Puma robot arm. The task in these datasets is to predict the angular acceleration of one of the robot arm's links. The inputs include angular positions, velocities, and torques of the robot arm.
 
-This dataset has several characteristics, including a total of cases and nine continuous variables. The dataset is particularly useful for regression tasks.
+The family has been specifically generated for the DELVE environment, with individual datasets spanning different dimensions representing the number of inputs, degree of non-linearity (fairly linear or non-linear), and amount of noise in the output (moderate or high).
 
-Keywords: Puma 560 robot arm, angular acceleration, Delve environment, nonlinear, regression.
+The dataset originates from the DELVE repository of data and is part of a collection of regression datasets. It consists of numerous cases with continuous variables. The features include angular positions (theta), angular velocities (thetad), torques (tau), and angular acceleration (thetadd) for various joints of the robot arm.
+
+This dataset provides valuable information for studying and predicting the dynamics of robotic arms, particularly the Puma model. It offers a range of scenarios with varying levels of complexity and noise, making it suitable for testing and comparing different regression algorithms and models in robotics and control systems research.
+
+Keywords: robotics, Puma arm, angular acceleration, dynamics simulation, regression, non-linearity, noise levels, DELVE repository, continuous variables, robotic control

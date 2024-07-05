@@ -1,23 +1,82 @@
-QSAR-TID-101340 Dataset 
+QSAR-TID-101340 Tags: MTLQSAR, study_3
 
-Tags: Economics, Life Science, MTLQSAR, study_3 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101340. The dataset has eighty-six rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101340. It has eighty-six rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. 
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR data for various drug targets. The data is sourced from ChEMBL version seventeen and contains activity values in pseudo-pCI50 units.
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The features in the dataset are molecular fingerprints, which are a way of representing molecular structures as a series of bits. These fingerprints are generated from SMILES strings and do not require missing value imputation.
 
-Features include molecule ChEMBL ID, molecular fingerprints, and so on.
+The dataset is useful for researchers and scientists working in the field of drug discovery and development, particularly those interested in the Ephrin type-A receptor one protein target.
 
-The dataset was scraped from various sources, including ChEMBL, UniProt, InterPro, Pfam, and so on.
+Scraped Data:
 
-The target classification is enzyme/kinase/protein kinase/tyrosine protein kinase/Eph family. The preferred name is ephrin type-A receptor one. The synonyms are eph, epha one, ephrin type-A receptor one, epht, epht one, and so on.
+ID: ChEMBL5810
+Type: Single Protein
+Preferred Name: Ephrin Type-A Receptor One
+Synonyms: Ephrin Receptor, EphA One, Eph Type-A Receptor One, EPHT, EPHT One
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/TK protein kinase group/Tyrosine protein kinase Eph family
 
-The organism is homo sapiens, and the species group is no protein target classification.
+Description: Ephrin type-A receptor one is a single protein that belongs to the enzyme/kinase/protein kinase/TK protein kinase group/tyrosine protein kinase Eph family. It is a receptor protein that plays a crucial role in various cellular processes, including cell adhesion, migration, and proliferation.
 
-The description is ephrin type-A receptor one single protein.
+Relationship: Ephrin receptor
+Accession: P21709
 
-The relationship accession is ephrin type-A receptor one single protein.
+Rows per page: fifty-one to one of one
 
-There are various go components, go functions, and go processes associated with this target.
+Go Component:
 
-Keywords: QSAR, drug target, molecular fingerprints, enzyme, kinase, protein kinase, tyrosine protein kinase, ephrin type-A receptor.
+* Plasma membrane
+* Membrane
+* Receptor complex
+
+Go Function:
+
+* Nucleotide binding
+* Fibronectin binding
+* Protein kinase activity
+* Protein tyrosine kinase activity
+* Transmembrane receptor protein tyrosine kinase activity
+* Ephrin receptor activity
+* Transmembrane-ephrin receptor activity
+* ATP binding
+* Kinase activity
+* Transferase activity
+* Protein kinase binding
+
+Go Process:
+
+* Angiogenesis
+* Positive regulation of cell-matrix adhesion
+* Protein phosphorylation
+* Negative regulation of protein kinase activity
+* Cell adhesion
+* Cell surface receptor signaling pathway
+* Transmembrane receptor protein tyrosine kinase signaling pathway
+* Positive regulation of cell population proliferation
+* Phosphorylation
+* Peptidyl-tyrosine phosphorylation
+* Positive regulation of cell migration
+* Negative regulation of cell migration
+* Positive regulation of kinase activity
+* Substrate adhesion-dependent cell spreading
+* Regulation of GTPase activity
+* Positive regulation of angiogenesis
+* Protein autophosphorylation
+* Ephrin receptor signaling pathway
+* Positive regulation of stress fiber assembly
+* Activation of GTPase activity
+
+Wikipedia: Eph receptor A one
+GuideToPHARMACOLOGY: 1821
+IntAct: P21709
+PharmGKB: Eph receptor A one
+Pharos: Tchem
+Reactome: EPH-Ephrin signaling, POU5F1 (OCT4), SOX2, NANOG activate genes related to proliferation, EPHA-mediated growth cone collapse, EPH-ephrin mediated repulsion of cells
+UniProt: A1L3V3, B5A966, B5A967, P21709, Q15405
+InterPro: Prot_kinase_dom, Ephrin_rcpt_lig-bd_dom, Ser-Thr/Tyr_kinase_cat_dom, Tyr_kinase_rcpt_V_CS, SAM, FN3_dom, Tyr_kinase_AS, Galactose-bd-like_sf, Growth_fac_rcpt_cys_sf, Kinase-like_dom_sf, Tyr-kin_ephrin_A/B_rcpt-like, SAM/pointed_sf, Ig-like_fold, Tyr_kinase_ephrin_rcpt, Protein_kinase_ATP_BS, Tyr_kinase_cat_dom, Eph_TM, EphA1_rcpt_lig-bd
+Pfam: fn3, SAM_1, Ephrin_lbd, Ephrin_rec_like, PK_Tyr_Ser-Thr, EphA2_TM
+PDBe: 3HIL, 3KKA
+
+Keywords: QSAR, Ephrin type-A receptor one, drug target, molecular fingerprints, SMILES strings, Pipeline Pilot program, MetaQSAR project, ChEMBL, protein kinase activity, cell adhesion, migration, proliferation.

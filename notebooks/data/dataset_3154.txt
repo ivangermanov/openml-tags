@@ -1,53 +1,12 @@
-QSAR-TID-101448 Dataset
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101448. The dataset has eighty rows and one thousand twenty-six features, including IDs and class feature.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. The dataset comprises rows and features, including IDs and class features: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The dataset is associated with the MetaQSAR project from September. It focuses on the Serine/threonine protein kinase DCLK, also known as DCAMKL, DCDCC, DCLK, Doublecortin domain containing protein C, and Doublecortin like and CAM kinase like. This protein is found in Homo sapiens and is classified as a single protein target.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated. The dataset includes molecule chembl id and median pxc fifty.
+The protein has several associated Gene Ontology (GO) classifications. Its cellular components include the nucleus and cytoplasm. Its molecular functions encompass nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, ATP binding, kinase activity, transferase activity, and protein serine kinase activity. The biological processes it's involved in are protein phosphorylation, phosphorylation, and peptidyl serine phosphorylation.
 
-The dataset is part of the MetaQSAR project and was published in September two thousand fifteen.
+The protein is referenced in various databases including ExpressionAtlas, canSAR Target, IntAct, PharmGKB, Pharos, UniProt, InterPro, and Pfam. InterPro annotations include protein kinase domain, serine/threonine kinase active site, kinase like domain superfamily, and protein kinase ATP binding site.
 
-Scraped Data:
-
-ID: CHEMBL six one two three
-Type: Single Protein
-Preferred Name: Serine Threonine-Protein Kinase DCLK Three
-Synonyms: Doublecortin Domain-Containing Protein Three C, Doublecortin-Like and CAM Kinase-Like Three
-Organism: Homo Sapiens
-Species Group: No
-Protein Target Classification:
-Description Relationship Accession: Serine Threonine-Protein Kinase DCLK Three Single Protein
-
-Expression Atlas: one
-Go Component:
-Nucleus
-Cytoplasm
-Go Function:
-Nucleotide Binding
-Protein Kinase Activity
-Protein Serine Threonine Kinase Activity
-ATP Binding
-Kinase Activity
-Transferase Activity
-Protein Serine Kinase Activity
-Go Process:
-Protein Phosphorylation
-Phosphorylation
-Peptidyl-Serine Phosphorylation
-Can SAR Target:
-Int Act:
-Pharm GKB:
-Doublecortin-Like Kinase Three
-Pharos:
-Tchem
-Uni Prot:
-Inter Pro:
-Prot Kinase Dom
-Ser Thr Kinase AS
-Kinase-Like Dom Sf
-Protein Kinase ATP BS
-Pfam:
-Pkinase
-
-Keywords: QSAR, MetaQSAR, Chembl, FCFP, Molecular Fingerprints, Pipeline Pilot, BIOVIA, Serine Threonine-Protein Kinase, DCLK3, Homo Sapiens, Protein Phosphorylation, Kinase Activity.
+Keywords: QSAR, molecular fingerprints, protein kinase, phosphorylation, drug target, ChEMBL, bioinformatics

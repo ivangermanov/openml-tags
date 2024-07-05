@@ -1,22 +1,16 @@
 Bitcoin Heist Ransomware Dataset
 
-Tags: Classification on both numerical and categorical features
+Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on both numerical and categorical features" benchmark.
 
-This dataset belongs to the tabular data benchmark and is transformed in the same way.
+Original link: https://openml.org/d/42553
 
-The Bitcoin Heist Ransomware Dataset is a comprehensive collection of Bitcoin transactions from January 2009 to December 2018. The dataset was created by extracting daily transactions on the network and forming a Bitcoin graph. To filter out irrelevant transactions, only network edges that transferred more than a certain threshold were considered.
+Original description: 
+The Bitcoin Heist Ransomware Dataset is a comprehensive collection of data extracted from the entire Bitcoin transaction graph from January to December. Using a twenty-four-hour time interval, daily transactions on the network were extracted and formed the Bitcoin graph. The network edges that transfer less than a certain threshold were filtered out, since ransom amounts are rarely below this threshold. Ransomware addresses were taken from three widely adopted studies.
 
-Ransomware addresses were obtained from three widely adopted studies. These addresses were then used to extract six features for each address in each twenty-four hour snapshot: income, neighbors, weight, length, count, and loop. These features aim to quantify specific transaction patterns, such as the merging of coins into a single address, the number of transactions, and the distribution of coins across multiple rounds.
+On the heterogeneous Bitcoin network, in each twenty-four-hour snapshot, six features were extracted for an address: income, neighbors, weight, length, count, and loop. These features were designed to quantify specific transaction patterns. The loop feature is intended to count how many transactions split their coins, move these coins in the network by using different paths, and finally merge them in a single address. The weight feature quantifies the merge behavior, where coins in multiple addresses are each passed through a succession of merging transactions and accumulated in a final address. The count feature represents information on the number of transactions, whereas the weight feature represents information on the amount of transactions. The length feature is designed to quantify mixing rounds on Bitcoin, where transactions receive and distribute similar amounts of coins in multiple rounds with newly created addresses to hide the coin origin.
 
-The dataset includes a total of twenty-four ransomware families, with some addresses appearing in more than one time window. One particular address appeared a maximum of four hundred and twenty times.
+White Bitcoin addresses were capped at a certain number per day. Note that although we are certain about ransomware labels, we do not know if all white addresses are in fact not related to ransomware. When compared to non-ransomware addresses, ransomware addresses exhibit more profound right skewness in distributions of feature values.
 
-Features include:
+Features: day, length, weight, count, looped, neighbors, income, label
 
-* Address: a string representing the Bitcoin address
-* Year: an integer representing the year
-* Day: an integer representing the day of the year
-* Length: an integer representing the number of mixing rounds on Bitcoin
-* Income: an integer representing the Satoshi amount (one bitcoin is one hundred million Satoshis)
-* Label: a category string representing the name of the ransomware family or "white" (not known to be ransomware)
-
-Keywords: Bitcoin, ransomware, transaction patterns, cryptocurrency, machine learning.
+Keywords: Bitcoin, Ransomware, Transaction Graph, Classification, Numerical Features, Categorical Features

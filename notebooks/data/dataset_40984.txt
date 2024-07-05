@@ -1,31 +1,21 @@
 **Image Segmentation Data Set**
-Tags: Life Science, OpenML-CC18, study_135, study_218, study_98, study_99
-Source: UCI - 1990
-Please cite: UCI
 
-The Image Segmentation Data Set consists of instances drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every pixel. Each instance represents a three-by-three region.
+The instances were drawn randomly from a database of seven outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a three by three region.
 
-The major changes made compared to the previous version include ignoring the first two variables as they do not fit the classification task, since they reflect the location of the sample in the original image. The third variable was also ignored as it remains constant.
+**Major Changes**
 
-### Attribute Information
+The first two variables were ignored as they do not fit the classification task, as they reflect the location of the sample in the original image. The third variable is constant, so it should also be ignored.
 
-Fourteen attributes describe each instance:
+**Attribute Information**
 
-* Short Line Density Five: the results of a line extraction algorithm that counts the number of lines of length five with low contrast, less than or equal to five, going through the region.
-* Short Line Density Two: similar to Short Line Density Five, but counting lines of high contrast, greater than five.
-* Vertical Edge Mean: measuring the contrast of horizontally adjacent pixels in the region, used as a vertical edge detector.
-* Vertical Edge Standard Deviation: the standard deviation of the Vertical Edge Mean.
-* Horizontal Edge Mean: measuring the contrast of vertically adjacent pixels, used for horizontal line detection.
-* Horizontal Edge Standard Deviation: the standard deviation of the Horizontal Edge Mean.
-* Intensity Mean: the average intensity over the region, calculated as (Red + Green + Blue) / Three.
-* Raw Red Mean: the average Red value over the region.
-* Raw Blue Mean: the average Blue value over the region.
-* Raw Green Mean: the average Green value over the region.
-* Excess Red Mean: measuring the excess Red, calculated as Two times Red minus (Green plus Blue).
-* Excess Blue Mean: measuring the excess Blue, calculated as Two times Blue minus (Red plus Green).
-* Excess Green Mean: measuring the excess Green, calculated as Two times Green minus (Red plus Blue).
-* Value Mean: a three-dimensional nonlinear transformation of RGB.
-* Saturation Mean: the average saturation over the region, derived from the Value Mean.
-* Hue Mean: the average hue over the region, derived from the Value Mean.
+The data set includes various attributes that describe the characteristics of each region. These attributes include the results of a line extraction algorithm that counts the number of lines of a certain length and contrast that go through the region. Additionally, there are attributes that measure the contrast of horizontally and vertically adjacent pixels, which are used for edge detection. The data set also includes attributes that describe the color and intensity of the region, such as the average red, green, and blue values, as well as the excess red, blue, and green values. Furthermore, there are attributes that describe the value, saturation, and hue of the region, which are calculated using a three-dimensional nonlinear transformation of the RGB values.
 
-Keywords: image segmentation, outdoor images, classification, pixel analysis, feature extraction, computer vision.
+**Scraped Data**
+
+The data set does not have any missing values.
+
+**Additional Information**
+
+The instances were drawn randomly from a database of seven outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a three by three region.
+
+**Keywords:** Image Segmentation, Outdoor Images, Pixel Classification, Edge Detection, Color Analysis

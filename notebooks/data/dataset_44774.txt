@@ -1,15 +1,11 @@
-Name: San Francisco Police Incidents Seed One 
+Name: sf-police-incidents Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Life Science, Machine Learning 
+Tags: Subsampling of the dataset sf-police-incidents with seed equal to one, arguments n rows max equal to two thousand, arguments n columns max equal to one hundred, arguments n classes max equal to ten, and arguments no stratify equal to false.
 
-Subsampling of the San Francisco Police Incidents dataset with a specified seed value. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. 
+Generated with the following source code:
 
-The sampling process starts by selecting a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the classes are sampled based on their frequency distribution. The corresponding indices where these classes are present are then selected.
+The function subsample takes in self, seed, n rows max, n columns max, n classes max, and stratified as parameters. It uses numpy's random default random generator with the given seed. It then selects the features x and target y from the dataset. If the number of unique classes in the target is greater than n classes max, it selects n classes max classes using random choice with probabilities based on the value counts of the classes. It then selects the indices where one of these classes is present and filters the features and target accordingly. If the number of columns in the features is greater than n columns max, it uniformly samples n columns max columns. If the number of rows in the features is greater than n rows max, it uses train test split with stratification based on the target to select n rows max rows. Finally, it returns a dataset with the selected features, target, and categorical mask.
 
-Next, the columns are sampled uniformly if the total number of columns exceeds the maximum allowed. The selected columns are then used to create a new dataset.
+Features: Hour of the Day, Day of the Week, Month of the Year, Year, Police District, Address, X Coordinate, Y Coordinate, Violent Crime
 
-Finally, the rows are sampled based on the target variable using stratified sampling to ensure that the class distribution is preserved. This is done using a train-test split function from a popular machine learning library.
-
-The resulting dataset consists of the sampled features, which include time-related variables such as hour, day of the week, month, and year, as well as location-based variables including police district, address, and geographic coordinates. Additionally, the dataset includes a variable indicating whether a crime was violent or not.
-
-Keywords: subsampling, machine learning, dataset, San Francisco Police Incidents, life science, stratified sampling, feature selection
+Keywords: sf-police-incidents, subsampling, stratification, feature selection, class selection, random sampling.

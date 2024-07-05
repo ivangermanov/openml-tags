@@ -1,9 +1,17 @@
-Fri C0 Dataset: A Binarized Regression Problem
+Name: fri c
 
-This dataset is a binarized version of the original data set. The numeric target feature has been converted into a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative.
+Tags: binarized regression problem, mythbusting, study
 
-The dataset pertains to the fields of Chemistry and Life Science, and is relevant to studies on Mythbusting, specifically Studies One, Fifteen, Twenty, Forty-One, and Seven.
+Source: Unknown - Date unknown
 
-Features of this dataset include various chemical properties, although their exact nature is not specified.
+Please cite: Binarized version of the original data set (see version). It converts the numeric target feature to a two class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: Binarized Regression, Chemistry, Life Science, Mythbusting, Chemical Properties
+Features: This dataset contains multiple features labeled as oz followed by numbers. The final feature is binaryClass.
+
+This dataset appears to be a modified version of an existing regression problem, where the continuous target variable has been transformed into a binary classification task. The transformation process involved calculating the mean of the original target values and using that as a threshold to categorize instances. Those falling below the mean are labeled as positive, while those above are labeled as negative.
+
+The dataset is associated with multiple studies and a mythbusting theme, suggesting it may have been used to challenge or verify certain hypotheses or commonly held beliefs in a particular field of study. The exact nature of these studies and the specific domain of application are not provided in the given information.
+
+The features are presented in a format that is not immediately human-readable, consisting of the prefix "oz" followed by numbers. This naming convention may be specific to the original dataset or the field of study it pertains to. The final feature, binaryClass, likely represents the transformed target variable resulting from the binarization process.
+
+Keywords: binarized regression, classification, data transformation, mythbusting, feature encoding, threshold-based labeling

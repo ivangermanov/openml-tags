@@ -1,15 +1,11 @@
-Airlines Seed Four Dataset 
+Airlines Seed Four Rows Two Thousand Columns One Hundred Classes Ten Stratify True
 
-This dataset is a subsampled version of the original Airlines dataset, generated using a specific set of arguments. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
+This dataset is a subsample of the original Airlines dataset, generated with a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were then used to filter the data, retaining only the rows where one of these classes was present.
 
-The sampling process starts by selecting a specified number of unique classes from the original dataset. If the number of unique classes exceeds the maximum allowed, the classes are sampled based on their frequency of occurrence in the dataset. The indices corresponding to the selected classes are then used to filter the data.
+Next, the columns were uniformly sampled, reducing the number of columns to one hundred. The column selection was done randomly, but the resulting columns were sorted in ascending order to maintain consistency.
 
-Next, the columns are uniformly sampled to reduce the dimensionality of the dataset. The sampling probability is uniform across all columns. If the number of columns exceeds the maximum allowed, the column indices are randomly selected; otherwise, all columns are retained.
+Finally, the number of rows was reduced to two thousand, using stratified sampling to ensure that the class distribution was preserved. This was achieved by concatenating the data and target variables, and then applying the train test split function with stratification.
 
-Finally, the rows are sampled to achieve the desired number of samples. This step involves stratified sampling based on the class labels to ensure that the resulting dataset maintains a similar class distribution as the original dataset.
+The resulting dataset contains the following features: Airline, Flight, Airport From, Airport To, Day of the Week, Time, Length, and Delay.
 
-Features of this dataset include airline information, flight details, airport codes, day of the week, time of flight, length of flight, and delay information.
-
-Tags: Life Science, Medicine 
-
-Keywords: airline, dataset, subsampling, stratified sampling, class labels
+Keywords: Airlines, Subsampling, Stratified Sampling, Class Selection, Column Sampling, Row Reduction.

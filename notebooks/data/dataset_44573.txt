@@ -1,13 +1,11 @@
-Subsampling of the Arcene dataset with a random seed value. This dataset has undergone uniform sampling of classes, columns, and rows to reduce its size while maintaining its overall characteristics.
+Name: Arcene Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The Arcene dataset originally had a large number of classes, but through uniform sampling, the number of classes has been reduced. This was achieved by selecting a specified number of classes randomly, using their value counts as probabilities. The indices where these selected classes were present were then used to filter the dataset.
+Tags: Subsampling of the dataset Arcene with seed equals zero arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
-Uniform column sampling was also applied to reduce the number of features. This involved randomly choosing a specified number of column indices and selecting the corresponding columns. The resulting dataset consists of these selected columns.
+Generated with the following source code:
 
-To further reduce the size of the dataset, row sampling was applied. This involved splitting the dataset into two subsets using stratified sampling, ensuring that the class distribution was maintained.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then uniformly samples classes from the unique classes in the dataset, selecting the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies accordingly using train test split. The function then converts categorical columns to string for openml and returns a dataset with the subsampled data.
 
-The resulting dataset consists of the sampled features, which include variables such as molecular descriptors and other chemical properties. These features have been carefully selected to represent the underlying characteristics of the Arcene dataset.
+Features: (skipped due to unreadability)
 
-Tags: Subsampling of the Arcene dataset
-
-Keywords: Arcene dataset, subsampling, uniform sampling, class reduction, column selection, row sampling, stratified sampling.
+Keywords: Arcene, subsampling, dataset, stratification, random sampling

@@ -1,24 +1,28 @@
-Forest Fires Data Set Portugal 
-Tags: Abstract 
+Forest Fires Data Set Portugal
 
-This is a challenging regression task, where the objective is to predict the burned area of forest fires in the northeast region of Portugal, by utilizing meteorological and other relevant data. 
+Abstract
+This is a challenging regression task, where the goal is to predict the burned area of forest fires in the northeast region of Portugal, using meteorological and other data. 
 
-Data Set Information:
+Data Set Information
+The data set has multiple variables and five hundred seventeen instances. The area of study is physical, and the attributes are real numbers. There are thirteen attributes in total. 
 
-The data set characteristics are multivariate, and it contains five hundred seventeen instances. The area of focus is physical, and the attribute characteristics are real. There are thirteen attributes in total. The data was donated in two thousand eight.
+Data Set Characteristics
+The data set is multivariate, and there are no missing values. 
 
-Associated tasks include regression, and there are no missing values.
+Associated Tasks
+The associated task is regression. 
 
-In previous research, the output 'area' was initially transformed with a natural logarithm function plus one. Subsequently, various data mining methods were applied. After fitting the models, the outputs were post processed with the inverse of the natural logarithm plus one transform. Four distinct input setups were utilized.
+In a previous study, the output 'area' was first transformed with a natural logarithm function. Then, several data mining methods were applied. After fitting the models, the outputs were post-processed with the inverse of the natural logarithm transform. Four different input setups were used. The experiments were conducted using a ten-fold cross-validation method, repeated thirty times. Two regression metrics were measured: mean absolute difference and root mean squared error. 
 
-The experiments were conducted using a ten fold cross validation method, repeated thirty times. Two regression metrics were measured, including mean absolute deviation and root mean squared error.
+A Gaussian support vector machine fed with only four direct weather conditions obtained the best mean absolute difference value. The best root mean squared error was attained by the naive mean predictor. An analysis of the regression error curve shows that the support vector machine model predicts more examples within a lower admitted error. In effect, the support vector machine model predicts better small fires, which are the majority.
 
-A Gaussian support vector machine, fed with four direct weather conditions, obtained the best mean absolute deviation value. The best root mean squared error was attained by the naive mean predictor. An analysis of the regression error curve reveals that the support vector machine model predicts more examples within a lower admitted error. In effect, the support vector machine model predicts smaller fires more accurately, which comprise the majority.
+Source
+Department of Information Systems, University of Minho, Portugal.
 
-Source: Department of Information Systems, University of Minho, Portugal.
+Relevant Papers
+A Data Mining Approach to Predict Forest Fires using Meteorological Data.
 
-Relevant papers include a data mining approach to predict forest fires using meteorological data.
+Features
+Month, day, temperature, relative humidity, wind, rain, and area.
 
-Features: Month, Day, Temperature, Relative Humidity, Wind, Rain, Burned Area.
-
-Keywords: Forest Fires, Portugal, Regression Task, Meteorological Data, Support Vector Machine, Data Mining, Mean Absolute Deviation, Root Mean Squared Error.
+Keywords: forest fires, regression task, meteorological data, burned area, Portugal.

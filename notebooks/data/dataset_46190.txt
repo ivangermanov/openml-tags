@@ -1,0 +1,13 @@
+Rideshare Tags: Uber, Lyft, and Weather Hourly Data
+
+Uber and Lyft's ride prices are not constant like public transport. They are greatly affected by the demand and supply of rides at a given time. So, what exactly drives this demand? The first guess would be the time of day; times around nine am and five pm should see the highest surges on account of people commuting to work or home. Another guess would be the weather; rain or snow should cause more people to take rides.
+
+The dataset contains simulated rides with real prices, i.e., how much would the ride cost if someone actually took it. Note that Uber and Lyft do not make this data public, and neither is the case in this dataset.
+
+The dataset was created by collecting real-time data using Uber and Lyft API queries and corresponding weather conditions. A few hot locations in Boston were chosen, and a custom application in Scala was built to query data at regular intervals and save it to DynamoDB. The project can be found on GitHub. The data was queried every five minutes for cab ride estimates and every one hour for weather data. The data is approximately for a week of November and includes various types of cabs for Uber and Lyft and their prices for the given location. It also includes information on whether there was any surge in the price during that time. The weather data contains weather attributes like temperature, rain, cloud, etc. for all the locations taken into consideration.
+
+The aim of this project was to analyze the prices of these ride-sharing apps and try to figure out what factors are driving the demand. Do certain days of the week have more demand than others at a specific time? Do people avoid cabs on a sunny day? Was there a specific event that caused more people to take rides?
+
+The dataset has undergone several preprocessing steps, including dropping unnecessary columns, creating new columns, pivoting the table, and renaming columns. The resulting dataset has several features, including covariate columns, time step, value columns, id series, and date.
+
+Keywords: ride-sharing, demand analysis, weather impact, time series forecasting, Uber, Lyft.

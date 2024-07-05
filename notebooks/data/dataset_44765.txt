@@ -1,15 +1,15 @@
-Click Prediction Small Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Click Prediction Small Seed Two Dataset
 
-Tags: Agriculture, Earth Science 
+Tags: Subsampling of the Click Prediction Small Dataset with Seed Equal to Two
 
-Sub-sampling of the dataset Click Prediction Small with a seed equal to two. This sub-sampled dataset was generated using the following parameters: number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratify set to true.
+This dataset is a subsample of the Click Prediction Small dataset. It was generated using a specific source code that involves random sampling of classes, columns, and rows. The subsampling process ensures that the dataset is stratified, meaning that the sample is representative of the original dataset.
 
-The sub-sampling process involves uniformly sampling classes from the original dataset. If the number of unique classes exceeds the maximum allowed, a random selection of classes is made based on their frequency of occurrence in the dataset. The indices corresponding to these selected classes are then used to filter the original dataset, resulting in a reduced dataset with only the selected classes.
+The dataset was created by first uniformly sampling classes from the original dataset. If the number of unique classes exceeded a certain maximum, the classes were selected based on their frequency in the original dataset. The indices where these selected classes were present were then used to subset the original dataset.
 
-Next, the sub-sampling process involves uniformly sampling columns from the filtered dataset. If the number of columns exceeds the maximum allowed, a random selection of columns is made. The resulting dataset consists of only the selected columns.
+Next, the columns of the dataset were uniformly sampled. If the number of columns exceeded a certain maximum, a specified number of columns were randomly selected. The dataset was then subset to include only these selected columns.
 
-Finally, the sub-sampling process involves reducing the number of rows in the dataset while maintaining the class balance. This is achieved through stratified sampling, which ensures that each class is represented proportionally in the reduced dataset.
+Finally, the rows of the dataset were sampled. If the number of rows exceeded a certain maximum, a stratified sample of rows was taken. This ensured that the sample was representative of the original dataset.
 
-The resulting dataset consists of the following features: impression, URL hash, advertisement ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, user ID, and click.
+The resulting dataset has a specific set of features, including impression, URL hash, ad ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, and user ID. The dataset also includes a click feature.
 
-Keywords: dataset sub-sampling, stratified sampling, feature selection, class balance, agriculture, earth science.
+Keywords: click prediction, dataset subsampling, stratified sampling, feature selection, random sampling

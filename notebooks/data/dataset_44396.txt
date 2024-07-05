@@ -1,46 +1,17 @@
-Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equals four arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+Name: KDD IPUMS LA Ninety Seven Small Seed Four
+
+Tags: Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equal to four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
 Generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified)
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to uniformly sample classes, columns, and rows from the original dataset.
 
-Random Number Generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis.
+The function first gets the unique classes from the target variable, and if there are more classes than the maximum allowed, it selects a subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-X equals self X.
-Y equals self Y.
+Next, if the number of columns is more than the maximum allowed, it uniformly samples a subset of columns. If the number of rows is more than the maximum allowed, it uses stratified sampling to select a subset of rows.
 
-Uniformly sample classes equals Y unique. 
-If length of classes is greater than number classes maximum:
-Value Counts equals Y value counts.
-Selected Classes equals Random Number Generator choice open parenthesis classes, size equals number classes maximum, replace equals false, probability equals Value Counts divided by sum of Value Counts close parenthesis.
+Finally, it converts categorical columns to string format and returns a new dataset with the subsampled data.
 
-Select the indices where one of these classes is present equals Y index Y is in Selected Classes.
-X equals X iloc Select Indices.
-Y equals Y iloc Select Indices.
+Features: value, rent, family size, number of children, elderly children, young children, number of siblings, age, occupation score, socioeconomic index, total income, wage income, business income, farm income, social security income, welfare income, other income, poverty, and binary class.
 
-Uniformly sample columns if required.
-If length of X columns is greater than number columns maximum:
-Columns Indexes equals Random Number Generator choice open parenthesis list range length of X columns close parenthesis, size equals number columns maximum, replace equals false close parenthesis.
-Sorted Column Indexes equals sorted Columns Indexes.
-Selected Columns equals list X columns Sorted Column Indexes.
-X equals X Selected Columns.
-Else:
-Sorted Column Indexes equals list range length of X columns.
-
-If length of X is greater than number rows maximum:
-Stratify accordingly Target Name equals Y name.
-Data equals pandas concat open parenthesis X, Y close parenthesis axis equals columns.
-Subset equals train test split Data test size equals number rows maximum stratify equals Data Target Name shuffle equals true random state equals seed close parenthesis.
-X equals Subset drop Target Name axis equals columns.
-Y equals Subset Target Name.
-
-We need to convert categorical columns to string for OpenML Categorical Mask equals list self categorical mask I for I in Sorted Column Indexes.
-Columns equals list X columns.
-Return Dataset 
-Dataset equals self dataset,
-X equals X,
-Y equals Y,
-Categorical Mask equals Categorical Mask,
-Columns equals Columns.
-
-Keywords: KDD IPUMS LA Ninety Seven Small, subsampling, stratification, random sampling, OpenML.
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling, column sampling, row sampling.

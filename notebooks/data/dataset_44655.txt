@@ -1,11 +1,13 @@
-Bioresponse Seed Two Rows Two Thousand NClasses Ten NColumns One Hundred Stratify True 
+Name: Bioresponse Seed Two Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Economics, Machine Learning 
+Tags: Subsampling of the Bioresponse dataset
 
-Subsampling of the dataset Bioresponse with seed equal to two arguments number of rows maximum equals two thousand arguments number of columns maximum equals one hundred arguments number of classes maximum equals ten arguments no stratify equals true generated with the following source code.
+This dataset is a subsample of the Bioresponse dataset, generated with a seed of two. The subsample has a maximum of two thousand rows, one hundred columns, and ten classes. The subsampling process was stratified to ensure that the class distribution is preserved.
 
-The function subsample takes in five parameters: seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified. It returns a dataset object. The function first uniformly samples classes from the unique values in the target variable, then selects the indices where one of these classes is present. It then uniformly samples columns if required. If the number of rows exceeds the maximum, it stratifies accordingly using the target variable.
+The subsampling process involved several steps. First, the classes were uniformly sampled to select the required number of classes. Then, the indices where one of these classes is present were selected. The columns were also uniformly sampled to select the required number of columns.
 
-Features:... (omitted due to unreadability)
+The dataset was then split into a subset of the required size using stratified sampling. The categorical columns were converted to string format for OpenML compatibility.
 
-Keywords: Bioresponse, Subsampling, Machine Learning, Economics, Dataset, Stratification.
+Features: (removed due to unreadability)
+
+Keywords: Bioresponse, subsampling, stratified sampling, dataset, classes, columns, rows

@@ -1,17 +1,17 @@
-The dataset named Albert has been subsampled with the following parameters: a seed value of zero, a maximum of two thousand rows, a maximum of one hundred columns, and a maximum of ten classes. The sampling process was performed in a stratified manner.
+Subsampling of the dataset Albert with a random seed. This dataset was generated with the following source code.
 
-This subsampled dataset was generated using the following Python function:
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset.
 
-```
-def subsample(self, seed, maximum_rows, maximum_columns, maximum_classes, stratified)
-```
+The function first uniformly samples classes from the unique classes in the dataset. If the number of unique classes is greater than the maximum number of classes, it selects the classes based on their value counts. It then selects the indices where one of these classes is present.
 
-The function begins by uniformly sampling classes from the original dataset until the maximum number of classes is reached. It then selects the indices where one of these classes is present and filters the data accordingly.
+Next, the function uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the columns randomly.
 
-Next, the function uniformly samples columns from the filtered data until the maximum number of columns is reached. Finally, it applies stratified sampling to the resulting data to ensure an even distribution of classes.
+If the number of rows is greater than the maximum number of rows, the function stratifies the data accordingly. It concatenates the data and target, and then uses train test split to get a subset of the data.
 
-The resulting dataset contains a subset of the original features, which include various variables labeled from Variable One to Variable Seventy Eight, and a class variable. 
+Finally, the function converts categorical columns to string and returns a dataset with the subsampled data, target, categorical mask, and columns.
 
-Tags: Agriculture, Life Science
+Features: 
 
-Keywords: dataset, subsampling, stratified sampling, agriculture, life science
+Tags: Subsampling of the dataset Albert, stratify True
+
+Keywords: subsampling, dataset, stratified sampling, feature selection, class selection

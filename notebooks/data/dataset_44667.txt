@@ -1,15 +1,19 @@
-Subsampling of the First Order Theorem Proving dataset with a specified seed value generates a new dataset. This process involves uniform sampling of classes, columns, and rows.
+Name: First Order Theorem Proving Seed Four
 
-The function takes several arguments, including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+Tags: Subsampling of the dataset First Order Theorem Proving
 
-Uniform sampling of classes is performed by selecting a specified number of unique classes from the dataset. The indices where these classes are present are then used to select the corresponding data points. 
+Generated with the following source code:
 
-Next, uniform sampling of columns is performed by randomly selecting a specified number of column indices. The selected columns are then used to create a new dataset.
+The subsample function is defined to take in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Finally, stratified sampling of rows is performed using a train-test split function. This ensures that the sampled data maintains the same class distribution as the original dataset.
+The function first initializes a random number generator with the given seed. It then selects a subset of classes from the unique classes in the dataset, ensuring that the number of selected classes does not exceed the maximum number of classes. The indices where one of these classes is present are selected, and the corresponding data and target values are subsetted.
 
-The resulting dataset contains the sampled data, along with metadata such as the categorical mask and column names.
+If the number of columns in the dataset exceeds the maximum number of columns, the function uniformly samples columns to reduce the number of columns to the maximum. The selected columns are then subsetted from the original data.
 
-Tags: Machine Learning, Mathematics
+If the number of rows in the dataset exceeds the maximum number of rows, the function stratifies the data accordingly and splits it into a subset of the desired size. The target name is dropped from the subset, and the resulting data and target values are returned as a new dataset.
 
-Keywords: subsampling, theorem proving, machine learning, stratified sampling, dataset generation
+The categorical mask is converted to a list of boolean values indicating whether each column is categorical. The columns are listed, and the dataset is returned with the subsetted data, target values, categorical mask, and columns.
+
+Features: 
+
+Class

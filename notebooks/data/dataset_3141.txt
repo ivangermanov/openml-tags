@@ -1,14 +1,12 @@
-**QSAR-TID-12725**
-**Tags:** Machine Learning, Manufacturing, MTLQSAR, study_3
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12725. The dataset has multiple rows and features, including IDs and class features. The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program.
+This dataset contains QSAR data from ChEMBL showing activity values of compounds on drug target TID. The activity unit is pseudo pCI. The dataset comprises rows and features, including molecule IDs and median pXC values. Features represent FCFP bit Molecular Fingerprints generated from SMILES strings using Pipeline Pilot by Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-The molecular fingerprints do not typically require missing value imputation, as all bits are generated. The dataset includes various features, such as molecule ChEMBL ID and median pXC50.
+The target is a single protein known as Matriptase, also called Membrane type serine protease, MT SP, Prostamin, or PRSS. It is found in Homo sapiens and classified as an Enzyme/Protease/Serine protease in the PA clan, S1A subfamily. The protein is associated with several Gene Ontology terms related to extracellular space, plasma membrane, peptidase activity, and various biological processes including neural tube closure, proteolysis, and keratinocyte differentiation.
 
-The target protein is matriptase, also known as membrane-type serine protease one, MT-SP one, prostamin, and PRSS fourteen. It belongs to the species group of Homo sapiens and is classified as an enzyme/protease/serine protease/serine protease PA clan/serine protease S one A subfamily.
+Matriptase has multiple database entries and identifiers across various bioinformatics resources, including UniProt, InterPro, Pfam, and PDBe. It is involved in protein interactions and pathways such as the formation of the cornified envelope. The protein contains several domains including SEA, CUB, Trypsin, and LDL receptor-like domains.
 
-Matriptase is involved in various biological processes, including neural tube closure, proteolysis, protein catabolic process, keratinocyte differentiation, and epithelial cell morphogenesis involved in placental branching. It is located in the extracellular space, plasma membrane, external side of plasma membrane, membrane, and basolateral plasma membrane.
+This dataset is part of the MetaQSAR project and contains valuable information for quantitative structure-activity relationship studies in drug discovery and development. It provides molecular fingerprints and activity data that can be used to build predictive models for compound-target interactions.
 
-Matriptase has various functions, including serine-type endopeptidase activity, peptidase activity, serine-type peptidase activity, and hydrolase activity. It is related to various diseases, including ichthyosis with hypotrichosis and colon carcinoma.
-
-**Keywords:** QSAR, machine learning, manufacturing, matriptase, molecular fingerprints, serine protease, enzyme, proteolysis.
+Keywords: QSAR, Matriptase, molecular fingerprints, drug target, serine protease, structure-activity relationship, ChEMBL, bioinformatics

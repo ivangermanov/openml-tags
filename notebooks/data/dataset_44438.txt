@@ -1,15 +1,13 @@
-The dataset, named Eye Movements, has been subsampled with specific parameters. The subsampling process involved selecting a specified number of rows, columns, and classes from the original dataset while maintaining the original characteristics.
+Name: Eye Movements Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags associated with this dataset include Agriculture and Manufacturing.
+Tags: Subsampling of the dataset Eye Movements with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-This subsampled dataset has been generated using a specific source code, which involves several steps. First, the unique classes in the dataset were identified, and then a specified number of classes were randomly selected based on their frequency of occurrence. The indices corresponding to these selected classes were used to filter the data, reducing the number of samples.
+Generated with the following source code:
 
-Next, the columns of the dataset were uniformly sampled to reduce the dimensionality. If the number of columns exceeded a specified maximum, a random selection of columns was made.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments, and returns a dataset. It uses the numpy random default random generator to uniformly sample classes, columns, and rows from the original dataset. If the number of classes is greater than nclasses max, it selects the top nclasses max classes based on their frequency. If the number of columns is greater than ncols max, it uniformly samples ncols max columns. If the number of rows is greater than nrows max, it uses stratified sampling to select nrows max rows.
 
-Finally, the number of rows was reduced by uniformly sampling the data while maintaining the class distribution. This was achieved through stratified sampling, ensuring that the resulting dataset retains the characteristics of the original dataset.
+The function returns a dataset with the subsampled data, including the categorical mask and column names.
 
-Features included in this subsampled dataset are:
+Features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label.
 
-Line Number, Assignment Number, Primary First Fixation, Primary Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label.
-
-Keywords: Eye Movements, Subsampling, Agriculture, Manufacturing, Class Distribution, Dimensionality Reduction, Stratified Sampling.
+Keywords: Eye Movements, Subsampling, Stratified Sampling, Dataset, Machine Learning.

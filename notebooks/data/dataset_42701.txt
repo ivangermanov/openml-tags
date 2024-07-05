@@ -1,40 +1,19 @@
-Methane Dataset 
-Tags: Language, Machine Learning 
+Methane Tags: **Dataset**
 
-Coal mining requires working in hazardous conditions. Miners in an underground coal mine can face several threats, such as methane explosions or rockbursts. To provide protection for people working underground, systems for active monitoring of production processes are typically used. One of their fundamental applications is screening dangerous gas concentrations, particularly methane, in order to prevent spontaneous explosions. Therefore, the ability to predict dangerous concentrations of gases in the nearest future can be even more important than monitoring the current sensor readings.
+Coal mining requires working in hazardous conditions. Miners in an underground coal mine can face several threats, such as methane explosions or rock-burst. To provide protection for people working underground, systems for active monitoring of production processes are typically used. One of their fundamental applications is screening dangerous gas concentrations, particularly methane, in order to prevent spontaneous explosions. Therefore, the ability to predict dangerous concentrations of gases in the nearest future can be even more important than monitoring the current sensor readings.
 
-The dataset contains raw data collected at an underground coal mine. It consists of a timestamp and measurements collected each second. The considered task related to this dataset is to construct a model capable of predicting dangerous concentrations of methane at longwalls of a coal mine in a chosen time horizon. In case of a classification task, the model has to predict whether the methane concentration for three methane meters exceeds a chosen threshold within a chosen period of time. In case of a regression task, it is required to predict the value of methane concentration for the selected methane meters.
+The dataset contains raw data collected at an underground coal mine. It consists of a data stamp and measurements collected each second. The considered task related to this dataset is to construct a model capable of predicting dangerous concentrations of methane at longwalls of a coal mine in a chosen time horizon. Therefore, in case of a classification task, the model has to predict whether the methane concentration for three methane meters exceeds the chosen threshold within the chosen period of time. In case of a regression task, it is required to predict the value of methane concentration for the selected methane meters.
 
-Attribute Information:
+### Attribute Information:
 
-Anemometer distant measures wind speed in meters per second and has an alarming kind.
-Anemometer measures wind speed in meters per second and has a switching-off kind.
-Anemometer measures wind speed in meters per second and has a switching-off kind.
-Temperature measures temperature in degrees Celsius and has a registering kind.
-Humidity measures relative humidity in percentage and has a registering kind.
-Barometer measures atmospheric pressure in hectopascals and has a registering kind.
-Temperature measures temperature in degrees Celsius and has a registering kind.
-Humidity measures relative humidity in percentage and has a registering kind.
-Barometer measures atmospheric pressure in hectopascals and has a registering kind.
-Methane Meter distant measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter target sensor measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter target sensor measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter target sensor measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-Methane Meter measures methane concentration in percentage and has a switching-off kind with alarm and warning thresholds.
-High Concentration Methane Meter measures methane concentration in percentage and has a registering kind.
-Sensor for Pressure Difference measures pressure difference on the methane drainage flange in pascals and has a registering kind.
-Sensor for Pressure Difference measures pressure difference on the methane drainage flange in pascals and has a registering kind.
-Pressure Inside the Methane Drainage Pipeline measures pressure in kilopascals and has a registering kind.
-Temperature Inside the Pipeline measures temperature in degrees Celsius and has a registering kind.
-Methane Delivery calculates methane delivery according to CM, CR, P, and TC in cubic meters per minute and has a registering kind.
-Current of the Left Cutting Head of the Cutter Loader measures electric current in amperes.
-Current of the Right Cutting Head of the Cutter Loader measures electric current in amperes.
-Current of the Left Haulage in the Cutter Loader measures electric current in amperes.
-Current of the Right Haulage in the Cutter Loader measures electric current in amperes.
-Current of the Hydraulic Pump Engine in the Cutter Loader measures electric current in amperes.
-Driving Direction indicates the direction of the cutter loader, with one being left and zero or point five being right.
-Cutter Loader Speed measures speed in hertz, which is then converted to meters per minute.
+Anemometer (distant) measures wind speed in meters per second. It is an alarming sensor type. Another anemometer measures wind speed in meters per second and is a switching off sensor type. A third anemometer also measures wind speed in meters per second and is a switching off sensor type.
 
-Keywords: coal mining, methane concentration, gas sensors, prediction, machine learning, safety, underground mining, hazardous conditions, explosive risk.
+Temperature is measured in degrees Celsius by a temperature sensor type, which is a registering kind. Humidity is measured in percentage relative humidity by a humidity sensor type, which is a registering kind. Barometer measures atmospheric pressure in hectopascals by a barometer sensor type, which is a registering kind.
+
+Methane meter measures methane concentration in percentage of methane. It is a switching off sensor type with a threshold value for alarm and warning. There are several methane meters, each with its own threshold values.
+
+High concentration methane meter measures methane concentration in percentage of methane. It is a registering sensor type. Sensor for pressure difference on the methane drainage flange measures pressure difference in pascals. It is a registering sensor type. Pressure inside the methane drainage pipeline is measured in kilopascals by a pressure sensor type, which is a registering kind. Temperature inside the pipeline is measured in degrees Celsius by a temperature sensor type, which is a registering kind. Methane delivery is calculated according to certain parameters and is measured in cubic meters per minute. It is a registering sensor type.
+
+Current of the left cutting head of the cutter loader is measured in amperes. Current of the right cutting head of the cutter loader is also measured in amperes. Current of the left haulage in the cutter loader is measured in amperes. Current of the right haulage in the cutter loader is measured in amperes. Current of the hydraulic pump engine in the cutter loader is measured in amperes. Driving direction is either left or right. Cutter loader speed is measured in hertz.
+
+Keywords: coal mining, methane concentration, gas sensors, prediction model, hazardous conditions, underground coal mine.

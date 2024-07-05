@@ -1,41 +1,24 @@
-Blocks 
+Blocks Dataset Information
 
-Tags: Life Science, Medicine, Partial Label Ranking 
+The dataset consists of examples from fifty-four distinct documents, with each observation concerning one block. All attributes are numeric and are in a format readable by C4.5. There are no missing values in the dataset.
 
-Features: 
-Height of the Block 
-Length of the Block 
-Area of the Block 
-Eccentricity of the Block 
-Percentage of Black Pixels within the Block 
-Percentage of Black Pixels after the Application of the Run Length Smoothing Algorithm 
-Mean Number of White-Black Transitions 
-Total Number of Black Pixels in the Original Bitmap of the Block 
-Total Number of Black Pixels in the Bitmap of the Block after the Run Length Smoothing Algorithm 
-Number of White-Black Transitions in the Original Bitmap of the Block 
+Additional Variable Information
 
-Scraped Data: 
-Dataset Information 
-Additional Information 
-The data set consists of observations, each concerning one block extracted from fifty-four distinct documents. All attributes are numeric and presented in a format readable by C4.5. This dataset does not have any missing values.
+The dataset includes the following variables:
 
-Additional Variable Information 
-The height of the block is an integer value representing the block's height. 
-The length of the block is an integer value representing the block's length. 
-The area of the block is an integer value calculated by multiplying the height and length of the block. 
-The eccentricity of the block is a continuous value representing the ratio of the length to the height of the block. 
-The percentage of black pixels within the block is a continuous value calculated by dividing the total number of black pixels by the area of the block. 
-The percentage of black pixels after the application of the run length smoothing algorithm is a continuous value calculated by dividing the total number of black pixels after the algorithm by the area of the block. 
-The mean number of white-black transitions is a continuous value calculated by dividing the total number of black pixels by the number of white-black transitions. 
-The total number of black pixels in the original bitmap of the block is an integer value. 
-The total number of black pixels in the bitmap of the block after the run length smoothing algorithm is an integer value. 
-The number of white-black transitions in the original bitmap of the block is an integer value.
+* Height of the block, which is an integer value representing the block's height.
+* Length of the block, which is an integer value representing the block's length.
+* Area of the block, which is an integer value calculated by multiplying the height and length of the block.
+* Eccentricity of the block, which is a continuous value representing the block's eccentricity, calculated by dividing the length by the height.
+* Percentage of black pixels within the block, which is a continuous value representing the percentage of black pixels in the original bitmap of the block, calculated by dividing the total number of black pixels by the area of the block.
+* Percentage of black pixels after the application of the Run Length Smoothing Algorithm, which is a continuous value representing the percentage of black pixels in the bitmap of the block after the algorithm is applied, calculated by dividing the total number of black pixels after the algorithm by the area of the block.
+* Mean number of white-black transitions, which is a continuous value representing the mean number of white-black transitions in the original bitmap of the block, calculated by dividing the total number of black pixels by the number of white-black transitions.
+* Total number of black pixels in the original bitmap of the block, which is an integer value.
+* Total number of black pixels in the bitmap of the block after the Run Length Smoothing Algorithm, which is an integer value.
+* Number of white-black transitions in the original bitmap of the block, which is an integer value.
 
-Class Labels 
-Text 
-Horizontal Line 
-Graphic 
-Vertical Line 
-Picture 
+Class Labels
 
-Keywords: Blocks, Life Science, Medicine, Partial Label Ranking, Run Length Smoothing Algorithm, Bitmap, White-Black Transitions, Pixel.
+The dataset includes the following class labels: text, horizontal line, graphic, vertical line, and picture.
+
+Keywords: blocks, document analysis, image processing, feature extraction, classification.

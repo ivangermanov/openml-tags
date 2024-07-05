@@ -1,16 +1,12 @@
-Machine Learning, Mathematics 
+Name: KDD Cup 09 Uppercase Seed Four
 
-Subsampling of the dataset KDD Cup 09 up selling 
+Tags: Subsampling of the dataset KDD Cup 09 Uppercase with seed equals Four
 
-This dataset has been generated through subsampling of the original KDD Cup 09 up selling dataset, which contains forty-four thousand one hundred eighty-six instances. The subsampling process involved randomly selecting a specified number of rows, columns, and classes from the original dataset while ensuring that the resulting dataset maintains a similar distribution of classes.
+Generated with the following source code:
 
-The subsampling function takes into account several parameters, including the maximum number of rows, columns, and classes desired in the subsampled dataset, as well as an option to stratify the sampling based on the class distribution. In this case, the function was called with a seed value of four, a maximum of two thousand rows, one hundred columns, and ten classes, with stratification enabled.
-
-The subsampling process began by uniformly sampling classes from the original dataset. Since there were more than ten unique classes, the function selected ten classes based on their frequency of occurrence in the original dataset. It then selected the instances corresponding to these chosen classes.
-
-Next, the function uniformly sampled columns from the selected instances. Since there were more than one hundred columns, it chose one hundred columns randomly. Finally, it uniformly sampled instances from the selected columns, ensuring that the resulting dataset had a similar class distribution as the original dataset.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data.
 
 Features: 
-Var Six, Var Thirteen, Var Twenty-One, Var Twenty-Two, Var Twenty-Four, Var Twenty-Five, Var Twenty-Eight, Var Thirty-Five, Var Thirty-Eight, Var Fifty-Seven, Var Sixty-Five, Var Seventy-Three, Var Seventy-Four, Var Seventy-Six, Var Seventy-Eight, Var Eighty-One, Var Eighty-Three, Var Eighty-Five, Var One Nine, Var One Twelve, Var One Thirteen, Var One Nineteen, Var One Twenty-Three, Var One Twenty-Five, Var One Twenty-Six, Var One Thirty-Two, Var One Thirty-Three, Var One Thirty-Four, Var One Forty, Var One Forty-Four, Var One Forty-Nine, Var One Fifty-Three, Var One Sixty, Var One Sixty-Three, Var One Ninety-Four, Var One Ninety-Six, Var Two Zero One, Var Two Zero Three, Var Two Zero Five, Var Two Zero Seven, Var Two Zero Eight, Var Two Ten, Var Two Eleven, Var Two Eighteen, Var Two Twenty-One, Var Two Twenty-Three, Var Two Twenty-Five, Var Two Twenty-Seven, Var Two Twenty-Nine, Up Selling 
+Var Six, Var Thirteen, Var Twenty One, Var Twenty Two, Var Twenty Four, Var Twenty Five, Var Twenty Eight, Var Thirty Five, Var Thirty Eight, Var Fifty Seven, Var Sixty Five, Var Seventy Three, Var Seventy Four, Var Seventy Six, Var Seventy Eight, Var Eighty One, Var Eighty Three, Var Eighty Five, Var One Zero Nine, Var One One Two, Var One One Three, Var One One Nine, Var One Two Three, Var One Two Five, Var One Two Six, Var One Three Two, Var One Three Three, Var One Three Four, Var One Four Zero, Var One Four Four, Var One Four Nine, Var One Five Three, Var One Six Zero, Var One Six Three, Var One Nine Four, Var One Nine Six, Var Two Zero One, Var Two Zero Three, Var Two Zero Five, Var Two Zero Seven, Var Two Zero Eight, Var Two One Zero, Var Two One One, Var Two One Eight, Var Two Two One, Var Two Two Three, Var Two Two Five, Var Two Two Seven, Var Two Two Nine, Uppercase
 
-Keywords: machine learning, mathematics, subsampling, dataset, stratification, class distribution
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Choice, Uppercase

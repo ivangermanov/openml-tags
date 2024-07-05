@@ -1,0 +1,11 @@
+Weather Saaleaue Tags: Weather measures from Saaleaue provided by the Max Planck Institute for Biogeochemistry
+
+Several weather measures are provided by the Max Planck Institute for Biogeochemistry from the Weather Station on Top of the Roof of the Institute Building. We have assembled all the files available as of a certain date on a specific website.
+
+Preprocessing involved several steps. Firstly, the column named 'Date Time' was renamed to 'date'. Then, the date was parsed with a specific format and converted to a string with a default format from pandas. Next, the string '********' in the column 'Rn' was replaced with NaN and the column was casted to float. Additionally, values of -9999 were replaced with nan, as they seem to indicate a problem with the measure. Furthermore, it appears that some measures only started to be collected later in the year of two thousand and two.
+
+Columns with characters that cannot be encoded with encoding utf eight were also renamed.
+
+The dataset features a range of weather-related variables, including date, air pressure, temperature, relative humidity, specific humidity, potential temperature, dew point temperature, maximum vapor pressure, actual vapor pressure, vapor pressure deficit, water vapor concentration, air density, wind velocity, wind direction, rainfall, shortwave downward radiation, shortwave duration, temperature radiation, net radiation, and soil temperatures and moisture at various depths.
+
+Keywords: weather measures, Saaleaue, Max Planck Institute, biogeochemistry, weather station, data preprocessing, weather variables.

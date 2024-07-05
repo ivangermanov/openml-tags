@@ -1,17 +1,11 @@
-Subsampling of the dataset RL with Seed Four Thousand One Hundred Sixty 
+Name: Subsample of the RL Dataset with Four Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-This dataset has been generated through a process of subsampling from the original RL dataset, which consisted of Forty Four Thousand One Hundred Sixty samples. The subsampling has been performed using a random number generator with a seed value of four.
+Tags: Subsampling of the RL dataset with seed equal to four, maximum number of rows equal to two thousand, maximum number of columns equal to one hundred, maximum number of classes equal to ten, and stratification enabled
 
-The resulting dataset has been limited to a maximum of Two Thousand rows and One Hundred columns. Additionally, the number of classes has been capped at Ten. 
+Generated with the following source code:
 
-The subsampling process involved uniformly sampling classes from the original dataset. Where there were more than Ten unique classes, the selection was made based on the frequency of each class. This ensured that the sampled classes were representative of the original distribution.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses the NumPy random default generator to ensure reproducibility. The function first selects a subset of classes based on their frequency in the dataset, and then selects the corresponding rows. If the number of columns exceeds the maximum allowed, it uniformly samples the columns. Finally, if the number of rows exceeds the maximum allowed, it uses stratified sampling to select the rows.
 
-Once the classes had been selected, the corresponding rows were extracted from the original dataset. The columns were then uniformly sampled, with the selection being made randomly without replacement. 
+The resulting dataset has ten classes and one hundred columns. The features include various variables, such as V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, and V Twenty-Two, as well as the class label.
 
-If the resulting dataset still exceeded the maximum row limit, a further sampling step was performed using stratified sampling. This ensured that the final dataset retained the same class distribution as the original.
-
-The features of the resulting dataset include various variables, including V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, and V Twenty-Two, as well as the class label.
-
-Machine Learning, Mathematics
-
-Keywords: Subsampling, Random Number Generator, Class Distribution, Stratified Sampling, Feature Selection
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row selection, reproducibility

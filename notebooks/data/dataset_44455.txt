@@ -1,11 +1,17 @@
-Road Safety Seed Two Dataset 
+Name: Road Safety
 
-This dataset is a subsampled version of the Road Safety dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the resulting dataset has a maximum of ten classes. 
+Tags: Subsampling of the dataset Road Safety with seed equals two, args nrows max equals two thousand, args ncols max equals one hundred, args nclasses max equals ten, args no stratify equals True
 
-The original dataset had more than four hundred forty-one thousand rows, but this subsampled version has a maximum of two thousand rows. Similarly, the number of columns has been reduced from the original to a maximum of one hundred columns. 
+Generated with the following source code:
 
-The subsampling process also involved selecting a specified number of columns uniformly at random, and then selecting the corresponding rows based on the sampled classes. This ensured that the resulting dataset has a balanced representation of all the sampled classes.
+This function subsamples the Road Safety dataset. It takes in a seed value, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-The dataset includes various features related to road safety, including vehicle reference, vehicle type, vehicle maneuver, location, and other relevant details. It also includes information about casualties, such as age, sex, and pedestrian movement.
+The function first uniformly samples classes from the dataset. If the number of unique classes exceeds the maximum number of classes, it selects the required number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the dataset accordingly.
 
-Machine Learning, Mathematics
+Next, it uniformly samples columns from the dataset. If the number of columns exceeds the maximum number of columns, it selects the required number of columns randomly. It then filters the dataset to include only the selected columns.
+
+Finally, if the number of rows exceeds the maximum number of rows, it stratifies the dataset accordingly and selects a subset of the required size.
+
+Features: Vehicle Reference, Vehicle Type, Vehicle Manoeuvre, Vehicle Location, Hit Object in Carriageway, Hit Object off Carriageway, Was Vehicle Left Hand Drive, Age of Driver, Age Band of Driver, Engine Capacity, Propulsion Code, Age of Vehicle, Location Easting, Location Northing, Longitude, Latitude, Police Force, Number of Vehicles, Number of Casualties, Local Authority, First Road Number, Second Road Number, Urban or Rural Area, Vehicle Reference, Casualty Reference, Sex of Casualty, Age of Casualty, Age Band of Casualty, Pedestrian Location, Pedestrian Movement, Casualty Type, Casualty IMD Decile, Sex of Driver
+
+Keywords: Road Safety, Subsampling, Dataset, Stratification, Feature Selection

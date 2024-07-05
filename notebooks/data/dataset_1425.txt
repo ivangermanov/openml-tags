@@ -1,11 +1,17 @@
-**Adult Dataset**
+Adult Dataset
 
-Tags: Chemistry, Life Science
+Tags: LibSVM, Adult Income Prediction
 
-This dataset is part of the LIBSVM data repository. Please cite http://archive.ics.uci.edu/ml/datasets/Adult for further information.
+Source: Original dataset from LIBSVM data repository, date unknown
 
-The original Adult dataset contains fourteen features, comprising six continuous and eight categorical attributes. To preprocess the data, continuous features were discretized into quantiles, with each quantile represented by a binary feature. Additionally, categorical features with multiple categories were converted into separate binary features. Detailed information on the conversion process for each feature can be accessed through the following link: http://research.microsoft.com/en-us/um/people/adult.zip.
+Please cite: UCI Machine Learning Repository - Adult Dataset
 
-The dataset includes various attributes, including those related to demographics, employment, education, and income levels.
+This dataset originates from the LIBSVM data repository. It has undergone preprocessing from the original Adult data set, which contained continuous and categorical features. In this version, continuous features have been discretized into quantiles, with each quantile represented by a binary feature. Categorical features have been converted to multiple binary features, one for each category. Detailed information on the feature conversion process can be found at the beginning of each file from the provided Microsoft Research link.
 
-Keywords: Adult dataset, LIBSVM, categorical features, continuous features, binary representation, preprocessing.
+The dataset is used for predicting adult income levels based on various demographic and socioeconomic factors. It has been widely used in machine learning research and benchmarking. The original data contained information such as age, education, occupation, and other relevant attributes that could influence an individual's income.
+
+The features in this dataset are represented as numerical attributes, labeled from att_1 to att_124. These attributes correspond to the binary representations of the original features after preprocessing. While the exact meaning of each attribute is not provided in this description, they collectively capture the information necessary for income prediction tasks.
+
+This dataset serves as a valuable resource for researchers and practitioners working on classification problems, particularly in the domain of income prediction and socioeconomic analysis. It provides a standardized benchmark for evaluating machine learning algorithms and comparing their performance on real-world data.
+
+Keywords: income prediction, binary classification, socioeconomic data, machine learning benchmark, feature discretization, adult demographics

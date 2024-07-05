@@ -1,20 +1,11 @@
-Pumadyn32nh 
-Tags: Demographics, History 
+**Data Description**
+A realistic simulation of the dynamics of a Puma 560 robot arm is presented in this dataset. The task is to predict the angular acceleration of one of the robot arm's links, which is a nonlinear and high-noise task. The simulator takes as input the angular positions, velocities, and torques, as well as other dynamic parameters of the Puma arm. The goal is to predict the acceleration of the sixth link.
 
-This dataset provides a realistic simulation of the dynamics of a Puma 560 robot arm. The primary objective of this dataset is to predict the angular acceleration of one of the robot arm's links, which is a highly nonlinear task with significant noise levels. The simulator takes into account various inputs, including the angular positions, velocities, and torques, as well as other dynamic parameters of the Puma arm.
+**Attribute Description**
+The attributes in this dataset include the angular positions of links one to six, the angular velocities of links one to six, the torques at joints one to five, the changes in mass of links one to five, the changes in length of links one to five, and the changes in viscous friction of links one to five. The target feature is the acceleration of the sixth link.
 
-The dataset consists of several attributes that describe the robot arm's dynamics. These include the angular positions of links one to six, represented by theta one through theta six; the angular velocities of links one to six, denoted by theta d one through theta d six; the torques applied at joints one to five, represented by tau one through tau five; and changes in mass, length, and viscous friction of links one to five, denoted by dm one through dm five, da one through da five, and db one through db five, respectively. The ultimate goal is to predict the acceleration of link six, represented by theta dd six.
+The attributes are comprised of the following: angular position of link one, angular position of link two, angular position of link three, angular position of link four, angular position of link five, angular position of link six, angular velocity of link one, angular velocity of link two, angular velocity of link three, angular velocity of link four, angular velocity of link five, angular velocity of link six, torque at joint one, torque at joint two, torque at joint three, torque at joint four, torque at joint five, change in mass of link one, change in mass of link two, change in mass of link three, change in mass of link four, change in mass of link five, change in length of link one, change in length of link two, change in length of link three, change in length of link four, change in length of link five, change in viscous friction of link one, change in viscous friction of link two, change in viscous friction of link three, change in viscous friction of link four, change in viscous friction of link five, and acceleration of link six.
 
-Features: 
-theta one, theta two, theta three, theta four, theta five, theta six, 
-angular velocity one, angular velocity two, angular velocity three, 
-angular velocity four, angular velocity five, angular velocity six, 
-torque one, torque two, torque three, torque four, torque five, 
-change in mass one, change in mass two, change in mass three, 
-change in mass four, change in mass five, change in length one, 
-change in length two, change in length three, change in length four, 
-change in length five, change in viscous friction one, change in viscous friction two, 
-change in viscous friction three, change in viscous friction four, 
-change in viscous friction five, acceleration of link six
+**Tags:** pumadyn32nh
 
-Keywords: Robot Arm Dynamics, Angular Acceleration, Nonlinear Task, Noise Levels, Dynamic Parameters, Simulation
+**Keywords:** robot arm dynamics, angular acceleration, nonlinear task, high-noise simulation, Puma 560 robot arm.

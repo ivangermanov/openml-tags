@@ -1,64 +1,58 @@
-**Meta-Album Pan-Nuke Dataset (Extended)**
-The Pan-Nuke dataset is a semi-automatically generated segmentation and classification task of nuclei. The dataset contains images of nineteen different tissue types. For the Meta-Album meta-dataset, even though this dataset was designed as a segmentation task, we were able to transform it into a tissue classification task since we had the tissue type for each sample in the dataset. We also resized the images to one hundred twenty-eight by one hundred twenty-eight pixels and applied stain normalization to avoid bias and remove some spurious features.
+**Meta Album PanNuke Dataset (Extended)**
 
-### **Dataset Details**
+The PanNuke dataset is a semi-automatically generated segmentation and classification task of nuclei. The dataset contains images of nineteen different tissue types. For the Meta Album meta-dataset, even though this dataset was designed as a segmentation task, we were able to transform it into a tissue classification task since we had the tissue type for each sample in the dataset. We also resized the images to a uniform size and applied stain normalization to avoid bias and remove some spurious features.
+
+**Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/PNU.png)
 
-**Meta Album ID**: MCRPNU
+**Meta Album ID**: Meta Album PanNuke
 **Meta Album URL**: https://meta-album.github.io/datasets/PNU.html
-**Domain ID**: MCR
+**Domain ID**: Microscopic
 **Domain Name**: Microscopic
-**Dataset ID**: PNU
-**Dataset Name**: Pan-Nuke
+**Dataset ID**: PanNuke
+**Dataset Name**: PanNuke
 **Short Description**: Nineteen Human Tissues Dataset
-**Number of Classes**: nineteen
-**Number of Images**: five thousand five hundred thirty
-**Keywords**: microscopic, human tissues
-**Data Format**: images
-**Image Size**: one hundred twenty-eight by one hundred twenty-eight pixels
-**License (original data release)**: Attribution-NonCommercial-ShareAlike four point zero International
-**License URL (original data release)**: https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke https://creativecommons.org/licenses/by-nc-sa/4.0/
-**License (Meta-Album data release)**: Attribution-NonCommercial-ShareAlike four point zero International
+**Number of Classes**: Nineteen
+**Number of Images**: Multiple
+**Keywords**: Microscopic, Human Tissues
+**Data Format**: Images
+**Image Size**: Uniform
+**License (original data release)**: Attribution-NonCommercial-ShareAlike
+**License URL (original data release)**: https://creativecommons.org/licenses/by-nc-sa/4.0/
+**License (Meta-Album data release)**: Attribution-NonCommercial-ShareAlike
 **License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by-nc-sa/4.0/
-**Source**: Pan-Nuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification
+**Source**: PanNuke: An Open Pan-Cancer Histology Dataset for Nuclei Instance Segmentation and Classification
 **Source URL**: https://jgamper.github.io/PanNukeDataset/
 
-### **Cite this dataset**
+**Cite this dataset**
 
-@inproceedings{pannuke,
-title={Pan-Nuke: an open pan-cancer histology dataset for nuclei instance segmentation and classification},
-booktitle={European Congress on Digital Pathology},
-pages={eleven to nineteen},
-year={}
-organization={Springer}
-}
+@inproceedings{pannuke, 
+title={PanNuke: an open pan-cancer histology dataset for nuclei instance segmentation and classification}, 
+booktitle={European Congress on Digital Pathology}, 
+pages={multiple}, 
+year={published}, 
+organization={Springer} }
 
-@article{pannukedatasetextension,
-title={Pan-Nuke Dataset Extension, Insights and Baselines},
-journal={arXiv preprint arXiv},
-year={}
-}
+@article{pannuke-extension, 
+title={PanNuke Dataset Extension, Insights and Baselines}, 
+journal={arXiv preprint arXiv}, 
+year={published} }
 
-### **Cite Meta-Album**
+**Cite Meta-Album**
 
-@inproceedings{meta-album,
-title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-url = {https://meta-album.github.io/},
-year = {}
-}
+@inproceedings{meta-album, 
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, 
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, 
+url = {https://meta-album.github.io/}, 
+year = {published} }
 
-### **More**
+**More**
 
-For more information on the Meta-Album dataset, please see the NeurIPS paper.
-For details on the dataset preprocessing, please see the supplementary materials.
-Supporting code can be found on our GitHub repository.
-Meta-Album on Papers with Code.
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
 
-### **Other versions of this dataset**
+**Other versions of this dataset**
 
-Micro
-Mini
+Micro, Mini
 
-Keywords: Pan-Nuke, microscopic, human tissues, nuclei instance segmentation, classification.
+Keywords: Microscopic, Human Tissues, Histology, Nuclei, Segmentation, Classification

@@ -1,39 +1,34 @@
-Tags: **Burst Header Packet**
+**Burst Header Packet (BHP) Flooding Attack on Optical Burst Switching (OBS) Network Dataset**
 
-The Burst Header Packet Flooding Attack on Optical Burst Switching Network dataset is a collection of data aimed at addressing one of the primary challenges in identifying the risks of Burst Header Packet flood attacks in Optical Burst Switching networks, namely the scarcity of reliable historical data.
+Tags: **Dataset**
+
+One of the primary challenges in identifying the risks of the Burst Header Packet flooding attacks in Optical Burst Switching networks is the scarcity of reliable historical data.
 
 ### Attribute Information:
 
-The dataset consists of attributes that provide insight into various aspects of the network, including the performance of individual nodes and the overall network behavior.
+The dataset consists of various attributes that provide insights into the behavior of nodes in the network. These attributes include:
 
-The Node attribute represents the identification number of the sending node.
+* Node: This refers to the number of the sending node.
+* Utilized Bandwidth Rate: This is the normalization of used bandwidth.
+* Packet Drop Rate: This is the normalization of the percentage of lost packet rate.
+* Reserved Bandwidth: This is the initial reserved bandwidth assigned to each node.
+* Average Delay Time Per Second: This is the average delay time for each node, which is also known as the end-to-end delay.
+* Percentage of Lost Packet Rate: This is the percentage of packets dropped for each node.
+* Percentage of Lost Byte Rate: This is the percentage of lost byte rate for each node.
+* Packet Received Rate: This is the total received packets per second for each node based on the reserved bandwidth.
+* Used Bandwidth: This is the amount of bandwidth used by each node from the reserved bandwidth.
+* Lost Bandwidth: This is the amount of lost bandwidth by each node from the reserved bandwidth.
+* Packet Size in Bytes: This is the packet size in bytes assigned specifically for each node to transmit.
+* Packet Transmitted: This is the total transmitted packets per second for each node based on the reserved bandwidth.
+* Packet Received: This is the total received packets per second for each node based on the reserved bandwidth.
+* Packet Lost: This is the total lost packets per second for each node, which is based on the lost bandwidth.
+* Transmitted Bytes: This is the total transmitted bytes per second for each node.
+* Received Bytes: This is the total received bytes per second for each node based on the reserved bandwidth.
+* Ten-Run Average Drop Rate: This is the average packet drop rate for ten consecutive iterations.
+* Ten-Run Average Bandwidth Use: This is the average bandwidth utilized for ten consecutive iterations.
+* Ten-Run Delay: This is the average delay time for ten consecutive iterations.
+* Node Status: This is the initial classification of nodes based on packet drop rate, used bandwidth, and average delay time per second. The node status can be classified as behaving, not behaving, or potentially not behaving.
+* Flood Status: This is the percentage of flood per node based on packet drop rate, which indicates the level of BHP flood attack.
+* Class: This is the final classification of nodes based on packet drop rate, reserved bandwidth, iteration number, used bandwidth, and packet drop rate.
 
-Utilized Bandwidth Rate is a normalized measure of the used bandwidth.
-
-Packet Drop Rate is a normalized measure of the percentage of lost packets.
-
-Reserved Bandwidth refers to the initial bandwidth allocated to each node, which is determined by the user during experiments.
-
-Average Delay Time Per Second measures the average delay time for each node, also known as end-to-end delay.
-
-Percentage Of Lost Packet Rate and Percentage Of Lost Byte Rate represent the percentage of packets and bytes lost for each node, respectively.
-
-Packet Received Rate measures the total number of packets received per second for each node based on the reserved bandwidth.
-
-Used Bandwidth and Lost Bandwidth represent the actual bandwidth used and lost by each node, respectively.
-
-Packet Size Byte measures the size of packets in bytes, taking into account the IP header and UDP header.
-
-Packet Transmitted, Packet Received, and Packet Lost represent the total number of packets transmitted, received, and lost per second for each node, respectively.
-
-Transmitted Byte and Received Byte represent the total number of bytes transmitted and received per second for each node, respectively.
-
-Ten Run Average Drop Rate, Ten Run Average Bandwidth Use, and Ten Run Delay represent the average packet drop rate, bandwidth utilization, and delay time over ten consecutive iterations, respectively.
-
-Node Status is an initial classification of nodes based on packet drop rate, used bandwidth, and average delay time, categorized as Behaving, Not Behaving, or Potentially Not Behaving.
-
-Flood Status measures the percentage of flood per node based on packet drop rate, indicating medium and high levels of Burst Header Packet flood attack.
-
-Class represents the final classification of nodes based on packet drop rate, reserved bandwidth, iteration number, used bandwidth, and packet drop rate.
-
-Keywords: Burst Header Packet, Optical Burst Switching, Flooding Attack, Network Performance, Packet Drop Rate, Bandwidth Utilization.
+Keywords: Optical Burst Switching, Burst Header Packet, Flooding Attack, Network Security, Packet Drop Rate, Bandwidth Utilization.

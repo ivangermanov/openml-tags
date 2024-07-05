@@ -1,29 +1,39 @@
-Smartphone-Based Recognition of Human Activities 
+Smartphone-Based Recognition of Human Activities
 
-Tags: Economics, Sport, Study 
+Tags: sport, study 7, study 88, study 93
 
-Source: UCI 
+Source: UCI
 
-The Smartphone-Based Recognition of Human Activities dataset was created to recognize human activities and postural transitions using smartphones. The experiment involved a group of volunteers who performed a protocol of activities composed of six basic activities: three static postures (standing, sitting, and lying) and three dynamic activities (walking, walking downstairs, and walking upstairs). The experiment also included postural transitions that occurred between the static postures. All the participants wore a smartphone on their waist during the experiment execution.
+Please cite: Transition-Aware Human Activity Recognition Using Smartphones. Neurocomputing. Springer.
 
-The smartphone captured three-axial linear acceleration and three-axial angular velocity at a constant rate using its embedded accelerometer and gyroscope. The sensor signals were pre-processed by applying noise filters and then sampled in fixed-width sliding windows. The sensor acceleration signal was separated into body acceleration and gravity using a Butterworth low-pass filter. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+The experiments were carried out with a group of volunteers within an age bracket. They performed a protocol of activities composed of six basic activities: three static postures (standing, sitting, lying) and three dynamic activities (walking, walking downstairs, and walking upstairs). The experiment also included postural transitions that occurred between the static postures. These are: standing to sitting, sitting to standing, sitting to lying, lying to sitting, standing to lying, and lying to standing. All the participants were wearing a smartphone on the waist during the experiment execution. We captured three-axial linear acceleration and three-axial angular velocity at a constant rate using the embedded accelerometer and gyroscope of the device. The experiments were video-recorded to label the data manually.
 
-This dataset is an updated version of the UCI Human Activity Recognition Using Smartphones Dataset. This version provides the original raw inertial signals from the smartphone sensors, instead of the pre-processed signals provided in the previous version. The activity labels were also updated to include postural transitions that were not part of the previous version of the dataset.
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows. The sensor acceleration signal, which has gravitational and body motion components, was separated using a low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low-frequency components, therefore a filter with a low cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+This dataset is an updated version of the UCI Human Activity Recognition Using Smartphones Dataset. This version provides the original raw inertial signals from the smartphone sensors, instead of the ones pre-processed into windows which were provided in the previous version. This change was done in order to be able to make online tests with the raw data. Moreover, the activity labels were updated in order to include postural transitions that were not part of the previous version of the dataset.
+
+Note: From the original UCI data, the data was aggregated for each person and activity type (mean). Train and test sets are joined.
 
 Attribute Information:
 
-The dataset contains raw triaxial signals from the accelerometer and gyroscope of all the trials with participants. It also includes the labels of all the performed activities.
+* Raw triaxial signals from the accelerometer and gyroscope of all the trials with participants.
+* The labels of all the performed activities.
 
-Features:
+Features: (omitted due to unreadability)
 
-* Person
-* Activity
-* Time Body Acceleration Mean X
-* Time Body Acceleration Mean Y
-* Time Body Acceleration Mean Z
-* Time Body Acceleration Standard Deviation X
-* Time Body Acceleration Standard Deviation Y
-* Time Body Acceleration Standard Deviation Z
-* ... (other features removed due to readability issues)
+Dataset Information:
 
-Keywords: Human Activity Recognition, Smartphones, Accelerometer, Gyroscope, Postural Transitions, Machine Learning.
+* The dataset collects data from an Android smartphone positioned in the chest pocket.
+* Accelerometer data are collected from participants walking in the wild over a predefined path.
+* The dataset is intended for Activity Recognition research purposes.
+* It provides challenges for identification and authentication of people using motion patterns.
+
+Sampling frequency of the accelerometer: fastest with network connections disabled.
+
+Number of Participants: multiple.
+
+Data Format: CSV.
+
+Has Missing Values? No.
+
+Keywords: human activity recognition, smartphone sensors, accelerometer, gyroscope, postural transitions, activity recognition research.

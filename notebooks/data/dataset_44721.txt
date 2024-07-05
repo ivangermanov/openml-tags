@@ -1,48 +1,17 @@
-Jungle Chess Two Pieces Raw Endgame Complete Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+Name: Jungle Chess Two Pieces Raw Endgame Complete Seed Three
 
-Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete with Seed Equal to Three arguments number rows maximum equal to Two Thousand arguments number columns maximum equal to One Hundred arguments number classes maximum equal to Ten arguments no stratify equal to False.
+Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete generated with the following source code:
 
-Generated with the following source code:
+This function subsamples the dataset Jungle Chess Two Pieces Raw Endgame Complete. It takes in a seed value, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. The function returns a subsampled dataset.
 
-def subsample(self, seed, number rows max, number cols max, number classes max, stratified) -> Dataset:
-random number generator = numpy random default random generator with seed
-features = self features
-target variable = self target variable
+The subsample function first gets the unique classes from the target variable. If the number of unique classes is greater than the maximum number of classes, it selects a random subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Uniformly sample classes equals target variable unique values
-if length of classes is greater than number classes max:
-value counts equals target variable value counts
-selected classes equals random number generator choice of classes with size equal to number classes max replace false probability equals value counts divided by sum of value counts
-Select the indices where one of these classes is present equals target variable index target variable is in selected classes
-features equals features iloc select indices
-target variable equals target variable iloc select indices
+Next, the function uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects a random subset of columns. It then subsets the data based on the selected columns.
 
-Uniformly sample columns if required
-if length of features columns is greater than number cols max:
-column indices equals random number generator choice of range of length features columns with size equal to number cols max replace false
-sorted column indices equals sorted column indices
-selected columns equals list of features columns sorted column indices
-features equals features selected columns
-else:
-sorted column indices equals range of length features columns
+Finally, the function uniformly samples rows if required. If the number of rows is greater than the maximum number of rows, it uses stratified sampling to select a random subset of rows. It then subsets the data based on the selected rows.
 
-if length of features is greater than number rows max:
-Stratify accordingly
-target name equals target variable name
-data equals pandas concat of features and target variable along columns
-_, subset equals train test split of data with test size equal to number rows max stratify equals data target name shuffle true random state equal to seed
-features equals subset drop target name along columns
-target variable equals subset target name
+The function returns a subsampled dataset with the selected features and target variable.
 
-We need to convert categorical columns to string for OpenML
-categorical mask equals list of self categorical mask for each index in sorted column indices
-columns equals list of features columns
+Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class
 
-return Dataset technically this is not the same but it's where it was derived from 
-dataset equals self dataset 
-features equals features 
-target variable equals target variable 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Keywords: Jungle Chess, subsampling, stratification, feature selection, dataset generation
+Keywords: Jungle Chess, Subsampling, Stratified Sampling, Dataset, Features

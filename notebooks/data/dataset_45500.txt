@@ -1,23 +1,119 @@
-Timing Attack Dataset - Twenty Micro Seconds Delay - Created on Fourteenth September Two Thousand Twenty-Two
+Timing Attack Dataset: Twenty Micro Seconds Delay Created on September Fourteenth, Two Thousand Twenty-Two
 
-Tags: Chemistry, Life Science, Bleichenbacher Timing Attack
-
-This dataset was created to analyze the Bleichenbacher Timing Attack, which is a type of attack on SSL/TLS protocols. The attack takes advantage of the difference in time taken by the server to respond to different types of encrypted messages.
+Tags: Bleichenbacher Timing Attack
 
 Attribute Descriptions:
 
-The dataset contains attributes related to three types of messages: Change Cipher Spec, TLS Alert, and TCP Disconnect. Each message type has several attributes describing its characteristics.
+The dataset contains attributes related to Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages.
 
-Change Cipher Spec Messages:
-The attributes for Change Cipher Spec messages include source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, flags, window size value, window size, window size scale factor, checksum status, urgent pointer, options, option kind, option length, timestamp value, time delta, and order.
+Change Cipher Spec TCP Acknowledgement attributes include:
 
-TLS Alert Messages:
-The attributes for TLS Alert messages include source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, flags, window size value, window size, window size scale factor, checksum status, urgent pointer, options, option kind, option length, timestamp value, time delta, record content type, record length, alert message level, alert message description, and order.
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
 
-TCP Disconnect Messages:
-The attributes for TCP Disconnect messages include source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, flags, window size value, window size, window size scale factor, checksum status, urgent pointer, options, option kind, option length, timestamp value, time delta, and order.
+TLS Alert attributes include:
 
-Fold ID and Vulnerable Classes:
-The dataset also includes a fold ID and five vulnerable classes: incorrectly formatted PKCS one padding, correctly formatted PKCS one PMS message but one byte shorter, no zero in message, wrong first byte, and wrong second byte.
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* TLS Record Content Type
+* TLS Record Length
+* TLS Alert Message Level
+* TLS Alert Message Description
+* Message Order
 
-Keywords: Bleichenbacher Timing Attack, SSL/TLS protocols, Change Cipher Spec, TLS Alert, TCP Disconnect, PKCS one padding.
+TCP Disconnect attributes include:
+
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
+
+Features:
+
+* Label
+* Change Cipher Spec TCP Acknowledgement attributes
+* TLS Alert attributes
+* TCP Disconnect attributes
+
+Keywords: Timing Attack, Bleichenbacher, TCP, TLS, Change Cipher Spec, TCP Acknowledgement, TLS Alert, TCP Disconnect

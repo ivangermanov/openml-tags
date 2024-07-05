@@ -1,0 +1,9 @@
+Electricity Hourly Dataset Tags: Electricity Load Diagrams 2011-2014
+
+The dataset has no missing values. The values are in kilowatts for each fifteen-minute interval. To convert the values to kilowatt-hours, they must be divided by four. Each column represents one client. Some clients were created after 2011, and in these cases, their consumption was considered zero. All time labels refer to Portuguese hour. However, all days present ninety-six measures (twenty-four hours multiplied by four). Every year, on the March time change day, which has only twenty-three hours, the values between one am and two am are zero for all points. Every year, on the October time change day, which has twenty-five hours, the values between one am and two am aggregate the consumption of two hours. The dataset was saved as a text file using a comma-separated values format, with a semi-colon separator. The first column presents the date and time as a string in the format 'year-month-day hour:minute:second'. The other columns present float values with consumption in kilowatts.
+
+Preprocessing involved renaming the first column to 'date', dropping rows with a year less than or equal to 2011, as some clients were only registered after 2011, and most of the entries before 2011 were zero. Columns where the percentage of zero entries was greater than ten percent were also dropped, effectively removing fifty-four columns. The dataset was then resampled by summing the values of each column hourly.
+
+Features include the date and various client columns.
+
+Keywords: electricity load, hourly data, client consumption, time change, kilowatts, kilowatt-hours.

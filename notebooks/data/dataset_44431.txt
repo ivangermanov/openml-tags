@@ -1,15 +1,17 @@
-Name: Jannis Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+Subsampling of the dataset Jannis with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals True. 
 
-Tags: Earth Science, Life Science
+Generated with the following source code: 
 
-This dataset is a subsampled version of the original Jannis dataset. The subsampling process involved uniform sampling of classes and columns to reduce the dimensionality of the data.
+A function subsample takes in self, seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified as parameters. It returns a dataset. 
 
-The original dataset had over forty-four thousand instances, which were reduced to two thousand instances using uniform sampling. The number of classes was also reduced from its original value to ten classes, again using uniform sampling. Furthermore, the number of columns was reduced from its original value to one hundred columns using uniform sampling.
+The function first initializes a random number generator with the given seed. It then selects the features and target from the dataset. 
 
-To ensure that the subsampled dataset retains the characteristics of the original dataset, stratified sampling was used. This involves dividing the data into homogeneous subgroups based on the target variable and then sampling from each subgroup.
+If the number of unique classes in the target is greater than the maximum number of classes, it selects the classes to keep based on their frequency in the target. It then selects the indices where one of these classes is present and filters the features and target accordingly. 
 
-The resulting dataset has been generated using a Python script with specific parameters. These parameters include the seed value for reproducibility, the maximum number of rows, columns, and classes, and a flag indicating whether to use stratified sampling.
+If the number of columns in the features is greater than the maximum number of columns, it uniformly samples the columns to keep. 
 
-Features: 
+If the number of rows in the features is greater than the maximum number of rows, it stratifies the data accordingly and samples the rows to keep. 
 
-Keywords: Subsampling, Dimensionality Reduction, Stratified Sampling, Data Preprocessing, Machine Learning, Earth Science, Life Science.
+Finally, it converts categorical columns to string and returns a new dataset with the subsampled features, target, categorical mask, and columns.
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, random sampling.

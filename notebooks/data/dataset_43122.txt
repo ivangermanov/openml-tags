@@ -1,9 +1,5 @@
-The Rotating Hyperplane dataset is a stream generator designed to produce high-dimensional classification problems where the prediction is defined by a rotating hyperplane. This unique feature enables the introduction of smooth concept drift, achieved by gradually changing the orientation and position of the hyperplane over time. 
+The Hyperplane dataset is a concept drift stream generator that produces high-dimensional classification problems. The prediction is defined by a rotating hyperplane, which changes its orientation and position over time in a smooth manner, introducing smooth concept drift. This version of the dataset is created using the MOA library with drift parameters that control the magnitude of change after every instance within a window. The probability of reversing the change direction is fixed. The dataset contains instances with numeric features. Noise is added by randomly changing the class labels.
 
-This particular version was created using the MOA library, incorporating specific drift parameters to control the magnitude of change after each instance within a designated window. The probability of reversing the change direction remains fixed, ensuring a consistent pattern throughout. 
+Features: ten numeric attributes, class
 
-The dataset comprises an impressive number of instances, featuring ten numeric attributes and a class label. To simulate real-world scenarios, a small percentage of noise has been intentionally added by randomly altering the class labels.
-
-Features include attributes one through ten, as well as a class label.
-
-Keywords: Rotating Hyperplane, concept drift, machine learning, computer systems, classification problems, data streams, MOA library.
+Keywords: concept drift, rotating hyperplane, classification, smooth drift, numeric features, noise

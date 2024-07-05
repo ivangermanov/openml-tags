@@ -1,24 +1,21 @@
 Football Expected Goals Match Statistics
 
-Tags: Computer Systems, Machine Learning
+Tags: Context
 
-Context
+In recent years, statisticians and data scientists have been trying to come up with new ways to evaluate team performance in football. Sometimes a result is not a fair reflection on a team's performance, and this is where expected goals come in. Expected goals is a relatively new football metric, using the quality of passing and goal-scoring opportunities to rank a team's performance. Understat.com provides these statistics by using neural networks to approximate this data, and I have therefore scraped statistics for matches played between seasons to provide the following dataset.
 
-In recent years, statisticians and data scientists have been striving to develop innovative methods to assess team performance in football. Occasionally, a match result may not accurately reflect a team's overall performance, and this is where expected goals come into play. Expected goals is a relatively novel football metric that utilizes the quality of passing and goal-scoring opportunities to rank a team's performance.
+The leagues included in this representation are the English Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and Russian Football Premier League.
 
-Understat.com employs neural networks to estimate this data, and subsequently, I have compiled statistics for matches played between two specific seasons. The leagues incorporated in this representation include the English Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and the Russian Football Premier League.
+The dataset contains twenty-two columns, many of which will be self-explanatory, such as date, home team, and so on. Some of the less common features will be outlined below:
 
-Content
-
-The dataset comprises twenty-two columns, many of which are self-explanatory, such as date and home team. However, some less familiar features are outlined below:
-
-Chance represents the percentage prediction of an outcome based on expected goals. Expected Goals denotes the number of goals a team is anticipated to score based on their performance. Deep signifies the number of passes completed within an estimated twenty yards from the goal. PPDA stands for the number of passes allowed per defensive action in the opposition half. Expected Points represents the number of points a team is anticipated to achieve in this particular game.
+Chance refers to the percentage prediction of an outcome based on expected goals. Expected Goals is the number of goals a team is expected to score based on performance. Deep refers to the number of passes completed within an estimated twenty yards from goal. PPDA stands for the number of passes allowed per defensive action in the opposition half. Expected Points is the number of points a team is expected to achieve in this game.
 
 Inspiration
 
-Is the expected goals feature a precise representation of a team's performance? How can this feature be refined? Can we forecast the outcome of forthcoming games based on preceding games?
+Is the expected goals feature an accurate representation of a team's performance? How can this feature be improved? Can we predict the outcome of future games based on previous games?
 
 Features:
-Date, League, Home Team, Away Team, Home Chance Percentage, Draw Chance Percentage, Away Chance Percentage, Home Goals, Away Goals, Home Shots, Away Shots, Home Shots on Target, Away Shots on Target, Home Deep, Away Deep, Home PPDA, Away PPDA, Home Expected Points, Away Expected Points
 
-Keywords: Football, Expected Goals, Neural Networks, Team Performance, Data Analysis, Statistical Modeling
+Date, League, Home Team, Away Team, Home Chance Percentage, Draw Chance Percentage, Away Chance Percentage, Home Goals, Away Goals, Home Expected Goals, Away Expected Goals, Home Shots, Away Shots, Home Shots on Target, Away Shots on Target, Home Deep, Away Deep, Home PPDA, Away PPDA, Home Expected Points, Away Expected Points
+
+Keywords: Football, Expected Goals, Team Performance, Match Statistics, Neural Networks

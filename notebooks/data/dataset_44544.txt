@@ -1,20 +1,17 @@
-Name: Gina 
-Tags: Life Science, Statistics 
+Name: Gina Seed One, Two Thousand Rows, Ten Classes, One Hundred Columns, Stratify True
 
-Subsampling of the dataset Gina 
+Tags: Subsampling of the Gina dataset with seed one, two thousand rows, one hundred columns, ten classes, and stratify true.
+
 Generated with the following source code:
 
-This function enables the subsampling of a given dataset according to specific parameters such as the number of rows, columns, and classes. It utilizes the NumPy library to generate a random default generator based on a specified seed value.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-The function initially samples the unique classes present in the dataset and selects a specified maximum number of classes. It then filters the dataset to only include instances belonging to these selected classes.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Furthermore, the function performs uniform sampling of columns if the total number of columns exceeds a predetermined maximum. This is achieved through the use of a random choice function, which selects the desired number of column indices without replacement.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the class distribution is maintained.
 
-In addition, the function implements stratified sampling of rows according to the class distribution if the total number of rows surpasses a specified maximum. This involves concatenating the dataset with its corresponding class labels, followed by the application of a train-test split function with stratification enabled.
+Finally, it converts categorical columns to strings and returns the new dataset with the selected features, target variable, and categorical mask.
 
-Finally, the function returns a new dataset instance, comprising the subsampled data, along with the corresponding categorical mask and column information.
+Features: (skipped due to unreadability)
 
-Features: 
-V nineteen, V twenty-five, V thirty-one, V thirty-eight, V fifty-three, V fifty-seven, V sixty, V seventy-seven, V eighty-five, V one hundred eight, V one hundred nine, V one hundred twelve, V one hundred thirteen, V one hundred twenty-two, V one hundred twenty-seven, V one hundred forty-four, V one hundred fifty, V one hundred eighty-five, V two hundred six, V two hundred twenty, V two hundred twenty-eight, V two hundred thirty-nine, V two hundred forty-two, V two hundred fifty, V two hundred fifty-seven, V two hundred seventy-one, V two hundred seventy-three, V two hundred seventy-four, V two hundred seventy-five, V two hundred ninety-six, V three hundred, V three hundred thirty-one, V three hundred forty-one, V three hundred forty-seven, V three hundred fifty, V three hundred sixty-three, V three hundred sixty-six, V three hundred seventy-four, V three hundred ninety-three, V three hundred ninety-eight, V four hundred three, V four hundred seven, V four hundred ten, V four hundred thirteen, V four hundred twenty-seven, V four hundred thirty-five, V four hundred thirty-six, V four hundred forty-five, V four hundred forty-seven, V four hundred fifty-six, V four hundred fifty-seven, V four hundred eighty-one, V four hundred eighty-two, V four hundred eighty-nine, V four hundred ninety-one, V four hundred ninety-three, V five hundred one, V five hundred twenty-nine, V five hundred fifty-nine, V five hundred sixty-seven, V five hundred seventy-two, V five hundred seventy-seven, V five hundred eighty-four, V six hundred eleven, V six hundred forty-nine, V six hundred sixty, V six hundred sixty-nine, V six hundred seventy-three, V six hundred eighty, V six hundred eighty-five, V six hundred eighty-nine, V seven hundred nine, V seven hundred twenty-two, V seven hundred twenty-eight, V seven hundred twenty-nine, V seven hundred thirty-two, V seven hundred thirty-four, V seven hundred forty-nine, V seven hundred sixty-six, V seven hundred seventy, V seven hundred seventy-two, V seven hundred ninety-six, V eight hundred seven, V eight hundred fourteen, V eight hundred twenty, V eight hundred twenty-six, V eight hundred thirty-one, V eight hundred thirty-three, V eight hundred fifty-six, V eight hundred sixty-five, V eight hundred eighty-three, V eight hundred eighty-five, V eight hundred ninety-five, V nine hundred one, V nine hundred three, V nine hundred twenty-six, V nine hundred twenty-seven, V nine hundred forty-six, V nine hundred forty-seven, V nine hundred sixty-six
-
-Keywords: Subsampling, Dataset, Classes, Columns, Rows, Stratification, Sampling
+Keywords: dataset subsampling, stratified sampling, uniform random sampling, class distribution, categorical columns.

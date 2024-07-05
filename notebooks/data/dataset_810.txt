@@ -1,7 +1,14 @@
-The PBC dataset is a binarized version of the original data set. This conversion process involves taking the numeric target feature and transforming it into a two-class nominal target feature. To achieve this, the mean value is calculated, and then all instances with a lower target value are classified as positive, denoted by 'P', while all other instances are classified as negative, denoted by 'N'.
+Name: PBC
+Tags: binarized, mythbusting, study
 
-This dataset is characterized by several features, including those related to chemistry and life sciences. The PBC dataset is particularly useful for myth-busting and studying various concepts related to these fields.
+Source: Unknown - Date unknown
 
-Features include properties such as those denoted by Z1 through Z17, which are used in conjunction with the binary class feature to analyze and understand various phenomena.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: PBC dataset, binarized, chemistry, life sciences, myth-busting, studying, binary classification.
+This dataset is a modified version of an original dataset, focusing on binary classification. The transformation process involves calculating the mean of the target feature and using it as a threshold to categorize instances. Those falling below the mean are labeled as positive, while those above are considered negative. This binarization technique simplifies the original numeric target into a more straightforward two-class problem, potentially making it easier for certain machine learning algorithms to process and analyze.
+
+The dataset includes various features, though their specific meanings are not provided. These features are likely numerical or categorical variables that describe different aspects of the instances being classified. The binary classification approach allows for clear distinction between two groups within the data, which can be useful for many analytical and predictive tasks.
+
+Researchers and data scientists using this dataset should be aware of its binarized nature and consider how this transformation might impact their analyses and conclusions. It's important to reference the original dataset when citing this work, as the binarization process represents a significant modification of the initial data.
+
+Keywords: binarized dataset, binary classification, data transformation, mean threshold, positive and negative instances, feature analysis, machine learning preprocessing

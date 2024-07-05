@@ -1,19 +1,13 @@
-Name: DNA Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+Name: DNA Seed Zero Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset DNA with seed equals zero arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False
+Tags: Subsampling of the DNA dataset with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-This function takes a dataset and returns a subsampled version of it. It uses numpy's default random number generator to select a subset of the data.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of rows, columns, and classes from the original dataset. The function first selects the classes, then the columns, and finally the rows. It uses stratified sampling to ensure that the selected rows are representative of the original dataset.
 
-The function first selects a subset of the unique classes in the target variable, if there are more than ten unique classes. It does this by creating a probability distribution based on the value counts of each class and then selecting ten classes randomly using this distribution.
-
-Next, it selects a subset of the columns, if there are more than one hundred columns. It does this by choosing one hundred column indices uniformly at random.
-
-Finally, it selects a subset of the rows, if there are more than two thousand rows. It does this using scikit-learn's train test split function, which splits the data into training and testing sets based on the target variable. The stratify argument ensures that the proportion of each class in the target variable is preserved in both the training and testing sets.
-
-The resulting subsampled dataset is returned as an instance of the Dataset class.
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, columns, and classes to select, and a boolean indicating whether to use stratified sampling. It returns a new dataset with the selected rows, columns, and classes.
 
 Features: 
 
-Keywords: DNA, Subsampling, Random Selection, Stratification, Dataset
+Keywords: DNA dataset, subsampling, stratified sampling, random number generation, dataset selection.

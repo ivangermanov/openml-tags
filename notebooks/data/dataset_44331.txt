@@ -1,60 +1,74 @@
-The Meta-Album Dogs Dataset Extended 
+**Meta-Album Dogs Dataset (Extended)**
 
-The researchers from Stanford University created the original Dogs dataset, which contains more than twenty thousand images belonging to one hundred twenty breeds of dogs worldwide. The images and annotations came from ImageNet for the task of fine-grained image categorization. The number of images per class and the resolution is not balanced. Each class can have a varying number of images with a resolution ranging from one hundred x one hundred five to two thousand four hundred forty-eight x three thousand two hundred sixty-four pixels. This dataset has a little inter-class variation and a large intra-class variation due to color, pose, and occlusion. Most of the images in this dataset are taken in man-made environments leading to a significant background variation.
+Researchers from Stanford University created the original Dogs dataset, which contains more than twenty thousand images belonging to one hundred twenty breeds of dogs worldwide. The images and annotations came from ImageNet for the task of fine-grained image categorization. The number of images per class and the resolution are not balanced. Each class can have a varying number of images with a resolution ranging from one hundred by one hundred five pixels to two thousand four hundred forty-eight by three thousand two hundred sixty-four pixels. This dataset has a little inter-class variation and a large intra-class variation due to color, pose, and occlusion. Most of the images in this dataset are taken in man-made environments, leading to a significant background variation.
 
-The preprocessed version of this dataset is prepared from the original dataset by cropping the images from either side to make squared images. In case an image has a resolution lower than one hundred twenty-eight pixels, the squared images are done by either duplicating the top and bottom-most three rows or the left and right most three columns based on the orientation of the original image. These square images are then resized into one hundred twenty-eight x one hundred twenty-eight pixels using an anti-aliasing filter.
+The preprocessed version of this dataset is prepared from the original dataset by cropping the images from either side to make squared images. In case an image has a resolution lower than one hundred twenty-eight pixels, the squared images are done by either duplicating the top and bottom-most three rows or the left and right most three columns based on the orientation of the original image. These square images are then resized into one hundred twenty-eight by one hundred twenty-eight pixels using an anti-aliasing filter.
 
-### Dataset Details 
+**Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/DOG.png)
 
-**Meta Album ID:** Large Animal Dog 
-**Meta Album URL:** https://meta-album.github.io/datasets/Dog.html 
-**Domain ID:** Large Animal 
-**Domain Name:** Large Animals 
-**Dataset ID:** Dog 
-**Dataset Name:** Dogs 
-**Short Description:** Dogs dataset with different breeds of dogs 
-**Classes:** One Hundred Twenty 
-**Images:** More Than Twenty Thousand 
-**Keywords:** Dogs, Animals 
-**Data Format:** Images 
-**Image Size:** One Hundred Twenty-Eight x One Hundred Twenty-Eight 
-**License Original Data Release:** Cite to Use Dataset, Open for Research 
-**License Meta-Album Data Release:** Creative Commons Attribution NonCommercial Four Point Zero 
-**License URL Meta-Album Data Release:** https://creativecommons.org/licenses/by-nc/4.0/ 
-**Source:** Stanford Dogs Dataset 
-**Source URL:** http://vision.stanford.edu/aditya86/ImageNetDogs/ 
+**Meta Album ID**: Large Animals Dogs
 
-### Cite this Dataset 
+**Meta Album URL**: https://meta-album.github.io/datasets/Dogs.html
 
-@inproceedings{Novel Dataset for Fine-Grained Image Categorization, 
-author={}, 
-title=Novel Dataset for Fine-Grained Image Categorization, 
-booktitle=First Workshop on Fine-Grained Visual Categorization, IEEE Conference on Computer Vision and Pattern Recognition, 
-year={}, 
-month={}, 
-address={} }
+**Domain ID**: Large Animals
 
-### Cite Meta-Album 
+**Domain Name**: Large Animals
 
-@inproceedings{Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification, 
-title=Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification, 
-author={}, 
-booktitle=Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track, 
-url=https://meta-album.github.io/, 
-year={} }
+**Dataset ID**: Dogs
 
-### More 
+**Dataset Name**: Dogs
 
-For more information on the Meta-Album dataset, please see the NeurIPS Two Thousand Twenty-Two Paper 
-For details on the dataset preprocessing, please see the Supplementary Materials 
-Supporting code can be found on our GitHub Repository 
-Meta-Album on Papers with Code Meta-Album 
+**Short Description**: Dogs dataset with different breeds of dogs
 
-### Other Versions of this Dataset 
+**Number of Classes**: One hundred twenty
 
-Micro 
-Mini 
+**Number of Images**: Over twenty thousand
 
-Keywords: dogs, animals, image classification, fine-grained categorization, dataset
+**Keywords**: dogs, animals
+
+**Data Format**: images
+
+**Image Size**: One hundred twenty-eight by one hundred twenty-eight pixels
+
+**License (original data release)**: Cite to use dataset, open for research
+
+**License (Meta-Album data release)**: Creative Commons Attribution-NonCommercial 4.0
+
+**License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by-nc/4.0/
+
+**Source**: Stanford Dogs Dataset
+
+**Source URL**: http://vision.stanford.edu/aditya86/ImageNetDogs/
+
+**Cite this dataset**
+
+@inproceedings{NovelDatasetForFineGrainedImageCategorization,
+  author = {},
+  title = {Novel Dataset for Fine-Grained Image Categorization},
+  booktitle = {First Workshop on Fine-Grained Visual Categorization, IEEE Conference on Computer Vision and Pattern Recognition},
+  year = {},
+  month = {},
+  address = {}
+}
+
+**Cite Meta-Album**
+
+@inproceedings{MetaAlbumMultiDomainMetaDatasetForFewShotImageClassification,
+  title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  url = {https://meta-album.github.io/},
+  year = {}
+}
+
+**More**
+
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
+
+**Other versions of this dataset**
+
+[Micro](https://www.openml.org/d/44313)
+[Mini](https://www.openml.org/d/44298)
+
+Keywords: dogs, animals, image categorization, fine-grained, dataset, meta-dataset

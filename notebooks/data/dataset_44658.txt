@@ -1,50 +1,13 @@
-Churn Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Churn Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Churn with seed equal to zero arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False 
+Tags: Subsampling of the dataset Churn with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
 Generated with the following source code:
 
-def subsample(self, seed, NRowsMaximum equals two thousand, NColumnsMaximum equals one hundred, NClassesMaximum equals ten, stratified equals True) -> Dataset:
-randomNumberGenerator = numpy random default random generator seed
-x equals self x
-y equals self y
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments, and returns a dataset. It uses a random number generator with the given seed to uniformly sample classes and columns. If the number of unique classes is greater than nclasses max, it selects the top nclasses max classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than ncols max, it uniformly samples columns and subsets the data. If the number of rows is greater than nrows max, it uses stratified sampling to select a subset of the data.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than NClassesMaximum:
-value Counts equals y value counts 
-selected classes equals randomNumberGenerator choice classes size NClassesMaximum replace equals False probability equals value Counts over sum of value Counts 
+The function returns a dataset with the subsampled data, along with the categorical mask and column names.
 
-Select the indices where one of these classes is present 
-idxs equals y index y is in selected classes 
-x equals x iloc idxs 
-y equals y iloc idxs 
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class.
 
-Uniformly sample columns if required 
-if length of x columns is greater than NColumnsMaximum:
-column Indices equals randomNumberGenerator choice list range length of x columns size NColumnsMaximum replace equals False 
-sorted Column Indices equals sorted column Indices 
-selected Columns equals list x columns sorted Column Indices 
-x equals x selected Columns 
-else:
-sorted Column Indices equals list range length of x columns 
-
-if length of x is greater than NRowsMaximum:
-stratify accordingly 
-target Name equals y name 
-data equals pandas concatenate x y axis equals columns 
-_, subset equals train test split data test size equals NRowsMaximum stratify equals data target Name shuffle equals True random state equals seed 
-x equals subset drop target Name axis equals columns 
-y equals subset target Name 
-
-We need to convert categorical columns to string for OpenML 
-categorical Mask equals self categorical mask for i in sorted Column Indices 
-columns equals list x columns 
-return Dataset 
-technically this is not the same but it's where it was derived from 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical Mask equals categorical mask 
-columns equals columns 
-
-Keywords: subsampling, dataset, churn, stratification, sampling, classification, machine learning
+Keywords: Churn, Subsampling, Stratified Sampling, Dataset, Feature Selection.

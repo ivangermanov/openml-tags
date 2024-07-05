@@ -1,41 +1,41 @@
-Subsampling of the dataset CMC with seed equal to three, arguments number rows max equal to two thousand, arguments number columns max equal to one hundred, arguments number classes max equal to ten, and arguments no stratify equals to true.
+Subsampling of the dataset CMC with seed equals three, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true. 
 
 Generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified):
-    random number generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis
-    x equals self dot x
-    y equals self dot y
+def subsample(self, seed, nrows max, ncols max, nclasses max, stratified) -> Dataset:
+random number generator equals numpy random default random generator with seed
+x equals self x
+y equals self y
 
-    Uniformly sample classes equals y dot unique
-    If length of classes is greater than number classes maximum:
-        value counts equals y dot value counts
-        selected classes equals random number generator dot choice open parenthesis classes, size equals number classes maximum, replace equals false, probability equals value counts divided by sum of value counts close parenthesis
-        Select the indices where one of these classes is present
-        indices equals y dot index open bracket y dot is in open parenthesis selected classes close parenthesis close bracket
-        x equals x dot iloc open bracket indices close bracket
-        y equals y dot iloc open bracket indices close bracket
+Uniformly sample classes equals y unique
+if length of classes is greater than nclasses max:
+value counts equals y value counts
+selected classes equals random number generator choice classes, size equals nclasses max, replace equals false, probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present equals y index y is in selected classes
+x equals x iloc select the indices
+y equals y iloc select the indices
 
-    Uniformly sample columns if required
-    If length of x dot columns is greater than number columns maximum:
-        column indices equals random number generator dot choice open parenthesis list range open parenthesis length of x dot columns close parenthesis, size equals number columns maximum, replace equals false close parenthesis
-        sorted column indices equals sorted open parenthesis column indices close parenthesis
-        selected columns equals list x dot columns open bracket sorted column indices close bracket
-        x equals x open bracket selected columns close bracket
-    else:
-        sorted column indices equals list range open parenthesis length of x dot columns close parenthesis
+Uniformly sample columns if required
+if length of x columns is greater than ncols max:
+columns indexes equals random number generator choice list range length of x columns, size equals ncols max, replace equals false
+sorted column indexes equals sorted columns indexes
+selected columns equals list x columns sorted column indexes
+x equals x selected columns
+else:
+sorted column indexes equals list range length of x columns
 
-    If length of x is greater than number rows maximum:
-        Target name equals y dot name
-        Data equals pandas dot concat open parenthesis x, y, axis equals quote columns close quote close parenthesis
-        Subset equals sklearn model selection dot train test split open parenthesis data, test size equals number rows maximum, stratify equals data open bracket target name close bracket, shuffle equals true, random state equals seed close parenthesis
-        x equals subset dot drop open parenthesis target name, axis equals quote columns close quote close parenthesis
-        y equals subset open bracket target name close bracket
+if length of x is greater than nrows max:
+stratify accordingly target name equals y name
+data equals pandas concat x and y axis equals columns
+_, subset equals train test split data, test size equals nrows max, stratify equals data target name, shuffle equals true, random state equals seed
+x equals subset drop target name axis equals columns
+y equals subset target name
 
-    Categorical mask equals list comprehension self dot categorical mask open bracket i close bracket for i in sorted column indices
-    Columns equals list x dot columns
-    Return Dataset open parenthesis dataset equals self dot dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns close parenthesis
+We need to convert categorical columns to string for openml
+categorical mask equals list self categorical mask i for i in sorted column indexes
+columns equals list x columns
+return Dataset dataset equals self dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns
 
-Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Is Wife Working?, Husband's Occupation, Standard of Living Index, Media Exposure
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Wife's Working, Husband's Occupation, Standard of Living Index, Media Exposure, Contraceptive Method Used
 
-Keywords: subsampling, dataset, stratification, sampling, machine learning, classification
+Keywords: dataset subsampling, stratified sampling, feature selection, categorical conversion

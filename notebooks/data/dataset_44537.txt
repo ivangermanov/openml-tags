@@ -1,11 +1,19 @@
-Machine Learning and Statistics Subsampling of the dataset Dionis with Seed Four 
+Name: Dionis Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset has been generated through subsampling of the original Dionis dataset. The subsampling process involves uniformly selecting classes and columns to reduce the dimensionality of the dataset while maintaining its overall characteristics.
+Tags: Subsampling of the dataset Dionis with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to true.
 
-The subsampling function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a flag indicating whether stratification should be applied. 
+Generated with the following source code:
 
-In this case, the seed value is four, and the maximum number of rows, columns, and classes have been set to two thousand, one hundred, and ten, respectively. Additionally, stratification has been applied during the sampling process.
+This function subsamples a dataset. It takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-The resulting dataset consists of a subset of the original features, which include various variables denoted by V one through sixty, followed by the class label. 
+The function first gets the unique classes in the dataset. If there are more classes than the maximum allowed, it selects a random subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Keywords: machine learning, statistics, subsampling, dataset, dimensionality reduction, stratification.
+Next, it checks if the number of columns exceeds the maximum allowed. If so, it randomly selects a subset of columns. Otherwise, it uses all columns.
+
+Finally, if the number of rows exceeds the maximum allowed, it stratifies the data accordingly and selects a random subset of rows.
+
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
+
+Features: 
+
+Keywords: dataset subsampling, stratification, random sampling, class selection, column selection, row selection.

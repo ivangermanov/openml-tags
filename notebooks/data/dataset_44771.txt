@@ -1,17 +1,17 @@
-Name: OkCupid Stem Dataset 
+Name: OkCupid Stem
 
-Tags: Life Science, Machine Learning 
+Tags: Subsampling of the OkCupid Stem dataset with stratification
 
-Subsampling of the dataset OkCupid Stem with a specific seed value. The function takes several arguments including the maximum number of rows, columns, and classes, as well as a boolean indicating whether to use stratified sampling.
+This dataset is a subsample of the original OkCupid Stem dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniformly sampling columns and rows. The goal was to create a smaller, more manageable dataset while maintaining the overall characteristics of the original data.
 
-The function first uniformly samples classes from the unique values in the target variable, ensuring that the selected classes are representative of the overall distribution. It then selects the indices where one of these classes is present and subsets the data accordingly.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done to reduce the number of classes to a more manageable number, while ensuring that the selected classes were representative of the original data. The classes were selected using a random sampling method, with the probability of selection based on the frequency of each class in the original dataset.
 
-Next, the function uniformly samples columns if required, selecting a specified number of columns randomly without replacement. It sorts the selected column indices to maintain consistency.
+Once the classes were selected, the dataset was filtered to include only the rows where one of the selected classes was present. This resulted in a smaller dataset with a reduced number of rows.
 
-If the resulting dataset has more rows than desired, the function uses stratified splitting to reduce the dataset to the desired size while maintaining class balance.
+Next, the columns of the dataset were sampled uniformly to reduce the number of features. This was done to simplify the dataset and reduce the dimensionality of the data.
 
-Finally, the function returns a new dataset object containing the subsampled data, along with metadata including the categorical mask and column names.
+Finally, the rows of the dataset were sampled uniformly to reduce the number of samples. This was done using a stratified sampling method, which ensured that the selected samples were representative of the original data.
 
-Features: Age, Body Type, Diet, Drinks, Drugs, Education, Ethnicity, Height, Income, Location, Offspring, Orientation, Pets, Religion, Sex, Sign, Smokes, Speaks, Status, Job
+The resulting dataset consists of a subset of the original features, including age, body type, diet, and others. The dataset is designed to be a more manageable version of the original OkCupid Stem dataset, while still maintaining the overall characteristics of the data.
 
-Keywords: OkCupid, Subsampling, Stratified Sampling, Machine Learning, Life Science, Data Preprocessing
+Keywords: OkCupid Stem, subsampling, stratification, dataset reduction, feature selection.

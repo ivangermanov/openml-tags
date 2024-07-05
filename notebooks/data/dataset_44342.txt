@@ -1,60 +1,58 @@
-**Meta-Album Subcellular Human Protein Dataset (Extended)**
+**Meta Album Subcellular Human Protein Dataset (Extended)**
 
-This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification Kaggle competition. We performed two modifications to create this extended version: first, we turned the dataset into a multi-class dataset by dropping all images belonging to more than a single class and also those images that belong to classes with less than forty members; second, we converted the remaining images into RGB by dropping the yellow channel, a common practice in the competition.
+This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification competition and comprises images of human protein patterns in cells, each belonging to one or more out of twenty-eight classes. The labels correspond to protein organelle localizations.
 
-### **Dataset Details**
+For Meta Album, we performed two modifications: we turned the dataset into a multi-class dataset by dropping all images belonging to more than a single class and also those images that belong to classes with less than forty members; we converted the remaining images into RGB by dropping the yellow channel, a common practice in the competition. Finally, we resized the images from the original dataset to a uniform size.
+
+**Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/PRT.png)
 
-**Meta Album ID:** MCR PRT
-**Meta Album URL:** https://meta-album.github.io/datasets/PRT.html
-**Domain ID:** MCR
-**Domain Name:** Microscopy
-**Dataset ID:** PRT
-**Dataset Name:** Subcellular Human Protein
-**Short Description:** Subcellular protein patterns in human cells
-**Number of Classes:** twenty-one
-**Number of Images:** fifteen thousand fifty
-**Keywords:** human protein, subcellular
-**Data Format:** images
-**Image Size:** one hundred twenty-eight by one hundred twenty-eight pixels
-**License (original data release):** Creative Commons Attribution-ShareAlike three point zero
-**License URL (original data release):** https://www.proteinatlas.org/about/licence
-**License (Meta-Album data release):** Creative Commons Attribution-ShareAlike three point zero
-**License URL (Meta-Album data release):** https://www.proteinatlas.org/about/licence
-**Source:** The Human Protein Atlas
-**Source URL:** https://proteinatlas.org https://www.kaggle.com/c/human-protein-atlas-image-classification
-**Created Date:** June first, two thousand twenty-two
-**Contact Email:** meta-album@chalearn.org
-**Contact URL:** https://meta-album.github.io/
+**Meta Album ID**: MCR PRT
+**Meta Album URL**: https://meta-album.github.io/datasets/PRT.html
+**Domain ID**: MCR
+**Domain Name**: Microscopy
+**Dataset ID**: PRT
+**Dataset Name**: Subcellular Human Protein
+**Short Description**: Subcellular protein patterns in human cells
+**Number of Classes**: Twenty-One
+**Number of Images**: Fifteen Thousand and Fifty
+**Keywords**: Human Protein, Subcellular
+**Data Format**: Images
+**Image Size**: One Hundred and Twenty-Eight by One Hundred and Twenty-Eight
+**License (Original Data Release)**: Creative Commons Attribution-ShareAlike 3.0
+**License URL (Original Data Release)**: https://www.proteinatlas.org/about/licence
+**License (Meta Album Data Release)**: Creative Commons Attribution-ShareAlike 3.0
+**License URL (Meta Album Data Release)**: https://www.proteinatlas.org/about/licence
+**Source**: The Human Protein Atlas
+**Source URL**: https://proteinatlas.org https://www.kaggle.com/c/human-protein-atlas-image-classification
 
-### **Cite this dataset**
+**Cite this dataset**
 
-```
 @article{subcellular,
-  title={A subcellular map of the human proteome},
-  journal={Science},
-  publisher={American Association for the Advancement of Science}
+title={A subcellular map of the human proteome},
+journal={Science},
+volume={356},
+number={6340},
+year={2017},
+publisher={American Association for the Advancement of Science}
 }
-```
 
-### **Cite Meta-Album**
+**Cite Meta Album**
 
-```
 @inproceedings{meta-album,
-  title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-  url = {https://meta-album.github.io/}
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+url = {https://meta-album.github.io/},
+year = {2022}
 }
-```
 
-### **More**
+**More**
 
-For more information on the Meta-Album dataset, please see the NeurIPS two thousand twenty-two paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
+For more information on the Meta Album dataset, please see the NeurIPS 2022 paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta Album on Papers with Code.
 
-### **Other versions of this dataset**
+**Other versions of this dataset**
 
-[Micro](https://www.openml.org/d/44278)
-[Mini](https://www.openml.org/d/44308)
+Micro, Mini
 
-Keywords: human protein, subcellular, microscopy, protein atlas, image classification
+Keywords: Human Protein, Subcellular, Microscopy, Image Classification, Protein Atlas

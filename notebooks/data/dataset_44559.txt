@@ -1,17 +1,15 @@
-Name: Madeline Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+Name: Madeline Seed One, Two Thousand Rows, Ten Classes, One Hundred Columns, Stratify True
 
-Tags: Agriculture, Chemistry 
+Tags: Subsampling of the Madeline dataset with seed one, generated with the following source code:
 
-Subsampling of the dataset Madeline with seed equal to one arguments number rows equal to two thousand arguments number columns equal to one hundred arguments number classes equal to ten arguments no stratify equal to true generated with the following source code.
+This function subsamples the Madeline dataset, which has forty-one thousand one hundred forty-four entries. The subsampling is done with a seed of one, and the maximum number of rows is two thousand. The maximum number of columns is one hundred, and the maximum number of classes is ten. The stratified argument is set to true.
 
-The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification or not.
+The function first uniformly samples the classes, selecting ten classes from the unique classes present in the dataset. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-The function first uniformly samples classes from the unique values in the target variable, ensuring that the selected classes are representative of the overall distribution. It then selects the indices where one of these classes is present and subsets the data accordingly.
+Next, the function uniformly samples the columns, selecting one hundred columns from the total number of columns. If the number of rows is greater than two thousand, the function stratifies the data and selects a subset of two thousand rows.
 
-Next, the function uniformly samples columns from the feature set, selecting a specified number of columns without replacement. The selected columns are then used to create a new dataset.
+Finally, the function converts categorical columns to strings and returns a new dataset with the subsampled data.
 
-If the resulting dataset has more rows than the specified maximum, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is maintained.
+Features: Various columns from the Madeline dataset, including columns four, five, six, ten, thirteen, fourteen, fifteen, sixteen, twenty, twenty-four, twenty-five, twenty-six, thirty-five, thirty-nine, forty-one, forty-two, forty-five, forty-seven, fifty-three, fifty-seven, fifty-eight, sixty, sixty-two, sixty-three, sixty-five, sixty-six, seventy-one, seventy-two, seventy-three, seventy-five, seventy-six, seventy-nine, eighty-three, eighty-five, eighty-six, eighty-seven, eighty-eight, ninety-three, ninety-six, ninety-eight, ninety-nine, one hundred, one hundred two, one hundred three, one hundred nine, one hundred ten, one hundred fourteen, one hundred fifteen, one hundred sixteen, one hundred twenty-three, one hundred twenty-five, one hundred twenty-eight, one hundred thirty, one hundred thirty-seven, one hundred forty-one, one hundred forty-four, one hundred forty-six, one hundred forty-eight, one hundred fifty-one, one hundred fifty-three, one hundred fifty-five, one hundred fifty-six, one hundred fifty-seven, one hundred fifty-nine, one hundred sixty-nine, one hundred seventy, one hundred seventy-seven, one hundred seventy-eight, one hundred eighty-one, one hundred eighty-seven, one hundred eighty-eight, one hundred ninety, one hundred ninety-two, one hundred ninety-three, one hundred ninety-eight, one hundred ninety-nine, two hundred one, two hundred four, two hundred five, two hundred six, two hundred eight, two hundred nine, two hundred ten, two hundred eleven, two hundred twelve, two hundred thirteen, two hundred twenty-three, two hundred twenty-eight, two hundred twenty-nine, two hundred thirty, two hundred thirty-two, two hundred forty-one, two hundred forty-two, two hundred forty-three, two hundred forty-four, two hundred forty-six, two hundred fifty, two hundred fifty-four, two hundred fifty-eight, two hundred fifty-nine.
 
-Finally, the function returns a new dataset object, containing the subsampled data, along with relevant metadata such as the column names and categorical mask.
-
-Keywords: subsampling, dataset, stratification, feature selection, class distribution.
+Keywords: Madeline dataset, subsampling, stratification, class selection, column selection, dataset reduction.

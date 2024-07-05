@@ -1,11 +1,10 @@
-This is the Poker dataset, retrieved from the libSVM website. In addition to the preprocessing done on the website (please refer to the libSVM website for details), this dataset was created as follows:
+Name: Poker
+Tags: UCI
 
-The test and training datasets were joined together, using the non-scaled versions. The classes were relabeled so that class zero became the positive class, and classes one through nine became the negative class.
+This is the Poker dataset, retrieved from the libSVM site. In addition to the preprocessing performed there (see LibSVM site for details), this dataset was created by combining the test and train datasets (non-scaled versions), relabeling classes with positive class as zero and negative classes as one through nine, and normalizing each file columnwise according to specific rules. For constant features, the value is set to zero and removed due to sparsity. Binary features are adjusted so that the more frequent value becomes zero and the less frequent value becomes one. Multinary or real features are divided by their standard deviation.
 
-Each column in the dataset was normalized according to specific rules. If a column contained only one unique value, it was considered a constant feature and was set to zero, effectively removing it due to sparsity. If a column contained only two unique values, it was considered a binary feature, and the value that occurred most frequently was set to zero, while the other value was set to one. If a column contained more than two unique values, it was considered a multinary or real feature, and was divided by its standard deviation.
+It is important to note that the Poker dataset has a mild redundancy, with approximately zero point two percent duplicated data points within each file (train and test). These duplicated points have not been removed from the dataset.
 
-It is important to note that the Poker dataset has a mild redundancy issue, with approximately point two percent of duplicated data points within each file, both in the training and testing sets. These duplicated points have not been removed.
+Features include Y, X one through X ten.
 
-Features include Suit, Rank, and various combinations thereof.
-
-Keywords: Poker dataset, libSVM, normalization, preprocessing, redundancy, classification.
+Keywords: Poker, dataset, preprocessing, normalization, classification, redundancy, features

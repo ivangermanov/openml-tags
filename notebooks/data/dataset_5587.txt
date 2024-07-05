@@ -1,35 +1,35 @@
-**Tags:** **COMET_MC**
+**COMET_MC**
 
-Guess which points belong to signal track 
+**Tags:** **Author**: COMET collaboration **Acknowledgements**: **Source**: Unknown - Date unknown **Please cite**: Monte-Carlo simulation of COMET detector, COMET collaboration, http://comet.kek.jp/
 
-COMET is an experiment being constructed at the J-Parc Proton Beam Laboratory in Japan. It will search for coherent neutrino-less conversion of a muon to an electron, mu plus Nuclear Material yields Electron plus Nuclear Material. This process breaks the law of lepton conservation. If detected, it will be a signal of new physics.
+Guess which points belong to signal track
 
-The previous upper limit for this decay was set by the Sindrum Two experiment. COMET is designed to have ten thousand times better sensitivity.
+COMET is an experiment being constructed at the J-PARC proton beam laboratory in Japan. It will search for coherent neutrino-less conversion of a muon to an electron, muon plus nucleus to electron plus nucleus. This process breaks the law of lepton conservation. If detected, it will be a signal of new physics. The previous upper limit for this decay was set by the SINDRUM II experiment. COMET is designed to have a much better sensitivity.
 
-The Cylindrical Drift Chamber 
+Cylindrical Drift Chamber
 
-The COMET experiment is looking for muon to electron conversion, Muon plus Nuclear Material yields Electron plus Nuclear Material. COMET Phase-One will utilize the Cylindrical Drift Chamber as the primary detector for physics measurements. Specifically, the momentum of resulting particles will be measured using the CyDet, which is a cylindrical wire array detector. The particles flying out of muon-stopping target and registered by the CyDet. Among those, we are interested in tracks left by electrons with specific energy, which are produced by muon to electron conversion.
+The COMET experiment is looking for muon to electron conversion, muon plus nucleus to electron plus nucleus. COMET Phase-I will use the Cylindrical Drift Chamber as the primary detector for physics measurements. Specifically, the momentum of resulting particles will be measured using the CyDet, which is a cylindrical wire array detector. The particles flying out of the muon-stopping target and registered by the CyDet. Among those, we are interested in tracks left by electrons with specific energy, which are produced by muon to electron conversion. The CyDet consists of sensitive wires organized in layers. Each wire measures the energy deposited by a passing charged particle. Within each of the layers, the wires have the same distance to the stopping target and stereometry angle.
 
-The CyDet consists of four thousand four hundred eighty-two sensitive wires organized in eighteen layers. Each wire measures the energy deposited by a passing charged particle. Within each of the layers, the wires have the same distance to the stopping target and stereometric angle.
+![Scheme of COMET cylindrical detector](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/comet_3d.gif)
 
-![Scheme of COMET Cylindrical Detector](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/comet_3d.gif)
+There is a magnetic field in the detector, which causes the electron to move in a helical path as shown below. This electron deposits energy in the wires close to the flight path. The radius of the helix is proportional to the transverse momentum of the electron: radius equals transverse momentum divided by the product of the electron charge and the strength of the magnetic field. 
 
-There is a magnetic field in the detector, which causes electrons to move in a helical path as shown below. This electron deposits energy in the wires close to the flight path. The radius of the helix is proportional to the transverse momentum of the electron: Radius equals Transverse Momentum divided by the product of Electric Charge and Magnetic Field Strength.
-
-![Trajectory of Electron in Magnetic Field](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMEThelixing.png)
+![Trajectory of electron in magnetic field](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMEThelixing.png)
 
 The energy deposited on each wire is measured at the end plate of the cylindrical detector. An example of the resulting signal event can be seen below, where blue dots are background hits and red are hits from signal electrons:
 
-![Energy Depositions in COMET](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMET2dprojection.png)
+![Energy depositions in COMET](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMET2dprojection.png)
 
-More Details 
+More details
 
-One can find more information about COMET on its official website. Additionally, one can read the COMET Conceptual Design Report for further insight. For those who are not familiar with High Energy Physics, there is a great introductory article in Russian that explains what COMET is all about. There is also a COMET presentation available online. Finally, one can read about A Search for Mu-E Conversion in Muonic Gold.
+COMET official site
+COMET conceptual design report
+Раритеты микромира - if you aren't deep into High Energy Physics, this article in Russian is probably a good starting point to understand what COMET is about.
+COMET presentation
+A search for muon-electron conversion in muonic gold
 
-Important Note 
+Important note
 
-Datasets available for this challenge are results of preliminary Monte Carlo simulation. They do not completely represent properties of COMET's detector and thus cannot be used to estimate final properties of the tracking system, but are appropriate to test different approaches to tracking.
+Datasets available for this challenge are results of preliminary Monte Carlo simulation. They don't completely represent properties of COMET's detector and thus cannot be used to estimate final properties of the tracking system, but are appropriate to test different approaches to tracking.
 
-Features: global id, event id, wire id, energy deposit, relative time, label
-
-Keywords: COMET, Muon, Electron, Neutrino, Lepton Conservation, Magnetic Field, Helical Path, Transverse Momentum, Energy Deposit, Tracking System.
+Keywords: COMET, muon-electron conversion, neutrino-less conversion, lepton conservation, cylindrical drift chamber, magnetic field, helical path, transverse momentum, signal electrons, background hits.

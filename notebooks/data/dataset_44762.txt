@@ -1,15 +1,13 @@
-Subsampling of the dataset Kick with Seed Four 
+Name: Kick Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Kick with seed equal to four, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-This dataset has been subsampled from the original Kick dataset, which had forty-one thousand one hundred sixty-two entries. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size while maintaining its overall characteristics.
+Generated with the following source code:
 
-The uniform sampling of classes ensured that the resulting dataset had an equal representation of all classes. This was achieved by selecting a specified number of classes randomly, with the probability of selection based on their frequency in the original dataset.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses the numpy random default random generator to generate random numbers. The function then selects a subset of the data based on the given parameters. It first selects a subset of classes, then selects a subset of columns, and finally selects a subset of rows. The function returns a new dataset with the selected data.
 
-Once the classes were selected, the corresponding entries were extracted from the original dataset. Next, the columns were uniformly sampled to reduce the dimensionality of the dataset. This involved randomly selecting a specified number of columns from the available ones.
+The dataset is subsampled to reduce its size while maintaining its overall characteristics. The subsampling is done in a stratified manner to ensure that the new dataset has a similar class distribution as the original dataset. The function is useful for reducing the size of large datasets while preserving their essential features.
 
-The resulting dataset has undergone stratified sampling to ensure that the class distribution remains consistent throughout. This was achieved using a stratified split approach, which takes into account the class labels during sampling.
+Features: Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Sub Model, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer, Nationality, Size, Top Three American Name.
 
-The dataset features include purchase date, auction information, vehicle details, transmission type, wheel type, odometer reading, nationality, size, top American name, market research acquisition prices, current retail prices, prime unit information, auction guarantee, buyer number, zip code, vehicle cost, online sale indicator, warranty cost, and bad buy indicator.
-
-Keywords: Subsampling, Dataset, Machine Learning, Mathematics, Class Sampling, Column Sampling, Stratified Split
+Keywords: dataset subsampling, stratified sampling, data reduction, feature selection.

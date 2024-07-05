@@ -1,26 +1,28 @@
-**FOREX aud/cad Day Close**
+Name: FOREX AUD/CAD Day Close
 
-Tags: Finance, Forex, Forex Close, Forex Day, Social Media, Transportation
+Tags: finance, forex, forex close, forex day
 
-**Data Description**
+Source: Dukascopy Historical Data Feed
 
-This is the historical price data of the Forex Australian Dollar/Canadian Dollar currency pair from Dukascopy. Each instance, or row, represents one candlestick of one trading day. The entire dataset spans a specific period of time and excludes weekends, as the Forex market is not active on these days. The timezone of the feature Timestamp is Europe/Amsterdam.
+Data Description
+This dataset contains the historical price data of the FOREX AUD/CAD currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following trading day, relative to the Close Bid and Close Ask mean of the current day. This means the class attribute is true when the mean Close price is increasing the following day, and the class attribute is false when the mean Close price is decreasing or remains unchanged the following day.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is True when the mean Close price is expected to increase the following day, and False when the mean Close price is expected to decrease or remain the same the following day.
 
-**Attributes**
+Attributes
+The dataset consists of the following attributes:
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price during this time interval.
-* **Bid Low**: The lowest bid price during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the Bid Price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price during this time interval.
-* **Ask Low**: The lowest ask price during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the Ask Price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the Bid Price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the Ask Price changed within this time interval.
+Class: Whether the average price will increase during the next interval.
 
-Keywords: Forex, Australian Dollar, Canadian Dollar, Currency Pair, Historical Price Data, Trading Day, Time Interval.
+Keywords: FOREX, AUD/CAD, currency pair, historical data, Dukascopy, finance, trading.

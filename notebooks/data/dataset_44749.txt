@@ -1,20 +1,15 @@
-Subsampling of the dataset Guillermo with seed equal to one arguments number rows two thousand arguments number columns one hundred arguments number classes ten arguments no stratify equal to true.
+Subsampling of the dataset Guillermo with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals True.
 
 Generated with the following source code:
 
-The function subsample takes in parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified. It uses numpy random default random generator to sample uniformly.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-The function first samples classes from the unique values in y. If there are more classes than the maximum allowed, it selects the required number of classes using value counts and probability.
+The function first selects a specified number of classes from the original dataset using random sampling with replacement. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, it selects the indices where one of these classes is present and filters x and y accordingly. Then, it samples columns uniformly if required. If the number of columns exceeds the maximum allowed, it chooses the required number of columns using random choice and filters x accordingly.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows.
 
-If the number of rows exceeds the maximum allowed, it uses train test split from scikit learn to split the data into two subsets, ensuring stratification according to the target variable.
-
-Finally, it returns a new dataset with the sampled data, categorical mask, and column names.
+The function returns a new dataset with the sampled data, including the categorical mask and column names.
 
 Features: 
-(Voice Assistant, 
-Statistics, 
-Categorical Columns)
 
-Keywords: subsampling, dataset, stratified, statistics, categorical columns
+Keywords: Subsampling, Dataset, Random Sampling, Stratified Sampling, Data Filtering.

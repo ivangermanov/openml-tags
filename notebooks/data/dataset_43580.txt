@@ -1,40 +1,40 @@
 Nebraska Football Box Scores 1962-2020
 
-Tags: This dataset includes the date and time of each game, the opponent, score, rushing statistics, passing statistics, turnovers, Nebraska penalties, point spread, and weather information. All games are included.
+Tags: Dataset includes date and time, opponent, score, rushing statistics, passing statistics, turnovers, Nebraska penalties, point spread, and weather information. All games are included.
 
-The penalty data is incomplete prior to September 16, 1972, when Nebraska played Texas A&M. The point spread data is unknown before the 1978 season, but it is listed for approximately eighty-nine games from that point forward.
+Penalty data is incomplete before September 16, 1972, against Texas A&M. Point spread data is unknown before the 1978 season. It is listed for approximately eighty-nine games from that point forward. Weather data is taken from the DarkSky API and from Weather Underground. I have found temperature and humidity data to be fairly reliable, but wind data is less so.
 
-Weather data was obtained from the Dark Sky API and Weather Underground. While temperature and humidity data are considered fairly reliable, wind data is less accurate.
+Column Labels:
 
-Column labels include:
+* Date: The date the game was played
+* Time: Kickoff time in Central Time
+* Opponent: Nebraska's opponent
+* Site: Location the game was played (home, away, neutral-home, or neutral-away)
+* Conference: Whether it was a conference opponent (True or False)
+* Opponent Score: Nebraska's opponent's score
+* Nebraska Score: Nebraska's score
+* Opponent Rushing Attempts: Opponent rushing attempts
+* Opponent Rushing Yards: Opponent rushing yards
+* Nebraska Rushing Attempts: Nebraska rushing attempts
+* Nebraska Rushing Yards: Nebraska rushing yards
+* Opponent Passing Completions: Opponent passing completions
+* Opponent Passing Attempts: Opponent passing attempts
+* Opponent Passing Yards: Opponent passing yards
+* Nebraska Passing Completions: Nebraska passing completions
+* Nebraska Passing Attempts: Nebraska passing attempts
+* Nebraska Passing Yards: Nebraska passing yards
+* Opponent Interceptions: Opponent interceptions thrown
+* Opponent Fumbles: Opponent fumbles lost
+* Nebraska Interceptions: Nebraska interceptions thrown
+* Nebraska Fumbles: Nebraska fumbles lost
+* Nebraska Penalties Number: Nebraska number of penalties
+* Nebraska Penalties Yards: Nebraska penalty yards
+* Spread: Point spread. A negative value means Nebraska was favored.
+* Temperature: Temperature at kickoff in Fahrenheit
+* Humidity: Humidity at kickoff (0.0 to 1.0)
+* Wind Speed: Wind speed at kickoff in miles per hour
+* Wind Bearing: Direction from which the wind was blowing at kickoff. Measured in degrees. North is 0 and values increase clockwise.
 
-* Date: The date the game was played.
-* Time: The kickoff time in Central Time.
-* Opponent: Nebraska's opponent.
-* Site: The location where the game was played, which could be home, away, neutral-home, or neutral-away.
-* Conference: Whether the game was against a conference opponent, denoted as TRUE or FALSE.
-* Opponent Score: The score achieved by Nebraska's opponent.
-* Nebraska Score: The score achieved by Nebraska.
-* Opponent Rushing Attempts: The number of rushing attempts made by the opponent.
-* Opponent Rushing Yards: The total yards gained by the opponent through rushing.
-* Nebraska Rushing Attempts: The number of rushing attempts made by Nebraska.
-* Nebraska Rushing Yards: The total yards gained by Nebraska through rushing.
-* Opponent Passing Completions: The number of passes completed by the opponent.
-* Opponent Passing Attempts: The total number of passes attempted by the opponent.
-* Opponent Passing Yards: The total yards gained by the opponent through passing.
-* Nebraska Passing Completions: The number of passes completed by Nebraska.
-* Nebraska Passing Attempts: The total number of passes attempted by Nebraska.
-* Nebraska Passing Yards: The total yards gained by Nebraska through passing.
-* Opponent Interceptions Thrown: The number of interceptions thrown by the opponent.
-* Opponent Fumbles Lost: The number of fumbles lost by the opponent.
-* Nebraska Interceptions Thrown: The number of interceptions thrown by Nebraska.
-* Nebraska Fumbles Lost: The number of fumbles lost by Nebraska.
-* Nebraska Penalties Number: The total number of penalties committed by Nebraska.
-* Nebraska Penalties Yards: The total yards penalized against Nebraska.
-* Spread: The point spread, with a negative value indicating Nebraska was favored.
-* Temperature: The temperature at kickoff in Fahrenheit.
-* Humidity: The humidity at kickoff, ranging from 0.0 to 1.0.
-* Wind Speed: The wind speed at kickoff in miles per hour.
-* Wind Bearing: The direction from which the wind was blowing at kickoff, measured in degrees, with north being 0 and increasing clockwise.
+Features: date, time, season, opponent, site, conference, opponent rank, Nebraska rank, opponent score, Nebraska score, opponent rushing attempts, opponent rushing yards, Nebraska rushing attempts, Nebraska rushing yards, opponent passing completions, opponent passing attempts, opponent passing yards, Nebraska passing completions, Nebraska passing attempts, Nebraska passing yards, opponent interceptions, opponent fumbles, Nebraska interceptions, Nebraska fumbles, Nebraska penalties number, Nebraska penalties yards, spread, temperature, humidity, wind speed, wind bearing
 
-Keywords: Nebraska football, box scores, opponent, score, rushing statistics, passing statistics, turnovers, penalties, point spread, weather information
+Keywords: Nebraska football, box scores, game statistics, weather data, penalty data, point spread

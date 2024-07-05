@@ -1,41 +1,27 @@
-Breast Cancer Domain
+Breast Cancer Dataset
 
-This Breast Cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. The data set includes two hundred one instances of one class and eighty five instances of another class. The instances are described by nine attributes, some of which are linear and some are nominal.
+Tags: mythbusting, study, uci
 
-Title: Breast Cancer Data
+This breast cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. Please include a citation if you plan to use this database.
 
-Sources:
-University Medical Center Ljubljana, Yugoslavia
+The dataset contains information on breast cancer cases, including 201 instances of one class and 85 instances of another class. The instances are described by 9 attributes, some of which are linear and some are nominal. This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature.
 
-Past Usage:
-The data set has been used in several studies, including Michalski et al. (1986), Clark and Niblett (1987), Tan and Eshelman (1988), and Cestnik et al. (1987).
-
-Relevant Information:
-This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature.
-
-Number of Instances: 
-The data set consists of two hundred eighty six instances.
-
-Number of Attributes: 
-There are ten attributes in total, including the class attribute.
+The dataset includes 286 instances and 10 attributes (including the class attribute). Some attributes have missing values, denoted by "?". The class distribution is as follows: 201 instances of no recurrence events and 85 instances of recurrence events.
 
 Attribute Information:
+Class: no recurrence events, recurrence events
+Age: ranges from 10 to 99 in 10 year increments
+Menopause: less than 40, greater than or equal to 40, premenopausal
+Tumor size: ranges from 0 to 59 in 5 unit increments
+Involved nodes: ranges from 0 to 39 in various increments
+Node caps: yes, no
+Degree of malignancy: 1, 2, 3
+Breast: left, right
+Breast quadrant: left up, left low, right up, right low, central
+Irradiation: yes, no
 
-* Class: The class attribute has two values - no recurrence events and recurrence events.
-* Age: The age attribute ranges from ten to ninety-nine years old.
-* Menopause: The menopause attribute has three values - less than forty, greater than or equal to forty, and premenopausal.
-* Tumor Size: The tumor size attribute ranges from zero to fifty-nine.
-* Inv Nodes: The inv nodes attribute ranges from zero to thirty-nine.
-* Node Caps: The node caps attribute has two values - yes and no.
-* Deg Malig: The deg malig attribute has three values - one, two, and three.
-* Breast: The breast attribute has two values - left and right.
-* Breast Quad: The breast quad attribute has five values - left up, left low, right up, right low, and central.
-* Irradiat: The irradiat attribute has two values - yes and no.
+The dataset has been used in various machine learning studies, with accuracy ranges typically between 65% and 78%. It has been applied in incremental learning systems, induction in noisy domains, and knowledge elicitation tools.
 
-Missing Attribute Values:
-There are nine missing attribute values in total, denoted by "?".
+This dataset is valuable for researchers studying breast cancer prognosis and developing machine learning algorithms for medical diagnosis and prediction.
 
-Class Distribution:
-The class distribution is sixty-five percent no recurrence events and thirty-five percent recurrence events.
-
-Keywords: breast cancer, machine learning, medicine, oncology, Yugoslavia
+Keywords: breast cancer, oncology, machine learning, medical diagnosis, attribute classification, recurrence prediction

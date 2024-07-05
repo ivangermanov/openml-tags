@@ -1,17 +1,11 @@
-Machine Learning Model Details: Yeast Dataset Subsampling
+Yeast Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This model involves subsampling of the yeast dataset with specific parameters. The yeast dataset contains one hundred eighty-one instances.
+Tags: Subsampling of the dataset yeast with seed equals three arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals false
 
-The model uses the following arguments: number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. In this case, the arguments are set to two thousand, one hundred, ten, and true respectively.
+Generated with the following source code:
 
-The subsample function generates a new dataset based on the given arguments. It first selects a specified number of unique classes from the target variable using uniform sampling. Then, it selects the corresponding instances based on the chosen classes.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it uniformly samples the columns. If the number of rows is greater than the maximum, it uses stratified sampling to select a subset of the data. Finally, it returns a dataset with the subsetted data, categorical mask, and columns.
 
-Next, the function uniformly samples the columns if the total number of columns exceeds the specified maximum. Finally, it performs stratified sampling on the instances based on the target variable if the total number of instances exceeds the specified maximum.
+Features: mitochondrial, golgi, alam, membrane, endoplasmic reticulum, peroxisome, vacuole, nucleus, protein localization
 
-The resulting dataset consists of the subsampled instances and their corresponding target values. The categorical mask and column names are also preserved.
-
-Features of the dataset include protein localization characteristics such as mitochondrial, membrane-bound, and nuclear properties.
-
-Tags: Machine Learning, Mathematics
-
-Keywords: Yeast dataset, subsampling, machine learning, stratified sampling, feature selection
+Keywords: yeast dataset, subsampling, stratified sampling, dataset generation

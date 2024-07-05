@@ -1,11 +1,17 @@
-Sarcos Dataset Description
+**Dataset Description**
 
-The data relates to an inverse dynamics problem for a seven degrees-of-freedom anthropomorphic robot arm, specifically designed to mimic human-like movement patterns. The primary objective is to establish a mapping from a twenty-one dimensional input space, comprising seven joint positions, seven joint velocities, and seven joint accelerations, to the corresponding seven joint torques. Conventionally, the first of these joint torques is utilized as the target variable and is thus designated as the default target variable, while the remaining six joint torques are excluded from the model.
+The Sarcos dataset relates to an inverse dynamics problem for a seven degrees-of-freedom anthropomorphic robot arm. The task is to map from a twenty-one-dimensional input space, consisting of seven joint positions, seven joint velocities, and seven joint accelerations, to the corresponding seven joint torques. Usually, the first of those is used as the target variable and is therefore set as the default target variable, while the other six joint torques are excluded from the model.
 
-Note that this dataset exclusively contains the corresponding training data, as there exists data leakage between the original training and test data, which has been extensively discussed in a prominent article highlighting the pitfalls of running code and failing models.
+**Note**
 
-Several related studies have explored this dataset, including research on incremental real-time learning in high-dimensional spaces, statistical learning for humanoid robots, and online learning in high dimensions. Moreover, recent studies have applied novel approaches such as cascaded gaussian processes for data-efficient robot dynamics learning and attentive interpretable tabular learning.
+This dataset contains only the corresponding training data, as there is data leakage between the original training and test data. This issue was described in an article by DataRobot, highlighting the importance of careful data handling.
 
-Citation information for the original study on incremental real-time learning in high-dimensional spaces is also available.
+**Related Studies**
 
-Keywords: Inverse Dynamics, Anthropomorphic Robot Arm, Joint Torques, Machine Learning, Statistics
+Several studies have utilized this dataset, including research on incremental real-time learning in high-dimensional space, statistical learning for humanoid robots, and incremental online learning in high dimensions. Additionally, more recent studies have applied cascaded Gaussian processes for data-efficient robot dynamics learning and attentive interpretable tabular learning.
+
+**Citation**
+
+The original paper on incremental real-time learning in high-dimensional space is a seminal work in this field.
+
+Keywords: robot arm, inverse dynamics, joint torques, data leakage, humanoid robots, Gaussian processes, tabular learning.

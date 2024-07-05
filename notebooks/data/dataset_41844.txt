@@ -1,26 +1,38 @@
-**FOREX EUR GBP Day Close**
+Name: Forex EUR/GBP Day Close
 
-Tags: Computer Systems, Finance, Forex, Machine Learning
+Tags: finance, forex, forex close, forex day
 
-This dataset contains historical price data of the Forex EUR GBP exchange rate from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The dataset provides a comprehensive view of the Forex market, offering insights into the daily fluctuations of the EUR GBP exchange rate. With each instance representing a single day, the dataset offers a granular perspective on the market trends and patterns.
+Data Description:
+This dataset contains historical price data of the Forex EUR/GBP from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the Forex market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by the direction of the mean close price of the following day, relative to the mean close price of the current day. Specifically, the class attribute is true when the mean close price is expected to increase in the following day, and false when the mean close price is expected to decrease or remain stagnant.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-The attributes included in the dataset are:
+Attributes:
 
-* Timestamp: The time of the current data point in the Europe Amsterdam timezone.
-* Bid Open: The bid price at the start of the time interval.
-* Bid High: The highest bid price recorded during the time interval.
-* Bid Low: The lowest bid price recorded during the time interval.
-* Bid Close: The bid price at the end of the time interval.
-* Bid Volume: The number of times the bid price changed within the time interval.
-* Ask Open: The ask price at the start of the time interval.
-* Ask High: The highest ask price recorded during the time interval.
-* Ask Low: The lowest ask price recorded during the time interval.
-* Ask Close: The ask price at the end of the time interval.
-* Ask Volume: The number of times the ask price changed within the time interval.
-* Class: Whether the average price will increase during the next interval.
+Timestamp: The time of the current data point in Europe/Amsterdam timezone.
 
-Keywords: Forex, EUR GBP, Historical Data, Candlestick, Machine Learning, Finance, Computer Systems
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: Forex, EUR/GBP, historical data, candlestick, finance, trading.

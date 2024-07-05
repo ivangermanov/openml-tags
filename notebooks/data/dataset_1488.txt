@@ -1,24 +1,27 @@
-Oxford Parkinson's Disease Detection Dataset
+Name: Parkinsons
+Tags: mf_less_than_80, study, study_123, study_127, study_50, study_52, study_7, study_88
 
-This dataset comprises a range of biomedical voice measurements from individuals, with the primary objective of discriminating between healthy people and those suffering from Parkinson's disease. The dataset consists of recordings from thirty-one people, twenty-three of whom have been diagnosed with Parkinson's disease.
+Source: UCI
 
-Each column in the table represents a specific voice measurement, while each row corresponds to one of the nineteen-five voice recordings from these individuals. The "name" column contains the subject's name and recording number.
+Please cite: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', BioMedical Engineering OnLine (June)
 
-The main aim of this dataset is to differentiate between healthy individuals and those afflicted with Parkinson's disease, based on the "status" column, which is set to zero for healthy individuals and one for those with Parkinson's disease.
+Abstract: Oxford Parkinson's Disease Detection Dataset
 
-The attribute information includes matrix column entries, such as:
+Source: The dataset was created by the University of Oxford, in collaboration with the National Centre for Voice and Speech, Denver, Colorado, who recorded the speech signals. The original study published the feature extraction methods for general voice disorders.
 
-* Name: ASCII subject name and recording number
-* MDVP Fo (Hertz): average vocal fundamental frequency
-* MDVP Fhi (Hertz): maximum vocal fundamental frequency
-* MDVP Flo (Hertz): minimum vocal fundamental frequency
-* MDVP Jitter (percent) and MDVP Jitter (Absolute): several measures of variation in fundamental frequency
-* MDVP RAP and MDVP PPQ and Jitter DDP: measures of variation in fundamental frequency
-* MDVP Shimmer and MDVP Shimmer decibel and Shimmer APQ three and Shimmer APQ five and MDVP APQ and Shimmer DDA: several measures of variation in amplitude
-* NHR and HNR: two measures of ratio of noise to tonal components in the voice
-* Status: health status of the subject (one indicates Parkinson's disease, zero indicates healthy)
-* RPDE and D two: two nonlinear dynamical complexity measures
-* DFA: signal fractal scaling exponent
-* Spread one, spread two, PPE: three nonlinear measures of fundamental frequency variation
+Data Set Information: This dataset is composed of a range of biomedical voice measurements from individuals, some with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds to one of many voice recordings from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to the "status" column which is set to 0 for healthy and 1 for PD. Further details are contained in the following reference. If you use this dataset, please cite: 'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', IEEE Transactions on Biomedical Engineering (to appear).
 
-Keywords: Parkinson's disease, voice disorder detection, biomedical voice measurements, signal fractal scaling exponent, nonlinear dynamical complexity measures.
+Attribute Information: Matrix column entries (attributes):
+name - ASCII subject name and recording number
+MDVP:Fo(Hz) - Average vocal fundamental frequency
+MDVP:Fhi(Hz) - Maximum vocal fundamental frequency
+MDVP:Flo(Hz) - Minimum vocal fundamental frequency
+MDVP:Jitter(%), MDVP:Jitter(Abs), MDVP:RAP, MDVP:PPQ, Jitter:DDP - Several measures of variation in fundamental frequency
+MDVP:Shimmer, MDVP:Shimmer(dB), Shimmer:APQ3, Shimmer:APQ5, MDVP:APQ, Shimmer:DDA - Several measures of variation in amplitude
+NHR, HNR - Two measures of ratio of noise to tonal components in the voice
+status - Health status of the subject (one) - Parkinson's, (zero) - healthy
+RPDE, D2 - Two nonlinear dynamical complexity measures
+DFA - Signal fractal scaling exponent
+spread1, spread2, PPE - Three nonlinear measures of fundamental frequency variation
+
+Keywords: Parkinson's disease, voice analysis, biomedical measurements, dysphonia, telemonitoring, vocal frequency, voice disorders

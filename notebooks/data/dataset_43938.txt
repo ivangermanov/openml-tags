@@ -1,36 +1,15 @@
-**Machine Learning, Medicine Nursery**
+Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was used during several years when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
 
-The Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. This model was used during several years in the past when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation.
+The model was developed within an expert system shell for decision making. The hierarchical model ranks nursery-school applications according to the following concept structure: Evaluation of Applications for Nursery Schools, which includes Employment of Parents and Child's Nursery, Family Structure and Financial Standings, and Social and Health Picture of the Family.
 
-The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family. The model was developed within an expert system shell for decision making.
+Employment of Parents and Child's Nursery includes Parents' Occupation and Child's Nursery. Family Structure and Financial Standings includes Family Structure, which consists of Form of the Family, Number of Children, and Housing Conditions, as well as Financial Standing of the Family. Social and Health Picture of the Family includes Social Conditions and Health Conditions.
 
-The hierarchical model ranks nursery-school applications according to the following concept structure:
+Input attributes are printed in lowercase. Besides the target concept, the model includes four intermediate concepts: Employment, Family Structure and Financial Standings, Family Structure, and Social and Health Picture of the Family. Every concept is in the original model related to its lower-level descendants by a set of examples.
 
-Evaluation of Applications for Nursery Schools
-Employment of Parents and Child's Nursery
-    Parents' Occupation
-    Child's Nursery
-Family Structure and Financial Standings
-    Family Structure
-        Form of the Family
-        Number of Children
-        Housing Conditions
-        Financial Standing of the Family
-Social and Health Picture of the Family
-    Social Conditions
-    Health Conditions
-
-Input attributes are printed in lowercase. Besides the target concept (Evaluation of Applications for Nursery Schools), the model includes four intermediate concepts: Employment of Parents and Child's Nursery, Family Structure and Financial Standings, Family Structure, and Social and Health Picture of the Family. Every concept is in the original model related to its lower-level descendants by a set of examples.
-
-The Nursery Database contains examples with the structural information removed, i.e., directly relates Evaluation of Applications for Nursery Schools to the eight input attributes. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
+The Nursery Database contains examples with the structural information removed, i.e., directly relates Evaluation of Applications for Nursery Schools to the eight input attributes: parents, has nursery, form, children, housing, finance, social, and health. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
 
 Has Missing Values? No
 
-Additional Variable Information:
+Additional Variable Information: parents can be usual, pretentious, or great pretentious; has nursery can be proper, less proper, improper, critical, or very critical; form can be complete, completed, incomplete, or foster; children can be one, two, three, or more; housing can be convenient, less convenient, or critical; finance can be convenient or inconvenient; social can be non-problematic, slightly problematic, or problematic; health can be recommended, priority, or not recommended.
 
-Parents: usual, pretentious, great pretentious
-Form: complete, completed, incomplete, foster
-Social: non-problematic, slightly problematic, problematic
-Health: recommended, priority, not recommended
-
-Keywords: nursery school, hierarchical decision model, expert system, family structure, financial standing, social health picture, machine learning, medicine.
+Keywords: nursery schools, decision model, family structure, financial standing, social health picture, expert system, constructive induction, structure discovery.

@@ -1,9 +1,19 @@
-Name: Ada Seed Two Rows Two Thousand NCClasses Ten NCols One Hundred Stratify True 
+Name: Ada Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Economics, Machine Learning 
+Tags: Subsampling of the dataset Ada with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Subsampling of the dataset Ada with seed equal to two arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code.
+Generated with the following source code:
 
-This function subsamples a given dataset. It takes several parameters including a seed for reproducibility, the maximum number of rows, the maximum number of columns, and the maximum number of classes. The function first uniformly samples the classes, ensuring that all classes are represented in the resulting dataset. Then, it uniformly samples the columns if required. Finally, it stratifies the sampling of rows according to the target variable.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
 
-Features: variables one through forty-eight, class
+The function starts by selecting a random subset of classes. If the number of unique classes is greater than the maximum number of classes, it selects a random subset of classes using the value counts of the classes as probabilities. It then selects the indices where one of these classes is present.
+
+Next, the function selects a random subset of columns. If the number of columns is greater than the maximum number of columns, it selects a random subset of columns using the numpy random choice function.
+
+Finally, the function selects a random subset of rows. If the number of rows is greater than the maximum number of rows, it uses the train test split function from scikit learn to select a stratified subset of rows.
+
+The function returns a new dataset with the subsampled data.
+
+Features: 
+
+Keywords: dataset subsampling, stratified sampling, random subset, numpy random, scikit learn

@@ -1,13 +1,11 @@
-The Eucalyptus Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True dataset is a subsampled version of the original Eucalyptus dataset, specifically designed for educational purposes in the realm of statistics.
+Name: Eucalyptus Seed Two Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True
 
-This dataset was generated using a Python function that implements a stratified sampling approach to ensure representativeness and balance. The function takes into account various parameters, including the number of rows, columns, and classes, as well as whether to stratify the sample or not.
+Tags: Subsampling of the dataset Eucalyptus with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-In this particular instance, the function was called with a seed value of two, which ensures reproducibility of the results. The maximum number of rows was set to two thousand, while the maximum number of columns was set to one hundred. Furthermore, the number of classes was capped at ten.
+Generated with the following source code:
 
-To achieve this, the function first uniformly samples classes from the original dataset, taking into account their frequencies. It then selects the corresponding indices where these classes are present and subsets the data accordingly. Next, it uniformly samples columns if necessary, ensuring that the resulting dataset meets the specified column limit.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed to uniformly sample classes and columns. If the number of classes exceeds the maximum, it selects the top classes based on their value counts. It then selects the indices where one of these classes is present and filters the data accordingly. If the number of columns exceeds the maximum, it uniformly samples the columns. If the number of rows exceeds the maximum, it uses stratified sampling to select the required number of rows. The function returns a dataset with the subsampled data, categorical mask, and column names.
 
-Finally, the function applies stratification according to the target variable, which is essential for maintaining the integrity of the data distribution. This involves concatenating the predictor variables with the target variable, performing a stratified split, and then separating the predictor variables from the target variable once again.
+Features: Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, PMC Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, Utility
 
-The resulting dataset comprises a range of features, including Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, Plantation Management Corporation Number, Diameter at Breast Height, Height, Survival, Vigor, Insect Resistance, Stem Form, Crown Form, Branch Form, and Utility.
-
-Keywords: Eucalyptus dataset, stratified sampling, statistical education, dataset subsampling, Python programming.
+Keywords: Eucalyptus, Subsampling, Stratified Sampling, Dataset, Feature Selection

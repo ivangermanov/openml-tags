@@ -1,11 +1,15 @@
-Machine Learning Dataset: Churn Seed One 
+Name: Churn Seed One Dataset
 
-This dataset is a subsampling of the original Churn dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniform sampling of classes, columns, and rows to reduce the overall size of the dataset while maintaining its representative characteristics.
+Tags: Subsampling of the Churn dataset with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-The dataset has been stratified to ensure that the resulting sample is representative of the original population. This was achieved by selecting a specified number of classes based on their frequency distribution, and then uniformly sampling the indices where these classes were present. The resulting dataset has a specified maximum number of classes, columns, and rows.
+Generated with the following source code:
 
-The features of this dataset include various customer attributes and behaviors, such as state, account length, area code, phone number, international plan, voice mail plan, and others. These features are used to predict a target variable, which represents the churn status of customers.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments. It uses a random number generator with the given seed to uniformly sample classes from the unique values in the target variable y. If the number of unique classes exceeds nclasses max, it selects the top nclasses max classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-The dataset has undergone preprocessing steps to prepare it for machine learning modeling. Categorical columns have been converted to string format to facilitate modeling. The dataset is ready for use in machine learning experiments, and can be used to develop predictive models for customer churn prediction.
+Next, it uniformly samples columns if required. If the number of columns exceeds ncols max, it randomly selects ncols max columns and subsets the data. Otherwise, it uses all columns.
 
-Keywords: machine learning, dataset, subsampling, stratification, customer churn, feature engineering.
+Finally, if the number of rows exceeds nrows max, it stratifies the data accordingly using the target variable and subsets the data to the desired number of rows.
+
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class.
+
+Keywords: Churn dataset, subsampling, stratification, feature selection, class sampling.

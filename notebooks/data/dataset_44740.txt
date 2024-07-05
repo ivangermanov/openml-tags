@@ -1,48 +1,19 @@
-Subsampling of the dataset Robert with Seed equals Two 
-Tags: Subsampling of the dataset Robert 
+Name: Robert Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Robert with seed equals two, arguments nrows equals two thousand, arguments ncols equals one hundred, arguments nclasses equals ten, and arguments no stratify equals true.
 
 Generated with the following source code:
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
-    random number generator = numpy random default random generator(seed)
-    x equals self x
-    y equals self y
-    
-    Uniformly sample classes equals y unique 
-    if length of classes is greater than maximum number of classes:
-        value counts equals y value counts
-        selected classes equals random number generator choice classes, size equals maximum number of classes, replace equals False, probability equals value counts over sum of value counts
-        
-        Select the indices where one of these classes is present
-        indices equals y index y is in selected classes
-        x equals x iloc indices
-        y equals y iloc indices
-        
-    Uniformly sample columns if required
-    if length of x columns is greater than maximum number of columns:
-        column indices equals random number generator choice list range length of x columns, size equals maximum number of columns, replace equals False
-        sorted column indices equals sorted column indices
-        selected columns equals list x columns sorted column indices
-        x equals x selected columns
-    else:
-        sorted column indices equals list range length of x columns
-        
-    if length of x is greater than maximum number of rows:
-        Stratify accordingly
-        target name equals y name
-        data equals pandas concat x, y, axis equals columns
-        _, subset equals train test split data, test size equals maximum number of rows, stratify equals data target name, shuffle equals True, random state equals seed
-        x equals subset drop target name, axis equals columns
-        y equals subset target name
-    
-    We need to convert categorical columns to string for OpenML
-    categorical mask equals list self categorical mask i for i in sorted column indices
-    columns equals list x columns
-    return Dataset 
-        dataset equals self dataset,
-        x equals x,
-        y equals y,
-        categorical mask equals categorical mask,
-        columns equals columns,
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the target variable, then uniformly sampling columns from the feature variables, and finally uniformly sampling rows from the resulting dataset. The function also ensures that the subsample is stratified according to the target variable.
 
-Keywords: dataset, subsampling, stratification, sampling, OpenML
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify the sample.
+
+The function first gets the unique classes from the target variable and selects a subset of these classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and uses these indices to subset the feature variables.
+
+Next, the function uniformly samples columns from the feature variables, selecting a subset of columns based on their index. It then subsets the feature variables using these selected columns.
+
+Finally, the function uniformly samples rows from the resulting dataset, using the stratify argument to ensure that the sample is representative of the original dataset.
+
+The function returns a new dataset that is a subsample of the original, with the same structure and attributes as the original dataset.
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, row sampling.

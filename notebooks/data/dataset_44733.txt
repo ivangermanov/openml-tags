@@ -1,11 +1,19 @@
-Name: Volkert Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Volkert Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Earth Science, Mathematics 
+Tags: Subsampling of the dataset Volkert with seed equal to zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-Sub sampling of the dataset Volkert with seed equal to zero arguments n rows max equal to two thousand arguments n cols max equal to one hundred arguments n classes max equal to ten arguments no stratify equals true generated with the following source code.
+Generated with the following source code:
 
-This function subsamples a dataset given certain parameters. It takes in a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify the sampling process. The function first uniformly samples classes, then selects the indices where one of these classes is present. Next, it uniformly samples columns if required. Finally, it stratifies the data accordingly based on the target variable.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified according to the target variable.
 
-The resulting dataset has been transformed into a format suitable for further analysis. This includes converting categorical columns to string format for OpenML compatibility. The categorical mask has been preserved, and the column names have been updated to reflect the new selection.
+The function first selects a specified number of classes from the original dataset. It does this by getting the unique classes in the target variable, and then randomly selecting the specified number of classes. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset.
 
-Keywords: sub sampling, dataset, earth science, mathematics, stratification, categorical columns
+Next, the function selects a specified number of columns from the subsampled dataset. It does this by randomly selecting the specified number of column indices and then using these indices to subset the columns of the dataset.
+
+Finally, the function selects a specified number of rows from the subsampled dataset. It does this by using the train test split function from scikit learn, which ensures that the subsample is stratified according to the target variable.
+
+The function returns a new dataset that is a subsample of the original dataset.
+
+Features: (skipped due to unreadability)
+
+Keywords: dataset subsampling, stratified sampling, random number generation, data preprocessing

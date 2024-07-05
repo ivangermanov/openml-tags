@@ -1,24 +1,15 @@
-**FOREX EUR GBP Minute Close**
+Name: Forex EUR/GBP Minute Close
 
-Tags: Demographics, Finance, Forex, Forex Close, Forex Minute, Transportation
+Tags: finance, forex, forex close, forex minute
 
-This dataset contains historical price data of the Forex EUR GBP from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset covers a period from January first to December thirteenth and excludes weekends, as Forex trading does not take place on weekends. The timestamp feature is based on the Europe Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The class attribute indicates the direction of the mean close price in relation to the subsequent minute. Specifically, the class attribute is true if the mean close price increases in the subsequent minute, and false if the mean close price decreases or remains the same.
+Data Description
+This is the historical price data of the Forex EUR/GBP from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range from a specific start date to a specific end date and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The attributes comprise:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following minute, and the class attribute is False when the mean Close price is going down or stays the same the following minute.
 
-* Timestamp: The time of the current data point in the Europe Amsterdam timezone.
-* Bid Open: The bid price at the beginning of this time interval.
-* Bid High: The highest bid price recorded during this time interval.
-* Bid Low: The lowest bid price recorded during this time interval.
-* Bid Close: The bid price at the conclusion of this time interval.
-* Bid Volume: The frequency of changes in the bid price within this time interval.
-* Ask Open: The ask price at the beginning of this time interval.
-* Ask High: The highest ask price recorded during this time interval.
-* Ask Low: The lowest ask price recorded during this time interval.
-* Ask Close: The ask price at the conclusion of this time interval.
-* Ask Volume: The frequency of changes in the ask price within this time interval.
-* Class: Indicates whether the average price will increase or decrease in the subsequent interval.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute represents the bid price at the start of this time interval. The Bid High attribute represents the highest bid price during this time interval. The Bid Low attribute represents the lowest bid price during this time interval. The Bid Close attribute represents the bid price at the end of this time interval. The Bid Volume attribute represents the number of times the Bid Price changed within this time interval. The Ask Open attribute represents the ask price at the start of this time interval. The Ask High attribute represents the highest ask price during this time interval. The Ask Low attribute represents the lowest ask price during this time interval. The Ask Close attribute represents the ask price at the end of this time interval. The Ask Volume attribute represents the number of times the Ask Price changed within this time interval. The Class attribute represents whether the average price will go up during the next interval.
 
-Keywords: Forex, EUR GBP, Candlestick, Finance, Trading, Time Series, Historical Data
+Keywords: Forex, EUR/GBP, historical price data, candlestick, timezone, class attribute, bid price, ask price.

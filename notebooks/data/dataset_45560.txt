@@ -1,19 +1,17 @@
-Online Shoppers Intention Dataset 
+Online Shoppers Intention
 
-Tags: Chemistry, Life Science 
+Tags: 
 
-The dataset consists of feature vectors belonging to individual user sessions over a one-year period, carefully curated to avoid any bias towards a specific campaign, special day, user profile, or period. This approach ensures a diverse range of data points, representative of various user behaviors and preferences.
+The dataset consists of feature vectors belonging to different user sessions over a one-year period, carefully formed to avoid any tendency towards a specific campaign, special day, user profile, or period.
 
 Attribute Information:
 
-The dataset comprises ten numerical and eight categorical attributes. The revenue attribute serves as the class label, allowing for analysis and prediction of online shoppers' intentions. 
+The dataset comprises ten numerical and eight categorical attributes. The Revenue attribute can be used as the class label. The number of different types of pages visited by the visitor in that session and total time spent in each of these page categories are represented by Administrative, Informational, Product Related, and their corresponding durations. These features are derived from the URL information of the pages visited by the user and updated in real-time when a user takes an action, such as moving from one page to another.
 
-Six attributes - administrative, administrative duration, informational, informational duration, product related, and product-related duration - capture the number of different types of pages visited by users in a session and the total time spent in each category. These values are dynamically derived from URL information and updated in real-time as users navigate through the website.
+The Bounce Rate, Exit Rate, and Page Value features represent the metrics measured by Google Analytics for each page in the e-commerce site. The Bounce Rate feature for a web page refers to the percentage of visitors who enter the site from that page and then leave without triggering any other requests to the analytics server during that session. The Exit Rate feature for a specific web page is calculated as the percentage of page views to the page that were the last in the session. The Page Value feature represents the average value for a web page that a user visited before completing an e-commerce transaction.
 
-Three attributes - bounce rate, exit rate, and page value - represent key metrics measured by Google Analytics for each page in the e-commerce site. Bounce rate refers to the percentage of visitors who enter the site from a particular page and then leave without triggering any further requests. Exit rate calculates the percentage of page views that mark the end of a session. Page value represents the average value for a web page that a user visits before completing a transaction.
+The Special Day feature indicates the closeness of the site visiting time to a specific special day, such as Mother's Day or Valentine's Day, in which the sessions are more likely to be finalized with a transaction. The value of this attribute is determined by considering the dynamics of e-commerce, such as the duration between the order date and delivery date.
 
-The special day attribute indicates the proximity of a website visit to a specific special day, such as Mother's Day or Valentine's Day, when transactions are more likely to occur. This value considers the dynamics of e-commerce, including the duration between order date and delivery date.
+The dataset also includes the operating system, browser, region, traffic type, visitor type as returning or new visitor, a Boolean value indicating whether the date of the visit is a weekend, and the month of the year.
 
-Additional attributes include operating system, browser, region, traffic type, visitor type (returning or new), a boolean value indicating whether the visit occurred on a weekend, and the month of the year.
-
-Keywords: online shoppers, intention, e-commerce, Google Analytics, user behavior, special days, transactions.
+Keywords: online shopping, user sessions, e-commerce, Google Analytics, special days, transaction revenue.

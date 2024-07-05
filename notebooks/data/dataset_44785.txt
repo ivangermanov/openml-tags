@@ -1,19 +1,17 @@
-porto seguro Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Porto Seguro Seed Two Dataset
 
-This dataset is a subsampling of the Porto Seguro dataset. It was generated using a specific set of arguments, including a seed value of two, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the sampling was done in a stratified manner.
+Tags: Subsampling of the Porto Seguro dataset with seed equals two, two thousand rows, one hundred columns, ten classes, and stratification enabled.
 
-The original Porto Seguro dataset had to be modified to meet these constraints. Firstly, the unique classes were identified, and then a random selection of ten classes was made. The indices where these selected classes were present were used to filter the data.
+This dataset is a subsample of the Porto Seguro dataset, generated using a specific source code. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
 
-Next, the columns had to be sampled uniformly. Since there were more than one hundred columns, a random selection of one hundred column indices was made, and the corresponding columns were selected.
+The Porto Seguro dataset was subsampled using a random number generator with a seed value of two. The maximum number of rows was set to two thousand, the maximum number of columns was set to one hundred, and the maximum number of classes was set to ten. Stratification was enabled to ensure that the subsample is representative of the original dataset.
 
-Finally, the number of rows had to be reduced to two thousand. This was done by performing a stratified split on the data, ensuring that the class distribution was maintained.
+The subsampling process first involves selecting a subset of classes from the original dataset. If the number of unique classes exceeds the maximum number of classes, a random sample of classes is selected based on their frequency in the dataset. The indices of the rows corresponding to the selected classes are then used to subset the dataset.
 
-The resulting dataset has ten classes and one hundred columns. The categorical columns have been converted to strings for OpenML compatibility.
+Next, the columns are uniformly sampled if the number of columns exceeds the maximum number of columns. The selected columns are then used to subset the dataset.
 
-Features: 
+Finally, the rows are stratified sampled if the number of rows exceeds the maximum number of rows. The stratification is based on the target variable, and the sample is selected using a train-test split with a test size equal to the maximum number of rows.
 
-(ps ind one, ps ind two category, ...)
+The resulting dataset consists of the subsampled features and target variable, along with a categorical mask indicating the categorical columns.
 
-Tags: Subsampling of the Porto Seguro dataset 
-
-Keywords: Porto Seguro, subsampling, stratified sampling, class distribution, OpenML.
+Keywords: Porto Seguro, dataset subsampling, stratification, class sampling, column sampling, row sampling.

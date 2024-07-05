@@ -1,19 +1,26 @@
-Human Activity Recognition Database 
+Human Activity Recognition Using Smartphones
 
-This database is built from the recordings of thirty subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors.
+Tags: OpenML-CC, OpenML, sport, study
 
-The experiments have been carried out with a group of thirty volunteers within an age bracket of nineteen to forty-eight years. Each person performed six activities - walking, walking upstairs, walking downstairs, sitting, standing, and laying - wearing a smartphone on the waist. Using its embedded accelerometer and gyroscope, we captured three-axial linear acceleration and three-axial angular velocity at a constant rate. 
+Source: UCI
 
-The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where seventy percent of the volunteers were selected for generating the training data and thirty percent the test data.
+Please cite: A Public Domain Dataset for Human Activity Recognition Using Smartphones. European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN. Bruges, Belgium.
 
-The sensor signals - accelerometer and gyroscope - were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of two point five six seconds and fifty percent overlap. The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low-frequency components, therefore a filter with zero point three hertz cutoff frequency was used. 
+Human Activity Recognition database built from recordings of subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors. This dataset version contains all the training and testing examples provided in the original data repository. The experiments have been carried out with a group of volunteers within an age bracket of years. Each person performed six activities (Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, researchers captured axial linear acceleration and axial angular velocity at a constant rate of Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where of the volunteers were selected for generating the training data and the test data.
 
-From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of seconds and overlap (readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low-frequency components, therefore a filter with Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-For each record in the dataset, it is provided - triaxial acceleration from the accelerometer and the estimated body acceleration; triaxial angular velocity from the gyroscope; a feature vector with time and frequency domain variables; and it's activity label.
+Attribute Information:
+For each record in the dataset it is provided:
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope.
+- A feature vector with time and frequency domain variables.
+- Its activity label.
 
-This dataset version contains all the training and testing examples provided in the original data repository.
+Relevant Papers:
+- Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL). Vitoria-Gasteiz, Spain.
+- Energy Efficient Smartphone-Based Activity Recognition using Fixed-Point Arithmetic. Journal of Universal Computer Science. Special Issue in Ambient Assisted Living: Home Care.
+- Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living, IWAAL, Vitoria-Gasteiz, Spain. Proceedings. Lecture Notes in Computer Science.
+- Human Activity and Motion Disorder Recognition: Towards Smarter Interactive Cognitive Environments. European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN. Bruges, Belgium.
 
-Tags: Chemistry, Life Science, OpenML-CC18, OpenML100, Sport, Study 123, Study 14, Study 93, Study 99
-
-Keywords: Human Activity Recognition, Smartphone, Accelerometer, Gyroscope, Sensor Signals, Feature Extraction.
+Keywords: Human Activity Recognition, Smartphone Sensors, Machine Learning, Accelerometer, Gyroscope, Daily Activities, Wearable Computing

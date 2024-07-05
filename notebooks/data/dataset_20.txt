@@ -1,11 +1,35 @@
-**Multiple Features Dataset: Pixel**
+Name: mfeat-pixel
+Tags: OpenML, study, uci
 
-This dataset is one of a set of six datasets that describe features of handwritten numerals (zero through nine) extracted from a collection of Dutch utility maps. The maps were scanned in eight-bit grey value at a density of four hundred dots per inch, sharpened, and then thresholded. Corresponding patterns in different datasets correspond to the same original character. Two thousand instances, two hundred per class, have been digitized in binary images.
+Source: UCI
 
-Using this dataset, sampled versions of the original images may be obtained, with a resolution of fifteen by sixteen pixels. The Multiple Features Dataset represents two hundred forty pixel averages in two by three windows.
+Please cite: UCI
 
-This dataset has been used in various studies, including hand-written digit recognition by combined classifiers and statistical pattern recognition.
+Multiple Features Dataset: Pixel
 
-The Multiple Features Dataset has been divided into six files, each representing a different feature set. These feature sets include Fourier coefficients of the character shapes, profile correlations, Karhunen-Love coefficients, pixel averages in two by three windows, Zernike moments, and morphological features.
+This dataset is one of a set of six datasets describing features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. The maps were scanned in eight bit grey value at a density of four hundred dots per inch, then sharpened and thresholded. Corresponding patterns in different datasets correspond to the same original character. Two hundred instances per class (for a total of two thousand instances) have been digitized in binary images. Using this dataset, sampled versions of the original images may be obtained (fifteen by sixteen pixels).
 
-Keywords: Multiple Features Dataset, handwritten numerals, pixel averages, image recognition, pattern analysis.
+Attribute Information:
+The mfeatures represent two hundred and forty (fifteen by sixteen) pixel averages in two by three windows.
+
+Relevant Papers:
+A slightly different version of the database is used in a paper on handwritten digit recognition by combined classifiers, published in Kybernetika. The database as is is used in a review paper on statistical pattern recognition, published in IEEE Transactions on Pattern Analysis and Machine Intelligence archive.
+
+Features:
+The dataset includes numerous attributes labeled as "att" followed by a number, representing various pixel averages and other features of the handwritten numerals.
+
+Dataset Information:
+This dataset consists of features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Two hundred patterns per class (for a total of two thousand patterns) have been digitized in binary images. These digits are represented in terms of six feature sets:
+
+Fourier coefficients of the character shapes
+Profile correlations
+Karhunen-Love coefficients
+Pixel averages in two by three windows
+Zernike moments
+Morphological features
+
+In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class 'zero', followed by sets of two hundred patterns for each of the classes 'one' through 'nine'. Corresponding patterns in different feature sets correspond to the same original character. The source image dataset is lost. Using the pixel dataset, sampled versions of the original images may be obtained (fifteen by sixteen pixels).
+
+This dataset does not have any missing values.
+
+Keywords: handwritten numerals, feature extraction, image processing, pattern recognition, Dutch utility maps, pixel averages

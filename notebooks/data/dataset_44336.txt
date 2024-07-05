@@ -1,71 +1,68 @@
-The Meta-Album Plant Document Dataset (Extended) is a collection of images featuring leaves of both healthy and unhealthy plants. These images were sourced from Google Images and Ecosia, then subsequently cropped by the dataset creators to ensure that a single complete leaf occupies each image. While the original uncropped images varied in terms of scale, lighting conditions, and pose, those within the same category often originated from the same initial image.
+**Meta-Album Plant Doc Dataset (Extended)**
 
-This dataset consists of twenty-seven distinct classes, encompassing various plant disease names and plant species names, such as Corn Leaf Blight and Cherry Leaf. It was initially developed for a benchmarking classification model study published in twenty-twenty by Singh et al. The Plant Document dataset included in the Meta-Album benchmark is derived from a preprocessed version of the original Plant Document dataset.
+The Plant Doc dataset is composed of images of leaves of healthy and unhealthy plants. The images were downloaded from Google Images and Ecosia, and later cropped by the authors, so generally, one complete leaf fits in one image. The original, uncropped images are generally different in scale, light conditions, and pose. However, within one category, images of leaves that came from the same original image can be found. The images correspond to classes, including plant disease names and plant species names, for example, Corn Leaf Blight and Cherry Leaf respectively. The dataset was created for a benchmarking classification model work, published in a paper by researchers.
 
-To achieve independent and identically distributed samples, one leaf image was randomly selected from each original image. Subsequently, these leaf images were cropped, converted into square shapes, and resized to 128x128 pixels using an anti-aliasing filter.
+### **Dataset Details**
 
-### Dataset Details
+![Sample Image](https://meta-album.github.io/assets/img/samples/PLT_DOC.png)
 
-![](https://meta-album.github.io/assets/img/samples/PLT_DOC.png)
-
-**Meta Album ID**: Plant Disease Plant Document
-**Meta Album URL**: https://meta-album.github.io/datasets/PlantDocument.html
+**Meta Album ID**: Plant Disease Plant Doc
+**Meta Album URL**: https://meta-album.github.io/datasets/Plant-Doc.html
 **Domain ID**: Plant Diseases
 **Domain Name**: Plant Diseases
-**Dataset ID**: Plant Document
-**Dataset Name**: Plant Document
-**Short Description**: A dataset focused on plant diseases
-**Classes**: Twenty-seven
-**Images**: Multiple
-**Keywords**: Plants, plant diseases
-**Data Format**: Images
-**Image Size**: 128x128 pixels
-**License (original data release)**: Creative Commons Attribution Four International
-**License URL (original data release)**: https://github.com/pratikkkayal/PlantDocument-Object-Detection-Dataset/blob/master/LICENSE.txt
-**License (Meta-Album data release)**: Creative Commons Attribution Four International
+**Dataset ID**: Plant Doc
+**Dataset Name**: Plant Doc
+**Short Description**: Plant disease dataset
+**Classes**: Multiple classes of plant diseases and species
+**Images**: Multiple images of plant leaves
+**Keywords**: plants, plant diseases
+**Data Format**: images
+**Image size**: 128x128
+**License (original data release)**: Creative Commons Attribution
+**License URL (original data release)**: https://github.com/PlantDoc-Object-Detection-Dataset/blob/master/LICENSE.txt
+**License (Meta-Album data release)**: Creative Commons Attribution
 **License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by/4.0/
-**Source**: Plant Document: A Dataset for Visual Plant Disease Detection
-**Source URL**: https://github.com/pratikkkayal/PlantDocument-Object-Detection-Dataset
+**Source**: Plant Doc: A Dataset for Visual Plant Disease Detection
+**Source URL**: https://github.com/PlantDoc-Object-Detection-Dataset
+**Meta Album author**: 
+**Created Date**: 
+**Contact Email**: meta-album@chalearn.org
+**Contact URL**: https://meta-album.github.io/
 
-### Cite this dataset
+### **Cite this dataset**
 
-@inproceedings{PlantDocument,
-author = {},
-title = {Plant Document: A Dataset for Visual Plant Disease Detection},
-year = {},
-isbn = {},
-publisher = {},
-address = {},
-url = {},
-doi = {},
-booktitle = {},
-pages = {},
-numpages = {},
-keywords = {Object Detection, Image Classification, Deep Learning},
-location = {},
-series = {}
-}
+@inproceedings{Plant-Doc-Dataset, 
+title={Plant Doc: A Dataset for Visual Plant Disease Detection}, 
+year={}, 
+isbn={}, 
+publisher={}, 
+address={}, 
+url={}, 
+doi={}, 
+booktitle={}, 
+pages={}, 
+numpages={}, 
+keywords={}, 
+location={}, 
+series={} }
 
-### Cite Meta-Album
+### **Cite Meta-Album**
 
-@inproceedings{MetaAlbum,
-title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-author={},
-booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-url = {https://meta-album.github.io/},
-year = {}
-}
+@inproceedings{Meta-Album, 
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, 
+year={}, 
+url = {https://meta-album.github.io/} }
 
-### More
+### **More**
 
-For further information regarding the Meta-Album dataset, please refer to the NeurIPS paper.
-For details on dataset preprocessing, kindly consult the supplementary materials.
-Supporting code can be accessed via our GitHub repository.
-Meta-Album is also available on Papers with Code.
+For more information on the Meta-Album dataset, please see the NeurIPS paper. 
+For details on the dataset preprocessing, please see the supplementary materials. 
+Supporting code can be found on our GitHub repo. 
+Meta-Album on Papers with Code.
 
-### Other versions of this dataset
+### **Other versions of this dataset**
 
-[Micro]
-[Mini]
+Micro
+Mini
 
-Keywords: plant diseases, image classification, deep learning, object detection, visual plant disease detection
+Keywords: plant diseases, plant species, image classification, object detection, deep learning

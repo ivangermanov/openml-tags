@@ -1,33 +1,19 @@
-Cover Type Seed Three Dataset 
+Name: Cover Type Seed Three with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-This dataset is a subsampled version of the original Cover Type dataset. It was generated using a specific set of arguments, including a seed value of three, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The stratification argument was set to true.
+Tags: Subsampling of the dataset Cover Type with seed equals three, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-The subsampling process involved several steps. First, the unique classes in the dataset were identified, and then a random selection of ten classes was made. The indices corresponding to these selected classes were retained, while the others were discarded. Next, the columns were uniformly sampled, and a random selection of one hundred columns was made.
+Generated with the following source code:
 
-Finally, the dataset was further reduced by randomly selecting two thousand rows, while ensuring that the class distribution remained stratified.
+This function subsamples a dataset. It takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Features:
+The function first uniformly samples classes. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
 
-Elevation
-Aspect
-Slope
-Horizontal Distance to Hydrology
-Vertical Distance to Hydrology
-Horizontal Distance to Roadways
-Hill Shade Nine Am
-Hill Shade Noon
-Hill Shade Three Pm
-Horizontal Distance to Fire Points
-Wilderness Area 
-Soil Type 
+Next, the function uniformly samples columns. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns randomly.
 
-Tags: 
-Machine Learning
-Mathematics 
+If the number of rows is greater than the maximum number of rows, the function stratifies the data accordingly. It concatenates the data and target, splits the data into a subset of the desired size, and then separates the data and target again.
 
-Keywords: 
-Subsampled dataset
-Stratification
-Class distribution
-Random selection
-Feature reduction
+Finally, the function converts categorical columns to string and returns a new dataset with the subsampled data, target, categorical mask, and columns.
+
+Features: Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at Nine Am, Hillshade at Noon, Hillshade at Three Pm, Horizontal Distance to Fire Points, Wilderness Area, Soil Type.
+
+Keywords: Cover Type, Subsampling, Stratification, Dataset, Classes, Columns, Rows.

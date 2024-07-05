@@ -1,13 +1,19 @@
-KDD Cup Ninety-Nine Seed One Dataset 
+Name: KDD Cup Ninety-Nine Seed One
 
-This dataset is a subsampling of the KDD Cup Ninety-Nine dataset. The subsampling was done using a specific set of arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify.
+Tags: Subsampling of the dataset KDD Cup Ninety-Nine with seed equal to one, arguments number of rows equal to two thousand, arguments number of columns equal to one hundred, arguments number of classes equal to ten, and arguments no stratify equal to true.
 
-The resulting dataset has been generated using a Python function that takes into account the specified arguments. This function first uniformly samples classes from the original dataset, ensuring that the selected classes are present in the resulting dataset. It then uniformly samples columns from the original dataset, selecting only the most relevant ones.
+Generated with the following source code:
 
-If the number of rows in the resulting dataset exceeds the specified maximum, the function uses stratified sampling to select a representative subset of rows. This ensures that the distribution of classes in the resulting dataset remains similar to that of the original dataset.
+This function subsamples a dataset. It takes in a seed, a maximum number of rows, a maximum number of columns, a maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-The dataset includes a range of features, including duration, protocol type, service, flag, source bytes, destination bytes, and various other network traffic metrics.
+The function first gets the unique classes in the dataset. If there are more classes than the maximum number of classes, it selects a random subset of classes based on their frequency in the dataset. It then selects the rows where one of these classes is present.
 
-Tags: Subsampling of the KDD Cup Ninety-Nine dataset
+Next, it uniformly samples columns if required. If the number of columns is more than the maximum number of columns, it selects a random subset of columns.
 
-Keywords: KDD Cup Ninety-Nine, subsampling, stratified sampling, dataset generation, feature selection
+Finally, if the number of rows is more than the maximum number of rows, it stratifies the dataset accordingly. It concatenates the data and target, splits it into a subset of the desired size, and then separates the data and target again.
+
+The function returns a dataset with the subsampled data, target, categorical mask, and columns.
+
+Features: duration, protocol type, service, flag, source bytes, destination bytes, land, wrong fragment, urgent, hot, number of failed logins, logged in, number of compromised, root shell, su attempted, number of root, number of file creations, number of shells, number of access files, number of outbound commands, is host login, is guest login, count, server count, service error rate, server service error rate, error rate, server error rate, same server rate, different server rate, server different host rate, destination host count, destination host server count, destination host same server rate, destination host different server rate, destination host same source port rate, destination host server different host rate, destination host service error rate, destination host server service error rate, destination host error rate, destination host server error rate, target.
+
+Keywords: dataset subsampling, stratification, feature selection, class selection, random sampling.

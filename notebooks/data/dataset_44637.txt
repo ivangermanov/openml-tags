@@ -1,13 +1,13 @@
-Segment Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+Segment Seed Four with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-This dataset is a subsampling of the Segment dataset with a seed of four, maximum number of rows set to two thousand, maximum number of columns set to one hundred, and maximum number of classes set to ten. The stratification argument is set to true.
+This dataset is a subsample of the original segment dataset, generated with a seed of four. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset to a manageable size. The resulting dataset has two thousand rows, one hundred columns, and ten classes.
 
-The subsampling function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean argument for stratification. It returns a new dataset.
+The subsampling process began by selecting classes from the original dataset. Since there were more than ten classes, a random sample of ten classes was chosen, with the probability of selection proportional to the frequency of each class. The indices where these classes were present were then selected, and the corresponding rows were retained.
 
-First, the function uniformly samples classes from the unique values in the target variable. If the number of unique classes exceeds the maximum number of classes, it selects a specified number of classes using their value counts as probabilities.
+Next, the columns were uniformly sampled. Since there were more than one hundred columns, a random sample of one hundred columns was chosen. The selected columns were then retained, and the others were discarded.
 
-Next, it selects the indices where one of the chosen classes is present and filters the data accordingly. Then, it uniformly samples columns if required. If the number of columns exceeds the maximum number, it randomly chooses a specified number of column indices and filters the data.
+Finally, the rows were sampled to reduce the dataset to two thousand rows. Since stratification was required, the dataset was split using a stratified sampling approach, ensuring that the class distribution was preserved.
 
-Finally, if the number of rows exceeds the maximum number, it uses stratified sampling to select a specified number of rows. The function returns a new dataset with the sampled data, along with other relevant information such as the categorical mask and column names.
+The resulting dataset has ten classes, one hundred columns, and two thousand rows. The features include various measures of line density, vegetation edge density, hedge density, intensity, and color properties.
 
-Keywords: subsampling, dataset, stratification, sampling, classes, columns, rows
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row sampling, feature reduction.

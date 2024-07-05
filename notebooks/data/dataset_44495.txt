@@ -1,15 +1,11 @@
-Machine Learning and Statistics Subsampling of the dataset Numerai Twenty Eight Point Six with Seed Equals Two 
+Name: Numerai Dataset Subsample
 
-This dataset has been generated through a process of subsampling from the original Numerai Twenty Eight Point Six dataset. The subsampling was performed using a specific set of parameters, including a maximum number of rows, a maximum number of columns, and a maximum number of classes.
+Tags: Subsampling of the Numerai dataset with seed, stratify True
 
-The subsampling process involved uniformly sampling classes from the original dataset until the maximum number of classes was reached. The indices where these selected classes were present were then used to select the corresponding data points from the original dataset.
+This dataset is a subsample of the original Numerai dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes are representative of the overall distribution. The number of classes was limited to a maximum of ten, and the classes were selected based on their frequency in the original dataset.
 
-Next, the columns of the dataset were uniformly sampled until the maximum number of columns was reached. This was done by selecting a specified number of column indices at random and then sorting them to ensure consistency.
+Once the classes were selected, the corresponding data points were extracted, and the columns were uniformly sampled to reduce the dimensionality of the dataset. The number of columns was limited to a maximum of one hundred. The resulting dataset was then stratified to ensure that the class distribution was maintained.
 
-Finally, the dataset was stratified according to the target variable, and a specified number of data points were randomly selected while maintaining the same distribution of classes as the original dataset.
+The dataset consists of a subset of the original features, which are not human-readable. The features are a combination of numerical and categorical attributes, which were selected based on their relevance to the problem at hand.
 
-The resulting dataset consists of a selection of attributes, including attribute zero, attribute one, attribute two, and so on up to attribute twenty-one.
-
-Tags: Machine Learning, Statistics 
-
-Keywords: subsampling, machine learning, statistics, dataset, numerical analysis
+Keywords: dataset subsampling, class sampling, dimensionality reduction, stratification, feature selection

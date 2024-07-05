@@ -1,17 +1,15 @@
-The User Identification from Walking Activity Data Set 
+User Identification From Walking Activity Data Set
 
-Tags: Chemistry, Life Science, Sport, Study 
+This dataset collects data from an Android smartphone positioned in the chest pocket. Accelerometer data are collected from participants walking in the wild over a predefined path. The dataset is intended for Activity Recognition research purposes. It provides challenges for identification and authentication of people using motion patterns.
 
-Source: University of California, Irvine 
+The original per-user datasets were joined into one dataset. The dataset includes time-step, x acceleration, y acceleration, and z acceleration measurements. The target variable is User ID.
 
-This dataset collects data from an android smartphone positioned in the chest pocket, which allows for the collection of accelerometer data from individuals walking in the wild over a predefined path. The dataset is primarily intended for activity recognition research purposes, providing challenges for identification and authentication of people using motion patterns. 
+Features include V, V, V, V, and Class. The data is formatted as CSV and does not contain missing values.
 
-Attribute Information 
+The accelerometer sampling frequency was set to DELAY FASTEST with network connections disabled. The dataset involves multiple participants and is designed to support research in personalization and user verification in wearable systems using biometric walking patterns.
 
-The dataset consists of time steps and acceleration data in three dimensions - x acceleration, y acceleration, and z acceleration - with the target being user identification. 
+This dataset is sourced from UCI (University of California, Irvine) Machine Learning Repository. It is intended for use in activity recognition studies, particularly those focused on identifying and authenticating individuals based on their motion patterns while walking.
 
-The dataset was created by combining individual datasets from each participant, resulting in a single comprehensive dataset. 
+The data collection took place in a natural environment, with participants following a predetermined route. This approach aims to capture realistic walking behaviors that can be used to develop and test algorithms for user identification and authentication in mobile and wearable devices.
 
-Additional Information 
-
-The dataset was designed to collect accelerometer data from individuals walking in the wild over a predefined path, allowing researchers to study activity recognition and user identification through motion patterns. The sampling frequency of the accelerometer was set to the fastest delay possible, with network connections disabled to ensure accurate data collection. A total of twenty-two participants contributed to the dataset, with no missing values present. The data is formatted in a comma-separated value file.
+Keywords: walking activity, accelerometer data, user identification, biometric patterns, activity recognition, wearable systems, smartphone sensors

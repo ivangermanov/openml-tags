@@ -1,65 +1,26 @@
-Data Description 
+Name: kdd coil 3
+Tags: uci
 
-This data set is from the Computational Intelligence and Learning Competition. The data contains measurements of river chemical concentrations and algae densities.
+Data Description
 
-Sources 
+This data set is from the Computational Intelligence and Learning (COIL) competition. The data contains measurements of river chemical concentrations and algae densities. It comes from a water quality study where samples were taken from sites on different European rivers over a period of approximately one year. These samples were analyzed for various chemical substances including nitrogen in the form of nitrates, nitrites and ammonia, phosphate, pH, oxygen, and chloride. In parallel, algae samples were collected to determine the algae population distributions.
 
-Original Owner ERUDIT European Network for Fuzzy Logic and Uncertainty Modeling in Information Technology 
+The competition involved predicting algal frequency distributions based on measured concentrations of chemical substances and global information concerning the season when the sample was taken, the river size, and its flow velocity. The competition instructions contain additional information on the prediction task.
 
-Data Characteristics 
+Data Characteristics
 
-This data comes from a water quality study where samples were taken from sites on different European rivers over a period of approximately one year. These samples were analyzed for various chemical substances including nitrogen in the form of nitrates, nitrites, and ammonia, phosphate, pH, oxygen, and chloride. In parallel, algae samples were collected to determine the algae population distributions.
+There are a total of 340 examples, each containing 17 values. The first 11 values of each data set are the season, the river size, the fluid velocity, and 8 chemical concentrations relevant for the algae population distribution. The last 8 values of each example are the distribution of different kinds of algae. These 8 kinds represent only a small part of the whole community, but for the competition, the number was limited to 7. A value of 0.0 means the frequency is very low. The data set also contains some empty fields labeled with the string "XXXXX".
 
-Other Relevant Information 
+Data Format
 
-The competition involved the prediction of algal frequency distributions based on the measured concentrations of the chemical substances and the global information concerning the season when the sample was taken, the river size, and its flow velocity.
+The training data are saved in a file named "analysis.data" in ASCII format. The structure of the file includes chemical concentrations or river characteristics (labeled CC) and algal frequencies (labeled AG). The chemical parameters are labeled A through K, while the columns of algae are labeled a through g.
 
-Data Format 
+Task Description
 
-There are a total of examples each containing seventeen values. The first eleven values of each data set are the season, the river size, the fluid velocity, and eight chemical concentrations which should be relevant for the algae population distribution. The last eight values of each example are the distribution of different kinds of algae. These eight kinds are only a very small part of the whole community, but for the competition, we limited the number to seven. The value zero point zero means that the frequency is very low. The data set also contains some empty fields which are labeled with the string unknown.
+The competition task is to predict algal frequency distributions based on measured concentrations of chemical substances and global information about the season, river size, and flow velocity. Participants receive 200 complete data sets for training and 140 data sets for evaluation. The evaluation data contains only the 11 values of river descriptions and chemical concentrations.
 
-Task Description 
+The objective is to provide a prediction model based on the training data and apply it to the evaluation data. All 7 algae frequency distributions must be determined, and any number of partial models may be developed. The results will be judged based on the sum of squared errors.
 
-Protecting Rivers and Streams by Monitoring Chemical Concentrations and Algae Communities. 
+This real life problem contains a mixture of qualitative variables and numerical measurement values, with much of the data being incomplete. The relationship between chemical and biological features is complex and requires advanced techniques for analysis.
 
-Intelligent Techniques for Monitoring Water Quality using Chemical Indicators and Algae Population 
-
-Recent years have been characterized by increasing concern at the impact humans are having on the environment. The impact on the environment of toxic waste, from a wide variety of manufacturing processes, is well known. More recently, however, it has become clear that the more subtle effects of nutrient level and chemical balance changes arising from farming land runoff and sewage water treatment also have a serious but indirect effect on the states of rivers, lakes, and even the sea. 
-
-In temperate climates across the world, summers are characterized by numerous reports of excessive summer algae growth resulting in poor water clarity, mass deaths of river fish from reduced oxygen levels, and the closure of recreational water facilities on account of the toxic effects of this annual algal bloom. 
-
-Reducing the impact of these man-made changes in river nutrient levels has stimulated much biological research with the aim of identifying the crucial chemical control variables for the biological processes. 
-
-The data used in this problem comes from one such study. During the research study, water quality samples were taken from sites on different European rivers over a period of approximately one year. These samples were analyzed for various chemical substances including nitrogen in the form of nitrates, nitrites, and ammonia, phosphate, pH, oxygen, and chloride. In parallel, algae samples were collected to determine the algae population distributions. 
-
-It is well known that the dynamics of the algae community is determined by external chemical environment with one or more factors being predominant. While the chemical analysis is cheap and easily automated, the biological part involves microscopic examination, requires trained manpower, and is therefore both expensive and slow. 
-
-Diatoms like Cymbella are major contributors to primary production throughout the world. The diatom reacts with large sensitivity to even small changes in acidity. Over a three-and-a-half-billion-year history, algae have evolved and adapted as primary plant colonizers of almost every known habitat in terrestrial and aquatic environments. They respond very rapidly to man-made environmental changes. 
-
-The relationship between the chemical and biological features is complex and can be expected to need the application of advanced techniques. Typical of such real-life problems, the particular data set for the problem contains a mixture of fuzzy qualitative variables and numerical measurement values, with much of the data being incomplete. 
-
-The competition task is the prediction of algal frequency distributions based on the measured concentrations of the chemical substances and the global information concerning the season when the sample was taken, the river size, and its flow velocity. The two last variables are given as linguistic variables.
-
-Evaluation Data 
-
-Each participant in the competition receives two hundred complete data sets training data and one hundred forty data sets evaluation data containing only the eleven values of the river descriptions and the chemical concentrations. This training data is to be used in obtaining a model providing a prediction of the algal distributions associated with the evaluation data. 
-
-Objective 
-
-The objective of the competition is to provide a prediction model based on the training data. Having obtained this prediction model, each participant must provide the solution in the form of the results of applying this model to the evaluation data. The results obtained in this way should correspond to the results of the evaluation data which are known to the organizer. 
-
-Judgment of the Results 
-
-To judge the results, the sum of squared errors will be calculated. The following table describes the results of a particular participant. 
-
-Matrix of Results 
-
-All solutions that lead to the smallest total error will be regarded as winners of the contest. 
-
-Information about the Dataset 
-
-Class Type: numeric 
-Class Index: last 
-Algae Number: three out of seven 
-
-Keywords: computational intelligence, learning competition, water quality, algae populations, chemical concentrations, river sizes, fluid velocities, diatoms, primary production, acidity, terrestrial environments, aquatic environments, environmental changes.
+Keywords: water quality, algae distribution, chemical concentrations, river characteristics, prediction model, environmental monitoring, ecological data analysis

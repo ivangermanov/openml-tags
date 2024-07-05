@@ -1,16 +1,18 @@
-Wine Quality White Seed Four Rows Two Thousand NClasses Ten NCols One Hundred Stratify True 
+Name: Wine Quality White
 
-Tags: Life Science, Statistics 
+Tags: Subsampling of the dataset Wine Quality White with seed four, generated with the following source code:
 
-This dataset is a subsampling of the Wine Quality White dataset with a seed of four. The arguments used for subsampling include the number of rows maximum, which is two thousand, number of columns maximum, which is one hundred, and number of classes maximum, which is ten. Additionally, the stratification argument is set to true.
+This function subsamples the Wine Quality White dataset. It takes in a seed value, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify the sample. 
 
-The subsampling process involves uniformly sampling classes from the unique values in the target variable. If there are more classes than the specified maximum, the algorithm selects the specified number of classes using a probability proportional to their frequency. The indices corresponding to these classes are then used to select the relevant samples.
+The function first uniformly samples classes from the dataset, ensuring that the number of classes does not exceed the maximum number of classes. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Next, the algorithm uniformly samples columns if the number of columns exceeds the specified maximum. It does this by randomly selecting the specified number of column indices without replacement. The corresponding column names are then used to select the relevant columns.
+Next, the function uniformly samples columns from the dataset, ensuring that the number of columns does not exceed the maximum number of columns. 
 
-Finally, if the number of samples exceeds the specified maximum, the algorithm uses stratified splitting to select the specified number of samples. This ensures that the class distribution in the subsampled dataset remains similar to the original dataset.
+Finally, if the number of rows in the dataset exceeds the maximum number of rows, the function stratifies the sample according to the target variable, ensuring that the sample is representative of the original dataset.
 
 Features: 
+
+Dataset: Wine Quality White
 Class
 
-Keywords: Wine Quality, Subsampling, Stratification, Statistics, Life Science
+Keywords: Wine Quality, Subsampling, Stratified Sampling, Dataset, Machine Learning

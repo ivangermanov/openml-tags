@@ -1,25 +1,26 @@
-**FOREX aud/usd Day Close**
+Name: FOREX AUD/USD Day Close
 
-Tags: Agriculture, Finance, Forex, Forex Close, Forex Day, Machine Learning
+Tags: finance, forex, forex close, forex day
 
-This dataset contains the historical price data of the Forex aud/usd pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The entire dataset spans a specific date range and excludes weekends, as the Forex market is not traded on weekends.
+Source: Dukascopy Historical Data Feed
 
-The timezone of the feature Timestamp is Europe/Amsterdam. The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is true when the mean Close price is expected to increase the following day, and false when the mean Close price is expected to decrease or remain the same the following day.
+Data Description:
+This dataset contains the historical price data of the FOREX AUD/USD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The dataset includes several attributes that provide insight into the Forex market. These attributes include the timestamp of each data point, bid prices at the open, high, low, and close of each time interval, as well as the volume of bid price changes during that interval. Additionally, the dataset includes ask prices at the open, high, low, and close of each time interval, along with the volume of ask price changes during that interval.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
 Attributes:
-Timestamp: The time of the current data point (Europe/Amsterdam)
-Bid Open: The bid price at the start of this time interval
-Bid High: The highest bid price during this time interval
-Bid Low: The lowest bid price during this time interval
-Bid Close: The bid price at the end of this time interval
-Bid Volume: The number of times the bid price changed within this time interval
-Ask Open: The ask price at the start of this time interval
-Ask High: The highest ask price during this time interval
-Ask Low: The lowest ask price during this time interval
-Ask Close: The ask price at the end of this time interval
-Ask Volume: The number of times the ask price changed within this time interval
-Class: Whether the average price will increase during the next interval
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the Bid Price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the Ask Price changed within this time interval.
+Class: Whether the average price will go up during the next interval.
 
-Keywords: Forex, aud/usd, machine learning, historical data, currency exchange, financial markets.
+Keywords: FOREX, AUD/USD, historical data, candlestick, finance, trading.

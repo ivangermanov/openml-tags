@@ -1,9 +1,19 @@
-The MC1 dataset is one of the NASA Metrics Data Program defect data sets, containing software defect prediction information. The specific type of software used is unknown. This dataset was created using McCabe and Halstead features extractors, which were developed in the 1970s to objectively characterize code features associated with software quality.
+MC Software Defect Prediction
 
-Relevant research has been conducted on this dataset, including studies on data quality and the effectiveness of blind spot sampling policies. Additionally, researchers have assessed predictors of software defects using this dataset.
+Tags: mythbusting, PROMISE, study
 
-The dataset contains various features extracted from source code, including lines of blank code, branch count, call pairs, lines of code and comments, comments, condition count, cyclomatic complexity, design complexity, edge count, essential complexity, global data complexity, Halstead metrics, maintenance severity, modified condition count, multiple condition count, node count, normalized cyclomatic complexity, number of operands, number of operators, number of unique operands, number of unique operators, and total lines of code.
+Source: tera PROMISE
 
-Tags: Chemistry, Life Science, Myth Busting, PROMISE, Study
+Please cite: The PROMISE Repository of Software Engineering Databases. School of Information Technology and Engineering, University of Ottawa, Canada.
 
-Keywords: software defect prediction, NASA, McCabe and Halstead features, software quality, data quality, blind spot sampling, predictors of software defects.
+This dataset is one of the NASA Metrics Data Program defect data sets. The specific type of software is unknown. Data comes from McCabe and Halstead features extractors of source code. These features were defined in the 1970s in an attempt to objectively characterize code features that are associated with software quality.
+
+Relevant papers:
+- Data Quality: Some Comments on the NASA Software Defect Datasets, IEEE Transactions on Software Engineering
+- How Good is Your Blind Spot Sampling Policy? IEEE Conference on High Assurance Software Engineering
+- Assessing Predictors of Software Defects, Workshop on Predictive Software Models, Chicago
+
+Features include various code metrics such as:
+Lines of blank code, branch count, call pairs, lines of code and comments, lines of comments, condition count, cyclomatic complexity, cyclomatic density, decision count, design complexity, design density, edge count, essential complexity, essential density, executable lines of code, parameter count, global data complexity, global data density, Halstead metrics (content, difficulty, effort, error estimate, length, level, programming time, volume), maintenance severity, modified condition count, multiple condition count, node count, normalized cyclomatic complexity, number of operands, number of operators, number of unique operands, number of unique operators, total number of lines, percent comments, and total lines of code.
+
+Keywords: software defects, code metrics, NASA, quality prediction, static analysis

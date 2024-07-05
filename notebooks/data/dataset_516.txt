@@ -1,25 +1,17 @@
-**Primary Biliary Cirrhosis**
+Primary Biliary Cirrhosis Dataset
 
-This data set is a follow-up to the original Primary Biliary Cirrhosis data set. It provides a comprehensive analysis of patients with primary biliary cirrhosis, a chronic autoimmune liver disease.
+Tags: Unknown Source, Date Unknown
 
-The data set consists of four hundred twenty-four patients who were referred to the Mayo Clinic between nineteen seventy-four and nineteen eighty-four and met the eligibility criteria for a randomized placebo-controlled trial of the drug D-penicillamine. Three hundred twelve cases participated in the randomized trial and had largely complete data. The additional one hundred twelve cases did not participate in the clinical trial but consented to have basic measurements recorded and to be followed for survival.
+This dataset is a follow-up to the original Primary Biliary Cirrhosis (PBC) dataset, as discussed in a prominent statistical analysis book. An analysis based on the enclosed data is found in a hepatology journal article. The dataset contains information from the Mayo Clinic trial in primary biliary cirrhosis of the liver conducted over a ten-year period.
 
-Six of those cases were lost to follow-up shortly after diagnosis, resulting in data being available for three hundred twelve randomized participants and one hundred six additional cases. Missing data items are denoted by a period.
+A total of PBC patients, referred to Mayo Clinic during that interval, met eligibility criteria for the randomized placebo-controlled trial of a specific drug. The first group of cases in the dataset participated in the randomized trial and contain largely complete data. The additional cases did not participate in the clinical trial but consented to have basic measurements recorded and to be followed for survival. A few of those cases were lost to follow-up shortly after diagnosis.
 
-The data set contains multiple laboratory results, including serum bilirubin, serum cholesterol, albumin, alkaline phosphatase, SGOT, platelets, and prothrombin time, among others. These results were collected at multiple visits, with the last observation before death or liver transplant often having more missing covariates than other data rows.
+The dataset contains multiple laboratory results, but only on the first group of patients. Some baseline data values in this file differ from the original PBC file, for instance, data errors in prothrombin time and age which were discovered after the original analysis. Another major difference is that there was significantly more follow-up for many of the patients at the time this dataset was assembled.
 
-One notable feature of the data is that the missing values are potentially informative and violate the usual "missing at random" assumptions that are assumed in analyses. However, the five variables involved in the Mayo PBC risk score, including age, bilirubin, albumin, prothrombin time, and edema score, were usually obtained.
+One notable feature of the data deserves special comment. The last observation before death or liver transplant often has many more missing covariates than other data rows. The original clinical protocol for these patients specified visits at regular intervals. At these protocol visits, lab values were obtained for a large pre-specified battery of tests. Extra visits, often undertaken because of worsening medical condition, did not necessarily have all this lab work. The missing values are thus potentially informative and violate the usual missing at random assumptions that are assumed in analyses.
 
-Variables include:
+The dataset includes variables such as case number, number of days between registration and outcome, status (alive, transplanted, or dead), drug treatment, age, sex, visit dates, presence of various symptoms (ascites, hepatomegaly, spiders, edema), and various laboratory test results (serum bilirubin, serum cholesterol, albumin, alkaline phosphatase, SGOT, platelets, prothrombin time). It also includes the histologic stage of the disease.
 
-* Case number
-* Number of days between registration and the earlier of death, transplantation, or study analysis time
-* Status: alive, transplanted, or dead
-* Drug: D-penicillamine or placebo
-* Age at registration
-* Sex
-* Day: number of days between enrollment and visit date
-* Presence of ascites, hepatomegaly, spiders, and edema
-* Histologic stage of disease
+This dataset provides valuable information for studying the progression and outcomes of primary biliary cirrhosis, as well as the effects of various factors on patient survival and disease progression.
 
-Keywords: Primary Biliary Cirrhosis, Mayo Clinic, D-penicillamine, Liver Disease, Autoimmune Disorder, Laboratory Results, Survival Analysis.
+Keywords: Primary Biliary Cirrhosis, Mayo Clinic trial, liver disease, longitudinal study, survival analysis, laboratory parameters, clinical data, hepatology research.

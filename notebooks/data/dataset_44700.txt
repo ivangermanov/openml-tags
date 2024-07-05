@@ -1,15 +1,23 @@
-Fashion MNIST Seed Two Dataset 
+Name: Fashion MNIST Seed Two 
 
-This dataset is a subsampling of the original Fashion MNIST dataset, which contains forty-one thousand nine hundred ninety-six instances. The subsampling process involved selecting a random two thousand instances using a specific seed value, resulting in a reduced dataset.
+Tags: Subsampling of the dataset Fashion MNIST with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true 
 
-The subsampled dataset has ten classes, which were uniformly sampled from the original classes. The sampling process ensured that each class had an equal probability of being selected, based on its frequency in the original dataset.
+Generated with the following source code: 
 
-In addition to reducing the number of instances, the dataset also underwent column sampling. The goal was to reduce the number of columns to a maximum of one hundred. This was achieved by randomly selecting columns, ensuring that the selection was uniform across all columns.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. 
 
-Stratification played a crucial role in the sampling process, particularly when reducing the number of instances. This involved splitting the data into training and testing sets, while ensuring that each set maintained the same class distribution as the original dataset.
+First, it sets up a random number generator with the given seed. Then, it gets the features and target from the dataset. 
 
-The resulting dataset contains a subset of features, including pixel values from various locations in the images. These features were carefully selected to represent the most informative aspects of the data.
+It uniformly samples classes from the target. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes using the value counts of the target as probabilities. 
 
-Tags: Subsampling of the dataset Fashion MNIST 
+It then selects the indices where one of these classes is present and subsets the features and target accordingly. 
 
-Keywords: Fashion MNIST, subsampling, stratification, feature selection, instance reduction, column sampling
+Next, it uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns randomly and subsets the features accordingly. 
+
+After that, it checks if the number of rows is greater than the maximum number of rows. If so, it stratifies the data accordingly and splits it into a subset of the maximum number of rows. 
+
+Finally, it returns a dataset with the subset of features, target, categorical mask, and columns. 
+
+Features: (skipped due to unreadability)
+
+Keywords: Fashion MNIST, subsampling, stratification, dataset generation

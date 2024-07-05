@@ -1,17 +1,17 @@
 Name: Jasmine Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Jasmine with seed equals one arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals False
+Tags: Subsampling of the dataset Jasmine with seed one, arguments number of rows two thousand, number of columns one hundred, number of classes ten, and stratify true.
 
 Generated with the following source code:
 
-The function subsample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-This function first uniformly samples classes from the dataset, ensuring that the total number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and updates the input data accordingly.
+The function first selects a specified number of classes from the original dataset using random sampling with replacement. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, it uniformly samples columns if required, selecting a specified number of columns randomly without replacement. The function also ensures that the total number of rows does not exceed the specified maximum, using stratification if necessary.
+Next, it selects a specified number of columns from the filtered data using random sampling without replacement. It then filters the data to include only the selected columns.
 
-Finally, the function returns a new dataset with the subsampled data, along with relevant metadata such as categorical masks and column names.
+Finally, it selects a specified number of rows from the filtered data using stratified sampling to maintain the original distribution of the data.
 
-Features: This dataset contains a wide range of variables, including those related to various aspects of customer behavior, product characteristics, and market trends.
+Features: 
 
-Keywords: Subsampling, Stratification, Dataset, Columns, Rows, Classes
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, class selection, column selection, row selection.

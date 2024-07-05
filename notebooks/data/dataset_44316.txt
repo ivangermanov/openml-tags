@@ -1,8 +1,8 @@
-The Meta Album DIBaS Dataset Extended is a collection of digital images of thirty-three bacterial species with approximately twenty images per species. Since the original images were large with limited samples in each class, they were split into smaller images and resized to one hundred twenty-eight by one hundred twenty-eight pixels, resulting in a preprocessed dataset of four thousand sixty images with at least one hundred eight images per class.
+**Meta-Album DIBaS Dataset (Extended)**
 
-This dataset was also preprocessed using blob normalization techniques, an uncommon method for this type of image, aimed at reducing the significance of color in decision-making for a bias-aware challenge.
+The Digital Images of Bacteria Species dataset (DIBaS) is a dataset of thirty-three bacterial species with around twenty images for each species. For the Meta-Album, since the images were large with very few samples in each class, we decided to split each image into several smaller images before resizing them to one hundred twenty-eight by one hundred twenty-eight. We then obtained a preprocessed dataset of images with at least one hundred eight images for each class. This dataset was also preprocessed with blob normalization techniques, which is quite unusual for this type of image. The goal of this transformation was to reduce the importance of color in decision-making for a bias-aware challenge.
 
-### Dataset Details
+**Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/BCT.png)
 
@@ -11,55 +11,34 @@ This dataset was also preprocessed using blob normalization techniques, an uncom
 **Domain ID**: MCR
 **Domain Name**: Microscopic
 **Dataset ID**: BCT
-**Dataset Name**: Digital Image of Bacterial Species
-**Short Description**: A collection of digital images of bacterial species.
-**Number of Classes**: Thirty-three
-**Number of Images**: Four thousand sixty
-**Keywords**: Microscopic, Bacteria
-**Data Format**: Images
-**Image Size**: One hundred twenty-eight by one hundred twenty-eight pixels
-**License (Original Data Release)**: Public for Researchers
-**License URL (Original Data Release)**:
-**License (Meta Album Data Release)**: Creative Commons Attribution-NonCommercial 4.0
-**License URL (Meta Album Data Release)**: https://creativecommons.org/licenses/by-nc/4.0/
-**Source**: Digital Image of Bacterial Species
-**Source URL**: http://misztal.edu.pl/software/databases/dibas/
+**Dataset Name**: Digital Image of Bacterial Species (DIBaS)
+**Short Description**: Digital Image of Bacterial Species (DIBaS)
+**Number of Classes**: thirty-three
+**Number of Images**: four thousand sixty
+**Keywords**: microscopic, bacteria
+**Data Format**: images
+**Image Size**: one hundred twenty-eight by one hundred twenty-eight
+**License (original data release)**: Public for researchers
+**License URL (original data release)**: 
+**License (Meta-Album data release)**: CC BY-NC four point zero
+**License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by-nc/4.0/
+**Source**: Digital Image of Bacterial Species (DIBaS)
+**Source URL**: http://misztal.edu.pl/software/databases/dibas/ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184554 https://github.com/gallardorafael/DIBaS-Dataset
 
-### Cite this Dataset
+**Cite this dataset**
 
-@article{
-    doi = {},
-    author = {},
-    journal = {},
-    publisher = {},
-    title = {},
-    year = {},
-    month = {},
-    volume = {},
-    url = {},
-    pages = {},
-    number = {}
-}
+@article{journal.pone.0184554, doi = {10.1371/journal.pone.0184554}, journal = {PLOS ONE}, publisher = {Public Library of Science}, title = {Deep learning approach to bacterial colony classification}, year = {}, month = {}, volume = {}, url = {https://doi.org/10.1371/journal.pone.0184554}, pages = {}, number = {} }
 
-### Cite Meta Album
+**Cite Meta-Album**
 
-@inproceedings{
-    title={Meta Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-    booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-    url = https://meta-album.github.io/,
-    year = {}
-}
+@inproceedings{meta-album-2022, title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, url = {https://meta-album.github.io/}, year = {} }
 
-### More
+**More**
 
-For more information on the Meta Album dataset, please refer to the NeurIPS paper.
-For details on the dataset preprocessing, please refer to the supplementary materials.
-Supporting code can be found on our GitHub repository.
-Meta Album on Papers with Code.
+For more information on the Meta-Album dataset, please see the NeurIPS 2022 paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repo. Meta-Album on Papers with Code.
 
-### Other Versions of this Dataset
+**Other versions of this dataset**
 
-[[Micro]]
-[[Mini]]
+Micro, Mini
 
-Keywords: Microscopic, Bacteria, Digital Image, Bias-Aware Challenge
+Keywords: microscopic, bacteria, image classification, few-shot learning, meta-dataset

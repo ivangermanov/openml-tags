@@ -1,30 +1,25 @@
-Tags: Chemistry, Life Science, OpenML100, Study
+One hundred plants texture dataset
 
-Dataset Name: One Hundred Plants Texture
+Tags: OpenML, study, plant classification
+
+Source: UCI Machine Learning Repository
+
+Please cite: Plant Leaf Classification Using Probabilistic Integration of Shape, Texture and Margin Features. Signal Processing, Pattern Recognition and Applications, in press.
 
 Description:
-The One Hundred Plants Texture dataset is a collection of data related to the classification of one hundred plant species based on their leaf textures.
-
-Sources:
-The original owners of the color leaves samples are from the Royal Botanic Gardens, Kew, UK.
+This dataset contains information on one hundred plant species leaves, focusing specifically on texture features. The data was collected from leaf samples at the Royal Botanic Gardens, Kew, UK. The original dataset includes binary images (masks) of the leaf samples, though the color images are not included.
 
 Dataset Information:
-The dataset consists of binary images (masks) of the leaf samples, excluding color images. There are three features for each image: Shape, Margin, and Texture. For each feature, a sixty-four element vector is given per leaf sample. These vectors are taken as a contiguous descriptor (for shape) or histograms (for texture and margin).
+The dataset comprises three main features for each leaf sample: Shape, Margin, and Texture. Each feature is represented by a sixty four element vector, either as a contiguous descriptor (for shape) or as histograms (for texture and margin). The dataset provided here focuses on the texture-based prediction, using the 'data Tex' file.
 
-The dataset is divided into three files, each corresponding to a specific feature problem:
-
-* Prediction based on shape
-* Prediction based on texture (provided in this dataset)
-* Prediction based on margin
-
-Each row in the dataset contains a sixty-four-element feature vector followed by the Class label. The dataset comprises a total of sixteen hundred samples with sixteen samples per leaf class, and no missing values.
+Each sample in the dataset consists of a sixty four element feature vector followed by the Class label. There are one thousand six hundred samples in total, with sixteen samples per leaf class across one hundred classes. The dataset is complete with no missing values.
 
 Attributes Information:
-Each sample in the dataset has three sixty-four-element feature vectors.
+The dataset contains three sixty four element feature vectors per sample, representing various aspects of leaf texture.
 
 Relevant Papers:
-Plant Leaf Classification Using Probabilistic Integration of Shape, Texture, and Margin Features.
-Shape and Texture-Based Plant Leaf Classification.
-Plant Texture Classification Using Gabor Co-Occurrences.
+Several papers have been published using this dataset, focusing on plant leaf classification using various features including shape, texture, and margin. These studies have employed techniques such as probabilistic integration, Gabor co occurrences, and combined shape and texture analysis for classification purposes.
 
-Keywords: Plant Species, Leaf Texture, Classification, Shape, Margin, Feature Vectors, Histograms.
+The dataset has applications in botanical research, plant species identification, and computer vision tasks related to plant classification. It provides a comprehensive resource for researchers working on automated plant recognition systems and leaf-based plant taxonomy.
+
+Keywords: plant classification, leaf texture, botanical dataset, machine learning, computer vision, plant species identification, leaf features, texture analysis

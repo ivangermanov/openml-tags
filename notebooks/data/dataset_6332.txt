@@ -1,22 +1,23 @@
 Cylinder Bands Dataset
 
-Tags: Health, Medicine, OpenML-CC18, OpenML100, study_123, study_135, study_14, study_144, study_34, study_52, study_98, study_99, uci 
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_144, study_34, study_52, study_98, study_99, uci
 
-Source: UCI Machine Learning Repository 
+Source: UCI - August, 1995
 
-Description 
-The Cylinder Bands dataset aims to mitigate process delays known as cylinder banding in rotogravure printing using control rules discovered by decision tree induction. This dataset provides insights into the various factors affecting the occurrence of cylinder banding, enabling the development of effective strategies to minimize its impact.
+Please cite: UCI citation policy
 
-Attribute Information 
-The dataset comprises forty attributes for five hundred and forty observations, including the class attribute. Twenty of these attributes are numeric, while twenty are nominal. It is essential to note that three hundred and two instances contain missing values.
+Description
+The Cylinder Bands dataset is a collection of data related to process delays known as cylinder banding in rotogravure printing. This dataset was used to discover control rules that substantially mitigated these process delays using decision tree induction.
 
-Attributes 
-The dataset includes attributes such as timestamp, cylinder number, customer, job number, grain screened, ink color, proof on ctd ink, blade manufacturer, cylinder division, paper type, ink type, direct steam usage, solvent type, type on cylinder, press type, press, unit number, cylinder size, paper mill location, plating tank, proof cut, viscosity, caliper, ink temperature, humidity, roughness, blade pressure, varnish percentage, press speed, ink percentage, solvent percentage, ESA voltage, ESA amperage, wax, hardener, roller durometer, current density, anode space ratio, chrome content, and band type.
+Attribute Information
+The dataset consists of forty attributes for five hundred forty observations, including the class. Twenty of these attributes are numeric, and twenty are nominal. There are missing values in three hundred two of the instances.
 
-Notes 
-It is crucial to ignore the cylinder number attribute when modeling the data since it serves as an identifier. Additionally, the dataset contains five hundred and forty observations, contrary to the six hundred and forty-one observations stated in the UCI explanation.
+The attributes include timestamp, cylinder number, customer, job number, grain screened, ink color, proof on ctd ink, blade manufacturer, cylinder division, paper type, ink type, direct steam, solvent type, type on cylinder, press type, press, unit number, cylinder size, paper mill location, plating tank, proof cut, viscosity, caliper, ink temperature, humidity, roughness, blade pressure, varnish percentage, press speed, ink percentage, solvent percentage, ESA Voltage, ESA Amperage, wax, hardener, roller durometer, current density, anode space ratio, chrome content, and band type.
 
-Relevant Papers 
-Overcoming process delays with decision tree induction provides valuable insights into the application of decision tree induction in mitigating process delays.
+Notes
+The cylinder number is an identifier and should be ignored when modeling the data. The dataset consists of five hundred forty observations, not five hundred forty-one as stated in the UCI explanation.
 
-Keywords: Cylinder Bands, Rotogravure Printing, Decision Tree Induction, Process Delays, Printing Industry.
+Relevant Papers
+Overcoming process delays with decision tree induction.
+
+Keywords: cylinder banding, rotogravure printing, process delays, decision tree induction, control rules.

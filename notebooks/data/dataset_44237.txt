@@ -1,9 +1,60 @@
-The Digital Images of Bacteria Species dataset, commonly referred to as DIBaS, is a collection of thirty-three bacterial species with approximately twenty images for each species. Due to the limited sample size in each class and the large image sizes, the images were divided into smaller sections before being resized to 128x128 pixels. This resulted in a preprocessed dataset consisting of over four thousand images, with at least one hundred eight images per class. Additionally, blob normalization techniques were applied to reduce the significance of color in decision-making, creating a bias-aware challenge.
+**Meta-Album DIBaS Dataset (Micro)**
 
-### Dataset Details
+The Digital Images of Bacteria Species dataset (DIBaS) is a dataset of thirty-three bacterial species with around twenty images for each species. For the Meta-Album, since the images were large with very few samples in each class, we decided to split each image into several smaller images before resizing them to one hundred twenty-eight by one hundred twenty-eight. We then obtained a preprocessed dataset of four thousand sixty images with at least one hundred eight images for each class. This dataset was also preprocessed with blob normalization techniques, which is quite unusual for this type of image. The goal of this transformation was to reduce the importance of color in decision-making for a bias-aware challenge.
 
-The Digital Images of Bacteria Species dataset has been assigned the Meta Album ID MCR.BCT and can be accessed through the Meta Album URL. It belongs to the Microscopic domain and has been categorized under the DIBaS dataset. This dataset consists of twenty classes and contains eight hundred images, all of which are in the microscopic category and feature bacteria.
+**Dataset Details**
 
-### Keywords
+![Sample Image](https://meta-album.github.io/assets/img/samples/BCT.png)
 
-microscopic, bacteria, machine learning, meteorology
+**Meta Album ID**: Micro Bacteria Classification Task
+**Meta Album URL**: https://meta-album.github.io/datasets/BCT.html
+**Domain ID**: Microscopic
+**Domain Name**: Microscopic
+**Dataset ID**: DIBaS
+**Dataset Name**: Digital Image of Bacterial Species
+**Short Description**: Digital Image of Bacterial Species (DIBaS)
+**Number of Classes**: Thirty-three
+**Number of Images**: Four thousand sixty
+**Keywords**: Microscopic, Bacteria
+**Data Format**: Images
+**Image Size**: One hundred twenty-eight by one hundred twenty-eight
+**License (original data release)**: Public for researchers
+**License URL (original data release)**: 
+**License (Meta-Album data release)**: Creative Commons Attribution-NonCommercial 4.0
+**License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by-nc/4.0/
+**Source**: Digital Image of Bacterial Species (DIBaS)
+**Source URL**: http://misztal.edu.pl/software/databases/dibas/ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184554 https://github.com/gallardorafael/DIBaS-Dataset
+
+**Cite this dataset**
+
+@article{DIBaS, 
+  doi = {10.1371/journal.pone.0184554}, 
+  journal = {PLOS ONE}, 
+  publisher = {Public Library of Science}, 
+  title = {Deep learning approach to bacterial colony classification}, 
+  year = {}, 
+  month = {}, 
+  volume = {}, 
+  url = {https://doi.org/10.1371/journal.pone.0184554}, 
+  pages = {}, 
+  number = {} 
+}
+
+**Cite Meta-Album**
+
+@inproceedings{Meta-Album, 
+  title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, 
+  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, 
+  url = {https://meta-album.github.io/}, 
+  year = {} 
+}
+
+**More**
+
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
+
+**Other versions of this dataset**
+
+[Mini](https://www.openml.org/d/44281) [Extended](https://www.openml.org/d/44316)
+
+Keywords: Microscopic, Bacteria, Image Classification, Few-Shot Learning, Meta-Dataset

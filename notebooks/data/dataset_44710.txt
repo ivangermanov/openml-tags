@@ -1,13 +1,15 @@
-Amazon Employee Access Seed Two Dataset 
+Name: Amazon Employee Access
 
-Tags: Subsampling of the Amazon Employee Access dataset 
+Tags: Subsampling of the dataset Amazon Employee Access, generated with a specific set of arguments
 
-This dataset is a subsample of the original Amazon Employee Access dataset. It was generated using a specific set of arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+This dataset is a subsample of the original Amazon Employee Access dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then further subsampling the resulting dataset to meet the specified requirements.
 
-The subsampling process involved several steps. First, the unique classes in the target variable were identified and sampled uniformly to select the desired number of classes. The indices corresponding to these classes were then used to subset the data. Next, the columns were sampled uniformly to select the desired number of columns. Finally, the rows were sampled using stratification based on the target variable to select the desired number of rows.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by uniformly sampling from the unique classes present in the dataset, with the probability of selection proportional to the frequency of each class. The selected classes were then used to filter the dataset, retaining only the rows where one of the selected classes was present.
 
-The resulting dataset consists of the subsetted data, along with metadata including the categorical mask and column names.
+Next, the columns of the dataset were uniformly sampled, selecting a subset of columns to retain. This was done to reduce the dimensionality of the dataset and improve its manageability.
 
-Features: Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, Role Code, Target 
+Finally, the resulting dataset was further subsampled to meet the specified requirements. This involved stratified sampling, where the dataset was split into subsets based on the target variable, and then sampling from each subset to achieve the desired number of rows.
 
-Keywords: Subsampling, Amazon Employee Access, Stratification, Data Sampling, Feature Selection, Dataset Generation
+The resulting dataset consists of the following features: Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, and Role Code, as well as the target variable.
+
+Keywords: Amazon Employee Access, subsampling, dataset, classes, columns, stratified sampling, target variable.

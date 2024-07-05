@@ -1,13 +1,11 @@
-Phishing Websites Dataset 
+Phishing Websites Dataset
 
-This dataset is a subsampling of the Phishing Websites dataset generated using a specific source code. The subsampling was done with a specified set of arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether to stratify or not.
+This dataset is a subsample of the Phishing Websites dataset, generated with a seed of four. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its representative characteristics.
 
-The source code defines a function called `subsample` that takes in these arguments and returns a new dataset. This function first uniformly samples classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and filters the data accordingly.
+The dataset was subsampled to have a maximum of ten classes, one hundred columns, and two thousand rows. The subsampling process was stratified to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-Next, the function uniformly samples columns from the filtered data, making sure that the number of columns does not exceed the specified maximum. Finally, if the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to reduce the number of rows while maintaining the class distribution.
+The dataset features include various characteristics of websites, such as the presence of IP addresses, URL length, and the use of shortening services. It also includes features related to website security, such as the presence of SSL certificates and domain registration length. Additionally, the dataset includes features related to website content, such as the presence of favicons, ports, and HTTPS tokens.
 
-The resulting dataset contains a subset of the original features, which include various characteristics of websites, such as the presence of IP addresses, URL lengths, and SSL certificates, among others.
+The dataset was generated using a Python script that utilized the NumPy and Pandas libraries. The script employed a random number generator to select the classes, columns, and rows to include in the subsampled dataset.
 
-Machine Learning, Mathematics
-
-Keywords: Phishing Websites, dataset, subsampling, machine learning, mathematics
+Keywords: Phishing Websites, dataset subsampling, stratified sampling, website security, URL characteristics.

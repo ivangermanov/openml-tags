@@ -1,13 +1,18 @@
-Machine Learning and Mathematics Subsampling of the dataset KDD Cup Nine Up Selling with Seed One 
+Name: KDD Cup 09 Upselling Seed 1
 
-This dataset is generated using a specific algorithm that involves uniformly sampling classes and columns, followed by stratified sampling of rows. The goal is to create a smaller, more manageable dataset while preserving the overall characteristics of the original dataset.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-The process begins by uniformly sampling classes from the original dataset. If there are more than ten classes, a selection of ten classes is made based on their frequency distribution. The indices where these classes are present are then selected, and the corresponding data points are retained.
+Generated with the following source code:
 
-Next, the algorithm uniformly samples columns from the selected data points. If there are more than one hundred columns, a selection of one hundred columns is made randomly. The selected columns are then retained, and the remaining columns are discarded.
+The subsample function is used to reduce the size of the dataset while maintaining its overall characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, as well as a boolean indicating whether to stratify the sampling.
 
-Finally, the algorithm performs stratified sampling of rows based on the class distribution. This ensures that the resulting dataset has a balanced representation of all classes.
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the data.
 
-The resulting dataset consists of the selected features, including Var Six, Thirteen, Twenty-One, and so on, along with the Up Selling target variable. 
+Next, the function uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting column indices and then using these indices to subset the data.
 
-Keywords: Machine Learning, Mathematics, Subsampling, Dataset, Stratified Sampling, Class Distribution.
+Finally, the function stratifies the sampling of rows according to the target variable, ensuring that the resulting dataset is representative of the original.
+
+Features: 
+Var Six, Var Thirteen, Var Twenty One, Var Twenty Two, Var Twenty Four, Var Twenty Five, Var Twenty Eight, Var Thirty Five, Var Thirty Eight, Var Fifty Seven, Var Sixty Five, Var Seventy Three, Var Seventy Four, Var Seventy Six, Var Seventy Eight, Var Eighty One, Var Eighty Three, Var Eighty Five, Var One Nine, Var One Twelve, Var One Thirteen, Var One Nineteen, Var One Twenty Three, Var One Twenty Five, Var One Twenty Six, Var One Thirty Two, Var One Thirty Three, Var One Thirty Four, Var One Forty, Var One Forty Four, Var One Forty Nine, Var One Fifty Three, Var One Sixty, Var One Sixty Three, Var One Ninety Four, Var One Ninety Six, Var Two One, Var Two Three, Var Two Five, Var Two Seven, Var Two Eight, Var Two Ten, Var Two Eleven, Var Two Eighteen, Var Two Twenty One, Var Two Twenty Three, Var Two Twenty Five, Var Two Twenty Seven, Var Two Twenty Nine, Upselling
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, row sampling

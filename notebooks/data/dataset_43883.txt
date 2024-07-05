@@ -1,11 +1,15 @@
-MNE Sample MEG Auditory Data 
+MNE Sample MEG Auditory Data Tags: MEG data from auditory stimulation experiment using three hundred and five sensors.
 
-Tags: Agriculture, Computer Systems 
+The design matrix or forward operator is comprised of the first seven thousand four hundred and ninety-eight columns of the data. The measurements for left stimulation are contained in columns seven thousand four hundred and ninety-eight to seven thousand five hundred and eighty-three. The measurements for right stimulation are found in the remaining columns.
 
-This dataset contains Magnetoencephalography (MEG) data from an auditory stimulation experiment utilizing three hundred five sensors. The design matrix or forward operator is comprised of the first seven thousand four hundred ninety-eight columns of the data. The measurements corresponding to left stimulation are found in columns seven thousand four hundred ninety-eight through seven thousand five hundred eighty-three, while those related to right stimulation occupy columns seven thousand five hundred eighty-three onwards. This data was generated via a Python script employing the MNE library, version one point zero two.
+This data was generated using the following script:
 
-The script employed the sample dataset provided by MNE, specifically the MEG data from an auditory visual experiment. It began by reading the noise covariance matrix, then proceeded to handle the forward solution by loading the necessary file. Subsequently, it defined two conditions - Left Auditory and Right Auditory - and read the corresponding evoked responses. These responses were then cropped to focus on the time period between forty milliseconds and one hundred eighty milliseconds post-stimulation. The script picked only magnetometer channels, discarding electroencephalography data. 
+The script utilized the MNE library, version one point zero point two, to read in the necessary data files, including the forward solution, noise covariance matrix, and evoked responses. The forward solution was read in from a file, and the noise covariance matrix was also read in from a separate file. The evoked responses were read in from another file, and then cropped to a specific time range.
 
-Next, it prepared the forward operator, applying depth weighting and whitening. The resulting gain matrix, devoid of any weights, was computed along with the whitener and other necessary information. Channels of interest were selected based on their presence in the gain information. The whitened data was then computed by applying the whitener to the evoked response data. Finally, the script constructed the data matrix by horizontally stacking the gain matrix and the whitened data for both Left Auditory and Right Auditory conditions.
+The script then handled the forward solution by preparing the gain matrix, which was used to whiten the data. The whitened data was then stored in a dictionary, with separate entries for the left and right auditory conditions.
 
-Keywords: MEG, auditory stimulation, forward operator, whitening, depth weighting, noise covariance matrix.
+The final data array was created by horizontally stacking the gain matrix with the whitened data for the left and right auditory conditions.
+
+Features: (omitted due to unreadability)
+
+Keywords: MEG, auditory stimulation, forward operator, whitening, noise covariance matrix.

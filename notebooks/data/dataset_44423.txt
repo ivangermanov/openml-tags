@@ -1,13 +1,9 @@
-The dataset named Eye Movements has been subsampled with the following parameters: seed equals zero, maximum number of rows equals two thousand, maximum number of columns equals one hundred, maximum number of classes equals ten, and stratification is true.
+Name: Eye Movements Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This subsampling process involves several steps. First, the unique classes in the dataset are identified. If there are more than ten classes, a random selection of ten classes is made based on their frequency in the dataset. The indices corresponding to these selected classes are then obtained, and the dataset is filtered to only include these indices.
+Tags: Subsampling of the dataset Eye Movements generated with the following source code:
 
-Next, if the dataset has more than one hundred columns, a random selection of one hundred columns is made uniformly. The dataset is then filtered to include only these selected columns.
+This function subsamples a dataset to reduce its size while maintaining its overall characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling. The function first selects a subset of classes, then samples columns and rows uniformly. If stratification is required, it uses a train-test split function to ensure the sampled data maintains the same class distribution as the original dataset.
 
-Finally, if the resulting dataset still has more than two thousand rows, a stratified sampling approach is used to select two thousand rows. This ensures that the class distribution in the subsampled dataset is similar to that in the original dataset.
+The resulting dataset has the following features: line number, assignment number, previous fixation duration, first fixation duration, first pass fixation duration, next fixation duration, first saccade length, last saccade length, previous fixation position, landing position, leaving position, total fixation duration, mean fixation duration, regression length, regression duration, pupil diameter maximum, pupil diameter lag, time protection, title number, word number, and label.
 
-The resulting subsampled dataset contains the following features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protected, Title Number, Word Number, and Label.
-
-Tags: Computer Systems, Machine Learning
-
-Keywords: Eye Movements, Subsampling, Stratification, Machine Learning, Dataset, Feature Selection
+Keywords: dataset subsampling, stratified sampling, data reduction, class distribution, feature selection

@@ -1,13 +1,15 @@
-The Stars from Gaia DR2 and RAVE DR5 dataset combines data from the RAVE radial velocity dataset and the Gaia mission of the European Space Agency, which aims to accurately measure the position, distance, and magnitude of over a billion stars. The RAVE dataset provides spectrophotometric parallax data, as well as cross-identification of stars with a number of other datasets, including Gaia DR2.
+The Stars from Gaia DR2 and RAVE DR5 dataset is a combination of RAVE DR5 and Gaia DR2 sources. The data is obtained using the query tool of the RAVE project. The SQL query is designed to select specific columns from the Gaia and RAVE datasets.
 
-This dataset is a combination of RAVE DR5 and Gaia DR2 sources, obtained using the query tool of the RAVE project. The SQL query selects various parameters from both datasets, including position, motion, and physical properties of the stars.
+This dataset is a result of a query that combines data from the RAVE DR5 and Gaia DR2 datasets. The query selects various columns from the Gaia dataset, including the source ID, right ascension, declination, parallax, parallax error, and photometric magnitudes in different bands. It also selects columns from the RAVE dataset, including the radial velocity, metallicity, distance, and various magnitudes in different bands.
 
-The following processing was done: removed rows with missing values in any of the selected columns; averaged values for rows that have the same Gaia source identifier.
+The dataset is processed by removing rows with missing values in certain columns. The remaining rows are then averaged based on the Gaia source ID. This processing step ensures that the dataset only includes complete and consistent data.
 
-An alternative dataset is recommended, which contains sources from the Northern and Southern Hemispheres.
+The Gaia mission is a project of the European Space Agency that aims to accurately measure the position, distance, and magnitude of over a billion stars. The RAVE dataset provides radial velocity data, as well as spectrophotometric parallax data and cross-identification of stars with other datasets, including Gaia DR2.
 
-This work has made use of data from the European Space Agency mission Gaia, processed by the Gaia Data Processing and Analysis Consortium. Funding for the consortium has been provided by national institutions.
+The dataset is recommended for use in certain applications, although an alternative dataset is available that includes sources from the Northern and Southern Hemispheres.
 
-The dataset includes features such as source identifier, right ascension, declination, proper motion, Galactic longitude, Galactic latitude, parallax, parallax error, magnitudes in different bands, metallicity, radial velocity, and distances.
+The dataset acknowledges the use of data from the European Space Agency's Gaia mission and the Gaia Data Processing and Analysis Consortium.
 
-Keywords: Gaia, RAVE, stars, radial velocity, spectrophotometry, astrometry, astronomy, machine learning, computer systems.
+Features of the dataset include source ID, right ascension, declination, proper motion, Galactic longitude and latitude, parallax, parallax error, and various photometric magnitudes.
+
+Keywords: Gaia, RAVE, stars, radial velocity, parallax, photometry, dataset.

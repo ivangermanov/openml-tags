@@ -1,32 +1,26 @@
-Microsoft Tags: Chemistry, Life Science 
+Microsoft Tags: Microsoft Learning to Rank Datasets
 
-The Microsoft Learning to Rank Datasets 
+The datasets are machine learning data, in which queries and URLs are represented by IDs. The datasets consist of feature vectors extracted from query-URL pairs along with relevance judgment labels. The relevance judgments are obtained from a retired labeling set of a commercial web search engine, which take five values from zero (irrelevant) to four (perfectly relevant). The features are basically extracted by us, and are those widely used in the research community. In the data files, each row corresponds to a query-URL pair. The first column is the relevance label of the pair, the second column is the query ID, and the following columns are features. The larger value the relevance label has, the more relevant the query-URL pair is. A query-URL pair is represented by a one hundred thirty-six-dimensional feature vector.
 
-The datasets are machine learning data, where queries and URLs are represented by IDs. The datasets consist of feature vectors extracted from query-URL pairs along with relevance judgment labels. 
+Below are two rows from the MSLR-WEB10K dataset:
 
-The relevance judgments are obtained from a retired labeling set of a commercial web search engine, which takes values from zero (irrelevant) to four (perfectly relevant). The features are basically extracted and are those widely used in the research community. 
+Relevance Label  Query ID  Feature One  Feature Two  ...  Feature One Hundred Thirty-Six
+Zero            One        Three          Zero         ...  Zero
+Two            One        Three          Three         ...  Zero
 
-In the data files, each row corresponds to a query-URL pair. The first column is the relevance label of the pair, the second column is the query ID, and the following columns are features. The larger value the relevance label has, the more relevant the query-URL pair is. 
+The dataset is partitioned into five parts with about the same number of queries, denoted as S1, S2, S3, S4, and S5, for five-fold cross-validation. In each fold, we propose using three parts for training, one part for validation, and the remaining part for testing. The training set is used to learn ranking models. The validation set is used to tune the hyperparameters of the learning algorithms, such as the number of iterations in RankBoost and the combination coefficient in the objective function of Ranking SVM. The test set is used to evaluate the performance of the learned ranking models.
 
-A query-URL pair is represented by a feature vector. 
+Folds  Training Set  Validation Set  Test Set
+Fold One  {S1, S2, S3}  S4  S5
+Fold Two  {S2, S3, S4}  S5  S1
+Fold Three  {S3, S4, S5}  S1  S2
+Fold Four  {S4, S5, S1}  S2  S3
+Fold Five  {S5, S1, S2}  S3  S4
 
-Dataset Partition 
+You can cite this dataset as follows.
 
-We have partitioned each dataset into five parts with approximately the same number of queries, denoted as S1, S2, S3, S4, and S5, for five-fold cross-validation. 
+Introducing LETOR 4.0 Datasets
 
-In each fold, we propose using three parts for training, one part for validation, and the remaining part for testing. The training set is used to learn ranking models. The validation set is used to tune the hyperparameters of the learning algorithms, such as the number of iterations in RankBoost and the combination coefficient in the objective function of Ranking SVM. The test set is used to evaluate the performance of the learned ranking models.
+Note: This is a learning-to-rank dataset and it should not be used for standard classification tasks. It is only coded this way to enable reproducing the work. This dataset concatenates the train, valid, and test sets from Fold One. This is the ten thousand version (Web10k). The uploader shortened the word "variance" in the feature names to "var" to comply with OpenML's maximum feature name length.
 
-Reference 
-
-You can cite this dataset as Introducing LETOR Datasets.
-
-Note 
-This is a learning-to-rank dataset and it should not be used for standard classification tasks. It is only coded this way to enable reproducing the work. 
-This dataset concatenates the train, validation, and test sets from Fold One.
-This is the Web Ten Thousand Version.
-The uploader shortened the word variance in the feature names to var to comply with OpenML's maximum feature name length.
-
-Features 
-Relevance, Query ID, Covered Query Term Number Body, Covered Query Term Number Anchor, Covered Query Term Number Title, Covered Query Term Number URL, Covered Query Term Number Whole Document, Stream Length Body, Stream Length Anchor, Stream Length Title, Stream Length URL, Stream Length Whole Document, Inverse Document Frequency Body, Inverse Document Frequency Anchor, Inverse Document Frequency Title, Inverse Document Frequency URL, Inverse Document Frequency Whole Document...
-
-Keywords: Microsoft, Learning to Rank, Datasets, Machine Learning, Relevance Judgment Labels, Feature Vectors, Web Search Engine, Query-URL Pairs, Cross-Validation, Hyperparameters, Ranking Models.
+Keywords: Microsoft, Learning to Rank, Datasets, Query-URL Pairs, Relevance Judgment Labels, Feature Vectors, Cross-Validation, Ranking Models.

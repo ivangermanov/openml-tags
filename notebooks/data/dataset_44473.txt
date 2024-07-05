@@ -1,13 +1,21 @@
-Machine Learning and Mathematics Subsampling of the Dataset KDD Cup Nine Appetency
+Name: KDD Cup 09 Appetency Seed 0
 
-This dataset is a subsampled version of the original KDD Cup Nine Appetency dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset.
+Tags: Subsampling of the dataset KDD Cup 09 Appetency
 
-The subsampling function takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. In this case, the function was called with a seed value of zero, a maximum of two thousand rows, one hundred columns, ten classes, and stratification enabled.
+Generated with the following source code:
 
-The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the corresponding indices where one of these classes is present and subsets the data accordingly.
+The subsample function is used to reduce the size of the dataset while maintaining its overall characteristics. It takes in several parameters, including a seed value, the maximum number of rows, columns, and classes, as well as a boolean indicating whether to stratify the sampling.
 
-Next, the function uniformly samples columns from the resulting dataset, selecting a specified number of columns without replacement. Finally, it stratifies the sampling of rows based on the target variable, ensuring that the resulting dataset has the specified number of rows.
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the data.
 
-The resulting dataset consists of a subset of the original features, which include various variables such as Var Six, Var Eleven, Var Twenty Two, and so on. The dataset also includes the appetency target variable.
+Next, the function uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting a subset of column indices and using these indices to subset the data.
 
-Keywords: machine learning, mathematics, subsampling, dataset, KDD Cup Nine Appetency, stratification, uniform sampling.
+If the number of rows exceeds the maximum allowed, the function uses stratified sampling to select a subset of rows. This ensures that the class distribution is maintained in the subsampled data.
+
+Finally, the function returns a new dataset object, which includes the subsampled data, the categorical mask, and the column names.
+
+Features: 
+
+APPETENCY
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Class Distribution, Data Reduction

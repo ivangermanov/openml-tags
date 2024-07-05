@@ -1,17 +1,13 @@
-Name: Gina Seed Four N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Gina Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Sub sampling of the dataset Gina generated with the following source code:
+Tags: Subsampling of the dataset Gina with seed equals four arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-The function sub sample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification. 
+Generated with the following source code:
 
-This function first uniformly samples the classes present in the dataset, selecting a specified maximum number of classes. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of rows, columns, and classes from the original dataset. The function first selects the classes, then the columns, and finally the rows. It uses stratified sampling to ensure that the selected rows are representative of the original dataset.
 
-Next, it uniformly samples the columns of the dataset, selecting a specified maximum number of columns. 
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, columns, and classes to select, and a boolean indicating whether to use stratified sampling. It returns a new dataset with the selected rows, columns, and classes.
 
-If the dataset still has more rows than the specified maximum, it uses stratified sampling to select a subset of the data. This ensures that the class distribution is preserved in the sampled dataset.
+Features: 
 
-Finally, the function converts any categorical columns to strings and returns a new dataset object with the sampled data.
-
-Features: Twenty Six, Thirty Four, Fifty Five, Seventy One, Seventy Five, Eighty Three, One Ten, One Twenty Three, One Twenty Four, One Twenty Six, One Fifty Four, One Fifty Five, One Sixty Two, One Sixty Five, One Seventy Two, One Eighty Three, One Eighty Seven, One Ninety One, One Ninety Six, Two Zero Seven, Two Zero Nine, Two One Four, Two Fifty, Two Fifty Two, Two Seventy Seven, Three Zero Two, Three Two Five, Three Three Three, Three Three Four, Three Thirty Seven, Three Forty Eight, Three Forty Nine, Three Seventy One, Three Seventy Three, Three Eighty Six, Three Ninety Nine, Four Two Two, Four Two Seven, Four Four One, Four Four Seven, Four Fifty Two, Four Fifty Six, Four Fifty Nine, Four Sixty, Four Sixty Three, Four Sixty Five, Four Seventy One, Four Eighty, Four Eighty Five, Four Eighty Seven, Five Zero One, Five One Four, Five One Five, Five Twenty, Five Thirty Five, Five Thirty Eight, Five Forty Six, Five Fifty Four, Five Fifty Five, Five Ninety Nine, Six Zero Zero, Six Ten, Six Thirty Three, Six Thirty Four, Six Forty, Six Forty Three, Six Sixty, Six Sixty Two, Seven Zero Nine, Seven Thirty Six, Seven Seventy, Seven Seventy One, Seven Seventy Five, Seven Seventy Seven, Seven Ninety, Eight Zero Four, Eight Zero Five, Eight Twenty, Eight Twenty Three, Eight Thirty Eight, Eight Forty One, Eight Forty Two, Eight Fifty One, Eight Fifty Six, Eight Sixty Two, Eight Sixty Eight, Eight Seventy Five, Eight Seventy Six, Eight Eighty, Eight Eighty Six, Eight Eighty Eight, Eight Ninety Eight, Nine Zero Seven, Nine Thirty, Nine Thirty Six, Nine Thirty Eight, Nine Forty Two, Nine Fifty Nine, Nine Sixty 
-
-Keywords: sub sampling, dataset, stratification, classes, columns, rows
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Number Generation, Classes, Columns, Rows

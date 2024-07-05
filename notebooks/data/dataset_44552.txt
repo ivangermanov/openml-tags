@@ -1,48 +1,13 @@
-Name: Ozone Level Eight Hour Seed Four 
+Name: Ozone Level Eight Hour Seed Four
 
-Tags: Demographics, Economics 
+Tags: Subsampling of the dataset Ozone Level Eight Hour with seed equals four arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Sub-sampling of the dataset Ozone Level Eight Hour with seed equal to four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+Generated with the following source code:
 
-def sub-sample(self, seed: integer, number rows max: integer equals two thousand, number columns max: integer equals one hundred, number classes max: integer equals ten, stratified: boolean equals true,) -> Dataset:
-random number generator equals numpy dot random dot default random generator open parenthesis seed close parenthesis 
-x equals self dot x 
-y equals self dot y 
-uniformly sample classes equals y dot unique 
-if length of classes is greater than number classes max: 
-value counts equals y dot value counts 
-selected classes equals random number generator dot choice open parenthesis classes comma size equals number classes max comma replace equals false comma probability equals value counts slash sum of value counts close parenthesis 
-select the indices where one of these classes is present 
-indexes equals y dot index open bracket y dot is in open parenthesis classes close parenthesis close bracket 
-x equals x dot iloc open bracket indexes close bracket 
-y equals y dot iloc open bracket indexes close bracket 
-uniformly sample columns if required 
-if length of x dot columns is greater than number columns max: 
-column indexes equals random number generator dot choice open parenthesis list open parenthesis range open parenthesis length of x dot columns close parenthesis close parenthesis comma size equals number columns max comma replace equals false close parenthesis 
-sorted column indexes equals sorted open parenthesis column indexes close parenthesis 
-selected columns equals list open parenthesis x dot columns open bracket sorted column indexes close bracket close parenthesis 
-x equals x open bracket selected columns close bracket 
-else: 
-sorted column indexes equals list open parenthesis range open parenthesis length of x dot columns close parenthesis close parenthesis 
-if length of x is greater than number rows max: 
-stratify accordingly 
-target name equals y dot name 
-data equals pandas dot concat open parenthesis x comma y close parenthesis comma axis equals quote columns close quote 
-underscore comma subset equals train test split open parenthesis data comma test size equals number rows max comma stratify equals data open bracket target name close bracket comma shuffle equals true comma random state equals seed close parenthesis 
-x equals subset dot drop open parenthesis target name close parenthesis comma axis equals quote columns close quote 
-y equals subset open bracket target name close bracket 
-we need to convert categorical columns to string for open ml 
-categorical mask equals open bracket self dot categorical mask open bracket i close bracket for i in sorted column indexes close bracket 
-columns equals list open parenthesis x dot columns close parenthesis 
-return Dataset open parenthesis 
-technically this is not the same but it is where it was derived from 
-dataset equals self dot dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns close parenthesis 
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes based on their frequency in the data. If the number of columns is greater than the maximum, it selects a subset of columns uniformly at random. If the number of rows is greater than the maximum, it uses stratified sampling to select a subset of rows. The function returns a dataset with the selected data and the corresponding categorical mask.
 
 Features: 
-skipped due to being unreadable 
 
-Keywords: ozone level, demographics, economics, sub-sampling, dataset, stratified
+Class
+
+Keywords: ozone level, subsampling, stratified sampling, dataset, random number generator

@@ -1,21 +1,17 @@
 Compass Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics
+This is a subsampling of the dataset Compass with a seed of four. The subsampling was done with the following arguments: the maximum number of rows is two thousand, the maximum number of columns is one hundred, the maximum number of classes is ten, and stratification is true.
 
-Subsampling of the dataset Compass with a seed of four arguments N Rows maximum equals two thousand arguments N Columns maximum equals one hundred arguments N Classes maximum equals ten arguments No Stratify equals True.
+The subsampling was generated with the following source code:
 
-Generated with the following source code:
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-The function subsample takes in several parameters including self, seed, N Rows maximum, N Columns maximum, N Classes maximum, and stratified. It uses NumPy's default random generator to generate random samples. 
+The function first gets the unique classes from the target variable. If there are more classes than the maximum number of classes, it selects the maximum number of classes using a weighted random choice, where the weights are the value counts of each class. It then selects the indices where one of these classes is present.
 
-It first selects unique classes from the target variable Y. If there are more than the specified number of classes, it uses value counts to select the top classes based on their frequency.
+Next, the function uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns using a random choice.
 
-Then, it uniformly samples columns if there are more columns than the specified maximum number of columns. 
+Finally, the function stratifies the data accordingly. If the number of rows is greater than the maximum number of rows, it uses train test split to select a subset of the data, stratifying by the target variable.
 
-After that, it uniformly samples rows while maintaining the class distribution if there are more rows than the specified maximum number of rows. 
+The resulting dataset has the following features: sex, age, age category, race, juvenile felony count, juvenile misdemeanor count, juvenile other count, prior count, days between screening and arrest, days from compass, charge degree, decile score, score text, type of assessment, decile score, score text, end, and is recid.
 
-Finally, it returns a new dataset with the sampled data.
-
-Features: Sex, Age, Age Category, Race, Juvenile Felony Count, Juvenile Misdemeanor Count, Juvenile Other Count, Prior Counts, Days Between Screening and Arrest, Days From Compass, Charge Degree, Decile Score, Score Text, Type of Assessment, Decile Score, Score Text, End, Is Recid.
-
-Keywords: Compass, Subsampling, Machine Learning, Stratification, Random Sampling.
+Keywords: dataset subsampling, stratification, feature selection, random sampling, class imbalance.

@@ -1,33 +1,26 @@
-KDDCup99 full Dataset 
+KDDCup Full Dataset
+Tags: concept drift
 
-Tags: Chemistry, Concept Drift, Life Science 
+This dataset was used for The Third International Knowledge Discovery and Data Mining Tools Competition, held in conjunction with KDD, The Fifth International Conference on Knowledge Discovery and Data Mining. The competition task was to build a network intrusion detector, a predictive model capable of distinguishing between "bad" connections, called intrusions or attacks, and "good" normal connections.
 
-The KDD Cup 1999 dataset is a widely used benchmark for evaluating anomaly detection and intrusion detection systems. It was created by simulating a military network environment and collecting a large amount of network traffic data. 
+The database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment. The training and test datasets are also available in the UC Irvine KDD archive.
 
-The dataset contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment. The goal of the competition task was to build a network intrusion detector, a predictive model capable of distinguishing between bad connections, called intrusions or attacks, and good normal connections. 
+The intrusion detector learning task aims to build a predictive model (classifier) capable of distinguishing between intrusions or attacks and normal connections. The DARPA Intrusion Detection Evaluation Program, prepared and managed by MIT Lincoln Labs, provided a standard set of data including various intrusions simulated in a military network environment.
 
-Intrusion Detector Learning Software to detect network intrusions protects a computer network from unauthorized users, including perhaps insiders. The intrusion detector learning task is to build a predictive model capable of distinguishing between bad connections, called intrusions or attacks, and good normal connections. 
+Lincoln Labs set up an environment to acquire nine weeks of raw TCP dump data for a local area network simulating a typical U.S. Air Force LAN. They operated the LAN as if it were a true Air Force environment, but included multiple attacks. The raw training data was processed into about five million connection records, while the two weeks of test data yielded around two million connection records.
 
-A standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment, was provided. The 1998 DARPA Intrusion Detection Evaluation Program was prepared and managed by MIT Lincoln Labs. The objective was to survey and evaluate research in intrusion detection. 
+A connection is defined as a sequence of TCP packets starting and ending at well defined times, between which data flows to and from a source IP address to a target IP address under a specific protocol. Each connection is labeled as either normal or as an attack, with a specific attack type. Connection records consist of about bytes.
 
-Lincoln Labs set up an environment to acquire network traffic data for a local area network simulating a typical US Air Force LAN. They operated the LAN as if it were a true Air Force environment, but peppered it with multiple attacks. The raw training data was processed into about five million connection records. 
+Attacks fall into four main categories:
+- Denial of service (DOS), such as syn flood
+- Unauthorized access from a remote machine (R2L), such as guessing passwords
+- Unauthorized access to local superuser privileges (U2R), such as buffer overflow attacks
+- Surveillance and probing, such as port scanning
 
-Each connection is labeled as either normal, or as an attack, with exactly one specific attack type. Each connection record consists of about one hundred bytes. Attacks fall into four main categories: Denial of Service, Unauthorized Access from a Remote Machine, Unauthorized Access to Local Super User Privileges, and Probing. 
+The test data is not from the same probability distribution as the training data and includes specific attack types not present in the training data, making the task more realistic. Some intrusion experts believe that most novel attacks are variants of known attacks, and the "signature" of known attacks can be sufficient to catch novel variants.
 
-It is important to note that the test data is not from the same probability distribution as the training data, and it includes specific attack types not in the training data. This makes the task more realistic. Some intrusion experts believe that most novel attacks are variants of known attacks and the signature of known attacks can be sufficient to catch novel variants. 
+Higher level features were defined to help distinguish normal connections from attacks. These include time based traffic features examining connections in the past two seconds with the same destination host or service, and host based traffic features constructed using a window of connections to the same host. Content features were also added to look for suspicious behavior in the data portions of packets.
 
-Derived Features 
+The dataset includes basic features of individual TCP connections, content features within connections suggested by domain knowledge, and traffic features computed using time windows. These features cover various aspects of network connections and potential intrusion patterns.
 
-Stolfo et al defined higher level features that help in distinguishing normal connections from attacks. There are several categories of derived features. The same host features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc. 
-
-The similar same service features examine only the connections in the past two seconds that have the same service as the current connection. Same host and same service features are together called time based traffic features of the connection records. 
-
-Some Probing attacks scan the hosts or ports using a much larger time interval than two seconds, for example once per minute. Therefore, connection records were also sorted by destination host, and features were constructed using a window of one hundred connections to the same host instead of a time window. 
-
-This yields a set of so called host based traffic features. Unlike most of the Denial of Service and Probing attacks, there appear to be no sequential patterns that are frequent in records of Unauthorized Access from a Remote Machine and Unauthorized Access to Local Super User Privileges attacks. 
-
-This is because the Denial of Service and Probing attacks involve many connections to some host(s) in a very short period of time, but the Unauthorized Access from a Remote Machine and Unauthorized Access to Local Super User Privileges attacks are embedded in the data portions of packets, and normally involve only a single connection. 
-
-Useful algorithms for mining the unstructured data portions of packets automatically are an open research question. Domain knowledge was used to add features that look for suspicious behavior in the data portions, such as the number of failed login attempts. 
-
-Keywords: Anomaly Detection, Intrusion Detection, Network Security, Machine Learning, Computer Network, Military Network Environment, Attack Types, Connection Records, Traffic Features, Host Based Features, Time Window, Domain Knowledge.
+Keywords: network intrusion detection, machine learning, cybersecurity, data mining, anomaly detection

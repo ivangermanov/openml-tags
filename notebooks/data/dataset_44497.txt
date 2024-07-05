@@ -1,15 +1,11 @@
-Machine Learning Dataset: Numerai Twenty Eight Point Six 
+Name: Numerai Dataset Subsample
 
-This dataset is a subsampling of the original Numerai Twenty Eight Point Six dataset, generated using a specific set of parameters and algorithms. The goal of this subsampling process is to create a smaller, more manageable dataset that retains the essential characteristics of the original.
+Tags: Subsampling of the Numerai dataset with stratification
 
-The subsampling process involves several key steps. First, the algorithm uniformly samples classes from the original dataset, ensuring that the resulting dataset has a representative distribution of classes. This is achieved by selecting a specified number of classes using a random number generator, with the probability of selection proportional to the frequency of each class in the original dataset.
+This dataset is a subsample of the original Numerai dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes are representative of the overall distribution. The number of classes was limited to a maximum of ten, and the classes were selected based on their frequency in the original dataset.
 
-Next, the algorithm uniformly samples columns from the original dataset, retaining only a specified number of columns. This is done to reduce the dimensionality of the dataset and eliminate redundant or irrelevant features.
+Once the classes were selected, the corresponding data points were extracted, and the columns were uniformly sampled to reduce the dimensionality of the dataset. The number of columns was limited to a maximum of one hundred. The resulting dataset was then stratified to ensure that the class distribution was maintained.
 
-Finally, the algorithm applies stratified sampling to select a specified number of rows from the resulting dataset, ensuring that the class distribution is preserved. This involves splitting the data into training and testing sets using a stratified approach, which helps maintain the balance of classes in the sampled dataset.
+The dataset consists of a subset of the original features, which are not human-readable. The features are a combination of numerical and categorical attributes, which were selected based on their relevance to the problem at hand.
 
-The resulting dataset consists of a subset of the original features, which are denoted as attributes zero through twenty-one. These attributes are numerical and do not have descriptive names.
-
-Tags: Machine Learning, Mathematics 
-
-Keywords: subsampling, machine learning, dataset, stratified sampling, feature selection, class distribution.
+Keywords: Numerai dataset, subsampling, stratification, class sampling, dimensionality reduction

@@ -1,23 +1,15 @@
-Name: Wilt Seed Three Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+Name: Wilt Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics
-
-Sub-sampling of the dataset Wilt with a seed of three arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals false.
+Tags: Subsampling of the dataset Wilt with seed equals three arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False
 
 Generated with the following source code:
 
-def sub-sample(self, seed, number rows maximum equals two thousand, number columns maximum equals one hundred, number classes maximum equals ten, stratified equals true):
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-The function sub-samples the dataset by first selecting a specified number of classes uniformly and then selects the corresponding data points. It then selects a specified number of columns uniformly and finally selects a specified number of data points while maintaining the class distribution.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and uses these indices to subset the dataset. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. If the dataset has more rows than the specified maximum, it uses the train test split function from scikit learn to stratify the dataset and select a specified number of rows.
 
-The function uses numpy's default random generator to generate random numbers. It first gets the unique classes in the dataset and if the number of classes exceeds the specified maximum, it selects the specified number of classes based on their frequency in the dataset.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-It then gets the indices of the data points belonging to the selected classes and subsets the data accordingly. Next, it checks if the number of columns exceeds the specified maximum and if so, selects the specified number of columns randomly.
+Features: Mean of Green, Mean of Red, Mean of Near Infrared, Standard Deviation of Plan, Class
 
-Finally, it checks if the number of data points exceeds the specified maximum and if so, uses scikit-learn's train test split function to select the specified number of data points while maintaining the class distribution.
-
-The resulting sub-sampled dataset is returned along with its metadata.
-
-Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class
-
-Keywords: machine learning, mathematics, dataset, sub-sampling, stratification, classification, feature selection.
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling, row sampling, column sampling

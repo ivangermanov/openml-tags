@@ -1,11 +1,17 @@
-The Sylvine dataset has been subsampled using a seed value of four with the following parameters: maximum number of rows set to two thousand, maximum number of columns set to one hundred, and maximum number of classes set to ten. The stratification option has been set to true.
+Name: Sylvine Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This subsampling process involves uniformly selecting classes from the original dataset until the desired number of classes is reached. Then, the corresponding indices are used to select the relevant data points from both the feature matrix and the target vector. 
+Tags: Subsampling of the dataset Sylvine with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-If necessary, uniform sampling is applied to the columns to reduce their number to the specified maximum. Finally, if the resulting dataset still contains more than the desired number of rows, stratified sampling is performed to ensure an even distribution of classes.
+Generated with the following source code:
 
-The resulting dataset consists of a subset of the original features, including V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, V19, and V20, along with the corresponding class labels.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to ensure reproducibility. The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum number of classes specified. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset.
 
-Tags: Statistics, Transportation
+If the number of columns in the dataset exceeds the maximum number of columns specified, the function uniformly samples columns from the dataset. It does this by generating a list of column indices, sorting them, and then selecting the top columns based on the maximum number of columns specified.
 
-Keywords: subsampling, stratification, uniform sampling, feature selection, class distribution.
+If the number of rows in the dataset exceeds the maximum number of rows specified, the function uses the train test split function from scikit learn to split the dataset into a subset of the specified size. It does this in a stratified manner to ensure that the class distribution is preserved.
+
+Finally, the function returns a new dataset that includes the subsampled data, the categorical mask, and the column names.
+
+Features: 
+
+Keywords: dataset subsampling, stratified sampling, class distribution, column selection, row selection.

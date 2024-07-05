@@ -1,11 +1,11 @@
-Connect Four Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Connect Four Seed One
 
-Tags: Health, Medicine 
+Tags: Subsampling of the dataset Connect Four with seed one, generated with the following source code:
 
-Subsampling of the dataset Connect Four with seed equals one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code.
+This function subsamples the dataset by uniformly selecting classes and columns, and then stratifying the sample according to the target variable. The subsampling process involves several steps. First, it selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. Then, it selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns if required, ensuring that the number of columns does not exceed the maximum allowed. Finally, it stratifies the sample according to the target variable, ensuring that the sample is representative of the original dataset.
 
-The function subsample takes in five parameters: seed, number rows max, number columns max, number classes max, and stratified. It returns a dataset. It first initializes a random number generator with the given seed. Then it uniformly samples classes from the unique values in y. If the number of unique classes exceeds the maximum allowed, it selects the top classes based on their frequency. It then filters the data to only include instances with the selected classes. Next, it uniformly samples columns if the total number of columns exceeds the maximum allowed. Finally, it applies stratified sampling to reduce the number of instances to the maximum allowed while maintaining the class distribution.
+The function takes several arguments, including the seed for random number generation, the maximum number of rows, columns, and classes, and a flag indicating whether to stratify the sample. It returns a subsampled dataset with the specified characteristics.
 
-Features: 
+Features: (omitted due to unreadability)
 
-Class
+Keywords: Connect Four, dataset subsampling, stratified sampling, class selection, column selection.

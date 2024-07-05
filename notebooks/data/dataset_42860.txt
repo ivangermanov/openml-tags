@@ -1,22 +1,18 @@
-Segment Dataset Information:
+Segment Tags: Partial Label Ranking
 
-This dataset contains instances drawn randomly from a database of seven outdoor images. These images were hand-segmented to create a classification for every pixel. Each instance represents a three-by-three region.
+Features: 
+Region Centroid Column, Region Centroid Row, Region Pixel Count, Short Line Density Five, Short Line Density Two, Vertical Edge Mean, Vertical Edge Standard Deviation, Horizontal Edge Mean, Horizontal Edge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Excess Red Mean, Excess Blue Mean, Excess Green Mean, Value Mean, Saturation Mean, Hue Mean
 
-Has Missing Values?
+Scraped Data: 
+Dataset Information
+
+Additional Information 
+The instances were drawn randomly from a database of seven outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a three by three region.
+
+Has Missing Values? 
 No
 
-Additional Variable Information:
+Additional Variable Information 
+The region centroid column is the column of the center pixel of the region. The region centroid row is the row of the center pixel of the region. The region pixel count is the number of pixels in a region, which is nine. The short line density five is the result of a line extraction algorithm that counts how many lines of length five, with low contrast, less than or equal to five, go through the region. The short line density two is the same as short line density five but counts lines of high contrast, greater than five. The vertical edge mean measures the contrast of horizontally adjacent pixels in the region. There are six, and the mean and standard deviation are given. This attribute is used as a vertical edge detector. The horizontal edge mean measures the contrast of vertically adjacent pixels and is used for horizontal line detection. The intensity mean is the average over the region of the sum of the red, green, and blue values divided by three. The raw red mean is the average over the region of the red value. The raw blue mean is the average over the region of the blue value. The raw green mean is the average over the region of the green value. The excess red mean measures the excess red, which is two times the red value minus the sum of the green and blue values. The excess blue mean measures the excess blue, which is two times the blue value minus the sum of the red and green values. The excess green mean measures the excess green, which is two times the green value minus the sum of the red and blue values. The value mean is a three-dimensional nonlinear transformation of the red, green, and blue values. The saturation mean is a three-dimensional nonlinear transformation of the red, green, and blue values. The hue mean is a three-dimensional nonlinear transformation of the red, green, and blue values.
 
-The region centroid column refers to the column of the center pixel of the region. Similarly, the region centroid row is the row of the center pixel of the region. The region pixel count is nine, which is the total number of pixels in a region.
-
-The short line density five feature represents the results of a line extraction algorithm that counts the number of lines of length five with low contrast, less than or equal to five, going through the region. On the other hand, the short line density two feature counts lines of high contrast, greater than five.
-
-The vertical edge detector measures the contrast of horizontally adjacent pixels in the region, providing both the mean and standard deviation values. Similarly, the horizontal line detector measures the contrast of vertically adjacent pixels, also providing both mean and standard deviation values.
-
-The intensity mean feature calculates the average over the region of the sum of the red, green, and blue color values divided by three. Additionally, there are features representing the average values of the red, blue, and green color components individually.
-
-Excess color features include excess red, measured as twice the red value minus the sum of the green and blue values; excess blue, measured as twice the blue value minus the sum of the red and green values; and excess green, measured as twice the green value minus the sum of the red and blue values.
-
-Finally, there are features representing a three-dimensional nonlinear transformation of the RGB color space, including value, saturation, and hue mean values.
-
-Keywords: image segmentation, outdoor images, pixel classification, line extraction, edge detection, color analysis, image features.
+Keywords: image segmentation, outdoor images, pixel classification, line detection, edge detection, color analysis

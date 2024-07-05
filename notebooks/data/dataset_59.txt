@@ -1,27 +1,29 @@
-Ionosphere Database 
+Name: Ionosphere
+Tags: mythbusting, study, uci
 
-Tags: Chemistry, Machine Learning, Mythbusting, Study 
+Johns Hopkins University Ionosphere database
 
-This radar data was collected by a system located in Goose Bay, Labrador. The system consists of a phased array of sixteen high frequency antennas with a total transmitted power of approximately six point four kilowatts. For more detailed information, please refer to the relevant paper.
+This radar data was collected by a system in Goose Bay, Labrador. The system consists of a phased array of sixteen high-frequency antennas with a total transmitted power on the order of six point four kilowatts. For more details, please refer to the associated paper.
 
-The received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal. 
+Attribute information:
+Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.
 
-The targets were free electrons in the ionosphere. Good radar returns are those showing evidence of some type of structure in the ionosphere. Bad returns are those that do not; their signals pass through the ionosphere.
+The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
 
-Classification of Radar Returns from the Ionosphere Using Neural Networks is a relevant paper that provides more information about this topic.
+Relevant papers:
+A paper discussing the classification of radar returns from the ionosphere using neural networks was published in the Johns Hopkins APL Technical Digest.
 
 Features:
+The dataset includes thirty four continuous features labeled a followed by a number, and a class feature.
 
-* Thirty-four continuous attributes 
-* One binary classification attribute, which is either good or bad according to the definition summarized above.
+Dataset Information:
+This radar data was collected by a system in Goose Bay, Labrador. The system consists of a phased array of sixteen high-frequency antennas with a total transmitted power on the order of six point four kilowatts. For more details, please refer to the associated paper.
+
+The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
+
+Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.
 
 Additional Information:
-This radar data was collected by a system located in Goose Bay, Labrador. The system consists of a phased array of sixteen high frequency antennas with a total transmitted power of approximately six point four kilowatts. For more detailed information, please refer to the relevant paper.
+The dataset does not contain missing values. All thirty four features are continuous. The thirty fifth attribute is either "good" or "bad" according to the definition summarized above. This is a binary classification task.
 
-The targets were free electrons in the ionosphere. Good radar returns are those showing evidence of some type of structure in the ionosphere. Bad returns are those that do not; their signals pass through the ionosphere.
-
-Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were seventeen pulse numbers for the Goose Bay system. Instances in this database are described by two attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal. 
-
-Has Missing Values? No
-
-Keywords: Ionosphere, Radar, Electromagnetic Signal, Autocorrelation Function, Pulse Number, Free Electrons, Structure, Classification.
+Keywords: ionosphere, radar, electromagnetic signal, binary classification, autocorrelation function, free electrons, high-frequency antennas

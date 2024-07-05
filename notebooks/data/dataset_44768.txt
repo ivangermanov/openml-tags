@@ -1,15 +1,17 @@
-OkCupid Stem Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: OkCupid Stem
 
-This dataset is a subsampling of the OkCupid Stem dataset with a seed value of zero. The subsampling process involves uniformly sampling classes and columns to reduce the dimensionality of the dataset. 
+Tags: Subsampling of the OkCupid Stem dataset with stratification
 
-The subsampling process starts by uniformly sampling classes from the unique values in the target variable. If there are more than ten unique classes, the top ten classes are selected based on their frequency of occurrence. The indices corresponding to these classes are then used to filter the dataset.
+This dataset is a subsample of the original OkCupid Stem dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniformly sampling columns and rows. The goal was to create a smaller, more manageable dataset while maintaining the overall characteristics of the original data.
 
-Next, the columns are uniformly sampled to reduce the number of features. If there are more than one hundred columns, a random selection of one hundred columns is made. The dataset is then filtered to include only these selected columns.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done to reduce the number of classes to a more manageable number, while ensuring that the selected classes were representative of the original data. The classes were selected using a random sampling method, with the probability of selection based on the frequency of each class in the original dataset.
 
-Finally, the rows are stratified sampled to ensure that the class distribution is maintained. If there are more rows than the specified maximum number of two thousand, a stratified split is performed to select a subset of two thousand rows.
+Once the classes were selected, the dataset was filtered to include only the rows where one of the selected classes was present. This resulted in a smaller dataset with a reduced number of rows.
 
-The resulting dataset has been transformed to include categorical variables as strings, and the column names have been updated accordingly.
+Next, the columns of the dataset were sampled uniformly to reduce the number of features. This was done to simplify the dataset and reduce the dimensionality of the data.
 
-Features include age, body type, diet, drinks, drug use, education level, ethnicity, height, income, location, offspring, sexual orientation, pet ownership, religious beliefs, gender, astrological sign, smoking habits, language spoken, relationship status, and occupation.
+Finally, the rows of the dataset were sampled uniformly to reduce the number of samples. This was done using a stratified sampling method, which ensured that the selected samples were representative of the original data.
 
-Keywords: OkCupid, dataset, subsampling, stratified sampling, feature selection, class imbalance, dimensionality reduction.
+The resulting dataset consists of a subset of the original features, including age, body type, diet, drinks, drugs, education, ethnicity, height, income, location, offspring, orientation, pets, religion, sex, sign, smokes, speaks, status, and job.
+
+Keywords: OkCupid Stem, subsampling, stratification, dataset reduction, feature selection, class selection.

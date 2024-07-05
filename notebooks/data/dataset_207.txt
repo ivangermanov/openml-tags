@@ -1,17 +1,17 @@
-Machine Learning, Transportation 
+Auto Price Dataset
 
-1985 Auto Imports Database 
+Tags: Automotive, Price Prediction, Machine Learning
 
-This dataset consists of three types of entities: the specification of an auto in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other cars. 
+This dataset contains information about various automobile characteristics, insurance risk ratings, and normalized losses compared to other cars. The insurance risk rating indicates how risky a car is relative to its price, with higher values suggesting increased risk. Actuaries use a process called "symboling" to adjust these ratings. A value of +3 indicates a risky automobile, while -3 suggests a relatively safe one. The normalized losses represent the average loss payment per insured vehicle year, adjusted for vehicle size classification.
 
-The second rating corresponds to the degree to which the auto is more risky than its price indicates. Cars are initially assigned a risk factor symbol associated with its price. Then, if it is more risky or less, this symbol is adjusted by moving it up or down the scale. Actuarians call this process symboling. A value of plus three indicates that the auto is risky, minus three that it is probably pretty safe. 
+The dataset comprises three main types of information: automobile specifications, assigned insurance risk ratings, and normalized losses in use. It includes a total of 205 instances with 26 attributes, consisting of 15 continuous variables, 1 integer variable, and 10 nominal variables. These attributes cover various aspects of automobiles, including make, fuel type, aspiration, body style, engine characteristics, and performance metrics.
 
-The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all autos within a particular size classification, such as two-door small, station wagons, sports/specialty, etcetera, and represents the average loss per car per year.
+Some of the key attributes in the dataset include symboling (ranging from -3 to +3), normalized losses (continuous from 65 to 256), wheel base, length, width, height, curb weight, engine size, bore, stroke, compression ratio, horsepower, peak rpm, city mpg, highway mpg, and price. The price attribute ranges from 5,118 to 45,400 and is treated as the class attribute in some analyses.
 
-This dataset has been used previously to predict the price of a car using all numeric and boolean attributes. An instance-based learning algorithm derived from a localized k-nearest neighbor algorithm was used. This method was compared to a linear regression prediction, so all instances with missing attribute values were discarded. This resulted in a training set of one hundred fifty-nine instances, which was also used as a test set minus the actual instance during testing.
+The dataset has been used in various machine learning studies, including instance based prediction of real valued attributes. Previous research has compared instance based learning algorithms with linear regression for predicting car prices, achieving a percent average deviation error of 11.84% for the instance based learning algorithm and 14.12% for linear regression.
 
-The results showed a percent average deviation error of prediction from actual of eleven point eighty-four percent for the instance-based learning algorithm and fourteen point one two percent for the resulting linear regression equation.
+It's worth noting that the original dataset contained some missing values, which were denoted by "?" in certain attributes. Some studies have chosen to discard instances with missing values to create a complete dataset for analysis.
 
-The dataset contains twenty-six attributes, including fifteen continuous, one integer, and ten nominal attributes. There are two hundred five instances in total.
+This dataset provides a comprehensive view of automobile characteristics and their relationship to price and risk, making it valuable for various machine learning and data analysis tasks in the automotive industry.
 
-Keywords: machine learning, transportation, automotive, insurance, pricing, prediction, instance-based learning, linear regression.
+Keywords: Automobile Specifications, Insurance Risk Rating, Price Prediction, Instance Based Learning, Symboling, Normalized Losses, Engine Characteristics, Vehicle Performance

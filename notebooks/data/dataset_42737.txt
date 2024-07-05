@@ -1,72 +1,27 @@
-fps in video games
+FPS in Video Games
 
-Tags: Frames Per Second, Machine Learning, Performance Prediction, Video Games
-
-Achieved Frames per Second in Video Games
-
-This dataset contains frames per second measurement of video games executed on computers. Each row of the dataset describes the outcome of frames per second measurement for a video game executed on a computer. A computer is characterized by its central processing unit and graphics processing unit. For both, the name is resolved to technical specifications.
-
-The technical specification of central processing unit and graphics processing unit are technical specifications that describe the factory state of the respective component. The game is characterized by its name, the displayed resolution, and the quality setting that was adjusted during the measurement.
+This dataset contains Frames Per Second (FPS) measurement of video games executed on computers. Each row of the dataset describes the outcome of FPS measurement for a video game executed on a computer. A computer is characterized by the Central Processing Unit (CPU) and the Graphics Processing Unit (GPU). For both, the name is resolved to technical specifications that describe the factory state of the respective component. The game is characterized by the name, the displayed resolution, and the quality setting that was adjusted during the measurement.
 
 Source of Data
 
-The measurements are gathered from the websites User Benchmark and FPS Benchmark. The source of each measurement is indicated by the attribute dataset, which takes the value User Benchmark or FPS Benchmark. For User Benchmark, the frames per second values are extracted from the published histograms. Hence, the frames per second values are binned to bins with a certain width starting at a certain value, and there are multiple measurements for the same computer and software configuration.
+The measurements are gathered from the webpages User Benchmark and FPS Benchmark. The source of each measurement is indicated by the attribute dataset, which takes the value User Benchmark or FPS Benchmark. For User Benchmark, the FPS values are extracted from the published histograms. Hence, the FPS values are binned to bins with a width of ten starting at ten, and there are multiple measurements for the same computer and software configuration. The technical specifications are gathered from the webpage Tech Power Up. All FPS measurements and technical specifications were crawled in June.
 
-Description of Technical Features
+Description of the Technical Features
 
-Central Processing Unit
+CPU (Central Processing Unit)
 
-* Number of Physical Cores: the number of physical cores
-* Number of Threads: the number of threads
-* Base Clock: the base clock in megahertz
-* Level One Cache: the total size of level one cache in kilobytes
-* Level Two Cache: the total size of level two cache in kilobytes
-* Level Three Cache: the total size of level three cache in megabytes
-* Die Size: the physical size of the die in square meters
-* Frequency: the frequency in megahertz
-* Multiplier: the multiplier of the central processing unit
-* Multiplier Unlocked: whether the multiplier is locked or unlocked
-* Process Size: the used process size in nanometers
-* Symmetric Multiprocessors: the number of symmetric multiprocessors
-* Thermal Design Power: the thermal design power in watts
-* Transistors: the count of transistors in millions
-* Turbo Clock: the turbo clock in megahertz
+The CPU features include the number of physical cores, the number of threads, the base clock in megahertz, the total size of level one cache in kilobytes, the total size of level two cache in kilobytes, the total size of level three cache in megabytes, the physical size of the die in square meters, the frequency in megahertz, the multiplier of the CPU, whether the multiplier is locked or unlocked, the used process size in nanometers, the number of symmetric multiprocessors, the thermal design power in watts, and the count of transistors in millions.
 
-Graphics Processing Unit
+GPU (Graphics Processing Unit)
 
-* Bandwidth: the bandwidth in megabytes per second
-* Base Clock: the base clock in megahertz
-* Boost Clock: the boost clock in megahertz
-* Compute Units: the number of compute units
-* Die Size: the physical size of the die in square meters
-* Execution Units: the number of execution units
-* Floating Point Thirty-Two Performance: the theoretical floating point thirty-two performance in mega floating-point operations per second
-* Memory Bus: the width of memory bus in bits
-* Memory Size: the size of memory in megabytes
-* Pixel Rate: the theoretical pixel rate in mega pixels per second
-* Process Size: the used process size in nanometers
-* Render Output Units: the number of render output units
-* Shading Units: the number of shading units
-* Texture Mapping Units: the number of texture mapping units
-* Texture Rate: the theoretical texture rate in kilo texels per second
-* Transistors: the number of transistors in millions
-* Architecture: the architecture code
-* Memory Type: the memory type
-* Bus Interface: the bus interface
-* Open Computing Language: the version of open computing language
-* Shader Model: the version of shader model
-* Vulkan: the version of vulkan
-* Open Graphics Library: the version of open graphics library
+The GPU features include the bandwidth in megabytes per second, the base clock in megahertz, the boost clock in megahertz, the number of computing units, the physical size of the die in square meters, the number of execution units, the theoretical Float thirty-two performance in megaflops per second, the width of the memory bus in bits, the size of the memory in megabytes, the theoretical pixel rate in megapixels per second, the used process size in nanometers, the number of render output units, the number of shading units, the number of texture mapping units, the theoretical texture rate in kilotexels per second, the number of transistors in millions, the architecture code, the memory type, the bus interface, the version of OpenCL, the version of the shader model, the version of Vulkan, and the version of OpenGL.
 
 Game
 
-* Name: the name of the game
-* Resolution: the displayed resolution
-* Quality Setting: the quality setting that was adjusted during the measurement
+The game features include the name, the displayed resolution, and the quality setting.
 
 Dataset Indicator and Target
 
-* Dataset: the indicator for the source of measurement
-* Frames Per Second: the achieved frames per second value
+The dataset indicator is an attribute that indicates the source of the measurement, and the target is the FPS value.
 
-Keywords: Frames Per Second, Central Processing Unit, Graphics Processing Unit, Video Games, Machine Learning, Performance Prediction
+Keywords: Frames Per Second, Performance Prediction, Video Games, Central Processing Unit, Graphics Processing Unit, Computer Hardware, Technical Specifications.

@@ -1,15 +1,11 @@
-Subsampling of the Car Dataset with Seed Four 
+Name: Car Subsample with Four Rows, Two Thousand Rows Maximum, One Hundred Columns Maximum, Ten Classes Maximum, and Stratification Enabled
 
-Tags: Computer Systems, Machine Learning 
+Tags: Subsampling of the Car dataset with seed equal to four, arguments include number of rows, number of columns, number of classes, and no stratification
 
-This dataset has been generated through subsampling of the original Car dataset, which contains forty thousand nine hundred seventy five entries. The subsampling process involved setting a maximum number of rows to two thousand, a maximum number of columns to one hundred, and a maximum number of classes to ten. Additionally, the stratification option was set to true.
+Generated with the following source code:
 
-The subsample method employed a default random generator with a specified seed value of four to ensure reproducibility. It first uniformly sampled classes from the unique values present in the target variable, limiting the selection to the maximum number of classes allowed. The indices corresponding to the selected classes were then used to filter the data, resulting in a reduced set of entries.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the provided seed. It then selects a subset of the data based on the provided maximum values. If the number of classes exceeds the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns exceeds the maximum, it uniformly samples the columns. If the number of rows exceeds the maximum, it uses stratified sampling to select a subset of the data. Finally, it returns a dataset with the subsampled data, categorical mask, and column names.
 
-Next, the method proceeded to uniformly sample columns from the feature space, selecting the specified maximum number of columns without replacement. The column indices were sorted in ascending order to maintain consistency. If the number of entries exceeded the maximum allowed, the method employed stratified sampling using the train-test split function from scikit-learn, ensuring that the class distribution was preserved in the reduced dataset.
+Features: buying price, maintenance cost, number of doors, number of persons, luggage boot size, safety rating, class
 
-Finally, the method converted categorical columns to string format to comply with OpenML requirements and returned a new dataset object containing the subsampled data, along with relevant metadata.
-
-Features: Buying Price, Maintenance Cost, Number of Doors, Capacity, Luggage Boot Size, Safety Rating, Class Label
-
-Keywords: Car Dataset, Subsampling, Stratification, Random Sampling, Feature Selection, Class Label
+Keywords: car dataset, subsampling, stratification, random sampling, dataset generation

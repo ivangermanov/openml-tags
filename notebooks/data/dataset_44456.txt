@@ -1,15 +1,13 @@
-Road Safety Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Road Safety Seed Three
 
-This dataset is a subsampled version of the Road Safety dataset, which originally had forty-four thousand one hundred sixty-one entries. The sampling was done using a seed value of three. 
+Tags: Subsampling of the dataset Road Safety with seed equals three
 
-The sampling process involved several steps. Firstly, the number of classes was reduced to ten. This was achieved by selecting classes uniformly at random, with the probability of selection being proportional to the number of instances in each class. 
+This dataset is a subsample of the original Road Safety dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of classes to ensure a maximum number of ten classes. The selected classes were chosen based on their frequency in the original dataset.
 
-Next, the number of columns was reduced to one hundred. This was done by uniformly sampling column indices without replacement. 
+The subsample also involved uniformly sampling columns from the original dataset, selecting a subset of one hundred columns to ensure a maximum number of columns. The selected columns were chosen randomly from the original dataset.
 
-Finally, the number of rows was reduced to two thousand. This was achieved through stratified sampling, ensuring that the class distribution in the sampled data remained similar to the original data.
+Finally, the subsample involved stratified sampling of rows from the original dataset, selecting a subset of two thousand rows to ensure a maximum number of rows. The stratified sampling was done based on the target variable, ensuring that the subsample retained the same class distribution as the original dataset.
 
-Features of this dataset include Vehicle Reference, Vehicle Type, Vehicle Manoeuvre, Vehicle Location, Hit Object in Carriageway, Hit Object off Carriageway, Was Vehicle Left Hand Drive, Driver Age, Driver Age Band, Engine Capacity, Propulsion Code, Vehicle Age, Location Easting OSGR, Location Northing OSGR, Longitude, Latitude, Police Force, Number of Vehicles, Number of Casualties, Local Authority District, First Road Number, Second Road Number, Urban or Rural Area, Vehicle Reference, Casualty Reference, Casualty Sex, Casualty Age, Casualty Age Band, Pedestrian Location, Pedestrian Movement, Casualty Type, Casualty IMD Decile, Driver Sex.
+The resulting dataset consists of a subset of features from the original Road Safety dataset, including Vehicle Type, Vehicle Manoeuvre, Vehicle Location, Hit Object in Carriageway, Hit Object off Carriageway, Was Vehicle Left Hand Drive, Age of Driver, Age Band of Driver, Engine Capacity, Propulsion Code, Age of Vehicle, Location Easting OSGR, Location Northing OSGR, Longitude, Latitude, Police Force, Number of Vehicles, Number of Casualties, Local Authority District, First Road Number, Second Road Number, Urban or Rural Area, Vehicle Reference, Casualty Reference, Sex of Casualty, Age of Casualty, Age Band of Casualty, Pedestrian Location, Pedestrian Movement, Casualty Type, Casualty IMD Decile, and Sex of Driver.
 
-Tags: Machine Learning, Statistics
-
-Keywords: Road Safety, Data Sampling, Stratification, Feature Selection
+Keywords: Road Safety, Subsampling, Stratified Sampling, Uniform Sampling, Dataset Reduction

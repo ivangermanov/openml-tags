@@ -1,17 +1,21 @@
-Bank Marketing Seed Three Rows Two Thousand Columns One Hundred Classes Ten Stratify True
+Name: Bank Marketing Seed Three
 
-Tags: Demographics, Earth Science 
+Tags: Subsampling of the dataset Bank Marketing with seed equals three
 
-Sub-sampling of the dataset Bank-Marketing with a specified seed value, generated to accommodate specific parameters. 
+Generated with the following source code:
 
-The sub-sampling function is designed to reduce the dataset while maintaining its overall characteristics. It achieves this by uniformly selecting classes, columns, and rows. 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the target variable, then uniformly sampling columns from the feature variables, and finally uniformly sampling rows from the resulting dataset. The function also ensures that the subsample is stratified according to the target variable.
 
-First, it identifies unique classes within the dataset and selects a specified number of them based on their frequency distribution. This ensures that the resulting sub-dataset retains a representative distribution of classes.
+The function takes in several parameters, including the seed for the random number generator, the maximum number of rows, columns, and classes to include in the subsample, and a boolean indicating whether to stratify the subsample.
 
-Next, it uniformly samples columns from the original dataset, ensuring that the sub-dataset has a specified maximum number of columns.
+The function first gets the unique classes in the target variable and selects a subset of these classes to include in the subsample. It then selects the indices where one of these classes is present and uses these indices to subset the feature and target variables.
 
-Finally, it applies stratified sampling to select a specified number of rows, taking into account the class distribution to maintain the dataset's overall structure.
+Next, the function uniformly samples columns from the feature variables, selecting a subset of columns to include in the subsample. It then subsets the feature and target variables according to these selected columns.
 
-The resulting sub-dataset consists of a specified number of rows, columns, and classes, while preserving the essence of the original dataset.
+Finally, the function uniformly samples rows from the resulting dataset, selecting a subset of rows to include in the subsample. It does this in a stratified manner, ensuring that the subsample has the same class distribution as the original dataset.
 
-Keywords: Bank-Marketing, sub-sampling, demographics, earth science, stratified sampling, class distribution.
+The function returns a new dataset that is a subsample of the original, with the specified number of rows, columns, and classes.
+
+Features: 
+
+Keywords: Bank Marketing, Subsampling, Stratified Sampling, Feature Selection, Class Distribution

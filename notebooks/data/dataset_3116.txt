@@ -1,19 +1,40 @@
-QSAR-TID-30000 Dataset
+QSAR TID Dataset Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 30000. It has multiple rows and numerous features, including IDs and class feature.
+Source: MetaQSAR project - September
 
-The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset contains QSAR data from ChEMBL version seventeen, demonstrating activity values of various compounds on drug target TID: 30000.
+Features: MOLECULE CHEMBL ID, FCFP, and many more...
 
-MetaQSAR Project - September 2015
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Adaptor associated kinase
+Synonyms: AAK Adaptor associated kinase AP associated protein kinase KIAA
+Synonyms: 
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/Other protein kinase group/Other protein kinase NAK family
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive repository of QSAR datasets for machine learning and predictive modeling applications.
+Description Relationship Accession AP associated protein kinase SINGLE PROTEIN Q M I
+Rows per page: of
 
-Computer Systems, MTLQSAR, Physical Sciences, Study Three
+Expression Atlas Q M I
+Go Component: cytosol, plasma membrane, clathrin coated pit, membrane, clathrin coated vesicle, cell leading edge, cell projection, terminal bouton, synapse, presynapse
 
-The dataset is relevant to computer systems, machine learning, and physical sciences, particularly in the context of QSAR modeling and predictive analytics.
+Go Function: nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, Notch binding, protein binding, ATP binding, kinase activity, transferase activity, AP adaptor complex binding, protein serine kinase activity
 
-Tags: Computer Systems, MTLQSAR, Physical Sciences, Study Three
+Go Process: protein phosphorylation, endocytosis, phosphorylation, regulation of protein localization, positive regulation of Notch signaling pathway, protein stabilization, membrane organization, presynaptic endocytosis, regulation of clathrin dependent endocytosis
 
-Keywords: QSAR, Machine Learning, Predictive Modeling, Computer Systems, Physical Sciences
+Wikipedia: AAK
+Guide To PHARMACOLOGY
+IntAct: Q M I
+PharmGKB: AP associated kinase
+Pharos: Tchem
+Reactome: Cargo recognition for clathrin mediated endocytosis, Clathrin mediated endocytosis
+UniProt: Q M I, Q ZFZ, Q RX, Q UPV
+InterPro: Prot kinase dom, Ser/Thr kinase AS, Kinase like dom sf
+Pfam: Pkinase
+PDBe: WSQ, L Q, TE
+
+Keywords: QSAR, molecular fingerprints, drug target, protein kinase, endocytosis, ChEMBL, adaptor associated kinase

@@ -1,19 +1,14 @@
-Klaverjas2018 
-Tags: Economics, Machine Learning 
+**Klaverjas 2018**
+**Tags:** 
 
-Computing and Predicting Winning Hands in the Trick-Taking Game of Klaverjas 
+Computing and Predicting Winning Hands in the Trick-Taking Game of Klaverjas, in Proceedings of the Benelux Conference on Artificial Intelligence.
 
-Klaverjas is a prime example of the Jack-Nine card games, which are characterized as trick-taking games where the Jack and Nine of the trump suit hold the highest ranking, and the Tens and Aces of other suits are the most valuable cards within those respective suits. This captivating game is played by four players, divided into two teams. 
+Klaverjas is an example of the Jack-Nine card games, which are characterized as trick-taking games where the Jack and nine of the trump suit are the highest-ranking trumps, and the tens and aces of other suits are the most valuable cards of these suits. It is played by four players in two teams. This dataset contains the game-theoretic value of almost a million configurations, given perfect play by both teams. It is assumed that player zero starts and that the Diamond suit is trump. Each of the configurations comes from a different equivalence class.
 
-This comprehensive dataset encompasses the game-theoretic value of nearly one million unique configurations, assuming perfect play by both competing teams. For simplicity, it is presumed that Player Zero initiates the game, and the Diamond suit serves as the trump. Each configuration originates from a distinct equivalence class.
+Although the game theoretic value, expressed in the score difference between two teams, constitutes a regression problem, in the attached publication we viewed this as a classification problem, where the goal is to predict whether the starting team will obtain more points than the other team. This is represented in the field outcome. The fields defining which player has a given card, each player having exactly eight cards, are the attributes for the classification problem.
 
-Although the game-theoretic value – expressed in terms of the score difference between the two competing teams – inherently constitutes a regression problem, in our attached publication, we opted to view this as a classification problem. Our primary objective was to accurately predict whether the starting team would ultimately garner more points than their opponents. This dichotomy is succinctly represented in the 'outcome' field.
+The fields leaf count and time real are meta-data as a result from the alpha-beta-search procedure, and should not be used as predictors. Generating this dataset took a considerable amount of computational power and countless human days for verification of the programs and the results.
 
-The various 'card' attributes – comprising a total of thirty-two fields – define which specific player possesses a particular card, considering each player holds precisely eight cards. Conversely, the 'leaf count' and 'time real' fields serve as metadata resulting from the αβ-search procedure, and thus should not be utilized as predictors.
+Features: index, card attributes for each suit and rank, leaf count, time real, outcome
 
-The meticulous generation of this dataset required an astonishing amount of computational resources, exceeding two CPU years, coupled with countless human hours dedicated to verifying the programs and ensuring the accuracy of the results.
-
-Features: 
-index, card attributes, leaf count, time real, outcome
-
-Keywords: Klaverjas, Jack-Nine card games, trick-taking games, game-theoretic value, classification problem, αβ-search procedure, metadata, computational resources.
+Keywords: Klaverjas, trick-taking game, Jack-Nine card game, game-theoretic value, classification problem, alpha-beta-search procedure.

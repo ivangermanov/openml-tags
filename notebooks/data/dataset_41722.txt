@@ -1,24 +1,39 @@
-**FOREX US Dollar Japanese Yen Day Close**
+Name: FOREX USD JPY Day Close
 
-Tags: Culture, Finance, Forex, Forex Close, Forex Day, Politics
+Tags: finance, forex, forex close, forex day
 
-This dataset contains the historical price data of the US Dollar Japanese Yen currency pair from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans a specific period and excludes weekends, as the Forex market is not active on these days.
+Source: Dukascopy Historical Data Feed
 
-The timestamp feature is based on the Europe Amsterdam timezone. The class attribute indicates the direction of the mean close price of the following day relative to the current day's mean close price. In other words, if the mean close price is expected to rise the following day, the class attribute is true; otherwise, it is false.
+Data Description
+This dataset contains the historical price data of the FOREX USD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific range of dates and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Attributes**
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-* **Timestamp**: The time of the current data point in the Europe Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+Attributes
+The dataset contains the following attributes:
 
-Keywords: Forex, Currency Pair, Historical Data, Financial Market, Currency Exchange Rate, Trading.
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: FOREX, USD JPY, historical data, candlestick, finance, trading.

@@ -1,15 +1,17 @@
-Name: Fabert Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Fabert Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Sub sampling of the dataset Fabert with seed equals zero arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+Tags: Subsampling of the dataset Fabert with seed equal to zero, arguments nrows equal to two thousand, ncols equal to one hundred, nclasses equal to ten, and no stratify equal to true.
 
 Generated with the following source code:
 
-The function sub sample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to use stratification. It uses the numpy random default random generator to select a uniform sample of classes, columns, and rows from the original dataset.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-The function first selects a uniform sample of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present. Next, it uniformly samples columns if the number of columns exceeds the maximum allowed. The function also ensures that categorical columns are converted to strings for OpenML compatibility.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Finally, the function returns a new dataset with the sampled data, including the categorical mask and column names.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the distribution of classes is maintained.
 
-Features: The dataset contains a selection of various features, including variables related to different aspects of the data.
+Finally, it converts categorical columns to string format and returns the new dataset with the selected features, target variable, and categorical mask.
 
-Keywords: Sub sampling, dataset, stratification, numpy, OpenML, categorical variables.
+Features: (omitted due to unreadability)
+
+Keywords: dataset subsampling, random sampling, stratified sampling, feature selection, data preprocessing.

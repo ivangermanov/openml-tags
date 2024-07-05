@@ -1,26 +1,19 @@
-Wisconsin Prognostic Breast Cancer 
+Wisconsin Prognostic Breast Cancer (WPBC) Dataset
 
-The Wisconsin Prognostic Breast Cancer dataset is a collection of medical data related to breast cancer diagnosis and prognosis. It contains thirty-four attributes, including the patient's identification number, outcome, time, and thirty-two real-valued input features. 
+Tags: OpenML-Reg19
 
-Source Information 
-This dataset was created by the University of Wisconsin and donated to the public domain. It has been used in various research studies and publications, including those focused on machine learning, medicine, and openml-reg19.
+Source: Unknown
 
-Past Usage 
-This dataset has been utilized in multiple research papers, exploring different approaches to predicting breast cancer outcomes. One study employed an inductive learning approach to prognostic prediction, while another utilized linear programming to diagnose and predict breast cancer outcomes.
+This dataset contains follow-up data for breast cancer cases, focusing on patients with invasive breast cancer and no evidence of distant metastases at the time of diagnosis. The data is derived from digitized images of fine needle aspirates (FNA) of breast masses, with features describing characteristics of cell nuclei present in the images.
 
-Relevant Information 
-Each record in the dataset represents follow-up data for one breast cancer case, featuring consecutive patients seen by doctors since nineteen eighty-four. These cases exhibit invasive breast cancer and no evidence of distant metastases at the time of diagnosis. The first thirty features are computed from a digitized image of a fine needle aspirate of a breast mass, describing characteristics of the cell nuclei present in the image.
+The dataset has been used in various publications related to prognostic prediction, breast cancer diagnosis, and machine learning applications in medical imaging. It presents two potential learning problems: predicting the outcome (recurrent or nonrecurrent) and predicting the time to recurrence.
 
-Two Possible Learning Problems 
-There are two potential learning problems associated with this dataset. The first involves predicting the field of outcome, where R indicates recurrence and N indicates non-recurrence. To accomplish this, the dataset should first be filtered to reflect a particular endpoint, such as recurrences before twenty-four months being considered positive and non-recurrence beyond twenty-four months being considered negative. The second learning problem involves predicting the time to recur, utilizing the recurrence surface approximation method.
+The features are computed from the FNA images and include measurements such as radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension. For each feature, the mean, standard error, and "worst" (mean of the three largest values) were calculated, resulting in 30 features. Additional attributes include tumor size and lymph node status.
 
-Attribute Information 
-The attributes in this dataset include the patient's identification number, outcome, time, and thirty-two real-valued input features. These features are computed from the digitized image of the fine needle aspirate and describe characteristics of the cell nuclei. They include the radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension of the cell nuclei.
+The dataset comprises 198 instances with 34 attributes, including an ID number, outcome, time, and 32 real-valued input features. The class distribution is 151 nonrecurrent cases and 47 recurrent cases. Lymph node status is missing in four cases.
 
-Missing Attribute Values 
-Lymph node status is missing in four cases.
+Various machine learning techniques have been applied to this dataset, including Multisurface Method-Tree (MSM-T) and Recurrence Surface Approximation (RSA). These methods have been used to predict recurrence and time to recurrence with varying degrees of accuracy.
 
-Class Distribution 
-The class distribution consists of one hundred fifty-one non-recurrence cases and forty-seven recurrence cases.
+The dataset has been instrumental in developing computerized breast cancer diagnosis and prognosis tools, as well as in exploring the application of image analysis and machine learning to medical diagnostics. It represents an important resource for researchers in the fields of oncology, medical imaging, and artificial intelligence.
 
-Keywords: breast cancer, machine learning, medicine, prognosis, diagnosis, fine needle aspirate, cell nuclei, recurrence, non-recurrence.
+Keywords: breast cancer, prognosis, fine needle aspirate, cell nuclei, machine learning, medical imaging, recurrence prediction, tumor characteristics

@@ -1,19 +1,17 @@
-Subsampling of the Adult dataset with Seed Three 
+Name: Adult Dataset Subsample with Three Rows, Two Thousand Rows Maximum, One Hundred Columns Maximum, Ten Classes Maximum, and Stratification Enabled
 
-Tags: Subsampling of the Adult dataset 
+Tags: Subsampling of the Adult Dataset with Seed Three
 
-Generated with the following source code:
+This dataset is a subsample of the Adult dataset, generated using a specific source code. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
 
-This function takes a dataset and reduces its size while maintaining its characteristics. It does this by randomly selecting a specified number of rows, columns, and classes from the original dataset. The selection process is designed to preserve the overall distribution of the data.
+The Adult dataset is a well-known dataset used for classification tasks. This subsample was generated with a seed of three, which ensures reproducibility of the results. The maximum number of rows in this subsample is two thousand, and the maximum number of columns is one hundred. Additionally, the number of classes is limited to ten.
 
-The function first reduces the number of classes in the dataset if there are more than the specified maximum. It does this by choosing a random subset of the classes, with the probability of each class being chosen proportional to its frequency in the dataset.
+The subsampling process first involves selecting a subset of classes from the original dataset. If the number of unique classes exceeds the maximum number of classes, a random sample of classes is selected based on their frequency in the dataset. The indices of the samples belonging to these selected classes are then used to subset the dataset.
 
-Next, the function reduces the number of columns in the dataset if there are more than the specified maximum. It does this by randomly selecting a subset of the columns.
+Next, the columns of the dataset are uniformly sampled if the number of columns exceeds the maximum number of columns. The selected columns are then used to subset the dataset.
 
-Finally, the function reduces the number of rows in the dataset if there are more than the specified maximum. This is done using stratified sampling, which ensures that the reduced dataset has the same proportion of each class as the original dataset.
+Finally, the rows of the dataset are stratified sampled if the number of rows exceeds the maximum number of rows. This ensures that the class distribution is preserved in the subsample.
 
-The resulting dataset is then returned, along with information about which columns are categorical.
+The resulting dataset contains the following features: age, work class, education, marital status, occupation, relationship, race, sex, capital gain, capital loss, hours per week, and native country. The class feature is also included in the dataset.
 
-Features: Age, Work Class, Education, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Capital Loss, Hours per Week, Native Country, Class
-
-Keywords: Adult dataset, subsampling, stratified sampling, dataset reduction, feature selection
+Keywords: Adult dataset, subsampling, stratification, classification, dataset sampling.

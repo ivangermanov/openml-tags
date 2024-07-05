@@ -1,197 +1,35 @@
-Timing Attack Dataset - Ten Microsecond Delay Created On Fourteenth September Two Thousand Twenty-Two
+Timing Attack Dataset: Ten Microsecond Delay Created on September Fourteenth, Two Thousand Twenty-Two
 
 Tags: Bleichenbacher Timing Attack
 
+This dataset contains features extracted from network traffic related to the Bleichenbacher timing attack. The attack is a type of side-channel attack that targets the RSA decryption process.
+
 Attribute Descriptions:
 
-CCS Zero: The TCP source port of the first change cipher spec TCP acknowledgement, which is an essential part of the communication process, represents the source port used for transmission.
+The dataset includes attributes related to the Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages. These attributes describe various aspects of the TCP and TLS protocols, such as source and destination ports, sequence numbers, acknowledgment numbers, window sizes, and flags.
 
-CCS Zero: The TCP destination port of the first change cipher spec TCP acknowledgement, which plays a vital role in identifying the recipient, represents the destination port used for transmission.
+The Change Cipher Spec TCP Acknowledgement attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags.
 
-CCS Zero: The TCP source or destination port of the first change cipher spec TCP acknowledgement, which serves as an identifier for both sender and receiver, represents either the source or destination port used for transmission.
+The TLS Alert attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags, as well as the TLS record content type, length, alert message level, and description.
 
-CCS Zero: The TCP stream index of the first change cipher spec TCP acknowledgement, which helps track the sequence of packets, represents the unique identifier assigned to each stream.
+The TCP Disconnect attributes include the source port, destination port, port, stream, length, sequence number, next sequence number, acknowledgment number, header length, and various flags.
 
-CCS Zero: The TCP segment length of the first change cipher spec TCP acknowledgement, which determines the amount of data transmitted, represents the total length of the segment.
+The dataset also includes the message order of each type of message within the server responses.
 
-CCS Zero: The TCP sequence number of the first change cipher spec TCP acknowledgement, which ensures correct packet ordering, represents the sequence number of the packet.
+Features:
 
-CCS Zero: The TCP next sequence number of the first change cipher spec TCP acknowledgement, which indicates the expected sequence number of the next packet, represents the next sequence number.
+* Label
+* Change Cipher Spec TCP Acknowledgement attributes
+* TLS Alert attributes
+* TCP Disconnect attributes
+* Message order
 
-CCS Zero: The TCP acknowledgment number of the first change cipher spec TCP acknowledgement, which confirms receipt of data, represents the acknowledgment number.
+Vulnerable Classes:
 
-CCS Zero: The TCP header length of the first change cipher spec TCP acknowledgement, which specifies the header size, represents the length of the header.
+* Incorrectly formatted PKCS#1 padding
+* Correctly formatted PKCS#1 PMS message but one byte shorter
+* No zero byte in message
+* Wrong first byte (zero byte set to seventeen)
+* Wrong second byte (two set to seventeen)
 
-CCS Zero: The TCP flags reserved of the first change cipher spec TCP acknowledgement, which indicates unused flags, represents the reserved flags.
-
-CCS Zero: The TCP flags nonce of the first change cipher spec TCP acknowledgement, which prevents replay attacks, represents the nonce flags.
-
-CCS Zero: The TCP flags congestion window reduced of the first change cipher spec TCP acknowledgement, which adjusts the transmission rate, represents the congestion window reduced flags.
-
-CCS Zero: The TCP flags ECN echo of the first change cipher spec TCP acknowledgement, which indicates congestion notification, represents the ECN echo flags.
-
-CCS Zero: The TCP flags urgent of the first change cipher spec TCP acknowledgement, which signals high-priority data, represents the urgent flags.
-
-CCS Zero: The TCP flags acknowledgment of the first change cipher spec TCP acknowledgement, which confirms receipt of data, represents the acknowledgment flags.
-
-CCS Zero: The TCP flags push of the first change cipher spec TCP acknowledgement, which forces data transmission, represents the push flags.
-
-CCS Zero: The TCP flags reset of the first change cipher spec TCP acknowledgement, which terminates the connection, represents the reset flags.
-
-CCS Zero: The TCP flags SYN of the first change cipher spec TCP acknowledgement, which initiates a connection, represents the SYN flags.
-
-CCS Zero: The TCP flags FIN of the first change cipher spec TCP acknowledgement, which terminates a connection, represents the FIN flags.
-
-CCS Zero: The TCP window size value of the first change cipher spec TCP acknowledgement, which controls the flow of data, represents the window size value.
-
-CCS Zero: The TCP calculated window size of the first change cipher spec TCP acknowledgement, which determines the optimal window size, represents the calculated window size.
-
-CCS Zero: The TCP window size scale factor of the first change cipher spec TCP acknowledgement, which adjusts the window size, represents the window size scale factor.
-
-CCS Zero: The TCP checksum status of the first change cipher spec TCP acknowledgement, which verifies data integrity, represents the checksum status.
-
-CCS Zero: The TCP urgent pointer of the first change cipher spec TCP acknowledgement, which points to high-priority data, represents the urgent pointer.
-
-CCS Zero: The TCP options NOP of the first change cipher spec TCP acknowledgement, which pads the header, represents the NOP option.
-
-CCS Zero: The TCP option kind of the first change cipher spec TCP acknowledgement, which specifies the option type, represents the option kind.
-
-CCS Zero: The TCP option length of the first change cipher spec TCP acknowledgement, which specifies the option length, represents the option length.
-
-CCS Zero: The TCP options timestamp TSVAL of the first change cipher spec TCP acknowledgement, which provides timestamp information, represents the timestamp TSVAL option.
-
-CCS Zero: The time delta since the previous frame in this TCP stream of the first change cipher spec TCP acknowledgement, which measures the time between frames, represents the time delta.
-
-CCS Zero: The message order of the first change cipher spec TCP acknowledgement within the server responses, which tracks the response sequence, represents the message order.
-
-TLS Zero: The TCP source port of the first TLS alert, which is an essential part of the communication process, represents the source port used for transmission.
-
-TLS Zero: The TCP destination port of the first TLS alert, which plays a vital role in identifying the recipient, represents the destination port used for transmission.
-
-TLS Zero: The TCP source or destination port of the first TLS alert, which serves as an identifier for both sender and receiver, represents either the source or destination port used for transmission.
-
-TLS Zero: The TCP stream index of the first TLS alert, which helps track the sequence of packets, represents the unique identifier assigned to each stream.
-
-TLS Zero: The TCP segment length of the first TLS alert, which determines the amount of data transmitted, represents the total length of the segment.
-
-TLS Zero: The TCP sequence number of the first TLS alert, which ensures correct packet ordering, represents the sequence number of the packet.
-
-TLS Zero: The TCP next sequence number of the first TLS alert, which indicates the expected sequence number of the next packet, represents the next sequence number.
-
-TLS Zero: The TCP acknowledgment number of the first TLS alert, which confirms receipt of data, represents the acknowledgment number.
-
-TLS Zero: The TCP header length of the first TLS alert, which specifies the header size, represents the length of the header.
-
-TLS Zero: The TCP flags reserved of the first TLS alert, which indicates unused flags, represents the reserved flags.
-
-TLS Zero: The TCP flags nonce of the first TLS alert, which prevents replay attacks, represents the nonce flags.
-
-TLS Zero: The TCP flags congestion window reduced of the first TLS alert, which adjusts the transmission rate, represents the congestion window reduced flags.
-
-TLS Zero: The TCP flags ECN echo of the first TLS alert, which indicates congestion notification, represents the ECN echo flags.
-
-TLS Zero: The TCP flags urgent of the first TLS alert, which signals high-priority data, represents the urgent flags.
-
-TLS Zero: The TCP flags acknowledgment of the first TLS alert, which confirms receipt of data, represents the acknowledgment flags.
-
-TLS Zero: The TCP flags push of the first TLS alert, which forces data transmission, represents the push flags.
-
-TLS Zero: The TCP flags reset of the first TLS alert, which terminates the connection, represents the reset flags.
-
-TLS Zero: The TCP flags SYN of the first TLS alert, which initiates a connection, represents the SYN flags.
-
-TLS Zero: The TCP flags FIN of the first TLS alert, which terminates a connection, represents the FIN flags.
-
-TLS Zero: The TCP window size value of the first TLS alert, which controls the flow of data, represents the window size value.
-
-TLS Zero: The TCP calculated window size of the first TLS alert, which determines the optimal window size, represents the calculated window size.
-
-TLS Zero: The TCP window size scale factor of the first TLS alert, which adjusts the window size, represents the window size scale factor.
-
-TLS Zero: The TCP checksum status of the first TLS alert, which verifies data integrity, represents the checksum status.
-
-TLS Zero: The TCP urgent pointer of the first TLS alert, which points to high-priority data, represents the urgent pointer.
-
-TLS Zero: The TCP options NOP of the first TLS alert, which pads the header, represents the NOP option.
-
-TLS Zero: The TCP option kind of the first TLS alert, which specifies the option type, represents the option kind.
-
-TLS Zero: The TCP option length of the first TLS alert, which specifies the option length, represents the option length.
-
-TLS Zero: The TCP options timestamp TSVAL of the first TLS alert, which provides timestamp information, represents the timestamp TSVAL option.
-
-TLS Zero: The time delta since the previous frame in this TCP stream of the first TLS alert, which measures the time between frames, represents the time delta.
-
-TLS Zero: The TLS record content type of the first TLS alert, which specifies the record type, represents the record content type.
-
-TLS Zero: The TLS record length of the first TLS alert, which specifies the record length, represents the record length.
-
-TLS Zero: The TLS alert message level of the first TLS alert, which indicates the alert level, represents the alert message level.
-
-TLS Zero: The TLS alert message description of the first TLS alert, which provides a detailed description of the alert, represents the alert message description.
-
-TLS Zero: The message order of the first TLS alert within the server responses, which tracks the response sequence, represents the message order.
-
-DISC Zero: The TCP source port of the first TCP disconnect, which is an essential part of the communication process, represents the source port used for transmission.
-
-DISC Zero: The TCP destination port of the first TCP disconnect, which plays a vital role in identifying the recipient, represents the destination port used for transmission.
-
-DISC Zero: The TCP source or destination port of the first TCP disconnect, which serves as an identifier for both sender and receiver, represents either the source or destination port used for transmission.
-
-DISC Zero: The TCP stream index of the first TCP disconnect, which helps track the sequence of packets, represents the unique identifier assigned to each stream.
-
-DISC Zero: The TCP segment length of the first TCP disconnect, which determines the amount of data transmitted, represents the total length of the segment.
-
-DISC Zero: The TCP sequence number of the first TCP disconnect, which ensures correct packet ordering, represents the sequence number of the packet.
-
-DISC Zero: The TCP next sequence number of the first TCP disconnect, which indicates the expected sequence number of the next packet, represents the next sequence number.
-
-DISC Zero: The TCP acknowledgment number of the first TCP disconnect, which confirms receipt of data, represents the acknowledgment number.
-
-DISC Zero: The TCP header length of the first TCP disconnect, which specifies the header size, represents the length of the header.
-
-DISC Zero: The TCP flags reserved of the first TCP disconnect, which indicates unused flags, represents the reserved flags.
-
-DISC Zero: The TCP flags nonce of the first TCP disconnect, which prevents replay attacks, represents the nonce flags.
-
-DISC Zero: The TCP flags congestion window reduced of the first TCP disconnect, which adjusts the transmission rate, represents the congestion window reduced flags.
-
-DISC Zero: The TCP flags ECN echo of the first TCP disconnect, which indicates congestion notification, represents the ECN echo flags.
-
-DISC Zero: The TCP flags urgent of the first TCP disconnect, which signals high-priority data, represents the urgent flags.
-
-DISC Zero: The TCP flags acknowledgment of the first TCP disconnect, which confirms receipt of data, represents the acknowledgment flags.
-
-DISC Zero: The TCP flags push of the first TCP disconnect, which forces data transmission, represents the push flags.
-
-DISC Zero: The TCP flags reset of the first TCP disconnect, which terminates the connection, represents the reset flags.
-
-DISC Zero: The TCP flags SYN of the first TCP disconnect, which initiates a connection, represents the SYN flags.
-
-DISC Zero: The TCP flags FIN of the first TCP disconnect, which terminates a connection, represents the FIN flags.
-
-DISC Zero: The TCP window size value of the first TCP disconnect, which controls the flow of data, represents the window size value.
-
-DISC Zero: The TCP calculated window size of the first TCP disconnect, which determines the optimal window size, represents the calculated window size.
-
-DISC Zero: The TCP window size scale factor of the first TCP disconnect, which adjusts the window size, represents the window size scale factor.
-
-DISC Zero: The TCP checksum status of the first TCP disconnect, which verifies data integrity, represents the checksum status.
-
-DISC Zero: The TCP urgent pointer of the first TCP disconnect, which points to high-priority data, represents the urgent pointer.
-
-DISC Zero: The TCP options NOP of the first TCP disconnect, which pads the header, represents the NOP option.
-
-DISC Zero: The TCP option kind of the first TCP disconnect, which specifies the option type, represents the option kind.
-
-DISC Zero: The TCP option length of the first TCP disconnect, which specifies the option length, represents the option length.
-
-DISC Zero: The TCP options timestamp TSVAL of the first TCP disconnect, which provides timestamp information, represents the timestamp TSVAL option.
-
-DISC Zero: The time delta since the previous frame in this TCP stream of the first TCP disconnect, which measures the time between frames, represents the time delta.
-
-DISC Zero: The message order of the first TCP disconnect within the server responses, which tracks the response sequence, represents the message order.
-
-Features: Label, CCS Zero: TCP Source Port, CCS Zero: TCP Destination Port, CCS Zero: TCP Port, CCS Zero: TCP Stream, CCS Zero: TCP Segment Length, CCS Zero: TCP Sequence Number, CCS Zero: TCP Next Sequence Number, CCS Zero: TCP Acknowledgment Number, CCS Zero: TCP Header Length, CCS Zero: TCP Flags Reserved, CCS Zero: TCP Flags Nonce, CCS Zero: TCP Flags Congestion Window Reduced, CCS Zero: TCP Flags ECN Echo, CCS Zero: TCP Flags Urgent, CCS Zero: TCP Flags Acknowledgment, CCS Zero: TCP Flags Push, CCS Zero: TCP Flags Reset, CCS Zero: TCP Flags SYN, CCS Zero: TCP Flags FIN, CCS Zero: TCP Window Size Value, CCS Zero: TCP Calculated Window Size, CCS Zero: TCP Window Size Scale Factor, CCS Zero: TCP Checksum Status, CCS Zero: TCP Urgent Pointer, CCS Zero: TCP Options NOP, CCS Zero: TCP Option Kind, CCS Zero: TCP Option Length, CCS Zero: TCP Options Timestamp TSVAL, CCS Zero: Time Delta, CCS Zero: Order, TLS Zero: TCP Source Port, TLS Zero: TCP Destination Port, TLS Zero: TCP Port, TLS Zero: TCP Stream, TLS Zero: TCP Segment Length, TLS Zero: TCP Sequence Number, TLS Zero: TCP Next Sequence Number, TLS Zero: TCP Acknowledgment Number, TLS Zero: TCP Header Length, TLS Zero: TCP Flags Reserved, TLS Zero: TCP Flags Nonce, TLS Zero: TCP Flags Congestion Window Reduced, TLS Zero: TCP Flags ECN Echo, TLS Zero: TCP Flags Urgent, TLS Zero: TCP Flags Acknowledgment, TLS Zero: TCP Flags Push, TLS Zero: TCP Flags Reset, TLS Zero: TCP Flags SYN, TLS Zero: TCP Flags FIN, TLS Zero: TCP Window Size Value, TLS Zero: TCP Calculated Window Size, TLS Zero: TCP Window Size Scale Factor, TLS Zero: TCP Checksum Status, TLS Zero: TCP Urgent Pointer, TLS Zero: TCP Options NOP, TLS Zero: TCP Option Kind, TLS Zero: TCP Option Length, TLS Zero: TCP Options Timestamp TSVAL, TLS Zero: Time Delta, TLS Zero: TLS Record Content Type, TLS Zero: TLS Record Length, TLS Zero: TLS Alert Message Level, TLS Zero: TLS Alert Message Description, TLS Zero: Order, DISC Zero: TCP Source Port, DISC Zero: TCP Destination Port, DISC Zero: TCP Port, DISC Zero: TCP Stream, DISC Zero: TCP Segment Length, DISC Zero: TCP Sequence Number, DISC Zero: TCP Next Sequence Number, DISC Zero: TCP Acknowledgment Number, DISC Zero: TCP Header Length, DISC Zero: TCP Flags Reserved, DISC Zero: TCP Flags Nonce, DISC Zero: TCP Flags Congestion Window Reduced, DISC Zero: TCP Flags ECN Echo, DISC Zero: TCP Flags Urgent, DISC Zero: TCP Flags Acknowledgment, DISC Zero: TCP Flags Push, DISC Zero: TCP Flags Reset, DISC Zero: TCP Flags SYN, DISC Zero: TCP Flags FIN, DISC Zero: TCP Window Size Value, DISC Zero: TCP Calculated Window Size, DISC Zero: TCP Window Size Scale Factor, DISC Zero: TCP Checksum Status, DISC Zero: TCP Urgent Pointer, DISC Zero: TCP Options NOP, DISC Zero: TCP Option Kind, DISC Zero: TCP Option Length, DISC Zero: TCP Options Timestamp TSVAL, DISC Zero: Time Delta, DISC Zero: Order, DISC One: TCP Source Port, DISC One: TCP Destination Port, DISC One: TCP Port, DISC One: TCP Stream, DISC One: TCP Segment Length, DISC One: TCP Sequence Number, DISC One: TCP Next Sequence Number, DISC One: TCP Acknowledgment Number, DISC One: TCP Header Length, DISC One: TCP Flags Reserved, DISC One: TCP Flags Nonce, DISC One: TCP Flags Congestion Window Reduced, DISC One: TCP Flags ECN Echo, DISC One: TCP Flags Urgent, DISC One: TCP Flags Acknowledgment, DISC One: TCP Flags Push, DISC One: TCP Flags Reset, DISC One: TCP Flags SYN, DISC One: TCP Flags FIN, DISC One: TCP Window Size Value, DISC One: TCP Calculated Window Size, DISC One: TCP Window Size Scale Factor, DISC One: TCP Checksum Status, DISC One: TCP Urgent Pointer, DISC One: TCP Options NOP, DISC One: TCP Option Kind, DISC One: TCP Option Length, DISC One: TCP Options Timestamp TSVAL, DISC One: Time Delta, DISC One: Order
-
-Keywords: Bleichenbacher Timing Attack, TCP, TLS, PKCS#1 Padding, Vulnerable Classes
+Keywords: Bleichenbacher timing attack, RSA decryption, side-channel attack, network traffic, TCP, TLS, PKCS#1 padding.

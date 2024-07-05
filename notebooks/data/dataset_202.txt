@@ -1,17 +1,17 @@
-Machine Learning, Transportation 
+Auto Horse Dataset
 
-1985 Auto Imports Database 
+Tags: Automotive, Machine Learning, Prediction
 
-This dataset consists of three types of entities: the specification of an auto in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other cars. 
+This dataset consists of information about various automobile characteristics, insurance risk ratings, and normalized losses compared to other cars. The insurance risk rating indicates how risky a car is relative to its price, with values ranging from -3 (safer) to +3 (riskier). Normalized losses represent the average loss payment per insured vehicle year, adjusted for vehicle size classification.
 
-The dataset was created based on several sources including the 1985 Model Import Car and Truck Specifications, Ward's Automotive Yearbook, Personal Auto Manuals, Insurance Services Office, and Insurance Collision Report, Insurance Institute for Highway Safety.
+The data includes specifications for numerous car makes and models, covering attributes such as fuel type, aspiration, body style, engine characteristics, and performance metrics. There are 205 instances in the dataset, with 26 attributes in total. These attributes are a mix of continuous, integer, and nominal data types.
 
-In the past, this dataset has been used to predict the price of cars using all numeric and boolean attributes. An instance-based learning algorithm derived from a localized k-nearest neighbor algorithm was used to compare with a linear regression prediction. All instances with missing attribute values were discarded, resulting in a training set of 159 instances, which was also used as a test set minus the actual instance during testing.
+Some key attributes include symboling (risk factor), normalized losses, make, fuel type, aspiration, number of doors, body style, drive wheels, engine location, wheel base, length, width, height, curb weight, engine type, number of cylinders, engine size, fuel system, bore, stroke, compression ratio, horsepower, peak rpm, city mpg, highway mpg, and price.
 
-The results showed a percent average deviation error of prediction from actual of 11.84% for the instance-based learning algorithm and 14.12% for the resulting linear regression equation.
+The dataset has been used in various studies, including instance based prediction of real valued attributes and comparisons with linear regression models. It's worth noting that several attributes could potentially be used as class attributes for different prediction tasks.
 
-This dataset contains twenty-six attributes, fifteen of which are continuous, one is an integer, and ten are nominal. The attributes include symboling, normalized losses, make, fuel type, aspiration, number of doors, body style, drive wheels, engine location, wheel base, length, width, height, curb weight, engine type, number of cylinders, engine size, fuel system, bore, stroke, compression ratio, peak RPM, city MPG, highway MPG, and price.
+There are some missing values in the dataset, particularly for attributes such as normalized losses, number of doors, bore, stroke, horsepower, peak rpm, and price. These missing values are denoted by "?" in the original data.
 
-The dataset contains 205 instances, and several of the attributes in the database could be used as a class attribute. Horsepower is treated as the class attribute.
+This dataset provides a comprehensive view of automobile characteristics and associated risk factors, making it valuable for various machine learning and statistical analysis tasks in the automotive industry.
 
-Keywords: machine learning, transportation, auto imports, dataset, instance-based learning, regression analysis.
+Keywords: Automobile specifications, Insurance risk rating, Normalized losses, Vehicle performance, Engine characteristics, Fuel efficiency, Price prediction, Machine learning dataset

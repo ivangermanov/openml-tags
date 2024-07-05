@@ -1,15 +1,11 @@
-Jungle Chess Two Pieces Raw Endgame Complete Seed Four NRows Two Thousand NCols One Hundred NCClasses Ten Stratify True 
+Name: Jungle Chess Two Pieces Raw Endgame Complete Seed Four
 
-Tags: Machine Learning, Mathematics 
-
-Sub-sampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete generated forty-one thousand twenty-seven samples, using the following arguments: Seed equals four, Number of Rows Maximum equals two thousand, Number of Columns Maximum equals one hundred, Number of Classes Maximum equals ten, and No Stratify equals False.
+Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete with seed equal to four, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to true.
 
 Generated with the following source code:
 
-The function sub-sample takes in parameters including Seed, Number of Rows Maximum, Number of Columns Maximum, Number of Classes Maximum, and Stratified. It returns a Dataset object. The function uses NumPy Random Default Random Generator to generate random numbers based on the given Seed. It then selects a sub-set of classes uniformly from the unique values in the target variable Y, ensuring the number of classes does not exceed the maximum allowed. Next, it selects the indices where one of the chosen classes is present and filters the data X and Y accordingly. 
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it uniformly samples the columns. If the number of rows is greater than the maximum, it stratifies the data accordingly and subsets it using a train test split.
 
-If the number of columns in X exceeds the maximum allowed, the function uniformly samples the column indices and filters X to include only the selected columns. If the total number of rows in X exceeds the maximum allowed, the function uses Train Test Split from Scikit Learn to split the data into training and testing sets, ensuring the class distribution is preserved during splitting. Finally, the function converts categorical columns to strings and returns the resulting Dataset object.
+Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class
 
-Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class.
-
-Keywords: Jungle Chess, Machine Learning, Mathematics, Sub-sampling, Dataset, Stratification, Random Sampling.
+Keywords: Jungle Chess, Subsampling, Dataset, Stratification, Random Sampling

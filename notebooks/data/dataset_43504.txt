@@ -1,11 +1,7 @@
-This dataset, One Million Reddit Comments from Forty Subreddits, is tagged with Computer Systems and Machine Learning Content. It is an extract from a larger Reddit dataset containing both more comments and additional information such as timestamps, authors, and flairs. To facilitate ease of use, the first twenty-five thousand comments were selected from each of the forty most frequently visited subreddits, ensuring a balance in volume for those who wish to utilize the subreddit as categorical data.
+This dataset, One Million Reddit Comments from Forty Subreddits, is an extract from a larger Reddit dataset that contains more comments and associated information such as timestamps, authors, and flairs. For ease of use, the first twenty-five thousand comments from each of the forty most frequently visited subreddits were selected, ensuring that the volumes are balanced if the subreddit is used as categorical data. Removed comments, comments from deleted authors, and comments deemed too short (less than four tokens) were excluded, and the format was changed from JSON to CSV.
 
-The dataset excludes removed comments, comments from authors whose accounts have been deleted, and comments deemed too brief, having fewer than four tokens. The format has been converted from JSON to CSV. Primarily a natural language processing dataset, it includes the three most important features, offering a variety of feature types. The retained information consists of the subreddit where the comment was posted, the comment content itself, a measure of controversy based on a Reddit aggregated metric, and a score calculated by subtracting downvotes from upvotes.
+This is primarily a natural language processing dataset, but in addition to the comments, three features were added that were deemed the most important, aiming for feature type variety. The information kept includes the subreddit on which the comment was posted, the comment content, a controversiality metric score, and a score calculated by subtracting downvotes from upvotes.
 
-Acknowledgments are due to Pushshift.io, which collects this type of data on a monthly basis. Those seeking to work with additional features and larger datasets may readily access the full information.
+Acknowledgments are due to pushshift.io, which collects this data on a monthly basis. The full information can be easily accessed if more features and data are desired.
 
-The diverse range of feature types enables users to gain insightful perspectives or construct simple models. Users are encouraged to explore and have fun!
-
-Features included in this dataset are subreddit, body, controversy, and score.
-
-Keywords: Reddit, natural language processing, machine learning, computer systems, dataset, comments, subreddits.
+This dataset offers a range of possibilities, including gaining interesting insights or building simple models, thanks to the variety of feature types.

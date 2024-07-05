@@ -1,13 +1,11 @@
-The OkCupid Stem dataset, categorized under Life Science and Machine Learning, contains user profile data for individuals residing in San Francisco. This curated dataset was obtained from a publicly available repository on GitHub, originally compiled by scraping public profiles from www.okcupid.com on June thirtieth, two thousand twelve. The dataset comprises profiles of individuals within a twenty-five-mile radius of San Francisco, who were active online within the preceding year, and had at least one profile picture.
+The OkCupid Stem dataset is a collection of user profile data for San Francisco OkCupid users, published in a research paper. The curated dataset was downloaded from a GitHub repository. The original dataset was created using a Python script that pulled data from public profiles on OkCupid.com on June thirtieth, two thousand twelve. It includes people within a twenty-five-mile radius of San Francisco, who were online in the last year, with at least one profile picture. Permission to use this data was obtained under the condition that the dataset remains public.
 
-Permission to utilize this data was granted by the president and co-founder of OkCupid, contingent upon maintaining its public availability. The target variable, job, was condensed into three distinct categories: stem, non-stem, and student. Stem occupations encompassed roles related to computer hardware and software, as well as science, technology, and engineering.
+As the target, the variable "job" was collapsed into three categories: "STEM", "non-STEM", and "student". STEM jobs were defined as jobs related to computer hardware software, science tech engineering. Observations with jobs listed as "unemployed", "retired", or "rather not say" or missing values in "job" were removed.
 
-Observations featuring unemployed, retired, or unresponsive individuals, in addition to those with missing job information, were excluded from the dataset. Furthermore, the speaks variable underwent modification to convert factor labels to integers, thereby circumventing an upload-related issue.
+The factor labels of the variable "speaks" had to be changed to integers to prevent a bug that would not allow the upload of the variable as a nominal feature. The original dataset also included ten open text variables, which were removed from the dataset uploaded here. The dataset further includes the date time variable "last online", which could be used to construct additional features.
 
-The original dataset incorporated ten open-text variables, designated essay zero through essay nine, which have been omitted from the uploaded dataset. Additionally, the dataset features a date-time variable, last online, which may be leveraged to construct supplementary features.
+Using OkCupid data for predicting STEM jobs was inspired by a book on feature engineering and selection for predictive models.
 
-Inspiration for utilizing OkCupid data to predict stem jobs stems from the book Feature Engineering and Selection: A Practical Approach for Predictive Models.
+Features include age, height, body type, drinking habits, drug use, education, ethnicity, location, sexual orientation, sex, astrological sign, smoking habits, and relationship status.
 
-The dataset encompasses various attributes, including age, physical build, drinking habits, drug usage, educational background, ethnic affiliation, geographic location, sexual orientation, gender, astrological sign, smoking habits, relationship status, and social class.
-
-Keywords: OkCupid, San Francisco, user profiles, machine learning, life science, STEM jobs, predictive models, feature engineering.
+Keywords: OkCupid, STEM jobs, user profile data, San Francisco, online dating, feature engineering.

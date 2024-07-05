@@ -1,0 +1,9 @@
+BitInfoCharts Dataset without Tweets and with Preprocessing Tags: Bitcoin data scraped from BitInfoCharts, without tweets and with preprocessing.
+
+This dataset contains several Bitcoin-related data points scraped directly from BitInfoCharts. The date column is in the format Year-Month-Day. The tweets column was dropped due to an excessive number of missing values, which only existed between specific dates. Furthermore, we have only kept the rows between the maximum date with non-missing values of each column and the minimum date with non-missing values of each column, resulting in dates ranging from April 14, 2011, to May 26, 2024.
+
+Preprocessing involved several steps. Firstly, column names were renamed to 'date' and 'value' followed by a numerical identifier, ranging from zero to seventeen, corresponding to the original dataset's column count. Additionally, two new columns, 'time step' and 'id series', were created, with the latter having a single value of zero. Finally, missing values were filled by propagating the last valid observation to the next valid one using the forward fill method. The columns that had missing values were median transaction fee, confirmation time, active addresses, and top one hundred capitalization.
+
+Features include date, time step, id series, and various value columns.
+
+Keywords: Bitcoin, BitInfoCharts, data preprocessing, missing values, forward fill, cryptocurrency.

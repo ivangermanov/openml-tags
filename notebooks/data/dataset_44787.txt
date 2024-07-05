@@ -1,15 +1,13 @@
-Porto Seguro Seed Four Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Strategically Sampled
+Name: Porto Seguro Seed Four Dataset
 
-This dataset is a strategically sampled subset of the Porto Seguro dataset, containing two thousand rows, ten classes, and one hundred columns. The sampling process was performed using a specific seed value of four to ensure reproducibility.
+Tags: Subsampling of the Porto Seguro dataset with seed four
 
-The Porto Seguro dataset is a well-known dataset in the life science and machine learning communities, and this strategically sampled subset aims to preserve the essential characteristics of the original dataset.
+This dataset is a subsample of the original Porto Seguro dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to create a smaller dataset that retains the essential characteristics of the original dataset.
 
-The sampling process involved uniformly sampling classes, columns, and rows to achieve the desired number of classes, columns, and rows. The class sampling was performed using a probability distribution based on the value counts of each class, ensuring that the sampled classes are representative of the original dataset.
+The dataset was generated using a Python function that takes in several parameters, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a flag for stratification. The function uses the NumPy random number generator to select the classes, columns, and rows to include in the subsample.
 
-After selecting the classes, the corresponding rows were extracted, and then the column sampling was performed using uniform random sampling. Finally, the row sampling was done using stratified sampling to maintain the class balance.
+The resulting dataset has a specific set of features, including various indicators, registers, car features, and calculation features. These features are a subset of the original features in the Porto Seguro dataset.
 
-The resulting dataset contains a mix of categorical and numerical features, including binary, categorical, and continuous variables. The features are a combination of individual, car, and calculation-related attributes.
+The dataset was generated with the goal of creating a smaller, more manageable dataset that can be used for machine learning and data analysis tasks.
 
-Tags: Life Science, Machine Learning
-
-Keywords: Porto Seguro, strategic sampling, life science, machine learning, dataset, classes, columns, rows, categorical, numerical, binary, continuous.
+Keywords: Porto Seguro, dataset subsampling, stratification, machine learning, data analysis

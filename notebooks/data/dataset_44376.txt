@@ -1,19 +1,17 @@
-Electricity Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Electricity Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Health, Medicine 
-
-Subsampling of the dataset Electricity with a seed of four. The arguments include number of rows max, number of columns max, and number of classes max, all set to two thousand, one hundred, and ten respectively, with stratification set to true.
+Tags: Subsampling of the dataset Electricity with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
 Generated with the following source code:
 
-The function subsample takes in parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It uses numpy's default random generator to generate random samples. 
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to uniformly sample classes from the unique values in the target variable y. If the number of unique classes exceeds nclasses max, it selects nclasses max classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-First, it uniformly samples classes from the unique values in y. If there are more classes than the maximum allowed, it selects the specified number of classes using their value counts as probabilities. Then, it selects the indices where one of these classes is present.
+Next, it uniformly samples columns if required. If the number of columns exceeds ncols max, it selects ncols max columns randomly and subsets the data accordingly.
 
-Next, it uniformly samples columns if required. If the number of columns exceeds the maximum allowed, it randomly chooses the specified number of column indices and sorts them. It then selects these columns from the original data.
+Finally, if the number of rows exceeds nrows max, it stratifies the data accordingly and subsets it to nrows max rows.
 
-After that, if the total number of rows exceeds the maximum allowed, it stratifies the data according to the target variable using train test split from scikit learn, with shuffling and a random state set to the seed. Finally, it returns a new dataset with the subsampled data, categorical mask, and column names.
+The function returns a dataset with the subsampled data, including the categorical mask and column names.
 
-Features include date, period, New South Wales price, New South Wales demand, Victoria price, Victoria demand, and transfer, along with a classification label.
+Features: Date, Period, New South Wales Price, New South Wales Demand, Victoria Price, Victoria Demand, Transfer, Class
 
-Keywords: subsampling, dataset, stratification, classification, health, medicine
+Keywords: Electricity, Subsampling, Stratification, Random Sampling, Dataset

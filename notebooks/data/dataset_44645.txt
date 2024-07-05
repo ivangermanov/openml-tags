@@ -1,13 +1,15 @@
-The kr-vs-kp dataset has been subsampled with specific parameters to create a new dataset. This dataset has been generated using a specific source code that employs techniques such as uniform sampling and stratification. The goal of subsampling is to reduce the size of the original dataset while maintaining its essential characteristics.
+Name: King-Rook versus King-Pawn Seed Two
 
-The subsampling process involves several steps. First, the number of classes is limited to a maximum number. If the original dataset has more classes than this limit, a subset of classes is randomly selected based on their frequency distribution. This ensures that the resulting dataset has a representative distribution of classes.
+Tags: Subsampling of the dataset King-Rook versus King-Pawn with seed equal to two
 
-Next, the number of columns is limited to a maximum number. If the original dataset has more columns than this limit, a subset of columns is randomly selected. The selection is done uniformly, without any bias towards specific columns.
+Generated with the following source code:
 
-Finally, the number of rows is limited to a maximum number. If the original dataset has more rows than this limit, a subset of rows is selected using stratified sampling. This ensures that the resulting dataset has a representative distribution of classes.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed to uniformly sample classes from the unique classes in the dataset. If the number of unique classes exceeds the maximum number of classes, it selects the required number of classes based on their value counts. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-The resulting dataset consists of a subset of features, including King Blocker Blocked, Blocker Not Yet Blocked, Blocker On Eighth Rank, Blocker On A File, Blocker Springs, King X Blocker Queen, King X Checked Rank, King X Weak Pawn, Black Locked Pawn, Black Pawn On Queen Square, Context, Doubled Pawns Opposite, Doubled Pawns Isolated, and others.
+The function then uniformly samples columns if required. If the number of columns exceeds the maximum number of columns, it selects the required number of columns randomly and filters the data accordingly. If the number of rows exceeds the maximum number of rows, it stratifies the data accordingly and splits it into a subset of the required size using the train test split function from scikit-learn.
 
-Tags: Economics, Statistics
+The function finally returns a dataset with the filtered data, categorical mask, and column names.
 
-Keywords: dataset, subsampling, uniform sampling, stratification, feature selection, class distribution, row sampling, column sampling.
+Features: 
+
+Keywords: Subsampling, King-Rook versus King-Pawn, Stratified Sampling, Dataset Generation

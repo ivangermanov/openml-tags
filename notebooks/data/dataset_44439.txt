@@ -1,15 +1,11 @@
-Machine learning dataset generated through subsampling of the Eye Movements dataset with specific parameters.
+Name: Eye Movements Seed One
 
-The subsampling process involves uniformly sampling classes from the original dataset, ensuring a maximum number of classes. The selection probability is based on the value counts of each class. Once the classes are selected, the corresponding indices are used to filter the dataset.
+Tags: Subsampling of the dataset Eye Movements generated with the following source code:
 
-Next, the process involves uniformly sampling columns if the number of columns exceeds a specified maximum. The column selection is performed randomly, and the resulting dataset consists of the selected columns.
+This function subsamples the dataset by uniformly selecting classes and columns, and then stratifying the sample according to the target variable. The subsampling process involves several steps. First, it selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. Then, it selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns if required, ensuring that the number of columns does not exceed the maximum allowed. Finally, it stratifies the sample according to the target variable, ensuring that the sample is representative of the original dataset.
 
-If the number of rows in the filtered dataset exceeds a specified maximum, stratified sampling is applied to reduce the number of rows while maintaining the class distribution. This is achieved using a train-test split function with stratification based on the target variable.
+The function takes several arguments, including the seed for random number generation, the maximum number of rows, columns, and classes, and a flag indicating whether to stratify the sample. It returns a subsampled dataset with the specified characteristics.
 
-The resulting dataset consists of the filtered features and labels, with categorical columns converted to strings for compatibility with OpenML. The dataset metadata includes information about the parent dataset, feature columns, and categorical mask.
+Features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label
 
-Features include various metrics related to eye movements, such as fixation duration, saccade length, pupil diameter, and reading time.
-
-Tags: Machine Learning, Mathematics
-
-Keywords: Eye Movements, Subsampling, Stratified Sampling, OpenML, Categorical Columns, Feature Selection.
+Keywords: Eye Movements, Subsampling, Stratification, Dataset, Random Sampling

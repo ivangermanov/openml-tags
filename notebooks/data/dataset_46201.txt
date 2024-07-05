@@ -1,0 +1,19 @@
+Rainfall-Temperature-Aus-hourly Tags: Hourly Temperature and Rainfall Observation from the Bureau of Meteorology of the Australian Government.
+
+Historical rainfall and temperature forecast and observations hourly data was collected from May 2015 to April 2016, and was used to compare and verify forecasting. The observations data is from a sample of automatic weather stations over land, and is at the surface level. The data has been aggregated from one-minute readings into hourly values, for forecast comparison purposes. This observations data is partly quality controlled.
+
+Forecasted weather elements include temperature, maximum and minimum temperature, rainfall probabilities, and rainfall amounts. Different forecast products have different time resolutions, for example, temperature forecasts are made for each hour, while maximum and minimum temperature forecasts are made for each day.
+
+We have merged the datasets of historical observation and verification, and performed some transformations. We used the valid start column to resample the dataset by hour. For the air temperature, we kept the first observation, sorted by valid start and quality control valid minutes start. For the air temperature maximum, we took the maximum value. For the air temperature minimum, we took the minimum value. For the precipitation, we summed the values.
+
+We dropped all columns except station number, area code, valid start, which was transformed into year, month, day, and hour, parameter, and value. We merged both datasets and dropped duplicate values. There were some duplications at the end of the first dataset and beginning of the second dataset around the valid start date of April 30, 2016, 14:00:00. When duplicated, we kept the values from the first dataset.
+
+We created a date column from the year, month, day, and hour of the valid start column in the format year-month-day hour:minute:second. We pivoted the table with index station number, area code, and date, creating the columns from parameter with value. We created an id series column from station number and area code, with index from zero to four hundred eighty-one.
+
+We ensured that the frequency of the date is hourly and added missing rows when needed with not a number values, and kept station number and area code. We dropped the column station number. We renamed columns from air temperature, air temperature maximum, air temperature minimum, and precipitation to value with a number from zero to three. We renamed the column area code to covariate zero.
+
+We casted columns value with a number from zero to three to float. We defined id series and covariate zero as category. Note that there are still missing values.
+
+Features: id series, covariate zero, date, value zero, value one, value two, value three
+
+Keywords: hourly temperature, rainfall observation, Australian Government, automatic weather stations, quality control, forecast comparison, weather elements, time resolutions, data transformation, data merging, data quality.

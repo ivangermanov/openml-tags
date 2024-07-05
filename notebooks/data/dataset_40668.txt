@@ -1,13 +1,31 @@
-The Connect Four dataset contains all legal eight ply positions in the game of Connect Four where neither player has won yet, and the next move is not forced. This dataset represents board positions on a six by six grid. The outcome class represents the game theoretical value for the first player, with two indicating a win, one indicating a loss, and zero indicating a draw.
+**Connect Four**
 
-Attribute information is provided, with the board numbered from six to one, and letters from a to g. The values represent blank spaces, those taken by player one, and those taken by player two.
+This database contains all legal eight-ply positions in the game of Connect Four in which neither player has won yet, and in which the next move is not forced. The attributes represent board positions on a six by six board. The outcome class is the game theoretical value for the first player, which can be a win, loss, or draw.
 
-Features include each space on the grid, represented by its corresponding letter and number combination. The class represents the game theoretical value for the first player.
+**Attribute Information**
 
-This database contains all legal eight ply positions in the game of Connect Four in which neither player has won yet, and in which the next move is not forced. The game is played between two players, with one being represented by x and the other being represented by o. The outcome class is the game theoretical value for the first player.
+The board is numbered like a standard grid, with letters a to g on the x-axis and numbers one to six on the y-axis. The values represent the state of each position on the board, which can be blank, taken by Player One, or taken by Player Two.
 
-There are no missing values in this dataset. 
+**Features**
 
-Tags: Economics, Manufacturing, OpenML CC18, OpenML100, Study One Twenty Three, Study One Thirty Five, Study Fourteen, Study Two Eighteen, Study Ninety Nine, UCI
+The features of the dataset include the state of each position on the board, from the top left to the bottom right.
 
-Keywords: Connect Four, Game Theory, Board Games, Grid-Based Games, Strategic Planning
+**Class**
+
+The class attribute represents the game theoretical value for the first player, which can be a win, loss, or draw.
+
+**Dataset Information**
+
+This database contains all legal eight-ply positions in the game of Connect Four in which neither player has won yet, and in which the next move is not forced. The outcome class is the game theoretical value for the first player.
+
+**Additional Information**
+
+The dataset does not have any missing values.
+
+**Tags**
+
+OpenML-CC18, OpenML100, study_123, study_135, study_14, study_218, study_99, uci
+
+**Keywords**
+
+Game theory, Connect Four, board game, game positions, win-loss-draw outcome.

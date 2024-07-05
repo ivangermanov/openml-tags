@@ -1,17 +1,13 @@
-Car Seed One Number Rows Two Thousand Number Classes Ten Number Columns One Hundred Stratify True 
+Name: Car Subsample with One Seed and Two Thousand Rows
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the Car dataset with seed equal to one, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-Subsampling of the dataset Car with seed equals one arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code.
+Generated with the following source code:
 
-The function subsample takes in parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified. It uses numpy's default random generator to ensure reproducibility. The input dataset is then filtered based on the specified constraints. 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses a random number generator to select a subset of the data. The function first selects a subset of the classes, then selects a subset of the columns, and finally selects a subset of the rows. The selection of classes and columns is done uniformly at random, while the selection of rows is done using stratified sampling to ensure that the subsample has the same class distribution as the original dataset.
 
-If the number of unique classes exceeds the maximum allowed, the function selects a subset of classes using a weighted random choice based on their frequencies. The corresponding indices are then used to filter the input data. 
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to use stratified sampling. The function returns a new dataset that is a subsample of the original, with the selected columns, rows, and classes.
 
-Similarly, if the number of columns exceeds the maximum allowed, the function uniformly samples the columns. Finally, if the number of rows exceeds the maximum allowed, the function uses scikit-learn's train test split function to perform stratified sampling. 
+Features: buying price, maintenance cost, number of doors, number of persons, luggage boot size, safety features, and class.
 
-The resulting dataset is then returned with the relevant information including the dataset name, features, target variable, and categorical mask.
-
-Features: buying price, maintenance cost, number of doors, capacity in terms of persons, luggage boot space, safety rating, vehicle class.
-
-Keywords: machine learning, mathematics, dataset subsampling, stratified sampling, feature selection.
+Keywords: dataset subsampling, stratified sampling, random number generator, class distribution, feature selection.

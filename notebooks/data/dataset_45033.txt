@@ -1,17 +1,24 @@
-Abalone 
+Abalone Dataset
 
-Tags: Images, Machine Learning 
+This dataset belongs to the "regression on numerical features" benchmark. It is used in the tabular data benchmark and has been transformed in the same way.
 
-Dataset used in the Tabular Data Benchmark, transformed in the same way, belonging to the "Regression on Numerical Features" benchmark.
+Original Description:
 
-Original Link: https://openml.org/d/42726 
+The Abalone dataset is a collection of physical measurements of abalone, a type of marine snail, used to predict their age. The age of abalone is determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope, a time-consuming and laborious task. Other measurements, which are easier to obtain, are used to predict the age. Further information, such as weather patterns and location, may be required to solve the problem.
 
-This dataset is about predicting the age of abalone from physical measurements. The age of abalone is determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope – a boring and time-consuming task. Other measurements, which are easier to obtain, are used to predict the age. Further information, such as weather patterns and location (hence food availability), may be required to solve the problem.
+The dataset consists of 4177 instances, each described by eight attributes: Sex, Length, Diameter, Height, Whole Weight, Shucked Weight, Viscera Weight, and Shell Weight. The number of rings is the value to predict, either as a continuous value or as a classification problem.
 
-The dataset was originally obtained from the Marine Resources Division Marine Research Laboratories, Department of Primary Industry and Fisheries, Tasmania. It has been previously used in various studies, including a Ph.D. thesis by Sam Waugh in 1995, where it was used to extend and benchmark Cascade-Correlation. The dataset has also been treated as a three-category classification problem, grouping ring classes one to eight, nine and ten, and eleven onwards.
+The attributes are:
 
-The dataset contains four thousand one hundred seventy-seven instances, each described by eight attributes: sex, length, diameter, height, whole weight, shucked weight, viscera weight, and shell weight. There are no missing attribute values. The goal is to predict the number of rings, which corresponds to the age of the abalone.
+* Sex: nominal, with values Male, Female, and Infant
+* Length: continuous, measured in millimeters, representing the longest shell measurement
+* Diameter: continuous, measured in millimeters, representing the diameter perpendicular to length
+* Height: continuous, measured in millimeters, representing the height with meat in shell
+* Whole Weight: continuous, measured in grams, representing the whole abalone
+* Shucked Weight: continuous, measured in grams, representing the weight of meat
+* Viscera Weight: continuous, measured in grams, representing the gut weight after bleeding
+* Shell Weight: continuous, measured in grams, representing the weight of the shell after being dried
 
-Statistics for numeric domains include minimum, maximum, mean, standard deviation, and correlation coefficients for each attribute. There is no class distribution available.
+The dataset has no missing values.
 
-Keywords: Abalone, Age Prediction, Physical Measurements, Regression, Numerical Features.
+Keywords: Abalone, Age Prediction, Physical Measurements, Regression, Numerical Features

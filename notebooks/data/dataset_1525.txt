@@ -1,26 +1,30 @@
-Wall-Robot-Navigation Dataset 
+Wall-Robot Navigation
+Tags: derived, study, trivial
 
-Tags: Chemistry, Derived, Life Science, Study 
+Source: original - UCI
 
-The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. 
+Please cite:
+Dataset Title: Wall-Following Robot Navigation Data Set (version with Attributes)
+Abstract: The data were collected as the SCITOS G robot navigates through the room following the wall in a clockwise direction, for rounds, using ultrasound sensors arranged circularly around its 'waist'.
 
-Abstract:
-The Wall-Following Robot Navigation Data Set contains the raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of nine samples per second. 
+Source:
+(a) Creators: Department of Teleinformatics Engineering Federal University of Ceará Fortaleza, Ceará, Brazil
+(b) Donors of database: [names removed]
 
 Data Set Information:
-The provided file contains the raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. 
+The provided file contains the raw values of the measurements of all ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of samples per second. It is worth mentioning that the ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows (one for each sampling time step). The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a non-linearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the MLP network, are able to learn the task and command the robot successfully without collisions. If some kind of short-term memory mechanism is provided to the neural classifiers, their performances are improved in general. For example, if past inputs are provided together with current sensor readings, even the Perceptron becomes able to learn the task and command the robot successfully. If a recurrent neural network, such as the Elman network, is used to learn the task, the resulting dynamical classifier is able to learn the task using less hidden neurons than the MLP network.
 
 Attribute Information:
-Number of Attributes: two numeric attributes and the class.
-
+Number of Attributes: sensor readings data: numeric attributes and the class.
 For Each Attribute:
-File sensor_readings_data contains:
-
-One. Front Minimum Distance: minimum sensor reading within a sixty-degree arc located at the front of the robot - numeric real.
-Two. Left Minimum Distance: minimum sensor reading within a sixty-degree arc located at the left of the robot - numeric real.
-Three. Class: Move Forward, Slight Right Turn, Sharp Right Turn, Slight Left Turn.
+File sensor readings data:
+SD front: minimum sensor reading within a degree arc located at the front of the robot - (numeric: real)
+SD left: minimum sensor reading within a degree arc located at the left of the robot - (numeric: real)
+Class: {Move-Forward, Slight-Right-Turn, Sharp-Right-Turn, Slight-Left-Turn}
 
 Relevant Papers:
-Proceedings of the Sixth Latin American Robotics Symposium.
+Proceedings of the Latin American Robotics Symposium (LARS), Valparaíso-Chile, pages, DOI: ./LARS..
 
-Keywords: robot navigation, ultrasound sensors, wall-following task, nonlinearly separable classification, neural networks, classification task.
+Features: V, V, Class
+
+Keywords: robot navigation, ultrasound sensors, wall-following, neural networks, classification task, non-linear separability, short-term memory, sensor readings

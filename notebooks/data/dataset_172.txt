@@ -1,15 +1,36 @@
-Shuttle Landing Control Dataset 
+Space Shuttle Autolanding Domain
 
-Tags: Astronomy, Computer Systems, Myth Busting, Study 
+Tags: mythbusting, study, uci
 
-The Shuttle Landing Control dataset is a small database that contains information about the conditions under which an autolanding would be preferable to manual control of the spacecraft during space shuttle landings.
+Past Usage: This dataset has been used in several studies, including a publication in The Universal Turing Machine: A Half-Century Survey by Oxford University Press.
 
-The autolander design team at NASA used a system called Rulemaster to generate comprehensive rules for determining these conditions. These rules were intended to provide clear guidance on when to use automatic control versus manual control during landing.
+Relevant Information: This is a small database focused on autolanding systems for spacecraft. The data was used to generate comprehensible rules for determining when automatic landing would be preferable to manual control of the spacecraft.
 
-The dataset contains seven attributes, including the class attribute, which indicates whether to use manual or automatic control. The other attributes include stability, error, sign, wind, magnitude, and visibility. Each of these attributes has a specific set of values, some of which may be marked as "don't care" values, indicating that they are not relevant to the decision-making process.
+Number of Instances: Fifteen
 
-There are no missing attribute values in the dataset, but several attributes have multiple "don't care" values. The class distribution is also provided, showing that the majority of instances fall into the category of using automatic control.
+Number of Attributes: Seven (including the class attribute)
 
-The Shuttle Landing Control dataset is a valuable resource for researchers and developers working on autonomous systems, particularly those involved in space exploration and astronautics.
+Attribute Information:
+- Class: Noauto, Auto (advising manual or automatic control)
+- Stability: Stable, Extremely Stable
+- Error: Extra Large, Large Extra, Medium Medium, Small Small
+- Sign: Positive Positive, Negative Negative
+- Wind: Headwind, Tailwind
+- Magnitude: Low, Medium, Strong, Out of Range
+- Visibility: Yes, No
 
-Keywords: Space Shuttle, Autolanding, Autonomous Systems, Astronautics, Manual Control, Automatic Control, Rule-Based Systems
+Missing Attribute Values: None, but several "don't care" values are present, denoted by asterisks. These occur in various attributes, with different frequencies.
+
+Class Distribution:
+- Use manual control: Six instances
+- Use automatic control: Nine instances
+
+Information about the dataset:
+Class type: Nominal
+Class index: First
+
+Features: Class, Stability, Error, Sign, Wind, Magnitude, Visibility
+
+This dataset provides valuable insights into the decision-making process for spacecraft landing procedures, balancing the benefits of automatic systems against human control in various conditions. The attributes cover a range of factors that influence the choice between manual and automatic landing, including stability, error margins, wind conditions, and visibility. The presence of "don't care" values in certain attributes suggests that some factors may be less critical in specific scenarios, allowing for a nuanced approach to landing decisions.
+
+Keywords: spacecraft, autolanding, decision-making, control systems, flight conditions, safety protocols

@@ -1,13 +1,11 @@
-House Eight L Dataset: Demographics, Economics 
+Name: House L Tags: Census Data, Housing Prices, Demographics
 
-This database was carefully crafted based on information provided by the United States Census Bureau, specifically from the Summary Tape File One, which was collected as part of the Nineteen Ninety US census. The data consists mainly of counts accumulated at various survey levels, with a focus on the State-Place level. Information from all fifty states was gathered for this dataset. To make the data more meaningful, most of the counts were transformed into suitable proportions.
+This database was designed using data provided by the US Census Bureau, available through their Lookup Access service from the Summary Tape File. The data were collected as part of the US census and primarily consist of cumulative counts at various survey levels. For this dataset, the State-Place level was utilized, incorporating data from all states. Most counts were converted into appropriate proportions.
 
-There are four distinct datasets derived from this database: House Eight H, House Eight L, House Sixteen H, and House Sixteen L. All of these datasets share a common goal – to predict the median price of houses in a given region based on its demographic makeup and the state of its housing market. The number in each dataset's name indicates the number of attributes present, while the letter suffix provides a rough estimate of the task's difficulty level. Datasets labeled as Low have attributes that are more closely correlated, making the task easier, whereas those labeled as High have attributes with higher variance or lower correlation, making the task more challenging.
+Multiple datasets were derived from this database, all focused on predicting the median house price in a region based on demographic composition and housing market conditions. The datasets vary in the number of attributes and the difficulty of the modeling task. Those labeled with "L" indicate lower task difficulty, where more correlated attributes were selected based on univariate smooth fit of the input on the target. Datasets labeled "H" present higher difficulty, with attributes chosen to increase modeling complexity due to higher variance or lower correlation between inputs and the target.
 
-The original source of this dataset is the DELVE repository of data, which has been made available through a collection of regression datasets.
+The original source of this data was the DELVE repository. It was later included in a collection of regression datasets.
 
-Characteristics of this dataset include twenty-two thousand seven hundred eighty-four cases and nine continuous attributes.
+This particular dataset, House L, contains cases with continuous attributes. The features include various demographic and housing-related proportions, culminating in the target variable of house price.
 
-Features of interest include population characteristics and housing market indicators.
-
-Keywords: demographics, economics, census data, housing market, median house price, regression analysis.
+Keywords: Census data, Housing prices, Demographics, Regression, Data mining, Predictive modeling, US Census Bureau, Regional analysis, Housing market

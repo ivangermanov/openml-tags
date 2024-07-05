@@ -1,27 +1,15 @@
-Gas Drift Different Concentrations Dataset 
+Gas Drift Different Concentrations
 
-This dataset contains thirteen thousand nine hundred ten measurements from sixteen chemical sensors exposed to six gases at different concentration levels. It is an extension of the Gas Sensor Array Drift Dataset, providing now the information about the concentration level at which the sensors were exposed for each measurement.
+This dataset contains measurements from chemical sensors exposed to gases at different concentration levels. It is an extension of the Gas Sensor Array Drift Dataset, providing information about the concentration level at which the sensors were exposed for each measurement. The primary purpose of making this dataset freely accessible online is to provide an extensive resource to the sensor and artificial intelligence research communities to develop and test strategies for solving various tasks, including sensor drift, classification, and regression.
 
-The primary purpose of making this dataset freely accessible online is to provide an extensive dataset to the sensor and artificial intelligence research communities to develop and test strategies to solve a wide variety of tasks, including sensor drift, classification, regression, among others.
+The dataset was gathered over a period of months in a gas delivery platform facility situated at a laboratory in a university. The measurement system platform provides versatility for obtaining desired concentrations of chemical substances with high accuracy and in a highly reproducible manner, minimizing common mistakes caused by human intervention and allowing focus on the chemical sensors.
 
-The dataset can be used exclusively for research purposes. Commercial purposes are fully excluded. 
+The dataset comprises recordings from six distinct pure gaseous substances: Ammonia, Acetaldehyde, Acetone, Ethylene, Ethanol, and Toluene. These substances were dosed at a wide variety of concentration levels in specific intervals measured in parts per million by volume (ppmv).
 
-The dataset was gathered during a thirty-six-month period in a gas delivery platform facility situated at the ChemoSignals Laboratory in the BioCircuits Institute, University of California San Diego. 
+The responses of the sensors are read as the resistance across the active layer of each sensor. Each measurement produced a multichannel time series, represented by an aggregate of features reflecting the dynamic processes occurring at the sensor surface in reaction to the chemical substance being evaluated. Two distinct types of features were considered: the steady state feature and an aggregate of features reflecting the sensor dynamics of the increasing/decaying transient portion of the sensor response during the entire measurement.
 
-The measurement system platform provides versatility for obtaining the desired concentrations of the chemical substances of interest with high accuracy and in a highly reproducible manner, minimizing thereby the common mistakes caused by human intervention and making it possible to exclusively concentrate on the chemical sensors.
+The dataset is organized into batches, each containing a number of measurements per class and month. This reorganization was done to ensure having a sufficient and as uniformly distributed as possible number of experiments in each batch. The data format follows a coding style where each line represents a measurement, with the first character coding the analyte, followed by the concentration level and the actual feature values for each measurement recording.
 
-The resulting dataset comprises recordings from six distinct pure gaseous substances, namely ammonia, acetaldehyde, acetone, ethylene, ethanol, and toluene, dosed at a wide variety of concentration levels. 
+This dataset can be used exclusively for research purposes, with commercial purposes fully excluded. Proper citation is required when using this dataset for research.
 
-Attribute Information:
-
-The responses of the said sensors are read in the form of the resistance across the active layer of each sensor; hence, each measurement produced a sixteen-channel time series, each represented by an aggregate of features reflecting the dynamic processes occurring at the sensor surface in reaction to the chemical substance being evaluated.
-
-In particular, two distinct types of features were considered in the creation of this dataset: 
-(i) the so-called steady-state feature, defined as the maximal resistance change with respect to the baseline and its normalized version.
-(ii) An aggregate of features reflecting the sensor dynamics of the increasing/decaying transient portion of the sensor response during the entire measurement. 
-
-Data Set Organization:
-
-For processing purposes, the dataset is organized into ten batches, each containing the number of measurements per class and month. This reorganization of data was done to ensure having a sufficient and as uniformly distributed as possible number of experiments in each batch.
-
-Keywords: gas sensor array, drift compensation, chemical sensing, machine learning, time series analysis.
+Keywords: chemical sensors, gas concentration, sensor drift, classification, regression, time series analysis, feature extraction, data organization, research dataset, gas detection

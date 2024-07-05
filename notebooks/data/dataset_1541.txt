@@ -1,13 +1,21 @@
-Volcanoes on Venus - JARtool Experiment Data Set 
+Dataset Title: Volcanoes on Venus - JARtool experiment Data Set Experiment
 
-The dataset consists of data collected by the Magellan spacecraft over a four-year period from nineteen ninety to nineteen ninety-four. The primary objective of the mission was to obtain global mapping of the surface of Venus using Synthetic Aperture Radar. This mission aimed to gather comprehensive data about the planet's surface features.
+Source: Jet Propulsion Laboratory, California Institute of Technology
 
-There exist certain spatial dependencies within the data. For instance, background patches taken from within a single image tend to exhibit more similarity compared to those obtained from different images. Alongside these images, there are accompanying "ground truth" files that identify the locations of volcanoes within the images. It is essential to note that there is no absolute "ground truth" for this dataset, as no human expert has physically visited Venus, and the image quality does not allow for unambiguous identification of volcanoes.
+Please cite:
+Dataset Title: Volcanoes on Venus - JARtool experiment Data Set Experiment
+Source: Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California
 
-The dataset includes labels that provide a measure of subjective uncertainty, with ratings ranging from one (definitely a volcano) to four (only a pit is visible), indicating varying degrees of confidence in identifying volcanic formations.
+Data Set Information:
+The data was collected by the Magellan spacecraft over an approximately four year period from to. The objective of the mission was to obtain global mapping of the surface of Venus using synthetic aperture radar (SAR). A more detailed discussion of the mission and objectives is available at JPL's Magellan webpage. There are some spatial dependencies. For example, background patches from within a single image are likely to be more similar than background patches taken across different images. In addition to the images, there are "ground truth" files that specify the locations of volcanoes within the images. The quotes around "ground truth" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus and the image quality does not permit unambiguous identification of the volcanoes, even by human experts. There are labels that provide some measure of subjective uncertainty (definitely a volcano, probably, possibly, only a pit is visible). See reference for more information on the labeling uncertainty problem. There are also files that specify the exact set of experiments using in the published evaluations of the JARtool system.
 
-The images themselves are composed of one thousand twenty-four by one thousand twenty-four pixels, with pixel values ranging from zero to two hundred fifty-five. These pixel values correlate directly with the amount of energy reflected back to the radar from a specific spatial location. Consequently, higher pixel values signify greater backscatter, whereas lower pixel values indicate lesser backscatter. Topography and surface roughness relative to the radar wavelength significantly impact the amount of backscatter.
+Attribute Information:
+The images are pixels. The pixel values are in the range. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter. Lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.
 
-Relevant publications provide further insights into the Magellan mission, its objectives, and the resulting data products. 
+Relevant Papers:
+"Magellan: Radar Performance and Data Products", Science
+"Magellan Mission Summary", Journal of Geophysical Research Planets
+"Learning to Recognize Volcanoes on Venus", Machine Learning
+"Knowledge Discovery in Large Image Databases: Dealing with Uncertainties in Ground Truth", In Advances in Knowledge Discovery and Data Mining, AAAI/MIT Press
 
-Keywords: Volcanoes, Venus, Synthetic Aperture Radar, Magellan Spacecraft, Spatial Dependencies, Ground Truth, Uncertainty Ratings.
+Keywords: Venus, volcanoes, synthetic aperture radar, Magellan spacecraft, image analysis, machine learning, ground truth uncertainty

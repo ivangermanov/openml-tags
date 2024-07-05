@@ -1,11 +1,17 @@
-Machine Learning and Mathematics Dataset: QSAR Biodeg 
+Name: QSAR Biodeg Seed Zero
 
-This dataset is a subsampled version of the QSAR Biodeg dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting the indices where one of these classes is present, and then sampling columns and rows accordingly.
+Tags: Subsampling of the QSAR Biodeg dataset with seed equal to zero
 
-The goal of this subsampling process was to reduce the number of classes, columns, and rows while maintaining a representative sample of the original dataset. This involved selecting a subset of classes based on their frequency in the original dataset, followed by uniform sampling of columns and rows.
+Generated with the following source code:
 
-The resulting dataset consists of a subset of features and samples, carefully chosen to preserve the characteristics of the original dataset. The features included in this dataset are not easily interpretable, but they have been carefully selected to maintain the integrity of the dataset.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Tags: Machine Learning, Mathematics 
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: QSAR Biodeg, dataset, subsampling, machine learning, mathematics
+Next, it uniformly samples the columns if required, selecting a specified number of columns from the original dataset. If the number of rows exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the class distribution is maintained.
+
+The function returns a new dataset with the selected data, along with the corresponding categorical mask and column names.
+
+Features: 
+
+Class

@@ -1,9 +1,14 @@
-Pyrim Dataset 
+Name: Pyrim
+Tags: binarized, mythbusting, study
 
-Tags: Binarized, Chemistry, Life Science, Myth Busting, Study 
+Source: Unknown - Date unknown
 
-This dataset is a binarized version of the original dataset. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive 'Positive' and all others as negative 'Negative'. 
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-The dataset features include properties related to three molecules, including their polarity, size, flexibility, hydrogen donor and acceptor abilities, pi donor and acceptor abilities, polarisability, and sigma values.
+Features: This dataset includes various molecular properties related to polarity, size, flexibility, hydrogen bonding, pi interactions, polarizability, and sigma values for three different molecular components (p1, p2, and p3). The final feature is the binary classification.
 
-Binary Class
+This dataset has been processed to create a binary classification problem from originally numeric data. The conversion was performed by calculating the mean value of the target feature and then categorizing instances below this threshold as positive ('P') and those above as negative ('N'). This binarization allows for the application of classification algorithms to what was originally a regression problem.
+
+The dataset appears to be related to chemical or pharmaceutical studies, given the nature of the features described. It likely has applications in drug discovery, molecular modeling, or structure-activity relationship analyses.
+
+Keywords: binarized dataset, molecular properties, chemical features, binary classification, structure-activity relationship

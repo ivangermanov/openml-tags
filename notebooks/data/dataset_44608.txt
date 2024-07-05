@@ -1,21 +1,21 @@
-Subsampling of the dataset PC Four with Seed Zero 
-Tags: Subsampling of the dataset PC Four 
+Name: PC Four Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset PC Four with seed equals zero arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments no stratify equals false
 
 Generated with the following source code:
 
-This function subsamples a given dataset based on several parameters. The subsample function takes in several arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether to use stratification or not.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-The function first initializes a random number generator using the provided seed value. It then selects a uniform sample of classes from the dataset, ensuring that the number of classes does not exceed the maximum specified. 
+The function first gets the unique classes from the target variable. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes using a weighted random choice based on the value counts of each class.
 
-If the number of classes exceeds the maximum, the function uses value counts to select the most common classes. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+It then selects the indices where one of the selected classes is present and subsets the data accordingly.
 
-Next, the function uniformly samples columns from the dataset if the number of columns exceeds the maximum specified. It achieves this by randomly selecting column indices and sorting them to ensure consistency.
+Next, it uniformly samples columns if the number of columns is greater than the maximum number of columns.
 
-If the number of rows exceeds the maximum, the function uses stratified sampling to split the dataset into two subsets. This ensures that the class distribution remains consistent between the subsets.
+If the number of rows is greater than the maximum number of rows, it stratifies the data accordingly using the target variable and selects a subset of the data.
 
-Finally, the function converts categorical columns to strings, creates a new dataset object, and returns it.
+Finally, it converts categorical columns to string and returns a dataset with the subsampled data, categorical mask, and column names.
 
-Features: 
-Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Comment Lines, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Halstead Difficulty, Halstead Effort, Halstead Error Estimate, Halstead Length, Halstead Level, Halstead Program Time, Halstead Volume, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Total Lines of Code
+Features: Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Lines of Comments, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Halstead Difficulty, Halstead Effort, Halstead Error Estimate, Halstead Length, Halstead Level, Halstead Program Time, Halstead Volume, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Total Lines of Code
 
-Keywords: subsampling, dataset, stratification, feature selection, class distribution, categorical variables
+Keywords: Subsampling, Dataset, Stratification, Feature Selection, Random Sampling

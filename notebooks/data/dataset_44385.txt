@@ -1,17 +1,15 @@
-Name: Pol Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Pol Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
 
-Tags: Meteorology, Transportation 
+Tags: Subsampling of the dataset Pol with seed equals three arguments N Rows equals two thousand arguments N Cols equals one hundred arguments N Classes equals ten arguments no stratify equals false
 
-Sub sampling of the dataset Pol with a seed of three arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code:
+Generated with the following source code:
 
-A function called sub sample takes in self, seed, number rows max, number cols max, number classes max, and stratified as parameters. This function uses numpy's default random generator to generate random numbers. It then selects a uniform sample of classes from the unique values in y. If the number of classes exceeds the maximum allowed, it selects the top classes based on their value counts. The indices where these classes are present are then selected from y.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to ensure reproducibility. The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset.
 
-The function then uniformly samples columns if required. If the number of columns exceeds the maximum allowed, it randomly selects column indices and sorts them. The selected columns are then used to subset x.
+Next, the function uniformly samples columns from the subsetted dataset, ensuring that the number of columns does not exceed the maximum allowed. If the number of rows in the subsetted dataset exceeds the maximum allowed, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is preserved.
 
-If the length of x exceeds the maximum allowed number of rows, the function uses stratified sampling to select a subset of the data. This is done using scikit learn's train test split function with stratification.
-
-Finally, the function returns a new dataset object with the subsetted data.
+Finally, the function returns a new dataset with the subsetted data, along with the categorical mask and column names.
 
 Features: Binary Class
 
-Keywords: Sub sampling, Meteorology, Transportation, Stratified Sampling, Random Generator
+Keywords: Subsampling, Dataset, Stratified Sampling, Class Distribution, Categorical Mask

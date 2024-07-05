@@ -1,11 +1,31 @@
-The QSAR-TID-100479 dataset contains QSAR data showing activity values of several compounds on drug target TID: 100479. This dataset has eleven rows and one thousand twenty-six features, including IDs and class feature.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset contains information about a single protein, ADAMTS one, also known as A Disintegrin and Metalloproteinase with Thrombospondin Motifs one. It is an enzyme and a protease that belongs to the metallo protease M twelve B subfamily.
+The dataset is associated with the MetaQSAR project from September. Please cite this source when using the data.
 
-The protein is involved in various biological processes, including ovulation from ovarian follicle, kidney development, proteolysis, integrin-mediated signaling pathway, negative regulation of cell population proliferation, negative regulation of angiogenesis, extracellular matrix organization, heart trabecula formation, positive regulation of G one S transition of mitotic cell cycle, and positive regulation of vascular associated smooth muscle cell proliferation and migration.
+Features include MOLECULE CHEMBL ID and numerous FCFP fingerprint bits. The full list of features is extensive, comprising over molecular fingerprint descriptors.
 
-It is located in the extracellular region, basement membrane, extracellular matrix, cytoplasmic vesicle, and collagen-containing extracellular matrix. It has metalloendopeptidase activity, protein binding, heparin binding, peptidase activity, metallopeptidase activity, zinc ion binding, hydrolase activity, and metal ion binding.
+The scraped data provides additional information about the target protein ADAMTS:
 
-Keywords: QSAR, ADAMTS1, metalloproteinase, thrombospondin, extracellular matrix, proteolysis, angiogenesis, cell proliferation, enzyme, protease.
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: ADAMTS
+Synonyms: ADAMTS, ADAM TS, ADAM TS, ADAMTS, A disintegrin and metalloproteinase with thrombospondin motifs
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Protease/Metallo protease/Metallo protease MAM clan/Metallo protease MB subfamily
+
+The protein is associated with various Gene Ontology terms related to its cellular component, molecular function, and biological processes. These include extracellular region, metalloendopeptidase activity, proteolysis, and extracellular matrix organization.
+
+Additional database identifiers and cross references are provided, including UniProt, InterPro, Pfam, and PDBe entries. The protein is involved in pathways such as degradation of the extracellular matrix and O glycosylation of TSR domain containing proteins.
+
+Keywords:
+QSAR
+Molecular fingerprints
+ADAMTS protein
+Metalloprotease
+Extracellular matrix
+Drug target
+ChEMBL

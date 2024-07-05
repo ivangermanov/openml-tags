@@ -1,7 +1,11 @@
-Anal Cat Data Olympic Dataset 
+Name: Analcatdata Olympic Tags: Mythbusting, Study
 
-Tags: Chemistry, Life Science, Myth Busting, Study, Trivial 
+Source: Unknown - Date unknown
 
-This dataset is a binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as Positive and all others as Negative. The dataset includes features such as Country, number of gold medals won in the year two thousand, number of silver medals won in the year two thousand, number of bronze medals won in the year two thousand, total number of medals won in the year two thousand, population, number of athletes, gross domestic product, total number of medals won in nineteen ninety-six, logarithmic values for nineteen ninety-six, logarithmic values for population, and logarithmic values for gross domestic product.
+Please cite: Binarized version of the original data set (see version). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: Olympics, Medals, Country, Population, Athletes, Gross Domestic Product
+Features: Country, Gold, Silver, Bronze, Total, Population, Athletes, GDP, Total, Log, Log population, Log GDP, Binary Class
+
+This dataset focuses on Olympic performance metrics and related country-specific factors. It includes information about medal counts (gold, silver, bronze) for different countries, along with population statistics, number of athletes, and economic indicators such as GDP. The data has been processed to create a binary classification based on a threshold derived from the mean of a target feature. This binarization allows for a simplified analysis of Olympic success factors. The dataset incorporates both raw values and logarithmic transformations of certain variables, potentially to address skewed distributions or to linearize relationships between variables.
+
+Keywords: Olympics, Medal Counts, Country Statistics, GDP, Population, Binary Classification, Data Transformation

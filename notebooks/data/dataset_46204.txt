@@ -1,0 +1,8 @@
+US Births
+Tags: Number of Births in the United States
+
+This dataset corresponds to the number of births in the United States between nineteen sixty-eight and nineteen eighty-eight. There are several datasets covering different date ranges and obtaining data from different sources.
+
+This dataset has undergone several preprocessing steps. Firstly, a new column called "date" was created by combining the existing "year", "month", and "day" columns in the format year-month-day. Secondly, the original "year", "month", "day", "day of year", and "day of week" columns were dropped. A new column called "id series" was created with a value of zero, indicating that there is only one long time series. The dataset was then checked to ensure that there were no missing dates and that the frequency of the time series was daily. A new column called "time step" was created with increasing values of time step for the time series. The "births" column was renamed to "value zero" and cast to an integer data type. The "id series" column was defined as a category.
+
+Keywords: US Births, Number of Births, United States, Date Range, Preprocessing, Time Series.

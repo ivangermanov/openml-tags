@@ -1,14 +1,22 @@
-Mammographic Mass Data Set 
-Tags: Computer Systems, Machine Learning 
+Mammographic Mass Data Set
 
-Mammography is the most effective method for breast cancer screening available today. However, the low positive predictive value of breast biopsy resulting from mammogram interpretation leads to a significant number of unnecessary biopsies with benign outcomes. In order to reduce the high number of unnecessary breast biopsies, several computer-aided diagnosis systems have been proposed over the years. These systems assist physicians in their decision to perform a breast biopsy on a suspicious lesion seen in a mammogram or to perform a short-term follow-up examination instead.
+Tags: Mammography is the most effective method for breast cancer screening available today. However, the low positive predictive value of breast biopsy resulting from mammogram interpretation leads to a significant number of unnecessary biopsies with benign outcomes. To reduce the high number of unnecessary breast biopsies, several computer-aided diagnosis systems have been proposed in recent years. These systems help physicians in their decision to perform a breast biopsy on a suspicious lesion seen in a mammogram or to perform a short-term follow-up examination instead.
 
-This data set can be used to predict the severity, whether benign or malignant, of a mammographic mass lesion from Breast Imaging-Reporting and Data System attributes and the patient's age. It contains a Breast Imaging-Reporting and Data System assessment, the patient's age, and three Breast Imaging-Reporting and Data System attributes together with the ground truth, which is the severity field, for a large number of benign and malignant masses that have been identified on full-field digital mammograms collected at the Institute of Radiology of the University Erlangen-Nuremberg over a certain period of time.
+This data set can be used to predict the severity, benign or malignant, of a mammographic mass lesion from Breast Imaging-Reporting and Data System attributes and the patient's age. It contains a Breast Imaging-Reporting and Data System assessment, the patient's age, and three Breast Imaging-Reporting and Data System attributes together with the ground truth, the severity field, for a large number of benign and malignant masses that have been identified on full field digital mammograms collected at the Institute of Radiology of the University Erlangen-Nuremberg.
 
-Each instance has an associated Breast Imaging-Reporting and Data System assessment, ranging from definitely benign to highly suggestive of malignancy, assigned in a double-review process by physicians. By assuming that all cases with Breast Imaging-Reporting and Data System assessments greater than or equal to a certain value, varying from one to five, are malignant and the other cases are benign, sensitivities and associated specificities can be calculated. These calculations can serve as an indication of how well a computer-aided diagnosis system performs compared to radiologists.
+Each instance has an associated Breast Imaging-Reporting and Data System assessment ranging from definitely benign to highly suggestive of malignancy assigned in a double-review process by physicians. Assuming that all cases with Breast Imaging-Reporting and Data System assessments greater or equal to a given value are malignant and the other cases benign, sensitivities and associated specificities can be calculated. These can be an indication of how well a computer-aided diagnosis system performs compared to the radiologists.
 
-The class distribution consists of a large number of benign cases and a slightly smaller number of malignant cases. There are six attributes in total, including one goal field, one non-predictive attribute, and four predictive attributes. The Breast Imaging-Reporting and Data System assessment is an ordinal, non-predictive attribute, while the patient's age is an integer. The shape, margin, and density of the mass are nominal and ordinal attributes, respectively. The severity field is a binomial, goal field.
+Class Distribution: benign and malignant
 
-There are some missing attribute values, specifically in the Breast Imaging-Reporting and Data System assessment, age, shape, margin, density, and severity fields. 
+Attribute Information: six attributes in total, one goal field, one non-predictive, and four predictive attributes
 
-Keywords: Mammography, Breast Cancer Screening, Computer-Aided Diagnosis, Breast Imaging-Reporting and Data System, Mass Lesion, Benign, Malignant.
+Breast Imaging-Reporting and Data System assessment: an ordinal, non-predictive attribute
+Age: patient's age in years, an integer
+Shape: mass shape, a nominal attribute
+Margin: mass margin, a nominal attribute
+Density: mass density, an ordinal attribute
+Severity: benign or malignant, a binomial, goal field
+
+Missing Attribute Values: none
+
+Keywords: Mammography, Breast Cancer, Computer-Aided Diagnosis, Breast Imaging-Reporting and Data System, Biopsy Outcomes

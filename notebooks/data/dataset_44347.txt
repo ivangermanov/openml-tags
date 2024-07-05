@@ -1,43 +1,11 @@
-credit_seed_0_n_rows_2000_n_classes_10_n_cols_100_stratify_True 
-Tags: Subsampling of the dataset Credit with Seed Equal to Zero 
+Credit Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Credit with seed equal to zero, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
 Generated with the following source code:
 
-def subsample(self, seed, number_of_rows_maximum, number_of_columns_maximum, number_of_classes_maximum, stratified):
-    random_number_generator = np.random.default_rng(seed)
-    x = self.x
-    y = self.y
-    
-    uniformly_sampled_classes = y.unique()
-    if length of uniformly_sampled_classes is greater than number_of_classes_maximum:
-        value_counts = y.value_counts()
-        selected_classes = random_number_generator.choice(uniformly_sampled_classes, size=number_of_classes_maximum, replace=False, probability=value_counts / sum(value_counts))
-        
-        indices_where_one_of_these_classes_is_present = y.index[y.isin(uniformly_sampled_classes)]
-        x = x.iloc[indices_where_one_of_these_classes_is_present]
-        y = y.iloc[indices_where_one_of_these_classes_is_present]
-    
-    if length of x columns is greater than number_of_columns_maximum:
-        column_indices = random_number_generator.choice(list(range(length of x columns)), size=number_of_columns_maximum, replace=False)
-        sorted_column_indices = sorted(column_indices)
-        selected_columns = list(x.columns[sorted_column_indices])
-        x = x[selected_columns]
-    else:
-        sorted_column_indices = list(range(length of x columns))
-        
-    if length of x is greater than number_of_rows_maximum:
-        target_name = y.name
-        data = pd.concat((x, y), axis="columns")
-        _, subset = train_test_split(data, test_size=number_of_rows_maximum, stratify=data[target_name], shuffle=True, random_state=seed)
-        x = subset.drop(target_name, axis="columns")
-        y = subset[target_name]
-        
-    categorical_mask = [self.categorical_mask[i] for i in sorted_column_indices]
-    columns = list(x.columns)
-    
-    return Dataset(dataset=self.dataset, x=x, y=y, categorical_mask=categorical_mask, columns=columns)
+The function subsample takes in self, seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses numpy's random default random generator with the given seed. It then selects the features x and target y from the dataset. If the number of unique classes in the target is greater than nclasses max, it uniformly samples the classes based on their value counts. It selects the indices where one of these classes is present and updates the features and target accordingly. If the number of columns in the features is greater than ncols max, it uniformly samples the columns. If the number of rows in the features is greater than nrows max, it uses train test split with stratification to sample the rows. It returns a new dataset with the updated features, target, categorical mask, and columns.
 
-Features: 
-Revolving Utilization of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, Number of Times Ninety Days Late, Number Real Estate Loans or Lines, Number of Dependents, Serious Delinquency in Two Years 
+Features: Revolving Utilization of Unsecured Lines, Age, Number of Times Thirty to Fifty Nine Days Past Due Not Worse, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, Number of Times Ninety Days Late, Number of Real Estate Loans or Lines, Number of Times Sixty to Eighty Nine Days Past Due Not Worse, Number of Dependents, Serious Delinquency in Two Years.
 
-Keywords: Credit, Subsampling, Dataset, Classes, Columns, Stratification, Random Sampling
+Keywords: Credit Dataset, Subsampling, Stratification, Feature Selection, Random Sampling.

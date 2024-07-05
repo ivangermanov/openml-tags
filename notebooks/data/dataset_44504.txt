@@ -1,33 +1,17 @@
-Name: Steel Plates Fault Seed One 
+Name: Steel Plates Fault Dataset with Subsampling
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the Steel Plates Fault dataset, generated with a specific set of arguments.
 
-Subsampling of the dataset Steel Plates Fault with Seed Equal to One 
-Arguments include Number of Rows Maximum equals Two Thousand, 
-Number of Columns Maximum equals One Hundred, 
-Number of Classes Maximum equals Ten, 
-and No Stratify equals False. 
+This dataset is a subsampled version of the original Steel Plates Fault dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
 
-Generated with the following source code:
+The subsampling process started by selecting a subset of classes from the original dataset. This was done by uniformly sampling the unique classes present in the dataset, with a probability proportional to their frequency. The selected classes were then used to filter the dataset, retaining only the samples that belonged to these classes.
 
-A function named subsample takes in parameters such as seed, number of rows maximum, 
-number of columns maximum, number of classes maximum, and whether it is stratified or not. 
-It returns a dataset.
+Next, the columns of the dataset were subsampled. This was done by uniformly selecting a subset of columns from the original dataset. The selected columns were then used to create a new dataset with the reduced set of features.
 
-Within this function, a random number generator is created using the given seed.
-The input data and target values are stored in variables x and y respectively.
-Unique classes in the target values are found and stored in a variable called classes.
-If the number of unique classes exceeds the maximum allowed number of classes,
-then a specified number of classes are randomly selected based on their frequency,
-and the corresponding indices are found and used to subset the input data and target values.
-If the number of columns in the input data exceeds the maximum allowed number of columns,
-then a specified number of column indices are randomly selected and used to subset the input data.
-If the number of rows in the input data exceeds the maximum allowed number of rows,
-then the input data and target values are concatenated and split into two subsets 
-using a stratified sampling approach with the specified number of rows as the test size.
-Finally, the dataset is returned with the subsampled input data, target values, 
-categorical mask, and column names.
+Finally, the rows of the dataset were subsampled. This was done using stratified sampling, where the samples were split into subsets based on their class labels, and then a random subset of samples was selected from each subset. This ensured that the resulting dataset had a balanced distribution of classes.
 
-Features: Twenty Seven Variables including the Target Variable
+The resulting dataset has a reduced set of features and samples, making it more manageable for analysis and modeling.
 
-Keywords: Machine Learning, Dataset, Subsampling, Stratified Sampling, Random Number Generator
+Features: (skipped due to unreadability)
+
+Keywords: Steel Plates Fault, subsampling, dataset, stratified sampling, feature selection, class balancing.

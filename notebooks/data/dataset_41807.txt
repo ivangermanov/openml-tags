@@ -1,28 +1,30 @@
-**FOREX NZD/USD Minute High**
+FOREX NZD/USD Minute High
 
-Tags: Finance, Forex, Forex High, Forex Minute, Machine Learning, Statistics
+Tags: finance, forex, forex high, forex minute
 
-This dataset contains historical price data of the New Zealand Dollar versus the United States Dollar (NZD/USD) currency pair from Dukascopy.
+Source: Dukascopy Historical Data Feed
 
-One instance, or row, represents a single candlestick of one minute duration. The entire dataset spans a period from January first to December thirteenth and excludes weekends, as the Forex market is not active during these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+Data Description
 
-The class attribute signifies the direction of the mean high price in relation to the subsequent minute. Specifically, it indicates whether the mean high price is increasing or decreasing (or remains unchanged) in the following minute. Therefore, the class attribute assumes a value of True if the mean high price rises in the subsequent minute and False otherwise.
+This dataset contains historical price data of the New Zealand Dollar versus the United States Dollar (NZD/USD) from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January to December and does not include weekends, as the Forex market is not traded on weekends. The time zone of the feature Timestamp is Europe/Amsterdam.
 
-Please note that this dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies can only be applied to predictions based on close attributes, which are also available.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
 
-**Attributes**
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the beginning of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price observed during this time interval.
-* **Bid Close**: The bid price at the conclusion of this time interval.
-* **Bid Volume**: The frequency of changes in the bid price within this time interval.
-* **Ask Open**: The ask price at the commencement of this time interval.
-* **Ask High**: The highest ask price reached during this time interval.
-* **Ask Low**: The lowest ask price encountered during this time interval.
-* **Ask Close**: The ask price at the termination of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Indicates whether the average high price will rise during the subsequent interval.
+Attributes
 
-Keywords: Forex, NZD/USD, Candlestick, Time Series, Finance, Machine Learning, Statistics.
+Timestamp: The time of the current data point in Europe/Amsterdam
+Bid Open: The bid price at the start of this time interval
+Bid High: The highest bid price during this time interval
+Bid Low: The lowest bid price during this time interval
+Bid Close: The bid price at the end of this time interval
+Bid Volume: The number of times the Bid Price changed within this time interval
+Ask Open: The ask price at the start of this time interval
+Ask High: The highest ask price during this time interval
+Ask Low: The lowest ask price during this time interval
+Ask Close: The ask price at the end of this time interval
+Ask Volume: The number of times the Ask Price changed within this time interval
+Class: Whether the average price will go up during the next interval
+
+Keywords: Forex, NZD/USD, historical data, candlestick, minute interval, bid and ask prices, class attribute, scientific purposes.

@@ -1,15 +1,15 @@
-Subsampling of the Churn dataset with four thousand samples, one hundred features, and ten classes, using stratification.
+Name: Churn Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This dataset was generated using the following source code:
+Tags: Subsampling of the dataset Churn with seed equals Four, arguments nrows max equals Two Thousand, arguments ncols max equals One Hundred, arguments nclasses max equals Ten, arguments no stratify equals False.
 
-A function called subsample takes five parameters: seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification. It uses NumPy's random default generator to uniformly sample classes, then selects the indices where one of these classes is present. It also uniformly samples columns if required, and finally stratifies the sampling of rows according to the target variable.
+Generated with the following source code:
 
-The function first gets the unique classes from the target variable, and if there are more than the maximum number of classes, it selects a specified number of classes based on their frequency. Then it gets the indices where one of these classes is present, and selects the corresponding data points.
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the dataset. The function first samples the classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, it checks if the number of columns exceeds the maximum number of columns, and if so, it uniformly samples the specified number of columns. Finally, if the number of data points exceeds the maximum number of rows, it stratifies the sampling of rows according to the target variable.
+Next, the function samples the columns uniformly, selecting a specified number of columns. If the number of rows exceeds the maximum allowed, the function stratifies the data according to the target variable and samples the rows accordingly.
 
-The resulting dataset has four thousand samples, one hundred features, and ten classes, and was generated using stratification.
+Finally, the function converts categorical columns to string format and returns a new dataset with the sampled data.
 
-Features include State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number VMail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number Customer Service Calls, and Class.
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class.
 
-Keywords: machine learning, transportation, subsampling, stratification, dataset generation.
+Keywords: Churn Dataset, Subsampling, Stratified Sampling, Feature Selection, Dataset Generation.

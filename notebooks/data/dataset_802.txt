@@ -1,9 +1,13 @@
-The PBCSeq Dataset: A Binarized Version for Regression Problems 
+Dataset Name: pbcseq
 
-This dataset is a binarized version of the original data set. In this version, the numeric target feature has been converted into a two-class nominal target feature. This was achieved by computing the mean and subsequently classifying all instances with a lower target value as Positive and all others as Negative.
+Tags: binarized, binarized regression problem, mythbusting, study
 
-The dataset originates from the fields of Chemistry and Life Sciences, specifically focusing on MythBusting and Study datasets. 
+Source: Unknown - Date unknown
 
-Features included in this dataset are Case Number, Number of Days, Status, Drug, Age, Sex, Day, Presence of Ascites, Presence of Hepatomegaly, Presence of Spiders, Presence of Edema, Serum Bilirubin, Serum Cholesterol, Albumin, Alkaline Phosphatase, SGOT, Platelets, Prothrombin Time, and Binary Class.
+Please cite: Binarized version of the original data set (see version). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: Binarized Dataset, Regression Problem, Chemistry, Life Sciences, MythBusting, Study Dataset
+Features: case number, number of days, status, drug, age, sex, day, presence of ascites, presence of hepatomegaly, presence of spiders, presence of edema, serum bilirubin, serum cholesterol, albumin, alkaline phosphatase, SGOT, platelets, prothrombin time, binary class
+
+This dataset represents a binarized version of an original medical dataset, focusing on a regression problem that has been converted into a binary classification task. The conversion process involves calculating the mean of the target feature and subsequently categorizing instances as either positive or negative based on their relation to this mean value. This transformation allows for the application of binary classification algorithms to what was originally a continuous prediction problem. The dataset includes various medical features related to patient characteristics, symptoms, and laboratory test results, which are used to predict the binary outcome.
+
+Keywords: binarized dataset, medical classification, regression to binary conversion, patient features, liver disease indicators

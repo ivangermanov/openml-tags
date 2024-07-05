@@ -1,29 +1,17 @@
 National Hockey League Interviews
 
-Tags: Machine Learning, Statistics
+This dataset was scraped from ASAP Sports, using a custom web scraping code designed to account for most of the variance in the website's formatting. However, some web pages with significantly different formatting were ignored to ensure data quality.
 
-This dataset was scraped from asap sports dot com using a custom-built web scraping code designed to handle variations in the website's formatting. However, certain web pages with significant formatting differences were excluded from the scraping process. During manual inspection of randomly selected rows, no major errors were detected in the transcripts, although it is impossible to guarantee complete accuracy.
+The dataset contains transcripts of interviews with National Hockey League players, coaches, and other team officials. Each row represents a unique interview, with columns for the teams involved, the date of the interview, the name of the person being interviewed, their job title, and the transcript of the interview itself.
 
-The dataset consists of several columns, including:
+The job title column takes one of three values: player, coach, or other. Players and coaches are assigned their respective titles if they held those positions at the time of the interview. Otherwise, they are categorized as "other", which includes general managers, league officials, and commentators. Some job titles were assigned automatically based on the title mentioned in the transcript, while others were assigned manually.
 
-Unique Identifier: a distinct row identifier
+The transcript column contains the text of the interview, with responses separated by periods. Note that interviewer questions were not collected, so the text only includes the responses from the interviewee. A possible source of error is the failure to ignore interviewer questions, which may have been included in the transcript.
 
-Team One and Team Two: the two teams participating in the Stanley Cup Final, with no inherent significance attached to the order of their listing
+This dataset has been used to train a chatbot to respond to messages in the style of a hockey player. The chatbot can continue an interview response with a five-sentence continuation, making it a fun and interactive way to engage with hockey fans.
 
-Date: the date of the interview
+The idea to scrape interviews from ASAP Sports originated from an article by an independent researcher. This dataset offers a unique opportunity to explore how speech patterns of NHL coaches and players differ, whether coaches are more positive or team-oriented, and how hockey interview responses have changed over the years.
 
-Name: the individual being interviewed
+Features: Row Identifier, Team One, Team Two, Date, Name, Job Title, Transcript
 
-Job: categorized into three roles - player, coach, and other, depending on the individual's position at the time of the interview; those who do not fit into the first two categories are classified as 'other', comprising mainly general managers, league officials, and commentators; while some assignments were automated based on titles in the transcripts, others required manual intervention; however, it is possible that names appearing only once may contain errors
-
-Text: the actual interview transcript, excluding interviewer questions, with responses separated by periods and devoid of punctuation; a potential source of error lies in the possibility of failing to exclude interviewer questions
-
-In related projects, this dataset was utilized to develop a recurrent neural network-based Facebook Messenger chatbot capable of responding to messages in a manner reminiscent of a hockey player; specifically, when provided with the beginning of an interview response, the bot generates a five-sentence continuation of that response
-
-This dataset offers a rich platform for exploring various research questions, such as:
-
-Do speech patterns of National Hockey League coaches and players exhibit distinct differences?
-Are coaches generally more optimistic or team-oriented in their responses compared to players?
-How have hockey interview responses evolved over time?
-
-Keywords: National Hockey League, Interviews, Machine Learning, Statistics, Chatbot, Speech Patterns
+Keywords: National Hockey League, Interviews, Transcripts, Players, Coaches, Chatbot, Speech Patterns, Hockey Analytics

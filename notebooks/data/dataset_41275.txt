@@ -1,23 +1,9 @@
-Wine Reviews 
+Wine Reviews dataset contains one hundred thirty thousand wine reviews with variety, location, winery, price, and description. The dataset was downloaded from Kaggle on twenty-ninth of October two thousand eighteen. The original data was scraped from the Wine Enthusiast homepage, which is a well-known online platform for wine enthusiasts. The second version of the dataset was used, which was scraped on twenty-second of November two thousand seventeen. The Kaggle dataset was licensed under Creative Commons Attribution Non Commercial Share Alike Four Point Zero International, which allows users to share and adapt the material for non-commercial purposes.
 
-Tags: Manufacturing, Social Media 
+The variable points, which represents the number of points Wine Enthusiast rated the wine on a scale of one to one hundred, was selected as the target variable. For a detailed description of all variables, please refer to the Kaggle dataset repository. The variable region two is ignored by default as it contains a large portion of missing values. The variable designation is not used by default, as the number of factor labels is extremely high compared to the number of observations.
 
-This dataset consists of one hundred thirty thousand wine reviews, each featuring a range of attributes including the type of grape used, the location where it was produced, the winery responsible, the price point, and a brief description. 
+The dataset further includes the text-based variables description, taster twitter handle, and title, which could be used to construct additional features. Special characters in text features have been removed to allow the upload to the platform. The ID variable from the Kaggle version was removed from the dataset. The factor labels of all nominal features had to be changed to integers to prevent a problem that would not allow the upload of nominal features with too many and too long labels.
 
-The data was sourced from Kaggle, where it was originally uploaded, and stems from a web scraping exercise conducted on the Wine Enthusiast website. The second iteration of this dataset was utilized, which was compiled on November twenty-second, two thousand seventeen. 
+The dataset features include country, description, designation, points, price, province, region one, region two, taster name, taster twitter handle, title, variety, and winery.
 
-The dataset is licensed under the Creative Commons Attribution Non Commercial Share Alike four point zero International license. 
-
-The target variable for this dataset is the points awarded to each wine, as rated by Wine Enthusiast on a scale of one to one hundred. 
-
-A full description of each variable can be found on the Kaggle repository page. 
-
-By default, the region two variable is excluded due to its high proportion of missing values. Similarly, the designation variable is not utilized by default, owing to the vast number of factor labels present relative to the number of observations. 
-
-In addition to the numerical attributes, the dataset also encompasses text-based variables, namely the description, taster Twitter handle, and title, although the latter is ignored by default. These text features have been preprocessed to remove special characters, thereby facilitating their upload to the platform. 
-
-The ID variable present in the original Kaggle dataset has been removed from this iteration. Furthermore, the factor labels associated with nominal features were converted into integers to overcome an issue preventing the upload of nominal features featuring excessively lengthy labels.
-
-Features: Country, Description, Designation, Points, Price, Province, Region One, Taster Name, Variety, Winery
-
-Keywords: Wine Reviews, Manufacturing, Social Media, Wine Enthusiast, Web Scraping, Dataset License.
+Keywords: wine reviews, wine enthusiast, dataset, kaggle, wine ratings, wine features.

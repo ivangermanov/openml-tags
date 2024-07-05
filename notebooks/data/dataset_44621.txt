@@ -1,45 +1,11 @@
-Car Seed Three N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Car Subsample with Three Rows, Two Thousand Rows Maximum, One Hundred Columns Maximum, Ten Classes Maximum, and Stratification Enabled
 
-Tags: Demographics, Government 
-
-Sub-sampling of the dataset Car with seed equals three arguments N Rows max equals two thousand arguments NC Columns max equals one hundred arguments NC Classes max equals ten arguments no stratify equals true 
+Tags: Subsampling of the Car dataset with seed equal to three, arguments include number of rows, number of columns, number of classes, and no stratification
 
 Generated with the following source code:
 
-def sub-sample(self, seed, NRowsMax, NCColumnsMax, NCClassesMax, stratified):
-    random number generator equals numpy dot random dot default random generator seed
-    x equals self dot x
-    y equals self dot y
-    
-    uniformly sample classes equals y dot unique 
-    if length of classes greater than NCClassesMax:
-        value counts equals y dot value counts 
-        selected classes equals random number generator dot choice classes size equals NCClassesMax replace equals false probability equals value counts divided by sum of value counts 
-        select the indices where one of these classes is present index equals y dot index y dot is in selected classes
-        x equals x dot iloc index 
-        y equals y dot iloc index
-    
-    uniformly sample columns if required
-    if length of x dot columns greater than NCColumnsMax:
-        column indexes equals random number generator dot choice list range length of x dot columns size equals NCColumnsMax replace equals false
-        sorted column indexes equals sorted column indexes
-        selected columns equals list x dot columns sorted column indexes
-        x equals x selected columns
-    else:
-        sorted column indexes equals list range length of x dot columns
-        
-    if length of x greater than NRowsMax:
-        stratify accordingly target name equals y dot name
-        data equals pandas dot concat x comma y axis equals columns
-        underscore comma subset equals sklearn model selection dot train test split data test size equals NRowsMax stratify equals data target name shuffle equals true random state equals seed
-        x equals subset dot drop target name axis equals columns
-        y equals subset target name
-        
-    we need to convert categorical columns to string for open machine learning
-    categorical mask equals list self dot categorical mask i for i in sorted column indexes
-    columns equals list x dot columns
-    return dataset dataset equals self dot dataset x equals x y equals y categorical mask equals categorical mask columns equals columns
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data.
 
-Features: buying price, maintenance cost, doors, persons, luggage boot space, safety rating, class 
+Features: Buying Price, Maintenance Cost, Number of Doors, Number of Persons, Luggage Boot Space, Safety Features, Class
 
-Keywords: sub-sampling, demographics, government, dataset, stratification, machine learning
+Keywords: Car Dataset, Subsampling, Stratification, Random Sampling, Feature Selection

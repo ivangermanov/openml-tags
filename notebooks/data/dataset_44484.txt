@@ -1,15 +1,11 @@
-Australian Seed One N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Australian Seed One Dataset with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-Tags: Machine Learning, Mathematics 
+This dataset is a subsample of the Australian dataset, generated with a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were then used to filter the data, retaining only the instances that belonged to these classes.
 
-This is a subsampling of the dataset Australian with a total of forty-one thousand and ninety-eight-one samples. The subsampling was performed using the following arguments: number of rows maximum equals two thousand, number of columns maximum equals one hundred, number of classes maximum equals ten, and no stratify equals false. 
+Next, the columns were uniformly sampled, reducing the number of columns to one hundred. The column selection was done randomly, but the resulting columns were sorted in ascending order to maintain consistency.
 
-The subsampling function generates a new dataset by uniformly sampling classes, columns, and rows from the original dataset. It first selects the unique classes present in the dataset and then chooses the specified number of classes randomly. If the number of classes exceeds the specified maximum, it selects the top classes based on their frequency in the dataset. 
+Finally, the dataset was further reduced by randomly selecting two thousand instances, while maintaining the stratification of the classes. This was achieved by using a train-test split function, which ensured that the class distribution was preserved in the subsampled dataset.
 
-Next, it selects the column indices randomly and sorts them in ascending order. If the number of columns exceeds the specified maximum, it chooses the specified number of columns randomly. Otherwise, it uses all the columns. 
+The resulting dataset consists of the selected features, which are A One, A Two, A Three, A Four, A Five, A Six, A Seven, A Eight, A Nine, A Ten, A Eleven, A Twelve, A Thirteen, A Fourteen, and A Fifteen.
 
-Finally, it samples the rows uniformly while maintaining the class distribution. If the number of rows exceeds the specified maximum, it performs stratified sampling to ensure that the sampled rows represent the class distribution of the original dataset.
-
-Features: 
-
-Keywords: machine learning, mathematics, dataset, subsampling, stratification, uniform sampling.
+Keywords: Australian dataset, subsampling, stratification, class selection, column sampling, instance selection.

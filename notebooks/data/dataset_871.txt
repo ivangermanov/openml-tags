@@ -1,9 +1,16 @@
-Pollen Dataset 
+Name: Pollen
+Tags: binarized regression problem, mythbusting, study
 
-This dataset is a binarized regression problem, originating from the fields of Chemistry and Life Science. In an effort to debunk common myths, this dataset has been used in various studies, including Mythbusting Study One, Study One, Study Fifteen, Study Twenty, Study Forty-One, and Study Seven.
+Source: Unknown - Date unknown
 
-The dataset has undergone a transformation, converting its numeric target feature into a two-class nominal target feature. This was achieved by calculating the mean and subsequently categorizing all instances with a lower target value as Positive, denoted by 'P', and all others as Negative, denoted by 'N'.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-The dataset comprises several key features, including Ridge Width, Nutlet Border, Crack Length, Weight, and Density, which ultimately influence the binary classification outcome.
+Features: Ridge, Nub, Crack, Weight, Density, Binary Class
 
-Keywords: Pollen Dataset, Binarized Regression, Chemistry, Life Science, Mythbusting Studies.
+This dataset, known as Pollen, is a binarized regression problem used for mythbusting and various studies. The original numeric target feature has been converted into a binary classification task. This conversion was achieved by calculating the mean value of the target feature and subsequently categorizing instances below this threshold as positive ('P') and those above as negative ('N'). This transformation allows for the application of binary classification algorithms to what was originally a regression problem.
+
+The dataset includes several features that describe characteristics of pollen samples, such as ridge formation, presence of nubs, cracks in the structure, weight, and density. The final feature, binary class, represents the transformed target variable resulting from the binarization process.
+
+Researchers and data scientists interested in exploring the transition between regression and classification problems may find this dataset particularly useful. It provides an opportunity to compare the performance of various machine learning algorithms on both the original regression task and the derived binary classification problem.
+
+Keywords: pollen, binarized regression, classification, mythbusting, feature conversion, binary target, mean threshold, data transformation

@@ -1,17 +1,13 @@
-MiniBooNE Seed Four Dataset
+Name: MiniBooNE Seed Four with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Tags: Subsampling of the MiniBooNE dataset 
+Tags: Subsampling of the dataset MiniBooNE with seed equal to four, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-This dataset is a subsampled version of the original MiniBooNE dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset.
+Generated with the following source code:
 
-The dataset was generated using a custom Python function that takes several arguments, including a random seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean flag indicating whether to stratify the sampling process.
+This function subsamples a dataset by uniformly selecting classes, columns, and rows. It first selects classes, then columns, and finally rows. The selection of classes and rows is stratified, meaning that the proportion of each class is maintained. The selection of columns is uniform.
 
-The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of the chosen classes is present and uses these indices to filter the data.
+The function takes in a dataset, a seed for random number generation, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Next, the function uniformly samples columns from the filtered data, selecting only the specified maximum number of columns. Finally, it applies stratified sampling to the resulting data, ensuring that the class distribution is preserved in the subsampled dataset.
+Features: Particle Identification Features, Signal Feature
 
-Features:
-
-signal
-
-Keywords: MiniBooNE, subsampling, stratified sampling, class selection, column selection
+Keywords: MiniBooNE, Subsampling, Stratification, Particle Identification, Signal Feature

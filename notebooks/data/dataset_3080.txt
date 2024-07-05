@@ -1,9 +1,16 @@
-This dataset, named QSAR-TID-101508, belongs to the categories of Chemistry, Life Science, and MTLQSAR. It originates from the MetaQSAR project, dating back to September 2015.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The dataset contains QSAR data sourced from ChEMBL version seventeen, showcasing activity values measured in pseudo-pCI50 units for various compounds interacting with the drug target identified as TID: 101508. The dataset comprises five hundred thirty-two rows and one thousand twenty-six features, including IDs and a class feature denoted as MOLECULE_CHEMBL_ID and MEDIAN_PXC50.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-These features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings utilizing the Pipeline Pilot program developed by Dassault Systèmes BIOVIA. Typically, generating fingerprints does not necessitate missing value imputation since all bits are generated.
+The dataset focuses on a tyrosine protein kinase Srms, also known as C orf or SRMS. This protein is found in Homo sapiens and belongs to the enzyme/kinase/protein kinase/TK protein kinase group/tyrosine protein kinase Src family. It is classified as a single protein target.
 
-The dataset pertains to the Tyrosine-Protein Kinase Srms, also known as C20orf148, SRMS, or Tyrosine-Protein Kinase Srms. This enzyme belongs to the species Homo sapiens and falls under the category of single proteins. Its preferred name is Tyrosine-Protein Kinase Srms, and it is classified as an enzyme, kinase, or protein kinase belonging to the tyrosine protein kinase Src family.
+The tyrosine protein kinase Srms is associated with various cellular components, including the cytoplasm, cytosol, and extrinsic component of the cytoplasmic side of plasma membrane. Its functions encompass nucleotide binding, protein kinase activity, protein tyrosine kinase activity, signaling receptor binding, ATP binding, and transferase activity.
 
-Keywords: QSAR, TID, Chemistry, Life Science, MTLQSAR, MetaQSAR, ChEMBL, Tyrosine-Protein Kinase Srms, Homo sapiens, Single Proteins.
+This protein is involved in multiple biological processes such as protein phosphorylation, transmembrane receptor protein tyrosine kinase signaling pathway, negative regulation of signal transduction, cell differentiation, peptidyl tyrosine autophosphorylation, and innate immune response.
+
+The dataset provides information on various database cross references for this protein target, including canSAR Target, IntAct, PharmGKB, Pharos, Reactome, UniProt, and InterPro. These references offer additional details on protein domains, families, and functional classifications.
+
+The tyrosine protein kinase Srms contains several important domains, including protein kinase domain, SH domain, serine threonine/tyrosine kinase catalytic domain, and tyrosine kinase active site. These structural elements contribute to its functional properties and interactions within cellular pathways.
+
+Keywords: QSAR, tyrosine protein kinase, molecular fingerprints, enzyme classification, cellular processes, protein domains, drug target

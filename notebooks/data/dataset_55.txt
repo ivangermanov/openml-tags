@@ -1,76 +1,56 @@
-Hepatitis
+Hepatitis Dataset
 
-Domain: Health, Medicine, Mythbusting
+Tags: mythbusting, study
+
+Source: Unknown
+
+Please cite: Title: Hepatitis Domain
 
 Sources:
-
-* Unknown
-* Donor: via 
-* Date: 
+(a) Unknown
+(b) Donor: Institute in Ljubljana, Yugoslavia
+(c) Date: November
 
 Past Usage:
+- Scientific American article reported 80% classification accuracy
+- Assistant software achieved 83% accuracy
 
-* 
-* 
+Relevant Information: Please inquire for further information on this database.
 
-Relevant Information:
-Please contact the donor for further information on this database.
-
-Number of Instances: 
-Number of Attributes: 
+Number of Instances: 155
+Number of Attributes: 20 (including the class attribute)
 
 Attribute Information:
+Class: Die, Live
+Age: Various age ranges from 10 to 80
+Sex: Male, Female
+Steroid: No, Yes
+Antivirals: No, Yes
+Fatigue: No, Yes
+Malaise: No, Yes
+Anorexia: No, Yes
+Liver Big: No, Yes
+Liver Firm: No, Yes
+Spleen Palpable: No, Yes
+Spiders: No, Yes
+Ascites: No, Yes
+Varices: No, Yes
+Bilirubin: Various levels from 0.39 to 4.00
+Alk Phosphate: Various levels from 33 to 250
+SGOT: Various levels from 13 to 500
+Albumin: Various levels from 2.1 to 6.0
+Protime: Various levels from 10 to 90
+Histology: No, Yes
 
-* Class: Die, Live
-* Age: 
-* Sex: Male, Female
-* Steroid: No, Yes
-* Antivirals: No, Yes
-* Fatigue: No, Yes
-* Malaise: No, Yes
-* Anorexia: No, Yes
-* Liver Big: No, Yes
-* Liver Firm: No, Yes
-* Spleen Palpable: No, Yes
-* Spiders: No, Yes
-* Ascites: No, Yes
-* Varices: No, Yes
-* Bilirubin: (see note below)
-* Alk Phosphate: 
-* SGOT: 
-* Albumin: 
-* Protime: 
-* Histology: No, Yes
+The Bilirubin attribute is continuously valued. It represents boundary values for discretization while preserving continuous information for other tests.
 
-The bilirubin attribute appears to be continuously valued. According to the donor, bilirubin is a continuous attribute, which means it does not have fixed values. Instead, it has boundary values that can be used for discretization. This allows for more detailed analysis and testing while preserving the continuous information.
-
-Missing Attribute Values: (indicated by?)
+Missing Attribute Values:
+Several attributes have missing values, indicated by "?". The number of missing values varies across attributes, with Protime having the highest number of missing values.
 
 Class Distribution:
-Die: 
-Live: 
+Die: 32
+Live: 123
 
-Relabeled Values:
+The dataset includes relabeled values for various attributes, converting numeric codes to descriptive labels (e.g., "2" to "male" for Sex).
 
-* Sex: 
-* Steroid: 
-* Antivirals: 
-* Fatigue: 
-* Malaise: 
-* Anorexia: 
-* Liver Big: 
-* Liver Firm: 
-* Spleen Palpable: 
-* Spiders: 
-* Ascites: 
-* Varices: 
-* Histology: 
-
-Features: Age, Sex, Steroid, Antivirals, Fatigue, Malaise, Anorexia, Liver Big, Liver Firm, Spleen Palpable, Spiders, Ascites, Varices, Bilirubin, Alk Phosphate, SGOT, Albumin, Protime, Histology, Class
-
-Scraped Data: Dataset Information
-Additional Information: Please contact the donor for further information on this database.
-Has Missing Values: Yes
-Additional Variable Information:
-
-Keywords: Hepatitis, Health, Medicine, Bilirubin, Continuous Attribute, Discretization
+Keywords: hepatitis, medical data, liver disease, clinical attributes, classification, missing values, continuous variables

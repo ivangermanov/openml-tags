@@ -1,35 +1,21 @@
-**Chess End-Game - King + Rook versus King + Pawn on a7**
+Dataset: kr-vs-kp
 
-This dataset is a collection of chess end-game positions where white has a king and rook, while black has a king and pawn on the seventh rank (a7). The goal is to determine whether white can win or not.
+Tags: mythbusting, OpenML-CC, OpenML, study, uci
 
-**Sources**
+This dataset pertains to a chess endgame scenario involving King+Rook versus King+Pawn on a7 (commonly abbreviated as KRKPA7). The pawn's position on a7 indicates it is one square away from queening. It is White's turn to move, with White controlling the King+Rook.
 
-The database was originally generated and described by the creator. It was donated and coded by another contributor who received the data from a third party.
+The dataset was originally generated and described by an expert in the field. It has been used in various studies related to structured induction in expert systems, concept learning, and machine learning. The data has been utilized in academic publications and research papers focusing on knowledge structuring and problem-solving in artificial intelligence.
 
-**Past Usage**
+The dataset comprises board descriptions for this specific chess endgame. Each instance represents a unique board position, described by attributes that characterize the state of the game. The classification task is to determine whether White can win or cannot win from the given position.
 
-This dataset has been used in various studies and publications, including books and research papers, focusing on structured induction, expert systems, and concept learning.
+There are two possible class labels: "won" (White can win) and "nowin" (White cannot win). It is believed that White is considered unable to win if the Black pawn can safely advance on the board.
 
-**Relevant Information**
+The dataset contains instances, with each instance represented as a sequence of attribute values. The first attributes describe the board configuration, while the last attribute provides the classification. There are no missing values in the dataset.
 
-The dataset consists of thirty-six attributes describing the chess board, followed by a classification label indicating whether white can win or not. There are no missing values in the dataset.
+The features in the dataset correspond to various aspects of the chess position, including piece placements, potential moves, and strategic considerations. These features are represented in a specific order within each instance.
 
-**Number of Instances and Attributes**
+In terms of class distribution, approximately of the positions allow White to win, while in the remaining positions, White cannot secure a victory. This relatively balanced distribution adds to the dataset's suitability for machine learning tasks.
 
-The dataset contains a total of instances, each represented by thirty-seven attribute values.
+The dataset has been formatted to align with other databases in the UCI repository of machine learning datasets, ensuring consistency and ease of use for researchers and practitioners in the field of artificial intelligence and machine learning.
 
-**Attribute Summaries**
-
-The classification label has two classes: white can win or white cannot win. The thirty-six attributes describe the chess board, including information about the pieces, their positions, and relationships between them.
-
-**Class Distribution**
-
-In approximately half of the positions, white can win, while in the remaining half, white cannot win.
-
-A typical instance in the dataset is represented by a sequence of thirty-seven attribute values, describing the chess board and the classification label.
-
-**Features**
-
-The features describing the chess board include information about the king, rook, pawn, and their relationships, such as blocking, attacking, and controlling squares.
-
-Keywords: Chess End-Game, King + Rook vs. King + Pawn, Structured Induction, Expert Systems, Concept Learning.
+Keywords: chess endgame, King+Rook versus King+Pawn, machine learning, artificial intelligence, board description, classification, structured induction, concept learning.

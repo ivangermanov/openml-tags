@@ -1,28 +1,30 @@
-**FOREX eur huf minute High**
+**FOREX EUR/HUF Minute High**
 
-Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+Tags: finance, forex, forex high, forex minute
+
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
 
-This dataset comprises historical price data of the Forex Euro Hungarian Forint (EUR/HUF) sourced from Dukascopy. Each instance represents a one-minute candlestick, with the entire dataset spanning from January first to December thirteenth. As the Forex market is inactive during weekends, the dataset excludes these periods. The timestamp feature adheres to the Europe/Amsterdam time zone.
+This dataset contains historical price data of the FOREX EUR/HUF from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans a range of dates, excluding weekends, since the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute denotes the directional movement of the mean high bid and ask prices between consecutive minutes. Specifically, it indicates whether the mean high price is increasing or decreasing (or remains stagnant) in the subsequent minute. A true classification signifies an upward trend, while a false classification implies a downward or stagnant trend.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
 
-**Note that this is a hypothetical task, intended solely for scientific purposes. Realistic trade strategies should be based on predictions involving 'close' attributes, which are also available.**
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: The time corresponding to each data point, adhering to the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the commencement of each time interval.
-* **Bid High**: The highest bid price recorded during each time interval.
-* **Bid Low**: The lowest bid price observed during each time interval.
-* **Bid Close**: The bid price at the conclusion of each time interval.
-* **Bid Volume**: The frequency of changes in the bid price within each time interval.
-* **Ask Open**: The ask price at the initiation of each time interval.
-* **Ask High**: The highest ask price documented during each time interval.
-* **Ask Low**: The lowest ask price observed during each time interval.
-* **Ask Close**: The ask price at the termination of each time interval.
-* **Ask Volume**: The frequency of changes in the ask price within each time interval.
-* **Class**: The directional indicator of the mean high price between consecutive minutes.
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, Euro, Hungarian Forint, Candlestick, Machine Learning, Finance, Time Series Analysis
+Keywords: FOREX, EUR/HUF, minute data, high price, bid and ask prices, financial data, historical data feed.

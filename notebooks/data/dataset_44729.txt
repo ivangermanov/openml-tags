@@ -1,17 +1,17 @@
-Subsampling of the Helena dataset with a specified seed value. This process involves reducing the dataset to a manageable size while maintaining its overall characteristics.
+Subsampling of the Helena dataset with a seed value. This dataset was generated with the following source code.
 
-The subsampling method uses a random number generator to select a specified number of rows, columns, and classes from the original dataset. It ensures that the sampled data remains representative of the original dataset by using stratified sampling when necessary.
+The subsample function takes in a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean value. It returns a dataset.
 
-The Helena dataset has undergone uniform sampling of classes, resulting in a selection of classes based on their frequency in the original dataset. The indices corresponding to these selected classes have been used to filter the dataset, reducing its size while preserving the chosen classes.
+The function first uniformly samples classes from the dataset. If the number of unique classes exceeds the maximum number of classes, it selects the required number of classes using a random choice with probabilities based on the value counts of each class. It then selects the indices where one of these classes is present.
 
-Furthermore, uniform sampling of columns has been applied to reduce the dimensionality of the dataset. A specified number of column indices have been randomly selected, and only those columns corresponding to these indices have been retained.
+Next, the function uniformly samples columns if required. If the number of columns exceeds the maximum number of columns, it selects the required number of columns using a random choice.
 
-Finally, the dataset has undergone stratified sampling to reduce its size further. This involved combining the feature data with the target variable, splitting the resulting dataset into two subsets, and selecting the smaller subset based on the target variable distribution.
+Finally, the function samples rows accordingly. If the number of rows exceeds the maximum number of rows, it uses a train test split with stratification based on the target variable.
 
-The resulting subsampled dataset consists of the reduced feature data, the corresponding target variable, and a mask indicating which columns contain categorical variables.
+The resulting dataset is then returned with the selected features, target variable, and categorical mask.
 
-Tags: Machine Learning, Mathematics
+Tags: Subsampling of the dataset Helena, stratify True
 
-Features: 
+Features: (skipped due to unreadability)
 
-Keywords: subsampling, stratified sampling, uniform sampling, dataset reduction, machine learning, mathematics
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling

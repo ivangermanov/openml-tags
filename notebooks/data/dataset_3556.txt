@@ -1,15 +1,17 @@
-QSAR-TID-148 Dataset 
+QSAR-TID-148 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 148. It has multiple rows and features, including IDs and class features. The features represent molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 148. The dataset has 404 rows and 1026 features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The dataset provides information about the Vasopressin V1b receptor, a single protein preferred name with synonyms. It belongs to the species group Homo sapiens and is classified under protein target classification.
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR data for various drug targets. The data is sourced from ChEMBL version 17 and contains activity values in pseudo-pCI50 units.
 
-The receptor has a description relationship accession number and is involved in various biological processes, molecular functions, and cellular components. It participates in signal transduction, G protein-coupled receptor signaling pathways, and activation of phospholipase C activity, among other processes.
+The features in the dataset are FCFP6 1024bit Molecular Fingerprints, which are a type of molecular descriptor used to characterize the chemical structure of compounds. These fingerprints are generated from SMILES strings and do not require missing value imputation as all bits are generated.
 
-Some parent molecules related to this receptor include Nelivaptan, a small molecule, and Vasopressin Tannate, a protein. These molecules have different mechanisms of action, such as antagonism and agonism, and have reached different maximum phases.
+The dataset is useful for researchers and scientists working in the field of drug discovery and development, particularly those interested in the Vasopressin V1b receptor as a drug target.
 
-Features:
-MOLECULE_CHEMBL_ID
-FCFP6_1024 features (skipped due to readability issues)
+Scraped Data:
 
-Keywords: QSAR, Vasopressin V1b receptor, molecular fingerprints, drug target, G protein-coupled receptor, signal transduction, biological processes.
+The Vasopressin V1b receptor is a single protein target that belongs to the protein family of Vasopressin receptors. It is a G protein-coupled receptor that plays a crucial role in regulating blood pressure and water reabsorption in the kidneys.
+
+The receptor is primarily located in the pituitary gland and is involved in the regulation of systemic arterial blood pressure, signal transduction, and G protein-coupled receptor signaling pathways.
+
+Keywords: QSAR, Vasopressin V1b receptor, drug target, molecular fingerprints, FCFP, ChEMBL, MetaQSAR.

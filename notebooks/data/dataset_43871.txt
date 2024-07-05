@@ -1,30 +1,34 @@
 **SGEMM GPU Kernel Performance**
 
-Tags: Machine Learning, Statistics
+**Dataset Description**
 
-This dataset measures the running time of a matrix-matrix product, where all matrices have a size of 2048 x 2048, using a parameterizable Single Precision General Matrix Multiply (SGEMM) GPU kernel with a large number of possible parameter combinations. For each tested combination, four runs were performed, and their results are reported. All times are measured in milliseconds.
-
-There are fourteen parameters, with the first ten being ordinal and able to take on up to four different power-of-two values, and the remaining four being binary. Due to various kernel constraints, out of a total of possible parameter combinations, only a subset of these are feasible. This dataset contains the results for all these feasible combinations.
-
-The experiment was run on a desktop workstation with a specific configuration, including an Intel Core processor, sixteen gigabytes of RAM, and a high-performance NVIDIA graphics processing unit. The gemm fast kernel from the automatic OpenCL kernel tuning library CLTune was utilized.
-
-It is worth noting that when working with datasets similar to this one, it is often beneficial to work with the logarithm of the running times, as demonstrated in previous research.
+This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand and forty-eight by two thousand and forty-eight, using a parameterizable Single Precision General Matrix Multiply GPU kernel with two hundred and forty-one thousand six hundred possible parameter combinations. For each tested combination, four runs were performed and their results are reported as the four last columns. All times are measured in milliseconds. There are fourteen parameters, the first ten of which are ordinal and can only take up to four different powers of two values, and the four last variables are binary. Out of one million three hundred and twenty-seven thousand one hundred and four total parameter combinations, only two hundred and forty-one thousand six hundred are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations. The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core i5 processor, sixteen gigabytes of RAM, and an NVIDIA GeForce GTX graphics processing unit.
 
 **Attribute Description**
 
 **Independent Variables**
 
-* Matrix Work Group and Neighbor Work Group sizes, which control the per-matrix two-dimensional tiling at the work group level
-* Kernel Work Group size, which controls the inner dimension of the two-dimensional tiling at the work group level
-* Matrix Dimension C and Neighbor Dimension C, which control the local work group size
-* Matrix Dimension A and Neighbor Dimension B, which control the local memory shape
-* Kernel Work Item size, which controls the kernel loop unrolling factor
-* Vector Width M and Vector Width N, which control the per-matrix vector widths for loading and storing
-* Stride M and Stride N, which enable stride for accessing off-chip memory within a single thread
-* Shared Access and Shared Bypass, which control per-matrix manual caching of the two-dimensional work group tile
+* Matrix Work Group and Number Work Group: per-matrix two-dimensional tiling at workgroup level
+* Kernel Work Group: inner dimension of two-dimensional tiling at workgroup level
+* Matrix Dimension C and Number Dimension C: local workgroup size
+* Matrix Dimension A and Number Dimension B: local memory shape
+* Kernel Work Item: kernel loop unrolling factor
+* Vector Width Matrix and Vector Width Number: per-matrix vector widths for loading and storing
+* Stride Matrix and Stride Number: enable stride for accessing off-chip memory within a single thread
+* Shared Memory A and Shared Memory B: per-matrix manual caching of the two-dimensional workgroup tile
 
 **Output**
 
-* Four performance times in milliseconds for four independent runs using the same parameters
+* Run One, Run Two, Run Three, Run Four: performance times in milliseconds for four independent runs using the same parameters. They range between thirteen point two five and three thousand three hundred and ninety-seven point zero eight. Run One is used as the default target variable.
 
-**Keywords:** Machine Learning, GPU Kernel, Matrix-Matrix Product, Performance Optimization, Statistical Analysis
+**Related Studies**
+
+Sobol Tensor Trains for Global Sensitivity Analysis.
+
+**Keywords**
+
+* Matrix-Matrix Product
+* GPU Kernel
+* Performance Optimization
+* Sensitivity Analysis
+* Auto-Tuning

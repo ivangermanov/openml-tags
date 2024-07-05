@@ -1,15 +1,15 @@
-Micro Mass Seed Zero Dataset
+Name: Micro Mass Seed Zero
 
-This dataset is a subsampled version of the Micro Mass dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
+Tags: Subsampling of the dataset Micro Mass with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-The dataset has been stratified to ensure that the class distribution is maintained. This is particularly important in datasets where certain classes may be underrepresented. By stratifying the dataset, we can ensure that the sampling process does not disproportionately affect any particular class.
+Generated with the following source code:
 
-The dataset consists of a subset of columns and rows from the original Micro Mass dataset. The column selection process involved uniformly sampling from the available columns, while the row selection process involved stratified sampling based on the class labels.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-The resulting dataset has been carefully curated to maintain the integrity of the original data while reducing its size and complexity. This makes it ideal for use in machine learning models and other applications where smaller datasets are preferred.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and subsets the data accordingly. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it stratifies the data according to the target variable and selects a specified number of rows to keep.
 
-Tags: Meteorology, Transportation
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-Features:... (omitted due to readability issues)
+Features: 
 
-Keywords: dataset, subsampling, stratification, machine learning, meteorology, transportation
+Keywords: Micro Mass, Subsampling, Dataset, Stratification, Random Sampling

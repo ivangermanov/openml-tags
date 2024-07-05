@@ -1,30 +1,30 @@
-**FOREX eursgd-day-High**
+**FOREX EUR/SGD Day High**
 
-Tags: Finance, Forex, Forex Day, Forex High, Government, Social Media
+Tags: finance, forex, forex day, forex high
 
-This dataset contains historical price data of the Forex EUR/SGD pair from Dukascopy. Each instance represents a single candlestick for one day, excluding weekends since Forex markets are closed during those days.
-
-The data spans from January first to December thirteenth and uses the Europe/Amsterdam timezone for the timestamp feature.
-
-The class attribute is determined by the direction of the mean high bid and ask prices of the following day compared to the mean high bid and ask prices of the current minute. In other words, if the mean high price increases the following day, the class attribute is true; otherwise, it is false.
-
-Please note that this dataset is intended for scientific purposes only, and realistic trade strategies should only be applied to predictions based on close attributes.
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
 
-The dataset contains the following attributes:
+This dataset contains historical price data of the FOREX EUR/SGD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price during this time interval.
-* **Bid Low**: The lowest bid price during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price during this time interval.
-* **Ask Low**: The lowest ask price during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
 
-Keywords: Forex, EUR/SGD, Candlestick, Historical Data, Finance, Trading Strategy
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
+
+Keywords: FOREX, EUR/SGD, historical data, candlestick, finance, trading

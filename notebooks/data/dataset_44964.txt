@@ -1,11 +1,33 @@
-The Superconductivity dataset contains information about twenty-one thousand plus superconductors and their relevant characteristics, including the critical temperature. The primary objective is to predict the critical temperature based on the extracted features.
+**Data Description**
 
-All the features describe the properties of superconductors, with the critical temperature being the target feature. These features include atomic mass, atomic radius, density, electron affinity, fusion heat, thermal conductivity, and valence, among others.
+The dataset contains information on superconductors and their relevant features, including the critical temperature. The goal is to predict the critical temperature based on the extracted features.
 
-The dataset consists of two files: a training file containing eighty-one features extracted from the superconductors, along with their corresponding critical temperatures, and a second file containing the chemical formulas broken down for each superconductor.
+**Attribute Description**
 
-This dataset originates from a public source, specifically the NIMS Superconducting Materials Database, and does not contain any missing values. For further information regarding the features, please refer to the relevant research paper.
+All features describe the characteristics of superconductors, with the critical temperature as the target feature. The features include:
 
-Agriculture, Life Science
+* Number of elements
+* Mean atomic mass
+* Weighted mean atomic mass
+* Geometric mean atomic mass
+* Weighted geometric mean atomic mass
+* Entropy of atomic mass
+* Weighted entropy of atomic mass
+* Range of atomic mass
+* Weighted range of atomic mass
+* Standard deviation of atomic mass
+* Weighted standard deviation of atomic mass
 
-Keywords: superconductors, critical temperature, atomic mass, atomic radius, density, electron affinity, fusion heat, thermal conductivity, valence
+...and many more features related to atomic radius, density, electron affinity, fusion heat, thermal conductivity, and valence.
+
+**Scraped Data**
+
+The dataset consists of two files: train.csv and unique_m.csv. The train.csv file contains eighty-one features extracted from superconductors, along with the critical temperature. The unique_m.csv file contains the chemical formula broken down for each superconductor, along with the critical temperature and chemical formula.
+
+The original data comes from a public source, and the goal is to predict the critical temperature based on the extracted features.
+
+**Dataset Information**
+
+There are no missing values in the dataset. For more information on the features, please refer to the relevant paper.
+
+**Keywords:** Superconductors, Critical Temperature, Atomic Mass, Thermal Conductivity, Electron Affinity, Valence.

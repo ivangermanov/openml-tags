@@ -1,12 +1,12 @@
 **Meta Album Subcellular Human Protein Dataset (Mini)**
 
-This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification Kaggle competition, comprising thirty-one thousand seventy-two RGBY images, each of which belongs to one or more out of twenty-eight classes. The labels correspond to protein organelle localizations.
+This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification Kaggle competition. The dataset comprises images of human protein patterns in human cells, each belonging to one or more out of twenty-eight classes. The labels correspond to protein organelle localizations.
 
-For Meta Album, we performed two modifications: Firstly, to turn the dataset into a multi-class dataset, we dropped all images belonging to more than a single class and also those images that belong to classes with less than forty members. Secondly, we converted the remaining images into RGB simply by dropping the yellow channel; this was also a common practice in the competition. Finally, and as for all datasets in Meta Album, the images from the original dataset were resized to one hundred twenty-eight by one hundred twenty-eight image size.
+For Meta Album, we performed two modifications: we turned the dataset into a multi-class dataset by dropping all images belonging to more than a single class and also those images that belong to classes with less than forty members; we converted the remaining images into RGB by dropping the yellow channel, a common practice in the competition. Finally, we resized the images from the original dataset to a smaller size.
 
 **Dataset Details**
 
-![](https://meta-album.github.io/assets/img/samples/PRT.png)
+![Sample Image](https://meta-album.github.io/assets/img/samples/PRT.png)
 
 **Meta Album ID**: Meta Album PRT
 **Meta Album URL**: https://meta-album.github.io/datasets/PRT.html
@@ -20,10 +20,10 @@ For Meta Album, we performed two modifications: Firstly, to turn the dataset int
 **Keywords**: Human Protein, Subcellular
 **Data Format**: Images
 **Image Size**: One Hundred Twenty-Eight by One Hundred Twenty-Eight
-**License (original data release)**: Creative Commons Attribution-ShareAlike Three Point Zero
-**License URL (original data release)**: https://www.proteinatlas.org/about/licence
-**License (Meta Album data release)**: Creative Commons Attribution-ShareAlike Three Point Zero
-**License URL (Meta Album data release)**: https://www.proteinatlas.org/about/licence
+**License (Original Data Release)**: Creative Commons Attribution-ShareAlike 3.0
+**License URL (Original Data Release)**: https://www.proteinatlas.org/about/licence
+**License (Meta Album Data Release)**: Creative Commons Attribution-ShareAlike 3.0
+**License URL (Meta Album Data Release)**: https://www.proteinatlas.org/about/licence
 **Source**: The Human Protein Atlas
 **Source URL**: https://proteinatlas.org https://www.kaggle.com/c/human-protein-atlas-image-classification
 **Meta Album Author**: 
@@ -32,31 +32,20 @@ For Meta Album, we performed two modifications: Firstly, to turn the dataset int
 **Contact Email**: meta-album@chalearn.org
 **Contact URL**: https://meta-album.github.io/
 
-### **Cite this dataset**
+**Cite this dataset**
 
-@article{subcellular, 
-title={A subcellular map of the human proteome}, 
-journal={Science}, 
-publisher={American Association for the Advancement of Science} }
+@article{subcellular, title={A subcellular map of the human proteome}, journal={Science}, publisher={American Association for the Advancement of Science} }
 
-### **Cite Meta Album**
+**Cite Meta Album**
 
-@inproceedings{meta-album, 
-title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, 
-booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, 
-url = {https://meta-album.github.io/}, 
-year = {}
+@inproceedings{meta-album, title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, url = {https://meta-album.github.io/}, year = {}
 
-### **More**
+**More**
 
-For more information on the Meta Album dataset, please see the NeurIPS paper.
-For details on the dataset preprocessing, please see the supplementary materials.
-Supporting code can be found on our GitHub repository.
-Meta Album on Papers with Code.
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repo. Meta-Album on Papers with Code.
 
-### **Other versions of this dataset**
+**Other versions of this dataset**
 
-Micro
-Extended
+Micro, Extended
 
-Keywords: Human Protein, Subcellular, Microscopy, Protein Atlas, Image Classification
+Keywords: Human Protein, Subcellular, Microscopy, Image Classification, Protein Atlas

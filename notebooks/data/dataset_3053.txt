@@ -1,9 +1,14 @@
-The QSAR-TID-18044 dataset contains quantitative structure-activity relationship (QSAR) data showing activity values of several compounds on drug target Plasmepsin One, a single protein from the species group Plasmodium falciparum.
+QSAR-TID Dataset
+Tags: MTLQSAR, study
 
-This dataset has been generated from ChEMBL version Seventeen and consists of One Hundred Thirteen rows and One Thousand Twenty-Six features, including molecule identifiers and class features. The features represent extended connectivity fingerprints, which were generated from simplified molecular input line entry system (SMILES) strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo-pCI) of several compounds on drug target TID. The dataset comprises rows and features, including IDs and class features: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-The target protein, Plasmepsin One, is an aspartic hemoglobinase also known as Aspartic Hemoglobinase One, Plasmepsin One, Plasmepsin I, or PMI. It belongs to the enzyme/protease/aspartic protease/AA clan/aspartic protease A1A subfamily classification.
+The dataset focuses on Plasmepsin, a single protein target also known as Aspartic hemoglobinase I, Plasmepsin I, and PMI. This enzyme is found in Plasmodium falciparum and belongs to the Aspartic protease AA clan, specifically the Aspartic protease AA subfamily. It is classified as an Enzyme/Protease/Aspartic protease.
 
-This protein is involved in various biological processes, including proteolysis and acquisition of nutrients from the host. It is localized in the food vacuole and has aspartic-type endopeptidase activity, peptidase activity, and hydrolase activity.
+Plasmepsin is associated with various cellular components, including vacuoles, vacuolar membranes, vacuolar lumen, general membranes, food vacuoles, and cytostomes. Its molecular functions encompass aspartic-type endopeptidase activity, peptidase activity, and hydrolase activity. The biological processes it participates in include proteolysis and acquisition of nutrients from the host.
 
-Keywords: QSAR, Plasmepsin One, drug target, ChEMBL, extended connectivity fingerprints, SMILES, aspartic hemoglobinase, proteolysis, nutrient acquisition.
+The protein is referenced in multiple databases, including canSAR-Target, UniProt, InterPro, Pfam, and PDBe. It is associated with several Gene Ontology (GO) terms related to its cellular components, molecular functions, and biological processes.
+
+This dataset is part of the MetaQSAR project and serves as a valuable resource for studying the activity of compounds on this specific drug target. Researchers can utilize this information for further analysis and drug discovery efforts targeting Plasmepsin in Plasmodium falciparum.
+
+Keywords: QSAR, Plasmepsin, drug target, molecular fingerprints, Plasmodium falciparum, aspartic protease, proteolysis

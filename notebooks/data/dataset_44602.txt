@@ -1,16 +1,15 @@
-Machine Learning and Mathematics Subsampling of the QSAR Biodeg Dataset 
+Name: QSAR Biodeg Seed Four Dataset
 
-This dataset is a subsampled version of the QSAR Biodeg dataset generated using the following source code. The subsampling process involves uniformly sampling classes and columns from the original dataset.
+Tags: Subsampling of the QSAR Biodeg dataset with seed four
 
-The function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling. 
+This dataset is a subsample of the QSAR Biodeg dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then further subsampling the resulting dataset to meet the specified maximum number of rows.
 
-First, the function uniformly samples classes from the original dataset. If the number of unique classes exceeds the maximum allowed, the function selects a subset of classes based on their frequency distribution. It then selects the indices corresponding to these chosen classes.
+The original dataset was filtered to include only a subset of classes, selected based on their frequency of occurrence. The classes were chosen using a random number generator, with the probability of selection proportional to their frequency in the original dataset. This ensured that the resulting dataset retained a representative distribution of classes.
 
-Next, the function uniformly samples columns from the resulting dataset. If the number of columns exceeds the maximum allowed, the function randomly chooses a subset of column indices and reorders them to maintain consistency.
+The columns of the dataset were also subsampled, with a random selection of columns chosen to meet the specified maximum number of columns. The columns were selected without replacement, ensuring that the resulting dataset retained a diverse set of features.
 
-Finally, the function performs stratified sampling on the resulting dataset to ensure an even distribution of classes. It returns a new dataset object containing the subsampled data, along with metadata such as categorical masks and column names.
+Finally, the dataset was subsampled to meet the specified maximum number of rows. This was done using a stratified sampling approach, which ensured that the resulting dataset retained a representative distribution of classes.
 
-Features: 
-Class
+The resulting dataset consists of a subset of features, including V One, V Two, V Three, V Four, V Five, V Six, V Seven, V Eight, V Nine, V Ten, V Eleven, V Twelve, V Thirteen, V Fourteen, V Fifteen, V Sixteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, V Twenty-Two, V Twenty-Three, V Twenty-Four, V Twenty-Five, V Twenty-Six, V Twenty-Seven, V Twenty-Eight, V Twenty-Nine, V Thirty, V Thirty-One, V Thirty-Two, V Thirty-Three, V Thirty-Four, V Thirty-Five, V Thirty-Six, V Thirty-Seven, V Thirty-Eight, V Thirty-Nine, V Forty, V Forty-One, and Class.
 
-Keywords: Machine Learning, Mathematics, Subsampling, QSAR Biodeg, Stratified Sampling
+Keywords: QSAR Biodeg, subsampling, stratified sampling, feature selection, class distribution.

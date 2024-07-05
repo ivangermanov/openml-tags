@@ -1,16 +1,13 @@
-Subsampling of the dataset Fashion MNIST with Seed Zero 
-Tags: Machine Learning, Mathematics 
+Name: Fashion MNIST Seed Zero
 
-This dataset is a subsampled version of the original Fashion MNIST dataset, which has been reduced in size while maintaining its overall characteristics. The subsampling process involved selecting a limited number of rows, columns, and classes from the original dataset.
+Tags: Subsampling of the dataset Fashion MNIST with seed equal to zero, arguments number of rows equal to two thousand, arguments number of columns equal to one hundred, arguments number of classes equal to ten, and stratify equal to true.
 
-The subsampling algorithm began by uniformly sampling classes from the original dataset. Since there were more than ten classes, the algorithm randomly chose ten classes based on their frequency distribution. It then selected the indices where one of these chosen classes was present.
+Generated with the following source code:
 
-Next, the algorithm uniformly sampled columns from the dataset. Since there were more than one hundred columns, it randomly chose one hundred columns to include in the subsampled dataset. The selected columns were sorted in ascending order to maintain consistency.
+This function subsamples the dataset by uniformly sampling classes, columns, and rows. It first selects the classes to keep, then the columns, and finally the rows. The stratified sampling is used to ensure that the classes are represented proportionally.
 
-Finally, the algorithm reduced the number of rows in the dataset. Since there were more than two thousand rows, it used stratified sampling to select two thousand rows while maintaining the class distribution of the original dataset.
+Features: 
 
-The resulting subsampled dataset has been converted into a format suitable for machine learning applications. Categorical columns have been identified and marked accordingly.
+The dataset consists of various pixel features, including pixel values at different positions.
 
-Features: pixel values
-
-Keywords: Fashion MNIST, machine learning, subsampling, stratified sampling, dataset reduction
+Keywords: Fashion MNIST, subsampling, stratified sampling, dataset generation.

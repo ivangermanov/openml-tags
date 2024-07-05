@@ -1,7 +1,17 @@
-The CPU Act Dataset is a binarized regression problem related to chemistry and life science. This dataset is a modified version of the original data set, where the numeric target feature has been converted into a two-class nominal target feature. To achieve this, the mean was computed, and all instances with a lower target value were classified as positive (P), while the rest were classified as negative (N).
+CPU Act
 
-This dataset explores various aspects of computer processing, including system calls, process creation, memory usage, and input/output operations. The features included in this dataset represent different system metrics, which are crucial for understanding computer performance.
+Tags: binarized regression problem, mythbusting, study
 
-Tags: Binarized Regression Problem, Chemistry, Life Science, Mythbusting One, Study One, Study Fifteen, Study Twenty, Study Forty-One, Study Seven
+Source: Unknown - Date unknown
 
-Keywords: CPU Performance, System Metrics, Computer Processing, Binary Classification, Chemistry, Life Science
+Please cite: Binarized version of the original data set (see version). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
+
+Features: logical read, logical write, system call, system read, system write, fork, execute, read characters, write characters, page out, page out per second, page free, page scan, attach, page in, page in per second, page fault, virtual fault, run queue size, free memory, free swap, binary class
+
+This dataset, known as CPU Act, is a binarized regression problem used for various studies and mythbusting purposes. The original numeric target feature has been converted into a binary classification task, where instances are labeled as either positive or negative based on their relation to the computed mean value. This transformation allows for the application of classification algorithms to what was originally a regression problem.
+
+The dataset includes a variety of system-level features related to CPU and memory usage, such as read and write operations, system calls, process forking and execution, page faults, and memory management metrics. These features provide a comprehensive view of system performance and resource utilization, making the dataset valuable for analyzing and predicting CPU activity patterns.
+
+Researchers and data scientists can use this dataset to explore relationships between various system metrics and overall CPU activity, potentially uncovering insights into performance optimization and resource allocation strategies.
+
+Keywords: CPU activity, binarized regression, system metrics, performance analysis, resource utilization, classification task, memory management, process execution

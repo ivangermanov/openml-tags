@@ -1,17 +1,15 @@
-Airlines Seed Two Rows Two Thousand Columns One Hundred Classes Ten Stratify True 
+Airlines Seed Two Dataset with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-Tags: Demographics, Statistics 
+This dataset is a subsample of the original airlines dataset. It was generated using a specific source code that involves random sampling of classes, columns, and rows. The sampling was done in a stratified manner to ensure that the resulting dataset is representative of the original dataset.
 
-Subsampling of the dataset Airlines with a specified seed value generates a new dataset. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. The goal is to create a new dataset with a reduced number of classes, columns, and rows while maintaining the overall characteristics of the original dataset.
+The dataset was created by first uniformly sampling classes from the original dataset. If the number of unique classes exceeded ten, a random selection of ten classes was made, with the probability of selection proportional to the frequency of each class. The indices where these selected classes were present were then used to subset the original dataset.
 
-The process starts by uniformly sampling classes from the original dataset. If the number of unique classes exceeds the maximum allowed number, a random selection of classes is made based on their frequency in the dataset. The corresponding indices where these classes are present are then selected.
+Next, the columns were uniformly sampled. If the number of columns exceeded one hundred, a random selection of one hundred columns was made. The selected columns were then used to subset the dataset.
 
-Next, the columns of the dataset are uniformly sampled if necessary. A specified maximum number of columns is set, and if the original dataset has more columns than this limit, a random selection of columns is made. The resulting dataset consists of only the selected columns.
+Finally, the rows were sampled. If the number of rows exceeded two thousand, a stratified sampling of two thousand rows was performed. The stratification was done based on the target variable to ensure that the resulting dataset has a similar distribution of classes as the original dataset.
 
-Finally, the rows of the dataset are uniformly sampled if necessary. A specified maximum number of rows is set, and if the resulting dataset has more rows than this limit, a stratified sampling approach is used to select the required number of rows. This ensures that the class distribution in the original dataset is maintained in the new dataset.
+The resulting dataset has ten classes, one hundred columns, and two thousand rows. The categorical columns have been converted to string format for compatibility with OpenML.
 
-The resulting dataset consists of the selected rows, columns, and classes from the original dataset. The categorical columns are converted to strings to facilitate further processing.
+Features: Airline, Flight, Airport From, Airport To, Day of Week, Time, Length, Delay
 
-Features: Airline, Flight, Departure Airport, Destination Airport, Day of the Week, Time, Flight Length, Delay
-
-Keywords: Subsampling, Dataset, Classes, Columns, Rows, Stratified Sampling, Demographics, Statistics
+Keywords: airlines, dataset, subsampling, stratified, random sampling

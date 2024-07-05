@@ -1,14 +1,25 @@
-Miami Housing 2016 
-Tags: Machine Learning, Statistics 
+Miami Housing 2016 Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
 
-This dataset is part of the classification on numerical features benchmark and was transformed in the same way as the other datasets in this benchmark. 
+The dataset contains information on single-family homes sold in Miami. Besides publicly available information, the dataset includes distance variables, aviation noise as well as latitude and longitude. The dataset contains the following columns: 
 
-The Miami Housing 2016 dataset contains information on single-family homes sold in Miami in 2016. In addition to publicly available information, this dataset includes distance variables, aviation noise, as well as latitude and longitude. 
+* Parcel Number: a unique identifier for each property, with about one percent appearing multiple times.
+* Sale Price: the sale price in dollars.
+* Land Square Footage: the land area in square feet.
+* Total Living Area: the floor area in square feet.
+* Special Feature Value: the value of special features, such as swimming pools, in dollars.
+* Rail Distance: the distance to the nearest rail line, an indicator of noise, in feet.
+* Ocean Distance: the distance to the ocean in feet.
+* Water Distance: the distance to the nearest body of water in feet.
+* Central Business District Distance: the distance to the Miami central business district in feet.
+* Subcenter Distance: the distance to the nearest subcenter in feet.
+* Highway Distance: the distance to the nearest highway, an indicator of noise, in feet.
+* Age: the age of the structure.
+* Aviation Noise Exceedance: a dummy variable for airplane noise exceeding an acceptable level.
+* Structure Quality: the quality of the structure.
+* Month Sold: the sale month in the year, with January being one.
 
-The dataset consists of several columns, including a unique identifier for each property, the sale price, land area, floor area, value of special features, distance to the nearest rail line, distance to the ocean, distance to the nearest body of water, distance to the Miami central business district, distance to the nearest subcenter, distance to the nearest highway, age of the structure, a dummy variable indicating whether airplane noise exceeds an acceptable level, quality of the structure, and the month in which the sale took place. 
+A typical model would try to predict the logarithm of the sale price as a function of all variables except the parcel number.
 
-A typical model would attempt to predict the logarithm of the sale price based on all variables except the unique parcel number. 
+Features: Latitude, Longitude, Land Square Footage, Total Living Area, Special Feature Value, Rail Distance, Ocean Distance, Water Distance, Central Business District Distance, Subcenter Distance, Highway Distance, Age, Month Sold, Sale Price.
 
-Features include Latitude, Longitude, Land Square Footage, Total Living Area, Value of Special Features, Rail Distance, Ocean Distance, Water Distance, Central Business District Distance, Subcenter Distance, Highway Distance, Age, Month Sold, and Sale Price.
-
-Keywords: housing, machine learning, statistics, classification, numerical features, real estate, Miami.
+Keywords: Miami Housing, Single-Family Homes, Sale Price, Distance Variables, Aviation Noise, Latitude, Longitude.

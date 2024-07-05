@@ -1,31 +1,38 @@
 Thoracic Surgery Data Set
 
-The data set is dedicated to a classification problem related to the postoperative life expectancy in lung cancer patients, specifically whether they will survive beyond one year after surgery or not.
+Tags: mf_less_than_80, study_123, study_127, study_50, study_52, study_7, study_88
 
-The data was collected retrospectively at the Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer between two thousand seven and two thousand eleven. The centre is associated with the Department of Thoracic Surgery of the Medical University of Wroclaw and Lower Silesian Centre for Pulmonary Diseases, Poland, while the research database constitutes a part of the National Lung Cancer Registry, administered by the Institute of Tuberculosis and Pulmonary Diseases in Warsaw, Poland.
+Source: UCI
+
+Please cite: [Citation removed]
+
+Title: Thoracic Surgery Data Data Set
+
+Abstract: This dataset is dedicated to a classification problem related to post-operative life expectancy in lung cancer patients. The two classes are: death within one year after surgery, and survival beyond one year.
+
+The data was collected retrospectively at Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer between 2007 and 2011. The Centre is associated with the Department of Thoracic Surgery of the Medical University of Wroclaw and Lower-Silesian Centre for Pulmonary Diseases, Poland. The research database is part of the National Lung Cancer Registry, administered by the Institute of Tuberculosis and Pulmonary Diseases in Warsaw, Poland.
 
 Attribute Information:
+- Diagnosis: specific combination of ICD-10 codes for primary and secondary as well as multiple tumors if any
+- Forced vital capacity (FVC)
+- Volume exhaled at the end of the first second of forced expiration (FEV1)
+- Performance status on the Zubrod scale
+- Pain before surgery
+- Haemoptysis before surgery
+- Dyspnoea before surgery
+- Cough before surgery
+- Weakness before surgery
+- T in clinical TNM - size of the original tumor, from smallest to largest
+- Type 2 diabetes mellitus
+- Myocardial infarction up to 6 months
+- Peripheral arterial diseases
+- Smoking
+- Asthma
+- Age at surgery
+- One year survival period (True if died)
 
-Diagnosis is a specific combination of International Classification of Diseases tenth revision codes for primary and secondary as well as multiple tumors if any.
-Forced Vital Capacity is a numeric measurement.
-Volume that has been Exhaled at the End of the First Second of Forced Expiration is a numeric measurement.
-Performance Status is measured on the Zubrod Scale.
-Pain Before Surgery is a true or false value indicating whether pain was present before surgery.
-Haemoptysis Before Surgery is a true or false value indicating whether haemoptysis was present before surgery.
-Dyspnoea Before Surgery is a true or false value indicating whether dyspnoea was present before surgery.
-Cough Before Surgery is a true or false value indicating whether cough was present before surgery.
-Weakness Before Surgery is a true or false value indicating whether weakness was present before surgery.
-T in Clinical TNM is a measurement of the size of the original tumor, ranging from smallest to largest.
-Type Two Diabetes Mellitus is a true or false value indicating whether the patient had type two diabetes mellitus.
-Myocardial Infarction Up to Six Months is a true or false value indicating whether the patient had a myocardial infarction up to six months prior to surgery.
-Peripheral Arterial Diseases is a true or false value indicating whether the patient had peripheral arterial diseases.
-Smoking is a true or false value indicating whether the patient smoked.
-Asthma is a true or false value indicating whether the patient had asthma.
-Age at Surgery is a numeric measurement.
-One Year Survival Period is a true or false value indicating whether the patient survived beyond one year after surgery.
+The class value (Risk1Y) is binary valued, indicating whether the patient survived beyond one year post-surgery or not. The dataset includes various numeric and categorical features related to the patient's medical history, symptoms, and diagnostic information.
 
-Class distribution is binary valued, with a class value indicating whether the patient survived beyond one year after surgery or not.
+This thoracic surgery dataset provides valuable information for predicting post-operative life expectancy in lung cancer patients, which can aid in treatment planning and patient care strategies.
 
-Tags: Chemistry, Life Science
-
-Keywords: lung cancer, thoracic surgery, life expectancy, diagnosis, performance status, pulmonary diseases.
+Keywords: thoracic surgery, lung cancer, post-operative survival, medical data, classification problem, patient prognosis, pulmonary diseases, clinical attributes

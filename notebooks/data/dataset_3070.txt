@@ -1,11 +1,95 @@
-QSAR-TID-65 Dataset: Chemistry, Life Science, MTLQSAR, Study 3
+QSAR TID Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 65. It has 1515 rows and 1026 features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+Source: MetaQSAR project - September
 
-The dataset provides a comprehensive collection of chemical structures and their corresponding biological activities, enabling researchers to explore the relationships between molecular properties and biological responses.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Cytochrome P450 19A1 is an enzyme that plays a crucial role in various physiological processes, including steroid biosynthesis and metabolism. It is involved in the conversion of androgens to estrogens and is also responsible for the aromatization of testosterone to estradiol.
+Features: MOLECULE CHEMBL ID, FCFP, and many more...
 
-The dataset includes information about the protein target classification, organism, species group, and synonyms. It also provides access to various databases, such as Expression Atlas, Go Component, Go Function, and Go Process, which offer insights into the gene expression, function, and biological processes related to Cytochrome P450 19A1.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Cytochrome P
+Synonyms: ARO Aromatase CYAR CYP CYP A - All (more) + Synonyms: ---
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Cytochrome P/Cytochrome P family/Cytochrome P family A/Cytochrome P A
 
-Keywords: QSAR, Cytochrome P450 19A1, aromatase, steroid biosynthesis, estrogen biosynthesis, molecular fingerprints, biological activity.
+Description Relationship Accession Aromatase SINGLE PROTEIN P
+
+Parent Molecule ChEMBL ID, Parent Molecule Name, Parent Molecule Type, Mechanism of Action, Max Phase, First Approval, USAN Stem, References
+
+Error: . CHEMBL TESTOLACTONE Small molecule Cytochrome P A inhibitor --- From FDA CHEMBL (Parent)
+
+Error: . CHEMBL LETROZOLE Small molecule Cytochrome P A inhibitor -rozole From DailyMed CHEMBL (Parent)
+
+Error: . CHEMBL AMINOGLUTETHIMIDE Small molecule Cytochrome P A inhibitor --- From FDA CHEMBL (Parent)
+
+Error: . CHEMBL ANASTROZOLE Small molecule Cytochrome P A inhibitor -rozole From DailyMed CHEMBL (Parent)
+
+Error: . CHEMBL FADROZOLE Small molecule Cytochrome P A inhibitor --- -rozole From PubMed CHEMBL (Alt. Form)
+
+Expression Atlas
+P
+
+Go Component
+GO: (endoplasmic reticulum)
+GO: (endoplasmic reticulum membrane)
+GO: (membrane)
+GO: (intracellular membrane bounded organelle)
+
+Go Function
+GO: (monooxygenase activity)
+GO: (iron ion binding)
+GO: (steroid hydroxylase activity)
+GO: (electron transfer activity)
+GO: (oxidoreductase activity)
+GO: (oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen)
+GO: (oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, reduced flavin or flavoprotein as one donor, and incorporation of one atom of oxygen)
+GO: (oxygen binding)
+GO: (heme binding)
+GO: (metal ion binding)
+GO: (aromatase activity)
+
+Go Process
+GO: (negative regulation of chronic inflammatory response)
+GO: (lipid metabolic process)
+GO: (steroid biosynthetic process)
+GO: (estrogen biosynthetic process)
+GO: (androgen catabolic process)
+GO: (syncytium formation)
+GO: (androgen metabolic process)
+GO: (female gonad development)
+GO: (negative regulation of macrophage chemotaxis)
+GO: (sterol metabolic process)
+GO: (electron transport chain)
+GO: (female genitalia development)
+GO: (mammary gland development)
+GO: (response to estradiol)
+GO: (uterus development)
+GO: (prostate gland growth)
+GO: (testosterone biosynthetic process)
+GO: (positive regulation of estradiol secretion)
+
+Wikipedia
+Aromatase
+
+canSAR Target
+P
+
+CGD
+Aromatase deficiency
+
+Guide To PHARMACOLOGY
+
+IntAct
+P
+
+PharmGKB
+cytochrome P, family, subfamily A, polypeptide
+
+Pharos
+Tclin
+
+Reactome
+Estrogen biosynthesis., Endogenous sterols., Defective CYP A causes

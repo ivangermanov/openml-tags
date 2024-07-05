@@ -1,15 +1,57 @@
-The QSAR-TID-30045 dataset contains QSAR data showing activity values of several compounds on the drug target TID: 30045, with six hundred fifty-five rows and one thousand twenty-six features including IDs and class feature. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+QSAR-TID-30045 Tags: MTLQSAR, study_3
 
-This dataset is part of the MetaQSAR project, published in September two thousand fifteen. It is essential to cite this dataset when used for research purposes.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 30045. The dataset has 655 rows and 1026 features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset includes features such as molecule ChEMBL ID and median PXc fifty. Generating fingerprints does not typically require missing value imputation as all bits are generated.
+The dataset contains QSAR data from ChEMBL version 17, showing activity values of several compounds on drug target TID: 30045. The data is represented by 1026 features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features are FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The target protein is a single protein preferred named Serine Threonine-Protein Kinase Seventeen A, also known as DAP Kinase-Related Apoptosis-Inducing Protein Kinase One, DRAK One, and STK Seventeen A. It belongs to the species Homo sapiens.
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR data for various drug targets. The dataset is useful for researchers and scientists working in the field of drug discovery and development.
 
-This protein is classified under enzyme kinase protein kinase CAMK protein kinase group CAMK protein kinase DAPK family. Its description is related to the nucleus, plasma membrane, and nuclear speck.
+Scraped Data:
 
-This protein has functions such as nucleotide binding, protein kinase activity, protein serine threonine kinase activity, ATP binding, kinase activity, transferase activity, and protein serine kinase activity.
+ID: ChEMBL4525
+Type: Single Protein
+Preferred Name: Serine/Threonine-Protein Kinase 17A
+Synonyms: DAP Kinase-Related Apoptosis-Inducing Protein Kinase 1, DRAK1, Serine/Threonine-Protein Kinase 17A, STK17A
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/CAMK Protein Kinase Group/CAMK Protein Kinase DAPK Family
 
-It is involved in biological processes such as protein phosphorylation, apoptotic process, phosphorylation, intracellular signal transduction, positive regulation of apoptotic process, positive regulation of fibroblast apoptotic process, and regulation of reactive oxygen species metabolic process.
+Description: Serine/Threonine-Protein Kinase 17A is a single protein that belongs to the CAMK protein kinase group and DAPK family. It is involved in various cellular processes, including protein phosphorylation, apoptotic process, and signal transduction.
 
-Keywords: QSAR, machine learning, MTL, QSAR data, molecular fingerprints, drug target, protein kinase, apoptosis, phosphorylation, signal transduction.
+Relationship: Accession: Q9UEE5
+
+Rows per page: 51-1 of 1
+
+Component:
+GO:0005634 (nucleus)
+GO:0005886 (plasma membrane)
+GO:0016607 (nuclear speck)
+
+Function:
+GO:0000166 (nucleotide binding)
+GO:0004672 (protein kinase activity)
+GO:0004674 (protein serine/threonine kinase activity)
+GO:0005524 (ATP binding)
+GO:0016301 (kinase activity)
+GO:0016740 (transferase activity)
+GO:0106310 (protein serine kinase activity)
+
+Process:
+GO:0006468 (protein phosphorylation)
+GO:0006915 (apoptotic process)
+GO:0016310 (phosphorylation)
+GO:0035556 (intracellular signal transduction)
+GO:0043065 (positive regulation of apoptotic process)
+GO:2000271 (positive regulation of fibroblast apoptotic process)
+GO:2000377 (regulation of reactive oxygen species metabolic process)
+
+GuideToPHARMACOLOGY: 2214
+IntAct: Q9UEE5
+PharmGKB: serine/threonine kinase 17a
+Pharos: Tchem
+UniProt: A4D1V6, Q8IVC8, Q9UEE5
+InterPro: IPR000719 (Prot_kinase_dom), IPR008271 (Ser/Thr_kinase_AS), IPR011009 (Kinase-like_dom_sf), IPR017441 (Protein_kinase_ATP_BS), IPR042704 (DRAK1_STKc)
+Pfam: PF00069 (Pkinase)
+PDBe: 7QUE, 7QUF
+
+Keywords: QSAR, drug target, molecular fingerprints, protein kinase, apoptosis, signal transduction, phosphorylation.

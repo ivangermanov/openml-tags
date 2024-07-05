@@ -1,19 +1,21 @@
-JM1 Dataset for Software Defect Prediction
+JM1 Dataset
 
-This dataset is part of the PROMISE repository and is intended for software defect prediction. It contains twenty-two attributes, including five different lines of code measures, three McCabe metrics, four base Halstead measures, eight derived Halstead measures, a branch count, and a goal field indicating whether a module has defects.
+Tags: mythbusting, OpenML-CC, OpenML, PROMISE, study
 
-The dataset consists of 10,885 instances with no missing values. The class distribution shows that about 19.35% of the modules have defects, while around 80.65% do not.
+This dataset focuses on software defect prediction and is part of the PROMISE Repository. It contains data from NASA's Metrics Data Program and is made publicly available to encourage repeatable, verifiable, refutable, and improvable predictive models of software engineering.
 
-Past studies using this dataset have shown that simple learners can perform as well as more sophisticated methods in predicting defects. Additionally, many learners have low false alarm rates, and the probability of detection tends to rise with effort.
+The dataset, JM1, is written in C and represents a real-time predictive ground system that uses simulations to generate predictions. The data is derived from McCabe and Halstead feature extractors of source code. These features were defined in an attempt to objectively characterize code features associated with software quality, although the nature of this association is under dispute.
 
-The McCabe metrics are a collection of software metrics that aim to measure the complexity of a module. They include cyclomatic complexity, essential complexity, and design complexity. Halstead metrics, on the other hand, estimate the complexity of a module based on the number of unique operators and operands, total occurrences of operators and operands, and other factors.
+McCabe argued that code with complicated pathways is more error-prone, and his metrics reflect the pathways within a code module. Halstead, on the other hand, argued that code that is hard to read is more likely to be fault-prone. Halstead estimates reading complexity by counting the number of concepts in a module, such as the number of unique operators.
 
-Defect detectors can be assessed according to various measures, including accuracy, probability of detection, probability of false alarm, precision, and effort. Ideally, detectors should have high probabilities of detection, low probabilities of false alarm, and low effort.
+The dataset includes various metrics such as cyclomatic complexity, essential complexity, design complexity, and lines of code. It also contains Halstead measures, which fall into three groups: base measures, derived measures, and lines of code measures.
 
-Notes on McCabe and Halstead metrics:
+Defect detectors based on these metrics can be assessed using measures such as accuracy, probability of detection, probability of false alarm, precision, and effort. Ideally, detectors should have high probability of detection, low probability of false alarm, and low effort. However, this ideal state rarely occurs, as these measures are often linked and trade-offs exist between them.
 
-McCabe argued that code with complicated pathways is more error-prone. His metrics reflect the pathways within a code module. Halstead, on the other hand, estimated reading complexity by counting the number of concepts in a module, such as the number of unique operators.
+The dataset consists of instances, each with attributes including various code metrics and a goal field indicating whether the module has reported defects. The class distribution shows that approximately percent of the modules have reported defects, while percent do not.
 
-Static code measures are widely used to guide software quality predictions, but their merits have been widely criticized. They are hardly a complete characterization of the internals of a function. Alternative interpretations suggest that static measures can never be a definite and certain indicator of the presence of a fault.
+These static code measures are considered useful, easy to use, and widely used in the software engineering field. They can generate highly accurate predictors for defects and can be automatically and cheaply collected. Many researchers use static measures to guide software quality predictions, and verification and validation textbooks advise using them to decide which modules are worthy of manual inspections.
 
-Keywords: software defect prediction, PROMISE repository, McCabe metrics, Halstead metrics, static code measures, complexity metrics, software quality prediction.
+However, the merits of these metrics have been widely criticized. Static code measures are not a complete characterization of the internals of a function, and some argue that they can be misleading. Nevertheless, they continue to be used as probabilistic indicators of fault frequency in code modules.
+
+Keywords: software defect prediction, static code metrics, McCabe complexity, Halstead measures, NASA Metrics Data Program, cyclomatic complexity, essential complexity, design complexity, lines of code, fault detection

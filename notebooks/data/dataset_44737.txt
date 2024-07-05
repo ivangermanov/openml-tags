@@ -1,15 +1,15 @@
-Machine learning dataset, volkert, with the following characteristics:
+Name: Volkert Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This dataset was generated through subsampling of the original volkert dataset. The subsampling process involved uniformly selecting classes, followed by uniform sampling of columns and rows. 
+Tags: Subsampling of the dataset Volkert with seed four, generated with the following source code:
 
-The class selection process ensured that the resulting dataset had a maximum number of classes. This was achieved by calculating the value counts of each class and then using these value counts as probabilities to select the desired number of classes.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling. 
 
-Once the classes were selected, the corresponding rows were extracted from the original dataset. Next, the column selection process involved uniformly choosing the desired number of columns from the remaining dataset.
+The function first uniformly samples classes from the dataset, ensuring that the selected classes are present in the resulting dataset. It then uniformly samples columns from the dataset, selecting a specified number of columns. 
 
-Finally, the row selection process involved stratified sampling to ensure that the resulting dataset had the desired number of rows while maintaining the class distribution.
+If the dataset has more rows than the specified maximum, the function stratifies the sampling according to the target variable, ensuring that the resulting dataset has the same distribution of classes as the original dataset. 
 
-This dataset has been tagged under machine learning and mathematics.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-Features include various variables such as demographic and numerical attributes.
+Features: (omitted due to unreadability)
 
-Keywords: machine learning, dataset, subsampling, stratification, class selection, column selection, row selection.
+Keywords: dataset subsampling, stratified sampling, data reduction, reproducibility, class distribution.

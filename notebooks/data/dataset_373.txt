@@ -1,41 +1,29 @@
-The Unix User Data dataset contains nine sets of sanitized user data drawn from the command histories of eight Unix computer users at Purdue University over a period of up to two years. The data is derived from tcsh history files and has been parsed and sanitized to remove identifiable information such as filenames, usernames, directory structures, web addresses, hostnames, and other potentially identifying items.
+UNIX User Data
 
-Command names, flags, and shell metacharacters have been preserved, and Start of File (SOF) and End of File (EOF) tokens have been inserted at the beginning and end of each shell session, respectively. Sessions are concatenated in chronological order, and tokens appear in the order they were issued within the shell session, although no timestamps are included in the data.
+Tags: text data, uci
 
-For instance, two sample sessions might appear as follows:
+Source: UCI - Date unknown
 
-cd ~/private/documents
+This file contains sets of sanitized user data drawn from the command histories of UNIX computer users at Purdue over the course of up to two years. The data is drawn from tcsh history files and has been parsed and sanitized to remove filenames, user names, directory structures, web addresses, host names, and other possibly identifying items. Command names, flags, and shell metacharacters have been preserved. Additionally, SOF and EOF tokens have been inserted at the start and end of shell sessions, respectively. Sessions are concatenated by date order and tokens appear in the order issued within the shell session, but no timestamps are included in this data.
+
+For example, two sessions would be represented by the token stream:
+
+SOF cd <> (one "file name" argument)
 ls -laF | more
-cat file one.txt file two.txt file three.txt > somewhere
-exit
-
-cd ~/games/
-xquake &
-fg
-vi scores.txt
-mail someone@example.com
-exit
-
-These sessions would be represented by the token stream:
-
-SOF
-cd 
-ls -laF | more
-cat 
-> 
+cat <> (three "file" arguments)
+> <>
 exit
 EOF
 SOF
-cd 
-xquake &
-fg
-vi 
-mail 
+cd <>
+xquake & fg
+vi <>
+mailx <>
 exit
 EOF
 
-This dataset is made available under conditions of anonymity for the contributing users and may be used solely for research purposes. Research summaries and results employing this data may be published, but literal tokens or token sequences from the data may not be published without the express consent of the originators of the data. Furthermore, no portion of this data may be released with or included in a commercial product, nor may any portion of this data be sold or redistributed for profit or as part of a profit-making endeavor.
+This data is made available under conditions of anonymity for the contributing users and may be used for research purposes only. Summaries and research results employing this data may be published, but literal tokens or token sequences from the data may not be published except with express consent of the originators of the data. No portion of this data may be released with or included in a commercial product, nor may any portion of this data be sold or redistributed for profit or as part of a profit-making endeavor.
 
-Features: history, session, user
+The dataset contains sanitized command history from multiple UNIX users, with sensitive information removed and replaced with placeholders. It preserves the structure and sequence of commands issued in shell sessions, including command names, flags, and shell metacharacters. The data is organized into sessions, marked by start-of-file (SOF) and end-of-file (EOF) tokens. This dataset provides valuable insights into UNIX command usage patterns while maintaining user privacy and anonymity.
 
-Keywords: Unix, command history, sanitized data, research purposes, anonymity, profit restrictions.
+Keywords: UNIX, command history, sanitized data, shell sessions, user behavior analysis, data privacy, command line interface, research dataset

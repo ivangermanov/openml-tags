@@ -1,15 +1,46 @@
-Digital Colposcopy Hinselmann 
+Digital Colposcopy Hinselmann Dataset
 
-Tags: Images, Life Science 
+The dataset was acquired and annotated by professional physicians at a hospital. The subjective judgments, originally done in an ordinal manner, were discretized into two classes. Images were randomly sampled from the original colposcopic sequences. The original images and manual segmentations are included in the images directory. The dataset has three modalities. The target variables are expert assessments and consensus.
 
-The Digital Colposcopy Hinselmann dataset was acquired and annotated by professional physicians at Hospital Universitario de Caracas. The subjective judgments, which are the target variables, were originally done in an ordinal manner (poor, fair, good, excellent) and were later discretized into two classes (bad, good). 
+The dataset has no missing values.
 
-Images were randomly sampled from the original colposcopic sequences, which are videos. The original images and the manual segmentations are included in the images directory. The dataset has three modalities, namely Hinselmann, Green, and Schiller.
+The dataset features include:
 
-The dataset does not have any missing values. It consists of sixty-two predictive attributes and seven target variables. 
+* Cervix area, which is the image area with cervix
+* External os area, which is the image area with external os
+* Vaginal walls area, which is the image area with vaginal walls
+* Speculum area, which is the image area with the speculum
+* Artifacts area, which is the image area with artifacts
+* Cervix artifacts area, which is the cervix area with artifacts
+* External os artifacts area, which is the external os area with artifacts
+* Vaginal walls artifacts area, which is the vaginal walls area with artifacts
+* Speculum artifacts area, which is the speculum area with artifacts
+* Cervix specularities area, which is the cervix area with specular reflections
+* External os specularities area, which is the external os area with specular reflections
+* Vaginal walls specularities area, which is the vaginal walls area with specular reflections
+* Speculum specularities area, which is the speculum area with specular reflections
+* Total specularities area, which is the total area with specular reflections
+* Maximum area differences between the four cervix quadrants
+* Average color information in the cervix, including red, green, and blue channels
+* Standard deviation of color information in the cervix, including red, green, and blue channels
+* Average color information in the image, including red, green, and blue channels
+* Standard deviation of color information in the image, including red, green, and blue channels
+* Average color information in the cervix, including hue, saturation, and value channels
+* Standard deviation of color information in the cervix, including hue, saturation, and value channels
+* Average color information in the image, including hue, saturation, and value channels
+* Standard deviation of color information in the image, including hue, saturation, and value channels
+* Coverage of the cervix convex hull by the cervix
+* Image coverage of the cervix convex hull
+* Coverage of the cervix bounding box by the cervix
+* Image coverage of the cervix bounding box
+* Coverage of the cervix circle by the cervix
+* Image coverage of the cervix circle
+* Coverage of the cervix ellipse by the cervix
+* Image coverage of the cervix ellipse
+* Goodness of the ellipse fitting
+* Distance between the cervix center and the image center
+* Distance between the cervical os center and the image center
+* Expert assessments, including assessments from six experts
+* Consensus assessment
 
-Some of the predictive attributes include the areas of different parts of the cervix, such as the cervix area, os area, walls area, speculum area, and artifacts area. Other attributes include color information, such as the average and standard deviation of the red, green, and blue channels in the cervix and the entire image. There are also attributes related to the shape and size of the cervix, including the maximum area differences between the four cervix quadrants, the coverage of the cervix convex hull and bounding box, and the distance between the cervix center and the image center.
-
-The target variables are the subjective assessments of six experts and the consensus among them.
-
-Keywords: colposcopy, cervix, images, life science, medical imaging, computer vision.
+Keywords: colposcopy, cervix, image analysis, color features, shape features, expert assessment, consensus.

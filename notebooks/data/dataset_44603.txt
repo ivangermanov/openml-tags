@@ -1,13 +1,11 @@
-Name: CNAE Nine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: CNAE Nine Seed Zero
 
-Tags: Demographics, Statistics 
+Tags: Subsampling of the dataset CNAE Nine with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Sub-sampling of the dataset CNAE Nine with seed equal to zero arguments number rows equal to two thousand arguments number columns equal to one hundred arguments number classes equal to ten arguments no stratify equal to true generated with the following source code.
+Generated with the following source code:
 
-The function sub-sample takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling. It then proceeds to uniformly sample the classes, columns, and rows based on the given constraints.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then uniformly samples classes from the unique classes in the dataset, selecting the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies accordingly using train test split. The function then returns a dataset with the subsampled data, categorical mask, and columns.
 
-The sub-sampled dataset is generated using the following process. First, the unique classes are identified and if there are more than the specified maximum number of classes, a random selection of classes is made based on their frequency distribution. The indices corresponding to these selected classes are then used to filter the data.
+Features: 
 
-Next, if the number of columns exceeds the specified maximum, a random selection of column indices is made and the corresponding columns are retained. Otherwise, all columns are kept. Finally, if the total number of rows exceeds the specified maximum, stratified sampling is performed using the train-test-split function from scikit-learn, ensuring that the class distribution is preserved in the sub-sample.
-
-Keywords: demographics, statistics, sub-sampling, stratified sampling, class distribution.
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Columns, Rows, Classes

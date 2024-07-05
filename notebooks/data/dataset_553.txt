@@ -1,10 +1,22 @@
-**Kidney Dataset**
-Tags: Author, Source, StatLib
+Kidney Dataset
 
-The Kidney dataset contains information on the recurrence times to infection at the point of insertion of the catheter for kidney patients using portable dialysis equipment. It is worth noting that catheters may be removed for reasons other than infection, resulting in censored observations. Each patient in the dataset has exactly two observations.
+Tags: Survival Analysis, Medical Data, Dialysis Patients
 
-This dataset has been widely used by various researchers to demonstrate random effects, also known as frailty models, for survival data. However, it is essential to acknowledge that any nonzero estimate of the random effect is largely attributed to a single outlier, specifically Subject Twenty-One.
+This dataset contains information on the recurrence times to infection at the point of catheter insertion for kidney patients using portable dialysis equipment. Catheters may be removed for reasons other than infection, resulting in censored observations. Each patient in the study has exactly two observations recorded.
 
-The variables included in this dataset are Patient, Time, Status, Age, Sex, where One indicates Male and Two indicates Female, Disease Type, which includes Glomerulo Nephritis, Acute Nephritis, Polycystic Kidney Disease, and Other, and an estimate of the Frailty.
+The dataset has been utilized by various researchers to demonstrate random effects models, also known as frailty models, for survival data analysis. However, it is worth noting that any non-zero estimate of the random effect is predominantly attributable to a single outlier case.
 
-Keywords: Kidney Patients, Portable Dialysis Equipment, Infection Recurrence Times, Catheter Insertion, Random Effects Models, Frailty Models, Survival Data.
+The variables included in the dataset are:
+- Patient identifier
+- Time to infection or censoring
+- Status (infected or censored)
+- Age of the patient
+- Sex of the patient (male or female)
+- Disease type (Glomerulo Nephritis, Acute Nephritis, Polycystic Kidney Disease, or Other)
+- Researcher's estimate of the frailty
+
+This dataset was originally sourced from StatLib and has been used in published research on survival analysis and random effects modeling in medical contexts. It provides valuable information for studying infection rates and catheter longevity in kidney patients undergoing dialysis treatment.
+
+The data offers insights into the factors affecting catheter-related infections in dialysis patients and can be used to develop more effective treatment strategies and improve patient care in nephrology.
+
+Keywords: kidney disease, dialysis, catheter infections, survival analysis, frailty models, censored data, medical research

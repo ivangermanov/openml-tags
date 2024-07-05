@@ -1,17 +1,19 @@
-QSAR-TID-10444 Dataset 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 10444. It has forty-four rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
+This dataset contains QSAR data from ChEMBL showing activity values (in pseudo pCI units) of various compounds on drug target TID. The dataset comprises rows and features, including molecule identifiers and median pXC values. The features represent FCFP bit Molecular Fingerprints generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-The features represent Fingerprint Chemical Fragments 1024 bit Molecular Fingerprints, which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+The dataset focuses on a single protein target, trypsin, from Sus scrofa (pig). Trypsin is classified as a serine protease in the PA clan, S1A subfamily. It is found in the extracellular region and space, with functions including serine type endopeptidase activity, peptidase activity, and metal ion binding. Trypsin is involved in proteolysis and digestion processes.
 
-Features include Molecule ChEMBL ID, followed by numerous Fingerprint Chemical Fragments features.
+The target protein has several associated identifiers in various databases, including canSAR Target, IntAct, UniProt, and InterPro. It is characterized by multiple domains and motifs, such as the trypsin domain, peptidase S1A, and specific trypsin histidine and serine sites. The protein structure has been determined and deposited in the Protein Data Bank (PDBe) with numerous entries.
 
-This dataset was sourced from the MetaQSAR project in September 2015.
+This QSAR dataset is part of the MetaQSAR project and is intended for use in quantitative structure activity relationship studies. Researchers utilizing this data are requested to cite the original source appropriately.
 
-Trypsin is a single protein, also known as trypsin synonyms, and is found in the species Sus scrofa. It belongs to the enzyme/protease/serine protease/serine protease PA clan/serine protease S1A subfamily classification. 
-
-Trypsin is located in the extracellular region and extracellular space. Its functions include serine-type endopeptidase activity, peptidase activity, serine-type peptidase activity, hydrolase activity, and metal ion binding. 
-
-Trypsin is involved in various biological processes, including proteolysis and digestion. 
-
-Keywords: QSAR, TID, ChEMBL, Fingerprint Chemical Fragments, Simplified Molecular Input Line Entry System, MetaQSAR, trypsin, enzyme, protease, serine protease, peptidase, hydrolase, metal ion binding, proteolysis, digestion.
+Keywords:
+QSAR
+Trypsin
+Molecular Fingerprints
+Serine Protease
+Drug Target
+ChEMBL
+Proteolysis

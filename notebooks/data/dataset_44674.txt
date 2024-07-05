@@ -1,13 +1,15 @@
-Phishing Websites Seed One 
+Phishing Websites Dataset Seed One
 
-This dataset is a subsampling of the Phishing Websites dataset. It was generated using the following source code.
+This dataset is a subsample of the Phishing Websites dataset, generated with a seed of one. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size.
 
-The subsample function takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function first uniformly samples classes from the original dataset, then selects the indices where one of these classes is present. It then uniformly samples columns if required. Finally, it stratifies the sampling according to the target variable if necessary.
+The dataset was generated using a Python function that takes in several arguments, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sample. The function uses the NumPy random default generator to ensure reproducibility.
 
-The resulting dataset has a specified number of rows, columns, and classes. The categorical mask is also preserved.
+The subsampling process first involves selecting a subset of classes. If the number of unique classes exceeds the maximum number of classes, the function selects a random subset of classes, weighted by their frequency in the dataset. The function then selects the indices where one of these classes is present and filters the data accordingly.
 
-Features of this dataset include whether a URL has an IP address, its length, whether it uses a shortening service, and other characteristics related to URLs and domains. Other features include information about the website's security, traffic, and ranking.
+Next, the function uniformly samples columns if the number of columns exceeds the maximum number of columns. The function selects a random subset of column indices, sorts them, and filters the data accordingly.
 
-Tags: Subsampling of the Phishing Websites dataset 
+Finally, the function stratifies the sample according to the target variable if the number of rows exceeds the maximum number of rows. The function uses the train-test split function from scikit-learn to split the data into a subset of the desired size, ensuring that the class distribution is preserved.
 
-Keywords: phishing websites, dataset, subsampling, stratification, URL features
+The resulting dataset contains a subset of the original features, including whether the URL has an IP address, the URL length, the presence of a shortening service, and the presence of an at symbol, among others.
+
+Keywords: phishing websites, dataset subsampling, stratified sampling, feature selection

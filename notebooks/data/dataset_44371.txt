@@ -1,48 +1,15 @@
-Wine Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Wine Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Chemistry, Machine Learning 
+Tags: Subsampling of the dataset Wine with seed equals Four, arguments nrows max equals Two Thousand, arguments ncols max equals One Hundred, arguments nclasses max equals Ten, arguments no stratify equals False.
 
-Subsampling of the dataset Wine with seed equal to four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+Generated with the following source code:
 
-def subsample(self, seed, number rows max, number columns max, number classes max, stratified) -> Dataset:
-random number generator equals numpy dot random dot default random generator seed 
-x equals self x 
-y equals self y 
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the dataset. It first samples the classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes max:
-value counts equals y value counts 
-selected classes equals random number generator choice classes size number classes max replace false probability value counts over sum value counts 
-Select the indices where one of these classes is present index equals y index y is in selected classes 
-x equals x iloc index 
-y equals y iloc index 
+Next, it samples the columns uniformly, selecting a specified number of columns. If the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data, ensuring that the class distribution is preserved.
 
-Uniformly sample columns if required 
-if length of x columns is greater than number columns max:
-column indexes equals random number generator choice list range length of x columns size number columns max replace false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns sorted column indexes 
-x equals x selected columns 
-else:
-sorted column indexes equals list range length of x columns 
+Finally, it converts categorical columns to string format and returns a new dataset with the sampled data, categorical mask, and column names.
 
-if length of x is greater than number rows max:
-Stratify accordingly target name equals y name 
-data equals pandas dot concat x comma y axis quote columns 
-_, subset equals train test split data test size number rows max stratify data target name shuffle true random state seed 
-x equals subset drop target name axis quote columns 
-y equals subset target name 
+Features: acidity, citric acid, sugar, chlorides, sulfur dioxide, density, pH, sulphates, alcohol, quality.
 
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list self categorical mask i for i in sorted column indexes 
-columns equals list x columns 
-return Dataset 
-Technically this is not the same but it is where it was derived from dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Features: fixed acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol, quality 
-
-Keywords: Wine, Subsampling, Machine Learning, Chemistry, Dataset, OpenML
+Keywords: Wine dataset, subsampling, stratified sampling, feature selection, class distribution.

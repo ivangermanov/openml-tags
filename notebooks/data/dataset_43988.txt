@@ -1,17 +1,13 @@
-Houses Dataset 
+Houses Dataset
 
-Tags: Classification on Numerical Features 
+This dataset belongs to the "classification on numerical features" benchmark. It was transformed in the same way as the dataset used in the tabular data benchmark.
 
-This dataset was used in the tabular data benchmark and has been transformed accordingly. 
+The dataset was collected from all the block groups in California from the 1990 Census. A block group, on average, includes a geographically compact area with a population of approximately 1,425.5 individuals. The geographical area included varies inversely with the population density. The distances among the centroids of each block group were computed as measured in latitude and longitude.
 
-The dataset belongs to the classification on numerical features benchmark. 
+The dataset contains 9 variables, with the dependent variable being the natural logarithm of the median house value. The independent variables include median income, median age of housing, total rooms, total bedrooms, population, households, latitude, and longitude.
 
-Original Description: 
+The dataset was preprocessed by excluding all the block groups reporting zero entries for the independent and dependent variables. The final dataset contains a large number of observations.
 
-We collected information on various variables using all block groups in California from the nineteen ninety census. On average, a block group includes individuals living in a geographically compact area. Naturally, the geographical area included varies inversely with the population density. We computed distances among the centroids of each block group as measured in latitude and longitude. We excluded all block groups reporting zero entries for the independent and dependent variables. The final data contained observations on nine variables. The dependent variable is the natural logarithm of median house value.
+The features of the dataset include median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude.
 
-The analysis revealed several key relationships between the variables. For instance, there is a strong positive correlation between median income and median house value. Additionally, the natural logarithm of median age also has a significant impact on median house value. Furthermore, the natural logarithm of total rooms per population and bedrooms per population are also important factors influencing median house value. Lastly, the natural logarithm of population per households and households have a negative and positive effect respectively on median house value.
-
-Features: Median Income, Housing Median Age, Total Rooms, Total Bedrooms, Population, Households, Latitude, Longitude, Median House Value
-
-Keywords: Houses, Classification, Numerical Features, Benchmark, California, Census, Median House Value.
+Keywords: California Census, House Value, Median Income, Population Density, Geographical Area

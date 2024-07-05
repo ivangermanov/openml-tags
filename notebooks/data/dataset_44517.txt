@@ -1,15 +1,13 @@
-The Dilbert dataset has been subsampled with a specific set of parameters to create a new dataset. This dataset has been generated using a particular source code, which involves uniformly sampling classes, columns, and rows from the original dataset.
+Name: Dilbert Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-The subsampling process begins by selecting a specified number of unique classes from the original dataset. If the number of unique classes exceeds the maximum allowed, a random selection of classes is made based on their value counts. The indices where these selected classes are present are then used to filter the data.
+Tags: Subsampling of the dataset Dilbert with seed equals four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-Next, the columns are uniformly sampled to reduce the total number of columns to a specified maximum. A random selection of column indices is made, and the corresponding columns are selected from the filtered data.
+Generated with the following source code:
 
-Finally, the rows are sampled to reduce the total number of rows to a specified maximum. A stratified split is performed to ensure that the class distribution is maintained in the subsampled data.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
 
-The resulting dataset consists of the filtered data, along with the corresponding categorical mask, columns, and other metadata.
+The function uses the train test split function from scikit learn to split the data into a subset and the rest. The subset is then returned as a new dataset.
 
-Features: Various numerical features have been included in this dataset, representing different aspects of the data.
+Features: 
 
-Tags: Machine Learning, Statistics 
-
-Keywords: Subsampling, Dataset, Stratification, Sampling, Classes, Columns, Rows
+Keywords: dataset subsampling, stratified sampling, random subset, numpy random generator, scikit learn.

@@ -1,11 +1,11 @@
-House Sixteen H Seed Four Dataset
+Name: House Sixteen H Seed Four
 
-This dataset is a subsampled version of the House Sixteen H dataset. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
+Tags: Subsampling of the dataset House Sixteen H with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to true.
 
-The dataset has been tagged with Economics and Government categories, indicating its relevance to these fields. The subsampling process aimed to preserve the most important features of the original dataset while reducing its size to facilitate faster processing and analysis.
+Generated with the following source code:
 
-The subsampling algorithm employed a stratified approach to ensure that the sampled data retained the original distribution of classes. This involved selecting a fixed number of classes based on their frequency in the original dataset and then sampling rows and columns accordingly.
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the data. The function first samples the classes uniformly, selecting a specified number of classes based on their value counts. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it samples the columns uniformly if required, selecting a specified number of columns. If the number of rows exceeds the maximum allowed, it stratifies the data accordingly and splits it into a subset of the specified size. Finally, it converts categorical columns to string and returns a new dataset with the sampled data.
 
-The resulting dataset consists of a subset of features, including those related to Property and Household characteristics. These features have been carefully selected to represent the most important aspects of the original dataset.
+Features: 
 
-Keywords: Economics, Government, Dataset, Subsampling, Stratification, Feature Selection.
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Number Generator, Data Filtering

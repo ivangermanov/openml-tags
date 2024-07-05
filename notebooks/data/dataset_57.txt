@@ -1,23 +1,24 @@
-Hypothyroid Dataset
+Name: Hypothyroid
+Tags: study, uci
 
-Tags: Health, Medicine, Study One, Study Forty-One, UCI
+Source: Unknown
 
-Thyroid disease records were supplied by the Garavan Institute, New South Wales Institute, Sydney, Australia.
+Please cite: Thyroid disease records supplied by the Garavan Institute and New South Wales Institute, Sydney, Australia.
 
-The dataset consists of thirty attributes, including age, which is a continuous variable, and sex, which is an enumerated value. There are twenty-three discrete attributes, seven of which are continuous, and five percent of the values are missing.
+The dataset contains records for hypothyroid, primary hypothyroid, compensated hypothyroid, secondary hypothyroid, and negative cases. It includes various attributes such as age, sex, medication status, medical history, and test results.
 
-The attributes include information about the patient's medical history, such as whether they are taking thyroxine, have had thyroid surgery, or have been treated with I131. The dataset also includes measurements of various thyroid hormones, such as TSH, T3, TT4, T4U, FTI, and TBG.
+Classes include age (continuous), sex (male/female), thyroxine status, antithyroid medication, sickness, pregnancy, thyroid surgery history, iodine treatment, hypothyroid and hyperthyroid queries, lithium use, presence of goiter or tumor, hypopituitary condition, psychiatric status, and various thyroid function test measurements.
 
-The referral source of the patients is also included, with six possible sources listed. The class attribute indicates whether the patient has hypothyroidism, primary hypothyroidism, compensated hypothyroidism, secondary hypothyroidism, or is negative for hypothyroidism.
+The dataset comprises multiple instances with numerous attributes, including both continuous and discrete variables. There are missing values present in the data.
 
-The dataset was scraped from unknown sources and has undergone some processing to remove unnecessary information.
+The data originates from several databases from the Garavan Institute in Sydney, Australia. Each database contains training and test instances, with a significant amount of missing data. The attributes are either Boolean or continuously valued.
 
-Dataset Information:
+Additional databases related to hypothyroidism and sick euthyroid conditions are included, though there are concerns about potential corruption in these datasets. The format is similar to the other databases in the collection.
 
-The dataset contains approximately three thousand seven hundred seventy-two instances, with thirty attributes each. There are five percent missing values throughout the dataset.
+There is also a larger database covering multiple classes and a related domain theory. Another thyroid database with fewer classes, instances, and attributes is included, notable for having no missing values.
 
-Additional Information:
+A separate thyroid database specifically suited for training artificial neural networks is provided, which includes cost data.
 
-The dataset is part of a larger collection of six datasets from the Garavan Institute, which were donated by unknown sources. The datasets contain a significant amount of missing data and have undergone some processing to remove unnecessary information.
+The dataset is designed for studying thyroid disorders and developing predictive models for diagnosis and classification of thyroid-related conditions.
 
-Keywords: Hypothyroidism, Thyroid Hormones, Medical History, Patient Data, Healthcare
+Keywords: hypothyroid, thyroid disease, medical data, endocrinology, diagnostic attributes, thyroid function tests, machine learning dataset

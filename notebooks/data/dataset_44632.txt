@@ -1,16 +1,15 @@
-Subsampling of the dataset KC One with Seed Four 
-Tags: Machine Learning, Mathematics 
+Name: KC One Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This is a subsampled version of the KC One dataset, generated using a specific set of arguments and parameters. The subsampling process involves selecting a uniform sample of classes, columns, and rows from the original dataset. 
+Tags: Subsampling of the dataset KC One with seed equals four arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-The first step is to uniformly sample classes from the unique values present in the target variable. If the number of unique classes exceeds the maximum allowed, a random selection is made based on their frequency distribution. This ensures that the sampled classes are representative of the original distribution.
+Generated with the following source code:
 
-Next, the columns are sampled uniformly, selecting a specified maximum number of columns. This is done to reduce the dimensionality of the dataset while preserving the most important features.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-Finally, the rows are sampled, taking into account the class distribution to maintain stratification. This ensures that the resulting subsampled dataset has a similar class balance to the original dataset.
+The function first gets the unique classes in the dataset and selects a specified number of them. It then selects the indices where one of these classes is present and uses these indices to subset the dataset. Next, it uniformly samples columns from the dataset, selecting a specified number of them. If the dataset has more rows than the specified maximum, it uses the train test split function from scikit learn to stratify the dataset and select a specified number of rows.
 
-The resulting subsampled dataset contains a reduced number of features and samples, making it more manageable for machine learning tasks.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-Features: location, variance of g, expected value of g, importance value of g, node count, variance, length, depth, index, entropy, branch count, defects.
+Features: location, variable group, essential variable group, internal variable group, number, variable, length, density, interface, entity, branch, total operations, total operands, branch count, defects.
 
-Keywords: subsampling, machine learning, stratification, feature selection, class balance, dataset reduction.
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row selection, reproducibility.

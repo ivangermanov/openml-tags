@@ -1,15 +1,13 @@
-Machine Learning Dataset: Arcene Seed One 
+Name: Arcene Seed One Dataset
 
-This dataset is a subsampled version of the original Arcene dataset, featuring two thousand rows and one hundred columns. The sampling process ensured that the dataset retained ten distinct classes, which were chosen randomly from the original set of classes.
+Tags: Subsampling of the Arcene dataset with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-The sampling methodology employed a combination of uniform sampling and stratification techniques. Firstly, the algorithm uniformly sampled classes from the original dataset, selecting ten classes based on their frequency distribution. It then proceeded to select the corresponding indices where these classes were present.
+Generated with the following source code:
 
-Next, the algorithm performed uniform column sampling, choosing one hundred columns from the original set of columns. This was done to reduce the dimensionality of the dataset while preserving its underlying structure.
+This dataset is a subsample of the original Arcene dataset, which has been reduced in size to facilitate faster processing and analysis. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows. The resulting dataset has a smaller number of classes, columns, and rows, making it more manageable for machine learning algorithms.
 
-Finally, the dataset was stratified according to the target variable, ensuring that the resulting subsampled dataset retained a balanced representation of all ten classes.
+The subsampling process was performed using a random number generator with a seed value of one, ensuring reproducibility of the results. The maximum number of rows was set to two thousand, the maximum number of columns was set to one hundred, and the maximum number of classes was set to ten. The stratify argument was set to false, indicating that the sampling was not stratified.
 
-Features include various variables such as molecular descriptors, spectral intensities, and other attributes relevant to the manufacturing domain.
+The resulting dataset consists of a subset of the original features, which are not human-readable. The dataset is suitable for machine learning algorithms that can handle high-dimensional data.
 
-Tags: Machine Learning, Manufacturing 
-
-Keywords: Arcene, Subsampling, Stratification, Class Balancing, Dimensionality Reduction
+Keywords: Arcene dataset, subsampling, machine learning, high-dimensional data, reproducibility.

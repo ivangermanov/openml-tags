@@ -1,18 +1,22 @@
-Cause-effect is a growing database comprising two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+Cause-effect is a growing database of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
 
-Some pairs are high-dimensional, and for machine readability, the relevant information about this is coded in metadata. Metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
+Some pairs are high-dimensional, and for machine readability, the relevant information about this is coded in metadata. The metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
 
-When using this dataset in a publication, please cite the corresponding paper, which also contains much more detailed information regarding this dataset in the supplement.
+When using this dataset in a publication, please cite the paper that contains much more detailed information regarding this dataset in the supplement.
 
-Note that pairs from one to forty-one are taken from the University of California, Irvine Machine Learning Repository.
+The dataset includes pairs taken from the University of California, Irvine Machine Learning Repository.
 
 Overview of all data pairs:
 
 Variable one, Variable two, Dataset, Ground Truth
+Pair one: Altitude, Temperature, DWD, 
+Pair two: Altitude, Precipitation, DWD, 
+Pair three: Longitude, Temperature, DWD, 
+Pair four: Altitude, Sunshine hours, DWD, 
 
-Pair three: Longitude, Temperature, Deutscher Wetterdienst (German Weather Service), Longitude causes Temperature
+Information for Pair three: 
+The DWD data was taken at three hundred forty-nine stations from the German Weather Service. The data was taken from the website. More recent link: the website.
 
-Information for Pair Three:
-The Deutscher Wetterdienst (German Weather Service) data was taken at three hundred forty-nine stations and can be found online. The data includes averaged values for the period between nineteen sixty-one and nineteen ninety.
+The x variable is longitude, and the y variable is temperature, averaged over the period from nineteen sixty-one to nineteen ninety. The ground truth is that x causes y.
 
-Keywords: Cause-effect, Database, Causal Inference, Machine Learning, German Weather Service, Climate Data, Longitude, Temperature
+Keywords: Graphical models, MaRDI, TA3, Cause-effect pairs, Causal inference, Machine learning, DWD dataset, Longitude, Temperature.

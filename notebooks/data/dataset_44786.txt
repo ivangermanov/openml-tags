@@ -1,11 +1,13 @@
-Porto Seguro Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Porto Seguro Seed Three Dataset
 
-This dataset is a subsampling of the Porto Seguro dataset with a seed of three. It has been generated using specific arguments, including two thousand rows, one hundred columns, and ten classes. The stratification argument is set to true.
+Tags: Subsampling of the Porto Seguro dataset with seed three
 
-The dataset has undergone uniform sampling of classes, columns, and rows. The class sampling was done by selecting ten classes out of the total unique classes, ensuring that each class had an equal probability of being chosen. The column sampling involved uniformly selecting one hundred columns out of the total columns available.
+This dataset is a subsample of the original Porto Seguro dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to create a smaller dataset that retains the essential characteristics of the original dataset.
 
-If the number of rows exceeded two thousand, stratified sampling was used to select the desired number of rows. This ensured that the sampled rows maintained the same class distribution as the original dataset. 
+The dataset was generated using a Python function that takes in several parameters, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a flag for stratification. The function uses the NumPy random number generator to select the classes, columns, and rows to include in the subsample.
 
-Features include various indicators, registers, car-related variables, calculation variables, and a target variable. 
+The resulting dataset has a specific set of features, including various indicators, registers, car features, and calculation features. These features are a subset of the original features in the Porto Seguro dataset.
 
-Keywords: Porto Seguro, subsampling, stratification, uniform sampling, class distribution.
+The dataset was generated with the goal of creating a smaller, more manageable dataset that can be used for machine learning and data analysis tasks.
+
+Keywords: Porto Seguro, dataset subsampling, stratification, machine learning, data analysis

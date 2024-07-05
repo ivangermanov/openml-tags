@@ -1,11 +1,15 @@
-Wine Quality White Seed One Dataset 
+Name: Wine Quality White Seed One
 
-This dataset is a subsampled version of the Wine Quality White dataset, containing two thousand rows. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the resulting dataset has an equal distribution of classes. 
+Tags: Subsampling of the dataset Wine Quality White with seed equals one, arguments nrows max equals two thousand, arguments ncols max equals one hundred, arguments nclasses max equals ten, and arguments no stratify equals true.
 
-The dataset contains ten classes, which were chosen based on their value counts in the original dataset. The selected classes were then used to filter the dataset, retaining only the instances that belong to these classes. 
+Generated with the following source code:
 
-Furthermore, the dataset underwent column sampling, where one hundred columns were randomly selected from the original dataset. This was done to reduce the dimensionality of the dataset while preserving its essential characteristics.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the dataset. The function first samples the classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-The dataset is suitable for machine learning and mathematical modeling tasks, particularly those involving classification problems.
+Next, the function samples the columns uniformly, selecting a specified number of columns. If the number of rows exceeds the maximum allowed, the function stratifies the data according to the target variable and samples the data using train test split.
 
-Keywords: Wine Quality, Machine Learning, Classification, Subsampling, Dimensionality Reduction.
+Finally, the function converts categorical columns to string and returns a new dataset with the sampled data, categorical mask, and column names.
+
+Features: The dataset contains various features, including V One, V Two, V Three, V Four, V Five, V Six, V Seven, V Eight, V Nine, V Ten, V Eleven, and Class.
+
+Keywords: Wine Quality, Dataset Subsampling, Stratified Sampling, Feature Selection, Categorical Variables.

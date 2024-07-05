@@ -1,35 +1,18 @@
-The KC3 dataset is a part of the NASA Metrics Data Program defect data sets, specifically designed for software defect prediction. This dataset contains unknown types of software, with data extracted from McCabe and Halstead features extractors of source code. These features were initially defined in the 1970s to objectively characterize code features associated with software quality.
+KC3 Tags: mythbusting, PROMISE, study
+
+KC3 Software defect prediction
+
+This dataset is part of the NASA Metrics Data Program defect data sets. The specific type of software is unknown. Data is derived from McCabe and Halstead features extractors of source code. These features were defined in an attempt to objectively characterize code features associated with software quality.
 
 Attribute Information:
+The dataset includes various metrics such as lines of code, cyclomatic complexity, essential complexity, design complexity, Halstead metrics (volume, program length, difficulty, intelligence, effort, time estimator), counts of unique operators and operands, total operators and operands, branch count, and a binary indicator of whether the module has reported defects.
 
-* Line Count of Code: a numerical value representing McCabe's line count of code
-* Cyclomatic Complexity: a numerical value representing McCabe's cyclomatic complexity
-* Essential Complexity: a numerical value representing McCabe's essential complexity
-* Design Complexity: a numerical value representing McCabe's design complexity
-* Total Operators and Operands: a numerical value representing Halstead's total operators plus operands
-* Volume: a numerical value representing Halstead's volume
-* Program Length: a numerical value representing Halstead's program length
-* Difficulty: a numerical value representing Halstead's difficulty
-* Intelligence: a numerical value representing Halstead's intelligence
-* Effort: a numerical value representing Halstead's effort
-* Time Estimator: a numerical value representing Halstead's time estimator
-* Line Count: a numerical value representing Halstead's line count
-* Lines of Comments: a numerical value representing Halstead's count of lines of comments
-* Blank Lines: a numerical value representing Halstead's count of blank lines
-* Code and Comment: a numerical value representing Halstead's code and comment
-* Unique Operators: a numerical value representing unique operators
-* Unique Operands: a numerical value representing unique operands
-* Total Operators: a numerical value representing total operators
-* Total Operands: a numerical value representing total operands
-* Branch Count: a numerical value representing the number of branches in the flow graph
-* Problems: a boolean value indicating whether the module has one or more reported defects
+The features are derived from McCabe's line count of code, cyclomatic complexity, essential complexity, design complexity, and various Halstead metrics. These include measures of total operators and operands, volume, program length, difficulty, intelligence, effort, time estimation, and line counts for code, comments, and blank lines. Additional metrics cover unique and total operators and operands, as well as branch count in the flow graph.
 
-Relevant Papers:
+The dataset is relevant for software engineering research, particularly in the areas of defect prediction and software quality assessment. It provides objective measurements of code characteristics that can be used to analyze and predict software defects.
 
-Data Quality: Some Comments on the NASA Software Defect Datasets
-How Good is Your Blind Spot Sampling Policy?
-Assessing Predictors of Software Defects
+Relevant papers discuss the quality of NASA software defect datasets, blind spot sampling policies in software engineering, and the assessment of software defect predictors. These studies contribute to the broader field of predictive software models and high assurance software engineering.
 
-Tags: Chemistry, Life Science, MythBusting, PROMISE, Study
+The dataset includes a comprehensive set of software metrics that can be used for various analyses in software engineering research. These metrics provide insights into code complexity, structure, and potential areas for improvement in software development processes.
 
-Keywords: software defect prediction, McCabe features, Halstead features, software quality, code characteristics
+Keywords: software defect prediction, NASA metrics, code complexity, Halstead metrics, McCabe metrics, software quality, defect analysis

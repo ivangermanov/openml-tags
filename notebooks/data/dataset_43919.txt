@@ -1,33 +1,28 @@
-Airfoil Self Noise Dataset
+**Citation** Please refer to UCI's citation policy.
 
-Tags: Machine Learning, Meteorology
+**Source** 
+The Airfoil Self-Noise dataset was donated by Intelnics Creators from NASA.
 
-Please refer to UCI's citation policy.
+**Data Description** 
+The NASA dataset comprises different size NACA airfoils at various wind tunnel speeds and angles of attack. The span of the airfoil and the observer position were the same in all of the experiments, which provides a consistent and controlled environment for data collection.
 
-Source
-
-The Airfoil Self Noise dataset was donated by Intelnics. It was created by researchers at NASA.
-
-Data Description
-
-The NASA dataset comprises different sized airfoils tested at various wind tunnel speeds and angles of attack. The span of the airfoil and the observer position remained constant throughout the experiments.
-
-Attribute Description
-
-This problem involves the following input variables:
-
+**Attribute Description** 
+This problem has the following inputs: 
 * Frequency, which represents the rate of oscillation in Hertz.
-* Angle of Attack, which measures the degree of airflow deflection.
-* Length, referring to the chord length of the airfoil in meters.
-* Velocity, representing the free stream velocity in meters per second.
-* Thickness, measuring the suction side displacement thickness in meters.
+* Angle of Attack, which is the angle between the airfoil and the oncoming airflow, measured in degrees.
+* Chord Length, which is the distance between the leading and trailing edges of the airfoil, measured in meters.
+* Free-Stream Velocity, which is the speed of the airflow, measured in meters per second.
+* Suction Side Displacement Thickness, which is the thickness of the airfoil's suction side, measured in meters.
 
-The sole output variable is:
+The only output is: 
+* Scaled Sound Pressure Level, which is a measure of the noise level, measured in decibels.
 
-* Pressure, representing the scaled sound pressure level in decibels.
+Relevant Papers: 
+Airfoil Self-Noise and Prediction, a technical report by NASA. 
+A Neural Networks Approach for Aerofoil Noise Prediction, a master thesis from Imperial College of Science, Technology and Medicine. 
+Neural Networks for Variational Problems in Engineering, a PhD thesis from Technical University of Catalonia.
 
-Relevant Papers
+Features: 
+Frequency, Angle of Attack, Chord Length, Free-Stream Velocity, Suction Side Displacement Thickness, Scaled Sound Pressure Level
 
-Several research papers have utilized this dataset, including studies on airfoil self-noise and prediction, as well as the application of neural networks for aerodynamic noise prediction.
-
-Keywords: airfoil, self-noise, machine learning, meteorology, wind tunnel, angle of attack, chord length, free stream velocity, suction side displacement, sound pressure level.
+Keywords: Airfoil, Self-Noise, Wind Tunnel, Angle of Attack, Sound Pressure Level

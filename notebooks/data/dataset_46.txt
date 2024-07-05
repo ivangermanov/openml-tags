@@ -1,21 +1,22 @@
-Life Science and Machine Learning dataset: Splice 
+Name: splice
+Tags: OpenML-CC, OpenML, study, uci
 
-The Splice dataset focuses on primate splice-junction gene sequences, comprising DNA sequences with associated imperfect domain theory. The primary objective is to identify, given a sequence of DNA, the boundaries between exons (parts of the DNA sequence retained after splicing) and introns (parts of the DNA sequence that are spliced out). This problem involves two subtasks: recognizing exon-intron boundaries (referred to as EI sites) and recognizing intron-exon boundaries (IE sites).
+Primate splice junction gene sequences (DNA) with associated imperfect domain theory. Splice junctions are points on a DNA sequence at which 'superfluous' DNA is removed during the process of protein creation in higher organisms. The problem posed in this dataset is to recognize, given a sequence of DNA, the boundaries between exons (the parts of the DNA sequence retained after splicing) and introns (the parts of the DNA sequence that are spliced out). This problem consists of two subtasks: recognizing exon/intron boundaries (referred to as EI sites), and recognizing intron/exon boundaries (IE sites). In the biological community, IE borders are referred to as 'acceptors' while EI borders are referred to as 'donors'.
 
-The dataset includes sixty-four categories, categorized into "ei" and "ie," encompassing every "split-gene" for primates in GenBank. Non-splice examples were obtained from sequences known not to contain a splicing site.
+All examples are taken from Genbank. Categories "ei" and "ie" include every "split gene" for primates in Genbank. Non splice examples are taken from sequences known not to include a splicing site.
 
-Attribute information includes:
+Attribute Information:
+The first attribute indicates the class, which is one of {n ei ie}. The second attribute is the instance name. The remaining sixty fields represent the sequence, starting at position negative thirty and ending at position positive thirty. Each of these fields is almost always filled by one of {a, g, t, c}. Other characters indicate ambiguity among the standard characters according to the following table:
+Character D means A or G or T
+Character N means A or G or C or T
+Character S means C or G
+Character R means A or G
 
-* One of three classes: n, ei, or ie, indicating the type of boundary
-* The instance name, serving as an identifier
-* Sixty remaining fields representing the sequence, starting thirty positions before and ending thirty positions after the boundary point; each field typically contains one of four characters: a, g, t, or c; other characters signify ambiguity among the standard characters
+Notes:
+Instance name is an identifier and should be ignored for modeling.
 
-Features include instance name and sixty attributes representing the sequence.
+The dataset includes information about McGeoch's method for signal sequence recognition, von Heijne's method for signal sequence recognition, von Heijne's Signal Peptidase II consensus sequence score, presence of charge on N terminus of predicted lipoproteins, score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins, score of the ALOM membrane spanning region prediction program, and score of ALOM program after excluding putative cleavable signal regions from the sequence.
 
-This dataset has no missing values.
+Class labels include cytoplasm, inner membrane without signal sequence, periplasm, inner membrane with uncleavable signal sequence, outer membrane, outer membrane lipoprotein, inner membrane lipoprotein, and inner membrane with cleavable signal sequence.
 
-Additional variable information describes various characteristics of the sequences, including signal sequence recognition methods, presence of charge on the N-terminus of predicted lipoproteins, scores of discriminant analysis of amino acid content, and scores of membrane-spanning region prediction programs.
-
-Class labels denote different localizations within the cell, including cytoplasm, inner membrane, periplasm, and outer membrane.
-
-Keywords: Splice junction, gene sequences, DNA, exons, introns, machine learning, life science, molecular biology.
+Keywords: DNA sequences, splice junctions, exons, introns, gene prediction, bioinformatics, molecular biology, protein synthesis, genomics

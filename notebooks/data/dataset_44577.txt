@@ -1,14 +1,11 @@
-Subsampling of the dataset Arcene, categorized under Life Science and Statistics, generated using the following source code.
+Name: Arcene Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The function `subsample` takes in parameters including `seed`, `nrows max`, `ncols max`, `nclasses max`, and `stratified`. It first uniformly samples classes from the unique values in `y`, ensuring the number of classes does not exceed `nclasses max`. The indices where one of these classes is present are then selected, and `x` and `y` are updated accordingly.
+Tags: Subsampling of the dataset Arcene with seed equals four, arguments nrows equals two thousand, ncols equals one hundred, nclasses equals ten, and no stratify equals true.
 
-If necessary, the function uniformly samples columns, selecting a specified number of column indices without replacement. The selected columns are then used to update `x`.
+Generated with the following source code:
 
-Finally, if the length of `x` exceeds `nrows max`, the function performs stratified sampling, taking into account the target variable `y`. This ensures that the resulting dataset is representative of the original distribution.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then uniformly samples classes from the unique classes in the dataset, selecting the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies accordingly using train test split. The function then returns a dataset with the subsampled data, categorical mask, and columns.
 
-The resulting dataset consists of `x`, `y`, and additional metadata including the categorical mask and column names.
+Features: (skipped due to unreadability)
 
-Features: 
-Mass Spect Peak, Retention Time, ... 
-
-Keywords: Arcene, Subsampling, Stratified Sampling, Feature Selection, Life Science, Statistics
+Keywords: Arcene, subsampling, dataset, stratification, random sampling.

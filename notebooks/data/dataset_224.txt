@@ -1,31 +1,41 @@
-Breast Cancer Dataset
+Breast Tumor Dataset
 
-Tags: Machine Learning, Medicine
+Tags: Unknown Source
 
-This dataset is part of the breast cancer domain obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.
+Please cite: Tumor size treated as the class attribute. As used in research on numeric prediction using instance-based learning with encoding length selection.
 
-Title: Breast Cancer Data
+Citation Request: This breast cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. Please include this citation if you plan to use this database.
 
-The dataset contains nine attributes, some of which are linear and others are nominal, describing two hundred eighty-six instances of breast cancer tumors. These instances belong to two classes: no-recurrence-events and recurrence-events.
+Title: Breast cancer data
 
-Past usage of this dataset includes various studies, such as numeric prediction using instance-based learning with encoding length selection, and testing application to three medical domains. The accuracy range of these studies falls between sixty-six percent and seventy-eight percent.
+Sources: Institute of Oncology, University Medical Center Ljubljana, Yugoslavia
 
-Relevant information about this dataset includes its repeated appearance in machine learning literature, along with two other datasets from the same institute: lymphography and primary-tumor.
+Past Usage: This dataset has been used in multiple studies focusing on machine learning applications in medical domains. Various systems and approaches have been tested, with accuracy ranges typically falling between 65% and 78%.
 
-The nine attributes describing each instance are:
+Relevant Information: This is one of three domains provided by the Oncology Institute that has repeatedly appeared in the machine learning literature. The dataset includes instances of two classes, described by both linear and nominal attributes.
 
-* Age, categorized into nine groups ranging from ten to ninety-nine years old.
-* Menopause status, categorized into three groups: less than forty, greater than or equal to forty, and premenopausal.
-* Tumor size, categorized into twelve groups ranging from zero to fifty-four units.
-* Number of invaded nodes, categorized into thirteen groups ranging from zero to thirty-nine units.
-* Node caps status, either yes or no.
-* Degree of malignancy, categorized into three groups.
-* Breast affected, either left or right.
-* Quadrant of the breast affected, categorized into five groups.
-* Irradiation status, either yes or no.
+Number of Instances: 286
 
-There are eight instances with missing values for node caps and one instance with a missing value for breast quadrant.
+Number of Attributes: 9 plus the class attribute
 
-The class distribution is skewed, with two hundred one instances belonging to the no-recurrence-events class and eighty-five instances belonging to the recurrence-events class.
+Attribute Information:
+Class: no recurrence events, recurrence events
+Age: ranges from 10 to 99 in decade intervals
+Menopause: less than 40, greater than or equal to 40, premenopausal
+Tumor size: ranges from 0 to 59 in 5 unit intervals
+Involved nodes: ranges from 0 to 39 in varying intervals
+Node caps: yes, no
+Degree of malignancy: 1, 2, 3
+Breast: left, right
+Breast quadrant: left up, left low, right up, right low, central
+Irradiation: yes, no
 
-Keywords: breast cancer, machine learning, medicine, oncology, dataset, numeric prediction, instance-based learning, encoding length selection.
+Missing Attribute Values: Some instances have missing values for certain attributes, denoted by "?".
+
+Class Distribution:
+No recurrence events: 201 instances
+Recurrence events: 85 instances
+
+This dataset has been widely used in machine learning research, particularly in the context of medical diagnosis and prognosis. It provides a valuable resource for studying classification algorithms and their performance in real world medical applications. The attributes cover a range of factors relevant to breast cancer diagnosis and treatment outcomes, making it a comprehensive dataset for exploring relationships between various clinical features and cancer recurrence.
+
+Keywords: breast cancer, tumor size, machine learning, medical diagnosis, classification, oncology, data mining, attribute analysis, cancer recurrence

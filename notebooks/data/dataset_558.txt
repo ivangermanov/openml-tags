@@ -1,13 +1,15 @@
-Bank Thirty-Two NH 
+Name: bank Tags: OpenML-Reg, study, synthetic
 
-Tags: OpenML-Reg Nineteen, Study One Thirty, Synthetic 
+Source: Unknown - Date unknown
 
-This dataset is part of a family of datasets synthetically generated from a simulation of how bank customers choose their banks. The primary task is to predict the fraction of bank customers who leave the bank due to full queues. This dataset was created using a simplistic simulator, specifically designed to generate a family of datasets for a particular purpose. This simulator models the queues in a series of banks, taking into account various factors such as customer behavior, bank location, and task complexity.
+Please cite: A family of datasets synthetically generated from a simulation of how bank customers choose their banks. Tasks are based on predicting the fraction of bank customers who leave the bank because of full queues. The bank family of datasets are generated from a simplistic simulator, which simulates the queues in a series of banks. The simulator was constructed with the explicit purpose of generating a family of datasets for DELVE.
 
-Customers in this simulation come from multiple residential areas and select their preferred bank based on distance and other factors. They have tasks of varying complexity and different levels of patience. Each bank has multiple queues that open and close according to demand, and the tellers have varying levels of effectiveness. If a customer's patience expires, they may switch queues.
+Customers come from several residential areas, choose their preferred bank depending on distances and have tasks of varying complexity, and various levels of patience. Each bank has several queues, that open and close according to demand. The tellers have various effectivities, and customers may change queue, if their patience expires. In the rejection prototasks, the object is to predict the rate of rejections, i.e. the fraction of customers that are turned away from the bank because all the open tellers have full queues.
 
-In the rejection protocol tasks, the goal is to predict the rate of rejections, i.e., the fraction of customers who are turned away from the bank because all open tellers have full queues. This dataset is part of a larger collection of regression datasets and is originally sourced from the DELVE repository of data.
+Source: Collection of regression datasets at a university website. Original source: DELVE repository of data.
 
-Characteristics of this dataset include a large number of cases and numerous continuous attributes. These attributes include information about the banks and their locations, customer characteristics, and queue dynamics.
+Characteristics: Data set contains cases and continuous attributes.
 
-Keywords: bank customers, queue simulation, customer behavior, regression dataset, synthetic data
+Features: Customer and bank location coordinates, customer population density, temperature, bank call rates, bank efficiency, maximum queue length, and rejection rate.
+
+Keywords: bank simulation, customer behavior, queue management, rejection prediction, synthetic data

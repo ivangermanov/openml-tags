@@ -1,17 +1,15 @@
-Subsampling of the dataset RL with seed equal to two arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equals False.
+Name: Subsample of the RL Dataset with Two Thousand Rows and Ten Classes
 
-Generated with the following source code:
+Tags: Subsampling of the RL dataset with a seed value, generated with a maximum of two thousand rows, one hundred columns, and ten classes, using stratified sampling.
 
-The function subsample takes in five parameters - seed, number rows maximum, number columns maximum, number classes maximum, and stratified - and returns a dataset. It first initializes a random number generator with the given seed. Then, it extracts the features and target variables from the dataset. 
+This dataset is a subsample of the original RL dataset, generated using a random seed value. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the selected classes are representative of the overall distribution. The number of classes was limited to ten to reduce the dimensionality of the dataset.
 
-If the number of unique classes in the target variable exceeds the number classes maximum, it selects a specified number of classes randomly based on their frequencies. It then filters the data to only include instances belonging to the selected classes.
+The columns of the dataset were also uniformly sampled, with a maximum of one hundred columns selected. This was done to reduce the feature space and improve the computational efficiency of the dataset.
 
-Next, if the number of feature columns exceeds the number columns maximum, it randomly selects a specified number of feature columns. It rearranges the column indices in ascending order and filters the data to only include the selected feature columns.
+The stratified sampling method was used to ensure that the subsample is representative of the original dataset. This involved splitting the data into training and testing sets, with the testing set size limited to two thousand rows.
 
-Finally, if the total number of instances exceeds the number rows maximum, it uses stratified sampling to select a specified number of instances based on the target variable. The resulting dataset consists of the filtered features, target variable, and categorical mask.
+The resulting dataset consists of the selected features and the corresponding class labels. The categorical columns have been converted to string format to ensure compatibility with OpenML.
 
-Tags: Machine Learning, Mathematics
+Features: The dataset includes a range of features, including V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, and V Twenty-Two, as well as the class label.
 
-Features: 
-
-Keywords: Subsampling, Dataset, Seed, Stratified Sampling, Feature Columns, Target Variable
+Keywords: subsampling, stratified sampling, dataset reduction, feature selection, class imbalance, OpenML compatibility.

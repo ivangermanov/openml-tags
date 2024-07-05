@@ -1,15 +1,19 @@
-Machine Learning and Mathematics Tags 
+Name: Yeast Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The Yeast dataset has been subsampled with a specific set of arguments to generate a new dataset. The subsampling process involves uniformly selecting classes, columns, and rows from the original dataset while maintaining its inherent characteristics.
+Tags: Subsampling of the dataset Yeast with seed equals two arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False
 
-The Yeast dataset has been uniformly sampled to select a specified number of classes. This is done by choosing classes randomly based on their frequency of occurrence in the dataset. The selected classes are then used to filter out the corresponding data points, resulting in a reduced dataset.
+Generated with the following source code:
 
-Furthermore, the dataset has been uniformly sampled to select a specified number of columns. This is done by choosing column indices randomly and then selecting the corresponding columns from the dataset.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as parameters. It returns a dataset. The function uses a random number generator with the given seed. It then selects the data and target arrays from the dataset. 
 
-Additionally, the dataset has been stratified to ensure that the class distribution remains consistent throughout the sampling process. This involves splitting the dataset into training and testing sets based on the class labels, ensuring that each set maintains the same class distribution as the original dataset.
+If the number of unique classes in the target array is greater than the maximum number of classes, it selects the classes using a random choice with probabilities based on the value counts of the classes. It then selects the indices where one of these classes is present and updates the data and target arrays accordingly.
 
-The resulting dataset consists of the selected columns, rows, and classes, which have been carefully chosen to maintain the integrity of the original dataset. The dataset has also been converted to ensure that categorical columns are represented as strings.
+If the number of columns in the data array is greater than the maximum number of columns, it selects the columns using a random choice and updates the data array accordingly. 
 
-Features: protein localization
+If the number of rows in the data array is greater than the maximum number of rows, it uses train test split with stratification to select a subset of the data and target arrays. 
 
-Keywords: machine learning, mathematics, dataset, subsampling, stratification, classification, feature selection
+Finally, it returns a dataset with the updated data and target arrays, along with the categorical mask and column names.
+
+Features: Mitochondrial, Glycosylated, Alkaline, Mitochondrial, Endoplasmic Reticulum, Peroxisomal, Vacuolar, Nuclear, Protein Localization
+
+Keywords: Subsampling, Yeast Dataset, Stratification, Random Sampling, Feature Selection

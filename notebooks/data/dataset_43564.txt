@@ -1,23 +1,34 @@
-Parking Statistics in North America 
+Parking Statistics in North America
 
-Tags: Computer Systems, Machine Learning 
+About
 
-About 
-This dataset identifies areas within a city where drivers are experiencing difficulty searching for parking. Cities can utilize this data to identify problem areas, adjust signage, and implement other solutions to mitigate congestion and improve traffic flow. Only cities with a substantial population are included.
+This dataset identifies areas within a city where drivers are experiencing difficulty searching for parking. Cities can utilize this data to identify problem areas, adjust signage, and implement other solutions to alleviate parking congestion. Only cities with a significant population are included in this dataset.
 
-Data 
-Some key variables to highlight include Average Time to Park, which represents the average time taken to search for parking; Average Time to Park Ratio, which compares the average time taken to search for parking to those not searching for parking in the current geographic area; Total Searching, which indicates the number of drivers searching for parking; and Percent Searching, which represents the percentage of drivers that were searching for parking.
+Data
 
-Additionally, the dataset includes Average Unique Geographic Hashes, which denotes the average number of unique geographic hashes at a specific level, including neighboring and parking geographic hashes, that were driven in among vehicles that searched for parking. It also includes Average Total Geographic Hashes, which represents the average number of all geographic hashes at a specific level, including neighboring and parking geographic hashes, that were driven in among vehicles that searched for parking.
+Some variables to highlight include:
 
-The Circling Distribution variable provides a detailed representation of the neighboring geographic hashes at a specific level, indicating where vehicles searching for parking tend to spend their time. Each geographic hash has an associated average percentage of time spent in that geographic hash prior to parking. The Hourly Distribution variable offers a detailed representation of the average prevalence of searching for parking by hour of day, based on the number of vehicles experiencing parking problems. The Searching by Hour variable provides a detailed representation of the average percentage of vehicles searching for parking within each hour.
+Average Time to Park: The average time taken to search for parking in minutes
+Average Time to Park Ratio: The ratio between the average time taken to search for parking and those not searching for parking in the current geographic area
+Total Searching: The number of drivers searching for parking
+Percentage Searching: The percentage of drivers that were searching for parking
+Average Unique Geographic Areas: The average number of unique geographic areas at a specific level that were driven in among vehicles that searched for parking
+Average Total Geographic Areas: The average number of all geographic areas at a specific level that were driven in among vehicles that searched for parking
+Circling Distribution: A JSON object representing the neighboring geographic areas at a specific level whereby vehicles searching for parking tend to spend their time
+Hourly Distribution: A JSON object representing the average prevalence of searching for parking by hour of day
+Searching by Hour: A JSON object representing the average percentage of vehicles searching for parking within the hour
+Percentage of Vehicle Types: The percentage of vehicles with parking issues that were cars, multi-purpose vehicles, light duty trucks, medium duty trucks, heavy duty trucks, or unknown classification
 
-Furthermore, the dataset includes various vehicle type percentages, such as Percentage of Cars, Percentage of Multi-Purpose Vehicles, Percentage of Light Duty Trucks, Percentage of Medium Duty Trucks, Percentage of Heavy Duty Trucks, and Percentage of Other Vehicles.
+Content
 
-Content 
-This dataset is aggregated over a six-month period and is updated regularly. This data is publicly available from a reputable source.
+This dataset is aggregated over the previous six months and is updated monthly. This data is publicly available from a reputable source.
 
-Inspiration 
-Some potential research questions to explore include: Which cities are the most challenging to find parking in? Is there a correlation between a region's population and the time it takes to find parking? Are there any correlations between Gross Domestic Product and parking times? Is there a relationship between average household income and parking times?
+Inspiration
 
-Keywords: parking statistics, urban planning, traffic management, geographic analysis, vehicle types
+Some potential questions to explore with this dataset include: Which cities are the hardest to find parking in? Is there a relationship between a region's population and the time it takes to find parking? Is there a correlation between a region's economic indicators, such as GDP, and parking times? What about average household income?
+
+Features:
+
+Location, City, County, State, Country, Average Time to Park, Average Time to Park Ratio, Total Searching, Percentage Searching, Average Unique Geographic Areas, Average Total Geographic Areas, Circling Distribution, Hourly Distribution, Searching by Hour, Percentage of Vehicle Types, Update Date, Version
+
+Keywords: parking statistics, city planning, traffic congestion, urban development, transportation infrastructure

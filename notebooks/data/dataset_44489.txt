@@ -1,21 +1,11 @@
-Name: Wilt Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Wilt Seed One Number of Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True
 
-Tags: Machine Learning, Statistics 
-
-Subsampling of the dataset Wilt with a specified seed value, wherein we uniformly sample classes and columns, and subsequently select a specified number of rows while ensuring stratification according to the target variable.
+Tags: Subsampling of the dataset Wilt with seed equal to one, number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratified equal to true.
 
 Generated with the following source code:
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, perform stratification)
- 
-This function utilizes a random number generator to uniformly sample classes and columns from the dataset. It then proceeds to select a specified number of rows while ensuring stratification according to the target variable, thereby maintaining the overall distribution of the original dataset.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given parameters. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies the data and selects a subset of rows. Finally, it returns a dataset with the subset of data, categorical mask, and columns.
 
-The function takes into account the maximum number of classes, columns, and rows that should be sampled. If the number of unique classes exceeds the specified maximum, it selects the required number of classes based on their frequency of occurrence in the dataset.
+Features: Mean of Green, Mean of Red, Mean of Near Infrared, Standard Deviation of Plan, and Class.
 
-Similarly, if the number of columns exceeds the specified maximum, it randomly selects the required number of columns. The function also ensures that the selected columns are in a specific order to maintain consistency.
-
-Finally, if the total number of rows exceeds the specified maximum, it performs stratified sampling to select the required number of rows, thereby maintaining the overall distribution of the target variable.
-
-Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class
-
-Keywords: machine learning, statistics, dataset, subsampling, stratification, classification, feature selection
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, random sampling.

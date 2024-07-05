@@ -1,17 +1,13 @@
-Subsampling of the dataset San Francisco Police Incidents with a specified seed value.
+Name: sf police incidents seed zero
 
-Generated with the following source code:
+Tags: Subsampling of the dataset sf police incidents generated with the following source code:
 
-This function allows us to subsample a given dataset according to certain parameters. It takes into account the number of rows, columns, and classes we want our new dataset to have, as well as whether we want to stratify our sampling or not.
+This function subsamples a dataset to reduce its size while maintaining its overall characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sample. 
 
-The function first selects the unique classes present in the dataset and then randomly chooses a specified number of them. It then selects the indices where one of these chosen classes is present and uses those indices to create a new dataset.
+The function first selects a subset of classes, ensuring that the most common classes are included. It then selects the corresponding rows from the dataset. If the number of columns exceeds the maximum, it randomly selects a subset of columns. Finally, if the number of rows still exceeds the maximum, it uses stratified sampling to select a subset of rows.
 
-If the number of columns exceeds the specified maximum, the function uniformly samples the columns to reduce their number. Similarly, if the number of rows exceeds the specified maximum, the function uses a stratified split to select a specified number of rows while maintaining the class distribution.
+The resulting dataset is returned, along with its characteristics, including the categorical mask and column names.
 
-Finally, the function converts any categorical columns to strings and returns the resulting dataset along with its characteristics.
+Features: Hour of Day, Day of the Week, Month of the Year, Year, Police District, Address, Geographic Coordinates, Violent Crime Type
 
-Features: Hour of Day, Day of the Week, Month, Year, Police District, Address, Location Coordinates, Type of Crime
-
-Tags: Education, Statistics
-
-Keywords: Subsampling, Dataset, Stratification, Random Sampling, Class Distribution.
+Keywords: dataset subsampling, stratified sampling, data reduction, police incidents

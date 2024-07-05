@@ -1,15 +1,13 @@
-Subsampling of the dataset Satellite with Seed equals Three 
-Tags: Machine Learning, Mathematics 
+Name: Satellite Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Satellite with seed equal to three, arguments n rows max equal to two thousand, arguments n columns max equal to one hundred, arguments n classes max equal to ten, and arguments no stratify equal to true.
 
 Generated with the following source code:
 
-The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not, and returns a Dataset.
+The subsample function takes in a seed, n rows max, n columns max, n classes max, and stratified as parameters. It uses the numpy random default random generator to generate random numbers. It then selects a subset of the data based on the given parameters. If the number of classes is greater than n classes max, it selects a subset of classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than n columns max, it uniformly samples columns. If the number of rows is greater than n rows max, it stratifies the data accordingly and subsets it. Finally, it returns a dataset with the subsetted data.
 
-The function first generates a random number generator using the given seed. Then it uniformly samples classes from the unique values in the target variable, making sure not to exceed the maximum number of classes allowed. 
+Features: 
 
-It selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns if required, making sure not to exceed the maximum number of columns allowed.
+Target
 
-If the resulting data still has more rows than the maximum allowed, it uses stratified sampling to reduce the number of rows while maintaining the class distribution. Finally, it converts categorical columns to strings and returns the resulting Dataset.
-
-Dataset Details:
-This dataset is a subsampled version of the original Satellite dataset. It contains a hundred features, including V One, V Two, V Three, and so on up to V Thirty Six, and a target variable.
+Keywords: Subsampling, Satellite Dataset, Stratified Sampling, Random Generator, Data Subsetting

@@ -1,11 +1,15 @@
-The CodRNA dataset is categorized under Life Science and Machine Learning. It originated from the original source http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets.
+The codrna dataset, tagged as "Author" and "Source," originates from the libSVM site. This dataset focuses on the detection of non-coding RNAs based on predicted secondary structure formation free energy change. The study associated with this dataset was published in BMC Bioinformatics.
 
-This dataset is based on the research paper titled "Detection of Non-Coding RNAs on the Basis of Predicted Secondary Structure Formation Free Energy Change." The paper focuses on predicting the formation of secondary structures in non-coding RNA molecules.
+The dataset underwent preprocessing, which included joining test, train, and rest datasets. Each file was then normalized columnwise according to specific rules:
 
-To create this dataset, the test, train, and rest datasets were combined into a single dataset. Each column in the dataset was then normalized according to specific rules. Columns containing only one value were set to zero, effectively removing them due to sparsity. Columns with two values were converted into binary features, where the most frequent value was set to zero and the less frequent value was set to one. Columns with more than two values were divided by their standard deviation.
+- Constant features (columns with only one value) were set to zero and subsequently removed due to sparsity.
+- Binary features (columns with two values) were adjusted so that the more frequent value was set to zero and the less frequent to one.
+- Multinary or real features (columns with more than two values) were divided by their standard deviation.
 
-It is important to note that the CodRNA dataset contains duplicate data points both within each file and across different files. These duplicates have not been removed.
+It's important to note that the codrna dataset contains many duplicated data points, both within individual files (train, test, rest) and across these files. These duplicated points were not removed during preprocessing.
 
-The dataset consists of various features, including those related to the RNA molecule's properties.
+The features included in the dataset are Y, X, X, X, X, X, X, X, and X.
 
-Keywords: Non-Coding RNA, Secondary Structure, Free Energy Change, Normalization, Binary Features, Standard Deviation.
+This dataset serves as a valuable resource for researchers studying RNA secondary structures and their role in non-coding RNA detection. The preprocessing steps applied to the data aim to enhance its usability for machine learning applications, particularly in the field of bioinformatics.
+
+Keywords: codrna, non-coding RNA, secondary structure, free energy change, bioinformatics, data preprocessing, feature normalization, libSVM, duplicated data points

@@ -1,26 +1,15 @@
-**FOREX EURHUF Day Close**
+Name: FOREX EUR HUF Day Close
 
-Tags: Economics, Finance, Forex, Forex Close, Forex Day, History
+Tags: finance, forex, forex close, forex day
 
-This dataset contains the historical price data of the Forex EURHUF currency pair from Dukascopy. Each instance represents one candlestick of one day, with a total data range spanning from January first to December thirteenth.
+Source: Dukascopy Historical Data Feed
 
-The dataset excludes weekends, as the Forex market is not traded on these days. The timezone of the feature Timestamp is Europe/Amsterdam.
+Data Description
+This dataset contains the historical price data of the FOREX EUR/HUF from Dukascopy. Each instance, or row, represents one candlestick of one day. The entire dataset spans a specific range of dates and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. Specifically, the class attribute is true when the mean Close price is expected to increase the following day, and false when the mean Close price is expected to decrease or remain the same.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-The attributes included in this dataset are:
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-* Timestamp: The time of the current data point in Europe/Amsterdam timezone.
-* Bid Open: The bid price at the start of this time interval.
-* Bid High: The highest bid price during this time interval.
-* Bid Low: The lowest bid price during this time interval.
-* Bid Close: The bid price at the end of this time interval.
-* Bid Volume: The number of times the Bid Price changed within this time interval.
-* Ask Open: The ask price at the start of this time interval.
-* Ask High: The highest ask price during this time interval.
-* Ask Low: The lowest ask price during this time interval.
-* Ask Close: The ask price at the end of this time interval.
-* Ask Volume: The number of times the Ask Price changed within this time interval.
-* Class: Whether the average price will go up during the next interval.
-
-Keywords: Forex, EURHUF, Currency Pair, Historical Data, Candlestick, Europe/Amsterdam Timezone, Class Attribute.
+Keywords: FOREX, EUR/HUF, historical data, candlestick, finance, trading

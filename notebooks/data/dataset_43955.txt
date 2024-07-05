@@ -1,9 +1,9 @@
-The Poker dataset belongs to the classification on numerical features benchmark. This dataset was retrieved from the libSVM site and underwent several transformations. First, the test and training datasets were combined into a single dataset without scaling. Then, the classes were relabeled so that class zero represents the positive class, while classes one through nine represent the negative class.
+This is the Poker dataset, retrieved from the LibSVM site. The dataset was created by joining the test and train datasets, relabeling classes, and normalizing each file column-wise. The normalization process involved setting constant features to zero, converting binary features to zero and one, and dividing multinary or real features by their standard deviation.
 
-To normalize the dataset, each column was treated differently depending on the number of unique values it contained. Columns with only one unique value, also known as constant features, were set to zero and subsequently removed due to sparsity. Columns with two unique values, referred to as binary features, had their most frequent value set to zero, while the remaining value was set to one. Finally, columns with more than two unique values, including multinary and real features, were divided by their standard deviation.
+The dataset belongs to the classification on numerical features benchmark and is part of the tabular data benchmark. It is a transformed version of the original dataset, which is available on the LibSVM site.
 
-It is important to note that the Poker dataset exhibits mild redundancy, with approximately point two percent of duplicate data points within each file, including both the training and testing files. These duplicate points have not been removed from the dataset.
+Please note that the Poker dataset has a mild redundancy, with some duplicated data points, roughly point two percent, within each file, which have not been removed.
 
-Features include various attributes related to the game of Poker.
+Features include various numerical columns.
 
-Keywords: Poker, classification, numerical features, libSVM, normalization, redundancy, dataset transformation.
+Keywords: Poker dataset, LibSVM, classification, numerical features, tabular data, benchmark, redundancy, normalization.

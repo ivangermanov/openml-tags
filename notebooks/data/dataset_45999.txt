@@ -1,0 +1,13 @@
+The three thousand and three series of the M3 Competition were selected on a quota basis to include various types of time series data, such as micro, industry, and macro, and different time intervals between successive observations, including yearly, quarterly, and monthly. In order to ensure that enough data were available to develop an adequate forecasting model, it was decided to have a minimum number of observations for each type of data. This minimum was set to ensure that the models had sufficient data to learn from and make accurate predictions.
+
+The classification of the three thousand and three series according to the two major groupings is shown in Table One. All the time series data are strictly positive, and a test was done on all the forecasted values to avoid any problems in the various Mean Absolute Percentage Error measures. In the case of a negative value, it was substituted by zero.
+
+As in the M Competition, the participating experts were asked to make a certain number of forecasts beyond the available data they had been given. Their forecasts were subsequently compared by the authors, and the actual values referred to such forecasts were not available to the participating experts when they were making their forecasts and were not, therefore, used in developing their forecasting model.
+
+A presentation of the accuracy of such forecasts together with a discussion of the major findings is provided in the next section. The time series were melted and restructured into four columns: the identifier of a time series, the category of a time series, the value of the time series at a given time step, and the time step on the time series.
+
+The preprocessing steps included melting the data, obtaining columns for time step and value, dropping nan values, dropping certain columns, and renaming and casting certain columns. The nan values corresponded to time series that were shorter than the time series with maximum length, and there were no nans in the middle of a time series.
+
+The features of the dataset include the identifier of a time series, the category of a time series, the time step, and the value.
+
+Keywords: M3 Competition, time series forecasting, data preprocessing, forecasting model, Mean Absolute Percentage Error.

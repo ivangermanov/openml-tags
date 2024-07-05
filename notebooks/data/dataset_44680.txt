@@ -1,19 +1,17 @@
-Name: Sylvine Seed Two Rows Two Thousand NClasses Ten NCols One Hundred Stratify True 
+Name: Sylvine Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Sylvine with seed equal to two arguments number of rows maximum equal to two thousand arguments number of columns maximum equal to one hundred arguments number of classes maximum equal to ten arguments no stratify equals to false generated with the following source code 
+Tags: Subsampling of the dataset Sylvine with seed equals two arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
-This function subsamples the dataset by uniformly sampling classes then selecting the indices where one of these classes is present then uniformly samples columns if required then stratifies accordingly 
+Generated with the following source code:
 
-The function takes in several parameters including a seed for reproducibility the maximum number of rows the maximum number of columns and the maximum number of classes it also has an option to stratify or not 
+The subsample function takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-It first gets the unique classes then selects the specified number of classes using their value counts as probabilities it then gets the indices where these classes are present and filters the data accordingly 
+The function first gets the unique classes from the target variable. If there are more classes than the maximum number of classes, it selects the required number of classes using a random choice with probabilities based on the value counts of each class. It then selects the indices where one of these classes is present.
 
-If the number of columns exceeds the specified maximum it uniformly samples the columns otherwise it uses all columns 
+Next, the function uniformly samples columns if required. If the number of columns is more than the maximum number of columns, it selects the required number of columns using a random choice. It then selects the corresponding columns from the data.
 
-Finally if the number of rows exceeds the specified maximum it stratifies the data according to the target variable 
+If the number of rows is more than the maximum number of rows, the function stratifies the data accordingly. It concatenates the data and target variable, and then uses train test split to get a subset of the required size. It then drops the target variable from the subset and returns the dataset.
 
 Features: 
 
-class 
-
-Keywords: Subsampling, Dataset, Stratification, Sampling, Classes, Columns, Rows.
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection

@@ -1,15 +1,11 @@
-Jungle Chess Two Pieces Raw Endgame Complete Seed One Dataset 
+Name: Jungle Chess Two Pieces Raw Endgame Complete Seed One
 
-Tags: Subsampling of the Jungle Chess Two Pieces Raw Endgame Complete dataset 
+Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete generated with the following source code:
 
-This dataset is a subsampled version of the Jungle Chess Two Pieces Raw Endgame Complete dataset. It was generated using a specific set of arguments, including a fixed seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+This function subsamples the dataset by uniformly selecting classes and columns, and then stratifying the sample according to the target variable. The subsampling process involves several steps. First, it selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed a specified maximum. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns from the filtered data, ensuring that the number of columns does not exceed a specified maximum. Finally, it stratifies the sample according to the target variable, ensuring that the sample size does not exceed a specified maximum.
 
-The subsampling process involved several steps. First, the unique classes in the target variable were identified, and a random selection of classes was made based on their frequency in the dataset. The indices corresponding to these selected classes were then used to filter the data.
+The function takes several arguments, including the seed for random number generation, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sample. It returns a subsampled dataset with the specified characteristics.
 
-Next, a random selection of columns was made, ensuring that the number of columns did not exceed the specified maximum. The data was then filtered based on these selected columns.
+Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class
 
-Finally, the dataset was further subsampled to ensure that the number of rows did not exceed the specified maximum. This was done using stratification, which helps maintain the balance of classes in the resulting dataset.
-
-The resulting dataset contains the selected features, which include information about the strength and position of chess pieces, as well as the target variable representing the class label.
-
-Keywords: Jungle Chess, dataset, subsampling, stratification, chess pieces.
+Keywords: Jungle Chess, Subsampling, Stratification, Dataset, Random Sampling

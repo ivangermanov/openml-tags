@@ -1,17 +1,22 @@
-Pharynx Dataset 
+Name: Pharynx
+Tags: Author, Source, Unknown
 
-This dataset consists of one hundred ninety-five observations, thirteen variables, and is a part of a large clinical trial conducted by the Radiation Therapy Oncology Group in the United States. The full study involved patients with squamous carcinoma of fifteen sites in the mouth and throat, with sixteen participating institutions, although only data on three sites in the oropharynx reported by the six largest institutions are considered here.
+Please cite: Case number deleted. As used by researchers in their study on numeric prediction using instance-based learning with encoding length selection, published in Progress in Connectionist-Based Information Systems by Springer-Verlag.
 
-Patients who entered the study were randomly assigned to one of two treatment groups, either radiation therapy alone or radiation therapy combined with a chemotherapeutic agent. A primary objective of the study was to compare the two treatment policies regarding patient survival.
+Name: Pharynx (A clinical Trial in the Treatment of Carcinoma of the Oropharynx)
 
-The dataset is in free format, where at least one blank space separates each variable. The variables include case number, participating institution, sex, treatment, grade, age at the time of diagnosis, condition, site of the primary tumor, T staging, N staging, date of study entry, status, and time.
+Size: observations, variables
 
-Approximately thirty percent of the survival times are censored, primarily due to patients surviving until the time of analysis. Some patients were lost to follow-up because they moved or transferred to an institution not participating in the study, although these cases were relatively rare. 
+Descriptive Abstract: The data file provides information from a portion of a large clinical trial conducted by the Radiation Therapy Oncology Group in the United States. The complete study included patients with squamous carcinoma from multiple sites in the mouth and throat, involving several participating institutions. However, this dataset focuses on three sites in the oropharynx reported by the six largest institutions. Patients were randomly assigned to one of two treatment groups: radiation therapy alone or radiation therapy combined with a chemotherapeutic agent. A primary objective of the study was to compare these two treatment approaches in terms of patient survival.
 
-From a statistical perspective, an essential feature of these data is the significant lack of homogeneity between individuals being studied. While certain criteria for patient eligibility had to be met, eliminating extremes in the extent of disease, many factors remain uncontrolled. This study included measurements of numerous covariates expected to relate to survival experience, including sex, T staging, N staging, age, general condition, and grade.
+Source: The Statistical Analysis of Failure Time Data, published by John Wiley & Sons
 
-The site of the primary tumor and possible differences between participating institutions require consideration as well. The T and N staging classification provides a measure of the extent of the tumor at the primary site and at regional lymph nodes. The variable general condition measures the functional capacity of the patient at the time of diagnosis, while the variable grade measures the degree of differentiation of the tumor.
+Variable Descriptions: The data are in free format, with variables separated by blank spaces. Variables include case number, participating institution, sex, treatment type, tumor grade, age at diagnosis, patient condition, tumor site, T staging, N staging, entry date, status, and survival time in days.
 
-In addition to determining whether the combined treatment mode is preferable to conventional radiation therapy, it is crucial to identify the extent to which the various covariates relate to subsequent survival. It is also vital to adjust the survivals for possible imbalances present in the study regarding other covariates.
+Story Behind the Data: Approximately thirty percent of the survival times are censored, primarily due to patients surviving until the time of analysis. Some patients were lost to follow-up due to relocation or transfer to non-participating institutions, though these cases were relatively rare. A significant feature of this dataset is the considerable lack of homogeneity among the individuals studied. While certain eligibility criteria were established to eliminate extreme cases, many factors remained uncontrolled. The study included measurements of several covariates expected to relate to survival experience, such as sex, T staging, N staging, age, general condition, and tumor grade. The site of the primary tumor and potential differences between participating institutions also required consideration.
 
-Keywords: Pharynx, Carcinoma, Radiation Therapy, Chemotherapy, Survival Analysis, Censoring, Covariates, T Staging, N Staging.
+The T and N staging classification provides a measure of tumor extent at the primary site and regional lymph nodes. General condition assesses the patient's functional capacity at diagnosis, while tumor grade measures the degree of differentiation of the tumor cells. In addition to evaluating the efficacy of combined treatment versus conventional radiation therapy, the study aimed to determine the relationship between these covariates and subsequent survival. Adjusting for potential imbalances in these covariates was crucial in addressing the primary research question.
+
+The analysis of this dataset presents challenges similar to those encountered in classical linear regression and analysis of covariance, with the added complexity of accommodating censored data. The need for nonparametric and robust procedures is emphasized, given the frequent lack of empirical or theoretical support for specific failure time distributions.
+
+Keywords: oropharynx carcinoma, radiation therapy, chemotherapy, survival analysis, censored data, tumor staging, patient covariates, clinical trial, treatment comparison, nonparametric analysis

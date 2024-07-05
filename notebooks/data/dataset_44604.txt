@@ -1,9 +1,17 @@
-Machine Learning, Mathematics 
+Name: CNAE Nine Seed One
 
-Subsampling of the dataset CNAE Nine with a specified seed value generated a new dataset with specific constraints on the number of rows, columns, and classes. The subsampling process involved uniformly selecting classes and then sampling the corresponding indices where these classes were present. 
+Tags: Subsampling of the dataset CNAE Nine with seed equals one, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-The function also allowed for uniform sampling of columns if required, ensuring that the resulting dataset met the specified maximum number of columns constraint. Furthermore, the function handled cases where the initial dataset exceeded the maximum number of rows, employing stratification to ensure representative sampling.
+Generated with the following source code:
 
-Features include variables such as Sixteen, Twenty-Two, Twenty-Seven, Thirty-Three, Forty-Seven, Fifty, Fifty-Three, Sixty-Seven, Seventy-Five, Ninety-Four, Ninety-Six, Ninety-Eight, One Hundred Six, One Hundred Ten, One Hundred Twenty-Seven, One Hundred Thirty-One, One Hundred Sixty-Two, One Hundred Eighty-One, One Hundred Ninety-One, One Hundred Ninety-Nine, Two Hundred Nine, Two Hundred Eleven, Two Hundred Twenty, Two Hundred Twenty-Five, Two Hundred Thirty-Eight, Two Hundred Thirty-Nine, Two Hundred Forty, Two Hundred Fifty-Eight, Two Hundred Sixty-Three, Two Hundred Ninety-Two, Three Hundred, Three Hundred Four, Three Hundred Eight, Three Hundred Sixteen, Three Hundred Twenty, Three Hundred Twenty-Six, Three Hundred Forty-Five, Three Hundred Forty-Nine, Three Hundred Fifty-Five, Three Hundred Fifty-Eight, Three Hundred Fifty-Nine, Three Hundred Seventy-Five, Three Hundred Eighty-Three, Three Hundred Eighty-Four, Three Hundred Eighty-Eight, Three Hundred Ninety, Four Hundred, Four Hundred Twenty, Four Hundred Twenty-Three, Four Hundred Twenty-Six, Four Hundred Thirty-Three, Four Hundred Thirty-Five, Four Hundred Thirty-Nine, Four Hundred Forty, Four Hundred Sixty-Seven, Four Hundred Ninety-Three, Four Hundred Ninety-Eight, Five Hundred, Five Hundred Seven, Five Hundred Thirteen, Five Hundred Thirty-Eight, Five Hundred Seventy-Two, Five Hundred Seventy-Four, Five Hundred Eighty-Six, Five Hundred Eighty-Seven, Five Hundred Ninety-One, Five Hundred Ninety-Eight, Five Hundred Ninety-Nine, Six Hundred Four, Six Hundred Nineteen, Six Hundred Twenty-Eight, Six Hundred Thirty-Eight, Six Hundred Thirty-Nine, Six Hundred Forty, Six Hundred Forty-Two, Six Hundred Forty-Seven, Six Hundred Fifty-Three, Six Hundred Sixty-Seven, Six Hundred Seventy-Three, Six Hundred Seventy-Nine, Seven Hundred Two, Seven Hundred Eleven, Seven Hundred Seventeen, Seven Hundred Twenty-Three, Seven Hundred Twenty-Five, Seven Hundred Twenty-Seven, Seven Hundred Fifty-One, Seven Hundred Sixty, Seven Hundred Seventy-One, Seven Hundred Seventy-Six, Seven Hundred Eighty-Six, Seven Hundred Eighty-Seven, Seven Hundred Eighty-Nine, Seven Hundred Ninety-Two, Eight Hundred One, Eight Hundred Twelve, Eight Hundred Twenty-Seven, Eight Hundred Twenty-Nine, Eight Hundred Thirty-Five, Eight Hundred Forty.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Keywords: subsampling, machine learning, dataset, stratification, sampling, constraints.
+The function first selects a specified number of classes from the original dataset using random sampling with replacement. It then selects the indices where one of these classes is present and filters the data accordingly.
+
+Next, it uniformly samples columns if required. If the number of columns in the dataset is greater than the specified maximum, it randomly selects the desired number of columns and filters the data accordingly.
+
+Finally, if the number of rows in the dataset is greater than the specified maximum, it uses stratified sampling to select the desired number of rows while maintaining the original distribution of the data.
+
+Features: 
+
+Keywords: Subsampling, Dataset, Random Sampling, Stratified Sampling, Data Filtering.

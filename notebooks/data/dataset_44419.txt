@@ -1,15 +1,15 @@
-Name: Higgs Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Higgs Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Economics, Machine Learning 
+Tags: Subsampling of the dataset Higgs generated with the following source code:
 
-Sub-sampling of the dataset Higgs with a seed of two, maximum number of rows set to two thousand, maximum number of columns set to one hundred, and maximum number of classes set to ten. This sub-sampled dataset was generated using the following source code.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling.
 
-The sub-sample function takes in parameters such as seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not. It first uniformly samples classes from the unique values in the target variable, selecting a specified number of classes based on their frequency. Then, it selects the indices where one of these classes is present.
+The function first uniformly samples classes from the dataset, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and reduces the dataset to these indices.
 
-Next, it uniformly samples columns if required, choosing a specified number of columns randomly. The function then checks if the number of rows exceeds the maximum limit. If so, it uses stratified sampling to select a sub-set of the data, ensuring that the class distribution remains consistent.
+Next, the function uniformly samples columns from the dataset, selecting a specified number of columns. If the dataset has more rows than the specified maximum, it stratifies the sampling according to the target variable, ensuring that the sampled dataset maintains the same class balance as the original dataset.
 
-Finally, the function converts categorical columns to strings and returns a new dataset with the sub-sampled data, along with its corresponding metadata.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-Features include variables related to leptons, jets, and energies, as well as various mass calculations.
+Features: lepton PT, lepton eta, lepton phi, missing energy magnitude, missing energy phi, jet one PT, jet one eta, jet one phi, jet two PT, jet two eta, jet two phi, jet three PT, jet three eta, jet three phi, jet four PT, jet four eta, jet four phi, m jj, m jjj, m lv, m jlv, m bb, m wbb, m wwbb, target
 
-Keywords: Higgs dataset, machine learning, economics, sub-sampling, stratification, class distribution.
+Keywords: dataset subsampling, stratified sampling, class balance, feature selection, data reduction

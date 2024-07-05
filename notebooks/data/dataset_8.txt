@@ -1,15 +1,28 @@
-Liver Disorders
+Liver Disorders Dataset
 
-Tags: Health, Medicine
+Tags: study, uci
 
-This dataset consists of records of single male individuals, each containing six blood test results that are believed to be indicative of liver disorders potentially caused by excessive alcohol consumption.
+Source: UCI - May 1990
 
-The first five variables are all blood tests, including mean corpuscular volume, alkaline phosphatase, alanine aminotransferase, aspartate aminotransferase, and gamma-glutamyl transpeptidase. These tests are thought to be sensitive to liver disorders that may arise from excessive drinking.
+Please cite: BUPA liver disorders
 
-It is important to note that the seventh field, often referred to as the selector, has been widely misinterpreted in the past as a dependent variable representing the presence or absence of a liver disorder. However, this interpretation is incorrect. The seventh field was actually created by researchers to split the data into training and testing sets. Therefore, it is not suitable as a dependent variable for classification purposes.
+This dataset contains information related to potential liver disorders that may result from excessive alcohol consumption. Each record represents data from a single male individual. The first five variables are blood test results believed to be sensitive indicators of liver disorders associated with alcohol abuse.
 
-Unfortunately, the dataset does not contain any variable that directly indicates the presence or absence of a liver disorder. To overcome this limitation, researchers have used the sixth field, which represents the number of half-pint equivalents of alcoholic beverages consumed daily, as a dependent variable for classification after dichotomizing it.
+Important note: The seventh field (selector) has been frequently misinterpreted as a dependent variable indicating the presence or absence of a liver disorder. This interpretation is incorrect. The selector field was created by researchers as a train/test set divider and is not suitable for classification purposes. The dataset does not include a specific variable denoting the presence or absence of a liver disorder.
 
-Because of the widespread misinterpretation of the seventh field in the past, researchers should exercise caution when using this dataset as a classification benchmark and clearly state their methodology to avoid confusion.
+Researchers intending to use this dataset for classification should follow the methodology employed in previous experiments, which utilized the sixth field (drinks) as a dichotomized dependent variable for classification. Due to past misinterpretations, it is crucial for researchers to clearly state their methodology when working with this data.
 
-Keywords: Liver Disorders, Blood Tests, Excessive Alcohol Consumption, Classification Benchmark, Dependent Variable.
+Attribute information:
+- Mean corpuscular volume
+- Alkaline phosphatase
+- Alanine aminotransferase
+- Aspartate aminotransferase
+- Gamma glutamyl transpeptidase
+- Number of half pint equivalents of alcoholic beverages consumed per day
+- Selector field for train/test set division
+
+The dataset does not contain missing values.
+
+Researchers should exercise caution when using this dataset and ensure they understand its limitations and proper usage to avoid perpetuating past misinterpretations.
+
+Keywords: liver disorders, alcohol consumption, blood tests, classification, dataset misinterpretation, medical research, machine learning

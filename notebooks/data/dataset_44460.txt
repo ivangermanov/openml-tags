@@ -1,17 +1,17 @@
-Subsampling of the dataset Compass with specified parameters generated a new dataset. The subsampling process involved uniformly sampling classes and columns from the original dataset. 
+Compass Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The function used for subsampling took several arguments including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+This is a subsampling of the dataset Compass with a seed of two. The subsampling was done with the following arguments: the maximum number of rows is two thousand, the maximum number of columns is one hundred, the maximum number of classes is ten, and stratification is true.
 
-In this case, the seed value was two, and the maximum number of rows, columns, and classes were two thousand, one hundred, and ten, respectively. Additionally, the stratify argument was set to true.
+The subsampling was generated with the following source code:
 
-The subsampling process first sampled classes uniformly. If the number of unique classes exceeded the maximum allowed, a random selection of classes was made based on their frequency in the dataset. 
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Next, the function sampled columns uniformly. If the number of columns exceeded the maximum allowed, a random selection of columns was made.
+The function first gets the unique classes from the target variable. If there are more classes than the maximum number of classes, it selects the maximum number of classes using a weighted random choice, where the weights are the value counts of each class. It then selects the indices where one of these classes is present.
 
-Finally, the function sampled rows based on the specified number of rows. If the stratify argument was true, the sampling was done in a stratified manner.
+Next, the function uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns using a random choice.
 
-The resulting dataset consisted of the sampled data, along with metadata including the original dataset name, column names, and a mask indicating which columns were categorical.
+Finally, the function stratifies the data accordingly. If the number of rows is greater than the maximum number of rows, it uses train test split to select a subset of the data, stratifying by the target variable.
 
-Features included sex, age, race, juvenile felony count, juvenile misdemeanor count, prior counts, days between screening arrest, and COMPAS scores.
+The resulting dataset has the following features: sex, age, age category, race, juvenile felony count, juvenile misdemeanor count, juvenile other count, prior count, days between screening and arrest, days from compass, charge degree, decile score, score text, type of assessment, decile score, score text, end, and is recid.
 
-Keywords: subsampling, dataset, stratification, machine learning, statistics
+Keywords: dataset subsampling, stratification, feature selection, random sampling, class imbalance.

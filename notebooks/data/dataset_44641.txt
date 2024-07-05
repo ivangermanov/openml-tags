@@ -1,21 +1,9 @@
-Name: DNA Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+Name: DNA Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Economics, Statistics
+Tags: Subsampling of the DNA dataset with seed three, generated with the following source code:
 
-Subsampling of the dataset DNA with seed equals three arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False.
+This function subsamples the dataset by uniformly selecting classes, columns, and rows. It starts by selecting classes, ensuring the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it uniformly samples columns if required, ensuring the number of columns does not exceed the maximum allowed. Finally, it stratifies the data according to the target variable and selects the required number of rows.
 
-Generated with the following source code:
+Features: (omitted due to unreadability)
 
-This function subsamples a given dataset. It takes several parameters including a seed for reproducibility, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not.
-
-The function first gets the unique classes in the dataset and selects a specified number of them randomly. It then selects the indices where one of these classes is present and filters the data accordingly.
-
-Next, it uniformly samples the columns if required. If the number of columns exceeds the specified maximum, it chooses a certain number of column indices randomly and filters the data again.
-
-Finally, it checks if the number of rows exceeds the specified maximum. If so, it uses stratified sampling to select a certain number of rows while maintaining the class balance.
-
-Features: 
-
-(This section has been removed due to unreadable feature names)
-
-Keywords: Subsampling, Dataset, Stratification, Random Sampling, Class Balance, Reproducibility
+Keywords: DNA dataset, subsampling, stratification, class selection, column selection, row selection

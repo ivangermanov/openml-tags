@@ -1,11 +1,17 @@
-Machine learning dataset numerai twenty-eight point six subsampled with seed three, containing two thousand rows, one hundred columns, and ten classes, generated with stratification enabled.
+Name: Numerai Dataset Subsample
 
-This dataset was generated using the following source code:
+Tags: Subsampling of the Numerai dataset with stratification
 
-The function subsample takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification. It first initializes a random number generator with the given seed value. Then, it selects a uniform sample of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices corresponding to these chosen classes and filters the data accordingly. Next, it uniformly samples columns, selecting a specified number of columns without replacement. Finally, it applies stratification to ensure an even distribution of classes in the sampled data.
+This dataset is a subsample of the original Numerai dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, followed by uniformly sampling columns and rows. The goal was to create a smaller dataset that retains the essential characteristics of the original dataset.
 
-Features of this dataset include attributes zero through twenty-one.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by randomly choosing classes based on their frequency of occurrence in the dataset. The selected classes were then used to filter the dataset, retaining only the rows that correspond to these classes.
 
-Tags: Machine Learning, Mathematics
+Next, the columns of the dataset were sampled uniformly. This involved randomly selecting a subset of columns from the original dataset. The selected columns were then used to create a new dataset with the reduced number of columns.
 
-Keywords: machine learning, dataset, subsampling, stratification, classification
+Finally, the rows of the dataset were sampled uniformly. This involved randomly selecting a subset of rows from the dataset, while ensuring that the class distribution was maintained. This was achieved by using stratified sampling, which ensures that the proportion of each class in the subsample is similar to that in the original dataset.
+
+The resulting dataset has a smaller number of rows, columns, and classes compared to the original dataset. However, it retains the essential characteristics of the original dataset and can be used for machine learning model development and testing.
+
+Features: attribute zero, attribute one, attribute two, attribute three, attribute four, attribute five, attribute six, attribute seven, attribute eight, attribute nine, attribute ten, attribute eleven, attribute twelve, attribute thirteen, attribute fourteen, attribute fifteen, attribute sixteen, attribute seventeen, attribute eighteen, attribute nineteen, attribute twenty, attribute twenty one
+
+Keywords: dataset subsampling, stratified sampling, machine learning, data reduction, feature selection

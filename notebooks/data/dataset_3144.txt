@@ -1,15 +1,50 @@
-QSAR-TID-100836 Tags: MTLQSAR, Physical Sciences, study_3 
+QSAR-TID Dataset Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred thousand eight hundred thirty-six, and it has multiple rows and numerous features including IDs and class feature: Molecule ChEMBL ID and Median PXc fifty. 
+Source: MetaQSAR project - September
 
-The features represent FCFP one thousand twenty-four bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo-pCI) of several compounds on drug target TID, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Features include Molecule ChEMBL ID, FCFP six one thousand twenty-four zero through ninety-eight, and many more.
+Features: MOLECULE CHEMBL ID, FCFP, and many more...
 
-This dataset was scraped from various sources including ChEMBL, Expression Atlas, Gene Ontology, UniProt, InterPro, Pfam, and PDBe. 
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Serine/threonine protein kinase NEK
+Synonyms: NEK Never in mitosis A related kinase, NimA related protein kinase, Serine/threonine protein kinase Nek
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/Other protein kinase group/Other protein kinase NEK family
 
-It contains information about the Serine Threonine-Protein Kinase NEK seven, also known as Never in Mitosis A-Related Kinase seven or NimA-Related Protein Kinase seven. It is a single protein found in humans and belongs to the enzyme kinase protein kinase other protein kinase group, specifically the NEK family.
+Description Relationship Accession
+Serine/threonine protein kinase Nek SINGLE PROTEIN
 
-This protein is involved in various cellular processes, including protein phosphorylation, regulation of mitotic cell cycle, phosphorylation, peptidyl-serine phosphorylation, and many others. It is also associated with certain components, such as the spindle pole, nucleus, nucleoplasm, cytoplasm, microtubule organizing center, cytoskeleton, and microtubule.
+Relationship Pref Name Target Type
+SUPERSET OF NEK kinase PROTEIN FAMILY
 
-Keywords: QSAR, Molecular Fingerprints, Serine Threonine-Protein Kinase, NEK seven, Protein Phosphorylation, Cellular Processes.
+Expression Atlas
+
+Go Component: spindle pole, nucleus, nucleoplasm, cytoplasm, microtubule organizing center, cytoskeleton, microtubule
+
+Go Function: nucleotide binding, protein kinase activity, protein serine/threonine kinase activity, protein binding, ATP binding, kinase activity, transferase activity, metal ion binding, protein serine kinase activity, molecular function activator activity
+
+Go Process: protein phosphorylation, regulation of mitotic cell cycle, phosphorylation, peptidyl serine phosphorylation, positive regulation of telomere maintenance via telomerase, cellular response to potassium ion, spindle assembly, positive regulation of telomerase activity, positive regulation of NLRP inflammasome complex assembly, positive regulation of telomere capping
+
+canSAR Target
+
+IntAct
+
+PharmGKB: NIMA (never in mitosis gene a) related kinase
+
+Pharos: Tchem
+
+Reactome: Activation of NIMA Kinases NEK, NEK, NEK, Nuclear Pore Complex (NPC) Disassembly, EML and NUDC in mitotic spindle formation
+
+UniProt
+
+InterPro: Prot kinase dom, Ser Thr/Tyr kinase cat dom, Ser/Thr kinase AS, Kinase like dom sf, Protein kinase ATP BS
+
+Pfam: Pkinase
+
+PDBe
+
+Keywords: QSAR, molecular fingerprints, protein kinase, serine/threonine kinase, drug target, ChEMBL, enzyme classification

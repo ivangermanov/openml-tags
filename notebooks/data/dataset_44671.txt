@@ -1,13 +1,13 @@
-Gesture Phase Segmentation Processed Seed Three 
+Name: Gesture Phase Segmentation Processed Seed Three
 
-This dataset is a subsampled version of the original Gesture Phase Segmentation Processed dataset. It has been generated using a specific set of parameters, including a seed value of three, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling.
+Tags: Subsampling of the dataset Gesture Phase Segmentation Processed with seed equal to three, arguments number of rows max equal to two thousand, arguments number of columns max equal to one hundred, arguments number of classes max equal to ten, and arguments no stratify equal to true.
 
-The original dataset had a large number of instances, but this subsampled version has been reduced to a more manageable size while still maintaining a representative distribution of classes. This was achieved through a process of uniform sampling, first selecting a subset of classes and then randomly choosing instances from within those classes.
+Generated with the following source code:
 
-In addition to reducing the number of instances, the dataset has also been filtered to include only a subset of the original features. This was done to reduce the dimensionality of the dataset and make it more suitable for analysis. The selection of features was performed randomly, but with the goal of preserving a diverse range of characteristics.
+The subsample function takes in a seed, number of rows max, number of columns max, number of classes max, and a stratified boolean as arguments. It uses a random number generator with the given seed to uniformly sample classes from the unique values in the target variable. If the number of unique classes exceeds the maximum number of classes, it selects the top classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-The resulting dataset consists of a set of features, each representing a different aspect of the gesture phase segmentation problem. These features have been carefully chosen to provide a comprehensive representation of the underlying phenomenon, and can be used as input to a machine learning algorithm for training and testing.
+If the number of columns exceeds the maximum number of columns, it uniformly samples columns and subsets the data. If the number of rows exceeds the maximum number of rows, it uses stratified sampling to subset the data. Finally, it returns a dataset with the subsetted data, categorical mask, and column names.
 
-Machine Learning, Mathematics
+Features: 
 
-Keywords: Gesture Phase Segmentation, Subsampling, Machine Learning, Dimensionality Reduction, Feature Selection
+Keywords: Gesture Phase Segmentation, Subsampling, Stratified Sampling, Random Number Generator, Value Counts.

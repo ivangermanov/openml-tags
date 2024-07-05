@@ -1,30 +1,16 @@
-**Phoneme**
-Tags: Computer Systems, Machine Learning
+Phoneme
+Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark.
 
-This dataset belongs to the regression on numerical features benchmark.
+The aim of this dataset is to distinguish between nasal and oral sounds. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy, integrated on all the frequencies. The phonemes are transcribed as follows: sh as in she, dcl as in dark, iy as the vowel in she, aa as the vowel in dark, and ao as the first vowel in water.
 
-The aim of this dataset is to distinguish between nasal and oral sounds. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy integrated on all the frequencies.
+The current dataset was formatted by the KEEL repository, but originally hosted by the ELENA Project. The dataset originates from the European ESPRIT project: ROARS. The aim of this project was the development and the implementation of a real-time analytical system for French and Spanish speech recognition.
 
-The phonemes are transcribed as follows: the sound "sh" as in "she", "dcl" as in "dark", "iy" as the vowel in "she", "aa" as the vowel in "dark", and "ao" as the first vowel in "water".
+Most of the already existing speech recognition systems are global systems, which recognize signals and do not really use the speech specificities. On the contrary, analytical systems take into account the articulatory process leading to the different phonemes of a given language, the idea being to deduce the presence of each of the phonetic features from the acoustic observation. The main difficulty of analytical systems is to obtain acoustic parameters sufficiently reliable. These acoustic measurements must contain all the information relative to the concerned phonetic feature, being speaker independent, being context independent, and being more or less robust to noise.
 
-### Source
+The primary acoustic observation is always voluminous, and classification cannot be processed directly. In ROARS, the initial database is provided by cochlear spectra, which may be seen as the output of a filters bank having a constant frequency answer, where the central frequencies are distributed on a logarithmic scale to simulate the frequency answer of the auditory nerves. The filters outputs are taken every short period of time, depending on the type of phoneme observed, stationary or transitory.
 
-The current dataset was formatted by the KEEL repository, but originally hosted by the ELENA Project. The dataset originates from the European ESPRIT project: Real-Time Analytical System for French and Spanish Speech Recognition.
+The aim of the present database is to distinguish between nasal and oral vowels. There are thus two different classes: Nasals and Orals. This database contains vowels coming from isolated syllables. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy, integrated on all the frequencies. Each harmonic is signed: positive when it corresponds to a local maximum of the spectrum and negative otherwise. Three observation moments have been kept for each vowel to obtain different instances: the observation corresponding to the maximum total energy, and the observations taken before and after the observation corresponding to this maximum total energy.
 
-### Relevant Information
+The patterns are presented in a random order.
 
-Most of the already existing speech recognition systems are global systems, which recognize signals and do not really use the speech specificities. On the contrary, analytical systems take into account the articulatory process leading to the different phonemes of a given language, the idea being to deduce the presence of each of the phonetic features from the acoustic observation. 
-
-The main difficulty of analytical systems is to obtain acoustical parameters sufficiently reliable. These acoustical measurements must contain all the information relative to the concerned phonetic feature, being speaker independent, context independent, and more or less robust to noise.
-
-The primary acoustical observation is always voluminous and classification cannot be processed directly. 
-
-The aim of the present database is to distinguish between nasal and oral vowels. There are thus two different classes: Nasal and Oral.
-
-This database contains vowels coming from isolated syllables. Five different attributes were chosen to characterize each vowel: they are the amplitudes of the five first harmonics, normalized by the total energy integrated on all the frequencies. 
-
-Each harmonic is signed: positive when it corresponds to a local maximum of the spectrum and negative otherwise. Three observation moments have been kept for each vowel to obtain different instances: the observation corresponding to the maximum total energy, the observations taken before and after the observation corresponding to this maximum total energy.
-
-From these initial values, some instances for which the amplitude of the first harmonics was zero were removed, leading to the final database. The patterns are presented in a random order.
-
-Keywords: speech recognition, phonemes, nasal sounds, oral sounds, acoustical parameters, analytical systems.
+Keywords: speech recognition, phonemes, acoustic parameters, analytical systems, nasal and oral vowels.

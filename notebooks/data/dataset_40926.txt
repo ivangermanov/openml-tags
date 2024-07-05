@@ -1,15 +1,13 @@
-CIFAR-10 Small
+CIFAR 10 Small
 
-Tags: Derived, Images, Machine Learning
+Tags: derived
 
-Source: University of Toronto 
+Source: University of Toronto
 
-This dataset is a twenty thousand instance sample of the original CIFAR-10 dataset. It was sampled randomly and stratified, with two thousand examples per class. The training and test sets were merged. You can find the corresponding task for the original train-test splits.
+This is a sample of the original CIFAR 10 dataset, consisting of twenty thousand instances. The sample was randomly selected and stratified, with two thousand examples per class. The training and test sets are merged. To find the corresponding task for the original train-test splits, refer to the original CIFAR 10 dataset.
 
-CIFAR-10 is a labeled subset of the Eighty Million Tiny Images dataset. It originally consisted of thirty-two by thirty-two color images representing ten classes of objects: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. The classes are completely mutually exclusive. There is no overlap between automobiles and trucks. Automobile includes sedans, SUVs, and similar vehicles. Truck includes only big trucks. Neither includes pickup trucks.
+CIFAR 10 is a labeled subset of the eighty million tiny images dataset. It consists of thirty-two by thirty-two color images representing ten classes of objects: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. The classes are completely mutually exclusive, with no overlap between automobiles and trucks. Automobile includes sedans, SUVs, and similar vehicles, while truck includes only big trucks, excluding pickup trucks.
 
-The original CIFAR-10 dataset contained six thousand images per class. The original train-test split randomly divided these into five thousand train and one thousand test images per class.
+Each instance represents a thirty-two by thirty-two color image as an array. The image is stored in row-major order, with the first thirty-two entries of the array being the red channel values of the first row of the image. The labels are encoded as integers, corresponding to the numbered classes listed above.
 
-Each instance represents a thirty-two by thirty-two color image as an array. The first part of the array contains the red channel values, the next part the green, and the final part the blue. The image is stored in row-major order, so that the first thirty-two entries of the array are the red channel values of the first row of the image. The labels are encoded as integers corresponding to the numbered classes listed above.
-
-Keywords: CIFAR-10, machine learning, images, dataset, classification
+Keywords: image classification, object recognition, machine learning, dataset, computer vision

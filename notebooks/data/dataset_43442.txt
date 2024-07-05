@@ -1,15 +1,21 @@
-Computer Systems, Machine Learning 
+Context: Imbalanced Classes Put Accuracy Out of Business
 
-Imbalanced Classes Put Accuracy Out of Business 
+This is a surprisingly common problem in machine learning, specifically in classification, occurring in datasets with a disproportionate ratio of observations in each class. Standard accuracy no longer reliably measures performance, which makes model training much trickier. Imbalanced classes appear in many domains, including anti-fraud and anti-spam.
 
-This is a surprisingly common problem in machine learning, specifically in classification, occurring in datasets with a disproportionate ratio of observations in each class. It is a challenge that arises when one class has a significantly larger number of instances than the others, leading to biased models that favor the majority class.
+Inspiration: Five Tactics for Handling Imbalanced Classes in Machine Learning
 
-Standard accuracy no longer reliably measures performance, which makes model training much trickier. The issue of imbalanced classes appears in many domains, including anti-fraud systems and anti-spam filters.
+When dealing with imbalanced classes, it is essential to adopt alternative strategies to ensure accurate model performance. Here are five tactics to consider:
 
-To tackle this problem, several strategies have been developed. Here are five tactics for handling imbalanced classes in machine learning:
+Upsample the Minority Class: Increase the number of instances in the minority class to balance the dataset.
 
-One approach is to up-sample the minority class, thereby increasing its presence in the dataset. Another tactic involves down-sampling the majority class, reducing its influence on the model. A third strategy involves changing the performance metric used to evaluate the model, moving away from standard accuracy towards more nuanced measures. A fourth tactic is to penalize algorithms during cost-sensitive training, assigning higher costs to misclassification of the minority class. Finally, using tree-based algorithms has also been shown to be effective in handling imbalanced classes.
+Downsample the Majority Class: Reduce the number of instances in the majority class to balance the dataset.
 
-The dataset features include month, credit amount, credit term, age, sex, education, product type, and family status.
+Change Your Performance Metric: Move away from standard accuracy and adopt metrics that are more suitable for imbalanced datasets, such as F1 score or area under the ROC curve.
 
-Keywords: imbalanced classes, machine learning, classification, anti-fraud systems, anti-spam filters, cost-sensitive training, tree-based algorithms.
+Penalize Algorithms (Cost-Sensitive Training): Assign different costs to misclassification errors based on the class, thereby penalizing the algorithm for misclassifying the minority class.
+
+Use Tree-Based Algorithms: Utilize tree-based algorithms, such as decision trees or random forests, which are more robust to class imbalance.
+
+Features: month, credit amount, credit term, age, sex, education, product type, having children flag, region, income, family status, phone operator, is client, bad client target
+
+Keywords: imbalanced classes, machine learning, classification, accuracy, performance metric, cost-sensitive training, tree-based algorithms.

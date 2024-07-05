@@ -1,44 +1,60 @@
 Seismic Bumps Dataset
 
-The data describes the problem of high energy (higher than ten thousand joules) seismic bumps forecasting in a coal mine. The data comes from two longwalls located in a Polish coal mine.
+The data describe the problem of high energy seismic bumps forecasting in a coal mine. Data come from two longwalls located in a Polish coal mine.
 
 Citation Request
 
-Application of Rule Induction Algorithms for Analysis of Data Collected by Seismic Hazard Monitoring Systems in Coal Mines. Archives of Mining Sciences, 2010.
+Application of rule induction algorithms for analysis of data collected by seismic hazard monitoring systems in coal mines. Archives of Mining Sciences.
+
+Donors and Creators
+
+Institute of Computer Science, Silesian University of Technology, Poland
+Institute of Innovative Technologies EMAG, Poland
 
 Data Characteristics
 
-Instances: Two Thousand Five Hundred Eighty Four
-Attributes: Eighteen plus class
-Class Distribution: Hazardous State (class one) : Six Point Six Percent, Non-Hazardous State (class zero) : Ninety Three Point Four Percent
+Instances: 2584
+Attributes: 18 + class
+Class distribution: hazardous state (class 1) : 6.6%, non-hazardous state (class 0): 93.4%
 Missing Attribute Values: None
 
-Attribute Information:
+Attribute Information
 
-One. Seismic: Result of Shift Seismic Hazard Assessment in the Mine Working Obtained by the Seismic Method (A - Lack of Hazard, B - Low Hazard, C - High Hazard, D - Danger State)
-Two. Seismo Acoustic: Result of Shift Seismic Hazard Assessment in the Mine Working Obtained by the Seismo Acoustic Method
-Three. Shift: Information About Type of a Shift (Working - Coal Getting, Preparation Shift)
+1. Seismic: result of shift seismic hazard assessment in the mine working obtained by the seismic method
+2. Seismoacoustic: result of shift seismic hazard assessment in the mine working obtained by the seismoacoustic method
+3. Shift: information about type of a shift
+4. General Energy: seismic energy recorded within previous shift by the most active geophone
+5. General Pulses: a number of pulses recorded within previous shift by the most active geophone
+6. General Deviation Energy: a deviation of energy recorded within previous shift by the most active geophone from average energy recorded during eight previous shifts
+7. General Deviation Pulses: a deviation of a number of pulses recorded within previous shift by the most active geophone from average number of pulses recorded during eight previous shifts
+8. General Hazard: result of shift seismic hazard assessment in the mine working obtained by the seismoacoustic method based on registration coming from the most active geophone only
+9. Number of Bumps: the number of seismic bumps recorded within previous shift
+10. Number of Bumps in Energy Range: the number of seismic bumps registered within previous shift in different energy ranges
+11. Total Energy: total energy of seismic bumps registered within previous shift
+12. Maximum Energy: the maximum energy of the seismic bumps registered within previous shift
+13. Class: the decision attribute - hazardous state or non-hazardous state
 
 Relevant Information
 
-Mining activity is and has always been connected with the occurrence of dangers, which are commonly called mining hazards. A special case of such threat is a seismic hazard, which frequently occurs in many underground mines. Seismic hazard is the hardest detectable and predictable of natural hazards and in this respect it is comparable to an earthquake. More and more advanced seismic and seismo acoustic monitoring systems allow a better understanding of rock mass processes and definition of seismic hazard prediction methods. Accuracy of so far created methods is, however, far from perfect. Complexity of seismic processes and big disproportion between the number of low-energy seismic events and the number of high-energy phenomena (for example, greater than ten thousand joules) causes the statistical techniques to be insufficient to predict seismic hazard. Therefore, it is essential to search for new opportunities of better hazard prediction, also using machine learning methods.
+Mining activity is always connected with the occurrence of dangers which are commonly called mining hazards. A special case of such threat is a seismic hazard which frequently occurs in many underground mines. Seismic hazard is the hardest detectable and predictable of natural hazards and in this respect it is comparable to an earthquake. More and more advanced seismic and seismoacoustic monitoring systems allow a better understanding rock mass processes and definition of seismic hazard prediction methods. Accuracy of so far created methods is however far from perfect. Complexity of seismic processes and big disproportion between the number of low-energy seismic events and the number of high-energy phenomena causes the statistical techniques to be insufficient to predict seismic hazard. Therefore, it is essential to search for new opportunities of better hazard prediction, also using machine learning methods.
 
-Classification Results Using Stratified Ten-Fold Cross-Validation Repeated Ten Times
+Classification Results
 
-Algorithm Accuracy Balanced Accuracy Accuracy Zero Accuracy One Size
-QR Mod Lem Entropy RSS Eighty Point Two Sixty Nine Point One Eighty One Point Nine Fifty Six Point Three Five Twenty Seven Point Five
-QR Mod Lem Entropy Corr Eighty Two Point Nine Sixty Seven Point Nine Eighty Five Point One Fifty Point Six Five Forty Five Point Five
-MODLEM Ninety Two Point Five Fifty Two Point Six Ninety Eight Point Five Six Point Six Five One Hundred Forty Five Point Five
-ML Rules Minus M Thirty Ninety Three Point Two Fifty Point Five Ninety Nine Point Six Nine One Point Two Nine Thirty
-ML Rules Minus M One Hundred Ninety Two Point Nine Fifty Two Point Zero Ninety Nine Point One Four Point Eight Eight One Hundred
-ML Rules Minus M Five Hundred Ninety Two Point Three Fifty Two Point Nine Ninety Eight Point Two Seven Point Five Nine Five Hundred
-BRACID Eighty Seven Point Five Sixty Two Point Zero Ninety One Point Three Eight Two Point Seven One
-JRip Ninety Three Point Zero Fifty One Point Four Ninety Nine Point Three Five Three Point Four Seven One Point Eight
-PART Ninety Two Point One Fifty Two Point Seven Ninety Eight Point Zero Seven Point Three Five Thirty Four
-J Forty Eight Ninety Three Point One Fifty Point Two Ninety Nine Point Six Four Zero Point Eight Two Five Point Six
-Simple Cart Ninety Three Point Four Fifty Point Zero One Hundred Zero Point Zero One Point Zero
-Naive Bayes Eighty Six Point Seven Sixty Four Point Seven Ninety Point Zero Eight Nine Point Four One
-IB One Eighty Nine Point Four Fifty Five Point Three Ninety Four Point Five Sixteen Point Zero Six
-Random Forest Minus I One Hundred Ninety Three Point One Fifty Two Point One Ninety Nine Point Three One Four Point Eight Eight One Hundred
+| Algorithm | Accuracy | Balanced Accuracy | Accuracy of Class 0 | Accuracy of Class 1 | Size |
+| --- | --- | --- | --- | --- | --- |
+| q-ModLEM | 80.2 | 69.1 | 81.90 | 56.35 | 27.5 |
+| q-ModLEM | 82.9 | 67.9 | 85.15 | 50.65 | 45.5 |
+| MODLEM | 92.5 | 52.6 | 98.58 | 6.65 | 145.5 |
+| MLRules | 93.2 | 50.5 | 99.69 | 1.29 | 30 |
+| MLRules | 92.9 | 52.0 | 99.10 | 4.88 | 100 |
+| MLRules | 92.3 | 52.9 | 98.27 | 7.59 | 500 |
+| BRACID | 87.5 | 62.0 | 91.38 | 32.71 | - |
+| Jrip | 93.0 | 51.4 | 99.35 | 3.47 | 1.8 |
+| PART | 92.1 | 52.7 | 98.09 | 7.35 | 34 |
+| J48 | 93.1 | 50.2 | 99.64 | 0.82 | 5.6 |
+| SimpleCart | 93.4 | 50.0 | 100 | 0.00 | 1.0 |
+| NaiveBayes | 86.7 | 64.7 | 90.08 | 39.41 | - |
+| IB1 | 89.4 | 55.3 | 94.54 | 16.06 | - |
+| RandomForest | 93.1 | 52.1 | 99.31 | 4.88 | 100 |
 
-Keywords: Seismic Bumps, Coal Mine, Machine Learning, Prediction Methods, Rock Mass Processes, Seismic Hazard, Natural Hazards, Mining Activity, Underground Mines, Earthquake, Statistical Techniques.
+Keywords: seismic bumps, coal mine, forecasting, machine learning, hazard prediction, rock mass processes, seismic hazard assessment.

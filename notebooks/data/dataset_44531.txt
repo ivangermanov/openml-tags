@@ -1,17 +1,11 @@
-Airlines Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Airlines Seed Three Dataset with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-Tags: Agriculture, Earth Science 
+This dataset is a subsample of the original airlines dataset, generated with a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were then used to filter the data, retaining only the instances that belonged to these classes.
 
-Sub-sampling of the dataset Airlines with a specified seed value generates a new dataset. The sub-sampling process involves uniformly selecting classes, columns, and rows while ensuring the stratification of the target variable. 
+Next, the columns were uniformly sampled, reducing the number of columns to one hundred. The selection of columns was done randomly, but the resulting columns were sorted in ascending order to maintain consistency.
 
-The sub-sample method takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling. 
+Finally, the number of rows was reduced to two thousand, using stratified sampling to ensure that the class distribution was preserved. This was achieved by concatenating the data and target variables, and then applying the train-test split function with stratification.
 
-First, the unique classes in the target variable are identified. If there are more classes than the specified maximum number of classes, a random selection of classes is made based on their frequency distribution. Then, the indices corresponding to the selected classes are obtained and used to sub-sample the data.
+The resulting dataset consists of the airline, flight, airport from, airport to, day of week, time, length, and delay features. These features are retained from the original dataset, with the categorical columns converted to string format for compatibility with OpenML.
 
-Next, the columns are uniformly sampled if their number exceeds the specified maximum number of columns. The selected column indices are sorted to maintain the original column order.
-
-Finally, if the number of rows exceeds the specified maximum number of rows, stratified sampling is performed using a train-test split method. This ensures that the class distribution is maintained in the sub-sampled data.
-
-Features: Airline, Flight, Airport From, Airport To, Day Of Week, Time, Length, Delay
-
-Keywords: Airlines, Sub-sampling, Stratification, Sampling, Classes, Columns, Rows, Target Variable
+Keywords: airlines dataset, subsampling, stratified sampling, class selection, column selection, row reduction

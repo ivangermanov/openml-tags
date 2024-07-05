@@ -1,17 +1,26 @@
-**Adult**
+Name: Adult
+Tags: OpenML-CC, OpenML, study, study, study, study, study, study, study, study
 
-Tags: Chemistry, Life Science, OpenML-CC18, OpenML100, Study 123, Study 135, Study 14, Study 144, Study 218, Study 241, Study 34, Study 99 
+Dataset Information:
+This dataset is sourced from the UCI Machine Learning Repository and was originally extracted from the Census database. The prediction task is to determine whether an individual's annual income exceeds $50,000. The dataset contains reasonably clean records extracted using specific conditions related to age, adjusted gross income, final weight, and hours worked per week.
 
-The Adult dataset is a collection of data extracted from the 1994 Census database. The prediction task is to determine whether a person makes over fifty thousand dollars per year.
+The dataset includes both training and test sets merged into a single file. It contains various demographic and employment-related features, with the target variable being income level (over or under $50,000 per year).
 
-Extraction was done using certain conditions: the person's age must be greater than sixteen, their adjusted gross income must be more than one hundred, their final weight must be more than one, and they must have worked more than zero hours per week. 
+Variable Description:
+Most variables are self-explanatory, except for "final weight" (fnlwgt). This variable serves as a proxy for demographic background, with the assumption that individuals sharing similar demographic characteristics should have comparable weights. However, this similarity does not transfer across different states.
 
-Variables are mostly self-explanatory except for Final Weight, which is a proxy for the demographic background of individuals. People with similar demographic characteristics should have similar weights. However, this similarity statement is not applicable across the fifty-one different states.
+The final weight is derived from independent estimates of the civilian non-institutional population of the United States, prepared monthly by the Census Bureau's Population Division. Three sets of controls are used in the weighting program: state-level population estimates for individuals aged 16 and older, controls for Hispanic origin by age and sex, and controls by race, age, and sex.
 
-Description from the donor of the database explains that the weights on the Current Population Survey files are controlled to independent estimates of the civilian noninstitutional population of the United States. These estimates are prepared monthly and use three sets of controls: a single cell estimate of the population sixteen plus for each state; controls for Hispanic origin by age and sex; and controls by race, age, and sex. 
+Features:
+The dataset includes features such as age, workclass, education, marital status, occupation, relationship, race, sex, capital gain, capital loss, hours per week, and native country. The target variable is the income class (over or under $50,000 per year).
 
-Features include Age, Work Class, Final Weight, Education, Education Number, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Capital Loss, Hours Per Week, Native Country, and Class. 
+Missing Values:
+The dataset contains missing values.
 
-Additional information includes listing of attributes: Over Fifty Thousand, Fifty Thousand or Less. Age is a continuous variable. Work Class consists of Private, Self Employed Not Incorporated, Self Employed Incorporated, Federal Government, Local Government, State Government, Without Pay, and Never Worked. Final Weight is a continuous variable. Education includes Bachelor's Degree, Some College, Eleventh Grade, High School Graduate, Professional School, Associate's Academic Degree, Associate's Vocational Degree, Ninth Grade, Seventh-Eighth Grade, Twelfth Grade, Master's Degree, First-Fourth Grade, Tenth Grade, Doctorate, Fifth-Sixth Grade, and Preschool. Education Number is a continuous variable. Marital Status consists of Married Civilian Spouse, Divorced, Never Married, Separated, Widowed, Married Spouse Absent, and Married Armed Forces Spouse. Occupation includes Technical Support, Craft Repair, Other Service, Sales, Executive Managerial, Professional Specialty, Handlers Cleaners, Machine Operators Inspectors, Administrative Clerical, Farming Fishing, Transportation Moving, Private House Servants, Protective Services, and Armed Forces. Relationship consists of Wife, Own Child, Husband, Not in Family, Other Relative, and Unmarried. Race includes White, Asian Pacific Islander, American Indian Eskimo, Other, and Black. Sex includes Female and Male. Capital Gain and Capital Loss are continuous variables. Hours Per Week is a continuous variable. Native Country includes United States, Cambodia, England, Puerto Rico, Canada, Germany, Outlying United States Guam USVI etc, India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican Republic, Laos, Ecuador, Taiwan, Haiti, Colombia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El Salvador, Trinidad and Tobago, Peru, Hong Kong, Holland Netherlands.
+Additional Information:
+The original data was extracted using specific conditions to ensure reasonably clean records. The dataset has been used in various studies and is part of the OpenML collection.
 
-Keywords: census data, demographics, income prediction, socioeconomic characteristics, population survey.
+Relevant Papers:
+A paper on data mining and visualization related to this dataset has been published, focusing on scaling up the accuracy of Naive-Bayes classifiers using a decision-tree hybrid approach.
+
+Keywords: income prediction, census data, demographic analysis, machine learning, socioeconomic factors, employment statistics, data mining, classification task

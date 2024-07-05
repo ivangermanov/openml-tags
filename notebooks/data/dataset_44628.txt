@@ -1,15 +1,9 @@
-Subsampling of the dataset KC One with Seed Zero 
+Subsampling of the dataset KC One with seed equals zero, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-Tags: Subsampling of the dataset KC One 
+Generated with the following source code:
 
-This dataset has been generated through a process of subsampling, which involves selecting a smaller portion of the original data while maintaining its characteristics. This is achieved through a combination of uniform sampling of classes, columns, and rows. 
+The function subsample takes in self, seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified as parameters. It returns a dataset. It uses numpy's random default random generator with the given seed. It then selects the features and target from the dataset. If the number of unique classes is greater than the maximum number of classes, it selects the classes using random choice with probabilities based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the features and target accordingly. If the number of columns is greater than the maximum number of columns, it uniformly samples the columns. If the number of rows is greater than the maximum number of rows, it uses train test split with stratification to sample the rows. Finally, it returns a new dataset with the subsampled features and target.
 
-The uniform sampling of classes ensures that the resulting dataset has an equal representation of each class, which is particularly important when dealing with imbalanced datasets. This is done by selecting a specified number of classes randomly, using their value counts as probabilities. 
+Features: location, variable group, essential variable group, internal variable group, number, variable, length, density, interface, entity, branch, total operations, total operands, branch count, defects.
 
-Once the classes have been sampled, the corresponding indices are selected, and the dataset is filtered to include only those instances. The next step involves uniform sampling of columns, which helps reduce dimensionality and noise in the data. This is done by randomly selecting a specified number of column indices.
-
-Finally, the dataset is sampled again to ensure that the number of rows does not exceed a certain threshold. This is done using stratified sampling, which preserves the class balance achieved earlier. The resulting dataset is then returned, along with its metadata, including the column names and categorical mask.
-
-Features: location, variance of g, expected value of g, information value of g, node count, variance, line count, decision count, iteration count, edge count, binary operator count, ternary operator count, line of code, line of comment, line of blank, line of code and comment, unique operator count, unique operand count, total operator count, total operand count, branch count, defect count 
-
-Keywords: subsampling, dataset, uniform sampling, stratified sampling, class balance, dimensionality reduction
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, row sampling.

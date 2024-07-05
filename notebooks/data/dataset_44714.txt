@@ -1,15 +1,11 @@
-Name: Nomao Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Nomao Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Computer Systems, Statistics 
-
-Subsampling of the dataset Nomao with seed equal to one arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals True. 
+Tags: Subsampling of the dataset Nomao with seed one arguments n rows two thousand arguments n columns one hundred arguments n classes ten arguments no stratify true
 
 Generated with the following source code:
 
-The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It uses NumPy's default random generator to uniformly sample classes, columns, and rows based on the given parameters. The function first selects the unique classes present in the dataset and then randomly chooses the specified number of classes while considering their distribution in the dataset. It then selects the indices where one of these chosen classes is present and updates the input data and labels accordingly.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of classes, columns, and rows. If the number of classes is greater than the maximum, it selects a subset of classes based on their frequency in the data. If the number of columns is greater than the maximum, it selects a subset of columns uniformly at random. If the number of rows is greater than the maximum, it uses stratified sampling to select a subset of rows. The function returns a dataset with the selected data and metadata.
 
-The function further reduces the number of columns by uniformly sampling them. If the number of rows exceeds the specified maximum, it uses stratified splitting to ensure the class distribution is maintained. Finally, it converts categorical columns to strings and returns a new dataset object with the updated input data, labels, categorical mask, and column names.
+Features: (skipped due to unreadability)
 
-Features: Various numerical features.
-
-Keywords: Subsampling, Stratification, Random Sampling, Data Reduction, Class Distribution.
+Keywords: dataset subsampling, stratified sampling, random number generator, data selection, metadata

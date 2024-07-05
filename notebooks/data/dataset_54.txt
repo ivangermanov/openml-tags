@@ -1,30 +1,16 @@
-vehicle silhouettes
+Name: Vehicle
+Tags: OpenML-CC, OpenML, study, uci
 
-Purpose:
-The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
+The Vehicle dataset aims to classify vehicle silhouettes into one of four types based on features extracted from the silhouette. Vehicles may be viewed from various angles. This classification problem originated from research conducted in the late s at the Turing Institute, partially funded by Barr and Stroud Ltd. The goal was to develop a method for distinguishing D objects within D images by applying shape feature extractors to object silhouettes.
 
-Problem Type:
-Classification
+The dataset comprises silhouettes of four model vehicles: a double decker bus, Chevrolet van, Saab , and an Opel Manta . These vehicles were chosen to provide a mix of easily distinguishable and more challenging classifications. Images were captured using a camera positioned at a fixed angle above the models, which were placed on a backlit surface and painted matte black to minimize highlights.
 
-Source:
-UCI
+The image capture process involved rotating the vehicles through  degrees, with multiple sets of images taken at different camera elevations. The resulting images were processed to produce binary silhouettes and cleaned to remove noise. Features were then extracted using the Hierarchical Image Processing System (HIPS) extension BINATTS, which combines scale independent features based on classical moments and heuristic measures.
 
-Description:
-This dataset was originally gathered to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction. This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
+Attributes extracted include compactness, circularity, distance circularity, radius ratio, principal axis aspect ratio, maximum length aspect ratio, scatter ratio, elongatedness, principal axis rectangularity, maximum length rectangularity, scaled variances along major and minor axes, scaled radius of gyration, skewness and kurtosis about major and minor axes, and hollows ratio.
 
-History:
-The dataset was originally gathered at the Turing Institute in nineteen eighty-six to nineteen eighty-seven. It was partially financed by Barr and Stroud Limited. The original purpose was to find a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects.
+The dataset contains examples divided into four classes: Opel, Saab, Bus, and Van. It has attributes, all of which are numerical features derived from the silhouette images. The classification task involves distinguishing between these vehicle types based on the extracted shape features.
 
-Features:
-The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Attribute Neural Tree System, which extracts a combination of scale-independent features utilizing both classical moments-based measures and heuristic measures.
+This dataset has been used in various studies and is part of the UCI Machine Learning Repository. It presents an interesting challenge in object recognition and classification, particularly in distinguishing between similar vehicle types from different viewing angles.
 
-Four "Corgie" model vehicles were used for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
-
-Images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface. The vehicles were painted matte black to minimize highlights. Images were captured using a frame store connected to a computer. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated, and thereafter subjected to shrink-expand-expand-shrink modules to remove "salt and pepper" image noise.
-
-Vehicles were rotated and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to "head-on" and "rear" views respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
-
-Number of Classes:
-Four - Opel, Saab, Bus, Van
-
-Keywords: vehicle recognition, machine learning, classification, transportation, image processing, object recognition.
+Keywords: Vehicle classification, Silhouette analysis, Shape features, Object recognition, Image processing, Machine learning, Pattern recognition

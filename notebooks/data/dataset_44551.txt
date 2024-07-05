@@ -1,11 +1,21 @@
-Name: Ozone Level Eight Hour Seed Three 
+Name: Ozone Level Eight Hour Seed Three
 
-Tags: Subsampling of the dataset Ozone Level Eight Hour 
+Tags: Subsampling of the dataset Ozone Level Eight Hour with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-This dataset has been created through subsampling of the original Ozone Level Eight Hour dataset. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows. 
+Generated with the following source code:
 
-The subsampling algorithm used a seed value of three to ensure reproducibility. It also limited the maximum number of rows to two thousand, maximum number of columns to one hundred, and maximum number of classes to ten. Additionally, the algorithm employed stratified sampling to maintain the class balance in the resulting dataset.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-The resulting dataset contains a subset of the original features, which have been randomly selected to meet the specified column limit. The class labels have also been preserved and balanced through stratified sampling. 
+First, it samples the classes uniformly. If the number of unique classes is greater than the maximum number of classes, it selects the classes based on their frequency in the data. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: ozone level eight hour, subsampling, dataset, stratified sampling, reproducibility.
+Next, it samples the columns uniformly. If the number of columns is greater than the maximum number of columns, it selects the columns randomly. It then filters the data to include only the selected columns.
+
+Finally, if the number of rows is greater than the maximum number of rows, it uses stratified sampling to select the rows. It concatenates the data and target, splits the data into a subset, and then separates the data and target again.
+
+The function returns a dataset with the sampled data, target, categorical mask, and columns.
+
+Features: 
+
+Class
+
+Keywords: ozone level, subsampling, stratification, dataset, sampling

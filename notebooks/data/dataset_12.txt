@@ -1,25 +1,29 @@
-**Multiple Features Dataset: Factors**
+Name: mfeat-factors
+Tags: OpenML-CC, OpenML, study, uci
 
-This dataset is one of a set of six datasets describing features of handwritten numerals (zero to nine) extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character.
+Multiple Features Dataset: Factors
 
-The dataset consists of two thousand instances, two hundred instances per class, which were digitized in binary images.
+This dataset is one of a set of six datasets describing features of handwritten numerals (zero through nine) extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character. A substantial number of instances per class have been digitized in binary images, totaling several thousand instances.
 
-### Attribute Information
+The attributes represent numerous profile correlations. No additional information is known about these specific attributes.
 
-The attributes represent profile correlations. Unfortunately, no more information is known about these attributes.
+The dataset as it exists has been utilized in various research papers focusing on statistical pattern recognition and handwritten digit recognition by combined classifiers. These studies have explored the application of different classification techniques to the multiple feature sets provided by this and related datasets.
 
-### Relevant Papers
+The complete dataset consists of features of handwritten numerals extracted from Dutch utility maps. These digits are represented in terms of six distinct feature sets:
 
-A slightly different version of this database was used in a paper titled "Handwritten Digit Recognition by Combined Classifiers". The current database was also used in a review paper titled "Statistical Pattern Recognition: A Review".
+- Fourier coefficients of the character shapes
+- Profile correlations
+- Karhunen-Loève coefficients
+- Pixel averages in small windows
+- Zernike moments
+- Morphological features
 
-This dataset contains features representing profile correlations. There are six files in total, each containing different types of features. These include Fourier coefficients of the character shapes, profile correlations, Karhunen-Love coefficients, pixel averages in two by three windows, Zernike moments, and morphological features. 
+In each file, the patterns are stored in ASCII format, with each line representing a single pattern. The patterns are grouped by class, with equal numbers of patterns for each numeral from zero to nine.
 
-In each file, the two thousand patterns are stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one to nine. 
+It's worth noting that the source image dataset has been lost. However, using the pixel dataset, sampled versions of the original images may be obtained at a resolution of fifteen by sixteen pixels.
 
-Corresponding patterns in different feature sets correspond to the same original character. Unfortunately, the source image dataset has been lost. However, using the pixel dataset, sampled versions of the original images may be obtained, with a resolution of fifteen by sixteen pixels.
+This dataset does not contain any missing values, making it suitable for various machine learning and pattern recognition tasks without the need for extensive data cleaning or imputation.
 
-Has Missing Values? No
+The multiple feature sets provided allow for comprehensive analysis of handwritten digit recognition, enabling researchers to compare and combine different feature extraction techniques for improved classification accuracy.
 
-Additional Variable Information: Six files are included in this dataset, each containing a different type of feature.
-
-Keywords: handwritten numerals, Dutch utility maps, profile correlations, machine learning, dataset
+Keywords: handwritten numerals, feature extraction, pattern recognition, digit classification, multiple feature sets, Dutch utility maps, Fourier coefficients, Zernike moments, morphological features

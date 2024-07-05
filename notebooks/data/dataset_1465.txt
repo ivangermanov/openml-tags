@@ -1,24 +1,26 @@
-Breast Tissue Dataset
+Breast-tissue Dataset
+Tags: study fifty, study fifty-two, study seven, study eighty-eight
 
-Tags: Chemistry, Life Science, Study
+Source: UCI
+
+Please cite:
+Source: INEB-Instituto de Engenharia Biomédica, Porto, Portugal and INSERM, Lyon, France
 
 Data Set Information:
-
-Impedance measurements of freshly excised breast tissue were made at various frequencies, including fifteen point six twenty-five kilohertz, thirty-one point twenty-five kilohertz, sixty-two point five kilohertz, one hundred twenty-five kilohertz, two hundred fifty kilohertz, five hundred kilohertz, and one thousand kilohertz. These measurements, when plotted in the real versus negative imaginary plane, constitute the impedance spectrum from which breast tissue features are computed.
-
-The dataset can be utilized for predicting the classification of either the original six classes or of four classes by merging together the fibroadenoma, mastopathy, and glandular classes, whose discrimination is not deemed important, as they cannot be accurately discriminated anyway.
+Impedance measurements were conducted on freshly excised breast tissue at various frequencies: fifteen point six two five, thirty-one point two five, sixty-two point five, one hundred twenty-five, two hundred fifty, five hundred, and one thousand kilohertz. These measurements, when plotted in the (real, negative imaginary) plane, form the impedance spectrum from which breast tissue features are computed. The dataset can be used to predict the classification of either the original six classes or four classes by combining the fibro-adenoma, mastopathy, and glandular classes, as their discrimination is not crucial and cannot be accurately differentiated anyway.
 
 Attribute Information:
+I zero: Impedivity (ohm) at zero frequency
+PA five hundred: Phase angle at five hundred kilohertz
+HFS: High-frequency slope of phase angle
+DA: Impedance distance between spectral ends
+AREA: Area under spectrum
+A/DA: Area normalized by DA
+MAX IP: Maximum of the spectrum
+DR: Distance between I zero and real part of the maximum frequency point
+P: Length of the spectral curve
+Class: Carcinoma, fibro-adenoma plus mastopathy plus glandular, connective, adipose
 
-* Impedivity at Zero Frequency: a measure of impedivity in ohms at zero frequency
-* Phase Angle at Five Hundred Kilohertz: the phase angle measured at a frequency of five hundred kilohertz
-* High-Frequency Slope of Phase Angle: the slope of the phase angle at high frequencies
-* Impedance Distance Between Spectral Ends: the distance between the start and end points of the impedance spectrum
-* Area Under Spectrum: the total area encompassed by the impedance spectrum
-* Area Normalized by Impedance Distance: the area under the spectrum normalized by the impedance distance
-* Maximum of the Spectrum: the highest point on the impedance spectrum
-* Distance Between Impedivity at Zero Frequency and Real Part of the Maximum Frequency Point: the distance between the impedivity at zero frequency and the real part of the maximum frequency point
-* Length of the Spectral Curve: the total length of the impedance spectrum
-* Class: the classification of the breast tissue, which can be carcinoma, fibroadenoma plus mastopathy plus glandular, connective, or adipose
+Features: V one, V two, V three, V four, V five, V six, V seven, V eight, V nine, Class
 
-Keywords: breast tissue, impedance measurement, frequency, classification, cancer diagnosis
+Keywords: breast tissue, impedance measurements, spectral analysis, tissue classification, biomedical engineering, cancer detection, electrical properties, medical diagnostics

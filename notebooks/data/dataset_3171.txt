@@ -1,15 +1,19 @@
-QSAR-TID-101309 Dataset 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 101309. The dataset has seventy-three rows and one thousand twenty-six features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The features represent Folded Circular Fingerprint 1024 bit molecular fingerprints, which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. These fingerprints were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation, as all bits are generated.
+The dataset focuses on Cyclin dependent kinase like, a single protein target. This protein is found in Homo sapiens and has several associated Gene Ontology classifications. These include cellular components such as nucleus, nucleoplasm, cytoplasm, and centrosome. Its molecular functions involve nucleotide binding, protein kinase activity, ATP binding, and transferase activity. Biological processes associated with this protein include protein phosphorylation, signal transduction, sex differentiation, and regulation of cell cycle.
 
-The dataset is part of the MetaQSAR project, released in September 2015. It is recommended to cite this dataset when used in any research or publication.
+The target protein is referenced in various databases including ExpressionAtlas, GoComponent, GoFunction, GoProcess, Wikipedia, canSAR Target, IntAct, PharmGKB, Pharos, UniProt, InterPro, Pfam, and PDBe. These resources provide additional information on the protein's structure, function, and interactions.
 
-Scraped Data:
+This QSAR dataset serves as a valuable resource for researchers studying drug interactions with Cyclin dependent kinase like and may contribute to the development of new therapeutic compounds targeting this protein.
 
-The preferred name of the protein target is Cyclin-dependent Kinase-Like Two. It belongs to the species group of Homo sapiens and has been classified as a single protein. The protein target classification description shows its relationship with accession Q92772.
-
-Expression Atlas, Component, Go Function, Go Process, Wikipedia, canSAR-Target, IntAct, PharmGKB, Pharos, UniProt, InterPro, Pfam, and PDBe provide additional information about the protein target.
-
-Keywords: QSAR, drug target, molecular fingerprints, MetaQSAR, Cyclin-dependent Kinase-Like Two, protein target classification.
+Keywords:
+QSAR
+Molecular Fingerprints
+Cyclin dependent kinase
+Drug target
+Protein phosphorylation
+Cell cycle regulation
+ChEMBL database

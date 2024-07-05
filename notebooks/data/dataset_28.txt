@@ -1,17 +1,17 @@
-Optical Recognition of Handwritten Digits 
+Dataset: optdigits
 
-Tags: Images, Machine Learning, OpenML-CC18, OpenML100, study_1, study_123, study_14, study_34, study_37, study_41, study_50, study_52, study_7, study_70, study_76, study_98, study_99, UCI 
+Tags: OpenML-CC, OpenML, study, uci
 
-The optical recognition of handwritten digits database is a collection of images of handwritten digits. 
+This dataset focuses on the optical recognition of handwritten digits. It was sourced from UCI and is part of various studies. The data was collected using preprocessing programs from NIST to extract normalized bitmaps of handwritten digits from preprinted forms. Contributors included a total of forty-three people, with thirty providing samples for the training set and thirteen different individuals for the test set.
 
-We used preprocessing programs made available by National Institute of Standards and Technology to extract normalized bitmaps of handwritten digits from a preprinted form. Thirty people contributed to the training set and thirteen to the test set. Thirty-two by thirty-two bitmaps are divided into non-overlapping blocks of four by four and the number of on pixels are counted in each block. This generates an input matrix of eight by eight where each element is an integer in the range zero to sixteen. This reduces dimensionality and gives invariance to small distortions.
+The preprocessing involved dividing thirty-two by thirty-two bitmaps into non-overlapping blocks of four by four pixels. The number of active pixels in each block was counted, generating an input matrix of eight by eight, where each element is an integer ranging from zero to sixteen. This process reduces dimensionality and provides invariance to small distortions.
 
-The database has been previously used in various studies, including methods of combining multiple classifiers and their applications to handwritten digit recognition.
+The dataset consists of a training set and a testing set. The training set was further divided, with half used for actual training, one-fourth for validation, and one-fourth for writer-dependent testing. The test set was utilized for writer-independent testing and serves as the actual quality measure.
 
-There are sixty-four input attributes and one class attribute in this database. All input attributes are integers in the range zero to sixteen. The last attribute is the class code ranging from zero to nine.
+There are sixty-four input attributes plus one class attribute. All input attributes are integers ranging from zero to sixteen, while the class attribute represents digit classes from zero to nine. The dataset contains no missing attribute values.
 
-There are no missing attribute values in this database.
+Class distribution information is provided for both the training and testing sets, showing the number of examples for each digit class. The accuracy of the dataset was evaluated using k-nearest neighbors with Euclidean distance as the metric, with k values ranging from one to eleven.
 
-Class distribution is as follows: class zero has three hundred seventy-six examples in the training set, class one has three hundred eighty-nine examples, class two has three hundred eighty examples, class three has three hundred eighty-nine examples, class four has three hundred eighty-seven examples, class five has three hundred seventy-six examples, class six has three hundred seventy-seven examples, class seven has three hundred eighty-seven examples, class eight has three hundred eighty examples, and class nine has three hundred eighty-two examples.
+This optical digit recognition dataset has applications in handwritten digit classification and machine learning research. It provides a standardized set of preprocessed handwritten digit images for developing and testing classification algorithms.
 
-Keywords: handwritten digits, image recognition, machine learning, National Institute of Standards and Technology, classification.
+Keywords: optical recognition, handwritten digits, preprocessing, classification, machine learning, UCI dataset, NIST, k-nearest neighbors

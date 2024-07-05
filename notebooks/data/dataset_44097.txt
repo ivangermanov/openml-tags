@@ -1,55 +1,22 @@
-The German Credit dataset classifies individuals described by a set of attributes as good or bad credit risks. This dataset comes with a cost matrix:
+**German Credit Dataset**
 
-Good    Bad 
-(predicted)
-Good    0    1 
-(actual)
-Bad     5    0
-
-It is worse to classify a customer as good when they are bad (five), than it is to classify a customer as bad when they are good (one).
+This dataset classifies people described by a set of attributes as good or bad credit risks. It comes with a cost matrix, which indicates that it is worse to classify a customer as good when they are bad than it is to classify a customer as bad when they are good.
 
 ### Attribute Description
 
-The dataset consists of twenty attributes that describe each individual.
+The dataset consists of twenty attributes that describe the creditworthiness of an individual. These attributes include the status of their existing checking account, duration in months, credit history, purpose of the credit, credit amount, status of savings account or bonds, present employment in years, installment rate in percentage of disposable income, personal status and sex, other debtors or guarantors, present residence since, property, age in years, other installment plans, housing, number of existing credits at this bank, job, number of people being liable to provide maintenance for, telephone, and foreign worker status.
 
-One: Status of Existing Checking Account describes the current state of an individual's checking account.
+The cost matrix for this dataset is as follows:
 
-Two: Duration in Months represents the length of time an individual has had their current credit arrangement.
+Good (predicted) | Good (actual) | Bad (actual)
+----------------|--------------|-------------
+Good            | 0            | 1
+Bad             | 5            | 0
 
-Three: Credit History categorizes an individual's credit history into one of five categories: no credits taken or all credits paid back duly, all credits at this bank paid back duly, existing credits paid back duly till now, delay in paying off in the past, or critical account/other credits existing (not at this bank).
+This dataset requires the use of a cost matrix, which takes into account the different costs associated with misclassifying a customer as good or bad.
 
-Four: Purpose of the Credit describes the reason for which the credit was requested, including car (new), car (used), furniture/equipment, radio/television, domestic appliances, repairs, education, retraining, business, or others.
+### Additional Information
 
-Five: Credit Amount represents the total amount of credit requested.
+Two datasets are provided. The original dataset contains categorical or symbolic attributes and is in the file "german.data". For algorithms that need numerical attributes, a second file "german.data-numeric" is provided, which has been edited and several indicator variables added to make it suitable for algorithms that cannot cope with categorical variables. Several attributes that are ordered categorical have been coded as integers.
 
-Six: Status of Savings Account/Bonds categorizes an individual's savings account into one of five categories: less than one hundred Deutsche Marks, one hundred to five hundred Deutsche Marks, five hundred to one thousand Deutsche Marks, more than one thousand Deutsche Marks, or unknown/no savings account.
-
-Seven: Present Employment Since describes an individual's current employment situation, including unemployed, less than one year, one to four years, four to seven years, or more than seven years.
-
-Eight: Installment Rate in Percentage of Disposable Income represents the percentage of an individual's disposable income allocated towards installment payments.
-
-Nine: Personal Status and Sex categorizes an individual's personal status and sex into one of five categories: male divorced/separated, female divorced/separated/married, male single, male married/widowed, or female single.
-
-Ten: Other Debtors/Guarantors describes whether an individual has any other debtors or guarantors, including none, co-applicant, or guarantor.
-
-Eleven: Present Residence Since represents the length of time an individual has resided at their current address.
-
-Twelve: Property categorizes an individual's property ownership into one of four categories: real estate, building society savings agreement/life insurance, car or other (not in attribute six), or unknown/no property.
-
-Thirteen: Age in Years represents an individual's age.
-
-Fourteen: Other Installment Plans categorizes an individual's other installment plans into one of three categories: bank, stores, or none.
-
-Fifteen: Housing describes an individual's housing situation, including rent, own, or for free.
-
-Sixteen: Number of Existing Credits at This Bank represents the total number of credits an individual has at this bank.
-
-Seventeen: Job categorizes an individual's occupation into one of four categories: unemployed/unskilled-non-resident, unskilled-resident, skilled employee/official, or management/self-employed/highly qualified employee/officer.
-
-Eighteen: Number of People Being Liable to Provide Maintenance For represents the total number of individuals dependent on the credit applicant.
-
-Nineteen: Telephone describes whether an individual has a telephone, including none or yes, registered under the customer's name.
-
-Twenty: Foreign Worker categorizes an individual's work status into one of two categories: yes or no.
-
-Keywords: credit risk assessment, cost matrix, credit history, personal finance, loan application.
+Keywords: credit risk, cost matrix, classification, categorical attributes, numerical attributes.

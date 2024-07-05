@@ -1,15 +1,18 @@
-Machine Learning and Mathematics 
+Name: KDD Cup 09 Upselling Seed 0
 
-Subsampling of the dataset KDD Cup Nine Up Selling with a specified seed value. This process involves generating a subset of the original dataset while maintaining its inherent characteristics.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-The subsample function takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling.
+Generated with the following source code:
 
-First, the function uniformly samples classes from the dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices corresponding to the chosen classes and filters the dataset accordingly.
+The subsample function is used to reduce the size of the dataset while maintaining its overall characteristics. It takes in several parameters, including a seed value, the maximum number of rows, columns, and classes, as well as a boolean indicating whether to stratify the sampling.
 
-Next, the function uniformly samples columns from the dataset, selecting only the specified maximum number of columns. This is done to reduce the dimensionality of the dataset.
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the data.
 
-Finally, the function performs stratified sampling on the dataset to ensure that the resulting subset retains the same class distribution as the original dataset. The sampled data is then returned as a new dataset.
+Next, the function uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting column indices and then using these indices to subset the data.
 
-Features included in this subsampled dataset are: Var Six, Var Thirteen, Var Twenty One, Var Twenty Two, Var Twenty Four, Var Twenty Five, Var Twenty Eight, Var Thirty Five, Var Thirty Eight, Var Fifty Seven, Var Sixty Five, Var Seventy Three, Var Seventy Four, Var Seventy Six, Var Seventy Eight, Var Eighty One, Var Eighty Three, Var Eighty Five, Var One Oh Nine, Var One Twelve, Var One Thirteen, Var One Nineteen, Var One Twenty Three, Var One Twenty Five, Var One Twenty Six, Var One Thirty Two, Var One Thirty Three, Var One Thirty Four, Var One Forty, Var One Forty Four, Var One Forty Nine, Var One Fifty Three, Var One Sixty, Var One Sixty Three, Var One Ninety Four, Var One Ninety Six, Var Two Oh One, Var Two Oh Three, Var Two Oh Five, Var Two Oh Seven, Var Two Oh Eight, Var Two Ten, Var Two Eleven, Var Two Eighteen, Var Two Twenty One, Var Two Twenty Three, Var Two Twenty Five, Var Two Twenty Seven, Var Two Twenty Nine.
+Finally, the function stratifies the sampling of rows according to the target variable, ensuring that the resulting dataset is representative of the original.
 
-Keywords: machine learning, mathematics, subsampling, stratified sampling, dataset, KDD Cup Nine Up Selling, feature selection.
+Features: 
+Var Six, Var Thirteen, Var Twenty One, Var Twenty Two, Var Twenty Four, Var Twenty Five, Var Twenty Eight, Var Thirty Five, Var Thirty Eight, Var Fifty Seven, Var Sixty Five, Var Seventy Three, Var Seventy Four, Var Seventy Six, Var Seventy Eight, Var Eighty One, Var Eighty Three, Var Eighty Five, Var One Nine, Var One Twelve, Var One Thirteen, Var One Nineteen, Var One Twenty Three, Var One Twenty Five, Var One Twenty Six, Var One Thirty Two, Var One Thirty Three, Var One Thirty Four, Var One Forty, Var One Forty Four, Var One Forty Nine, Var One Fifty Three, Var One Sixty, Var One Sixty Three, Var One Ninety Four, Var One Ninety Six, Var Two One, Var Two Three, Var Two Five, Var Two Seven, Var Two Eight, Var Two Ten, Var Two Eleven, Var Two Eighteen, Var Two Twenty One, Var Two Twenty Three, Var Two Twenty Five, Var Two Twenty Seven, Var Two Twenty Nine, Upselling
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, row sampling

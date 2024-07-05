@@ -1,42 +1,36 @@
-ECOLI 
+Name: Ecoli
+Tags: Features
 
-Tags: 
-Features: 
-Sequence Name: Accession Number for the Swiss Prot Database 
-McGeoch Method for Signal Sequence Recognition 
-Von Heijne Method for Signal Sequence Recognition 
-Presence of Lipoprotein Score 
-Presence of Charge on N Terminus of Predicted Lipoproteins 
-Score of Discriminant Analysis of the Amino Acid Content of Outer Membrane and Periplasmic Proteins 
-Score of the Alom Membrane Spanning Region Prediction Program 
-Score of Alom Program After Excluding Putative Cleavable Signal Regions From the Sequence 
+Dataset Information
 
-Scraped Data: 
-Dataset Information 
-Additional Information 
-The references below describe a predecessor to this dataset and its development they also give results not cross validated for classification by a rule based expert system with that version of the dataset 
+The dataset is a predecessor to this dataset and its development, which is described in the references below. These references also provide results, although not cross-validated, for classification by a rule-based expert system with that version of the dataset.
 
-Reference Expert System for Predicting Protein Localization Sites in Gram Negative Bacteria 
-Reference A Knowledge Base for Predicting Protein Localization Sites in Eukaryotic Cells 
+The dataset does not have any missing values.
 
-Has Missing Values No 
+Additional Variable Information
 
-Additional Variable Information 
-This dataset provides information about protein localization sites in gram negative bacteria 
+The dataset contains the following variables:
 
-Class Labels 
-Cytoplasm 
-Inner Membrane Without Signal Sequence 
-Perisplasm 
-Inner Membrane Uncleavable Signal Sequence 
-Outer Membrane 
-Outer Membrane Lipoprotein 
-Inner Membrane Lipoprotein 
-Inner Membrane Cleavable Signal Sequence 
+Sequence Name, which is the accession number for the SWISS-PROT database
+McGeoch's method for signal sequence recognition
+Von Heijne's method for signal sequence recognition
+Lip, which is von Heijne's Signal Peptidase II consensus sequence score, a binary attribute
+Charge, which is the presence of charge on the N-terminus of predicted lipoproteins, a binary attribute
+Amino Acid Content, which is the score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins
+ALOM Membrane Spanning Region Prediction, which is the score of the ALOM program
+ALOM Program After Excluding Putative Cleavable Signal Regions, which is the score of the ALOM program after excluding putative cleavable signal regions from the sequence
 
-Keywords: 
-protein localization sites 
-gram negative bacteria 
-signal sequence recognition 
-amino acid content 
-membrane spanning region prediction
+Class Labels
+
+The class labels are as follows:
+
+Cytoplasm
+Inner Membrane Without Signal Sequence
+Perisplasm
+Inner Membrane Uncleavable Signal Sequence
+Outer Membrane
+Outer Membrane Lipoprotein
+Inner Membrane Lipoprotein
+Inner Membrane Cleavable Signal Sequence
+
+Keywords: Ecoli, Protein Localization, Signal Sequence Recognition, Amino Acid Content, Membrane Spanning Region Prediction

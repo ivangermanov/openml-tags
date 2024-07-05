@@ -1,19 +1,23 @@
-Name: Jannis Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Subsampling of the dataset Jannis with seed equal to zero, arguments nrows max, ncols max, nclasses max, and no stratify equal to true. 
 
-Tags: Earth Science, Life Science 
+Generated with the following source code: 
 
-Subsampling of the dataset Jannis with seed equal to zero arguments N rows maximum equal to two thousand arguments N columns maximum equal to one hundred arguments N classes maximum equal to ten arguments no stratify equal to true generated with the following source code 
+A function called subsample takes in self, seed, nrows max, ncols max, nclasses max, and stratified as parameters. It returns a dataset. 
 
-The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether or not to stratify, and returns a dataset. 
+The function first initializes a random number generator with the given seed. It then selects the data and target values from the dataset. 
 
-The function first gets the unique classes from the target variable, and if there are more classes than the specified maximum number of classes, it selects a specified number of classes based on their frequency in the data. It then selects the indices where one of these classes is present. 
+If the number of unique classes in the target values is greater than the maximum number of classes, it selects a subset of classes using a random choice, with the probability of each class being selected proportional to its frequency in the target values. 
 
-Next, if there are more columns than the specified maximum number of columns, the function uniformly samples the columns. 
+It then selects the indices where one of these classes is present and filters the data and target values accordingly. 
 
-If there are more rows than the specified maximum number of rows, the function uses stratified sampling to select the specified number of rows. 
+If the number of columns in the data is greater than the maximum number of columns, it selects a subset of columns using a random choice. 
 
-Finally, the function converts categorical columns to strings and returns a new dataset.
+If the number of rows in the data is greater than the maximum number of rows, it uses stratified sampling to select a subset of rows. 
 
-Features: (skipped due to being unreadable)
+Finally, it returns a new dataset with the filtered data and target values, along with the categorical mask and column names.
 
-Keywords: Subsampling, Dataset, Stratification, Sampling, Classification, Earth Science, Life Science
+Features: 
+
+class
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Choice, Categorical Mask

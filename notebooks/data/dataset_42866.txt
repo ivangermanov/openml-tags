@@ -1,25 +1,26 @@
-**Dataset Information**
+Vowel Tags: Partial Label Ranking
 
-To demonstrate the Recency, Frequency, Monetary, Time, and Compliance marketing model, this study adopted the donor database of the Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donations approximately every three months.
+Features: (omitted due to unreadability)
 
-To build an RFMTC model, we randomly selected seven hundred forty-eight donors from the donor database. Each donor's data included recency, frequency, monetary value, time, and a binary variable representing whether they donated blood in March two thousand seven.
+Scraped Data: Dataset Information
 
-**Descriptive Statistics of the Data**
+The Blood Transfusion Service Center dataset is a demonstration of the RFMTC marketing model, a modified version of the RFM model. This study utilizes the donor database of the Blood Transfusion Service Center in Hsin-Chu City, Taiwan, where the center operates a blood transfusion service bus that visits a university in Hsin-Chu City every three months to collect blood donations. To build an RFMTC model, a random selection of seven hundred forty-eight donors was made from the donor database. Each of these seven hundred forty-eight donor data points includes information on Recency, or the number of months since the last donation, Frequency, or the total number of donations, Monetary, or the total amount of blood donated in cubic centimeters, Time, or the number of months since the first donation, and a binary variable indicating whether the donor gave blood in March two thousand seven, with one representing a donation and zero representing no donation.
 
-The table below shows the descriptive statistics of the data.
+Has Missing Values? No
 
-| Variable | Data Type | Measurement | Description |
-| --- | --- | --- | --- |
-| Recency | Quantitative | Months | Months since last donation |
-| Frequency | Quantitative | Times | Total number of donations |
-| Monetary Value | Quantitative | cc blood | Total blood donated |
-| Time | Quantitative | Months | Months since first donation |
-| Donation in March 2007 | Binary | 1=yes, 0=no | Whether they donated blood in March 2007 |
+Additional Variable Information
 
-We randomly selected five hundred data points as the training set, and the remaining two hundred forty-eight as the testing set.
+The variables included in the dataset are Recency, measured in months since the last donation, Frequency, measured in total number of donations, Monetary, measured in total blood donated in cubic centimeters, Time, measured in months since the first donation, and a binary variable indicating whether the donor gave blood in March two thousand seven. The Blood Transfusion Service Center dataset is a classification problem.
 
-**Tags:** Demographics, Partial Label Ranking
-**Features:** A1, A2,..., A10, L1, L2,..., L11
-**Scraped Data:** Blood Transfusion Service Center
+Descriptive statistics of the data are provided in Table One. A random selection of five hundred data points was made for the training set, with the remaining two hundred forty-eight data points used for the testing set.
 
-**Keywords:** Blood Transfusion, RFMTC Model, Marketing, Donor Database, Compliance, Recency, Frequency, Monetary Value, Time.
+Table One: Descriptive Statistics of the Data
+
+Variable        Data Type        Measurement        Description
+Recency        Quantitative        Months        Input
+Frequency        Quantitative        Times        Input
+Monetary        Quantitative        Cubic Centimeters        Input
+Time        Quantitative        Months        Input
+Whether Donor Gave Blood in March Two Thousand Seven        Binary        One equals yes, zero equals no        Output
+
+Keywords: Blood Transfusion, RFMTC Model, Donor Database, Classification Problem, Marketing Model

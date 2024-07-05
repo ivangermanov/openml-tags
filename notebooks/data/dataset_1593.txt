@@ -1,7 +1,17 @@
-The SensIT Vehicle Combined dataset is a multiclass dataset that combines chemistry and life science tags. This dataset is obtained from the LIBSVM data repository.
+Name: SensIT Vehicle Combined
 
-Preprocessing involves regenerating features using the authors' MATLAB scripts, which can be found in Section C of Appendix A. Then, ten percent of instances from the noise class are randomly selected to achieve a class proportion of one to one to two for AAV, DW, and noise classes. The training and testing sets are obtained through a random eighty percent and twenty percent split of the data.
+Tags: University of Wisconsin Madison libSVM, AAD group
 
-This dataset contains a wide range of features, including various attributes from one to ninety-nine, which are essential for understanding the underlying chemistry and life science concepts. 
+Source: Original - Date unknown
 
-Keywords: SensIT Vehicle Combined, LIBSVM, chemistry, life science, multiclass dataset, preprocessing, feature regeneration.
+Please cite: Dataset from the LIBSVM data repository.
+
+Preprocessing: Features were regenerated using the authors' MATLAB scripts (see Section C of Appendix A). A random selection of instances from the noise class was made to achieve a class proportion of AAV:DW:noise. The dataset was then split into training and testing sets using a random eighty percent and twenty percent division of the data.
+
+Features: The dataset includes numerous attributes, labeled as att followed by a number. These attributes range from att one through att one hundred, with additional features beyond this range.
+
+This dataset focuses on vehicle classification using sensor data. It incorporates multiple classes including AAV (Assault Amphibious Vehicle), DW (Dragon Wagon), and noise. The preprocessing steps ensure a balanced representation of classes, which is crucial for effective machine learning model training. The random split between training and testing sets allows for robust model evaluation.
+
+The large number of attributes suggests a complex feature space, potentially capturing various aspects of vehicle characteristics or sensor readings. This rich feature set may enable detailed analysis and classification of different vehicle types based on their sensor signatures.
+
+Keywords: vehicle classification, sensor data, machine learning, feature engineering, class balancing, LIBSVM, multiclass problem

@@ -1,26 +1,28 @@
-**Mercury in Bass**
+Name: Mercury in Bass
+Tags: 
 
-Tags: Chemistry, Life Science
+Source: Unknown - Date unknown
 
-This dataset illustrates the use of basic statistical methods to analyze the factors influencing mercury contamination in largemouth bass.
+Please cite: Datasets of Data And Story Library, project illustrating use of basic statistic methods, converted to arff format by Hakan Kjellerstrand. Source: TunedIT: http://tunedit.org/repo/DASL DASL file http://lib.stat.cmu.edu/DASL/Datafiles/MercuryinBass.html
 
-The study examined fifty-three different Florida lakes to investigate the relationship between water quality and mercury levels in fish. Water samples were collected from the surface of each lake during two periods: August 1990 and March 1991. The pH level, chlorophyll content, calcium levels, and alkalinity of each sample were measured.
+Mercury Contamination in Bass
+Reference: Transactions of the American Fisheries Society
+Authorization: contact authors
 
-In addition to water quality measurements, a sample of fish was taken from each lake, with sample sizes ranging from four to forty-four fish. The age of each fish and the mercury concentration in its muscle tissue were recorded. Since older fish tend to have higher mercury concentrations due to absorption over time, the researchers used a regression estimate of the expected mercury concentration in a three-year-old fish as a standardized value for each lake. However, in ten of the fifty-three lakes, the age of individual fish could not be determined, so the average mercury concentration of the sampled fish was used instead.
+Description: Largemouth bass were studied in different Florida lakes to examine the factors that influence the level of mercury contamination. Water samples were collected from the surface of the middle of each lake in August and then again in March. The pH level, the amount of chlorophyll, calcium, and alkalinity were measured in each sample. The average of the August and March values were used in the analysis. Next, a sample of fish was taken from each lake with sample sizes ranging from a few to dozens of fish. The age of each fish and mercury concentration in the muscle tissue was measured. Since fish absorb mercury over time, older fish will tend to have higher concentrations. Thus, to make a fair comparison of the fish in different lakes, the investigators used a regression estimate of the expected mercury concentration in a three year old fish as the standardized value for each lake. Finally, in some of the lakes, the age of the individual fish could not be determined and the average mercury concentration of the sampled fish was used instead of the standardized value.
 
-The dataset consists of various variables, including:
+Variable Names:
+ID: ID number
+Lake: Name of the lake
+Alkalinity: Alkalinity (mg/L as Calcium Carbonate)
+pH: pH
+Calcium: Calcium (mg/l)
+Chlorophyll: Chlorophyll (mg/l)
+Average Mercury: Average mercury concentration (parts per million) in the muscle tissue of the fish sampled from that lake
+Number of samples: How many fish were sampled from the lake
+Minimum: Minimum mercury concentration amongst the sampled fish
+Maximum: Maximum mercury concentration amongst the sampled fish
+Three year Standard mercury: Regression estimate of the mercury concentration in a three year old fish from the lake (or = Average Mercury when age data was not available)
+Age data: Indicator of the availability of age data on fish sampled
 
-Lake identification number
-Lake name
-Alkalinity (measured in milligrams per liter as calcium carbonate)
-pH level
-Calcium levels (measured in milligrams per liter)
-Chlorophyll content (measured in milligrams per liter)
-Average mercury concentration (measured in parts per million) in the muscle tissue of the fish sampled from each lake
-Number of fish sampled from each lake
-Minimum mercury concentration among the sampled fish
-Maximum mercury concentration among the sampled fish
-Regression estimate of the mercury concentration in a three-year-old fish from each lake (or average mercury concentration if age data was unavailable)
-Indicator of the availability of age data on fish sampled
-
-Keywords: mercury contamination, largemouth bass, water quality, fish sampling, regression analysis.
+Keywords: Mercury contamination, largemouth bass, Florida lakes, water samples, pH level, chlorophyll, calcium, alkalinity, fish age, muscle tissue, regression estimate

@@ -1,22 +1,41 @@
-QSAR-TID-100871 Dataset 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100871. It has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median pXC50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+Source: MetaQSAR project - September
 
-The MetaQSAR project aims to provide a comprehensive resource for QSAR modeling. This dataset is part of the project and contains data from ChEMBL version seventeen. 
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset includes multiple compounds with their corresponding activity values and molecular fingerprints. These molecular fingerprints are essential for QSAR modeling, as they describe the structural properties of molecules. 
-
-Generating fingerprints does not usually require missing value imputation, as all bits are generated. This makes the dataset suitable for machine learning-based QSAR modeling approaches.
-
-Features: Molecule ChEMBL ID, and multiple molecular fingerprint features.
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
 Scraped Data:
-The Neuropeptide S receptor is a single protein with multiple synonyms, including Gpr154, G-protein coupled receptor 154, and Neuropeptide S receptor. It belongs to the species group Mus musculus.
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Neuropeptide S receptor
+Synonyms: Gpr G protein coupled receptor, G protein coupled receptor PGR, Neuropeptide S receptor Npsr
+Organism: Mus musculus
+Species Group: No
+Protein Target Classification: Membrane receptor/Family A G protein coupled receptor/Peptide receptor (family A GPCR)/Short peptide receptor (family A GPCR)/Neuropeptide receptor
 
-The protein target classification is one point Membrane receptor, Family A G protein-coupled receptor, Peptide receptor, and Short peptide receptor.
+Description Relationship Accession: Neuropeptide S receptor SINGLE PROTEIN
 
-Description Relationship Accession: Neuropeptide S receptor is a Single Protein with accession number Q8BZP8.
+Expression Atlas
 
-Expression Atlas, Go Component, Go Function, and Go Process provide additional information about the protein.
+Go Component: cytoplasm, plasma membrane, membrane
 
-Keywords: QSAR, machine learning, molecular fingerprints, MetaQSAR, Neuropeptide S receptor, G protein-coupled receptor, peptide receptor.
+Go Function: G protein coupled receptor activity, vasopressin receptor activity, neuropeptide receptor activity
+
+Go Process: signal transduction, G protein coupled receptor signaling pathway, neuropeptide signaling pathway, eating behavior, positive regulation of release of sequestered calcium ion into cytosol, righting reflex, positive regulation of ERK and ERK cascade, negative regulation of eating behavior, negative regulation of defecation
+
+canSAR Target
+
+Guide To PHARMACOLOGY
+
+Reactome: Peptide ligand binding receptors, G alpha (q) signalling events, G alpha (s) signalling events
+
+UniProt
+
+InterPro: GPCR Rhodpsn, Vasoprsn rcpt, GPCR Rhodpsn TM, NPS rcpt
+
+Pfam: tm
+
+Keywords: QSAR, molecular fingerprints, neuropeptide receptor, G protein coupled receptor, drug target, ChEMBL

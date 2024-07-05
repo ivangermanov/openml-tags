@@ -1,9 +1,14 @@
-The Puma32H dataset is part of a family of datasets synthetically generated from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. There are several variations of this dataset, all based on the same model, which simulates the dynamics of a Puma 560 robot arm. The task in these datasets is to predict the angular acceleration of one of the robot arm's links.
+Name: puma32H
+Tags: OpenML-Reg19, study_130, synthetic
 
-The input features include angular positions, velocities, and torques of the robot arm. The datasets were specifically designed for the Delve environment and vary according to three factors: number of inputs, degree of non-linearity, and amount of noise in the output.
+This dataset is part of a family of synthetically generated datasets derived from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. The family consists of eight datasets, with two of them included in this repository. All datasets are variations on the same model, simulating the dynamics of the Puma 560 robot arm. The primary task for these datasets is to predict the angular acceleration of one of the robot arm's links. Input variables include angular positions, velocities, and torques of the robot arm.
 
-This particular dataset has a moderate number of inputs, a fairly linear relationship between inputs and outputs, and a moderate amount of noise in the output. It consists of a large number of cases, each described by a set of continuous variables. These variables include various measurements related to the robot arm's movement, such as angles, angular velocities, and torques.
+The dataset family was specifically generated for the DELVE environment, with individual datasets spanning various dimensions representing the number of inputs, degree of non-linearity (ranging from fairly linear to non-linear), and the amount of noise in the output (ranging from moderate to high).
 
-The dataset was originally created as part of the Delve repository of datasets, and is now also available as part of a collection of regression datasets.
+The dataset originates from the DELVE repository of data and was part of a collection of regression datasets. It consists of cases with continuous variables. The features include various angular measurements (theta and thetad), torques (tau), and other robot arm-related parameters (dm, da, db, thetadd).
 
-Keywords: Puma 560 robot arm, angular acceleration, Delve environment, regression datasets, robotics, machine learning.
+This particular dataset provides a valuable resource for researchers and practitioners working on robotic arm simulations, predictive modeling, and machine learning applications in the field of robotics. It offers a controlled environment to study the relationships between various input parameters and the resulting angular acceleration of a robot arm link.
+
+The synthetic nature of the dataset allows for a comprehensive exploration of different scenarios and conditions that may be encountered in real-world robotic applications. This makes it particularly useful for developing and testing algorithms that can handle varying degrees of non-linearity and noise in the input data.
+
+Keywords: robot arm simulation, angular acceleration prediction, synthetic dataset, Puma 560, non-linear dynamics, machine learning, robotics, regression analysis, DELVE repository

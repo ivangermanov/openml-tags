@@ -1,17 +1,11 @@
-Subsampling of the dataset CNAE Nine with Seed Two 
+Name: CNAE Nine Seed Two
 
-This dataset is a subsampled version of the original CNAE Nine dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes and columns from the original dataset.
+Tags: Subsampling of the dataset CNAE Nine with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-The dataset was generated using a random number generator with a seed value of two. This ensured reproducibility of the subsampling process. The maximum number of rows, columns, and classes were limited to two thousand, one hundred, and ten, respectively.
+Generated with the following source code:
 
-To ensure that the subsampled dataset retained a representative distribution of classes, uniform sampling was used to select classes from the original dataset. The probability of selecting each class was proportional to its frequency in the original dataset.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then uniformly samples classes from the unique classes in the dataset, selecting the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies accordingly using train test split. The function then converts categorical columns to string and returns a dataset with the subsampled data.
 
-Once the classes were selected, the corresponding rows were extracted from the original dataset. Then, uniform sampling was applied to select columns from the resulting dataset. The column selection process was performed to reduce the dimensionality of the dataset while preserving its essential characteristics.
+Features: (skipped due to unreadability)
 
-Finally, the subsampled dataset was stratified according to the target variable to maintain the original class distribution. This involved splitting the dataset into training and testing sets using a stratified split method.
-
-Features: 
-
-V Thirty-Two, V Thirty-Four, V Forty-Three, V Forty-Nine, V Sixty-Five, V Seventy-One, V Eighty-Two, V Eighty-Three, V Eighty-Six, V Eighty-Seven, V Eighty-Eight, V One Hundred Eighteen, V One Hundred Forty-Five, V One Hundred Fifty, V One Hundred Fifty-Seven, V One Hundred Sixty-Six, V One Hundred Seventy-Three, V One Hundred Seventy-Eight, V One Hundred Eighty-Two, V One Hundred Eighty-Five, V One Hundred Ninety-Nine,...
-
-Keywords: subsampling, dataset, CNAE Nine, stratification, uniform sampling, column selection, class distribution, reproducibility.
+Keywords: dataset subsampling, stratified sampling, random number generator, categorical columns

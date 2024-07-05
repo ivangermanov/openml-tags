@@ -1,15 +1,18 @@
-Subsampling of the Dataset KDD Cup Nine Appetency 
+Name: KDD Cup 09 Appetency Seed 2
 
-This dataset is a subsampled version of the KDD Cup Nine Appetency dataset. The subsampling process involves uniformly sampling classes and columns from the original dataset. 
+Tags: Subsampling of the dataset KDD Cup 09 Appetency
 
-The subsampling function takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. 
+Generated with the following source code:
 
-First, the function identifies the unique classes in the dataset and selects a specified number of them randomly. It then selects the indices where one of these classes is present and subsets the data accordingly. 
+The subsample function is used to reduce the size of the dataset while maintaining its overall characteristics. It takes in several parameters, including a seed value, the maximum number of rows, columns, and classes, as well as a boolean indicating whether to stratify the sampling.
 
-Next, the function uniformly samples columns from the remaining dataset. It does this by generating a list of column indices, sorting them, and selecting a specified number of columns. 
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and uses these indices to subset the data.
 
-Finally, the function stratifies the remaining data according to the target variable and samples a specified number of rows. This ensures that the resulting dataset maintains a similar class distribution to the original.
+Next, the function uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting a subset of column indices and using these indices to subset the data.
 
-Tags: Machine Learning, Mathematics
+Finally, the function stratifies the sampling of rows according to the target variable, ensuring that the resulting dataset is representative of the original.
 
-Keywords: Subsampling, KDD Cup Nine Appetency, Machine Learning, Stratification, Data Sampling
+Features: 
+Appetency
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Data Reduction, Representative Dataset

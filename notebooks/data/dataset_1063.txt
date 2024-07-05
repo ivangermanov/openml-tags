@@ -1,28 +1,18 @@
-The KC2 dataset is a collection of software defect prediction data from the NASA Metrics Data Program. This dataset contains information about software for science data processing, specifically featuring McCabe and Halstead features extracted from source code. These features were originally defined in the 1970s to objectively characterize code characteristics associated with software quality.
+KC2 Software Defect Prediction Dataset
 
-Attribute information includes:
+Tags: OpenML-CC18, OpenML100, PROMISE, study 1, study 123, study 135, study 14, study 34, study 41, study 52, study 7, study 98, study 99
 
-* Line Count of Code, which represents the number of lines in the code
-* Cyclomatic Complexity, a measure of the structural complexity of the code
-* Essential Complexity, a measure of the amount of decision logic in the code
-* Design Complexity, a measure of the modular structure of the code
-* Total Operators Plus Operands, a measure of the size of the program
-* Volume, a measure of the amount of information in the program
-* Program Length, a measure of the size of the program
-* Difficulty, a measure of how hard the program is to understand
-* Intelligence, a measure of how easy the program is to understand
-* Effort, a measure of the amount of work required to complete the program
-* Time Estimator, a measure of the time required to complete the program
-* Line Count, a measure of the number of lines in the code
-* Lines of Comments, a measure of the number of comment lines in the code
-* Blank Lines, a measure of the number of empty lines in the code
-* Unique Operators, a measure of the number of distinct operators used in the code
-* Unique Operands, a measure of the number of distinct operands used in the code
-* Total Operators, a measure of the total number of operators used in the code
-* Total Operands, a measure of the total number of operands used in the code
-* Branch Count, a measure of the number of branches in the control flow graph
-* Problems, a binary indicator of whether the module has one or more reported defects
+Source: tera-PROMISE
 
-Relevant papers include studies on data quality and software defect datasets, as well as research on predictors of software defects.
+This dataset is part of the NASA Metrics Data Program defect data sets, specifically focusing on software for science data processing. The data is derived from McCabe and Halstead feature extractors of source code. These features were defined in the 1970s as an attempt to objectively characterize code features associated with software quality.
 
-Keywords: software defect prediction, NASA Metrics Data Program, McCabe and Halstead features, software quality, code characteristics.
+Attribute Information:
+The dataset includes various metrics such as McCabe's line count of code, cyclomatic complexity, essential complexity, design complexity, Halstead metrics (total operators and operands, volume, program length, difficulty, intelligence, effort, time estimator), line counts (code, comments, blank lines), unique operators and operands, total operators and operands, branch count of the flow graph, and a binary indicator of whether the module has reported defects.
+
+The KC2 dataset is valuable for software defect prediction research. It has been used in several studies examining data quality in software engineering datasets and evaluating predictive models for software defects. The dataset provides insights into the relationship between various code metrics and the presence of software defects, which is crucial for improving software quality and reliability.
+
+Researchers have utilized this dataset to investigate blind spot sampling policies in software engineering and to assess the effectiveness of different predictors of software defects. The KC2 dataset, along with other NASA software defect datasets, has been subject to analysis regarding data quality and its impact on software engineering research.
+
+This dataset serves as an important resource for researchers and practitioners in the field of software engineering, particularly those focused on defect prediction, software quality assurance, and empirical software engineering studies.
+
+Keywords: software defect prediction, NASA metrics, McCabe complexity, Halstead metrics, code quality, empirical software engineering, defect data, software metrics, quality assurance, predictive modeling

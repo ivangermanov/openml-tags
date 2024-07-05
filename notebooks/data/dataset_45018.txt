@@ -1,15 +1,26 @@
-Tags: Images, Machine Learning Dataset 
+**Electricity**
 
-The Electricity dataset belongs to the classification on numerical features benchmark. 
+This dataset belongs to the "classification on numerical features" benchmark. 
 
-This dataset was collected from the Australian New South Wales Electricity Market where prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done.
+The Electricity dataset is a widely used dataset described and analyzed in various papers. This data was collected from the Australian New South Wales Electricity Market. In this market, prices are not fixed and are affected by demand and supply of the market. They are set every five minutes. Electricity transfers to/from the neighboring state of Victoria were done to alleviate fluctuations. 
 
-The dataset contains instances dated from May to December, with forty-eight instances for each time period of one day. Each example on the dataset refers to a period of thirty minutes. 
+The dataset contains instances dated from May to December. Each example of the dataset refers to a period of thirty minutes, i.e., there are instances for each time period of one day. Each example on the dataset has fields, the day of the week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. 
 
-Each example on the dataset has several fields, including the day of the week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. 
+The class label identifies the change of the price in New South Wales relative to a moving average of the last twenty-four hours and removes the impact of longer-term price trends. The data was normalized.
 
-The class label identifies the change of the price in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends. 
+### Attribute Information
 
-Attribute information includes the date, which is normalized; the day of the week; the period, which is the time of the measurement in half-hour intervals over twenty-four hours and is normalized; the New South Wales electricity price, which is normalized; the New South Wales electricity demand, which is normalized; the Victoria electricity price, which is normalized; the Victoria electricity demand, which is normalized; and the scheduled electricity transfer between both states, which is normalized.
+* Date: date between May to December. Here normalized between zero and one
+* Day: day of the week
+* Period: time of the measurement in half-hour intervals over twenty-four hours. Here normalized between zero and one
+* New South Wales Electricity Price: normalized between zero and one
+* New South Wales Electricity Demand: normalized between zero and one
+* Victoria Electricity Price: normalized between zero and one
+* Victoria Electricity Demand: normalized between zero and one
+* Scheduled Electricity Transfer: normalized between zero and one
 
-Keywords: Electricity, Market, Demand, Supply, Prices, Transfer
+### Relevant Papers
+
+Learning with drift detection. In Brazilian Symposium on Artificial Intelligence.
+
+Keywords: Electricity Market, Price Trends, Demand and Supply, Classification, Numerical Features

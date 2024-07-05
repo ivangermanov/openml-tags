@@ -1,27 +1,27 @@
 Forest Fires Data Set
 
-This is a challenging regression task, where the goal is to predict the burned area of forest fires in the northeastern region of Portugal, using meteorological and other data.
+This is a difficult regression task, where the aim is to predict the burned area of forest fires, in the northeast region of Portugal, by using meteorological and other data.
 
-Data Set Information:
+The output variable, burned area, was first transformed with a natural logarithm function to stabilize the variance and make the data more normally distributed. Then, several data mining methods were applied to the transformed data. After fitting the models, the outputs were post-processed with the inverse of the natural logarithm transform to obtain the original units.
 
-The output variable, area, was initially transformed using a natural logarithm function plus one to stabilize its variance. Several data mining methods were then applied, followed by post-processing with the inverse of the transformation to obtain the final predictions. Four different input setups were used in the experiments, which were conducted using tenfold cross-validation repeated thirty times. Two regression metrics were evaluated: Mean Absolute Deviation and Root Mean Squared Error.
+Four different input setups were used, and the experiments were conducted using a ten-fold cross-validation method repeated thirty times. Two regression metrics were measured: Mean Absolute Deviation and Root Mean Squared Error.
+
+A Gaussian support vector machine fed with only four direct weather conditions, namely temperature, relative humidity, wind speed, and outside rain, obtained the best Mean Absolute Deviation value. The best Root Mean Squared Error was attained by the naive mean predictor. An analysis of the regression error curve shows that the support vector machine model predicts more examples within a lower admitted error. In effect, the support vector machine model predicts better small fires, which are the majority.
 
 Attribute Information:
 
-For a detailed explanation of each attribute, refer to the original publication.
+The dataset consists of thirteen attributes, including spatial coordinates, month and day of the week, fire weather indices, and meteorological data.
 
-One. X Axis Spatial Coordinate represents the location within the Montesinho park map.
-Two. Y Axis Spatial Coordinate represents the location within the Montesinho park map.
-Three. Month of the Year indicates when the fire occurred.
-Four. Day of the Week indicates when the fire occurred.
-Five. Fine Fuel Moisture Code Index measures the dryness of fine fuels.
-Six. Duff Moisture Code Index measures the dryness of organic material on the ground.
-Seven. Drought Code Index measures the dryness of deeper organic layers.
-Eight. Initial Spread Index measures how quickly a fire spreads.
-Nine. Temperature measures the air temperature in Celsius degrees.
-Ten. Relative Humidity measures the air moisture content.
-Eleven. Wind Speed measures the air movement in kilometers per hour.
-Twelve. Outside Rain measures precipitation in millimeters per square meter.
-Thirteen. Burned Area of the Forest measures the size of the affected area in hectares.
+The spatial coordinates, X and Y, are the x-axis and y-axis coordinates within the Montesinho park map.
 
-Keywords: forest fires, regression task, meteorological data, burned area prediction, data mining, transformation, cross-validation, evaluation metrics.
+The month attribute represents the month of the year, ranging from January to December.
+
+The day attribute represents the day of the week, ranging from Monday to Sunday.
+
+The fire weather indices, FFMC, DMC, DC, and ISI, are part of the Fire Weather Index system.
+
+The meteorological data includes temperature, relative humidity, wind speed, and outside rain.
+
+The burned area of the forest is the output variable, which is highly skewed towards zero, making it suitable for logarithmic transformation.
+
+Keywords: forest fires, burned area, meteorological data, fire weather indices, regression task, support vector machine, cross-validation.

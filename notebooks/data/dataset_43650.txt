@@ -1,24 +1,22 @@
 Spike Waveforms
 
-Tags: Computer Systems, Machine Learning
+Tags: Introduction
 
-Introduction
-Neurons in the brain utilize electrical signals for communication. Different spike waveforms correspond to distinct cell types or varying neuron morphologies. By examining diverse spike waveforms, we may identify disparate neuronal types within our sample.
+Neurons in the brain use electrical signals for communication. Different spike waveforms correspond to different cell types or different neuron morphologies. In learning about different spike waveforms, we may identify different neuronal types in our sample.
 
 Content
-The dataset comprises one hundred fifty numerical categories corresponding to the sampling of a five millisecond extracellular voltage at thirty kilohertz. Since the extracellular voltage amplitude relates to the square of the distance to the cell, we normalize the entire trace to the minimal voltage, which corresponds to the peak of the spike.
 
-To Load into Python
-Import the necessary libraries and load the dataset using the following code:
-```
+The data contains numerical categories corresponding to the sampling of a five-millisecond extracellular voltage at thirty kilohertz. Since the extracellular voltage amplitude is related to the squared of the distance to the cell, we normalize the whole trace to the minimal voltage that corresponds to the peak of the spike.
+
+To load it in Python:
+
 import pandas as pd
-waveforms = pd.read_csv('waveforms.csv', index_col='uid')
+waveforms = pd.read_csv('waveforms.csv', index_col = 'unique identifier')
 waveforms.info()
 waveforms.iloc[0, :-1].plot()
-```
-This code will load the dataset, display its information, and plot the first waveform.
 
-Features
-UID, Organoid
+This will plot the first waveform. The last column is organoid.
 
-Keywords: Spike Waveforms, Neuron Morphologies, Electrical Signals, Brain Communication, Extracellular Voltage, Normalization, Python Data Loading.
+Features: unique identifier, organoid
+
+Keywords: spike waveforms, neuron communication, electrical signals, cell types, neuron morphologies

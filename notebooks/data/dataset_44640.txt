@@ -1,46 +1,15 @@
-Name: DNA Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Strategize True 
+Name: DNA Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Life Science, Medicine 
+Tags: Subsampling of the dataset DNA with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Subsampling of the dataset DNA with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no strategize equals true generated with the following source code:
+Generated with the following source code:
 
-def subsample(self, seed: int, number_rows_max: int = two thousand, number_columns_max: int = one hundred, number_classes_max: int = ten, strategized: bool = true) -> Dataset:
-random_number_generator = numpy random default random generator seed
-x equals self x
-y equals self y 
-uniformly sample classes equals y unique 
-if length of classes is greater than number classes max:
-value counts equals y value counts 
-selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts over sum of value counts 
-select the indices where one of these classes is present 
-indexes equals y index y is in selected classes 
-x equals x iloc indexes 
-y equals y iloc indexes 
-uniformly sample columns if required 
-if length of x columns is greater than number columns max:
-column indexes equals random number generator choice list range length of x columns size equals number columns max replace equals false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns sorted column indexes 
-x equals x selected columns 
-else:
-sorted column indexes equals list range length of x columns 
-if length of x is greater than number rows max:
-strategize accordingly 
-target name equals y name 
-data equals pandas concat x y axis equals columns 
-_, subset equals sklearn model selection train test split data test size equals number rows max strategize equals data target name shuffle equals true random state equals seed 
-x equals subset drop target name axis equals columns 
-y equals subset target name 
-we need to convert categorical columns to string for open ml 
-categorical mask equals self categorical mask for i in sorted column indexes 
-columns equals list x columns 
-return dataset 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the subsample should be stratified according to the target variable.
+
+The function uses the pandas library to manipulate the data. It first selects a random subset of classes using the value counts of the target variable. It then selects a random subset of columns using the choice function from numpy random. Finally, it selects a random subset of rows using the train test split function from scikit learn.
+
+The function returns a new dataset that is a subsample of the original. The new dataset has the same structure as the original, but with a reduced number of rows, columns, and classes.
 
 Features: 
 
-Keywords: DNA, subsampling, dataset, life science, medicine, machine learning.
+Keywords: DNA dataset, subsampling, stratification, random sampling, pandas, numpy, scikit learn.

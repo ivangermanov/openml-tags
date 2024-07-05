@@ -1,13 +1,11 @@
-The CPU Activity database is a collection of computer systems activity measures. The data was collected from a Sun Sparcstation twenty-seven twelve with one hundred twenty-eight megabytes of memory running in a multi-user university department. Users would typically be doing a large variety of tasks ranging from accessing the internet, editing files, or running very central processing unit-bound programs.
+**Data Description**
+The Computer Activity databases are a collection of computer systems activity measures. The data was collected from a Sun Sparcstation 20/712 with 128 Mbytes of memory running in a multi-user university department. Users would typically be doing a large variety of tasks ranging from accessing the internet, editing files, or running very CPU-bound programs. The data was collected continuously on two separate occasions. On both occasions, system activity was gathered every five seconds. The final dataset is taken from both occasions with equal numbers of observations coming from each collection epoch. Each instance represents one observed system performance. The goal is to predict the portion of time that CPUs run in user mode.
 
-The data was collected continuously on two separate occasions. On both occasions, system activity was gathered every five seconds. The final dataset is taken from both occasions with equal numbers of observations coming from each collection epoch. Each instance represents one observed system performance.
+**Attribute Description**
+The dataset consists of various attributes that describe the system's activity. These attributes include the number of reads and writes between system memory and user memory, system calls of all types, system read and write calls, fork and exec calls, character transfers, page out requests, pages paged out, pages placed on the free list, pages checked if they can be freed, page attaches, page-in requests, pages paged in, page faults caused by protection errors, page faults caused by address translation, process run queue size, memory pages available to user processes, and disk blocks available for page swapping.
 
-The goal is to predict the portion of time that central processing units run in user mode. To achieve this, we have various attributes that describe the system activity. These include reads, which represent transfers per second between system memory and user memory, as well as writes, which represent transfers per second between system memory and user memory. System calls of all types per second are also considered, along with system read calls per second and system write calls per second. 
+The dataset also includes the portion of time that CPUs run in user mode, which is the target variable to be predicted.
 
-Additionally, we have attributes that describe the number of system fork calls per second, system exec calls per second, characters transferred per second by system read calls, and characters transferred per second by system write calls. Other attributes include page-out requests per second, pages paged out per second, pages per second placed on the free list, pages checked if they can be freed per second, page attaches per second, page-in requests per second, pages paged in per second, page faults caused by protection errors, and page faults caused by address translation.
+**cpu_activity** Tags: **Data**
 
-Furthermore, process run queue size and number of memory pages available to user processes are also considered, along with the number of disk blocks available for page swapping. 
-
-Features: reads, writes, system calls, system read calls, system write calls, fork calls, exec calls, characters transferred, page-out requests, pages paged out, pages on free list, pages checked, page attaches, page-in requests, pages paged in, page faults, process run queue size, memory pages available, disk blocks available 
-
-Keywords: CPU Activity, Machine Learning, Medicine, System Performance, User Mode, Memory Management.
+Keywords: computer activity, system performance, CPU usage, memory management, process management

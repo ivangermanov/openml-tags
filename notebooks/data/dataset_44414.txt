@@ -1,9 +1,15 @@
-The MiniBooNE dataset has been subsampled using a specific set of arguments to generate a new dataset. This dataset has been generated with a seed value, which ensures reproducibility. The maximum number of rows has been limited, and the maximum number of classes has also been restricted. Furthermore, the maximum number of columns has been capped.
+Name: MiniBooNE Seed Two 
 
-The subsampling process involves uniformly sampling classes, selecting the indices where one of these classes is present, and then uniformly sampling columns if required. The resulting dataset consists of a subset of the original data, with a limited number of rows, columns, and classes.
+Tags: Subsampling of the dataset MiniBooNE with seed equals two 
 
-The dataset features a range of particle IDs, including particle ID zero through forty-nine, as well as a signal feature.
+This dataset is a subsample of the original MiniBooNE dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then further subsampling the resulting dataset to meet the specified maximum number of rows. 
 
-Tags: Medicine, Statistics
+The original dataset was filtered to include only a subset of classes, selected randomly from the total number of unique classes present in the dataset. The classes were chosen based on their frequency of occurrence in the dataset, with more frequent classes being more likely to be selected. 
 
-Keywords: subsampling, dataset, reproducibility, classes, columns, particle IDs, signal feature
+Once the classes were selected, the dataset was filtered to include only the rows where one of these classes was present. The resulting dataset was then further filtered to include only a subset of columns, selected randomly from the total number of columns present in the dataset. 
+
+Finally, the dataset was subsampled to meet the specified maximum number of rows, using a stratified sampling approach to ensure that the resulting dataset retained the same class balance as the original dataset. 
+
+Features: Particle Identification Features, Signal 
+
+Keywords: MiniBooNE, Subsampling, Stratified Sampling, Class Balance, Particle Identification

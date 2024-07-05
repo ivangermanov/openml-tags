@@ -1,11 +1,58 @@
-This dataset contains Quantitative Structure Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: Myosin Light Chain Kinase, and it has multiple rows and numerous features including IDs and class feature. The features represent Extended Connectivity Circular Fingerprints (FCFP) which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The dataset is part of the MetaQSAR project and provides valuable information for researchers studying the relationship between chemical structures and their biological activities.
+Source: MetaQSAR project - September 
 
-The dataset contains information about the compound's molecular structure, including its chemical formula, molecular weight, and other relevant properties. Additionally, it provides activity values measured in terms of pseudo-pIC50, which represents the negative logarithm of the half-maximal inhibitory concentration.
+Please cite: This dataset contains QSAR data (from ChEMBL version ) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Features include molecule identifiers, FCFP fingerprints, and activity values. The FCFP fingerprints are bit-string representations of molecular structures, which can be used to compare and analyze the similarity of different molecules.
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
-The dataset is particularly useful for researchers interested in studying the properties and activities of compounds targeting Myosin Light Chain Kinase, a key enzyme involved in various cellular processes.
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Myosin light chain kinase
+Synonyms: Cardiac MLCK, Cardiac MyBP C associated Ca/CaM kinase, MLCK, MYLK, Myosin light chain kinase 
 
-Keywords: QSAR, Myosin Light Chain Kinase, FCFP, SMILES, Pipeline Pilot, MetaQSAR, chemical structure, biological activity, pIC50.
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/CAMK protein kinase group/CAMK protein kinase MLCK family
+
+Description: Myosin light chain kinase 
+Relationship: SINGLE PROTEIN
+Accession: QMK
+
+Go Component:
+- cytoplasm
+- cytosol
+- actin cytoskeleton
+
+Go Function:
+- nucleotide binding
+- protein kinase activity
+- protein serine/threonine kinase activity
+- calmodulin dependent protein kinase activity
+- myosin light chain kinase activity
+- ATP binding
+- kinase activity
+- transferase activity
+
+Go Process:
+- regulation of vascular permeability involved in acute inflammatory response
+- protein phosphorylation
+- phosphorylation
+- sarcomere organization
+- sarcomerogenesis
+- cardiac myofibril assembly
+- positive regulation of sarcomere organization
+- cellular response to interleukin
+
+Additional Information:
+- Wikipedia: MYLK
+- canSAR Target: QMK
+- IntAct: QMK
+- PharmGKB: myosin light chain kinase 
+- Pharos: Tchem
+- UniProt: Multiple entries
+- InterPro: Multiple entries including Protein kinase domain, Serine/Threonine kinase active site, Kinase like domain superfamily, Protein kinase ATP binding site
+- Pfam: Pkinase
+
+Keywords: QSAR, molecular fingerprints, myosin light chain kinase, protein kinase, enzyme classification, gene ontology, bioinformatics databases

@@ -1,26 +1,15 @@
-**FOREX EURCAD Day Close**
+Name: FOREX EUR/CAD Day Close
 
-Tags: Computer Systems, Finance, Forex, Forex Close, Forex Day, Machine Learning
+Tags: finance, forex, forex close, forex day
 
-This dataset consists of historical price data of the Forex EUR/CAD pair obtained from Dukascopy Historical Data Feed. Each instance represents a single candlestick for a given day, excluding weekends when the Forex market is closed.
+Source: Dukascopy Historical Data Feed
 
-The dataset spans a specific period and does not include weekends. The time zone for the timestamp feature is set to Europe/Amsterdam.
+Data Description
+This dataset contains the historical price data of the FOREX EUR/CAD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by the direction of the mean close price of the following day relative to the mean close price of the current day. Specifically, the class attribute is true if the mean close price increases on the following day and false if it decreases or remains unchanged.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-The attributes included in this dataset are:
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
-* Bid Open: The bid price at the start of the given time interval.
-* Bid High: The highest bid price recorded during the time interval.
-* Bid Low: The lowest bid price recorded during the time interval.
-* Bid Close: The bid price at the end of the time interval.
-* Bid Volume: The number of times the bid price changed within the time interval.
-* Ask Open: The ask price at the start of the given time interval.
-* Ask High: The highest ask price recorded during the time interval.
-* Ask Low: The lowest ask price recorded during the time interval.
-* Ask Close: The ask price at the end of the time interval.
-* Ask Volume: The number of times the ask price changed within the time interval.
-* Class: A binary indicator of whether the mean close price will increase on the following day.
-
-Keywords: Forex, EURCAD, Historical Data, Candlestick, Machine Learning, Financial Analysis
+Keywords: FOREX, EUR/CAD, historical data, candlestick, finance, trading

@@ -1,75 +1,49 @@
-**Meta-Album Animals with Attributes Dataset Extended**
+**Meta-Album Animals with Attributes Dataset (Extended)**
 
-The original Animals with Attributes two dataset was designed to benchmark transfer-learning algorithms, particularly attribute-based classification and zero-shot learning. It consists of over thirty-seven thousand images from fifty animal classes, where each animal corresponds to a class. The images in this dataset were collected from public sources, such as Flickr, considering only images licensed for free use and redistribution.
-
-Each class can have a varying number of images with resolutions ranging from one hundred by one hundred pixels to one thousand eight hundred ninety-three by one thousand nine hundred twenty pixels. To preprocess this dataset, the images were cropped from either side to make them square. In cases where an image had a resolution lower than one hundred twenty-eight pixels, the squared images were created by either duplicating the top and bottom-most three rows or the left and right-most three columns based on the orientation of the original image. Finally, the square images were resized into one hundred twenty-eight by one hundred twenty-eight pixels using an anti-aliasing filter.
+The original Animals with Attributes Two dataset was designed to benchmark transfer-learning algorithms, particularly attribute-based classification and zero-shot learning. It has a large collection of images from fifty animal classes, where each animal corresponds to a class. The images of this dataset were collected from public sources, such as Flickr, considering only images licensed for free use and redistribution. Each class can have a varying number of images with different resolutions. To preprocess this dataset, we cropped the images from either side to make them square. In case an image has a low resolution, the squared images are done by either duplicating the top and bottom-most rows or the left and right most columns based on the orientation of the original image. Lastly, the square images are resized into a uniform size using an anti-aliasing filter.
 
 **Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/AWA.png)
 
-**Meta Album ID:** Large Animal Meta Album
+**Meta Album ID**: Large Animals Meta Album
+**Meta Album URL**: https://meta-album.github.io/datasets/AWA.html
+**Domain ID**: Large Animals
+**Domain Name**: Large Animals
+**Dataset ID**: Animals with Attributes
+**Dataset Name**: Animals with Attributes
+**Short Description**: A dataset of mammals for image classification
+**Number of Classes**: Fifty
+**Number of Images**: A large collection
+**Keywords**: mammals, animals
+**Data Format**: images
+**Image Size**: Uniform size
+**License (original data release)**: Creative Commons
+**License URL (original data release)**: https://cvml.ist.ac.at/AwA2/
+**License (Meta-Album data release)**: Creative Commons
+**License URL (Meta-Album data release)**: https://cvml.ist.ac.at/AwA2/
+**Source**: Animals with Attributes Two
+**Source URL**: https://cvml.ist.ac.at/AwA2/
+**Meta Album Author**: Meta Album Team
+**Created Date**: March
+**Contact**: Meta Album Team
+**Contact Email**: meta-album@chalearn.org
+**Contact URL**: https://meta-album.github.io/
 
-**Meta Album URL:** https://meta-album.github.io/datasets/AWA.html
-
-**Domain ID:** Large Animal Domain
-
-**Domain Name:** Large Animals
-
-**Dataset ID:** Animals with Attributes
-
-**Dataset Name:** Animals with Attributes
-
-**Short Description:** A mammal dataset for image classification
-
-**Number of Classes:** Fifty
-
-**Number of Images:** Over thirty-seven thousand
-
-**Keywords:** Mammals, Animals
-
-**Data Format:** Images
-
-**Image Size:** One hundred twenty-eight by one hundred twenty-eight pixels
-
-**License (original data release):** Creative Commons
-
-**License URL (original data release):** https://cvml.ist.ac.at/AwA2/
-
-**License (Meta-Album data release):** Creative Commons
-
-**License URL (Meta-Album data release):** https://cvml.ist.ac.at/AwA2/
-
-**Source:** Animals with Attributes two
-
-**Source URL:** https://cvml.ist.ac.at/AwA2/
-
-**Created Date:** March
-
-**Contact URL:** https://meta-album.github.io/
-
-### **Cite this dataset**
+**Cite this dataset**
 
 @ARTICLE{Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly}
 
-### **Cite Meta-Album**
+**Cite Meta-Album**
 
 @inproceedings{Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}
 
-### **More**
+**More**
 
-For more information on the Meta-Album dataset, please see the NeurIPS 2022 paper.
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
 
-For details on the dataset preprocessing, please see the supplementary materials.
+**Other versions of this dataset**
 
-Supporting code can be found on our GitHub repository.
+Micro, Mini
 
-Meta-Album on Papers with Code.
-
-### **Other versions of this dataset**
-
-Micro Version
-
-Mini Version
-
-**Keywords:** Mammals, Animals, Image Classification, Zero-Shot Learning, Transfer-Learning Algorithms
+Keywords: mammals, animals, image classification, transfer learning, zero-shot learning

@@ -1,43 +1,17 @@
-Phoneme Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Phoneme Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Economics, Government 
+Tags: Subsampling of the dataset Phoneme with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-Subsampling of the dataset Phoneme with seed equal to four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+Generated with the following source code:
 
-def subsample(self, seed: int, number_rows_max: int, number_columns_max: int, number_classes_max: int, stratified: bool) -> Dataset:
-random_number_generator = numpy random default random generator with seed 
-x equals self x 
-y equals self y 
+The subsample function takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Uniformly sample classes equals y unique if length of classes is greater than number classes max:
-value_counts equals y value counts 
-selected_classes equals random_number_generator choice classes size number_classes_max replace false probability value_counts divided by sum of value_counts 
-Select the indices where one of these classes is present index equals y index y is in selected classes 
-x equals x iloc index 
-y equals y iloc index 
+The function first initializes a random number generator with the given seed. It then selects a subset of the classes, ensuring that the number of classes does not exceed the maximum number of classes. The function selects the indices where one of these classes is present and filters the data accordingly.
 
-Uniformly sample columns if required:
-if length of x columns is greater than number_columns_max:
-column_indexes equals random_number_generator choice list range length of x columns size number_columns_max replace false 
-sorted_column_indexes equals sorted column_indexes 
-selected_columns equals list x columns sorted_column_indexes 
-x equals x selected_columns 
-else:
-sorted_column_indexes equals list range length of x columns 
-if length of x is greater than number_rows_max:
-Stratify accordingly target_name equals y name 
-data equals pandas concatenate x and y axis columns 
-_, subset equals train_test_split data test_size number_rows_max stratify data target_name shuffle true random_state seed 
-x equals subset drop target_name axis columns 
-y equals subset target_name 
-We need to convert categorical columns to string for openml categorical_mask equals list self categorical_mask for i in sorted_column_indexes 
-columns equals list x columns 
-return Dataset 
-Technically this is not the same but it is where it was derived from 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical_mask equals categorical_mask 
-columns equals columns 
+Next, the function uniformly samples columns if required, ensuring that the number of columns does not exceed the maximum number of columns. If the number of rows exceeds the maximum number of rows, the function stratifies the data accordingly and selects a subset of the data.
 
-Keywords: subsampling, dataset, Phoneme, economics, government, stratification, sampling
+Finally, the function converts categorical columns to string for OpenML and returns a dataset with the subsampled data.
+
+Features: (Skipped due to unreadability)
+
+Keywords: Phoneme dataset, subsampling, stratification, random sampling, dataset generation.

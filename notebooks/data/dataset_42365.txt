@@ -1,31 +1,13 @@
 Optical Interconnection Network Data Set
 
-### Data Set Information
+Tags: Optical Interconnection Network
 
-All simulations were performed using the OPNET Modeler software. The communication mechanism employed was message passing, where any processor could submit a point-to-point message to the network, destined for any other processor. Calculations were based on an M/M/1 queue, consisting of a First-in-First-Out buffer with packets arriving randomly according to a Poisson arrival process, and a processor retrieving packets from the buffer at a specified service rate. In all simulations, it was assumed that the processor at each node would extract a packet from an input queue, process it for a period of time, and then generate an output data message upon expiration of that period. The size of each input queue was assumed to be infinite, and a processor would become idle only when all its input queues were empty.
+Data Set Information
 
-### Attribute Information
+All simulations were performed using the OPNET Modeler software. The communication mechanism used is message passing, where any processor can submit a point-to-point message to the network, destined for any other processor. The M/M/1 queue was considered in the calculations, consisting of a First-in First-Out buffer with packets arriving randomly according to a Poisson arrival process, and a processor that retrieves packets from the buffer at a specified service rate. In all simulations, it is assumed that the processor at each node extracts a packet from an input queue, processes it for a period of time, and when that period expires, it generates an output data message. The size of each input queue is assumed to be infinite. A processor becomes idle only when all its input queues are empty.
 
-The attributes of this data set include:
+Attribute Information
 
-Node Count: The number of nodes present in the network, either eight by eight or four by four.
+The node number refers to the number of nodes in the network, which can be either eight by eight or four by four. The thread number represents the number of threads in each node at the beginning of the simulation. The spatial distribution evaluates the performance of the network using synthetic traffic workloads, including uniform, hot region, bit reverse, and perfect shuffle traffic models. The temporal distribution of packet generation is implemented by independent traffic sources, including client-server traffic and asynchronous traffic. The message transfer time and thread run time are also considered, with the message transfer time being uniformly distributed with a mean range from twenty to one hundred clock cycles, and the thread run time being exponentially distributed with a mean of one hundred clock cycles. The processor utilization measures the percentage of time that threads are running in the processor. The channel waiting time is the average waiting time of a packet at the output channel queue until it is serviced by the channel. The input waiting time is the average waiting time of a packet until it is serviced by the processor. The network response time is the time between a request message being enqueued at the output channel and the corresponding data message being received in the input queue. The channel utilization measures the percentage of time that the channel is busy transferring packets to the network.
 
-Thread Count: The initial number of threads present in each node at the start of the simulation.
-
-Spatial Traffic Pattern: The performance of the network was evaluated using synthetic traffic workloads, including uniform, hot region, bit reverse, and perfect shuffle traffic models.
-
-Temporal Traffic Pattern: Temporal distribution of packet generation was implemented through independent traffic sources, utilizing client-server traffic and asynchronous traffic patterns.
-
-Message Transfer and Run Time: Message transfer time was uniformly distributed with a mean ranging from twenty to one hundred clock cycles, while thread run time was exponentially distributed with a mean of one hundred clock cycles.
-
-Processor Utilization: This measures the percentage of time during which threads were actively running on the processor.
-
-Channel Waiting Time: The average time spent by a packet waiting in the output channel queue before being serviced by the channel.
-
-Input Waiting Time: The average time spent by a packet waiting before being serviced by the processor.
-
-Network Response Time: The time elapsed between a request message being enqueued at the output channel and the corresponding data message being received in the input queue.
-
-Channel Utilization: The percentage of time during which the channel was busy transferring packets across the network.
-
-Keywords: Optical Interconnection Network, Computer Systems, Computational Universe, Message Passing, Queueing Theory, Network Performance Evaluation
+Keywords: Optical Interconnection Network, Message Passing, M/M/1 Queue, Processor Utilization, Channel Waiting Time, Network Response Time

@@ -1,32 +1,13 @@
-**2018 Airplane Flights**
-Tags: Machine Learning, Statistics
+2018 Airplane Flights Dataset Description Story
 
-Dataset Description Story:
+To add to my portfolio, I wanted to build a web application to predict the prices of airline flight prices. The user would be able to select an origin and a destination. I found a database from the Bureau of Transportation Statistics. I downloaded their data from the first, second, third, and fourth quarters of 2018, a total of over twenty-seven million rows and forty-two columns. For my pricing prediction purposes, I eliminated unnecessary columns, renamed some columns, and refined it for consistency, bringing it to a new total of over nine million rows and thirteen columns.
 
-To enhance my portfolio as a Data Science student, I aimed to create a web application capable of predicting airline flight prices based on user-selected origin and destination cities. In pursuit of this goal, I obtained a comprehensive dataset from the Bureau of Transportation Statistics, comprising over twenty-seven million rows and forty-two columns, covering quarters one through four of 2018.
+Column Descriptions
 
-After refining the dataset for consistency and eliminating unnecessary columns, I was left with approximately nine million rows and thirteen columns, which better suited my pricing prediction objectives.
+The first column, Unnamed, can be dropped as it is a duplicate index column. The ItinID and MktID columns vaguely demonstrate the order in which tickets were ordered, with lower IDs being ordered first. The MktCoupons column represents the number of coupons in the market for that flight. The Quarter column indicates the quarter of the year, either one, two, three, or four, all of which are in 2018. The Origin and Dest columns represent the cities from which the flight begins and ends, respectively. The OriginWac and DestWac columns represent the USA State or Territory World Area Code for the origin and destination, respectively. The Miles column represents the number of miles traveled. The ContiguousUSA column is a binary column indicating whether the flight is in the contiguous forty-eight USA states or not. The NumTicketsOrdered column represents the number of tickets that were purchased by the user. The Airline Company column represents the two-letter airline company code that the user used from start to finish. The PricePerTicket column is the target prediction column.
 
-Column Descriptions:
+Airline Company Codes, in order of frequency for this dataset, include Southwest Airlines Co., Delta Air Lines Inc., American Airlines Inc., United Air Lines Inc., JetBlue Airways, Alaska Airlines Inc., Spirit Air Lines, Allegiant Air, Frontier Airlines Inc., Hawaiian Airlines Inc., Sun Country Airlines, and Virgin America.
 
-The dataset contains thirteen columns, excluding the unnamed column, which is a duplicate index column and can be disregarded. The remaining columns include:
+USA State or Territory World Area Codes include Alaska, Hawaii, Puerto Rico, U.S. Virgin Islands, U.S. Pacific Trust Territories and Possessions, and various states.
 
-* Itinerary Identification and Market Identification, which roughly demonstrate the sequence in which tickets were ordered;
-* Market Coupons, representing the number of available coupons for a given flight;
-* Quarter, indicating the quarter of 2018 during which the flight took place;
-* Origin City, specifying the departure city;
-* Origin World Area Code, denoting the US state or territory where the flight originated;
-* Destination City, specifying the arrival city;
-* Destination World Area Code, denoting the US state or territory where the flight concluded;
-* Miles Traveled, indicating the distance covered during the flight;
-* Contiguous United States, a binary column signifying whether the flight remained within the forty-eight contiguous states or not; 
-* Number of Tickets Ordered, representing the quantity of tickets purchased; 
-* Airline Company, specifying the two-letter airline company code utilized throughout the journey;
-* Price Per Ticket, serving as the target prediction column.
-
-Airline Company Codes, listed in order of frequency, consist of:
-Southwest Airlines Co., Delta Air Lines Inc., American Airlines Inc., United Air Lines Inc., JetBlue Airways, Alaska Airlines Inc., Spirit Air Lines, Allegiant Air, Frontier Airlines Inc., Hawaiian Airlines Inc., Sun Country Airlines, and Virgin America.
-
-US State/Territory World Area Codes encompass various regions, including Alaska, Hawaii, Puerto Rico, US Virgin Islands, US Pacific Trust Territories and Possessions, as well as numerous states across the country.
-
-Keywords: Airline Flight Prices, Predictive Modeling, Web Application Development, Data Refining, Bureau of Transportation Statistics, Machine Learning, Statistics
+Keywords: Airline Flight Prices, Web Application, Prediction, Bureau of Transportation Statistics, Airline Company Codes, USA State or Territory World Area Codes.

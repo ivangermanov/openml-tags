@@ -1,23 +1,19 @@
-Bank Marketing Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Bank Marketing Seed Two
 
-Tags: Sociology, Statistics 
-
-Sub-sampling of the dataset Bank Marketing with seed equal to two, arguments number rows max equals two thousand, arguments number cols max equals one hundred, arguments number classes max equals ten, and arguments no stratify equals true.
+Tags: Subsampling of the dataset Bank Marketing with seed equals two
 
 Generated with the following source code:
 
-The function sub-sample takes five parameters: self, seed, number rows max, number cols max, number classes max, and stratified. It returns a dataset.
+The function subsample takes in several parameters, including a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-First, it initializes a random number generator using the given seed. Then, it selects the features and target variable from the dataset.
+The function first initializes a random number generator with the given seed. It then selects a subset of the classes, ensuring that the number of classes does not exceed the maximum number of classes. The indices where one of these classes is present are selected, and the data is filtered accordingly.
 
-If the number of unique classes in the target variable exceeds the maximum allowed number of classes, it uniformly samples the classes based on their frequency. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+If the number of columns exceeds the maximum number of columns, the function uniformly samples the columns. It then selects the corresponding columns from the data.
 
-Next, if the number of columns in the feature matrix exceeds the maximum allowed number of columns, it uniformly samples the columns and filters the feature matrix accordingly.
+If the number of rows exceeds the maximum number of rows, the function stratifies the data accordingly and selects a subset of the data using train test split.
 
-Finally, if the number of rows in the filtered dataset exceeds the maximum allowed number of rows, it performs stratified sampling on the dataset to ensure class balance.
-
-The resulting sub-sampled dataset is then returned along with its metadata.
+Finally, the function converts categorical columns to string and returns a dataset with the selected data, categorical mask, and columns.
 
 Features: 
 
-Keywords: Bank Marketing, sub-sampling, dataset, sociology, statistics, stratified sampling.
+Keywords: Bank Marketing, Subsampling, Stratification, Random Sampling, Dataset Generation

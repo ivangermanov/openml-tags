@@ -1,19 +1,11 @@
-**COMET_MC**
+**COMET_MC Tags: study_10**
 
-Tags: Economics, Social Media, study_10
+The COMET experiment is an innovative project being constructed at the J-PARC proton beam laboratory in Japan. Its primary objective is to search for coherent neutrino-less conversion of a muon to an electron, a process that breaks the law of lepton conservation. If detected, it will be a signal of new physics, offering a groundbreaking discovery. The previous upper limit for this decay was set by the SINDRUM II experiment. COMET is designed to have a significantly better sensitivity, aiming to achieve a ten-thousand-fold improvement.
 
-The COMET experiment, currently under construction at the J-PARC proton beam laboratory in Japan, aims to detect the coherent neutrino-less conversion of a muon to an electron, μ- + N(A,Z) → e- + N(A,Z), a process that violates the law of lepton conservation. If successful, this discovery would signify new physics beyond our current understanding.
+The experiment utilizes a Cylindrical Drift Chamber as the primary detector for physics measurements. Specifically, the momentum of resulting particles will be measured using the CyDet, a cylindrical wire array detector. The particles flying out of the muon-stopping target are registered by the CyDet. Among those, we are interested in tracks left by electrons with specific energy, which are produced by muon to electron conversion. The CyDet consists of 4482 sensitive wires organized in 18 layers. Each wire measures the energy deposited by a passing charged particle. Within each of the layers, the wires have the same distance to the stopping target and stereometry angle.
 
-The Cylindrical Drift Chamber is the primary detector for physics measurements in COMET Phase-I. Specifically, the momentum of resulting particles will be measured using the CyDet, a cylindrical wire array detector. The particles flying out of the muon-stopping target and registered by the CyDet include tracks left by electrons with specific energy, produced by muon to electron conversion. The CyDet consists of 4482 sensitive wires organized in 18 layers, each wire measuring the energy deposited by a passing charged particle.
+There is a magnetic field in the detector, which causes electrons to move in a helical path. This electron deposits energy in the wires close to the flight path. The radius of the helix is proportional to the transverse momentum of the electron. The energy deposited on each wire is measured at the end plate of the cylindrical detector. An example of the resulting signal event can be seen below, where blue dots are background hits and red are hits from signal electrons.
 
-Within each layer, the wires have the same distance to the stopping target and stereometric angle. A magnetic field in the detector causes electrons to move in helical paths, depositing energy in wires close to their flight path. The radius of the helix is proportional to the transverse momentum of the electron: R = pt / (eB), where pt is the transverse momentum, B is the strength of the magnetic field, and e is the charge of the electron.
+The data format is organized as follows: each event is a 'snapshot' of the detector, consisting of data taken from all 4482 wires, including energy and relative time. Event is written only when the hodoscope detects a particle. Relative time is the difference between the time when the straw tube detected energy and the time of the hodoscope. Data is organized as follows: event ID, wire ID, global ID, energy, relative time, and label (0 = not activated or background, 1 = signal hit). Wire with zero energy deposition is not activated.
 
-The energy deposited on each wire is measured at the end plate of the cylindrical detector. An example of a resulting signal event shows blue dots representing background hits and red dots representing hits from signal electrons.
-
-The data format includes information about the position of straw tubes, kept in a supplementary file, with details such as wire_id, wire_rho, and wire_phi. Each event is a snapshot of the detector, consisting of data taken from all 4482 wires, including energy and relative time. Events are written only when the hodoscope detects a particle. Relative time is the difference between the time when the straw tube detected energy and the time of the hodoscope.
-
-Data is organized with columns for event_id, wire_id, global_id, energy, relative_time, and label (0 for non-activated or background, 1 for signal hits). Wires with zero energy deposition are not activated.
-
-For more information, please refer to the COMET official website, COMET conceptual design report, and other resources listed below.
-
-**Keywords:** Muon to Electron Conversion, Lepton Conservation, Coherent Neutrino-Less Conversion, Cylindrical Drift Chamber, Magnetic Field, Helical Path, Transverse Momentum.
+**Keywords:** COMET experiment, muon to electron conversion, Cylindrical Drift Chamber, CyDet, helical path, magnetic field, transverse momentum, signal electrons, background hits.

@@ -1,49 +1,13 @@
-Subsampling of the dataset Albert with Seed Four 
+Subsampling of the dataset Albert with a random seed for reproducibility, resulting in a subset of the original data. This subsampled dataset has been generated with the following parameters: the maximum number of rows has been set, the maximum number of columns has been limited, and the maximum number of classes has been restricted. Additionally, the stratification of the data has been taken into account during the subsampling process.
 
-Tags: Subsampling of the dataset Albert 
+The subsampling process involves several steps. First, the classes in the dataset are uniformly sampled to ensure that the resulting dataset has a balanced distribution of classes. If the number of classes in the original dataset exceeds the maximum allowed, a random selection of classes is made based on their frequency in the dataset. The indices of the samples belonging to these selected classes are then used to subset the data.
 
-Generated with the following source code:
+Next, the columns of the dataset are uniformly sampled to reduce the dimensionality of the data. If the number of columns in the original dataset exceeds the maximum allowed, a random selection of columns is made. The resulting dataset consists of the selected columns and the corresponding samples.
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
-random number generator = numpy random default random generator with the given seed
-features = self features
-target variable = self target variable 
+Finally, the number of rows in the dataset is reduced to the maximum allowed by stratified sampling. This ensures that the resulting dataset has a balanced distribution of classes and is representative of the original data.
 
-Uniformly sample classes 
-unique classes = target variable unique values
-if the number of unique classes is greater than the maximum number of classes:
-value counts = target variable value counts
-selected classes = random number generator choice of unique classes, size equal to the maximum number of classes, without replacement, with probabilities equal to value counts divided by the sum of value counts
-Select the indices where one of these classes is present
-indices = target variable index where target variable is in the selected classes
-features = features iloc with the given indices
-target variable = target variable iloc with the given indices 
+Features: 
 
-Uniformly sample columns if required
-if the number of features columns is greater than the maximum number of columns:
-column indices = random number generator choice of range of the number of features columns, size equal to the maximum number of columns, without replacement
-sorted column indices = sorted column indices
-selected columns = list of features columns with the given sorted column indices
-features = features with the given selected columns
-else:
-sorted column indices = range of the number of features columns
+Tags: Subsampling of the dataset Albert
 
-if the number of features rows is greater than the maximum number of rows:
-Stratify accordingly
-target name = target variable name
-data = pandas concatenate of features and target variable along the columns axis
-_, subset = train test split of data, test size equal to the maximum number of rows, stratifying by the target name, shuffling, with the given random state
-features = subset drop of the target name along the columns axis
-target variable = subset of the target name
-
-We need to convert categorical columns to string for OpenML
-categorical mask = list of self categorical mask with the given sorted column indices
-column names = list of features column names
-return Dataset 
-dataset equals the dataset it was derived from
-features equals the features
-target variable equals the target variable
-categorical mask equals the categorical mask
-column names equals the column names
-
-Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection
+Keywords: subsampling, dataset, stratification, reproducibility, dimensionality reduction

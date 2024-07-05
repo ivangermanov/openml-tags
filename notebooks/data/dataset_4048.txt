@@ -1,62 +1,23 @@
-QSAR-TID-11727 Dataset 
+QSAR-TID-11727 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11727. It has multiple rows and numerous features, including IDs and class features. The features represent molecular fingerprints generated from SMILES strings using the Pipeline Pilot program.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11727. The features represent FCFP 1024bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset was obtained from the MetaQSAR project in September 2015. Please cite this dataset when using it.
+The dataset contains 1174 rows and 1026 features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50.
 
-Features:
-
-* MOLECULE CHEMBL ID
-* Multiple molecular fingerprint features 
+The dataset is part of the MetaQSAR project, September 2015.
 
 Scraped Data:
 
-* ID: CHEMBL2409
-* Type: Single Protein
-* Preferred Name: Epoxide Hydratase
-* Synonyms: Bifunctional Epoxide Hydrolase, CEH, Cytosolic Epoxide Hydrolase, EPHX2
-* Organism: Homo sapiens
-* Species Group: No
-* Protein Target Classification: Enzyme/Protease/Serine Protease/Serine Protease SC Clan/Serine Protease S33 Family
+Epoxide Hydratase is a single protein with the preferred name Epoxide Hydratase. It is also known as Bifunctional Epoxide Hydrolase 2, CEH, Cytosolic Epoxide Hydrolase 2, EPHX2, and Epoxide Hydratase. It is an enzyme that belongs to the serine protease SC clan and serine protease S33 family.
 
-Description:
-Epoxide Hydratase is an enzyme involved in various biological processes, including lipid metabolism and response to toxic substances. It has been implicated in diseases such as cancer and cardiovascular disease.
+The protein target classification is 1. Enzyme/Protease/Serine protease/Serine protease SC clan/Serine protease S33 family.
 
-Relationships:
-* Bifunctional Epoxide Hydrolase is a subset of Epoxide Hydrolase.
-* Epoxide Hydrolase is targeted by small molecules such as AR9281 and GSK2256294.
+The dataset is related to Homo sapiens species group and has no protein target classification.
 
-Expression Atlas:
-* P34913
+The description of the protein target is Bifunctional Epoxide Hydrolase 2.
 
-Go Component:
-* Cytoplasm
-* Peroxisome
-* Peroxisomal Matrix
-* Cytosol
-* Extracellular Exosome
+The dataset contains information about the protein target, including its synonyms, organism, species group, protein target classification, and description.
 
-Go Function:
-* Magnesium Ion Binding
-* Catalytic Activity
-* Epoxide Hydrolase Activity
-* Toxic Substance Binding
-* Hydrolase Activity
-* Phosphatase Activity
-* Metal Ion Binding
-* Lysophosphatidic Acid Phosphatase Activity
+The dataset also contains information about the compounds, including their ChEMBL ID, parent molecule name, parent molecule type, mechanism of action, max phase, and first approval.
 
-Go Process:
-* Lipid Metabolic Process
-* Metabolic Process
-* Response to Toxic Substance
-* Positive Regulation of Gene Expression
-* Dephosphorylation
-* Aromatic Compound Catabolic Process
-* Cholesterol Homeostasis
-* Stilbene Catabolic Process
-* Phospholipid Dephosphorylation
-* Regulation of Cholesterol Metabolic Process
-* Epoxide Metabolic Process
-
-Keywords: QSAR, Epoxide Hydratase, Drug Target, Molecular Fingerprints, Lipid Metabolism, Toxic Substances, Enzyme, Protease, Serine Protease.
+Keywords: Epoxide Hydratase, QSAR, Molecular Fingerprints, MetaQSAR, Enzyme, Protease, Serine Protease.

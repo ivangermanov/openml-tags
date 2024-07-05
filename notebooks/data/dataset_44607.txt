@@ -1,17 +1,17 @@
-Name: CNAE Nine Seed Four Rows Two Thousand Columns One Hundred Classes Ten Strategize True
+Name: CNAE Nine Seed Four Rows Two Thousand Columns One Hundred Classes Ten Stratify True
 
-Tags: Subsampling of the dataset CNAE Nine 
+Tags: Subsampling of the dataset CNAE Nine
 
-This dataset is a subsampled version of the original CNAE Nine dataset. The subsampling process involves uniformly sampling classes and columns, followed by stratified sampling of rows.
+This dataset is a subsample of the original CNAE Nine dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset to a manageable size.
 
-The class sampling process begins by identifying unique classes in the dataset. If there are more classes than the maximum allowed, which is ten in this case, a random selection of classes is made based on their frequency in the dataset. This ensures that the sampled classes are representative of the original class distribution.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by uniformly sampling the unique classes present in the dataset, with a maximum of ten classes selected. The indices where these selected classes were present were then used to subset the data.
 
-Next, the column sampling process takes place. If the number of columns exceeds the maximum allowed, which is one hundred in this case, a random selection of columns is made. The selected columns are then used to create a new dataset.
+Next, the columns of the dataset were uniformly sampled to reduce the number of features. A maximum of one hundred columns were selected, and the dataset was subsetted to include only these columns.
 
-Finally, the row sampling process occurs. If the number of rows exceeds the maximum allowed, which is two thousand in this case, a stratified sampling approach is used to select the desired number of rows. This approach ensures that the sampled rows are representative of the original class distribution.
+Finally, the rows of the dataset were uniformly sampled to reduce the number of samples. A maximum of two thousand rows were selected, and the dataset was subsetted to include only these rows. This sampling was done in a stratified manner to ensure that the class distribution was maintained.
 
-The resulting dataset consists of the sampled rows and columns, along with their corresponding class labels. The categorical mask, which indicates the categorical columns, is also preserved.
+The resulting dataset consists of the selected features and samples, with the categorical columns converted to string format for compatibility with OpenML.
 
-Features: (removed due to unreadability)
+Features: (skipped due to unreadability)
 
-Keywords: Subsampling, Stratified Sampling, Class Sampling, Column Sampling, Row Sampling, CNAE Nine
+Keywords: dataset subsampling, class sampling, column sampling, row sampling, stratified sampling, OpenML compatibility

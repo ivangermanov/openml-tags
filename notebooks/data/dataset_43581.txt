@@ -1,22 +1,15 @@
 QSAR Bioconcentration Classes Dataset
 
-Tags: Computer Systems, Machine Learning
 Source: UCI Machine Learning Repository
 
-This dataset comprises a collection of manually curated bioconcentration factors for seven hundred seventy-nine chemicals, which were utilized to determine the mechanisms of bioconcentration. Specifically, the goal was to predict whether a chemical is primarily stored within lipid tissues, has additional storage sites such as proteins, or is metabolized or eliminated.
+This dataset contains a collection of manually curated bioconcentration factors for seven hundred seventy-nine chemicals, which were used to determine the mechanisms of bioconcentration. The goal is to predict whether a chemical is mainly stored within lipid tissues, has additional storage sites such as proteins, or is metabolized or eliminated.
 
-The data was randomly divided into a training set comprising five hundred eighty-four compounds and a test set consisting of one hundred ninety-five compounds, thereby preserving the proportion between the classes. 
+The data was randomly split into a training set and a test set, preserving the proportion between the classes. Two QSAR classification trees were developed using the CART machine learning technique coupled with Genetic Algorithms.
 
-Two QSAR classification trees were developed utilizing the Classification and Regression Trees machine learning technique coupled with Genetic Algorithms. 
+The file contains a selection of Dragon descriptors along with the Chemical Abstracts Service number, Simplified Molecular Input Line Entry System, experimental bioconcentration factor, experimental and predicted octanol-water partition coefficient, and mechanistic class. Further details on model development and performance, along with descriptor definitions and interpretation, are provided in the original manuscript.
 
-The file contains the selected molecular descriptors along with the Chemical Abstracts Service registry number, Simplified Molecular Input Line Entry System notation, experimental bioconcentration factor, experimental and predicted octanol-water partition coefficient, and mechanistic class.
+The dataset is freeware and may be used if proper reference is given to the authors. Please refer to the relevant papers.
 
-Further details regarding model development and performance, as well as descriptor definitions and interpretation, are provided in the original manuscript.
+Features: Chemical Abstracts Service number, Simplified Molecular Input Line Entry System, Set, Molecular Log P, Octanol-Water Partition Coefficient, Class, Log Bioconcentration Factor
 
-Relevant papers provide additional information on the subject matter.
-
-Citation request: The dataset is freely available and may be used if proper reference is given to the original work.
-
-Features: Chemical Abstracts Service registry number, Simplified Molecular Input Line Entry System notation, Experimental bioconcentration factor, Octanol-water partition coefficient, Mechanistic class
-
-Keywords: QSAR, Bioconcentration, Machine Learning, Classification Trees, Molecular Descriptors, Chemical Compounds, Environmental Science
+Keywords: QSAR, Bioconcentration, Classification Trees, Machine Learning, Chemicals, Lipid Tissues, Proteins, Metabolism, Elimination

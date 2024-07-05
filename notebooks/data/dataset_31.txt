@@ -1,55 +1,80 @@
-Credit German dataset classifies individuals described by a set of attributes as good or bad credit risks. This dataset comes with a cost matrix:
+Credit-g Dataset
 
-Good     Bad 
-(predicted)
-Good     0       1 
-(actual)
-Bad      5       0
+Tags: credit scoring, finance problem, mythbusting, OpenML-CC18, OpenML100, study, uci
 
-It is worse to classify a customer as good when they are bad (five), than it is to classify a customer as bad when they are good (one).
+Source: UCI - 1994
+
+Please cite: UCI
+
+German Credit Dataset
+
+This dataset classifies individuals based on a set of attributes as good or bad credit risks. The dataset includes a cost matrix:
+
+Good Bad (predicted)
+Good  0   1
+Bad   5   0
+
+It is considered more detrimental to classify a customer as good when they are actually bad (5), compared to classifying a customer as bad when they are actually good (1).
 
 Attribute Description:
 
-The first attribute represents the status of an individual's existing checking account in Deutsche Mark.
+Status of existing checking account, in Deutsche Mark
+Duration in months
+Credit history (credits taken, paid back duly, delays, critical accounts)
+Purpose of the credit (car, television, etc.)
+Credit amount
+Status of savings account/bonds, in Deutsche Mark
+Present employment, in number of years
+Installment rate in percentage of disposable income
+Personal status (married, single, etc.) and sex
+Other debtors / guarantors
+Present residence since X years
+Property (e.g. real estate)
+Age in years
+Other installment plans (banks, stores)
+Housing (rent, own, etc.)
+Number of existing credits at this bank
+Job
+Number of people being liable to provide maintenance for
+Telephone (yes, no)
+Foreign worker (yes, no)
 
-Duration in months is the second attribute.
+Features: checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, num dependents, own telephone, foreign worker, class
 
-The third attribute represents an individual's credit history, including credits taken, paid back duly, delays, and critical accounts.
+Additional Information:
 
-The fourth attribute describes the purpose of the credit, such as a car, television, or other purposes.
+Two datasets are provided: the original dataset containing categorical/symbolic attributes in "german.data", and a numeric version produced by Strathclyde University in "german.data-numeric". The numeric version has been edited with indicator variables added to accommodate algorithms that cannot handle categorical variables. Ordered categorical attributes have been coded as integers.
 
-Credit amount is the fifth attribute.
+This dataset requires the use of a cost matrix as specified earlier.
 
-Status of savings account/bonds in Deutsche Mark is the sixth attribute.
+The dataset does not contain missing values.
 
-Present employment in number of years is the seventh attribute.
+Additional Variable Information:
 
-Installment rate in percentage of disposable income is the eighth attribute.
+Status of existing checking account: Categories include less than 0 DM, 0 to 200 DM, 200 DM or more / salary assignments for at least 1 year, and no checking account.
 
-Personal status, including marital status and sex, is the ninth attribute.
+Credit history: Categories include no credits taken / all credits paid back duly, all credits at this bank paid back duly, existing credits paid back duly till now, delay in paying off in the past, and critical account / other credits existing (not at this bank).
 
-Other debtors/guarantors is the tenth attribute.
+Purpose: Categories include new car, used car, furniture/equipment, radio/television, domestic appliances, repairs, education, retraining, business, and others.
 
-Present residence since a certain number of years is the eleventh attribute.
+Savings account/bonds: Categories include less than 100 DM, 100 to 500 DM, 500 to 1000 DM, 1000 DM or more, and unknown / no savings account.
 
-Property, such as real estate, is the twelfth attribute.
+Present employment: Categories include unemployed, less than 1 year, 1 to 4 years, 4 to 7 years, and 7 years or more.
 
-Age in years is the thirteenth attribute.
+Personal status and sex: Categories include male divorced/separated, female divorced/separated/married, male single, male married/widowed, and female single.
 
-Other installment plans, including banks and stores, is the fourteenth attribute.
+Other debtors / guarantors: Categories include none, co-applicant, and guarantor.
 
-Housing, including renting, owning, or living for free, is the fifteenth attribute.
+Property: Categories include real estate, building society savings agreement / life insurance, car or other (not in attribute 6), and unknown / no property.
 
-Number of existing credits at this bank is the sixteenth attribute.
+Other installment plans: Categories include bank, stores, and none.
 
-Job, including unemployed, unskilled, skilled, and management positions, is the seventeenth attribute.
+Housing: Categories include rent, own, and for free.
 
-Number of people being liable to provide maintenance for is the eighteenth attribute.
+Job: Categories include unemployed / unskilled non-resident, unskilled resident, skilled employee / official, and management / self-employed / highly qualified employee / officer.
 
-Telephone availability is the nineteenth attribute.
+Telephone: Categories include none and yes, registered under the customer's name.
 
-Foreign worker status is the twentieth attribute.
+Foreign worker: Categories include yes and no.
 
-Tags: credit scoring, economics, finance problem, human activities, mythbusting, openml-cc18, openml100, study
-
-Keywords: credit risk, cost matrix, credit history, credit amount, employment, installment rate, personal status, property, age, housing, job, telephone, foreign worker.
+Keywords: credit risk, financial data, categorical attributes, cost matrix, German banking

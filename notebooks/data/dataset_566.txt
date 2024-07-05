@@ -1,46 +1,16 @@
-Meta Data
+Name: meta
+Tags: study fifty, uci
 
-Title: Meta-Data
-Sources:
-    • Creator: Laboratório de Inteligência Artificial e Ciência de Computadores, University of Porto
-    • Donor: 
-    • Date: March 1996
-Acknowledgments: Laboratório de Inteligência Artificial e Ciência de Computadores wishes to thank the Commission of European Communities for their support. We also wish to thank our partners for providing individual test results.
+This dataset contains results from the Statlog project, which conducted a comparative study of statistical, neural, and symbolic learning algorithms for classification. The Statlog project (Esprit Project) evaluated approximately twenty different algorithms on over twenty diverse datasets. These evaluations produced numerous interesting findings that are comprehensively described in a published book.
 
-Past Usage: Meta-Data was used to give advice about which classification method is appropriate for a particular dataset. This work is described in various publications, including "Machine Learning, Neural and Statistical Learning" and "Characterizing the Applicability of Classification Algorithms Using Meta-Level Learning".
+The project aimed to provide advice on which classification methods are most appropriate for particular datasets. This work has been utilized in various publications and conferences focused on machine learning, neural networks, and statistical learning.
 
-Relevant Information: This dataset is about the results of the Statlog project, which performed a comparative study between statistical, neural, and symbolic learning algorithms. The project evaluated twenty different algorithms on over twenty different datasets, producing many interesting results. These results are comprehensively described in a book.
+The dataset includes information on multiple classification algorithms applied to various datasets. Some of the algorithms featured are C four point five, NewId, CART, Cal five, CN two, Discriminant Analysis, k Nearest Neighbors, Bayesian Trees, and Neural Networks like Backpropagation and Kohonen networks. The datasets used cover a wide range of domains including credit scoring, medical diagnostics, image recognition, and technical fault detection.
 
-Number of Instances: 
-Number of Attributes: twenty-two (including an ID number) plus the class attribute – all but two attributes are continuously valued
+The meta dataset consists of five hundred twenty eight instances with twenty two attributes plus a class attribute. Most attributes are continuously valued, with only two being categorical. The attributes capture various characteristics of the datasets and algorithm performance, such as number of examples, number of attributes, number of classes, entropy measures, and normalized error rates.
 
-Attribute Information:
+Some attributes like the second canonical correlation and second eigenvalue only apply to datasets with more than two classes. Missing values are present in the dataset, indicated by question marks for these attributes when they don't apply.
 
-    • Data Set Name: categorical – name of data set
-    • Test Examples: continuous – number of examples in test set
-    • Total Examples: continuous – total number of examples
-    • Attributes: continuous – number of attributes
-    • Classes: continuous – number of classes
-    • Binary Attributes: continuous – number of binary attributes
-    • Cost: continuous – cost (one equals yes, zero equals no)
-    • Standard Deviation Ratio: continuous – standard deviation ratio
-    • Correlation: continuous – mean correlation between attributes
-    • First Canonical Correlation: continuous – first canonical correlation
-    • Second Canonical Correlation: continuous – second canonical correlation
-    • First Eigenvalue: continuous – first eigenvalue
-    • Second Eigenvalue: continuous – second eigenvalue
-    • Skewness: continuous – mean of absolute value of expectation of X minus mean cubed divided by standard deviation cubed
-    • Kurtosis: continuous – mean of absolute value of expectation of X minus mean to the fourth power divided by standard deviation to the fourth power
-    • Mean Entropy of Attributes: continuous – mean entropy of attributes
-    • Entropy of Classes: continuous – entropy of classes
-    • Mean Mutual Entropy of Class and Attributes: continuous – mean mutual entropy of class and attributes
-    • Equivalent Number of Attributes: continuous – equivalent number of attributes
-    • Noise-Signal Ratio: continuous – noise-signal ratio
-    • Algorithm Name: categorical – name of algorithm
-    • Normalized Error: continuous – normalized error (continuous class)
+The dataset provides valuable insights into the comparative performance of different machine learning and statistical classification algorithms across a diverse range of problem domains. It serves as a benchmark for evaluating and selecting appropriate classification methods for specific types of datasets.
 
-Missing Attribute Values: Note that fract2 and cancor2 only apply to data sets with more than two classes. When they appear as unknown values, this means do not care values.
-
-Summary Statistics: 
-
-Keywords: Statlog project, machine learning, neural networks, symbolic learning, classification algorithms, data sets.
+Keywords: classification algorithms, machine learning, comparative study, meta learning, algorithm performance, dataset characteristics, Statlog project

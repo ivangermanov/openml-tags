@@ -1,28 +1,30 @@
-**FOREX Eur/Dkk Day High**
+**FOREX EUR/DKK Day High**
 
-Tags: Finance, Forex, Forex Day, Forex High, Language, Social Media
+Tags: finance, forex, forex day, forex high
+
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
 
-This dataset contains historical price data of the Forex Eur/Dk exchange rate from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is closed during these days. The timestamp feature is in the Europe/Amsterdam timezone.
+This dataset contains historical price data of the FOREX EUR/DKK from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is defined as the direction of the mean of the high bid and high ask prices of the following day, relative to the mean high bid and high ask prices of the current minute. In other words, the class attribute is true when the mean high price is expected to increase the following day, and false when the mean high price is expected to decrease or remain unchanged.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
 
-**Note:** This dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies should be based on predictions of close attributes, which are also available in this dataset.
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* Timestamp: The time of the current data point (in Europe/Amsterdam timezone)
-* Bid Open: The bid price at the start of this time interval
-* Bid High: The highest bid price during this time interval
-* Bid Low: The lowest bid price during this time interval
-* Bid Close: The bid price at the end of this time interval
-* Bid Volume: The number of times the bid price changed within this time interval
-* Ask Open: The ask price at the start of this time interval
-* Ask High: The highest ask price during this time interval
-* Ask Low: The lowest ask price during this time interval
-* Ask Close: The ask price at the end of this time interval
-* Ask Volume: The number of times the ask price changed within this time interval
-* Class: Whether the average price will increase during the next interval
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, Eur/Dk, Historical Data, Candlestick, Time Series, Financial Markets, Trading Strategies
+Keywords: FOREX, EUR/DKK, historical data, candlestick, finance, trading

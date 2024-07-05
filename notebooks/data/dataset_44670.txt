@@ -1,49 +1,13 @@
-Gesture Phase Segmentation Processed Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Gesture Phase Segmentation Processed Seed Two Dataset
 
-Tags: Subsampling of the dataset Gesture Phase Segmentation Processed with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals false 
+Tags: Subsampling of the dataset Gesture Phase Segmentation Processed with seed equal to two, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and stratify equal to true.
 
 Generated with the following source code:
 
-def subsample(self, seed: int, numberRowsMax: int = two thousand, numberOfColumnsMax: int = one hundred, numberOfClassesMax: int = ten, stratified: bool = true) -> Dataset:
-randomNumberGenerator = numpy random default random generator(seed)
-x equals self x
-y equals self y
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments, and returns a dataset. It uses the numpy random default random generator to generate random numbers. The function first uniformly samples classes from the unique values in the target variable y, and selects the indices where one of these classes is present. It then uniformly samples columns if required, and selects the corresponding columns. If the number of rows is greater than nrows max, it stratifies the data accordingly and selects a subset of the data. Finally, it converts categorical columns to string and returns a dataset with the selected features, target variable, categorical mask, and columns.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than numberOfClassesMax:
-valueCounts equals y value counts 
-selectedClasses equals randomNumberGenerator choice classes, size equals numberOfClassesMax, replace equals false, probability equals valueCounts over sum of valueCounts 
-Select the indices where one of these classes is present 
-indices equals y index y is in selectedClasses 
-x equals x iloc indices 
-y equals y iloc indices 
+Features: 
 
-Uniformly sample columns if required 
-if length of x columns is greater than numberOfColumnsMax:
-columnIndices equals randomNumberGenerator choice list range length of x columns, size equals numberOfColumnsMax, replace equals false 
-sortedColumnIndices equals sorted columnIndices 
-selectedColumns equals list x columns sortedColumnIndices 
-x equals x selectedColumns 
-else:
-sortedColumnIndices equals list range length of x columns 
+The dataset has thirty two features, including Phase.
 
-if length of x is greater than numberRowsMax:
-Stratify accordingly 
-targetName equals y name 
-data equals pandas concatenate x, y, axis equals columns 
-_, subset equals sklearn model selection train test split data, testSize equals numberRowsMax, stratify equals data targetName, shuffle equals true, randomState equals seed 
-x equals subset drop targetName, axis equals columns 
-y equals subset targetName 
-
-We need to convert categorical columns to string for OpenML 
-categoricalMask equals self categoricalMask for i in sortedColumnIndices 
-columns equals list x columns 
-return Dataset 
-Technically this is not the same but it is where it was derived from 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categoricalMask equals categoricalMask 
-columns equals columns 
-
-Keywords: gesture phase segmentation, subsampling, dataset, stratification, machine learning.
+Keywords: Gesture Phase Segmentation, Subsampling, Stratification, Dataset Generation, Feature Selection.

@@ -1,11 +1,24 @@
-The QSAR-TID-100430 dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on drug target TID: 100430. This dataset has multiple rows and features, including IDs and class features.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+This dataset contains QSAR data from ChEMBL showing activity values of compounds on drug target TID. The activity unit is pseudo pCI. The dataset comprises rows and features, including molecule IDs and median pXC values. Features represent FCFP bit Molecular Fingerprints generated from SMILES strings using Pipeline Pilot by Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive resource for QSAR modeling. The data is sourced from ChEMBL, a large-scale bioactivity database.
+The target protein is HM nicotinic acid GPCR, also known as GPR B, G protein coupled receptor B, G protein coupled receptor HM, G protein coupled receptor HMB, and HCA. It is a single protein found in Homo sapiens. The protein belongs to the membrane receptor family A G protein coupled receptor group, specifically the small molecule receptor subgroup of carboxylic acid receptors, classified as a hydroxycarboxylic acid receptor.
 
-The drug target, also known as HM seventy-four nicotinic acid GPCR, is a single protein preferred name. It has multiple synonyms, including GPR one hundred nine B, G-protein coupled receptor one hundred nine B, and hydroxycarboxylic acid receptor three.
+Gene Ontology annotations include:
+Components: plasma membrane, membrane, cell junction
+Functions: G protein coupled receptor activity, nicotinic acid receptor activity
+Processes: signal transduction, G protein coupled receptor signaling pathway
 
-This receptor is primarily involved in signal transduction and G protein-coupled receptor signaling pathways. It is located in the plasma membrane and cell junctions.
+The protein is associated with various databases including Wikipedia, canSAR Target, GuideToPHARMACOLOGY, IntAct, PharmGKB, Pharos, Reactome, UniProt, InterPro, and Pfam. It is involved in hydroxycarboxylic acid binding receptors and G alpha signaling events.
 
-Keywords: QSAR, TID, MetaQSAR, ChEMBL, HM74, nicotinic acid GPCR, GPR109B, hydroxycarboxylic acid receptor.
+The dataset is part of the MetaQSAR project. Users are requested to cite the source when using this data.
+
+Keywords:
+QSAR
+Drug target
+Molecular fingerprints
+G protein coupled receptor
+Nicotinic acid receptor
+Signal transduction
+Hydroxycarboxylic acid

@@ -1,13 +1,17 @@
-Subsampling of the dataset Riccardo with a specified set of parameters. This dataset has undergone a process of subsampling, which involves reducing its size while maintaining its overall characteristics.
+Subsampling of the dataset Riccardo with seed equal to three. Tags: Subsampling of the dataset Riccardo.
 
-The subsampling process involved several steps. First, the number of classes was limited to a maximum of ten. To achieve this, a uniform sampling method was used to select the desired number of classes from the total number of unique classes present in the dataset. The selection was based on the frequency of each class, ensuring that the sampled classes were representative of the overall distribution.
+Generated with the following source code:
 
-Next, the number of columns was limited to a maximum of one hundred. Again, a uniform sampling method was used to select the desired number of columns from the total number of columns present in the dataset.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the target variable, then uniformly sampling columns from the feature variables, and finally uniformly sampling rows from the resulting dataset. The function also ensures that the subsample is stratified according to the target variable.
 
-Finally, the number of rows was limited to a maximum of two thousand. To ensure that the sampled rows were representative of the overall distribution, a stratified sampling method was used. This involved splitting the dataset into subsets based on the class labels and then sampling a specified number of rows from each subset.
+The function takes in several parameters, including the seed for the random number generator, the maximum number of rows, columns, and classes to include in the subsample, and a boolean indicating whether to stratify the subsample.
 
-The resulting dataset consists of a subset of the original features, with the categorical mask and column names preserved. The dataset is a subsampled version of the Riccardo dataset, with a reduced number of classes, columns, and rows.
+The function first gets the unique classes in the target variable and selects a subset of these classes to include in the subsample. It then selects the indices of the rows where one of these classes is present and uses these indices to subset the feature variables and target variable.
 
-Tags: Machine Learning, Mathematics
+Next, the function uniformly samples columns from the feature variables, selecting a subset of the columns to include in the subsample. It then subsets the feature variables and target variable using the selected columns.
 
-Keywords: subsampling, dataset, machine learning, mathematics, stratified sampling, uniform sampling.
+Finally, the function uniformly samples rows from the resulting dataset, selecting a subset of the rows to include in the subsample. It does this in a stratified manner, ensuring that the subsample has the same class distribution as the original dataset.
+
+The function returns a new dataset that is a subsample of the original, with the specified number of rows, columns, and classes.
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling.

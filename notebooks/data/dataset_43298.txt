@@ -1,17 +1,21 @@
-Cause-Effect Pairs Database is a growing collection of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+Cause-Effect is a growing database with two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
 
-Some pairs have high-dimensional variables, and for machine readability, the relevant information about these variables is encoded in metadata. This metadata contains essential details, including the number of pairs, the first and last columns of the cause variable, the first and last columns of the effect variable, and the dataset weight.
+Some pairs are high-dimensional, and for machine readability, the relevant information about this is coded in metadata. Metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
 
-The dataset weight is crucial when calculating the average performance of causal inference methods to prevent bias introduced by having multiple copies of essentially the same data. For instance, pairs fifty-six to sixty-three are examples of this scenario.
+When you use this dataset in a publication, please cite the paper that contains much more detailed information regarding this dataset in the supplement.
 
-When utilizing this dataset in a publication, please cite the corresponding paper, which provides more detailed information about the dataset in its supplement. This comprehensive resource offers valuable insights into distinguishing cause from effect using observational data, along with various methods and benchmarks.
+Overview of all data pairs:
 
-The datasets, ranging from pair0001 to pair0041, originate from the UCI Machine Learning Repository. These datasets were initially published by the University of California, School of Information and Computer Science.
+Variable One    Variable Two    Dataset    Ground Truth
+Altitude        Temperature    DWD        ->
+Altitude        Precipitation    DWD        ->
+Longitude        Temperature    DWD        ->
+Altitude        Sunshine Hours    DWD        ->
 
-An overview of all data pairs reveals the following:
+Information for pair four: DWD data, taken from the German Weather Service, was taken at three hundred forty-nine stations. The data was taken from the website, and more recent links are also provided.
 
-Variable one and Variable two are paired together from various datasets, accompanied by their corresponding ground truth values. For instance, pair0004 consists of Altitude and Sunshine Hours from the German Weather Service (DWD) dataset, where Altitude has a causal effect on Sunshine Hours.
+The dataset contains yearly values averaged over nineteen sixty-one to nineteen ninety. The ground truth is that altitude causes sunshine hours.
 
-The German Weather Service dataset was obtained from three hundred forty-nine weather stations across Germany. The data was accessed through the official website of the Deutscher Wetterdienst.
+Tags: Graphical models, MaRDI, TA3
 
-Keywords: Cause-Effect Pairs, Causal Inference, Machine Learning, Graphical Models, Computer Systems, MaRDI, TA3
+Keywords: cause-effect pairs, causal inference, dataset, metadata, German Weather Service, altitude, sunshine hours.

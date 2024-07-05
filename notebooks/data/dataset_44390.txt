@@ -1,40 +1,11 @@
-House Sixteen H Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True Tags: Subsampling of the dataset House Sixteen H with seed equal to three arguments number rows maximum equal to two thousand arguments number columns maximum equal to one hundred arguments number classes maximum equal to ten generated with the following source code:
+Name: House Sixteen H Seed Three
 
-def subsample(self, seed: int, number rows max: int = two thousand, number cols max: int = one hundred, number classes max: int = ten, stratified: bool = True,) -> Dataset:
-random number generator = numpy random default random generator(seed)
-x equals self x
-y equals self y
-uniformly sample classes equals y unique
-if length of classes greater than number classes max:
-value counts equals y value counts
-selected classes equals random number generator choice(classes, size equals number classes max, replace equals false, probability equals value counts divided by sum of value counts,)
-select the indices where one of these classes is present index equals y index y is in selected classes
-x equals x iloc index
-y equals y iloc index
-uniformly sample columns if required
-if length of x columns greater than number cols max:
-column indexes equals random number generator choice(list of range length of x columns), size equals number cols max, replace equals false)
-sorted column indexes equals sorted(column indexes)
-selected columns equals list of x columns sorted column indexes
-x equals x selected columns
-else:
-sorted column indexes equals list of range length of x columns)
-if length of x greater than number rows max:
-stratify accordingly
-target name equals y name
-data equals pandas concatenate(x, y, axis equals columns)
-_, subset equals train test split(data, test size equals number rows max, stratify equals data target name, shuffle equals true, random state equals seed,)
-x equals subset drop target name axis equals columns
-y equals subset target name
-we need to convert categorical columns to string for open ml
-categorical mask equals list of self categorical mask for i in sorted column indexes
-columns equals list of x columns
-return Dataset(
-technically this is not the same but it is where it was derived from 
-dataset equals self dataset,
-x equals x,
-y equals y,
-categorical mask equals categorical mask,
-columns equals columns)
+Tags: Subsampling of the dataset House Sixteen H with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Keywords: subsampling, dataset, stratified sampling, feature selection, classification.
+Generated with the following source code:
+
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data.
+
+Features: 
+
+Keywords: Subsampling, Dataset, Stratified, Random Sampling, Feature Selection

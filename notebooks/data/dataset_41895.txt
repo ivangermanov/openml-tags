@@ -1,26 +1,15 @@
-**FOREX eurhuf-minute-Close**
+Name: Forex Eur/Huf Minute Close
 
-Tags: Finance, Forex, Forex Close, Forex Minute, Health, Medicine
+Tags: finance, forex, forex close, forex minute
 
-**Data Source**: Dukascopy Historical Data Feed
+Source: Dukascopy Historical Data Feed
 
-This dataset contains historical price data of the Forex EUR/HUF currency pair from Dukascopy. Each instance represents a one-minute candlestick, covering a period from January to December. Since the Forex market is closed on weekends, there are no instances for Saturdays and Sundays. All timestamps are based on the Europe/Amsterdam time zone.
+Data Description
+This is the historical price data of the Forex Eur/Huf from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The dataset provides detailed information about each minute, including bid and ask prices at the open, high, low, and close of each time interval. Additionally, it includes the volume of trades for both bid and ask prices. The class attribute indicates whether the mean close price will increase or decrease (or remain the same) in the following minute.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following minute, and the class attribute is False when the mean Close price is going down, or stays the same, the following minute.
 
-**Attributes**
+Attributes
+The Timestamp is the time of the current data point, in the Europe/Amsterdam timezone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-* **Timestamp**: The time of the current data point, based on the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the start of the time interval.
-* **Bid High**: The highest bid price during the time interval.
-* **Bid Low**: The lowest bid price during the time interval.
-* **Bid Close**: The bid price at the end of the time interval.
-* **Bid Volume**: The number of times the bid price changed within the time interval.
-* **Ask Open**: The ask price at the start of the time interval.
-* **Ask High**: The highest ask price during the time interval.
-* **Ask Low**: The lowest ask price during the time interval.
-* **Ask Close**: The ask price at the end of the time interval.
-* **Ask Volume**: The number of times the ask price changed within the time interval.
-* **Class**: Whether the average price will increase during the next interval.
-
-Keywords: Forex, EUR/HUF, Candlestick, Historical Data, Finance, Trading
+Keywords: Forex, Eur/Huf, historical price data, candlestick, timezone, class attribute, bid price, ask price.

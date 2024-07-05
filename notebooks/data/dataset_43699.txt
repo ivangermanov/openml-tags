@@ -1,24 +1,23 @@
-QSAR Bioconcentration Classes Data Set 
+QSAR Bioconcentration Classes Data Set
 
-Tags: Machine Learning, Mathematics 
+Tags: Data Set Information
 
-Data Set Information: 
-A dataset of manually curated bioconcentration factors for seven hundred seventy-nine chemicals was used to determine the mechanisms of bioconcentration, specifically to predict whether a chemical is mainly stored within lipid tissues, has additional storage sites such as proteins, or is metabolized or eliminated. 
+A dataset of manually curated bioconcentration factors for seven hundred seventy-nine chemicals was used to determine the mechanisms of bioconcentration, that is, to predict whether a chemical is mainly stored within lipid tissues, has additional storage sites such as proteins, or is metabolized or eliminated. The data were randomly split into a training set and a test set, preserving the proportion between the classes.
 
-Data were randomly split into a training set and a test set, preserving the proportion between the classes. Two quantitative structure-activity relationship classification trees were developed using the Classification and Regression Trees machine learning technique coupled with Genetic Algorithms.
-
-The file contains the selected molecular descriptors along with compound identifiers, experimental bioconcentration factor, experimental and predicted octanol-water partition coefficient, and mechanistic class.
+Two QSAR classification trees were developed using the CART machine learning technique coupled with Genetic Algorithms. The file contains the selected molecular descriptors along with the compound identifiers, experimental bioconcentration factor, experimental and predicted octanol-water partition coefficient, and mechanistic class.
 
 Attribute Information:
-Compound identifiers consist of Chemical Abstracts Service number and Simplified Molecular Input Line Entry System. 
-Training and testing data are split accordingly.
-Nine molecular descriptors are independent variables.
-Two experimental responses include bioconcentration factor in logarithmic units for regression and bioaccumulation class categorized into three classes.
+
+The dataset includes three compound identifiers: the CAS number and molecular SMILES. The training and test splitting information is also provided.
+
+The nine molecular descriptors used as independent variables are: hydrogen bond acceptors, piPC09, polar surface area, average atomic van der Waals volume, molecular lipophilicity, octanol-water partition coefficient, number of oxygen atoms, and two fragment-based descriptors.
+
+The two experimental responses are: the bioconcentration factor in log units, which is a regression problem, and the bioaccumulation class, which is a classification problem with three classes.
 
 Relevant Papers:
-Investigating the Mechanisms of Bioconcentration through Quantitative Structure-Activity Relationship Classification Trees 
 
-Features:
-Compound Identifiers, Simplified Molecular Input Line Entry System, Training Test Split, Molecular Descriptors, Experimental Bioconcentration Factor, Mechanistic Class
+Investigating the mechanisms of bioconcentration through QSAR classification trees.
 
-Keywords: QSAR, bioconcentration, machine learning, mathematics, classification trees, genetic algorithms, molecular descriptors.
+Features: CAS, SMILES, Set, Hydrogen Bond Acceptors, Polar Surface Area, Average Atomic Van der Waals Volume, Molecular Lipophilicity, Octanol-Water Partition Coefficient, Number of Oxygen Atoms, Fragment-Based Descriptors, Class, Log Bioconcentration Factor
+
+Keywords: QSAR, bioconcentration, classification trees, machine learning, molecular descriptors, bioaccumulation, chemical compounds.

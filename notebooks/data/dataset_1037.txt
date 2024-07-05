@@ -1,27 +1,30 @@
-The ADA dataset is a marketing database that aims to identify high-revenue individuals based on census data. This is a two-class classification problem where the goal is to distinguish between individuals who earn more than fifty thousand dollars per year and those who do not.
+Name: ada prior
+Tags: derived, invalid ARFF, mythbusting, study
 
-The dataset originates from the Adult database in the University of California, Irvine Machine Learning Repository. It consists of fourteen original attributes, including age, work class, education level, marital status, occupation, native country, and others. These attributes encompass continuous, binary, and categorical features.
+Please cite: Datasets from the Agnostic Learning vs. Prior Knowledge Challenge
 
-This particular dataset belongs to the prior knowledge track, meaning it has access to the original features and their identities. The dataset comprises samples from both the training and validation sets.
+Dataset from: http://www.agnostic.inf.ethz.ch/datasets.php
+Modified by TunedIT (converted to ARFF format)
 
-The attributes included in this dataset are:
+ADA is the marketing database. The task of ADA is to discover high revenue people from census data. This is a two class classification problem. The raw data from the census bureau is known as the Adult database in the UCI machine learning repository. The original attributes (features) include age, work class, education, marital status, occupation, native country, and others. It contains continuous, binary and categorical features. This dataset is from the "prior knowledge track", meaning it has access to the original features and their identity.
 
-* Age, which represents an individual's age
-* Work Class, which categorizes an individual's employment type
-* Sampling Weight, which assigns a numerical value to each sample
-* Education Level, which describes an individual's educational background
-* Education Numerical Value, which provides a numerical representation of an individual's education level
-* Marital Status, which defines an individual's marital situation
-* Occupation, which specifies an individual's profession
-* Relationship Type, which characterizes an individual's relationships
-* Race, which identifies an individual's racial background
-* Sex, which indicates an individual's gender
-* Capital Gain, which quantifies an individual's financial gains
-* Capital Loss, which measures an individual's financial losses
-* Working Hours Per Week, which records the number of hours an individual works weekly
-* Native Country, which specifies an individual's country of origin
-* Label, which serves as the class attribute, distinguishing between individuals who earn more than fifty thousand dollars per year and those who do not
+This dataset contains samples from both training and validation datasets. The training set includes positive and negative examples, as does the validation set.
 
-Tags: Chemistry, Derived, Invalid ARFF, Life Science, Mythbusting 1, Study 144, Study 15, Study 20, Study 41, Study 52
+Attribute information:
+- Age: Instance's age (numeric)
+- Work class: Instance's work class (nominal)
+- Final weight: Instance's sampling weight (numeric)
+- Education: Instance's education level (nominal)
+- Education number: Instance's education level (numeric version)
+- Marital status: Instance's marital status (nominal)
+- Occupation: Instance's occupation (nominal)
+- Relationship: Instance's type of relationship (nominal)
+- Race: Instance's race (nominal)
+- Sex: Instance's sex (nominal)
+- Capital gain: Instance's capital gain (numeric)
+- Capital loss: Instance's capital loss (numeric)
+- Hours per week: Instance's number of working hours (numeric)
+- Native country: Instance's native country (numeric)
+- Label: Class attribute (positive: the instance earns more than 50K a year; negative otherwise)
 
-Keywords: Census Data, Marketing Database, Classification Problem, Machine Learning Repository, Educational Background, Financial Gains, Marital Situation, Occupational Professions, Racial Background.
+Keywords: census data, income prediction, classification, demographic features, machine learning dataset

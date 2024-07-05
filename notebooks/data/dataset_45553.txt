@@ -1,24 +1,13 @@
-The FICO-HELOC-Cleaned Dataset 
+The Explainable Machine Learning Challenge is a collaboration between Google, FICO, and academics to generate new research in the area of algorithmic explainability. Teams will be challenged to create machine learning models with both high accuracy and explainability, using a real-world financial dataset provided by FICO. Designers and end users of machine learning algorithms will both benefit from more interpretable and explainable algorithms.
 
-This dataset originates from the Explainable Machine Learning Challenge, a collaborative effort between Google, FICO, and academic institutions such as Berkeley, Oxford, Imperial, UC Irvine, and MIT. The primary objective of this challenge is to develop machine learning models that not only possess high accuracy but also exhibit explainability.
+Machine learning model designers will benefit from model explanations, written explanations describing the functioning of a trained model. These might include information about which variables or examples are particularly important, they might explain the logic used by an algorithm, and/or characterize input/output relationships between variables and predictions. We expect teams to tell the story of their model such that these explanations will be qualitatively evaluated by data scientists at FICO.
 
-To achieve this goal, participants will utilize a real-world financial dataset provided by FICO, with the aim of creating models that can provide clear insights into their decision-making processes. This increased transparency will ultimately benefit both designers and end-users of machine learning algorithms.
-
-Model explanations are a critical component of this challenge, as they offer written descriptions of how trained models function. These explanations may encompass details regarding the importance of specific variables or examples, the underlying logic employed by algorithms, and the relationships between inputs, outputs, and predictions. 
-
-By providing these explanations, participating teams will effectively narrate the story behind their models, which will then be subject to qualitative evaluation by data scientists at FICO. 
-
-Further information regarding the Explainable Machine Learning Challenge can be accessed through the FICO website.
+Further information can be retrieved from the FICO website.
 
 **Notes**
 
-We have sourced the dataset from Kaggle, specifically from the Home Equity Line of Credit (HELOC) dataset. 
+We have obtained the dataset from Kaggle. This is a cleaned version of the Kaggle dataset, in which we have removed all rows that only contained a special value, according to the FAQ. Please request access to the data on the FICO website to obtain the full description of the features. In this version, we have encoded the special values as missing values to make the data more amenable to non-tree models.
 
-This particular version has been cleaned to remove rows containing a special value (-9), as per the FAQ guidelines. To gain access to the complete feature descriptions, please visit the FICO website.
+The dataset includes features such as Risk Performance, External Risk Estimate, Months Since Oldest Trade Open, Months Since Most Recent Trade Open, Average Months in File, Number of Satisfactory Trades, and others.
 
-In this version, we have replaced special values (-9, -8, -7) with missing values to facilitate compatibility with non-tree models.
-
-Features:
-Average Months in File, Number of Satisfactory Trades, Number of Trades with 60 Days Ever 2 Derogatory Public Record,...
-
-Keywords: Explainable Machine Learning, Financial Dataset, Model Explanations, Transparency, Algorithmic Decision-Making, Financial Modeling.
+Keywords: Explainable Machine Learning, Algorithmic Explainability, Financial Dataset, Model Interpretability, Machine Learning Models.

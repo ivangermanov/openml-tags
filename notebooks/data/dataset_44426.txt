@@ -1,9 +1,13 @@
-The dataset named Eye Movements has been subsampled using a seed value of three, resulting in a smaller dataset with two thousand rows, one hundred columns, and ten classes. This subsampling process was done in a stratified manner to ensure that the class distribution is preserved.
+Name: Eye Movements Seed Three 
 
-The subsampling process involved several steps. First, the unique classes in the dataset were identified, and if there were more than ten classes, a selection of ten classes was made using uniform sampling. The indices corresponding to these selected classes were then used to filter the data.
+Tags: Subsampling of the dataset Eye Movements with seed equals three 
 
-Next, the columns of the dataset were uniformly sampled to select one hundred columns. Finally, if the number of rows exceeded two thousand, a stratified sampling approach was used to select a subset of two thousand rows while preserving the class distribution.
+This dataset is a subsample of the original Eye Movements dataset, which has been reduced in size to facilitate easier analysis and processing. The subsampling process involved uniformly selecting classes from the original dataset, followed by the selection of columns and rows to reduce the overall size of the dataset. 
 
-The resulting dataset contains physical sciences and transportation-related data, with features including line number, assignment number, previous fixation duration, and pupil diameter maximum, among others.
+The subsampling process was performed using a random number generator with a specified seed value of three, ensuring reproducibility of the results. The maximum number of rows was set to two thousand, the maximum number of columns was set to one hundred, and the maximum number of classes was set to ten. 
 
-Keywords: Eye Movements, subsampling, stratified sampling, physical sciences, transportation, dataset.
+The original dataset was stratified, meaning that the subsampling process was performed in a way that maintained the same proportion of classes as the original dataset. This was achieved by using a stratified sampling approach, which ensures that the subsample is representative of the original dataset. 
+
+The resulting dataset consists of a subset of the original features, including line number, assignment number, previous fixation duration, first fixation duration, first pass fixation duration, next fixation duration, first saccade length, last saccade length, previous fixation position, landing position, leaving position, total fixation duration, mean fixation duration, regression length, regression duration, pupil diameter maximum, pupil diameter lag, time protection, title number, word number, and label. 
+
+Keywords: Eye Movements, Subsampling, Stratified Sampling, Dataset Reduction, Feature Selection

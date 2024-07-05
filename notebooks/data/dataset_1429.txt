@@ -1,13 +1,17 @@
-**Adult Dataset**
+Adult Dataset
 
-Tags: Chemistry, Life Science
+Tags: LibSVM, Adult Income Prediction
 
-This dataset originates from the LIBSVM data repository. Please cite the original source.
+Source: Original dataset from LIBSVM data repository, date unknown
 
-The Adult dataset has undergone preprocessing to convert its fourteen original features into a more suitable format. Six of these features were continuous, while eight were categorical. To process the continuous features, they were discretized into quantiles, with each quantile being represented by a binary feature. Meanwhile, categorical features with multiple categories were transformed into multiple binary features, one for each category.
+Please cite: UCI Machine Learning Repository - Adult Dataset
 
-Details about the conversion process for each feature can be found in the files available at the original source.
+This dataset originates from the LIBSVM data repository. It has undergone preprocessing from the original Adult data set, which contained continuous and categorical features. In this version, continuous features have been discretized into quantiles, with each quantile represented by a binary feature. Categorical features with multiple categories have been converted into separate binary features for each category. Detailed information on the feature conversion process can be found at the beginning of each file from the provided Microsoft Research link.
 
-The resulting dataset consists of numerous binary features, which are not explicitly named due to their technical nature.
+The dataset focuses on predicting income levels based on various demographic and employment-related attributes. It has been widely used in machine learning research and benchmarking. The original Adult data set contained features related to age, education, occupation, marital status, race, gender, work hours, and other socioeconomic factors.
 
-Keywords: LIBSVM, Adult Dataset, Preprocessing, Binary Features, Continuous Features, Categorical Features
+This preprocessed version expands the original features into a larger set of binary indicators, allowing for more granular analysis and potentially improved model performance. The transformation results in over one hundred attributes, each representing a specific characteristic or category from the original dataset.
+
+The Adult dataset serves as a valuable resource for researchers and practitioners working on classification problems, particularly in the domains of income prediction, demographic analysis, and socioeconomic studies. Its widespread use in the machine learning community makes it a useful benchmark for comparing different algorithms and methodologies.
+
+Keywords: income prediction, demographic analysis, binary classification, feature discretization, socioeconomic factors, machine learning benchmark, adult census data

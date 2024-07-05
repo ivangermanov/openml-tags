@@ -1,36 +1,22 @@
-Abalone
-Tags: Images, Machine Learning
+**Abalone Dataset**
 
-Data Description
-Predicting the age of abalone from physical measurements is a challenging task. The age of abalone is typically determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope, which is a time-consuming and laborious process. However, other measurements that are easier to obtain can be used to predict the age. Additionally, further information such as weather patterns and location, which affect food availability, may be necessary to accurately solve this problem.
+**Data Description**
+Predicting the age of abalone from physical measurements is a challenging task. The age of abalone is typically determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope, which is a time-consuming and laborious process. To simplify this process, other measurements that are easier to obtain are used to predict the age. Additionally, further information such as weather patterns and location, which affect food availability, may be required to solve this problem. The original data was preprocessed by removing examples with missing values, and the ranges of the continuous values were scaled for use with an Artificial Neural Network (ANN) by dividing by two hundred.
 
-From the original data, instances with missing values were removed, and the ranges of the continuous values were scaled for use with Artificial Neural Networks (ANNs) by dividing them by two hundred.
+**Attribute Description**
+The dataset consists of nine attributes, which are:
 
-Attribute Description
-The dataset consists of nine attributes:
+* Sex: the sex of the abalone, which can be male, female, or infant
+* Length: the longest shell measurement in millimeters
+* Diameter: the measurement perpendicular to the length in millimeters
+* Height: the height of the abalone with meat in the shell in millimeters
+* Whole Weight: the whole abalone weight in grams
+* Shucked Weight: the weight of the meat in grams
+* Viscera Weight: the gut weight after bleeding in grams
+* Shell Weight: the weight of the shell after being dried in grams
+* Rings: the age of the abalone in years, which is the target feature
 
-Sex: This refers to the sex of the abalone, which can take one of three possible values: Male, Female, and Infant.
+**Dataset Information**
+The dataset does not contain any missing values. The age of the abalone, which is the number of rings, is the value to predict, either as a continuous value or as a classification problem.
 
-Length: This is the longest shell measurement in millimeters.
-
-Diameter: This is the measurement perpendicular to the length in millimeters.
-
-Height: This is the height of the abalone with meat in its shell in millimeters.
-
-Whole Weight: This is the total weight of the abalone in grams.
-
-Shucked Weight: This is the weight of the abalone's meat in grams.
-
-Viscera Weight: This is the weight of the abalone's gut after bleeding in grams.
-
-Shell Weight: This is the weight of the abalone's shell after being dried in grams.
-
-Rings: This is the target feature, which represents the age of the abalone in years.
-
-Dataset Information
-This dataset does not contain any missing values.
-
-Additional Information
-Predicting the age of abalone from physical measurements requires careful consideration of various factors, including weather patterns and location, which affect food availability.
-
-Keywords: Abalone, Age Prediction, Physical Measurements, Artificial Neural Networks, Weather Patterns, Food Availability.
+**Keywords:** Abalone, Age Prediction, Physical Measurements, Artificial Neural Network, Shell Rings.

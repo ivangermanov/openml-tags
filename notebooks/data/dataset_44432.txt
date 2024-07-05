@@ -1,21 +1,11 @@
-Name: Jannis Seed Four Rows Two Thousand NCClasses Ten NCols One Hundred Stratify True 
+Subsampling of the dataset Jannis with seed equal to four, maximum number of rows two thousand, maximum number of columns one hundred, maximum number of classes ten, and stratify set to true.
 
-Tags: Economics, Machine Learning 
+Generated with the following source code:
 
-Sub-sampling of the dataset Jannis with a seed equal to four arguments number rows max equal to two thousand arguments number cols max equal to one hundred arguments number classes max equal to ten arguments no stratify equal to true generated with the following source code.
+The function subsample takes in parameters such as seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not, and returns a dataset. It uses a random number generator with the given seed to sample classes, columns, and rows uniformly. If the number of classes is greater than the maximum, it selects the required number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly. If the number of columns is greater than the maximum, it selects the required number of columns randomly. If the number of rows is greater than the maximum, it uses stratified sampling to select the required number of rows. Finally, it returns a dataset with the sampled data, categorical mask, and column names.
 
-The function sub-sample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify.
+Features: 
 
-First, it sets up a random number generator using the given seed. Then it selects the features and target variable from the original dataset.
+Tags: Subsampling of the dataset Jannis
 
-If there are more unique classes than the specified maximum, it uses value counts to select the most representative classes and filters the dataset to only include those classes.
-
-Next, if there are more columns than the specified maximum, it randomly selects the desired number of columns while preserving their original order.
-
-Finally, if there are more rows than the specified maximum, it uses stratified sampling to select the desired number of rows while maintaining the distribution of classes.
-
-The resulting sub-sampled dataset is then returned along with its metadata including the categorical mask and column names.
-
-Features: The sub-sampled dataset contains fifty-four features, which are all numeric variables.
-
-Keywords: sub-sampling, machine learning, economics, stratification, dataset generation.
+Keywords: dataset subsampling, stratified sampling, random sampling, data preprocessing

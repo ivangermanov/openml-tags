@@ -1,17 +1,15 @@
-This directory contains six databases, a corresponding test set, and corresponding documentation. They were left at the University of California at Irvine during a visit in nineteen eighty-seven for the nineteen eighty-seven Machine Learning Workshop.
+This directory contains six databases, a corresponding test set, and documentation related to thyroid disease. The databases were obtained from the Garavan Institute in Sydney, Australia, and were left at the University of California at Irvine during a visit in nineteen eighty-seven for the Machine Learning Workshop.
 
-The documentation files are formatted to be read by a specific decision tree program. Although they are briefer than other documentation files found in this database repository, they should suffice to describe the database, including the source, number and names of attributes, including class names, and types of values that each attribute takes.
+The documentation files are formatted to be read by a decision tree program and provide information about the database, including the source, number and names of attributes, and types of values that each attribute takes.
 
-In general, these databases are quite similar and can be characterized as having many attributes, mostly numeric or Boolean valued attributes, and being related to thyroid disease domains. The records were provided by the Garavan Institute of Sydney, Australia. There are several missing attribute values, signified by a question mark. There is a small number of classes, which change with each database. 
+In general, these databases are quite similar and can be characterized as follows: they have many attributes, mostly numeric or Boolean valued, and are related to thyroid disease domains. There are several missing attribute values, signified by a question mark, and a small number of classes. Each data set has a large number of instances, and the test sets have a smaller number of instances that are disjoint with respect to the corresponding data sets.
 
-Each data set has a certain number of instances, and there is a separate test set with its own number of instances. It seems that the test sets' instances are disjoint with respect to the corresponding data sets, although this has not been verified.
+The instances in these databases are followed by a vertical bar and a patient identification number. The vertical bar is interpreted by the decision tree program as "ignore the remainder of this line".
 
-There is also an additional two data files, which have approximately the same data format and set of attributes as the other six databases, but their integrity is questionable. They differ in terms of their number of instances and lack of corresponding test files. 
+This database also contains two additional data files, hypothyroid and sick-euthyroid, which have a similar data format and set of attributes as the other six databases. However, their integrity is questionable, and it is possible that they may have been corrupted. These two databases differ in terms of their number of instances and lack of corresponding test files. They each have two concepts, negative/hypothyroid and sick-euthyroid/negative, respectively, and their source appears to be the Garavan Institute.
 
-Another file contains the latest version of an archive of thyroid diagnoses obtained from the Garavan Institute, consisting of records from nineteen eighty-four to early nineteen eighty-seven. A domain theory related to thyroid disease has also been added recently.
+Another file, thyroid, has been added, which contains the latest version of an archive of thyroid diagnoses obtained from the Garavan Institute. A domain theory related to thyroid disease has also been added.
 
-Features include various variables, such as age, sex, and other medical-related attributes.
+The files new-thyroid were donated by an individual and contain a thyroid database suited for training artificial neural networks.
 
-Scraped data includes information about the dataset, including its origin and characteristics.
-
-Keywords: thyroid disease, machine learning, datasets, Garavan Institute, Australia, decision trees.
+Keywords: thyroid disease, machine learning, decision tree, artificial neural networks, Garavan Institute.

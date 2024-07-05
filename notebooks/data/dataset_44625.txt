@@ -1,13 +1,19 @@
-The MFEAT Factors dataset has been subsampled with specific parameters to create a new dataset. This dataset has been tagged with Chemistry and Machine Learning.
+Name: MFeat Factors Seed Two
 
-The subsampling process involved uniformly sampling classes from the original dataset until the desired number of classes was reached. The indices where these selected classes were present were then used to select the corresponding data points.
+Tags: Subsampling of the dataset MFeat Factors with seed equals two
 
-Next, the columns of the dataset were uniformly sampled until the desired number of columns was reached. The selected columns were then used to create the new dataset.
+Generated with the following source code:
 
-If the resulting dataset still had too many rows, stratified sampling was used to reduce the number of rows while maintaining the class balance. This was done using the train-test split function from scikit-learn.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Finally, the categorical columns were converted to strings to conform to OpenML standards.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Features include attributes forty-two, forty-six, fifty-one, and so on.
+Next, it uniformly samples columns if required. If the number of columns in the dataset exceeds the specified maximum, it randomly selects the desired number of columns.
 
-Keywords: MFEAT Factors, Chemistry, Machine Learning, Subsampling, Stratified Sampling.
+Finally, if the number of rows in the dataset exceeds the specified maximum, it uses stratified sampling to select the desired number of rows. This ensures that the resulting dataset maintains the original distribution of the data.
+
+Features: 
+
+The dataset contains a hundred features, including attributes seven, eight, nine, twelve, thirteen, fourteen, sixteen, nineteen, twenty, twenty-two, twenty-five, twenty-eight, thirty, thirty-one, thirty-three, thirty-six, thirty-seven, thirty-eight, forty-two, forty-six, fifty-one, fifty-three, fifty-five, fifty-six, fifty-nine, sixty-one, sixty-two, seventy-one, seventy-five, seventy-six, seventy-seven, seventy-eight, eighty-one, eighty-two, eighty-four, eighty-five, eighty-six, eighty-eight, ninety, ninety-one, ninety-two, ninety-three, ninety-four, ninety-five, ninety-six, ninety-seven, ninety-eight, ninety-nine, one hundred two, one hundred four, one hundred six, one hundred eight, one hundred ten, one hundred twelve, one hundred thirteen, one hundred fourteen, one hundred sixteen, one hundred twenty, one hundred twenty-two, one hundred twenty-three, one hundred twenty-four, one hundred twenty-eight, one hundred twenty-nine, one hundred thirty-two, one hundred thirty-seven, one hundred thirty-eight, one hundred thirty-nine, one hundred forty, one hundred forty-three, one hundred forty-five, one hundred forty-six, one hundred forty-eight, one hundred fifty, one hundred fifty-two, one hundred fifty-six, one hundred fifty-seven, one hundred sixty, one hundred sixty-one, one hundred sixty-two, one hundred sixty-three, one hundred sixty-six, one hundred sixty-seven, one hundred sixty-eight, one hundred seventy, one hundred seventy-one, one hundred seventy-six, one hundred seventy-seven, one hundred seventy-eight, one hundred seventy-nine, one hundred eighty-six, one hundred ninety-one, one hundred ninety-three, one hundred ninety-five, two hundred two, two hundred six, two hundred seven, two hundred ten, two hundred thirteen, two hundred fourteen.
+
+Keywords: dataset subsampling, stratified sampling, uniform random sampling, feature selection, data preprocessing.

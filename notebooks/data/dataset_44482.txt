@@ -1,13 +1,15 @@
-Amazon Commerce Reviews dataset has been subsampled with a seed of four, resulting in two thousand rows, one hundred columns, and ten classes. This subsampling was done using a specific source code that involves uniformly sampling classes, columns, and rows.
+Amazon Commerce Reviews Dataset
 
-The original dataset had more than ten classes, so a uniform sampling of classes was performed. The selected classes were chosen based on their frequency in the original dataset. Then, the indices where one of these classes is present were selected, and the corresponding rows were kept.
+This dataset is a subsample of the original Amazon Commerce Reviews dataset, with a seed of four. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-Next, the columns were uniformly sampled. If there were more than one hundred columns, a random selection of column indices was made, and the corresponding columns were kept.
+The dataset was generated using a Python function that takes in several parameters, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratification flag. The function uses the NumPy random default generator to ensure reproducibility.
 
-Finally, the rows were uniformly sampled. If there were more than two thousand rows, a stratified sampling was performed to ensure that the class distribution is maintained.
+The subsampling process first selects a subset of classes, ensuring that the number of classes does not exceed the specified maximum. The selected classes are then used to filter the data, retaining only the rows that correspond to these classes.
 
-The resulting dataset consists of the subsampled data, along with information about the categorical mask and column names.
+Next, the function uniformly samples columns, selecting a subset of columns that does not exceed the specified maximum. The selected columns are then used to filter the data, retaining only the columns that correspond to these features.
 
-Features include various variables such as product ratings, reviews, and other relevant attributes.
+Finally, the function stratifies the data, ensuring that the number of rows does not exceed the specified maximum. The stratification process involves splitting the data into training and testing sets, using the target variable to maintain the class balance.
 
-Keywords: Amazon Commerce Reviews, dataset, subsampling, machine learning, mathematics.
+The resulting dataset consists of a subset of the original features, with a reduced number of rows, columns, and classes. The dataset is suitable for machine learning experiments, particularly those that require a smaller dataset size.
+
+Keywords: Amazon Commerce Reviews, dataset subsampling, stratification, machine learning experiments.

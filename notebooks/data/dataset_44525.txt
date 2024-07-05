@@ -1,52 +1,17 @@
-Name: Jasmine Seed Two Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Jasmine Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Jasmine with seed equal to two arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals true 
+Tags: Subsampling of the dataset Jasmine with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-def subsample(self, seed, number_rows_maximum, number_columns_maximum, number_classes_maximum, stratified):
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified, meaning that the proportion of each class in the subsample is the same as in the original dataset.
 
-    random_number_generator = numpy random default random generator seed 
+The function first selects a specified number of classes from the original dataset. It does this by getting a list of unique classes, and then using random number generation to select the specified number of classes. It then selects the indices where one of these classes is present, and uses these indices to subset the original dataset.
 
-    x equals self x 
-    y equals self y 
+Next, the function selects a specified number of columns from the subsampled dataset. It does this by getting a list of column indices, and then using random number generation to select the specified number of columns. It then uses these column indices to subset the dataset.
 
-    Uniformly sample classes equals y unique 
-    if length of classes is greater than number classes maximum:
-        value counts equals y value counts 
-        selected classes equals random number generator choice classes size equals number classes maximum replace equals false probability equals value counts divided by sum of value counts 
-        Select the indices where one of these classes is present 
-        indices equals y index y is in selected classes 
-        x equals x iloc indices 
-        y equals y iloc indices 
+Finally, the function selects a specified number of rows from the subsampled dataset. It does this by using the train test split function from scikit learn, with the stratify argument set to true. This ensures that the proportion of each class in the subsample is the same as in the original dataset.
 
-    Uniformly sample columns if required 
-    if length of x columns is greater than number columns maximum:
-        column indices equals random number generator choice list range length of x columns size equals number columns maximum replace equals false 
-        sorted column indices equals sorted column indices 
-        selected columns equals list x columns sorted column indices 
-        x equals x selected columns 
-    else:
-        sorted column indices equals list range length of x columns 
+Features: (omitted due to unreadability)
 
-    if length of x is greater than number rows maximum:
-        Stratify accordingly 
-        target name equals y name 
-        data equals pandas concat x comma y axis equals columns 
-        underscore comma subset equals train test split data test size equals number rows maximum stratify equals data target name shuffle equals true random state equals seed 
-        x equals subset drop target name axis equals columns 
-        y equals subset target name 
-
-    We need to convert categorical columns to string for OpenML 
-    categorical mask equals list self categorical mask i for i in sorted column indices 
-    columns equals list x columns 
-    return Dataset 
-    dataset equals self dataset 
-    x equals x 
-    y equals y 
-    categorical mask equals categorical mask 
-    columns equals columns 
-
-Features: ... (omitted due to unreadability)
-
-Keywords: subsampling, dataset, stratification, random sampling, OpenML.
+Keywords: dataset subsampling, stratified sampling, random number generation, class selection, column selection, row selection.

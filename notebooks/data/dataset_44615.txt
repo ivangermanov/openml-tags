@@ -1,22 +1,41 @@
-Subsampling of the dataset CMC with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals True.
+Subsampling of the dataset CMC with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals True.
 
 Generated with the following source code:
 
-def subsample(self, seed: int, number_rows_max: int = two thousand, number_columns_max: int = one hundred, number_classes_max: int = ten, stratified: bool = True) -> Dataset:
+def subsample(self, seed, number of rows maximum, number of columns maximum, number of classes maximum, stratified) -> Dataset:
 random number generator = np.random.default_rng(seed)
 x = self.x
 y = self.y
 
-Uniformly sample classes equals y unique. If length of classes is greater than number classes max: value counts = y value counts; selected classes = random number generator choice classes, size equals number classes max, replace equals False, probability equals value counts divided by sum of value counts; select the indices where one of these classes is present index equals y index y is in selected classes; x equals x iloc index; y equals y iloc index;
+Uniformly sample classes equals y unique
+if length of classes is greater than number of classes maximum:
+value counts = y value counts
+selected classes = random number generator choice classes, size equals number of classes maximum, replace equals False, probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present equals y index y is in selected classes
+x = x iloc select the indices
+y = y iloc select the indices
 
-Uniformly sample columns if required. If length of x columns is greater than number columns max: column indexes = random number generator choice list range length of x columns, size equals number columns max, replace equals False; sorted column indexes = sorted column indexes; selected columns = list x columns sorted column indexes; x equals x selected columns;
-else: sorted column indexes = list range length of x columns;
+Uniformly sample columns if required
+if length of x columns is greater than number of columns maximum:
+columns indices = random number generator choice list range length of x columns, size equals number of columns maximum, replace equals False
+sorted column indices = sorted columns indices
+selected columns = list x columns sorted column indices
+x = x selected columns
+else:
+sorted column indices = list range length of x columns
 
-If length of x is greater than number rows max: target name equals y name; data equals pd concat x, y, axis equals columns; _, subset = train test split data, test size equals number rows max, stratify equals data target name, shuffle equals True, random state equals seed; x equals subset drop target name, axis equals columns; y equals subset target name;
+if length of x is greater than number of rows maximum:
+Stratify accordingly target name equals y name
+data = pd concat x, y, axis equals columns
+_, subset = train test split data, test size equals number of rows maximum, stratify equals data target name, shuffle equals True, random state equals seed
+x = subset drop target name, axis equals columns
+y = subset target name
 
-We need to convert categorical columns to string for OpenML. categorical mask = self categorical mask for i in sorted column indexes; columns equals list x columns; 
-return Dataset dataset equals self dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns.
+We need to convert categorical columns to string for openml
+categorical mask = self categorical mask i for i in sorted column indices
+columns = list x columns
+return Dataset dataset equals self dataset, x equals x, y equals y, categorical mask equals categorical mask, columns equals columns
 
-Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Wife's Now Working?, Husband's Occupation, Standard of Living Index, Media Exposure, Contraceptive Method Used.
+Features: Wife's Age, Wife's Education, Husband's Education, Number of Children Ever Born, Wife's Religion, Wife's Now Working, Husband's Occupation, Standard of Living Index, Media Exposure, Contraceptive Method Used
 
-Keywords: subsampling, dataset, machine learning, mathematics, stratified sampling, feature selection.
+Keywords: subsampling, dataset, stratified sampling, feature selection, categorical data

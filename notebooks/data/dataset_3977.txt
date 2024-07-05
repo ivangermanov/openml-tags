@@ -1,23 +1,33 @@
-QSAR-TID-11094 Dataset 
+QSAR-TID-11094 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 11094. It consists of one hundred ninety-two rows and one thousand twenty-six features, including IDs and class feature. The features represent FCFP six one hundred twenty-four bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+This dataset contains QSAR data showing activity values of several compounds on drug target Thromboxane-A Synthase, and it has multiple rows and features. The features represent FCFP 1024bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset was obtained from the MetaQSAR project in September two thousand fifteen. It includes molecule Chembl ID and median PX fifty.
+Features: Molecule ChEMBL ID, and multiple FCFP6 features.
 
-The molecule Chembl ID is an identifier for each molecule, and the median PX fifty represents the activity value of each compound.
+Scraped Data: 
+ID: ChEMBL4028 
+Type: Single Protein 
+Preferred Name: Thromboxane-A Synthase 
+Synonyms: Cytochrome P450 5A1, Hydroperoxy Icosatetraenoate Dehydratase, TBXAS1, and others 
+Organism: Rattus Norvegicus 
+Species Group: No 
+Protein Target Classification: Enzyme/Cytochrome P450/Cytochrome P450 Family 5/Cytochrome P450 Family 5A/Cytochrome P450 5A1 
+Description: Thromboxane-A Synthase is a single protein.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated. 
+Relationship: Accession Thromboxane-A Synthase Single Protein.
 
-This dataset was scraped from the Chembl database, which provides a rich source of bioactivity data. 
+Rows per page: Component, GoFunction, and GoProcess.
 
-The target protein is thromboxane A synthase, also known as cytochrome P four fifty five A one. It is an enzyme involved in the synthesis of thromboxane A two from prostaglandin H two. 
+Component: Endoplasmic Reticulum, Endoplasmic Reticulum Membrane, Cytosol, and Membrane.
 
-Thromboxane A synthase is a single protein preferred name, and its synonyms include Cyp five, Cyp five A one, hydroperoxy icosatetraenoate dehydratase, and Tbxas one. 
+GoFunction: Monooxygenase Activity, Thromboxane-A Synthase Activity, Iron Ion Binding, Oxidoreductase Activity, and others.
 
-It belongs to the species Rattus norvegicus and is classified under the enzyme cytochrome P four fifty family five A group. 
+GoProcess: Prostaglandin Biosynthetic Process, Lipid Metabolic Process, Fatty Acid Metabolic Process, Fatty Acid Biosynthetic Process, and others.
 
-This protein is involved in various biological processes, including prostaglandin biosynthesis, lipid metabolism, fatty acid metabolism, and response to ethanol. 
+canSAR-Target: P49430 
+Reactome: Eicosanoids, Synthesis of Prostaglandins and Thromboxanes. 
+UniProt: P49430 
+InterPro: Cyt P450, Cyt P450 E grp-I, Cyt P450 CS, and Cyt P450 sf. 
+Pfam: p450
 
-It is also associated with certain components, such as the endoplasmic reticulum and cytosol. 
-
-Keywords: QSAR, Thromboxane A Synthase, Cytochrome P450, MetaQSAR, Bioactivity Data.
+Keywords: QSAR, Thromboxane-A Synthase, Molecular Fingerprints, Cytochrome P450, Enzyme, Metabolic Process.

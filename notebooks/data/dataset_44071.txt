@@ -1,35 +1,11 @@
-Bank Marketing
+Bank Marketing Dataset
 
-The Bank Marketing dataset is related to direct marketing campaigns of a Portuguese banking institution. These marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to assess if the product, namely a bank term deposit, would be or not subscribed.
+This dataset belongs to the "regression on numerical features" benchmark. It is related to direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls, often requiring more than one contact to the same client to access if the product, a bank term deposit, would be subscribed.
 
-The classification goal is to predict if the client will subscribe a term deposit. 
+The classification goal is to predict if the client will subscribe a term deposit. This dataset contains information about bank client data, including age, job type, marital status, education, and whether the client has credit in default. It also includes information about the client's average yearly balance, housing loan, and personal loan.
 
-Attribute Information
+Additionally, the dataset contains information related to the last contact of the current campaign, such as the contact communication type, last contact day of the month, last contact month of the year, and last contact duration. Other attributes include the number of contacts performed during this campaign, the number of days that passed by after the client was last contacted from a previous campaign, and the number of contacts performed before this campaign.
 
-Input variables include:
+The output variable is whether the client has subscribed a term deposit.
 
-* Bank Client Data:
-    + Age, which is numeric.
-    + Job Type, which is categorical and may be administration, unknown, unemployed, management, housemaid, entrepreneur, student, blue collar, self employed, retired, technician, or services.
-    + Marital Status, which is categorical and may be married, divorced, or single; note that divorced means divorced or widowed.
-    + Education Level, which is categorical and may be unknown, secondary, primary, or tertiary.
-    + Default Status, which is binary and indicates whether the client has credit in default or not.
-    + Average Yearly Balance, which is numeric and represents the average yearly balance in euros.
-    + Housing Loan Status, which is binary and indicates whether the client has a housing loan or not.
-    + Personal Loan Status, which is binary and indicates whether the client has a personal loan or not.
-* Last Contact Information:
-    + Contact Communication Type, which is categorical and may be unknown, telephone, or cellular.
-    + Last Contact Day, which is numeric and represents the day of the month when the last contact was made.
-    + Last Contact Month, which is categorical and may be January, February, March, April, May, June, July, August, September, October, November, or December.
-    + Last Contact Duration, which is numeric and represents the duration of the last contact in seconds.
-* Other Attributes:
-    + Number of Contacts, which is numeric and represents the number of contacts performed during this campaign and for this client; this includes the last contact.
-    + Number of Days Since Last Contact, which is numeric and represents the number of days that have passed since the client was last contacted from a previous campaign; a value of minus one means the client was not previously contacted.
-    + Previous Number of Contacts, which is numeric and represents the number of contacts performed before this campaign and for this client.
-    + Previous Campaign Outcome, which is categorical and may be unknown, other, failure, or success.
-
-Output Variable:
-
-* Has the Client Subscribed a Term Deposit?, which is binary and indicates whether the client has subscribed a term deposit or not.
-
-Keywords: Bank Marketing, Direct Marketing, Phone Calls, Term Deposit, Client Subscription Prediction.
+Keywords: Bank Marketing, Direct Marketing, Term Deposit, Client Data, Phone Calls, Portuguese Banking Institution.

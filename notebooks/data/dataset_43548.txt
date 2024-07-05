@@ -1,29 +1,23 @@
-All-Time Premier League Player Statistics 
-Tags: Computer Systems, Machine Learning 
+All-Time Premier League Player Statistics
 
-As a massive football fan, the Premier League is one of my favorite football leagues. Therefore, I thought it would be an excellent opportunity to create a dataset of player statistics from all seasons of the Premier League. The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. It operates on a system of promotion and relegation with the English Football League, contested by twenty clubs.
+Tags: Context
 
-Home to some of the most renowned clubs, players, managers, and stadiums in world football, the Premier League is the most-watched league globally, broadcast in one billion homes across one hundred eighty-eight countries. The league takes place between August and May, involving the teams playing each other home and away throughout the season, totaling three hundred eighty matches. Three points are awarded for a win, one point for a draw, and none for a defeat, with the team accumulating the most points at the end of the season claiming the Premier League title.
+As a huge football fan, the Premier League is one of my favorite football leagues. So, as my very first dataset, I thought this would be a great opportunity to create a dataset of player statistics of all seasons from the Premier League. The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. Contested by twenty clubs, it operates on a system of promotion and relegation with the English Football League. Home to some of the most famous clubs, players, managers, and stadiums in world football, the Premier League is the most-watched league on the planet.
 
-Some players of specific positions may not possess certain statistics – for instance, a goalkeeper might not have a statistic for shot accuracy.
+The league takes place between August and May and involves the teams playing each other home and away across the season, a total of matches. Three points are awarded for a win, one point for a draw, and none for a defeat, with the team with the most points at the end of the season winning the Premier League title. The teams that finish in the bottom three of the league table at the end of the campaign are relegated to the Championship, the second tier of English football. Those teams are replaced by three clubs promoted from the Championship; the sides that finish in first and second place and the third via the end-of-season playoffs.
 
-Details About the Dataset
+Details about the dataset: Some players of certain positions may not have certain statistics - for example, a goalkeeper may not have a statistic for "Shot Accuracy". The format for the filename is dataset, with the date being the date when the file was last updated.
 
-I acquired the data from premierleague.com using a BeautifulSoup4 web scraper in Python3, which automatically generates a CSV file containing all player statistics. The runtime of the file varies depending on internet bandwidth, taking around twenty minutes to complete. To ensure the dataset remains up-to-date, I designed the program to update weekly, as player statistics change following each match.
+Content: The data was acquired from the official Premier League website. I made a web scraper in Python that automatically outputs a CSV file of all the player statistics. The runtime of the file varies with the bandwidth of the internet connection. I made this program so that this dataset could be updated weekly. The reason for weekly updates is that the statistics change after each match played by the player, so I felt that for the most up-to-date results, such a program is needed.
 
-Planning this project took two days, while creating the program in Python3 required seven days, and testing and bug fixing took an additional five days. The project was completed within a span of two weeks.
+Planning this project took a significant amount of time. Making the program in Python took several days, and the testing and bug fixing took another few days. The project was completed in a span of a few weeks.
 
-Acknowledgments 
-Source Credits: premierleague.com 
-Image Credits: rb.gy/wuiwth 
+Acknowledgements: Source credits go to the official Premier League website.
 
-Inspiration 
-How do variables such as age, nationality, and club affect player performance?
+Inspiration: How do variables like age, nationality, and club affect the player's performance?
 
-Known Issues in the Dataset 
-Goals per match display an abnormally high value for a few players due to incorrect values displayed during the initial few milliseconds of loading the webpage. I am attempting to resolve this issue analytically rather than scraping directly from the website.
+Known issues in the dataset: Goals per match display an abnormally high value for a few players as the HTML displays incorrect values during the first few milliseconds of loading the page. I am trying to fix it analytically rather than scraping directly from the website.
 
-Features: 
-Name, Jersey Number, Club, Position, Nationality, Age, Appearances, Wins, Losses, Goals, Headed Goals, Goals with Right Foot, Goals with Left Foot, Penalties Scored, Free Kicks Scored, Shots, Shots on Target, Shooting Accuracy Percentage, Hit Woodwork, Big Chances Missed, Clean Sheets, Goals Conceded, Tackles, Tackle Success Percentage, Last Man Tackles, Blocked Shots, Interceptions, Clearances, Headed Clearance, Clearances off Line, Recoveries, Duels Won, Duels Lost, Successful Fifty/Fifty, Aerial Battles Won, Aerial Battles Lost, Own Goals, Errors Leading to Goal, Assists, Passes, Passes per Match, Big Chances Created, Crosses, Cross Accuracy Percentage, Through Balls, Accurate Long Balls, Saves, Penalties Saved, Punches, High Claims, Catches, Sweeper Clearances, Throw Outs, Goal Kicks, Yellow Cards, Red Cards, Fouls, Offsides 
+Features: Name, Club, Position, Nationality, Age, Appearances, Wins, Losses, Goals, Headed Goals, Goals with Right Foot, Goals with Left Foot, Penalties Scored, Free Kicks Scored, Shots, Shots on Target, Shooting Accuracy, Hit Woodwork, Big Chances Missed, Clean Sheets, Goals Conceded, Tackles, Tackle Success, Last Man Tackles, Blocked Shots, Interceptions, Clearances, Headed Clearance, Clearances off Line, Recoveries, Duels Won, Duels Lost, Successful Fifty-Fifty, Aerial Battles Won, Aerial Battles Lost, Own Goals, Errors Leading to Goal, Assists, Passes, Passes per Match, Big Chances Created, Crosses, Cross Accuracy, Through Balls, Accurate Long Balls, Saves, Penalties Saved, Punches, High Claims, Catches, Sweeper Clearances, Throw Outs, Goal Kicks, Yellow Cards, Red Cards, Fouls, Offsides
 
-Keywords: Premier League, football, player statistics, machine learning, computer systems, web scraping, dataset.
+Keywords: Premier League, football, player statistics, dataset, web scraping, Python.

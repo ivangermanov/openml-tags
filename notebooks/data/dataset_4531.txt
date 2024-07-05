@@ -1,20 +1,29 @@
-Parkinsons Telemonitoring 
+**Parkinsons Telemonitoring**
 
-Tags: Health, Medicine 
+Tags: **Author**
 
-This dataset is composed of a range of biomedical voice measurements from people with early-stage Parkinson's disease recruited to a six-month trial of a telemonitoring device for remote symptom progression monitoring. The recordings were automatically captured in the patients' homes. Columns in the table contain subject number, subject age, subject gender, time interval from baseline recruitment date, motor Unified Parkinson's Disease Rating Scale (UPDRS) score, total UPDRS score, and sixteen biomedical voice measures. Each row corresponds to one of the numerous voice recordings from these individuals. 
+The dataset was created in collaboration with ten medical centers in the United States and Intel Corporation, who developed the telemonitoring device to record speech signals.
 
-The main aim of the data is to predict the motor and total UPDRS scores from the sixteen voice measures. The data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are approximately two hundred recordings per patient; the subject number of the patient is identified in the first column. 
+Data Set Information:
+
+This dataset is composed of a range of biomedical voice measurements from people with early-stage Parkinson's disease recruited to a six-month trial of a telemonitoring device for remote symptom progression monitoring. The recordings were automatically captured in the patients' homes. The dataset contains subject information, including age and gender, as well as the time interval from the baseline recruitment date. Additionally, it includes the motor and total Unified Parkinson's Disease Rating Scale (UPDRS) scores, which are the primary targets for prediction. The dataset also includes sixteen biomedical voice measures, which are used to predict the motor and total UPDRS scores.
+
+The main aim of the data is to predict the motor and total UPDRS scores from the biomedical voice measures. The data is in ASCII CSV format, with each row corresponding to one voice recording. There are approximately two hundred recordings per patient, and the subject number of the patient is identified in the first column.
+
+For further information or to pass on comments, please contact the dataset creators.
+
+The dataset is based on the following reference: Accurate Telemonitoring of Parkinson's Disease Progression by Non-Invasive Speech Tests.
 
 Attribute Information:
 
-* Subject Number: An integer that uniquely identifies each subject.
-* Age: Subject age.
-* Sex: Subject gender, where zero represents male and one represents female.
-* Test Time: Time since recruitment into the trial, where the integer part is the number of days since recruitment.
-* Motor UPDRS Score: Clinician's motor UPDRS score, linearly interpolated.
-* Total UPDRS Score: Clinician's total UPDRS score, linearly interpolated.
+The dataset contains the following attributes: subject number, age, gender, time since recruitment into the trial, motor UPDRS score, total UPDRS score, and sixteen biomedical voice measures. These voice measures include several measures of variation in fundamental frequency, amplitude, and noise to tonal components in the voice, as well as nonlinear dynamical complexity measures and signal fractal scaling exponent.
 
-Biomedical voice measures include several measures of variation in fundamental frequency, such as jitter, and several measures of variation in amplitude, including shimmer. Additionally, there are two measures of ratio of noise to tonal components in the voice, namely Noise to Harmonic Ratio (NHR) and Harmonic to Noise Ratio (HNR), as well as a nonlinear dynamical complexity measure, namely Recurrence Period Density Entropy (RPDE), and a signal fractal scaling exponent, namely Detrended Fluctuation Analysis (DFA). Lastly, there is a nonlinear measure of fundamental frequency variation, namely Pitch Period Entropy (PPE).
+Relevant Papers:
 
-Keywords: Parkinson's disease, telemonitoring, biomedical voice measurements, Unified Parkinson's Disease Rating Scale (UPDRS), jitter, shimmer, Noise to Harmonic Ratio (NHR), Harmonic to Noise Ratio (HNR), Recurrence Period Density Entropy (RPDE), Detrended Fluctuation Analysis (DFA), Pitch Period Entropy (PPE)
+The dataset is based on several papers, including Suitability of Dysphonia Measurements for Telemonitoring of Parkinson's Disease and Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection.
+
+Citation Request:
+
+If you use this dataset, please cite the following paper: Accurate Telemonitoring of Parkinson's Disease Progression by Non-Invasive Speech Tests.
+
+Keywords: Parkinson's disease, telemonitoring, biomedical voice measures, UPDRS scores, speech signals, remote symptom progression monitoring.

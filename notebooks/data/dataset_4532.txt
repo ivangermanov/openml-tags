@@ -1,17 +1,17 @@
-**Higgs Dataset**
+**Higgs**
 
-Tags: Geography, Life Science
+**Source**: University of California Irvine
 
-Source: University of California Irvine
+**Please cite**: Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications.
 
-This dataset has been produced using Monte Carlo simulations. The first twenty-one features are kinematic properties measured by the particle detectors in the accelerator. These features include characteristics of leptons, jets, and missing energy. The last seven features are functions of the first twenty-one features; these are high-level features derived by physicists to help discriminate between the two classes.
+The data has been produced using Monte Carlo simulations. The first twenty-one features are kinematic properties measured by the particle detectors in the accelerator. These features are the raw data collected by the detectors. The last seven features are functions of the first twenty-one features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. This would allow for a more automated and efficient process.
 
-There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. This approach could potentially lead to improved performance and accuracy in distinguishing between signal and background events.
+Benchmark results using Bayesian Decision Trees from a standard physics package and five-layer neural networks are presented in the original paper. The last portion of the data is used as a test set.
 
-The dataset includes a class label, which indicates whether an event is a signal or background, followed by twenty-eight features. The features can be broadly categorized into two groups: low-level features and high-level features. Low-level features are directly measured by the detectors, while high-level features are derived from these measurements to provide a higher-level understanding of the events.
+Attribute Information: The first column is the class label, with one indicating signal and zero indicating background, followed by the twenty-eight features. These features include properties of the leptons, jets, and missing energy, as well as derived features such as masses.
 
-Benchmark results using Bayesian Decision Trees from a standard physics package and five-layer neural networks have been presented in previous research. The last portion of the dataset is reserved for testing and validation purposes.
+For more detailed information about each feature, see the original paper.
 
-Relevant research papers have explored the application of deep learning techniques to this problem domain, demonstrating promising results.
+Relevant Papers: Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications.
 
-Keywords: Particle Physics, Deep Learning, Monte Carlo Simulations, Kinematic Properties, High-Energy Physics.
+Keywords: Higgs, high-energy physics, deep learning, particle detectors, Monte Carlo simulations, kinematic properties, Bayesian Decision Trees, neural networks.

@@ -1,17 +1,13 @@
-The Diabetes 130 Hospitals dataset represents ten years of clinical care at 130 United States hospitals and delivery networks, collected from nineteen ninety-nine to two thousand eight. Each record represents the hospital admission record for a patient diagnosed with diabetes whose stay lasted between one to fourteen days.
+The Diabetes 130-Hospitals dataset represents ten years of clinical care at one hundred thirty US hospitals and delivery networks, collected from nineteen ninety-nine to two thousand eight. Each record represents the hospital admission record for a patient diagnosed with diabetes whose stay lasted between one to fourteen days. The features describing each encounter include demographics, diagnoses, diabetic medications, number of visits in the year preceding the encounter, and payer information, as well as whether the patient was readmitted after release, and whether the readmission occurred within thirty days of the release.
 
-The features describing each encounter include demographics, such as race, gender, and age, as well as admission source, time in hospital, medical specialty, laboratory procedures, procedures, medications, primary diagnosis, number of diagnoses, glucose serum level, hemoglobin A1C result, insulin, medication changes, and diabetic medication information. Additionally, the dataset includes information about the patient's payer, including Medicare and Medicaid, as well as details about their previous hospitalizations, emergency visits, and outpatient days.
+The dataset was originally collected in two thousand fourteen and this version was derived by the Fairlearn team for the SciPy two thousand twenty-one tutorial "Fairness in AI Systems: From social context to practice using Fairlearn". In this version, the target variable "readmitted" is binarized into whether the patient was re-admitted within thirty days.
 
-The target variable, readmitted, is binarized into whether the patient was readmitted within thirty days of their initial release. 
+The instances in this dataset represent hospitalized patient records diagnosed with diabetes. There is no recommended data split, but the standard train-test split could be used. Alternatively, a three-way holdout split, that is, train-validation-test, could be used when doing model selection.
 
-There is no recommended data split for this dataset; however, a standard train-test split could be used, or a three-way holdout split could be employed for model selection purposes.
+The dataset contains information that might be considered sensitive, including age, gender, and race of the patients. The dataset represents ten years of clinical care at one hundred thirty US hospitals and integrated delivery networks. It includes over fifty features representing patient and hospital outcomes. Information was extracted from the database for encounters that satisfied certain criteria, including that it is an inpatient encounter, a hospital admission, it is a diabetic encounter, that is, one during which any kind of diabetes was entered into the system as a diagnosis, the length of stay was at least one day and at most fourteen days, laboratory tests were performed during the encounter, and medications were administered during the encounter.
 
-It is important to note that this dataset contains sensitive information about the patients, including their age, gender, and race. 
+The data contains attributes such as patient demographics, admission type, time in hospital, medical specialty of admitting physician, number of lab tests performed, diagnosis, number of medications, diabetic medications, number of outpatient, inpatient, and emergency visits in the year before the hospitalization, and more.
 
-This dataset represents a decade of clinical care at numerous hospitals across the country, providing valuable insights into patient outcomes and hospital performance. The data includes over fifty features, offering a comprehensive view of various aspects of healthcare.
+The dataset has missing values. A detailed description of all the attributes is provided in a separate table.
 
-The dataset was collected based on specific criteria, including inpatient encounters, diabetic diagnoses, laboratory tests, and medication administration. The resulting data provides a wealth of information about patient characteristics, hospital stays, and treatment outcomes.
-
-Yes, the dataset does contain missing values. For more detailed information about each attribute, please refer to the corresponding table.
-
-Keywords: diabetes, hospitals, healthcare, patient outcomes, hospital performance, demographics, laboratory tests, medications, readmission rates.
+Keywords: diabetes, hospital, patient, readmission, fairness, AI systems.

@@ -1,14 +1,15 @@
-This directory contains six databases, a corresponding test set, and corresponding documentation related to thyroid disease. The databases were contributed by the Garavan Institute of Sydney, Australia.
+This directory contains six databases, a corresponding test set, and documentation related to thyroid disease. The databases were obtained from the Garavan Institute in Sydney, Australia, and were left at the University of California at Irvine during a visit in nineteen eighty-seven for the Machine Learning Workshop.
 
-The documentation files provide information about each database, including its source, number and names of attributes, types of values that each attribute takes, and class names. Although brief, these descriptions should suffice to characterize the databases.
+The documentation files are formatted to be read by a decision tree program and provide information about the database, including the source, number and names of attributes, and types of values that each attribute takes.
 
-In general, these databases share certain characteristics. They have many attributes, mostly numeric or boolean valued, and relate to thyroid disease domains. Several attribute values are missing, signified by a question mark. There are a small number of classes, and each database has a large number of instances, with separate test sets containing fewer instances.
+In general, these databases are quite similar and can be characterized as follows: they have many attributes, mostly numeric or Boolean valued, and are related to thyroid disease domains. There are several missing attribute values, signified by a question mark, and a small number of classes. Each data set has a large number of instances, and the test sets have a smaller number of instances that are disjoint with respect to the corresponding data sets.
 
-Two additional databases, hypothyroid and sick euthyroid, are also included, although their integrity is questionable due to potential corruption. They have a similar format to the other databases but lack corresponding test files and contain several missing values.
+The instances in these databases are followed by a vertical bar and a patient identification number. The vertical bar is interpreted by the decision tree program as "ignore the remainder of this line".
 
-A more recent addition is a large database of thyroid diagnoses obtained from the Garavan Institute, consisting of thousands of records. A domain theory related to thyroid disease has also been added.
+This database also contains two additional data files, hypothyroid and sick-euthyroid, which have a similar data format and set of attributes as the other six databases. However, their integrity is questionable, and it is possible that they may have been corrupted. These two databases differ in terms of their number of instances and lack of corresponding test files. They each have two concepts, negative/hypothyroid and sick-euthyroid/negative, respectively, and their source appears to be the Garavan Institute.
 
-Another thyroid database, donated by a separate contributor, contains three classes, hundreds of instances, and five attributes, with no missing values. This database is suitable for training artificial neural networks and includes cost data.
+Another file, thyroid, has been added, which contains the latest version of an archive of thyroid diagnoses obtained from the Garavan Institute, consisting of a large number of records from nineteen eighty-four to early nineteen eighty-seven. A domain theory related to thyroid disease has also been added.
 
-Tags: Culture, Images
-Keywords: Thyroid disease, Databases, Attributes, Classes, Instances, Test sets, Domain theory, Artificial neural networks, Cost data
+The files new-thyroid were donated by an individual and contain a thyroid database suited for training artificial neural networks.
+
+Keywords: thyroid disease, machine learning, decision tree, artificial neural networks, Garavan Institute.

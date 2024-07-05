@@ -1,18 +1,11 @@
-**QSAR-TID-10502**
-Tags: Images, Machine Learning, MTLQSAR, study_3
+QSAR-TID-10502 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10502. It has multiple rows and numerous features, including IDs and class features. The features represent molecular fingerprints which were generated from SMILES strings.
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10502. The dataset has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median PXC50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The dataset was obtained from the MetaQSAR project in September 2015. It is essential to cite this dataset when used for any research or publication purposes.
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR data for various drug targets. The data is sourced from ChEMBL version seventeen and contains activity values in pseudo-pCI50 units.
 
-The features in this dataset include molecule ChEMBL ID and median PX50. The remaining features are FCFP six one hundred twenty-four bit molecular fingerprints, which were generated using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The features in the dataset are molecular fingerprints, which are a way of representing molecular structures as a series of bits. These fingerprints are generated from SMILES strings and do not require missing value imputation.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated. The fingerprints are essential in understanding the properties of molecules and their interactions with other molecules.
+The dataset is related to the Cannabinoid CB1 receptor, which is a protein target involved in various biological processes, including signal transduction, synaptic transmission, and response to stimuli. The receptor is a G protein-coupled receptor and is involved in the regulation of various physiological processes, including pain, inflammation, and memory.
 
-The dataset is related to the Cannabinoid CB1 receptor, which is a single protein. It has multiple synonyms, including brain-type cannabinoid receptor, cannabinoid receptor one, CB1, CB-R, and Cnr1. The receptor is primarily found in the rat species, particularly Rattus norvegicus.
-
-The protein target classification of the Cannabinoid CB1 receptor is one, indicating that it belongs to the membrane receptor family, specifically the small molecule receptor subfamily. It is also classified as a lipid-like ligand receptor.
-
-The receptor has multiple functions, including signal transduction, adenylate cyclase-modulating G protein-coupled receptor signaling pathway, and axonal fasciculation. It is also involved in various biological processes, such as spermatogenesis, learning or memory, and response to nutrient.
-
-Keywords: QSAR, machine learning, molecular fingerprints, Cannabinoid CB1 receptor, signal transduction, G protein-coupled receptor signaling pathway.
+Keywords: QSAR, drug target, Cannabinoid CB1 receptor, molecular fingerprints, MetaQSAR project.

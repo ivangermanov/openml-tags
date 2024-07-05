@@ -1,13 +1,44 @@
-The QSAR-TID-11785 dataset contains QSAR data showing activity values of several compounds on drug target Tyrosine-Protein Kinase HCK, also known as Hematopoietic Cell Kinase, Hemopoietic Cell Kinase, p59Hck, or p59-HCK/p60-HCK.
+QSAR TID Dataset
 
-This dataset has several features, including molecular fingerprints generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. These fingerprints do not usually require missing value imputation as all bits are generated.
+Tags: MTLQSAR, study
 
-The features in this dataset include MOLECULE CHEMBL ID, which represents the unique identifier for each compound, and MEDIAN PXc50, which represents the median activity value for each compound.
+Source: MetaQSAR project - September 
 
-The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR datasets for various drug targets.
+Please cite: This dataset contains QSAR data (from ChEMBL version ) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Tyrosine-Protein Kinase HCK is an enzyme that belongs to the protein kinase superfamily and plays a crucial role in various cellular processes, including immune system function, cell differentiation, and cell survival.
+Features: MOLECULE CHEMBL ID, FCFP, and many more fingerprint features
 
-The inhibition of Tyrosine-Protein Kinase HCK has been implicated in the treatment of certain diseases, including cancer and inflammation.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Tyrosine protein kinase HCK
+Synonyms: HCK Hematopoietic cell kinase Hemopoietic cell kinase pHck p HCK/p HCK
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/TK protein kinase group/Tyrosine protein kinase Src family
 
-Keywords: QSAR, Tyrosine-Protein Kinase HCK, Hematopoietic Cell Kinase, MetaQSAR, molecular fingerprints, SMILES strings, Pipeline Pilot, protein kinase, immune system, cell differentiation, cell survival, cancer, inflammation.
+Description: Tyrosine protein kinase HCK
+Relationship: SINGLE PROTEIN
+Accession: P
+
+ChEMBL ID: CHEMBL
+Relationship: SUPERSET OF
+Preferred Name: SRC
+Target Type: PROTEIN FAMILY
+
+Parent Molecule ChEMBL ID: CHEMBL
+Parent Molecule Name: BOSUTINIB
+Parent Molecule Type: Small molecule
+Mechanism of Action: Tyrosine protein kinase HCK inhibitor
+Max Phase: 
+First Approval: 
+USAN Stem: tinib
+
+Gene Ontology Information:
+Component: nucleus, cytoplasm, lysosome, Golgi apparatus, cytosol, cytoskeleton, actin filament, plasma membrane, caveola, focal adhesion, transport vesicle, cell projection, anchoring junction
+
+Function: nucleotide binding, phosphotyrosine residue binding, protein kinase activity, protein tyrosine kinase activity, non membrane spanning protein tyrosine kinase activity, signaling receptor binding, protein binding, ATP binding, lipid binding, kinase activity, transferase activity
+
+Process: immune system process, leukocyte migration, inflammatory response, cell adhesion, transmembrane receptor protein tyrosine kinase signaling pathway, integrin mediated signaling pathway, mesoderm development, regulation of cell shape, phosphorylation, peptidyl tyrosine phosphorylation, cytokine mediated signaling pathway, cell differentiation, regulation of actin cytoskeleton organization, intracellular signal transduction, leukocyte degranulation, innate immune response, protein autophosphorylation, regulation of inflammatory response, regulation of phagocytosis, localization, interferon mediated signaling pathway
+
+Keywords: QSAR, molecular fingerprints, tyrosine kinase, HCK, drug target, ChEMBL, protein classification

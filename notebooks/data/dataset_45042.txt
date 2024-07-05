@@ -1,62 +1,29 @@
-Abalone 
+Abalone Dataset
 
-Tags: Dataset used in the Tabular Data Benchmark, Regression on Both Numerical and Categorical Features 
+This dataset belongs to the "regression on both numerical and categorical features" benchmark. It is used in the tabular data benchmark and has been transformed in the same way.
 
-This dataset belongs to the regression on both numerical and categorical features benchmark. 
+Original Description:
 
-Original Description: 
-Make target age numeric.
+The Abalone dataset is used to predict the age of abalone from physical measurements. The age of abalone is determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope - a boring and time-consuming task. Other measurements, which are easier to obtain, are used to predict the age. Further information, such as weather patterns and location (hence food availability), may be required to solve the problem.
 
-Title of Database: Abalone Data 
+The dataset comes from an original non-machine-learning study: "The Population Biology of Abalone (Haliotis species) in Tasmania. I. Blacklip Abalone (H. rubra) from the North Coast and Islands of Bass Strait".
 
-Sources:
-Original owners of database: Marine Resources Division Marine Research Laboratories 
-Donor of database: Department of Computer Science, University of Tasmania 
-Date received: December 
+The dataset has been cleaned by removing examples with missing values, and the ranges of the continuous values have been scaled for use with an artificial neural network (by dividing by two hundred).
 
-Past Usage: Extending and benchmarking Cascade-Correlation 
-Test set performance: Cascade-Correlation, Linear Discriminate Analysis, k=5 Nearest Neighbour 
-Data set samples are highly overlapped. 
-Further information is required to separate completely using affine combinations. 
-Other restrictions to data set examined.
+Dataset Information:
 
-Relevant Information Paragraph: 
-Predicting the age of abalone from physical measurements. 
-The age of abalone is determined by cutting the shell through the cone, staining it, and counting the number of rings through a microscope – a boring and time-consuming task. 
-Other measurements, which are easier to obtain, are used to predict the age. 
-Further information, such as weather patterns and location, hence food availability, may be required to solve the problem.
-
-Number of Instances: 
-Number of Attributes: 
-Attribute Information: 
-Given is the attribute name, attribute type, the measurement unit, and a brief description. 
-The number of rings is the value to predict: either as a continuous value or as a classification problem.
+The dataset contains four thousand one hundred seventy-seven instances and eight attributes. The attributes are Sex, Length, Diameter, Height, Whole Weight, Shucked Weight, Viscera Weight, and Shell Weight. The number of rings is the value to predict, either as a continuous value or as a classification problem.
 
 Attribute Information:
 
-* Sex: nominal – Male, Female, and Infant
-* Length: continuous – longest shell measurement in millimeters
-* Diameter: continuous – perpendicular to length in millimeters
-* Height: continuous – with meat in shell in millimeters
-* Whole Weight: continuous – whole abalone in grams
-* Shucked Weight: continuous – weight of meat in grams
-* Viscera Weight: continuous – gut weight after bleeding in grams
-* Shell Weight: continuous – after being dried in grams
-* Rings: integer – +1.5 gives the age in years
-
-Statistics for Numeric Domains:
-
-* Length
-* Diameter
-* Height
-* Whole Weight
-* Shucked Weight
-* Viscera Weight
-* Shell Weight
-* Rings
-
-Missing Attribute Values: None
-
-Class Distribution:
+* Sex: nominal, with values Male, Female, and Infant
+* Length: continuous, measured in millimeters, representing the longest shell measurement
+* Diameter: continuous, measured in millimeters, representing the measurement perpendicular to length
+* Height: continuous, measured in millimeters, representing the measurement with meat in shell
+* Whole Weight: continuous, measured in grams, representing the whole abalone
+* Shucked Weight: continuous, measured in grams, representing the weight of meat
+* Viscera Weight: continuous, measured in grams, representing the gut weight after bleeding
+* Shell Weight: continuous, measured in grams, representing the weight after being dried
+* Rings: integer, representing the age in years, with a value of plus one point five giving the age in years
 
 Keywords: Abalone, Age Prediction, Physical Measurements, Regression, Tabular Data Benchmark

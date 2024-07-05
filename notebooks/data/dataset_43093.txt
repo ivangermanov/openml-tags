@@ -1,7 +1,13 @@
-The Miami Housing 2016 dataset contains information on single-family homes sold in Miami. This comprehensive dataset provides a wide range of features, including publicly available information, distance variables, aviation noise, and geographic coordinates.
+The Miami Housing 2016 dataset contains information on single-family homes sold in Miami in 2016. This dataset provides a comprehensive view of the housing market, including publicly available information as well as additional variables such as distance to various amenities and environmental features.
 
-The dataset comprises various columns, including a unique identifier for each property, sale price, land area, floor area, value of special features, distances to nearby amenities and noise sources, age of the structure, airplane noise levels, structure quality, sale month, latitude, and longitude.
+The dataset contains a unique identifier for each property, known as the Parcel Number, although about one percent of these appear multiple times. The sale price of each property is also included, as well as the land area and floor area of the property. Additionally, the value of any special features, such as swimming pools, is provided.
 
-A typical machine learning model would aim to predict the logarithm of the sale price based on these variables, excluding the unique parcel number. The features included in this dataset provide valuable insights into the characteristics of each property and its surroundings, allowing for a detailed analysis of the factors influencing housing prices.
+The dataset also includes variables related to the distance of each property to various amenities, including the nearest rail line, the ocean, bodies of water, the central business district, subcenters, and highways. These distance variables can be used as indicators of noise levels and accessibility.
 
-Keywords: Miami Housing, Machine Learning, Real Estate, Property Prices, Geographic Coordinates, Noise Pollution.
+Other variables in the dataset include the age of the structure, a dummy variable indicating whether the property is affected by excessive airplane noise, and a measure of the quality of the structure. The month in which the property was sold is also included, as well as the latitude and longitude of the property.
+
+A typical model using this dataset would attempt to predict the sale price of a property as a function of all variables except the Parcel Number.
+
+Features: Latitude, Longitude, Sale Price, Land Area, Floor Area, Special Features Value, Rail Distance, Ocean Distance, Water Distance, Central Business District Distance, Subcenter Distance, Highway Distance, Age, Airplane Noise, Structure Quality, Month Sold
+
+Keywords: Miami Housing, Real Estate, Property Values, Distance Variables, Environmental Features, Noise Levels, Accessibility

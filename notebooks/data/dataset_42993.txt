@@ -1,29 +1,47 @@
-Online Shoppers Intention Tags: Images, Life Science Test 
+Online Shoppers Intention Tags: Test
 
 Features:
 
-Administrative Duration, Informational Duration, Product Related Duration, Bounce Rates, Exit Rates, Page Values, Special Day, Month, Operating Systems, Browser, Region, Traffic Type, Visitor Type, Weekend, Revenue 
+Administrative Duration, Informational Duration, Product Related Duration, Bounce Rates, Exit Rates, Page Values, Special Day, Month, Operating Systems, Browser, Region, Traffic Type, Visitor Type, Weekend, Revenue
 
-Scraped Data: 
+Scraped Data: Dataset Information
 
-Dataset Information 
+The dataset was acquired and annotated by professionals at a hospital. The subjective judgments, which are the target variables, were originally done in an ordinal manner and were discretized into two classes.
 
-Additional Information 
+Images were randomly sampled from the original colposcopic sequences, which are videos. The original images and the manual segmentations are included in the images directory.
 
-The dataset was acquired and annotated by professionals at Hospital University of Caracas. The subjective judgments, which are the target variables, were originally done in an ordinal manner, namely poor, fair, good, and excellent, and were later discretized into two classes, bad and good. Images were randomly sampled from the original colposcopic sequences, which are videos. The original images and the manual segmentations are included in the images directory. This dataset has three modalities, specifically Hinselmann, Green, and Schiller.
+The dataset has three modalities, which are Hinselmann, Green, and Schiller. The target variables are expert assessments and consensus.
 
-Has Missing Values? 
-No 
+Has Missing Values? No
 
-Additional Variable Information 
-This dataset consists of three modalities, namely Hinselmann, Green, and Schiller. It has sixty-nine attributes, including sixty-two predictive attributes and seven target variables.
+Additional Variable Information
 
-Cervix Area refers to the image area with cervix. Os Area refers to the image area with external Os. Walls Area refers to the image area with vaginal walls. Speculum Area refers to the image area with the speculum. Artifacts Area refers to the image area with artifacts. Cervix Artifacts Area refers to the cervix area with the artifacts. Os Artifacts Area refers to the external Os area with the artifacts. Walls Artifacts Area refers to the vaginal walls with the artifacts. Speculum Artifacts Area refers to the speculum area with the artifacts. Cervix Specularities Area refers to the cervix area with the specular reflections. Os Specularities Area refers to the external Os area with the specular reflections. Walls Specularities Area refers to the vaginal walls area with the specular reflections. Speculum Specularities Area refers to the speculum area with the specular reflections. Specularities Area refers to the total area with specular reflections. Area H Max Diff refers to the maximum area differences between the four cervix quadrants.
+The dataset has three modalities: Hinselmann, Green, and Schiller.
 
-RGB Cervix R Mean refers to the average color information in the cervix regarding the Red Channel. RGB Cervix R Std refers to the standard deviation of color information in the cervix regarding the Red Channel. RGB Cervix R Mean Minus Std refers to the average minus standard deviation of color information in the cervix regarding the Red Channel. RGB Cervix R Mean Plus Std refers to the average plus standard deviation of color information in the cervix regarding the Red Channel. Similarly, there are other color-related features for the Green and Blue Channels.
+Number of Attributes: Sixty-Nine (Sixty-Two Predictive Attributes, Seven Target Variables)
 
-Fit Cervix Hull Rate refers to the coverage of the cervix convex hull by the cervix. Fit Cervix Hull Total refers to the image coverage of the cervix convex hull. Fit Cervix BBox Rate refers to the coverage of the cervix bounding box by the cervix. Fit Cervix BBox Total refers to the image coverage of the cervix bounding box. Fit Circle Rate refers to the coverage of the cervix circle by the cervix. Fit Circle Total refers to the image coverage of the cervix circle. Fit Ellipse Rate refers to the coverage of the cervix ellipse by the cervix. Fit Ellipse Total refers to the image coverage of the cervix ellipse. Fit Ellipse Goodness refers to the goodness of the ellipse fitting. Dist To Center Cervix refers to the distance between the cervix center and the image center. Dist To Center Os refers to the distance between the cervical Os center and the image center.
+Cervix Area: Image area with cervix. Os Area: Image area with external os. Walls Area: Image area with vaginal walls. Speculum Area: Image area with the speculum. Artifacts Area: Image area with artifacts. Cervix Artifacts Area: Cervix area with the artifacts. Os Artifacts Area: External os area with the artifacts. Walls Artifacts Area: Vaginal walls with the artifacts. Speculum Artifacts Area: Speculum area with the artifacts. Cervix Specularities Area: Cervix area with the specular reflections. Os Specularities Area: External os area with the specular reflections. Walls Specularities Area: Vaginal walls area with the specular reflections. Speculum Specularities Area: Speculum area with the specular reflections. Specularities Area: Total area with specular reflections. Area H Max Diff: Maximum area differences between the four cervix quadrants.
 
-Experts One to Five refer to the subjective assessments of Experts One to Five, respectively, which are target variables. Consensus refers to the subjective assessment of the consensus, which is also a target variable.
+RGB Cervix R Mean: Average color information in the cervix (Red channel). RGB Cervix R Standard Deviation: Standard deviation color information in the cervix (Red channel). RGB Cervix R Mean Minus Standard Deviation: Average minus standard deviation color information in the cervix (Red channel). RGB Cervix R Mean Plus Standard Deviation: Average plus standard deviation color information in the cervix (Red channel).
 
-Keywords: Online shoppers intention, life science test, images, hospital university, colposcopic sequences, modalities, attributes, target variables, cervix area, color information, fit rate, goodness fitting, distance center.
+RGB Cervix G Mean: Average color information in the cervix (Green channel). RGB Cervix G Standard Deviation: Standard deviation color information in the cervix (Green channel). RGB Cervix G Mean Minus Standard Deviation: Average minus standard deviation color information in the cervix (Green channel). RGB Cervix G Mean Plus Standard Deviation: Average plus standard deviation color information in the cervix (Green channel).
+
+RGB Cervix B Mean: Average color information in the cervix (Blue channel). RGB Cervix B Standard Deviation: Standard deviation color information in the cervix (Blue channel). RGB Cervix B Mean Minus Standard Deviation: Average minus standard deviation color information in the cervix (Blue channel). RGB Cervix B Mean Plus Standard Deviation: Average plus standard deviation color information in the cervix (Blue channel).
+
+RGB Total R Mean: Average color information in the image (Red channel). RGB Total R Standard Deviation: Standard deviation color information in the image (Red channel). RGB Total R Mean Minus Standard Deviation: Average minus standard deviation color information in the image (Red channel). RGB Total R Mean Plus Standard Deviation: Average plus standard deviation color information in the image (Red channel).
+
+RGB Total G Mean: Average color information in the image (Green channel). RGB Total G Standard Deviation: Standard deviation color information in the image (Green channel). RGB Total G Mean Minus Standard Deviation: Average minus standard deviation color information in the image (Green channel). RGB Total G Mean Plus Standard Deviation: Average plus standard deviation color information in the image (Green channel).
+
+RGB Total B Mean: Average color information in the image (Blue channel). RGB Total B Standard Deviation: Standard deviation color information in the image (Blue channel). RGB Total B Mean Minus Standard Deviation: Average minus standard deviation color information in the image (Blue channel). RGB Total B Mean Plus Standard Deviation: Average plus standard deviation color information in the image (Blue channel).
+
+HSV Cervix H Mean: Average color information in the cervix (Hue channel). HSV Cervix H Standard Deviation: Standard deviation color information in the cervix (Hue channel). HSV Cervix S Mean: Average color information in the cervix (Saturation channel). HSV Cervix S Standard Deviation: Standard deviation color information in the cervix (Saturation channel). HSV Cervix V Mean: Average color information in the cervix (Value channel). HSV Cervix V Standard Deviation: Standard deviation color information in the cervix (Value channel).
+
+HSV Total H Mean: Average color information in the image (Hue channel). HSV Total H Standard Deviation: Standard deviation color information in the image (Hue channel). HSV Total S Mean: Average color information in the image (Saturation channel). HSV Total S Standard Deviation: Standard deviation color information in the image (Saturation channel). HSV Total V Mean: Average color information in the image (Value channel). HSV Total V Standard Deviation: Standard deviation color information in the image (Value channel).
+
+Fit Cervix Hull Rate: Coverage of the cervix convex hull by the cervix. Fit Cervix Hull Total: Image coverage of the cervix convex hull. Fit Cervix Bounding Box Rate: Coverage of the cervix bounding box by the cervix. Fit Cervix Bounding Box Total: Image coverage of the cervix bounding box. Fit Circle Rate: Coverage of the cervix circle by the cervix. Fit Circle Total: Image coverage of the cervix circle. Fit Ellipse Rate: Coverage of the cervix ellipse by the cervix. Fit Ellipse Total: Image coverage of the cervix ellipse. Fit Ellipse Goodness: Goodness of the ellipse fitting.
+
+Distance to Center Cervix: Distance between the cervix center and the image center. Distance to Center Os: Distance between the cervical os center and the image center.
+
+Expert Assessments: Subjective assessment of the experts (target variables). Consensus: Subjective assessment of the consensus (target variable).
+
+Keywords: online shoppers, intention, test, dataset, colposcopic, images, modalities, attributes, cervix, artifacts, specularities, color information, convex hull, bounding box, circle, ellipse, fitting, distance, center, expert assessments, consensus.

@@ -1,31 +1,12 @@
-QSAR-TID-100080 Tags: Human Activities, Machine Learning, MTLQSAR, study_3 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: one hundred thousand eighty, and it has multiple rows and numerous features including IDs and class feature.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The features represent molecular fingerprints which were generated from smiles strings. They were obtained using the pipeline pilot program.
+The dataset focuses on a serine/threonine protein kinase called PAK (also known as p activated kinase, PAK, or PAK). This protein is classified as an enzyme in the kinase family, specifically in the STE protein kinase group, STE protein kinase STE family, and STE protein kinase PAKB subfamily. It is found in Homo sapiens and is involved in various cellular processes including cell growth regulation, protein phosphorylation, apoptosis, cytoskeleton organization, cell cycle, signal transduction, cell migration, MAPK cascade regulation, angiogenesis, dendritic spine development, and cell cell adhesion.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
+The protein is associated with multiple cellular components including the cytoplasm, Golgi apparatus, cytosol, adherens junction, and focal adhesion. Its functions include nucleotide binding, protein kinase activity, ATP binding, and cadherin binding involved in cell cell adhesion. The dataset also includes information on related molecules, such as PF, a small molecule that acts as a serine/threonine protein kinase PAK inhibitor.
 
-Features include molecule chembl id.
+Various databases and resources provide additional information about this protein, including Gene Ontology annotations, protein interaction data, pharmacological data, and structural information from the Protein Data Bank. The protein is also referenced in multiple pathways in the Reactome database, particularly those involving GTPase cycles of various RAC and RHO proteins.
 
-This dataset contains information about serine threonine protein kinase pak four which is a single protein preferred name also known as kiaa eleven forty-two p twenty-one activated kinase four pak four pak-four serine threonine protein kinase pak four.
-
-Organism is homo sapiens species group.
-
-Description relationship accession serine threonine protein kinase pak four single protein.
-
-Browse all parent molecule chembl id parent molecule name parent molecule type mechanism of action max phase first approval usan stem references.
-
-Showing one record.
-
-Expression atlas go component go cytoplasm go golgi apparatus go cytosol go adherens junction go focal adhesion.
-
-Go function go nucleotide binding go protein kinase activity go protein serine threonine kinase activity go protein binding go atp binding go kinase activity go transferase activity go cadherin binding involved in cell-cell adhesion go protein serine kinase activity.
-
-Go process go regulation of cell growth go protein phosphorylation go apoptotic process go cytoskeleton organization go cell cycle go signal transduction go phosphorylation go cell migration go intracellular signal transduction go regulation of mapk cascade go positive regulation of angiogenesis go dendritic spine development go cellular response to organic cyclic compound go cell-cell adhesion go negative regulation of endothelial cell apoptotic process.
-
-Wikipedia pak four cansar-target guide to pharmacology int act pharm gkb pharos tchem reactome activation of rac one cdc forty-two gtpase cycle rac one gtpase cycle rac two gtpase cycle rho q gtpase cycle rho h gtpase cycle rhog gtpase cycle rhoj gtpase cycle rhou gtpase cycle rac three gtpase cycle rhov gtpase cycle.
-
-Uniprot inter pro pfam pdb e.
-
-Keywords: QSAR, machine learning, molecular fingerprints, serine threonine protein kinase pak four, homo sapiens, protein kinase activity.
+Keywords: QSAR, protein kinase, molecular fingerprints, drug target, enzyme, cell signaling, phosphorylation, GTPase, structural biology

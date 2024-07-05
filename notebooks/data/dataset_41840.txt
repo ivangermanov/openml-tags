@@ -1,30 +1,15 @@
-**FOREX EUR/NOK Minute High**
+FOREX EUR/NOK Minute High Tags: finance, forex, forex high, forex minute
 
-Tags: Finance, Forex, Forex High, Forex Minute, Manufacturing, Social Media
+Source: Dukascopy Historical Data Feed
 
-**Source:** Dukascopy Historical Data Feed
+Data Description
+This dataset contains historical price data of the FOREX EUR/NOK from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Data Description**
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and the High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
 
-This dataset contains the historical price data of the Forex EUR/NOK from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active during these periods. The timestamp feature is set to the Europe/Amsterdam time zone.
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-The class attribute indicates the direction of the mean high price of the subsequent minute relative to the mean high price of the current minute. In other words, the class attribute is true when the mean high price is expected to increase in the next minute, and false when it is expected to decrease or remain unchanged.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-**Note that this is a hypothetical task, intended for scientific purposes only. Realistic trading strategies should only be based on predictions made on close attributes (which are also available)**.
-
-**Attributes**
-
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the beginning of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the beginning of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Indicates whether the average price will rise during the next interval.
-
-Keywords: Forex, EUR/NOK, Candlestick, Historical Data, Time Series, Trading Strategies
+Keywords: FOREX, EUR/NOK, historical data, finance, candlestick, timezone, class attribute, trade strategies.

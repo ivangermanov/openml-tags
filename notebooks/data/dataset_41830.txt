@@ -1,30 +1,30 @@
 **FOREX NZD/USD Day High**
 
-Tags: Finance, Forex, Forex Day, Forex High, Social Media
+Tags: finance, forex, forex day, forex high
 
-**Source:** Dukascopy Historical Data Feed
+**Source**: Dukascopy Historical Data Feed
 
-**Data Description:** This dataset consists of historical price data of the New Zealand Dollar versus United States Dollar (NZD/USD) Forex pair obtained from Dukascopy. Each instance represents one daily candlestick, covering the period from January to December. Since Forex markets are closed on weekends, there are no records for Saturday and Sunday.
+**Data Description**
 
-The timestamp feature is presented in the Europe/Amsterdam time zone.
+This dataset contains historical price data of the New Zealand Dollar/United States Dollar (NZD/USD) Forex pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans from January to December and does not include weekends, as the Forex market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute indicates the direction of the mean high price for the subsequent day relative to the mean high price of the current day. Specifically, the class attribute is true if the mean high price increases the following day and false if it decreases or remains unchanged.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down (or stays the same) the following day.
 
-Please note that this dataset is intended for scientific purposes only and should not be used for developing realistic trading strategies. For practical applications, focus on predicting close prices instead.
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
-**Attributes:** 
+**Attributes**
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
-* Bid Open: The bid price at the beginning of the time interval.
-* Bid High: The highest bid price recorded during the time interval.
-* Bid Low: The lowest bid price observed during the time interval.
-* Bid Close: The bid price at the end of the time interval.
-* Bid Volume: The frequency of changes in the bid price within the time interval.
-* Ask Open: The ask price at the beginning of the time interval.
-* Ask High: The highest ask price recorded during the time interval.
-* Ask Low: The lowest ask price observed during the time interval.
-* Ask Close: The ask price at the end of the time interval.
-* Ask Volume: The frequency of changes in the ask price within the time interval.
-* Class: Whether the average high price will increase during the next time interval.
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, NZD/USD, Historical Data, Candlestick, Time Series, Finance, Trading Strategies.
+Keywords: Forex, NZD/USD, historical data, candlestick, Europe/Amsterdam, bid/ask prices, volume, class attribute.

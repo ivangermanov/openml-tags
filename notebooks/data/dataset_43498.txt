@@ -1,30 +1,16 @@
-Land Market in Saudi Arabia 
-Tags: Computer Systems, Machine Learning
+Land Market in Saudi Arabia Tags:
 
-This dataset was scraped from sa.aqar.fm to gather land information including price, size, street width, and locations. After cleaning the data, duplicates were removed, resulting in a total of rows.
+This dataset has been scraped from sa.aqar.fm to obtain land information such as price, size, street width, and locations. After removing duplicates, the cleaned dataset consists of a total of rows. Unfortunately, the majority of the data is based in Riyadh, but there are a significant number of lands in Jeddah and Khobar. The dataset is set in Arabic, and it was decided to keep it that way to maintain the integrity of the data. However, the street width, land size, and price have all been converted to numerical values, leaving some of those values as null if they could not be converted.
 
-The majority of the lands are located in Riyadh, but there is also a significant number of lands in Jeddah and Khobar. To maintain the integrity of the data, it was decided to keep the dataset in Arabic.
+The dataset includes the following information:
 
-The street width, land size, and price have been converted into numerical values, while any unconvertible values were left as null.
+Main Location: The main location of the land
+Sublocation: Indicates the subregion of the location. Note that only the big cities, such as Riyadh and Jeddah, have subregions, and empty values are meant to be empty.
+Neighborhood: The neighborhood where the land resides
+Frontage: The cardinal direction where the land faces the street
+Purpose: The purpose for land use
+Street Width: The length of the street facing the land in meters
+Size: The size of the land in square meters
+Price per Square Meter: The price per square meter
 
-Data Description:
-
-Main Location refers to the primary location of the land.
-
-Sub Location indicates the sub-region of the location, although this field may contain null values for smaller cities. 
-
-Neighborhood specifies the area where the land is situated.
-
-Frontage denotes the cardinal direction in which the land faces the street.
-
-Purpose describes the intended use of the land.
-
-Street Width represents the length of the street facing the land in meters.
-
-Size denotes the area of the land in square meters.
-
-Price Per Meter Squared represents the cost per square meter of the land.
-
-Features: Main Location, Sub Location, Neighborhood, Frontage, Purpose, Street Width, Size, and Price Per Meter Squared.
-
-Keywords: Saudi Arabia, Real Estate, Land Market, Property Data, Arabic Dataset.
+Keywords: Land Market, Saudi Arabia, Real Estate, Property, Location, Size, Price

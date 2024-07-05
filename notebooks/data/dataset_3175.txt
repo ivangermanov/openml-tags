@@ -1,13 +1,66 @@
-The QSAR-TID-103900 dataset is part of the MetaQSAR project and contains QSAR data showing activity values of several compounds on drug target Type One Angiotensin II Receptor. This dataset has seventy-five rows and one thousand twenty-six features, including IDs and class feature.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The features represent Fingerprints of molecular structure, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. These Fingerprints do not usually require missing value imputation as all bits are generated.
+Source: MetaQSAR project - September
 
-This dataset is related to the study of the computational universe and machine learning, specifically Multi Task Learning QSAR. It is a valuable resource for researchers working on understanding the relationship between molecular structure and biological activity.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The Type One Angiotensin II Receptor is a single protein that plays a crucial role in various biological processes, including kidney development, maintenance of blood vessel diameter homeostasis, and signal transduction. It is also involved in the regulation of vasoconstriction, calcium-mediated signaling, and viral entry into host cells.
+Features: MOLECULE CHEMBL ID, FCFP, and many more...
 
-This receptor is classified as a membrane receptor and belongs to the family A G protein-coupled receptor. It has various synonyms, including AGTR1, Angiotensin II Type-One Receptor, and AT-One Receptor.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Type angiotensin II receptor
+Synonyms: AGTR Angiotensin II type receptor AT receptor Type angiotensin II receptor
+Synonyms: 
+Organism: Cavia porcellus
+Species Group: No
+Protein Target Classification: Membrane receptor/Family A G protein coupled receptor/Peptide receptor (family A GPCR)/Short peptide receptor (family A GPCR)/Angiotensin receptor
 
-The dataset provides information about the receptor's function, including its ability to bind to bradykinin and its involvement in protein heterodimerization activity. It also includes data about the receptor's cellular component, which is primarily located in the plasma membrane.
+Description Relationship Accession Type angiotensin II receptor SINGLE PROTEIN
 
-Keywords: QSAR, Type One Angiotensin II Receptor, Machine Learning, Multi Task Learning, Molecular Structure, Biological Activity, Signal Transduction, Vasoconstriction, Calcium-Mediated Signaling.
+Component:
+plasma membrane
+membrane
+
+Function:
+angiotensin type I receptor activity
+G protein coupled receptor activity
+angiotensin type II receptor activity
+bradykinin receptor binding
+protein heterodimerization activity
+
+Process:
+kidney development
+maintenance of blood vessel diameter homeostasis by renin angiotensin
+signal transduction
+G protein coupled receptor signaling pathway
+positive regulation of cytosolic calcium ion concentration
+Rho protein signal transduction
+positive regulation of macrophage derived foam cell differentiation
+regulation of vasoconstriction
+calcium mediated signaling
+positive regulation of phospholipase A activity
+angiotensin activated signaling pathway
+viral entry into host cell
+positive regulation of protein metabolic process
+positive regulation of cytosolic calcium ion concentration involved in phospholipase C activating G protein coupled signaling pathway
+cell chemotaxis
+phospholipase C activating angiotensin activated signaling pathway
+positive regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis
+positive regulation of CoA transferase activity
+
+UniProt:
+
+InterPro:
+ATII AT rcpt
+ATII rcpt
+GPCR Rhodpsn
+GPCR Rhodpsn TM
+
+Pfam:
+tm
+
+No cross references found.
+
+Keywords: QSAR, angiotensin receptor, molecular fingerprints, G protein coupled receptor, signaling pathway

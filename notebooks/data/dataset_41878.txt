@@ -1,28 +1,38 @@
-**FOREX aud/usd Hourly Close**
+Name: FOREX AUD/USD Hourly Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Life Science, Machine Learning
+Tags: finance, forex, forex close, forex hour
 
-**Source:** Dukascopy Historical Data Feed
+Source: Dukascopy Historical Data Feed
 
-**Data Description**
+Data Description:
+This dataset contains the historical price data of the FOREX AUD/USD from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-This dataset comprises historical price data of the Forex Australian Dollar vs United States Dollar (AUD/USD) from Dukascopy. Each instance, represented by a single row, corresponds to one hourly candlestick. The entire dataset spans from January to December, excluding weekends when the Forex market is closed.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is True when the mean Close price is expected to increase in the following hour, and False when the mean Close price is expected to decrease or remain the same in the following hour.
 
-The timestamp feature is set to the Europe/Amsterdam time zone. The class attribute indicates the direction of the mean close price movement over the subsequent hour relative to the current hourly mean close price. Specifically, the class attribute is assigned a value of true if the mean close price is expected to rise over the next hour and false if it remains stagnant or declines.
+Attributes:
 
-**Attributes**
+Timestamp: The time of the current data point, represented in the Europe/Amsterdam timezone.
 
-* **Timestamp**: The time stamp of each data point in the Europe/Amsterdam time zone.
-* **Bid Open**: The opening bid price at the commencement of each hourly interval.
-* **Bid High**: The highest bid price recorded during each hourly interval.
-* **Bid Low**: The lowest bid price observed during each hourly interval.
-* **Bid Close**: The closing bid price at the conclusion of each hourly interval.
-* **Bid Volume**: The frequency of bid price changes occurring within each hourly interval.
-* **Ask Open**: The opening ask price at the beginning of each hourly interval.
-* **Ask High**: The highest ask price reached during each hourly interval.
-* **Ask Low**: The lowest ask price recorded during each hourly interval.
-* **Ask Close**: The closing ask price at the end of each hourly interval.
-* **Ask Volume**: The number of times the ask price changed within each hourly interval.
-* **Class**: A binary indicator signifying whether the mean close price is anticipated to increase or decrease over the subsequent hour.
+Bid Open: The bid price at the start of this time interval.
 
-Keywords: Forex, AUD/USD, Candlestick, Time Series, Finance, Machine Learning
+Bid High: The highest bid price recorded during this time interval.
+
+Bid Low: The lowest bid price recorded during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price recorded during this time interval.
+
+Ask Low: The lowest ask price recorded during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will increase during the next interval.
+
+Keywords: FOREX, AUD/USD, hourly close, financial data, market analysis

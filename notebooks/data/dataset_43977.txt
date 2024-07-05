@@ -1,13 +1,9 @@
-The Jannis dataset belongs to the classification on numerical features benchmark. It was transformed in the same way as the other datasets in the tabular data benchmark. 
+The Jannis dataset is part of the tabular data benchmark, transformed in a uniform way to facilitate classification on numerical features. This dataset belongs to the classification on numerical features benchmark, where the goal is to expose the research community to real-world datasets of interest. 
 
-The primary objective of this challenge is to introduce the research community to real-world datasets of significant interest, formatted uniformly despite differing types of data. These datasets are presented as preprocessed matrices, enabling participants to concentrate on classification, while also allowing them to employ additional feature extraction procedures as long as they do not breach any rules.
+All datasets are formatted uniformly, although the type of data may differ. The data are provided as preprocessed matrices, allowing participants to focus on classification, although they are welcome to use additional feature extraction procedures as long as they do not violate any rules of the challenge. 
 
-All problems posed are binary classification challenges, assessed using the normalized Area Under the Receiver Operating Characteristic Curve metric. The identity of these datasets and their respective data types remain concealed, although their structures are revealed. 
+All problems are binary classification problems and are assessed with the normalized Area Under the ROC Curve metric. The identity of the datasets and the type of data is concealed, although its structure is revealed. The final score will be the average of rankings on all testing datasets, and a ranking will be generated from such results, determining the winners according to such ranking. 
 
-Ultimately, the final score will be derived from the average of rankings across all testing datasets, generating a ranking, and determining winners accordingly. These tasks operate within predetermined time constraints, utilizing the Codalab platform's shared computational resources. 
+The tasks are constrained by a time budget, and the Codalab platform provides computational resources shared by all participants. Each code submission will be executed in a compute worker with specific characteristics, ensuring the fairness of the evaluation. When a code submission is evaluated, its execution time is limited to ensure fairness.
 
-Each submitted code will execute in a compute worker equipped with specific characteristics, including two cores, eight gigabytes of memory, forty gigabytes of solid-state drive storage, and an Ubuntu operating system. To guarantee fair evaluation, each code submission's execution time is restricted.
-
-Features include various variables such as class.
-
-Keywords: machine learning, statistics, classification, numerical features, area under curve, binary classification, feature extraction, computational resources, time constraints.
+Keywords: tabular data, classification, numerical features, binary classification, Area Under the ROC Curve, computational resources, time budget.

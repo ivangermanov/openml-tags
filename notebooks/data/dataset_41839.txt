@@ -1,28 +1,30 @@
-**FOREX cadjpy-day-High**
+**FOREX CAD/JPY Day High**
 
-Tags: Finance, Forex, Forex Day, Forex High, Health, Statistics
+Tags: finance, forex, forex day, forex high
+
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
 
-This dataset contains the historical price data of the Foreign Exchange rate between Canadian Dollar and Japanese Yen (CAD/JPY) sourced from Dukascopy's Historical Data Feed. Each instance represents a single daily candlestick, excluding weekends when the Foreign Exchange market is closed. The data ranges from January first to December thirteenth and is timestamped according to the Europe/Amsterdam timezone.
+This dataset contains historical price data of the FOREX CAD/JPY currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is defined as the direction of the mean high price of the following day relative to the mean high price of the current day. In other words, the class attribute is true if the mean high price is expected to rise in the next day and false if it is expected to fall or remain stagnant.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
 
-**Note**: This dataset is intended for scientific purposes only, and realistic trade strategies should be based on predictions made on Close attributes, which are also available.
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of the daily time interval.
-* **Bid High**: The highest bid price recorded during the daily time interval.
-* **Bid Low**: The lowest bid price recorded during the daily time interval.
-* **Bid Close**: The bid price at the end of the daily time interval.
-* **Bid Volume**: The number of times the bid price changed within the daily time interval.
-* **Ask Open**: The ask price at the start of the daily time interval.
-* **Ask High**: The highest ask price recorded during the daily time interval.
-* **Ask Low**: The lowest ask price recorded during the daily time interval.
-* **Ask Close**: The ask price at the end of the daily time interval.
-* **Ask Volume**: The number of times the ask price changed within the daily time interval.
-* **Class**: Whether the average high price will increase during the next daily interval.
+* **Timestamp**: The time of the current data point in Europe/Amsterdam timezone
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Foreign Exchange, CAD/JPY, Historical Data, Candlestick, Time Series, Finance, Trading Strategy
+**Keywords**: FOREX, CAD/JPY, currency pair, historical data, finance, trading

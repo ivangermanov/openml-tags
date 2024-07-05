@@ -1,11 +1,29 @@
-The Breast Cancer Wisconsin Diagnostic Data Set contains features computed from a digitized image of a fine needle aspirate of a breast mass, which describes characteristics of the cell nuclei present in the image. The target feature records the prognosis, which can be either benign or malignant.
+Breast Cancer Wisconsin (Diagnostic) Data Set (WDBC)
 
-This data set has thirty descriptive features, which are computed for each of three cell nuclei. These features include radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension.
+Tags: cancer, medical, OpenML-CC18, OpenML100, study, uci
 
-Radius refers to the mean of distances from the center to points on the perimeter. Texture is the standard deviation of gray-scale values. Perimeter, area, and smoothness are self-explanatory. Compactness is calculated by dividing the perimeter squared by the area minus one point zero. Concavity refers to the severity of concave portions of the contour, while concave points refer to the number of concave portions of the contour. Symmetry is another feature, and finally, fractal dimension is calculated using the coastline approximation minus one.
+This dataset contains features computed from digitized images of fine needle aspirates (FNA) of breast masses. The features describe characteristics of cell nuclei present in the images. The target feature records the prognosis as either benign or malignant.
 
-This data set is based on research published in several papers, including Nuclear Feature Extraction for Breast Tumor Diagnosis and Breast Cancer Diagnosis and Prognosis via Linear Programming.
+The dataset was originally sourced from the University of Wisconsin and is available through the UCI Machine Learning Repository. It has been adapted to ARFF format from the UCI version, with sample code identifiers removed.
 
-Tags: cancer, chemistry, life science, medical
+It's important to note that there is a related Breast Cancer Wisconsin (Original) Data Set with a different set of features, known as breast-w.
 
-Keywords: breast cancer, diagnosis, prognosis, cell nuclei, digitized image, fine needle aspirate.
+Feature Description:
+Ten real-valued features are computed for each of three cell nuclei, yielding a total of thirty descriptive features. These features include:
+
+- Radius (mean of distances from center to points on the perimeter)
+- Texture (standard deviation of gray-scale values)
+- Perimeter
+- Area
+- Smoothness (local variation in radius lengths)
+- Compactness (perimeter squared divided by area minus one)
+- Concavity (severity of concave portions of the contour)
+- Concave points (number of concave portions of the contour)
+- Symmetry
+- Fractal dimension ("coastline approximation" minus one)
+
+These features were computed using methods detailed in relevant research papers, which discuss nuclear feature extraction for breast tumor diagnosis and the use of linear programming in breast cancer diagnosis and prognosis.
+
+The dataset has been used in various studies and is included in multiple OpenML study collections. It serves as a valuable resource for researchers and practitioners in the fields of machine learning and medical diagnostics, particularly in the area of breast cancer detection and classification.
+
+Keywords: breast cancer, diagnostic imaging, cell nuclei features, machine learning, medical dataset, tumor classification, fine needle aspirate, image analysis

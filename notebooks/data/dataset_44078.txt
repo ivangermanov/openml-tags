@@ -1,36 +1,11 @@
-Eye Movements 
+Eye Movements Dataset
 
-Tags: Computer Systems, Machine Learning 
+This dataset belongs to the "regression on numerical features" benchmark. The original dataset is a straight-forward classification task, where pre-computed feature vectors for each word in the eye movement trajectory are provided, along with class labels. The dataset consists of several assignments, each consisting of a question followed by ten sentences (titles of news articles). One of the sentences is the correct answer to the question, five of the sentences are irrelevant to the question, and four of the sentences are relevant to the question but do not answer it.
 
-Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark.
+Each assignment is a time sequence of twenty-two-dimensional feature vectors. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column: "irrelevant", "relevant", or "correct answer".
 
-Original Description:
+Each example represents a single word, and the task is to return the classification of each read sentence. The twenty-two features provided are commonly used in psychological studies on eye movement, but not all of them are necessarily relevant in this context. The objective is to predict the classification labels.
 
-The dataset consists of several assignments. Each assignment consists of a question followed by ten sentences (titles of news articles). One of the sentences is the correct answer to the question (Correct) and five of the sentences are irrelevant to the question (Irrelevant). Four of the sentences are relevant to the question (Relevant), but they do not answer it.
+The features include the number of fixations to the word, the number of fixations to the word when it is first encountered, the duration of previous fixation, the duration of the first fixation when the word is first encountered, the sum of durations of fixations when the word is first encountered, the duration of the next fixation when gaze initially moves from the word, the length of the first saccade, the distance between fixation on the word and the next fixation, the distance between the first fixation preceding the word and the beginning of the word, the distance between the last fixation on the word and the beginning of the word, the sum of all durations of fixations to the word, the mean duration of the fixations to the word, the number of regressions leaving from the word, the sum of durations of regressions initiating from this word, whether a regression initiated from the following word, the sum of durations of the fixations on the word during regression, the maximum pupil diameter, the maximum pupil diameter 0.5-1.5 seconds after the beginning of fixation, the first fixation duration divided by the total number of fixations, the number of words in the sentence this word is in, the title number, and the word number in this title.
 
-Features are in columns, feature vectors in rows. Each assignment is a time sequence of twenty-two dimensional feature vectors. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column: "zero" for Irrelevant, "one" for Relevant, and "two" for Correct. Each example (row) represents a single word. You are asked to return the classification of each read sentence.
-
-The twenty-two features provided are commonly used in psychological studies on eye movement. Not all of them are necessarily relevant in this context. The objective of the challenge is to predict the classification labels (Irrelevant, Relevant, Correct).
-
-Features:
-
-* Line Number 
-* Assignment Number 
-* Fixation Count 
-* Total Fixation Duration 
-* Mean Fixation Duration 
-* First Saccade Length 
-* Last Saccade Length 
-* Previous Fixation Position 
-* Landing Position 
-* Leaving Position 
-* Regression Length 
-* Regression Duration 
-* Pupil Diameter Maximum 
-* Pupil Diameter Lag 
-* Time Protection 
-* Title Number 
-* Word Number 
-* Label
-
-Keywords: Eye Movement, Psychological Studies, Feature Vectors, Classification Labels, Regression Analysis, Psychological Features.
+Keywords: eye movements, classification, feature extraction, psychological studies, regression, numerical features.

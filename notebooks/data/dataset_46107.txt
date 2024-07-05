@@ -1,0 +1,13 @@
+The Tourism Competition Quarterly dataset includes a collection of time series data related to tourism, supplied by various tourism bodies and academics. The dataset comprises three types of series: monthly, quarterly, and yearly, with a total of 366 monthly series, 427 quarterly series, and 518 yearly series. These series represent total tourism numbers at a country level of aggregation, with a few exceptions that represent tourism numbers by purpose of travel at a national level.
+
+A subset of these series was used to evaluate the forecasting performances of methods that utilize explanatory variables. This subset consists of 93 quarterly series and 129 yearly series for which explanatory variables are available.
+
+Each series was split into an estimation sample and a hold-out sample, which was hidden from all co-authors. The hold-out sample consisted of the most recent observations for each series, with the number of observations varying depending on the frequency of the series. For monthly series, the hold-out sample consisted of the 24 most recent observations, while for quarterly data, it was the last 8 observations, and for yearly data, it consisted of the final 4 observations.
+
+Each method was implemented on the estimation sample, and forecasts were produced for the whole of the hold-out sample for each series. The forecasts were then compared to the actual withheld observations.
+
+The dataset was preprocessed by renaming columns, melting the data, dropping nan values, obtaining the date from the starting year, starting quarter, and time step, and defining columns as category and casting date to string and time step to integer.
+
+The dataset features include the identifier of a time series, the value of the time series at a given time step, the reconstructed date of the time series, and the time step on the time series.
+
+Keywords: tourism forecasting, time series data, quarterly data, explanatory variables, estimation sample, hold-out sample.

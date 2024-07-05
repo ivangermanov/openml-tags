@@ -1,27 +1,19 @@
 Swiss Banknote Counterfeit Detection
 
-Tags: Computer Systems, Machine Learning
+Tags: Context
 
-Context:
-This dataset provides an excellent opportunity to test various outlier detection algorithms on a challenging task: identifying genuine and counterfeit banknotes when a significant portion of the data consists of counterfeits.
+Will you be able to identify genuine and counterfeit banknotes, even if half of the data is counterfeit? Perfect for testing different outlier detection algorithms.
 
-Content:
-The dataset comprises two hundred banknotes, evenly divided between genuine and counterfeit notes. Each note is characterized by its physical attributes, along with a label indicating its authenticity.
+The dataset includes information about the shape of the bill, as well as the label. It is comprised of banknotes in total, with an equal number of genuine and counterfeit notes. The attributes include whether a banknote is counterfeit or genuine, as well as various physical characteristics of the bill.
 
-Attributes:
+The physical characteristics of the bill include its length, the width of the left and right edges, the bottom margin width, the top margin width, and the length of the diagonal.
 
-* Authenticity: Whether a banknote is authentic (zero) or counterfeit (one)
-* Bill Length: The length of the banknote in millimeters
-* Left Edge Width: The width of the left edge of the banknote in millimeters
-* Right Edge Width: The width of the right edge of the banknote in millimeters
-* Bottom Margin Width: The width of the bottom margin of the banknote in millimeters
-* Top Margin Width: The width of the top margin of the banknote in millimeters
-* Diagonal Length: The length of the diagonal of the banknote in millimeters
+The original data source is a well-known multivariate statistics textbook.
 
-Original Data Source:
-Multivariate Statistics: A Practical Approach
+Applications
 
-Applications:
-While a classifier may easily distinguish between genuine and counterfeit banknotes, this dataset presents an intriguing challenge for outlier detection methods. Since half of the data consists of counterfeits, traditional outlier detection techniques are likely to fail. Therefore, more robust methods will be required to successfully identify the authentic banknotes amidst the counterfeits.
+While it might be relatively easy for a classifier to decide whether the banknotes are counterfeit or not, what about methods using outlier detection? Classical methods of outlier detection won't work, since half of the data consist of outliers, namely counterfeit bills, so more robust methods will be needed.
 
-Keywords: banknote authentication, outlier detection, machine learning, counterfeit detection, multivariate statistics
+Features: counterfeit status, length, left edge width, right edge width, bottom margin width, top margin width, diagonal length
+
+Keywords: banknote authentication, counterfeit detection, outlier detection, multivariate statistics, robust methods

@@ -1,9 +1,11 @@
-GISette is a handwritten digit recognition problem where the goal is to differentiate between the highly confusable digits four and nine. This dataset is one of five datasets from the NIPS two thousand three feature selection challenge. The digits have been normalized in terms of size and centered within a fixed-size image of twenty-eight by twenty-eight dimensions. 
+**GISette**
 
-The original data underwent modification for the purpose of the feature selection challenge. Specifically, pixels were randomly sampled from the middle top portion of the feature containing the necessary information to distinguish between four and nine, and higher-order features were created as products of these pixels to shift the problem into a higher-dimensional feature space. Furthermore, a number of distractor features referred to as probes having no predictive power were added. The order of the features and patterns was randomized.
+**Tags:** Author, Source, Please cite
 
-Preprocessing involved making the data set available at UCI. Since the labels of the test set were unavailable, the validation set was used as the test set instead. The training data underwent feature-wise scaling to range from negative one to one. Subsequently, the test data underwent scaling based on the same scaling factors applied to the training data.
+GISette is a handwritten digit recognition problem, where the challenge is to separate the highly confusable digits Four and Nine. This dataset is one of five datasets of the NIPS feature selection challenge. The digits have been size-normalized and centered in a fixed-size image of dimension twenty-eight by twenty-eight. The original data were modified for the purpose of the feature selection challenge. In particular, pixels were sampled at random in the middle top part of the feature containing the information necessary to disambiguate Four from Nine, and higher order features were created as products of these pixels to plunge the problem in a higher dimensional feature space. We also added a number of distractor features called probes having no predictive power. The order of the features and patterns were randomized.
 
-The difference between this version and the previous one lies in the fact that the target feature has been converted to a binary format, which is how it should be.
+Preprocessing: The data set is also available at UCI. Because the labels of testing set are not available, here we use the validation set as the testing set. The training data are feature-wisely scaled to a range of minus one to one. Then the testing data are scaled based on the same scaling factors for the training data.
 
-Keywords: GISette, handwritten digit recognition, feature selection challenge, NIPS, normalization, preprocessing, validation set.
+Difference with version one: the target feature is now binary, as it should be.
+
+Keywords: Handwritten digit recognition, Feature selection, NIPS challenge, Digit classification, Image processing.

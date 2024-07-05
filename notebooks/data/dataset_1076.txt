@@ -1,31 +1,17 @@
-**COCOMO NASA 2**
+This dataset contains information on NASA software projects for cost estimation purposes. It includes data from various NASA centers spanning multiple years. The COCOMO (Constructive Cost Model) software cost model is used, which measures effort in calendar months of 152 hours, including both development and management time.
 
-This dataset is part of the PROMISE Software Engineering Repository, made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
+The COCOMO model assumes that effort grows more than linearly with software size, following the formula: months = a * KSLOC^b * c, where 'a' and 'b' are domain-specific parameters, 'KSLOC' is thousand source lines of code, and 'c' is the product of several effort multipliers.
 
-**Title:** COCOMO NASA 2 / Software Cost Estimation
+Effort multipliers include factors such as analyst capability, programmer capability, application experience, use of modern programming practices, software tools, virtual machine experience, language experience, schedule constraints, memory constraints, database size, time constraints, turnaround time, machine volatility, process complexity, and required software reliability.
 
-**Sources:** Ninety-three NASA projects from different centers, collected by Jairus Hihn, Manager SQIP Measurement & Benchmarking Element.
+The dataset contains 93 instances with 24 attributes, including 15 standard COCOMO-I discrete attributes ranging from Very Low to Extra High, 7 project descriptors, a lines of code measure, and the actual effort in person months as the goal field.
 
-**Past Usage:** None with this specific dataset. However, previous work on similar datasets includes "Validation Methods for Calibrating Software Effort Models" and "Feature Subset Selection Can Improve Software Cost Estimation Accuracy".
+The COCOMO model has evolved from COCOMO I to COCOMO II, with changes in how the exponent and effort multipliers are calculated. COCOMO II introduced scale factors and modified some of the effort multipliers.
 
-The COCOMO software cost model measures effort in calendar months of 152 hours, including development and management hours. It assumes that effort grows more than linearly with software size, taking into account various effort multipliers. These multipliers include analyst capability, programmer capability, application experience, modern programming practices, software tools, virtual machine experience, language experience, schedule constraint, main memory constraint, database size, time constraint for CPU, turnaround time, machine volatility, process complexity, and required software reliability.
+The effectiveness of effort predictors can be measured using metrics such as MMRE (Mean Magnitude of Relative Error) and PRED(N) (Percentage of Predictions within N% of actual values). These metrics help assess the accuracy of cost estimation models.
 
-In COCOMO I, the exponent on KSLOC was a single value ranging from 1.05 to 1.2. In COCOMO II, the exponent "b" was divided into a constant, plus the sum of five scale factors modeling issues such as whether the team had built this kind of system before.
+The dataset has no missing attributes and includes a distribution of class values showing the range of development months for the projects.
 
-The effort multipliers fall into three groups: those positively correlated to more effort, those negatively correlated to more effort, and a third group containing schedule information. Giving programmers either too much or too little time to develop a system can be detrimental.
+This data is part of the PROMISE Software Engineering Repository, made available to encourage repeatable, verifiable, refutable, and improvable predictive models of software engineering. Users of this data are encouraged to follow the acknowledgment guidelines posted on the PROMISE repository web page.
 
-**Relevant Information:** The numeric values of the effort multipliers are categorized as very very extra, high, high, nominal, low, low, and very low. Removing attributes can improve performance without increasing the variance in model behavior.
-
-**Number of Instances:** 93
-
-**Number of Attributes:** 24, including 15 standard COCOMO-I discrete attributes, 7 others describing the project, one line of code measure, and one goal field being the actual effort in person months.
-
-**Attribute Information:** Unique ID, project name, category of application, flight or ground system, NASA center, year of development, development mode, COCOMO attributes, equivalent physical 1000 lines of source code, and development effort in months.
-
-**Missing Attributes:** None
-
-**Distribution of Class Values:** Various ranges of development months, from less than 500 to greater than 8000.
-
-**Features:** Record number, project name, category, flight or ground system, NASA center, year, mode, rely, data, complexity, time, storage, virtual, turn, analyst capability, application experience, programmer capability, virtual machine experience, language experience, modern programming practices, software tools, schedule constraint, and equivalent physical KSLOC.
-
-Keywords: COCOMO, software cost estimation, NASA, effort multipliers, predictive models, software engineering.
+Keywords: COCOMO, NASA, software cost estimation, effort multipliers, lines of code, project attributes, MMRE, PRED(N), software engineering repository

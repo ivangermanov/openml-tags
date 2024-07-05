@@ -1,17 +1,15 @@
-Subsampling of the Kick dataset with a specific set of parameters has been performed. The resulting dataset has been generated using a particular source code.
+Name: Kick Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The subsample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to perform stratified sampling.
+Tags: Subsampling of the dataset Kick with seed equals three arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments no stratify equals True
 
-The function first uniformly samples classes from the unique values in the target variable, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and subsets the data accordingly.
+Generated with the following source code:
 
-Next, the function uniformly samples columns if the number of columns exceeds the specified maximum. This is done by randomly selecting column indices and sorting them to ensure consistency.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-If the number of rows exceeds the specified maximum, the function performs stratified sampling using the train-test split function from scikit-learn. This ensures that the resulting dataset has the desired number of rows while maintaining the class distribution.
+First, it samples the classes uniformly, selecting the indices where one of the chosen classes is present. Then, it samples the columns uniformly if required. If the number of rows is greater than the maximum, it stratifies the data accordingly, using the target name and the random state from the seed. 
 
-Finally, the function converts categorical columns to strings and returns a new dataset object with the subsampled data, along with metadata such as the categorical mask and column names.
+Finally, it converts categorical columns to string for OpenML, creates a new dataset with the sampled data, and returns it.
 
-Features of the Kick dataset include Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Submodel, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer, Nationality, Size, and others.
+Features: Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Sub Model, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer, Nationality, Size, Top Three American Name, and others.
 
-Tags: Health, Statistics
-
-Keywords: subsampling, stratified sampling, dataset generation, feature selection, class balancing
+Keywords: dataset subsampling, stratified sampling, data preprocessing, feature selection, random sampling.

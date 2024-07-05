@@ -1,15 +1,17 @@
 Nursery Database
 
-This database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was used during several years in the 1980s when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
+Tags: study, uci
 
-The hierarchical model ranks nursery-school applications according to the following concept structure: Evaluation of Applications for Nursery Schools, which consists of Employment of Parents and Child's Nursery, Family Structure and Financial Standings, and Social and Health Picture of the Family. These concepts are further broken down into more specific categories, including Parents' Occupation, Child's Nursery, Form of the Family, Number of Children, Housing Conditions, Financial Standing of the Family, Social Conditions, and Health Conditions.
+The Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was utilized for several years in the 1980s when there was excessive enrollment in these schools in Ljubljana, Slovenia, and rejected applications frequently required an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family.
 
-Input attributes are printed in lowercase. Besides the target concept (Nursery), the model includes four intermediate concepts: Employment, Family Structure and Financial Standings, Family Structure, and Social and Health Picture of the Family. Every concept is in the original model related to its lower-level descendants by a set of examples.
+The model was developed within an expert system shell for decision making. The hierarchical model ranks nursery school applications according to a complex concept structure, including evaluation of applications, employment of parents and child's nursery, family structure and financial standings, and social and health picture of the family.
 
-The Nursery Database contains examples with the structural information removed, i.e., directly relates Nursery to the eight input attributes: parents, child's nursery, form of the family, number of children, housing conditions, financial standing, social conditions, and health conditions. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
+Input attributes include parents' occupation, child's nursery, form of the family, number of children, housing conditions, financial standing of the family, social conditions, and health conditions. The model includes several intermediate concepts: employment, structure and finances, family structure, and social and health factors.
 
-Class distribution is as follows: not recommended, recommended, very recommended, priority, special priority.
+The Nursery Database contains examples with the structural information removed, directly relating the nursery evaluation to eight input attributes: parents, has nursery, form, children, housing, finance, social, and health. Due to the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
 
-Features include: parents, child's nursery, form of the family, number of children, housing conditions, financial standing, social conditions, health conditions.
+The dataset has no missing attribute values and includes a diverse class distribution. Attribute values encompass various categories for each input, such as usual, pretentious, or great pretentious for parents' occupation; proper, less proper, improper, critical, or very critical for child's nursery; and complete, completed, incomplete, or foster for family form.
 
-Keywords: nursery schools, hierarchical decision model, family structure, financial standing, social and health picture.
+This database offers a comprehensive view of factors considered in nursery school admissions, making it valuable for machine learning applications and decision-making studies.
+
+Keywords: nursery admissions, hierarchical decision model, family structure, social conditions, machine learning, constructive induction, attribute classification

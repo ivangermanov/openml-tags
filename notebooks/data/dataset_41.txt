@@ -1,32 +1,81 @@
 Glass Identification Database
 
-This dataset contains information about different types of glass, including their chemical composition and physical properties. The study of classification of types of glass was motivated by criminological investigation, where glass left at the scene of the crime can be used as evidence if it is correctly identified.
+Tags: study, uci
 
-The dataset consists of two hundred fourteen instances, each described by ten attributes, including an identification number, refractive index, and concentrations of various elements such as sodium, magnesium, aluminum, silicon, potassium, calcium, barium, and iron. The class attribute indicates the type of glass, which can be one of seven categories: building windows float processed, building windows non-float processed, vehicle windows float processed, vehicle windows non-float processed, containers, tableware, or headlamps.
+Source: Unknown
 
-A comparison test was conducted to evaluate the performance of different classification algorithms, including a rule-based system called BEAGLE, the nearest-neighbor algorithm, and discriminant analysis. The results showed that the nearest-neighbor algorithm performed well compared to the rule-based system.
+Please cite:
+Title: Glass Identification Database
 
-The attributes included in the dataset are:
+Sources:
+Creator: Central Research Establishment Home Office Forensic Science Service Aldermaston, Reading, Berkshire
+Donor: Diagnostic Products Corporation
+Date: September, 1987
 
-* Identification number
-* Refractive index
-* Concentration of sodium
-* Concentration of magnesium
-* Concentration of aluminum
-* Concentration of silicon
-* Concentration of potassium
-* Concentration of calcium
-* Concentration of barium
-* Concentration of iron
-* Type of glass
+Past Usage:
+Rule Induction in Forensic Science
+Central Research Establishment Home Office Forensic Science Service Aldermaston, Reading, Berkshire
+General Results: nearest neighbor held its own with respect to the rule-based system
 
-Summary statistics for the attributes include minimum, maximum, mean, standard deviation, and correlation with the class attribute.
+Relevant Information:
+A comparison test was conducted of a rule-based system, BEAGLE, the nearest-neighbor algorithm, and discriminant analysis. BEAGLE is a product available through VRS Consulting, Inc. in Marina Del Ray, CA. In determining whether the glass was a type of "float" glass or not, the following results were obtained (number of incorrect answers):
 
-There are no missing attribute values in the dataset.
+Type of Sample -- BEAGLE -- Nearest Neighbor -- Discriminant Analysis
+Windows that were float processed -- 10 -- 12 -- 21
+Windows that were not float processed -- 19 -- 16 -- 22
 
-Class distribution:
+The study of classification of types of glass was motivated by criminological investigation. At the scene of the crime, the glass left can be used as evidence if it is correctly identified!
 
-* One hundred sixty-three instances are window glass, including eighty-seven float processed and seventy-six non-float processed.
-* Fifty-one instances are non-window glass, including thirteen containers, nine tableware, and twenty-nine headlamps.
+Number of Instances: 214
+Number of Attributes: 10 (including an Id number) plus the class attribute -- all attributes are continuously valued
 
-Keywords: glass identification, criminological investigation, chemical composition, physical properties, classification algorithms, BEAGLE, nearest-neighbor algorithm, discriminant analysis.
+Attribute Information:
+Id number
+RI: refractive index
+Na: Sodium (unit measurement: weight percent in corresponding oxide, as are attributes 4-10)
+Mg: Magnesium
+Al: Aluminum
+Si: Silicon
+K: Potassium
+Ca: Calcium
+Ba: Barium
+Fe: Iron
+Type of glass: (class attribute)
+- building windows float processed
+- building windows non float processed
+- vehicle windows float processed
+- vehicle windows non float processed (none in this database)
+- containers
+- tableware
+- headlamps
+
+Missing Attribute Values: None
+
+Summary Statistics:
+Attribute: Min Max Mean SD Correlation with class
+RI: 1.5112 1.5339 1.5184 0.0030 -0.1642
+Na: 10.73 17.38 13.4079 0.8166 0.5030
+Mg: 0 4.49 2.6845 1.4424 -0.7447
+Al: 0.29 3.5 1.4449 0.4993 0.5988
+Si: 69.81 75.41 72.6509 0.7745 0.1515
+K: 0 6.21 0.4971 0.6522 -0.0100
+Ca: 5.43 16.19 8.9570 1.4232 0.0007
+Ba: 0 3.15 0.1750 0.4972 0.5751
+Fe: 0 0.51 0.0570 0.0974 -0.1879
+
+Class Distribution: (out of 214 total instances)
+163 Window glass (building windows and vehicle windows)
+87 float processed
+70 building windows
+17 vehicle windows
+76 non float processed
+76 building windows
+0 vehicle windows
+51 Non window glass
+13 containers
+9 tableware
+29 headlamps
+
+Features: RI, Na, Mg, Al, Si, K, Ca, Ba, Fe, Type
+
+Keywords: glass identification, forensic science, criminology, chemical composition, window classification

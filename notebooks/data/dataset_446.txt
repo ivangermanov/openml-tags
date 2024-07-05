@@ -1,27 +1,28 @@
-Cushing's Syndrome 
-
-Data from this dataset relate to patients suffering from Cushing's Syndrome. The data file contains four columns, including the label of the patient, Tetrahydrocortisone levels, Pregnanetriol levels, and the type of disease. However, the type of disease for the last six patients should be considered unknown.
-
-Synthetic Two-Class Problem 
-
-This dataset consists of two real-valued coordinates and a class label that is either zero or one. The data is divided into a training set and a test set.
-
-Viruses 
-
-This dataset comprises sixty-one viruses that affect various crops, including tobacco, tomatoes, and cucumbers. Each virus is characterized by eighteen measurements of the number of amino acid residues per molecule of coat protein. The data file contains sixty-one rows of eighteen counts. A separate file contains thirty-eight rows corresponding to the distinct Tobamoviruses.
-
-Leptograpsus Crabs 
-
-This dataset describes the morphology of fifty rock crabs of each sex of each of two color forms. The data file contains information about the species, sex, and four physical characteristics: frontal lip of carapace, rear width of carapace, length along the midline of carapace, and body depth.
-
-Forensic Glass 
-
-This dataset originates from forensic testing of glass fragments. Each sample is characterized by its refractive index and the percentage weights of eight oxides: sodium, magnesium, aluminum, silicon, potassium, calcium, barium, and iron. The data file contains information about two hundred fourteen glass fragments, each assigned to one of seven types.
-
-Diabetes in Pima Indians 
-
-This dataset describes a population of women of Pima Indian heritage living near Phoenix, Arizona, who were tested for diabetes according to World Health Organization criteria. The data file contains information about the number of pregnancies, plasma glucose concentration, diastolic blood pressure, triceps skin fold thickness, serum insulin, body mass index, diabetes pedigree function, and age in years.
-
+Name: prnn_crabs
 Tags: study_123, study_41, study_88
 
-Keywords: Cushing's Syndrome, Synthetic Two-Class Problem, Viruses, Leptograpsus Crabs, Forensic Glass, Diabetes in Pima Indians, Pattern Recognition, Neural Networks.
+Source: Unknown - Date unknown
+
+Please cite: Datasets for 'Pattern Recognition and Neural Networks' by Cambridge University Press ISBN
+
+The background to the datasets is described in section; this file relates the computer-readable files to that description.
+
+Cushing's syndrome:
+Data from tables. Data file Cushings.dat has four columns: Label of the patient, Tetrhydrocortisone (mg/24hr), Pregnanetriol (mg/24hr), and Type. The type of the last six patients (u to u) should be regarded as unknown. (The code 'o' indicates 'other').
+
+Synthetic two-class problem:
+This has two real-valued coordinates (xs and ys) and a class (xc) which is or. Data file synth.tr has rows of the training set. synth.te has rows of the test set (not used here).
+
+Viruses:
+This is a dataset on viruses with rod-shaped particles affecting various crops (tobacco, tomato, cucumber and others). There are measurements on each virus, the number of amino acid residues per molecule of coat protein. Data file viruses.dat has rows of counts. virus.dat has rows corresponding to the distinct Tobamoviruses. The whole dataset is in order Hordeviruses, Tobraviruses, Tobamoviruses and 'furoviruses'.
+
+Leptograpsus crabs:
+Data on the morphology of rock crabs of genus Leptograpsus. There are specimens of each sex of each of two colour forms. Data file crabs.dat has rows with species (coded B for blue form or O for orange form), sex (coded M or F), index within each group, frontal lip of carapace (mm), rear width of carapace (mm), length along the midline of carapace (mm), maximum width of carapace (mm), and body depth (mm).
+
+Forensic glass:
+This example comes from forensic testing of glass collected on fragments of glass. Data file fglass.dat has rows with data for a single glass fragment, including refractive index, percentage weight of various oxides, and type coded to. The type codes include window float glass, window non-float glass, vehicle glass, containers, tableware, and vehicle headlamp glass.
+
+Diabetes in Pima Indians:
+A population of women who were at least years old, of Pima Indian heritage and living near Phoenix, Arizona, was tested for diabetes according to World Health Organization criteria. The data files have rows containing information on number of pregnancies, plasma glucose concentration, diastolic blood pressure, triceps skin fold thickness, serum insulin, body mass index, diabetes pedigree function, age, and type (No / Yes).
+
+Keywords: pattern recognition, neural networks, datasets, Cushing's syndrome, synthetic classification, viruses, Leptograpsus crabs, forensic glass, Pima Indian diabetes

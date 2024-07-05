@@ -1,26 +1,18 @@
+Audiology Dataset
+Tags: study, study, study, uci
+
+Source: UCI
+
+Please cite: Protos: An Exemplar-Based Learning Apprentice. In the Proceedings of the International Workshop on Machine Learning, Irvine, CA: Morgan Kaufmann
+
 Audiology Database
 
-This database is a standardized version of the original audiology database. The non-standard set of attributes have been converted to a standard set of attributes according to the rules that follow.
+This database is a standardized version of the original audiology database. The non-standard set of attributes have been converted to a standard set of attributes according to specific rules. Each property that appears anywhere in the original data or test file has been represented as a separate attribute in this file. A property such as age greater than sixty is represented as a boolean attribute with values false and true. In most cases, a property of the form x(y) is represented as a discrete attribute x() whose possible values are the various y's; air() is an example. There are two exceptions: when only one value of y appears anywhere, for example static(normal), in this case, x y appears as a boolean attribute; and when one case can have two or more values of x, for example history. All possible values of history are treated as separate boolean attributes.
 
-Each property that appears anywhere in the original data or test file has been represented as a separate attribute in this file. A property such as Age Greater Than Sixty is represented as a boolean attribute with values False and True. In most cases, a property of the form X(Y) is represented as a discrete attribute X whose possible values are the various Y's; Air is an example.
+Since boolean attributes only appear as positive conditions, each boolean attribute is assumed to be false unless noted as true. The value of multi-value discrete attributes is taken as unknown ("?") unless a value is specified. The original case identifications have been added as a unique identifier attribute. In the original data file, one case has a repeated specification of o ar c(normal); another case has repeated specification of speech(normal) and conflicting values air(moderate) and air(mild). No other problems with the original data were noted.
 
-There are two exceptions: when only one value of Y appears anywhere, for example Static Normal. In this case, X_Y appears as a boolean attribute. When one case can have two or more values of X, for example History. All possible values of History are treated as separate boolean attributes.
+The dataset includes various attributes related to audiology tests and patient history. These include air conduction results, bone conduction results, acoustic reflex thresholds, speech recognition scores, tympanometry results, and patient-reported symptoms. The class attribute represents different types of hearing disorders or conditions.
 
-Since boolean attributes only appear as positive conditions, each boolean attribute is assumed to be False unless noted as True. The value of multi-value discrete attributes taken as Unknown unless a value is specified.
+This standardized version of the audiology database aims to provide a more consistent and easily interpretable set of attributes for machine learning applications in the field of audiology. It allows for the analysis and classification of various hearing disorders based on a comprehensive set of audiological test results and patient history data.
 
-The original case identifications, Patient One to Patient Two Hundred in the data file and Test One to Test Twenty-Six in the test file, have been added as a unique identifier attribute.
-
-Attribute Information:
-
-Age Greater Than Sixty: False, True.
-Air: Mild, Moderate, Severe, Normal, Profound.
-Air Bone Gap: False, True.
-AR C: Normal, Elevated, Absent.
-AR U: Normal, Absent, Elevated.
-Bone: Mild, Moderate, Normal, Unmeasured.
-Bone Abnormal: False, True.
-BSER: Normal, Degraded.
-
-Class: Cochlear Unknown, Mixed Cochlear Age Fixation, Possible Central, Mixed Cochlear Age Otitis Media, Mixed Possible Noise OM, Cochlear Age, Normal Ear, Cochlear Possible Noise, Cochlear Age and Noise, Acoustic Neuroma, Mixed Cochlear Unknown Ser OM, Conductive Discontinuity, Retrocochlear Unknown, Conductive Fixation, Bell's Palsy, Cochlear Noise and Heredity, Mixed Cochlear Unknown Fixation, Otitis Media, Possible Meniere's, Possible Brainstem Disorder, Cochlear Age Plus Possible Meniere's, Mixed Cochlear Age S OM, Mixed Cochlear Unknown Discontinuity, Mixed Possible Central OM.
-
-Keywords: Audiology, Machine Learning, Medicine, Standardized Database, Boolean Attributes, Discrete Attributes.
+Keywords: audiology, hearing disorders, machine learning, standardized database, audiological tests

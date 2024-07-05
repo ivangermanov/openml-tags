@@ -1,9 +1,15 @@
-Road Safety Seed One Dataset 
+Name: Road Safety Seed One
 
-This dataset is a subsampled version of the Road Safety dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniform sampling of classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
+Tags: Subsampling of the dataset Road Safety with seed equals one
 
-The dataset has been subsampled using a seed value of one, with a maximum number of rows set to two thousand. The number of columns has been limited to one hundred, and the number of classes has been capped at ten. Additionally, the stratification option has been set to true, ensuring that the sampled data maintains the original class distribution.
+This dataset is a subsample of the original Road Safety dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-The dataset features a range of variables related to road safety, including vehicle information, driver details, accident circumstances, and location-specific data. These features include vehicle type, vehicle maneuver, location, hit object, driver age, engine capacity, propulsion code, police force, and casualty details.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by uniformly sampling the unique classes present in the dataset, with a maximum limit of ten classes. The selected classes were then used to filter the dataset, retaining only the rows where one of these classes was present.
 
-Machine Learning, Mathematics
+Next, the columns of the dataset were uniformly sampled, with a maximum limit of one hundred columns. The selected columns were then used to create a new dataset with the reduced number of columns.
+
+Finally, the rows of the dataset were uniformly sampled, with a maximum limit of two thousand rows. This was done using stratified sampling, which ensures that the resulting dataset maintains the same class distribution as the original dataset.
+
+The resulting dataset consists of various features, including vehicle information, driver details, location data, and casualty information. These features are essential for analyzing and understanding road safety patterns and trends.
+
+Keywords: Road Safety, Subsampling, Dataset, Stratified Sampling, Uniform Sampling

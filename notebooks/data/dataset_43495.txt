@@ -1,30 +1,31 @@
-COVID-19 Mexico Clean Order by States 
+COVID-19 Mexico Clean Order by States
 
-Tags: Computer Systems, Machine Learning 
+Tags: Context
 
-Context 
-The data obtained from Mexico's General Direction of Epidemiology contains multiple information on the current pandemic situation. However, these data are saturated with features that may not be very useful in a predictive analysis. Due to this, I decided to clean and format the original data and generate a dataset that groups confirmed, deceased, recovered, and active cases by State, Municipality, and Date. This is very useful if you want to generate geographically specific models.
+The data obtained from Mexico's General Direction of Epidemiology contains a vast amount of information on the current pandemic situation. However, these data are saturated with features that may not be very useful in a predictive analysis. Due to this, I decided to clean and format the original data and generate a dataset that groups confirmed, dead, recovered, and active cases by State, Municipality, and Date. This is very useful if you want to generate geographically specific models.
 
-Content 
-The dataset contains the COVID-19 cases columns (positive, deceased, recovered, and active) that are counted by state and municipality. For instance, State, Municipality, Date, Deceased, Confirmed, Recovered, Active - Ciudad de Mexico, Iztapalapa, date, deaths, confirmed, recovered, active - Ciudad de Mexico, Iztapalapa, date, deaths, confirmed, recovered, active. 
+Content
 
-Would you like to see the data cleaning notebook? It is available on GitHub.
+The dataset contains the COVID-19 cases columns (positive, dead, recovered, and active) that are counted by state and municipality. For instance, State, Municipality, Date, Deaths, Confirmed, Recovered, and Active. Ciudad de Mexico, Iztapalapa, 2020-07-18, 1, 42, 0, 41. Ciudad de Mexico, Iztapalapa, 2020-07-19, 0, 14, 0, 14. Ciudad de Mexico, Iztapalapa, 2020-07-20, 0, 41, 0, 41.
 
-Classification Criteria 
-Recovered Cases: If the patient is not deceased and it has been more than fifteen days, then they are considered recovered. Active Cases: If the patient is not recovered and is not deceased, then they are active.
+Would you like to see the data cleaning notebook? You can check it in my Github repository.
 
-Time Lapse 
-The first documented case is from January. The dataset will be updated daily, adding new cases.
+Classification Criteria
 
-Acknowledgments 
-For this project, the data are obtained from the official website of the Government of Mexico.
+Recovered cases: If the patient is not dead and it has been more than fifteen days, then he is considered as recovered. Active cases: If the patient isn't recovered and isn't dead, then he is active.
 
-Data Dictionary is also available online.
+Time Lapse
 
-Differences in Results 
-According to the official results obtained from the Government's website, the main difference between the official data and this dataset is in the recovered cases. This is because the Mexican Government only considers outpatient cases when counting recovered cases. This dataset considers both outpatient and inpatient cases when counting recovered individuals. The second difference is some rows that contained nonsensical information; these were eliminated.
+The first documented case is on a specific date. The dataset will be updated every day, adding new cases.
 
-Features 
-State, Municipality, Date, Deceased, Confirmed, Recovered, Active 
+Acknowledgements
 
-Keywords: COVID-19, Mexico, Pandemic, Predictive Analysis, Geographically Specific Models, Data Cleaning
+For this project, the data are obtained from the official URL of the government of Mexico, whose data source is the General Direction of Epidemiology: Coronavirus Data. Data Dictionary.
+
+Differences in Results
+
+According to the official results obtained from the government's website, the main difference between the official data and this dataset is in the recovered cases. This is because the Mexican government only considers outpatient cases when counting recovered cases. This dataset considers outpatient and inpatient cases when counting recovered people. The second difference is some rows that contained nonsense information (I think this was a data collection error by the institution), these were eliminated.
+
+Features: State, Municipality, Date, Deaths, Confirmed, Recovered, Active
+
+Keywords: COVID-19, Mexico, Clean Data, Geographically Specific Models, Predictive Analysis, Pandemic Situation.

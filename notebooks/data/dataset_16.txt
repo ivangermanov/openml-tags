@@ -1,17 +1,24 @@
-The Multiple Features Dataset: Karhunen is one of six datasets describing features of handwritten numerals extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character. 
+Multiple Features Dataset: Karhunen
+Tags: OpenML-CC, OpenML, study, uci
 
-This dataset consists of two thousand instances, with two hundred instances per class, digitized in binary images. 
+This dataset is part of a collection of six datasets describing features of handwritten numerals (zero to nine) extracted from Dutch utility maps. The patterns across different datasets correspond to the same original characters. A total of two thousand instances have been digitized in binary images, with two hundred instances per class.
 
-The attribute information represents sixty-four descriptors from the Karhunen-Loève Transform, a linear transformation corresponding to the projection of the images on the eigenvectors of a covariance matrix.
+The attributes represent descriptors from the Karhunen-Loeve Transform, a linear transform that corresponds to the projection of the images on the eigenvectors of a covariant matrix. This particular dataset focuses on the Karhunen-Love coefficients.
 
-A relevant paper uses a slightly different version of the database, discussing handwritten digit recognition by combined classifiers. Another paper uses the database as is, reviewing statistical pattern recognition.
+The complete Multiple Features Dataset consists of six feature sets:
+- Fourier coefficients of the character shapes
+- Profile correlations
+- Karhunen-Love coefficients
+- Pixel averages in two by three windows
+- Zernike moments
+- Morphological features
 
-The dataset has six files, each containing two thousand patterns stored in ASCII on two thousand lines. The first two hundred patterns are of class zero, followed by sets of two hundred patterns for each of the classes one through nine. Corresponding patterns in different feature sets correspond to the same original character. 
+In each file, the two thousand patterns are stored in ASCII format, with each pattern on a separate line. The patterns are grouped by class, with the first two hundred patterns belonging to class 'zero', followed by sets of two hundred patterns for each of the classes 'one' through 'nine'.
 
-The source image dataset is lost. However, using the pixel dataset, sampled versions of the original images may be obtained. 
+It's worth noting that while the source image dataset has been lost, sampled versions of the original images may be obtained using the pixel dataset, resulting in images of fifteen by sixteen pixels.
 
-Has Missing Values? No.
+This dataset has been used in various studies and papers related to handwritten digit recognition and statistical pattern recognition. It has been particularly useful in research comparing combined classifiers and reviewing statistical pattern recognition techniques.
 
-Additional Variable Information: Six files contain different feature sets, including Fourier coefficients of the character shapes, profile correlations, Karhunen-Loève coefficients, pixel averages in two-by-three windows, Zernike moments, and morphological features.
+The dataset does not contain any missing values, making it suitable for a wide range of machine learning applications and studies.
 
-Keywords: handwritten numerals, Karhunen-Loève Transform, covariance matrix, digit recognition, statistical pattern recognition, ASCII, pixel dataset.
+Keywords: handwritten numerals, feature extraction, Karhunen-Loeve Transform, pattern recognition, digit classification, utility maps, multiple features

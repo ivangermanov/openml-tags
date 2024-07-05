@@ -1,25 +1,11 @@
-The COVID-19 pandemic has placed an unprecedented strain on health systems, with rapidly increasing demand for healthcare in hospitals and intensive care units worldwide. As the pandemic escalates, determining the resulting needs for healthcare resources, including beds, staff, and equipment, has become a key priority for many countries. Projecting future demand requires estimates of how long patients with COVID-19 need different levels of hospital care.
+COVID-19 Hospitals Treatment Plan Tags: Context
 
-While healthcare management has various use cases for utilizing data science, patient length of stay is one critical parameter to observe and predict if one wants to improve the efficiency of healthcare management in a hospital. This parameter helps hospitals to identify patients of high length of stay risk, namely those who will stay longer, at the time of admission. Once identified, patients with high length of stay risk can have their treatment plan optimized to minimize length of stay and lower the chance of staff and visitor infection. Additionally, prior knowledge of length of stay can aid in logistics such as room and bed allocation planning.
+The COVID-19 pandemic has placed an unprecedented strain on health systems, with rapidly increasing demand for healthcare in hospitals and intensive care units worldwide. As the pandemic escalates, determining the resulting needs for healthcare resources, such as beds, staff, and equipment, has become a key priority for many countries. Projecting future demand requires estimates of how long patients with COVID-19 need different levels of hospital care. While healthcare management has various use cases for using data science, patient length of stay is one critical parameter to observe and predict if one wants to improve the efficiency of healthcare management in a hospital. This parameter helps hospitals to identify patients of high length of stay risk, who will stay longer, at the time of admission. Once identified, patients with high length of stay risk can have their treatment plan optimized to minimize length of stay and lower the chance of staff and visitor infection. Also, prior knowledge of length of stay can aid in logistics such as room and bed allocation planning.
 
-The problem is to manage the functioning of hospitals in a professional and optimal manner. The task is to accurately predict the length of stay for each patient on a case-by-case basis, so that hospitals can use this information for optimal resource allocation and better functioning.
+The problem is to manage the functioning of hospitals in a professional and optimal manner. The task is to accurately predict the length of stay for each patient on a case-by-case basis so that hospitals can use this information for optimal resource allocation and better functioning. The length of stay is divided into eleven different classes ranging from zero to ten days to more than one hundred days.
 
-The length of stay is divided into eleven different classes, ranging from zero to ten days to more than one hundred days.
+Data: host_train.csv File containing features related to patient, hospital, and length of stay on a case-by-case basis. For each record in the dataset, the following is provided: case ID, hospital, hospital type, hospital city, hospital region, available extra rooms in hospital, department, ward type, ward facility, bed grade, patient ID, city code patient, type of admission, illness severity, patient visitors, age, admission deposit, and stay days (target).
 
-The dataset used for this task is called Host Train, which contains features related to patients, hospitals, and length of stay on a case-by-case basis. For each record in the dataset, the following information is provided:
+The goal is to predict the length of stay for each patient, interpret the best models, and mine influence factors in length of stay risk.
 
-* Case ID
-* Hospital details, including type and location
-* Availability of extra rooms in the hospital
-* Department overseeing the case
-* Ward type and facility
-* Condition of bed in the ward
-* Patient details, including ID, city code, and age category
-* Type of admission and deposit made at the time of admission
-* Severity of illness recorded at the time of admission
-* Number of patient visitors
-* Target variable: length of stay in days
-
-The goal is to develop a machine learning model that can accurately predict the length of stay for each patient, and interpret the results to identify the most influential factors contributing to length of stay risk.
-
-Keywords: COVID-19, hospital management, length of stay, resource allocation, data science, machine learning, healthcare management.
+Keywords: COVID-19, hospitals, treatment plan, length of stay, patient risk, resource allocation, healthcare management.

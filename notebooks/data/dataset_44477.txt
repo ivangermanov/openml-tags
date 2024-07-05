@@ -1,15 +1,18 @@
-Machine Learning, Mathematics 
+Name: KDD Cup 09 Appetency Seed Four
 
-Subsampling of the dataset KDD Cup Nine Appetency with a specific seed value 
+Tags: Subsampling of the dataset KDD Cup 09 Appetency
 
-This dataset is a subsampled version of the original KDD Cup Nine Appetency dataset. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. 
+Generated with the following source code:
 
-The class sampling step ensures that the number of unique classes does not exceed a specified maximum. This is achieved by selecting a specified number of classes randomly, with probabilities proportional to their frequency in the original dataset. 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. The function uses random sampling to select the desired number of classes, columns, and rows from the original dataset.
 
-Next, the column sampling step reduces the number of features to a specified maximum. This is done by randomly selecting a specified number of column indices without replacement. The corresponding feature columns are then retained in the subsampled dataset.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset.
 
-Finally, the row sampling step reduces the number of samples to a specified maximum while maintaining the class distribution. This is achieved using stratified sampling, which ensures that the proportion of each class remains similar to that in the original dataset.
+Next, the function uniformly samples columns from the subsetted dataset if the number of columns exceeds the specified maximum. It then selects the desired number of columns and uses these columns to subset the dataset further.
 
-Features retained in this subsampled dataset include Appetency, among others.
+Finally, the function stratifies the dataset according to the target variable and samples the desired number of rows using train test split. The resulting dataset is then returned.
 
-Keywords: Subsampling, Machine Learning, KDD Cup Nine Appetency, Stratified Sampling, Class Distribution
+Features: 
+Var Six, Var Ten, Var Twelve, Var Sixteen, Var Twenty Two, Var Twenty Four, Var Twenty Six, Var Thirty, Var Thirty Three, Var Thirty Seven, Var Thirty Eight, Var Forty, Var Forty Three, Var Forty Six, Var Fifty, Var Fifty Four, Var Sixty, Var Sixty Four, Var Sixty Six, Var Sixty Eight, Var Sixty Nine, Var Seventy One, Var Seventy Four, Var Seventy Seven, Var Eighty, Var Eighty Two, Var Eighty Five, Var Eighty Six, Var Eighty Eight, Var Ninety, Var Ninety One, Var Ninety Three, Var Ninety Four, Var Ninety Five, Var Ninety Six, Var Ninety Nine, Var One Hundred, Appetency
+
+Keywords: Subsampling, Dataset, Random Sampling, Stratification, Feature Selection

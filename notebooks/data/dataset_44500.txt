@@ -1,9 +1,13 @@
-Machine learning dataset credit-g, which has been subjected to subsampling, with a specific set of parameters used during the process. The subsampling operation involved setting a fixed seed value, which ensured reproducibility, and limiting the number of rows and columns to certain maximum values.
+Credit-G Dataset Subsampling with Seed Two
 
-The dataset originally had a larger number of classes, but this was reduced to a more manageable number through a process of uniform sampling, with the probability of selection being weighted according to the frequency of each class. Similarly, the columns were also uniformly sampled, with the goal of retaining a representative subset.
+This dataset is a subsample of the credit-g dataset, generated with a seed of two. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size. The resulting dataset has a maximum of two thousand rows, one hundred columns, and ten classes.
 
-Stratification played an important role in the subsampling process, particularly when selecting the desired number of rows. This involved splitting the data into subsets based on the target variable, and then applying a uniform sampling strategy within each subset. The resulting dataset consisted of a carefully chosen subset of the original data, with the categorical variables converted to string format to facilitate further analysis.
+The subsampling process began by selecting classes from the original dataset. If the number of unique classes exceeded ten, a random sample of ten classes was chosen, with the probability of selection proportional to the value counts of each class. The indices where these selected classes were present were then used to subset the data.
 
-Features included in the dataset are checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, and class.
+Next, the columns were uniformly sampled if the number of columns exceeded one hundred. A random sample of one hundred column indices was chosen, and the corresponding columns were selected. The column indices were sorted to maintain the original column order.
 
-Keywords: machine learning, dataset, subsampling, stratification, uniform sampling, categorical variables.
+Finally, if the number of rows exceeded two thousand, the data was stratified and split using the train test split function from scikit-learn. The stratification was based on the target variable, and the random state was set to the seed value of two.
+
+The resulting dataset contains the following features: checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, and class.
+
+Keywords: credit-g dataset, subsampling, stratification, feature selection, class sampling, column sampling.

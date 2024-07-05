@@ -1,13 +1,12 @@
-This dataset, known as Higgs, belongs to the classification on numerical features benchmark. It is a smaller version of the original dataset, containing one million rows.
+Higgs 
+Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
 
-The Higgs dataset is related to the detection of the Higgs boson in high-energy physics experiments. The data has been produced using Monte Carlo simulations.
+This is a smaller version of the original dataset, containing a large number of rows. The dataset is related to Higgs Boson detection data, which has been produced using Monte Carlo simulations. The first twenty-one features are kinematic properties measured by the particle detectors in the accelerator. These features include properties such as lepton momentum, lepton direction, and missing energy. The last seven features are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features.
 
-The dataset consists of twenty-eight features, divided into two categories. The first twenty-one features represent kinematic properties measured by the particle detectors in the accelerator. These include properties related to leptons, jets, and missing energy.
+The dataset has a class label, which is categorical, not numeric. The class label is either one for signal or zero for background. The dataset is divided into two parts, with the last part used as a test set.
 
-The remaining seven features are high-level features derived by physicists to help discriminate between the two classes. These features are based on the first twenty-one features and include properties related to masses of different particles.
+The dataset contains a total of twenty-eight features. The first twenty-one features are low-level features, which are kinematic properties measured by the particle detectors. The last seven features are high-level features derived by physicists. These features are designed to help discriminate between the two classes.
 
-The goal of this dataset is to classify events into two categories: signal and background. The signal category corresponds to the presence of the Higgs boson, while the background category corresponds to other types of interactions.
+The dataset is related to the search for exotic particles in high-energy physics using deep learning. The dataset is useful for testing the performance of deep learning models on classification tasks involving numerical features.
 
-Deep learning methods can be applied to this dataset to automatically learn relevant features and improve the classification performance.
-
-Keywords: Higgs boson, particle physics, machine learning, classification, numerical features.
+Keywords: Higgs Boson, particle physics, deep learning, classification, numerical features.

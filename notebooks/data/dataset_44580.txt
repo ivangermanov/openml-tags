@@ -1,15 +1,11 @@
-Diabetes One Thirty US Seed Two 
+Diabetes One Thirty US Seed Two Dataset
 
-This dataset is a subsampled version of the original Diabetes One Thirty US dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
+This dataset is a subsample of the Diabetes One Thirty US dataset, generated with a seed of two. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-The subsampling process began by selecting a subset of classes from the original dataset. This was done by choosing a specified number of unique classes from the target variable, ensuring that the selection was representative of the overall class distribution. The indices corresponding to these selected classes were then used to filter the dataset, reducing its size while preserving the class balance.
+The dataset was subsampled to have a maximum of ten classes, one hundred columns, and two thousand rows. The subsampling process was stratified to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-Next, the dataset underwent column sampling, where a specified number of columns were randomly selected from the original feature set. This step reduced the dimensionality of the dataset, making it more manageable for analysis.
+The dataset features include patient information such as race, gender, age, weight, and admission details. It also includes medical information such as laboratory procedures, medications, and diagnoses. Additionally, the dataset contains information about the patient's medical history, including previous hospitalizations and medications.
 
-Finally, row sampling was performed to further reduce the dataset size. This step involved splitting the dataset into training and testing sets, ensuring that the class balance was maintained throughout the process.
+The dataset was generated using a Python script that utilized the NumPy and Pandas libraries. The script employed random sampling to select the classes, columns, and rows, ensuring that the resulting dataset was representative of the original dataset.
 
-The resulting dataset consists of a subset of features, including patient demographics, medical history, laboratory results, and medication information. These features are intended to support machine learning models focused on predicting patient outcomes, such as readmission rates, based on their medical profiles.
-
-Machine Learning, Mathematics 
-
-Keywords: Diabetes, Subsampling, Machine Learning, Class Balance, Dimensionality Reduction, Feature Selection, Patient Outcomes
+Keywords: Diabetes, Subsampling, Stratified Sampling, Patient Information, Medical History

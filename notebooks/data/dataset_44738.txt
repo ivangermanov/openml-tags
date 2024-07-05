@@ -1,42 +1,15 @@
-Subsampling of the dataset Robert with seed equal to zero arguments number rows two thousand arguments number columns one hundred arguments number classes ten arguments no stratify equals True.
+Name: Robert Dataset Subsampling with Seed Zero
 
-Generated with the following source code:
+Tags: Subsampling of the Robert dataset with seed equal to zero, generated with the following source code:
 
-def subsample(self, seed: int, number_rows_max: int, number_columns_max: int, number_classes_max: int, stratified: bool):
-    random_number_generator = numpy.random.default_rng(seed)
-    x equals self.x
-    y equals self.y
-    
-    Uniformly sample classes equals y unique values
-    if length of classes greater than number classes max:
-        value counts equals y value counts
-        selected classes equals random number generator choice classes size number classes max replace false probability value counts divided by sum value counts
-        
-        Select the indices where one of these classes is present
-        indices equals y index y is in selected classes
-        x equals x iloc indices
-        y equals y iloc indices
-        
-    Uniformly sample columns if required
-    if length of x columns greater than number columns max:
-        column indices equals random number generator choice list range length x columns size number columns max replace false
-        sorted column indices equals sorted column indices
-        selected columns equals list x columns sorted column indices
-        x equals x selected columns
-    else:
-        sorted column indices equals list range length x columns
-        
-    if length of x greater than number rows max:
-        Target name equals y name
-        data equals pandas concatenate x and y along columns axis
-        _, subset equals train test split data test size number rows max stratify data target name shuffle true random state seed
-        x equals subset drop target name along columns axis
-        y equals subset target name
-    
-    Categorical mask equals list self categorical mask i for i in sorted column indices
-    columns equals list x columns
-    return Dataset dataset self dataset x x y y categorical mask categorical mask columns columns
+This function subsamples the Robert dataset with a specified seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified sampling option. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
 
-Features: twenty, thirty nine, sixty, one eighteen, one fifty eight, two zero three, two forty, two ninety two, three fifty, five twenty four,...
+The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the dataset accordingly.
 
-Keywords: subsampling, machine learning, statistics, dataset, stratification
+Next, the function uniformly samples columns from the filtered dataset, ensuring that the number of columns does not exceed the maximum allowed. If the number of rows in the filtered dataset exceeds the maximum allowed, the function stratifies the dataset according to the target variable and samples a subset of rows.
+
+Finally, the function converts categorical columns to string format and returns a new dataset with the subsampled data, categorical mask, and column names.
+
+Features: (omitted due to unreadability)
+
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row sampling, categorical conversion.

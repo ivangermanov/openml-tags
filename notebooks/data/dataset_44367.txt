@@ -1,51 +1,13 @@
-Wine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Wine Dataset Subsample with Seed Zero
 
-Tags: Subsampling of the dataset Wine with seed equals zero arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+Tags: Subsampling of the Wine dataset with seed equal to zero, generated with specific arguments for number of rows, number of columns, number of classes, and stratification.
 
-Generated with the following source code:
+This dataset is a subsample of the original Wine dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes are present in the resulting subsample. The number of classes was limited to a maximum, and the classes were selected based on their frequency in the original dataset.
 
-def subsample(self, seed, number rows maximum equals two thousand, number columns maximum equals one hundred, number classes maximum equals ten, stratified equals true) -> Dataset:
-random number generator equals numpy random default random generator seed
-x equals self x
-y equals self y
+The subsample also involved uniformly sampling columns from the original dataset, ensuring that the selected columns are representative of the original dataset. The number of columns was limited to a maximum, and the columns were selected randomly.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes maximum:
-value counts equals y value counts
-selected classes equals random number generator choice classes size equals number classes maximum replace equals false probability equals value counts divided by sum of value counts
-Select the indices where one of these classes is present 
-index equals y index y is in selected classes
-x equals x iloc index
-y equals y iloc index
+The resulting subsample has a specific number of rows, which was achieved through stratified sampling. This means that the subsample has a balanced representation of the different classes, ensuring that the dataset is suitable for machine learning tasks.
 
-Uniformly sample columns if required
-if length of x columns is greater than number columns maximum:
-column indexes equals random number generator choice list range length of x columns size equals number columns maximum replace equals false
-sorted column indexes equals sorted column indexes
-selected columns equals list x columns sorted column indexes
-x equals x selected columns
-else:
-sorted column indexes equals list range length of x columns
+The dataset features include various characteristics of wine, such as acidity, sugar content, and sulfur dioxide levels.
 
-if length of x is greater than number rows maximum:
-Stratify accordingly
-target name equals y name
-data equals pandas concatenate x and y axis equals columns
-_, subset equals train test split data test size equals number rows maximum stratify equals data target name shuffle equals true random state equals seed
-x equals subset drop target name axis equals columns
-y equals subset target name
-
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list self categorical mask i for i in sorted column indexes
-columns equals list x columns
-return Dataset 
-Technically this is not the same but it's where it was derived from 
-dataset equals self dataset
-x equals x
-y equals y
-categorical mask equals categorical mask
-columns equals columns
-
-Features: fixed acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol, quality
-
-Keywords: subsampling, dataset, wine, stratification, sampling, machine learning
+Keywords: Wine dataset, subsampling, stratification, machine learning, dataset characteristics.

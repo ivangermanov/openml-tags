@@ -1,58 +1,22 @@
 **German Credit Dataset**
 
-This dataset classifies individuals described by a set of attributes as good or bad credit risks. The dataset comes with a cost matrix, which assigns different penalties for misclassification: 
-
-Good | Bad (Predicted)
------|-----
-Good | 0       1 
-Bad  | 5       0 
-
-It is worse to classify a customer as good when they are actually bad (five), than it is to classify a customer as bad when they are actually good (one).
+This dataset classifies people described by a set of attributes as good or bad credit risks. It comes with a cost matrix, which indicates that it is worse to classify a customer as good when they are bad than it is to classify a customer as bad when they are good.
 
 ### Attribute Description
 
-The twenty attributes describing each individual are:
+The dataset consists of twenty attributes that describe the creditworthiness of an individual. These attributes include the status of their existing checking account, duration in months, credit history, purpose of the credit, credit amount, status of savings account or bonds, present employment in years, installment rate in percentage of disposable income, personal status and sex, other debtors or guarantors, present residence since, property, age in years, other installment plans, housing, number of existing credits at this bank, job, number of people being liable to provide maintenance for, telephone, and foreign worker status.
 
-One: Status of existing checking account, categorized into four types based on balance and salary assignments.
+The cost matrix for this dataset is as follows:
 
-Two: Duration in months.
+Good (predicted) | Good (actual) | Bad (actual)
+----------------|--------------|-------------
+Good            | 0            | 1
+Bad             | 5            | 0
 
-Three: Credit history, categorized into five types based on payment behavior and existing credits.
+This dataset requires the use of a cost matrix, which takes into account the different costs associated with misclassifying a customer as good or bad.
 
-Four: Purpose of the credit, categorized into nine types including car, television, and education.
+### Additional Information
 
-Five: Credit amount.
+Two datasets are provided. The original dataset contains categorical or symbolic attributes and is in the file "german.data". For algorithms that need numerical attributes, a second file "german.data-numeric" is provided, which has been edited and several indicator variables added to make it suitable for algorithms that cannot cope with categorical variables. Several attributes that are ordered categorical have been coded as integers.
 
-Six: Status of savings account or bonds, categorized into five types based on balance.
-
-Seven: Present employment, categorized into five types based on length of employment.
-
-Eight: Installment rate in percentage of disposable income.
-
-Nine: Personal status and sex, categorized into five types based on marital status and gender.
-
-Ten: Other debtors or guarantors, categorized into three types.
-
-Eleven: Present residence since, measured in years.
-
-Twelve: Property, categorized into four types including real estate and life insurance.
-
-Thirteen: Age in years.
-
-Fourteen: Other installment plans, categorized into three types including banks and stores.
-
-Fifteen: Housing, categorized into three types including rent and ownership.
-
-Sixteen: Number of existing credits at this bank.
-
-Seventeen: Job, categorized into four types including unemployment and management.
-
-Eighteen: Number of people being liable to provide maintenance for.
-
-Nineteen: Telephone, categorized into two types based on registration.
-
-Twenty: Foreign worker, categorized into two types.
-
-### Keywords
-
-Credit risk assessment, Cost matrix, Classification, Attributes, Credit history, Employment, Income, Property, Age, Housing, Job.
+Keywords: credit risk, cost matrix, classification, categorical attributes, numerical attributes.

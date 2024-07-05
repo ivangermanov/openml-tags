@@ -1,18 +1,13 @@
 Glass Classification Tags: Context
 
-This is a Glass Identification Data Set from UCI, containing ten attributes, including an identification number. The response variable is the glass type, which has seven discrete values.
+This is a Glass Identification Data Set from UCI, containing ten attributes, including an identification number, which has been removed from the CSV file. The response variable is the type of glass, which has seven discrete values. 
 
-Attribute Information:
+The attributes include refractive index, sodium, magnesium, aluminum, silicon, potassium, calcium, barium, and iron, all measured in weight percent in corresponding oxide. 
 
-The dataset includes the following attributes: Refractive Index, Sodium, Magnesium, Aluminum, Silicon, Potassium, Calcium, Barium, Iron, and the Type of Glass.
+The type of glass is the class attribute, which can be one of the following: building windows float processed, building windows non-float processed, vehicle windows float processed, vehicle windows non-float processed, containers, tableware, or headlamps.
 
-Acknowledgements:
-The Glass Identification Data Set was sourced from the University of California, Irvine Machine Learning Repository.
+Data exploration of this dataset reveals two important characteristics. Firstly, the variables are highly correlated with each other, including the response variable. This suggests that a machine learning algorithm that can handle correlated variables, such as Random Forest, may be most suitable for this dataset. 
 
-Data Exploration Insights:
-Exploring this dataset reveals two crucial characteristics. Firstly, the variables are highly correlated with each other, including the response variable. Therefore, an appropriate machine learning algorithm would be one that can handle multicollinearity effectively, such as Random Forest or Principal Component Regression. Secondly, the dataset is relatively small, which may limit the applicability of certain dimensionality reduction techniques like Principal Component Analysis (PCA).
+Secondly, the data is highly skewed. Scaling may be sufficient to normalize the data, but other techniques, such as Box-Cox power transformation, may also be necessary to achieve normality.
 
-Data Characteristics:
-The dataset exhibits high skewness, which may require additional normalization techniques beyond simple scaling. Techniques like Box-Cox Power Transformation could be explored to stabilize variance and improve model performance.
-
-Keywords: Glass Identification, Multicollinearity, Dimensionality Reduction, Random Forest, Principal Component Regression, Data Normalization, Box-Cox Power Transformation.
+Keywords: Glass Identification, Correlated Variables, Skewed Data, Random Forest, Normalization Techniques

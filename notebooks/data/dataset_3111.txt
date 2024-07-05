@@ -1,13 +1,35 @@
-The QSAR-TID-102406 dataset contains QSAR data showing activity values of several compounds on the drug target Carboxypeptidase B. This dataset has twenty-three rows and one thousand twenty-six features, including IDs and a class feature. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The dataset was obtained from the MetaQSAR project in September two thousand fifteen and should be cited accordingly. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Source: MetaQSAR project - September
 
-The dataset includes features such as molecule ChEMBL ID and median pXC fifty. The molecule ChEMBL ID is a unique identifier for each molecule in the dataset, while the median pXC fifty represents the activity value of each compound on the drug target.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The drug target, Carboxypeptidase B, is an enzyme that belongs to the metallo protease M fourteen A subfamily. It is involved in various biological processes, including proteolysis, and has peptidase, metallocarboxypeptidase, and hydrolase activities.
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
-This dataset can be used for QSAR modeling and machine learning approaches to predict the activity of new compounds on the Carboxypeptidase B target.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Carboxypeptidase B
+Synonyms: Carboxypeptidase B CPB CPBHz
+Organism: Helicoverpa zea
+Species Group: No
+Protein Target Classification: Enzyme/Protease/Metallo protease/Metallo protease MC clan/Metallo protease MA subfamily
 
-Tags: Computer Systems, Culture, MTLQSAR, study three
+Description: Carboxypeptidase B
+Relationship: SINGLE PROTEIN
+Accession: QT
 
-Keywords: QSAR, Carboxypeptidase B, molecular fingerprints, MetaQSAR, drug target, proteolysis, peptidase activity.
+Go Component: extracellular region
+
+Go Function: carboxypeptidase activity, metallocarboxypeptidase activity, peptidase activity, metallopeptidase activity, zinc ion binding, hydrolase activity, metal ion binding
+
+Go Process: proteolysis
+
+canSAR Target: QT
+UniProt: QT
+InterPro: Peptidase M, MA act pep, MA like propep
+Pfam: Peptidase M, Propep M
+PDBe: C C
+
+Keywords: QSAR, molecular fingerprints, carboxypeptidase, enzyme activity, proteolysis

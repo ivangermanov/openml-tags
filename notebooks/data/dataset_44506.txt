@@ -1,15 +1,15 @@
-Machine Learning, Mathematics 
+Name: Steel Plates Fault Dataset with Subsampling
 
-Subsampling of the dataset Steel Plates Fault with Seed Three 
+Tags: Subsampling of the Steel Plates Fault dataset, generated with a specific set of arguments
 
-This dataset has been generated through the process of subsampling the original Steel Plates Fault dataset. The subsampling process involved setting a maximum number of rows, columns, and classes, and then uniformly sampling from the original dataset to achieve these maximum values.
+This dataset is a subsampled version of the original Steel Plates Fault dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
 
-The subsampling function takes in several arguments, including a seed value for reproducibility, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to use stratified sampling. 
+The subsampling process started by selecting a subset of classes from the original dataset. If the number of unique classes exceeded a certain maximum, a random sample of classes was selected, with the probability of each class being selected proportional to its frequency in the original dataset. The indices of the samples belonging to the selected classes were then used to subset the original dataset.
 
-In this case, the seed value was set to three, the maximum number of rows was set to two thousand, the maximum number of columns was set to one hundred, and the maximum number of classes was set to ten. Additionally, stratified sampling was used to ensure that the sampled data maintains the same class distribution as the original dataset.
+Next, the columns of the dataset were uniformly sampled. If the number of columns exceeded a certain maximum, a random sample of columns was selected. The selected columns were then used to subset the dataset.
 
-Features: 
+Finally, the rows of the dataset were uniformly sampled. If the number of rows exceeded a certain maximum, a stratified sample of rows was selected, with the stratification based on the target variable. The selected rows were then used to create the final subsampled dataset.
 
-(target variable)
+The resulting dataset has a specific set of features, including V1, V2, V3, and so on, up to V27, as well as a target variable.
 
-Keywords: machine learning, mathematics, dataset, subsampling, stratified sampling
+Keywords: Steel Plates Fault, subsampling, dataset, stratification, uniform sampling

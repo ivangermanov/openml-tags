@@ -1,11 +1,11 @@
-Credit Seed Four Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True
+Name: Credit Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset is a subsampling of the Credit dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, followed by uniformly sampling columns. The number of rows and columns were limited to ensure the dataset remained manageable.
+Tags: Subsampling of the dataset Credit with seed equals Four arguments number of rows equals Two Thousand arguments number of columns equals One Hundred arguments number of classes equals Ten arguments no stratify equals False
 
-The Credit dataset was first filtered to select a specified number of classes. This was done by selecting the indices where one of the chosen classes was present. The dataset was then further filtered to select a specified number of columns.
+Generated with the following source code:
 
-If the number of rows exceeded the maximum allowed, the dataset was stratified accordingly. This involved concatenating the feature data with the target variable, and then splitting the data into subsets using the target variable as a stratification criterion.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data.
 
-The resulting dataset consists of a selection of features, including Revolving Utilization of Unsecured Lines, Age, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, and Number of Dependents. These features have been carefully chosen to provide a representative sample of the original Credit dataset.
+Features: Revolving Utilization of Unsecured Lines, Age, Number of Times Thirty to Fifty Nine Days Past Due Not Worse, Debt Ratio, Monthly Income, Number of Open Credit Lines and Loans, Number of Times Ninety Days Late, Number of Real Estate Loans or Lines, Number of Times Sixty to Eighty Nine Days Past Due Not Worse, Number of Dependents, Serious Delinquency in Two Years
 
-Keywords: Credit dataset, subsampling, stratification, feature selection, class sampling, column sampling
+Keywords: Credit Dataset, Subsampling, Stratified Sampling, Feature Selection

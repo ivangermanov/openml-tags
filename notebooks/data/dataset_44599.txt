@@ -1,17 +1,19 @@
-Name: QSAR Biodeg Seed One 
+Name: QSAR Biodeg Seed One Subsample
 
-Tags: Economics, Government 
+Tags: Subsampling of the QSAR Biodeg dataset with seed one
 
-Subsampling of the QSAR Biodeg dataset with seed equal to one. This dataset has been generated using the following source code:
+Generated with the following source code:
 
-The function takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether stratification should be used or not.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-It first selects a subset of classes uniformly at random based on their frequency in the dataset. It then selects the corresponding indices where one of these classes is present and updates the feature matrix and target vector accordingly.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, it uniformly samples columns from the feature matrix if the number of columns exceeds the specified maximum. The function ensures that the column indices are sorted in ascending order.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the class distribution is maintained.
 
-Finally, it stratifies the data based on the target variable and performs uniform sampling to reduce the number of rows to the specified maximum.
+The resulting dataset is then returned with the selected features, target variable, and categorical mask.
 
-Features: Several variables including V One, V Two, up to V Forty One, Class
+Features: 
 
-Keywords: QSAR Biodeg, subsampling, stratification, uniform sampling, feature selection, class selection
+QSAR Biodeg dataset features are not human-readable and are skipped.
+
+Keywords: QSAR Biodeg, subsampling, stratified sampling, dataset generation, feature selection.

@@ -1,9 +1,16 @@
-Visualizing Hamster Dataset: A Binarized Version for Myth-Busting and Study Purposes 
+Name: Visualizing Hamster
+Tags: binarized, mythbusting, study
 
-This dataset is a binarized version of the original dataset, specifically designed for myth-busting and study purposes. In this version, the numeric target feature has been converted into a two-class nominal target feature, where all instances with a lower target value are classified as positive ('Positive') and all others are classified as negative ('Negative'). 
+Source: Unknown - Date unknown
 
-The dataset includes various features related to organ sizes, including Lung, Heart, Liver, Spleen, and Kidney sizes. These features have been carefully selected to facilitate comprehensive analysis and study.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Tags: Binarized, Chemistry, Life Science, Myth-Busting, Study 
+Features: lung, heart, liver, spleen, kidney, binary class
 
-Keywords: Binarized, Organ Sizes, Nominal Target Feature, Positive Classification, Negative Classification, Lung Size, Heart Size, Liver Size, Spleen Size, Kidney Size.
+This dataset, known as Visualizing Hamster, has been binarized from its original form to create a simplified classification problem. The process involved calculating the mean of the target feature and using it as a threshold to divide instances into two categories. Those falling below the mean are labeled as positive, while those above are considered negative. This transformation allows for easier visualization and analysis of the data, particularly in the context of mythbusting and various studies.
+
+The dataset includes several anatomical features such as lung, heart, liver, spleen, and kidney measurements, along with the newly created binary class feature. This binarization technique can be particularly useful for researchers and data scientists looking to perform binary classification tasks or to simplify complex datasets for initial exploratory analysis.
+
+It is important to note that while this binarized version offers certain advantages in terms of simplicity and ease of interpretation, it may also result in some loss of nuance present in the original numeric data. Therefore, users of this dataset should consider the trade-offs between simplicity and granularity when applying it to their specific research or analytical needs.
+
+Keywords: binarization, classification, anatomical features, data transformation, threshold, positive and negative instances, simplified analysis

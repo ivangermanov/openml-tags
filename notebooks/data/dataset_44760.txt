@@ -1,54 +1,15 @@
-Subsampling of the dataset Kick with Seed equals Two 
-args number rows equals Two Thousand 
-args number columns equals One Hundred 
-args number classes equals Ten 
-args no stratify equals True 
+Name: Kick Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Kick with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified) -> Dataset:
-random number generator = numpy random default random generator(seed)
-x = self x
-y = self y
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-Uniformly sample classes equals y unique
-if length of classes is greater than number classes maximum:
-value counts = y value counts
-selected classes = random number generator choice classes, size equals number classes maximum, replace equals False, probability equals value counts divided by sum of value counts
-Select the indices where one of these classes is present
-indices = y index y is in selected classes
-x = x iloc indices
-y = y iloc indices
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and uses these indices to subset the dataset. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it samples rows from the dataset, using stratified sampling if specified.
 
-Uniformly sample columns if required
-if length of x columns is greater than number columns maximum:
-column indices = random number generator choice list range length of x columns, size equals number columns maximum, replace equals False
-sorted column indices = sorted column indices
-selected columns = list x columns sorted column indices
-x = x selected columns
-else:
-sorted column indices = list range length of x columns
-
-if length of x is greater than number rows maximum:
-Stratify accordingly
-target name = y name
-data = pandas concat x, y, axis equals columns
-_, subset = train test split data, test size equals number rows maximum, stratify equals data target name, shuffle equals True, random state equals seed
-x = subset drop target name, axis equals columns
-y = subset target name
-
-We need to convert categorical columns to string for OpenML
-categorical mask = self categorical mask for i in sorted column indices
-columns = list x columns
-return Dataset technically this is not the same but it is where it was derived from 
-dataset equals self dataset
-x equals x
-y equals y
-categorical mask equals categorical mask
-columns equals columns
+The resulting dataset is a subsample of the original, with a specified number of rows, columns, and classes.
 
 Features: Purchase Date, Auction, Vehicle Year, Vehicle Age, Make, Model, Trim, Sub Model, Color, Transmission, Wheel Type ID, Wheel Type, Vehicle Odometer, Nationality, Size, Top Three American Name
 
-Tags: Medicine, Statistics
-
-Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection
+Keywords: dataset subsampling, stratified sampling, uniform sampling, data preprocessing

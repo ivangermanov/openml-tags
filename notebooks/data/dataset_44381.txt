@@ -1,11 +1,17 @@
-Name: Cover Type Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Cover Type Seed Four with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Tags: Subsampling of the dataset Cover Type 
+Tags: Subsampling of the dataset Cover Type with seed equals four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals false. 
 
-This dataset is a subsampling of the original Cover Type dataset. It was generated using a specific set of arguments, including a random seed of four, a maximum number of rows of two thousand, a maximum number of columns of one hundred, a maximum number of classes of ten, and stratification enabled. 
+Generated with the following source code:
 
-The generation process involved uniformly sampling classes from the original dataset, selecting the indices where one of these classes is present, and then uniformly sampling columns if required. The resulting dataset has undergone some transformations, including converting categorical columns to strings for OpenML compatibility. 
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
+
+First, it samples the classes uniformly, selecting the indices where one of the chosen classes is present. Then, it samples the columns uniformly if required. 
+
+If the number of rows exceeds the maximum, it stratifies the data accordingly, using the target name, and splits the data into a subset of the desired size. 
+
+Finally, it converts categorical columns to string for OpenML, and returns a dataset with the subsampled data, categorical mask, and columns.
 
 Features: (skipped due to unreadability)
 
-Keywords: Cover Type, subsampling, stratification, OpenML, categorical columns
+Keywords: Cover Type, Subsampling, Stratification, Random Sampling, Dataset Generation

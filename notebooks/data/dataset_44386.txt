@@ -1,17 +1,17 @@
-Name: Polish Seed Four Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True 
+Name: Pol Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Polish 
+Tags: Subsampling of the dataset Pol with seed equals Four, arguments nrows max equals Two Thousand, ncols max equals One Hundred, nclasses max equals Ten, and no stratify equals False.
 
 Generated with the following source code:
 
-The function subsample takes in parameters such as a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not, and returns a subsampled dataset.
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-The function first gets the unique classes from the target variable and selects a specified maximum number of classes using uniform sampling. It then selects the indices where one of these classes is present and subsets the data based on these indices.
+The function first gets the unique classes from the target variable y. If there are more classes than the maximum allowed, it selects a subset of classes using a weighted random choice, where the weights are the value counts of each class. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-If the number of columns exceeds the maximum allowed, the function uniformly samples the columns to reduce their number. The selected column indices are stored and used to subset the data.
+Next, if the number of columns is greater than the maximum allowed, it uniformly samples a subset of columns. It then subsets the data to include only these columns.
 
-If the number of rows exceeds the maximum allowed, the function uses stratified sampling to reduce their number while maintaining class balance. The resulting subsampled data is returned as a new dataset along with its categorical mask and column names.
+Finally, if the number of rows is greater than the maximum allowed, it uses stratified sampling to select a subset of rows. It returns a new dataset with the subsampled data.
 
-Features: Binary Class 
+Features: Binary Class
 
-Keywords: Subsampling, Stratification, Sampling, Dataset, Classes, Columns, Rows
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Choice, Value Counts

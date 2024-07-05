@@ -1,13 +1,11 @@
-Machine Learning and Statistics Subsampling of the Blood Transfusion Service Center dataset with a specified seed value. The subsample function generates a new dataset by uniformly sampling classes, columns, and rows from the original dataset.
+Name: Blood Transfusion Service Center
 
-The function first selects a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the function chooses the most frequent classes based on their probability distribution. It then selects the corresponding indices where one of these classes is present.
+Tags: Subsampling of the dataset Blood Transfusion Service Center with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals True
 
-Next, the function uniformly samples columns from the feature set. If the number of columns exceeds the maximum allowed, it randomly selects the specified number of columns.
+Generated with the following source code:
 
-Finally, the function stratifies the dataset according to the target variable and uniformly samples a specified number of rows. This ensures that the resulting dataset maintains the same class distribution as the original dataset.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it uniformly samples the columns. If the number of rows is greater than the maximum, it uses stratified sampling to select a subset of the data. Finally, it returns a dataset with the subset of data, categorical mask, and columns.
 
-The resulting dataset contains the sampled features and target variable, along with a mask indicating which columns contain categorical variables.
+Features: (skipped due to unreadability)
 
-Features: (Skipped due to unreadability)
-
-Keywords: Subsampling, Machine Learning, Statistics, Blood Transfusion Service Center, Stratification
+Keywords: Blood Transfusion Service Center, Subsampling, Stratified Sampling, Dataset, Random Number Generator

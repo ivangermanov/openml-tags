@@ -1,13 +1,29 @@
-MicroMass - Mixed 
+Name: Micro-Mass
+Tags: study, study
 
-A dataset to explore machine learning approaches for the identification of microorganisms from mass-spectrometry data.
+Dataset Title: MicroMass - Mixed (mixed spectra version)
 
-This dataset consists of a reference panel of twenty Gram positive and negative bacterial species covering nine genera, including several species known to be difficult to discriminate by mass spectrometry. Each species is represented by eleven to sixty mass spectra obtained from seven to twenty bacterial strains, constituting a total dataset of five hundred seventy-one spectra obtained from two hundred thirteen strains. 
+Abstract: This dataset aims to explore machine learning approaches for identifying microorganisms from mass-spectrometry data.
 
-The spectra were obtained according to the standard culture-based workflow used in clinical routine, where the microorganism was first grown on an agar plate for twenty-four to forty-eight hours, before a portion of the colony was picked, spotted on a MALDI slide, and a mass spectrum was acquired.
+Source: bioMérieux
 
-Based on this reference panel, a dedicated in vitro mock-up mixture dataset was constituted. We considered ten pairs of species of various taxonomic proximity, including four mixtures involving species that belong to the same genus, two mixtures involving species that belong to distinct genera but to the same Gram type, and four mixtures involving species that belong to distinct Gram types. 
+Data Set Information:
+This MALDI-TOF dataset consists of two main components:
 
-Each mixture was represented by two pairs of strains, which were mixed according to nine concentration ratios. Two replicate spectra were acquired for each concentration ratio and each couple of strains, leading to a total dataset of three hundred sixty spectra, among which eighty are actually pure sample spectra.
+A) A reference panel of twenty Gram-positive and negative bacterial species covering nine genera, among which several species are known to be difficult to discriminate by mass spectrometry (MALDI-TOF). Each species was represented by eleven to sixty mass spectra obtained from seven to twenty bacterial strains, constituting a dataset of spectra obtained from strains. The spectra were acquired according to the standard culture-based workflow used in clinical routine, where the microorganism was first grown on an agar plate for twenty-four to forty-eight hours before a portion of the colony was picked, spotted on a MALDI slide, and a mass spectrum was acquired.
 
-Keywords: mass spectrometry, microorganisms, machine learning, bacterial species, MALDI-TOF
+B) Based on this reference panel, a dedicated in vitro mock-up mixture dataset was created. For this purpose, ten pairs of species with varying taxonomic proximity were considered:
+
+- Four mixtures, labeled A, B, C, and D, involved species belonging to the same genus.
+- Two mixtures, labeled E and F, involved species belonging to distinct genera but the same Gram type.
+- Four mixtures, labeled G, H, I, and J, involved species belonging to distinct Gram types.
+
+Each mixture was represented by two pairs of strains, which were mixed according to nine concentration ratios: pure samples of each species and various proportions of mixtures. Two replicate spectra were acquired for each concentration ratio and each pair of strains, resulting in a dataset of spectra, among which are pure sample spectra.
+
+Relevant Papers:
+- Automatic identification of mixed bacterial species fingerprints in a MALDI-TOF mass-spectrum. Bioinformatics.
+- A benchmark of support vector machines strategies for microbial identification by mass-spectrometry data, submitted
+
+Features: [List of features omitted due to length and unreadability]
+
+Keywords: MALDI-TOF, mass spectrometry, bacterial identification, mixed species, machine learning, microbial fingerprinting, Gram-positive, Gram-negative, taxonomic proximity

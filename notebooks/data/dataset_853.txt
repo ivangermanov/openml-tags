@@ -1,7 +1,17 @@
-The Boston dataset is a binarized regression problem in the fields of Chemistry and Life Science. This dataset is a modified version of the original data set, where the numeric target feature has been converted into a two-class nominal target feature. This conversion was done by calculating the mean and categorizing all instances with a lower target value as Positive and all others as Negative.
+Name: Boston
 
-The dataset consists of various features, including Crime Rate, Proportion of Residential Land Zoned, Proportion of Non-Retail Business Acres, Charles River Dummy Variable, Nitric Oxides Concentration, Average Number of Rooms per Dwelling, Age of Owner-Occupied Units, Weighted Distances to Five Boston Employment Centers, Index of Accessibility to Radial Highways, Full-Value Property-Tax Rate, Pupil-Teacher Ratio, Proportion of Black Population, Lower Status of Population, and Binary Class.
+Tags: binarized regression problem, mythbusting, study
 
-Tags: Binarized Regression Problem, Chemistry, Life Science, Mythbusting, Study
+Source: Unknown - Date unknown
 
-Keywords: Boston, Binarized Regression, Chemistry, Life Science, Modified Dataset
+Please cite: Binarized version of the original data set. It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
+
+This dataset is a modified version of the original Boston housing dataset, focusing on binary classification. The transformation process involves calculating the mean of the target variable and subsequently categorizing instances into two classes based on their relation to this mean value. Instances with target values below the mean are labeled as positive, while those above are labeled as negative.
+
+The dataset retains the original features from the Boston housing dataset, which include various socio-economic and environmental factors related to housing in Boston. These features provide a comprehensive view of the characteristics that may influence housing prices and neighborhood desirability.
+
+This binarized version of the dataset is particularly useful for binary classification tasks, allowing researchers and data scientists to explore machine learning algorithms and techniques in a simplified context. It serves as a valuable resource for studies in data analysis, pattern recognition, and predictive modeling within the domain of urban housing markets.
+
+Features: CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT, binaryClass
+
+Keywords: Boston housing, binary classification, data transformation, urban studies, machine learning, socio-economic factors, predictive modeling

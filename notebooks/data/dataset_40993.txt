@@ -1,15 +1,11 @@
-**ADA Agnostic**
+The Ada Agnostic dataset is part of the Agnostic Learning vs. Prior Knowledge Challenge, which aimed to compare the performance of domain-specific feature engineering with algorithms trained on anonymized and preprocessed data without any domain-specific knowledge. This dataset contains the agnostic version of a dataset from the US Census Bureau, spanning from June 2005 to September 2006. 
 
-Tags: Derived, Meteorology, Transportation
+The task of Ada is to identify high-revenue individuals from census data, which is a two-class classification problem. The original dataset, known as the Adult database in the UCI machine-learning repository, contains continuous, binary, and categorical variables. 
 
-The ADA Agnostic dataset is part of the Agnostic Learning vs. Prior Knowledge Challenge, which aimed to compare the performance of domain-specific feature engineering with algorithms trained on data without any domain-specific knowledge.
+The original owners of the data are the US Census Bureau, and the dataset was donated by Ronny Kohavi and Barry Becker from Data Mining and Visualization Silicon Graphics. 
 
-The dataset contains a two-class classification problem, where the goal is to identify high-revenue individuals based on census data. The original data comes from the United States Census Bureau, covering the period from June 2005 to September 2006.
+The preprocessing steps are described in the challenge documentation, which involved converting categorical variables into a numeric representation, eliminating their identity. The original fourteen attributes, including age, workclass, education, marital status, occupation, and native country, were scrambled and cannot be linked to the original features. 
 
-In the prior knowledge track, participants had access to the original features and their identities. However, in the agnostic track, the data was preprocessed into a numeric representation, eliminating categorical variables and concealing the identity of the features.
+This dataset combines samples from both the training and validation datasets. The data type is non-sparse, and the dataset contains forty-eight features. 
 
-The original dataset, known as the Adult database in the UCI Machine Learning Repository, comprises fourteen attributes, including age, work class, education, marital status, occupation, and native country. These features are a mix of continuous, binary, and categorical variables.
-
-To create the agnostic dataset, the organizers followed specific preprocessing steps, which are detailed in the challenge documentation. The resulting dataset has forty-eight features, but these are not human-readable due to the scrambling process. The dataset includes samples from both the training and validation sets.
-
-**Keywords:** Census Data, Classification Problem, Feature Engineering, Agnostic Learning, Domain-Specific Knowledge, Preprocessing.
+Keywords: census data, agnostic learning, feature engineering, classification, anonymized data, preprocessing.

@@ -1,15 +1,13 @@
-MetaQSAR Project - Dataset Information
+QSAR-TID Dataset Tags: MTLQSAR, study
 
-The QSAR-TID-11300 dataset, tagged with Machine Learning and MTLQSAR, is part of the MetaQSAR project and was released in September 2015. This dataset contains QSAR data showing activity values of several compounds on the drug target Histamine H3 Receptor.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo-pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset consists of 1616 rows and 1026 features, including IDs and a class feature, namely MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not typically require missing value imputation as all bits are generated.
+The dataset focuses on the Histamine H receptor, also known as HR, HHR, and Hrh. This receptor is a single protein target found in Rattus norvegicus. It belongs to the membrane receptor family A G protein-coupled receptor group, specifically the small molecule receptor subgroup of monoamine receptors.
 
-This dataset is particularly useful for machine learning models, as it provides a large number of instances and features to train and test predictive models. The Histamine H3 Receptor is a single protein target, also known as H3R, HH3R, and Histamine H3 Receptor Hrh3, belonging to the species group Rattus norvegicus.
+The Histamine H receptor is involved in various biological processes, including regulation of neurotransmitter levels, signal transduction, G protein-coupled receptor signaling pathways, learning, memory, and eating behavior. It plays a role in regulating blood pressure, epithelial cell proliferation, and responses to organic cyclic compounds.
 
-The target classification is 1. Membrane Receptor / Family A G Protein-Coupled Receptor / Small Molecule Receptor (Family A GPCR) / Monoamine Receptor / Histamine Receptor. The description relationship accession is Histamine H3 Receptor SINGLE PROTEIN Q9QYN8.
+This receptor is primarily located in the plasma membrane, dendrites, and synapses. Its functions include G protein-coupled receptor activity, histamine receptor activity, and amine binding. The receptor is associated with several Gene Ontology components, functions, and processes, highlighting its importance in various cellular and physiological activities.
 
-The dataset also includes information about the Gene Ontology (GO) components, functions, and processes associated with the Histamine H3 Receptor. These include plasma membrane, membrane, dendrite, synapse, G protein-coupled receptor activity, histamine receptor activity, amine binding, and heterocyclic compound binding.
+The dataset provides valuable information for quantitative structure-activity relationship (QSAR) studies, which can aid in drug discovery and development targeting the Histamine H receptor. This data can be used to predict the activity of novel compounds and understand the structural features that influence receptor binding and activation.
 
-Furthermore, the dataset provides information about the biological processes related to the Histamine H3 Receptor, such as regulation of neurotransmitter levels, signal transduction, G protein-coupled receptor signaling pathway, negative regulation of adenylate cyclase activity, and positive regulation of cytosolic calcium ion concentration.
-
-Keywords: QSAR, Machine Learning, MTLQSAR, Histamine H3 Receptor, Drug Target, Molecular Fingerprints, Gene Ontology, Biological Processes.
+Keywords: QSAR, Histamine H receptor, G protein-coupled receptor, neurotransmitter regulation, drug discovery, molecular fingerprints, structure-activity relationship

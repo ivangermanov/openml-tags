@@ -1,15 +1,15 @@
-Machine Learning, Statistics 
+Name: Jungle Chess Two Pieces Raw Endgame Complete Seed Two
 
-Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete 
+Tags: Subsampling of the dataset Jungle Chess Two Pieces Raw Endgame Complete with seed equal to two, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to true.
 
-This dataset has been generated through subsampling the original Jungle Chess Two Pieces Raw Endgame Complete dataset. The subsampling process involved selecting a specified number of rows, columns, and classes from the original dataset while ensuring that the resulting dataset remains representative of the original.
+Generated with the following source code:
 
-The subsampling process began by uniformly sampling classes from the original dataset. If the number of unique classes exceeded the specified maximum, a random selection of classes was made based on their frequency in the original dataset. The indices corresponding to these selected classes were then used to filter the original dataset, reducing its size while preserving the distribution of classes.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a boolean indicating whether to stratify or not, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-Next, the columns of the filtered dataset were uniformly sampled to reduce their number to the specified maximum. This involved randomly selecting a subset of column indices and using them to filter the dataset further.
+First, it samples the classes uniformly, selecting the indices where one of the selected classes is present. Then, it samples the columns uniformly if required. If the number of rows is greater than the maximum, it stratifies the data accordingly and samples the rows.
 
-Finally, the remaining rows were subsampled using stratified splitting to ensure that the resulting dataset retained the same distribution of classes as the original. This involved concatenating the filtered dataset with its corresponding class labels, splitting the resulting dataset into subsets, and selecting the subset that best represented the original distribution of classes.
+The function returns a dataset with the sampled data, categorical mask, and columns.
 
-The resulting dataset consists of a subset of the original features, including White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, and Class. 
+Features: White Piece Zero Strength, White Piece Zero File, White Piece Zero Rank, Black Piece Zero Strength, Black Piece Zero File, Black Piece Zero Rank, Class
 
-Keywords: machine learning, statistics, subsampling, dataset, stratification, classification.
+Keywords: Jungle Chess, Subsampling, Stratification, Random Sampling, Dataset Generation

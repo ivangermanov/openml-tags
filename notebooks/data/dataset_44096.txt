@@ -1,17 +1,22 @@
-The German Credit dataset classifies individuals described by a set of attributes as good or bad credit risks. This dataset comes with a cost matrix:
+**German Credit Dataset**
 
-Good         Bad (predicted)
-Good          0            1 (actual)
-Bad           5            0
-
-It is worse to classify a customer as good when they are bad, than it is to classify a customer as bad when they are good.
+This dataset classifies people described by a set of attributes as good or bad credit risks. It comes with a cost matrix, which indicates that it is worse to classify a customer as good when they are bad than it is to classify a customer as bad when they are good.
 
 ### Attribute Description
 
-Status of Existing Checking Account describes the individual's current checking account situation. Duration in Months represents the length of time an individual has had their current credit arrangement. Credit History provides information about an individual's past credit behavior, including whether they have taken credits, paid them back on time, experienced delays, or have critical accounts. Purpose of the Credit describes the reason behind the individual's request for credit, such as buying a car, television, or other household items. Credit Amount represents the total amount of credit requested.
+The dataset consists of twenty attributes that describe the creditworthiness of an individual. These attributes include the status of their existing checking account, duration in months, credit history, purpose of the credit, credit amount, status of savings account or bonds, present employment in years, installment rate in percentage of disposable income, personal status and sex, other debtors or guarantors, present residence since, property, age in years, other installment plans, housing, number of existing credits at this bank, job, number of people being liable to provide maintenance for, telephone, and foreign worker status.
 
-Status of Savings Account/Bonds describes the individual's current savings situation. Present Employment Since provides information about the individual's current employment status, including how long they have been employed. Installment Rate in Percentage of Disposable Income describes the proportion of an individual's income dedicated to repaying debts. Personal Status and Sex describes an individual's marital status and gender. Other Debtors/Guarantors indicates whether someone else is providing financial support for the individual.
+The cost matrix for this dataset is as follows:
 
-Present Residence Since describes how long an individual has lived at their current address. Property Magnitude describes the type of property an individual owns, such as real estate or a vehicle. Age in Years represents an individual's age. Other Installment Plans indicates whether an individual has other debts or repayment arrangements. Housing describes an individual's living arrangements, such as renting or owning a home. Number of Existing Credits at this Bank represents the total number of credits an individual currently holds with the bank. Job describes an individual's occupation and level of skill. Number of People Being Liable to Provide Maintenance For describes the number of dependents an individual is responsible for supporting. Telephone indicates whether an individual has a telephone registered in their name. Foreign Worker indicates whether an individual is employed outside of their native country.
+Good (predicted) | Good (actual) | Bad (actual)
+----------------|--------------|-------------
+Good            | 0            | 1
+Bad             | 5            | 0
 
-Keywords: credit risk, cost matrix, credit history, employment status, disposable income, personal status, property ownership, installment plans, housing, job type, dependents, telephone ownership, foreign worker status.
+This dataset requires the use of a cost matrix, which takes into account the different costs associated with misclassifying a customer as good or bad.
+
+### Additional Information
+
+Two datasets are provided: the original dataset, which contains categorical and symbolic attributes, and a numeric dataset, which has been edited to make it suitable for algorithms that cannot cope with categorical variables. Several attributes that are ordered categorical have been coded as integers.
+
+**Keywords:** credit risk, cost matrix, classification, creditworthiness, dataset

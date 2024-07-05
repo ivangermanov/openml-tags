@@ -1,21 +1,11 @@
-QSAR-TID-100845 Dataset 
+QSAR-TID-100845 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100845. It has multiple rows and features, including IDs and a class feature. The features represent molecular fingerprints, which were generated from smiles strings using the pipeline pilot program. 
+This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100845. The dataset has multiple rows and features, including IDs and class feature: Molecule ChEMBL ID and Median PXc50. The features represent FCFP 1024bit Molecular Fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
 
-The dataset was obtained from the MetaQSAR project in September 2015. Please cite this dataset when using it.
+The dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR data for various drug targets. The data is sourced from ChEMBL version seventeen and contains activity values in pseudo-pCI50 units.
 
-Features: Molecule ChEMBL ID, molecular fingerprints.
+The features in the dataset are molecular fingerprints, which are a way of representing molecular structures as a series of bits. These fingerprints are generated from SMILES strings, which are a notation for describing molecular structures. The fingerprints are used to capture the structural properties of the molecules, which can be used to predict their activity.
 
-Description:
-The target is a single protein known as Serine/Threonine-Protein Kinase MRCK Alpha. It is also referred to as CDC42-Binding Protein Kinase Alpha, among other synonyms. This protein is found in Homo sapiens and belongs to the AGC protein kinase group.
+The dataset is useful for researchers who want to develop predictive models for the activity of compounds on the drug target TID: 100845. The dataset provides a large number of compounds with activity values, which can be used to train and test machine learning models.
 
-Expression Atlas:
-The protein is expressed in various cellular components, including the cytoplasm, cytosol, cytoskeleton, cell-cell junction, lamellipodium, and cell leading edge. It is also involved in multiple biological processes, such as protein phosphorylation, cytoskeleton organization, peptidyl-threonine phosphorylation, and actin cytoskeleton reorganization.
-
-Functional Annotations:
-The protein has nucleotide binding, magnesium ion binding, protein kinase, protein serine/threonine kinase, protein binding, ATP binding, kinase, transferase, identical protein binding, and metal ion binding activities.
-
-Reactome Pathways:
-The protein participates in multiple reactome pathways, including the CDC42 GTPase cycle, RAC1 GTPase cycle, RHOQ GTPase cycle, and RHOJ GTPase cycle.
-
-Keywords: QSAR, drug target, molecular fingerprints, protein kinase, cytoskeleton organization, protein phosphorylation, reactome pathways.
+Keywords: QSAR, drug target, molecular fingerprints, SMILES strings, predictive models, machine learning.

@@ -1,32 +1,22 @@
-**Skillcraft One Master Table Dataset**
+**Skillcraft1**
+**Tags: Author, Source, Please cite**
 
-This dataset aggregates screen movements into screen-fixations using a dispersion-threshold algorithm, and defines Perception Action Cycles (PACs) as fixations with at least one action. Time is recorded in terms of timestamps in the StarCraft Two replay file. When the game is played on faster, one real-time second is equivalent to roughly eighty-eight point five timestamps.
-
-The list of possible game actions is discussed in the related literature. This dataset has missing values.
+The Skillcraft1 master table dataset is a collection of data aggregated from screen movements into screen fixations using the Salvucci and Goldberg dispersion threshold algorithm, and defined Perception Action Cycles as fixations with at least one action. Time is recorded in terms of timestamps in the StarCraft 2 replay file, where one real-time second is equivalent to roughly eighty-eight point five timestamps when the game is played on faster.
 
 **Attribute Information**
 
-* Game ID: A unique identifier number for each game.
-* League Index: An ordinal value representing the league level of the player, ranging from bronze to professional.
-* Age: The age of each player.
-* Hours Per Week: The reported hours spent playing per week.
-* Total Hours: The reported total hours spent playing.
-* Actions Per Minute: The rate of actions performed by the player per minute.
-* Selections By Hotkeys: The number of unit or building selections made using hotkeys per timestamp.
-* Assignments To Hotkeys: The number of units or buildings assigned to hotkeys per timestamp.
-* Unique Hotkeys Used: The number of unique hotkeys used per timestamp.
-* Minimap Attacks: The number of attack actions on minimap per timestamp.
-* Minimap Right Clicks: The number of right-clicks on minimap per timestamp.
-* Number Of PACs: The number of PACs per timestamp.
-* Gap Between PACs: The mean duration in milliseconds between PACs.
-* Action Latency: The mean latency from the onset of a PAC to its first action in milliseconds.
-* Actions In PAC: The mean number of actions within each PAC.
-* Total Map Explored: The number of twenty-four by twenty-four game coordinate grids viewed by the player per timestamp.
-* Workers Made: The number of SCVs, drones, and probes trained per timestamp.
-* Unique Units Made: The number of unique units made per timestamp.
-* Complex Units Made: The number of ghosts, infestors, and high templars trained per timestamp.
-* Complex Abilities Used: The abilities requiring specific targeting instructions used per timestamp.
+The dataset includes attributes such as Game ID, League Index, Age, Hours per Week, Total Hours, Actions per Minute, Select by Hotkeys, Assign to Hotkeys, Unique Hotkeys, Minimap Attacks, Minimap Right Clicks, Number of Perception Action Cycles, Gap Between Perception Action Cycles, Action Latency, Actions in Perception Action Cycles, Total Map Explored, Workers Made, Unique Units Made, Complex Units Made, and Complex Abilities Used.
 
-**Tags:** Images, Life Science
+**Features**
 
-**Keywords:** Skillcraft, StarCraft, Gameplay, Player Behavior, Perception Action Cycles
+The features of the dataset include Game ID, League Index, Age, Hours per Week, Total Hours, Actions per Minute, Select by Hotkeys, Assign to Hotkeys, Unique Hotkeys, Minimap Attacks, Minimap Right Clicks, Number of Perception Action Cycles, Gap Between Perception Action Cycles, Action Latency, Actions in Perception Action Cycles, Total Map Explored, Workers Made, Unique Units Made, Complex Units Made, and Complex Abilities Used.
+
+**Scraped Data**
+
+The dataset information includes additional information about the data scraping process.
+
+**Additional Information**
+
+The dataset has missing values. The list of possible game actions is discussed in the original paper.
+
+**Keywords:** StarCraft 2, Perception Action Cycles, Hotkeys, Minimap, Game Analytics, Player Behavior.

@@ -1,24 +1,15 @@
-Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of expert systems for decision making. This version drops duplicate rows.
+Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of a decision-making expert system. In this version, duplicate rows are dropped.
 
-The model evaluates cars according to the following concept structure: Car Acceptability, which is influenced by Price, Technical Characteristics, and Comfort. 
+The Car Evaluation Database evaluates cars according to a concept structure that assesses their overall acceptability based on several factors. The model considers the overall price of the car, which is comprised of the buying price and the price of maintenance. Additionally, the model evaluates the technical characteristics of the car, including its comfort features. The comfort features are further broken down into several subcategories, including the number of doors, the capacity in terms of persons to carry, the size of the luggage boot, and the estimated safety of the car.
 
-Price is comprised of Buying Price and Maintenance Cost. Technical Characteristics encompass Comfort, which is further divided into Number of Doors, Capacity in Terms of Persons to Carry, Size of Luggage Boot, and Estimated Safety of the Car.
+The input attributes are printed in lowercase and include buying, maintenance, doors, persons, luggage boot, and safety. Besides the target concept of car acceptability, the model includes three intermediate concepts: price, technical characteristics, and comfort. Every concept is related to its lower-level descendants by a set of examples.
 
-Input attributes are printed in lowercase. Besides the target concept, the model includes three intermediate concepts: Price, Technical Characteristics, and Comfort. Every concept is related to its lower-level descendants by a set of examples. 
+The Car Evaluation Database contains examples with the structural information removed, directly relating the car acceptability to the six input attributes. Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
 
-The Car Evaluation Database contains examples with the structural information removed, directly relating Car Acceptability to the six input attributes: Buying Price, Maintenance Cost, Number of Doors, Capacity in Terms of Persons to Carry, Size of Luggage Boot, and Estimated Safety of the Car.
+The database does not have any missing values.
 
-Because of the known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.
+The input attributes have the following values: buying can be very high, high, medium, or low; maintenance can be very high, high, medium, or low; doors can be two, three, four, or five or more; persons can be two, four, or more; luggage boot can be small, medium, or big; and safety can be low, medium, or high.
 
-Has Missing Values? No
+The class labels are unacceptability, acceptability, good, and very good.
 
-Additional Variable Information:
-Buying Price has values very high, high, medium, and low.
-Maintenance Cost has values very high, high, medium, and low.
-Number of Doors has values two, three, four, and five or more.
-Capacity in Terms of Persons to Carry has values two, four, and more.
-Size of Luggage Boot has values small, medium, and big.
-Estimated Safety of the Car has values low, medium, and high.
-Class Labels are unacceptable, acceptable, good, and very good.
-
-Keywords: Car Evaluation, Decision Making, Hierarchical Model, Constructive Induction, Structure Discovery, Expert Systems, Technical Characteristics, Comfort.
+Keywords: car evaluation, decision-making, expert system, hierarchical model, technical characteristics, comfort features, safety assessment.

@@ -1,15 +1,17 @@
-Machine Learning, Statistics 
+Name: Gina Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Subsampling of the dataset Gina with Seed equals Three 
+Tags: Subsampling of the dataset Gina with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-This dataset is a subsampled version of the original Gina dataset. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. The goal is to create a smaller dataset that retains the essential characteristics of the original dataset.
+Generated with the following source code:
 
-The subsampling process starts by selecting a specified number of unique classes from the original dataset. In this case, the maximum number of classes is set to Ten. A uniform sampling strategy is employed to select the desired number of classes, taking into account the class distribution in the original dataset.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified, meaning that the proportion of each class in the subsample is the same as in the original dataset.
 
-Next, the columns of the dataset are uniformly sampled. The maximum number of columns is set to One Hundred. A uniform sampling strategy is used again to select the desired number of columns.
+The function first selects a specified number of classes from the original dataset. It does this by getting a list of unique classes, and then using random number generation to select the specified number of classes. It then selects the indices where one of these classes is present, and uses these indices to subset the original dataset.
 
-Finally, the rows of the dataset are uniformly sampled. The maximum number of rows is set to Two Thousand. To ensure that the resulting dataset is representative of the original dataset, a stratified sampling strategy is employed. This involves splitting the data into training and testing sets using a stratified approach, which helps maintain the class balance in the resulting dataset.
+Next, the function selects a specified number of columns from the subsampled dataset. It does this by getting a list of column indices, and then using random number generation to select the specified number of columns. It then uses these column indices to subset the dataset.
 
-The resulting dataset consists of the selected features, which include V Two, V Five, V Twenty Nine, and so on.
+Finally, the function selects a specified number of rows from the subsampled dataset. It does this by using the train test split function from scikit learn, with stratification based on the target variable. This ensures that the proportion of each class in the subsample is the same as in the original dataset.
 
-Keywords: Subsampling, Machine Learning, Statistics, Dataset, Stratified Sampling, Uniform Sampling.
+Features: Various columns from the original dataset, including those related to variables V two, V five, V twenty nine, and so on.
+
+Keywords: dataset subsampling, stratified sampling, random number generation, class selection, column selection, row selection.

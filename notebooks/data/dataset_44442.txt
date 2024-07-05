@@ -1,14 +1,13 @@
-Subsampling of the dataset Eye Movements with Seed Four 
-Tags: Machine Learning, Mathematics 
+Name: Eye Movements Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This subsampling function generates a smaller dataset from the original Eye Movements dataset. The function takes several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to use stratified sampling.
+Tags: Subsampling of the dataset Eye Movements with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to true.
 
-The function begins by uniformly sampling classes from the original dataset. If there are more unique classes than the specified maximum, it selects the desired number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present and filters the data accordingly.
+Generated with the following source code:
 
-Next, the function uniformly samples columns if required. If the number of columns exceeds the specified maximum, it randomly chooses the desired number of columns without replacement. Otherwise, it uses all columns.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses the numpy random default random generator to generate random numbers. The function then selects a subset of the data based on the given parameters. It first selects a subset of classes, then selects a subset of columns, and finally selects a subset of rows. The function returns a new dataset with the selected data.
 
-Finally, the function samples rows using stratified splitting if necessary. If the number of rows exceeds the specified maximum, it splits the data into a subset of the desired size, ensuring that each class is represented proportionally. It then returns a new dataset containing the sampled data, along with information about the categorical columns and feature names.
+The dataset is subsampled to reduce its size while maintaining its overall characteristics. The subsampling is done in a stratified manner to ensure that the new dataset has the same class distribution as the original dataset. The function is useful for reducing the size of large datasets while preserving their essential features.
 
-Features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label
+Features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label.
 
-Keywords: subsampling, machine learning, mathematics, stratified sampling, feature selection
+Keywords: Eye Movements, Subsampling, Stratified Sampling, Dataset Reduction, Feature Selection.

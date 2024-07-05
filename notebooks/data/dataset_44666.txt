@@ -1,13 +1,19 @@
-Machine Learning and Medicine Dataset: First Order Theorem Proving 
+Name: First Order Theorem Proving Seed Three
 
-This dataset is a subsampled version of the original First Order Theorem Proving dataset. It has undergone several transformations to reduce its size while maintaining its integrity.
+Tags: Subsampling of the dataset First Order Theorem Proving
 
-The subsampling process involved uniformly selecting classes from the original dataset. Since there were more classes than the maximum allowed, a selection was made based on their frequency of occurrence. This ensured that the most common classes were retained.
+Generated with the following source code:
 
-Next, the columns were uniformly sampled to reduce their number. A random selection of column indices was made, and only those columns were retained. 
+The subsample function is defined to take in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Finally, the rows were also reduced in number using stratified sampling. This method ensured that the class distribution was maintained even after reducing the number of rows.
+The function first initializes a random number generator with the given seed. It then selects a subset of classes from the unique classes in the dataset, ensuring that the number of selected classes does not exceed the maximum number of classes. The indices where one of these classes is present are selected, and the corresponding data and target values are subsetted.
 
-The resulting dataset consists of a subset of the original features, including variables one through fifty-one, and a class label. 
+If the number of columns in the dataset exceeds the maximum number of columns, the function uniformly samples columns to reduce the number of columns to the maximum. The selected columns are then subsetted from the original data.
 
-Keywords: machine learning, medicine, theorem proving, subsampling, stratification
+If the number of rows in the dataset exceeds the maximum number of rows, the function stratifies the data accordingly and splits it into a subset of the desired size. The target values are then separated from the data.
+
+Finally, the function returns a dataset with the subsetted data, target values, categorical mask, and column names.
+
+Features: 
+
+Keywords: First Order Theorem Proving, Subsampling, Dataset, Stratification, Random Sampling

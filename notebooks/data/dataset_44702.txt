@@ -1,13 +1,19 @@
-Fashion MNIST Seed Four 
+Name: Fashion MNIST Seed Four
 
-Tags: Demographics, Earth Science 
+Tags: Subsampling of the dataset Fashion MNIST with seed equal to four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and stratify equals true.
 
-Sub-sampling of the dataset Fashion MNIST with a seed of four. This sub-sampled dataset was generated using the following parameters: maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. 
+Generated with the following source code:
 
-The sub-sample function takes in several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It uses NumPy's default random generator to select classes, columns, and rows uniformly. 
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification. It uses a random number generator with the given seed to uniformly sample classes, columns, and rows from the dataset.
 
-If there are more classes than the specified maximum, it selects the specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present. 
+The function first samples classes, ensuring the number of classes does not exceed the maximum. It then selects the indices where one of these classes is present and updates the data and target arrays accordingly.
 
-If there are more columns than the specified maximum, it uniformly samples the columns. It also ensures that the resulting sub-sample has the correct categorical mask and column names.
+Next, it samples columns, ensuring the number of columns does not exceed the maximum. It updates the data array with the selected columns.
 
-Keywords: Fashion MNIST, demographics, earth science, subsampling, stratification
+Finally, it samples rows, ensuring the number of rows does not exceed the maximum. It uses stratified sampling if required, ensuring the target array is stratified accordingly.
+
+The function returns a dataset with the updated data, target array, categorical mask, and columns.
+
+Features: (skipped due to unreadability)
+
+Keywords: Fashion MNIST, subsampling, stratification, dataset, sampling.

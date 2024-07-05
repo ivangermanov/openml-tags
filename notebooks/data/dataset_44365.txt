@@ -1,50 +1,11 @@
-California Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+California Seed Three Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset California with seed equal to three arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals False 
+Tags: Subsampling of the dataset California with seed equal to three, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to false.
 
 Generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified) -> Dataset:
-random number generator = numpy random default random generator given the seed 
-x equals self x 
-y equals self y 
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments, and returns a dataset. It uses a random number generator with the given seed to uniformly sample classes from the unique values in the target variable, and selects the indices where one of these classes is present. It then uniformly samples columns if required, and stratifies the data accordingly. The function returns a dataset with the subsampled data, categorical mask, and columns.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes maximum:
-value counts of y equals y value counts 
-selected classes equals random number generator choice given classes of size number classes maximum replace equals false probability equals value counts divided by sum of value counts 
-Select the indices where one of these classes is present 
-idxs equals y index where y is in selected classes 
-x equals x iloc given idxs 
-y equals y iloc given idxs 
+Features: Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupancy, Latitude, Longitude, and Price.
 
-Uniformly sample columns if required 
-if length of x columns is greater than number columns maximum:
-column indexes equals random number generator choice given list range length of x columns of size number columns maximum replace equals false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns given sorted column indexes 
-x equals x given selected columns 
-else:
-sorted column indexes equals list range length of x columns 
-if length of x is greater than number rows maximum:
-Stratify accordingly 
-target name equals y name 
-data equals pandas concat given x and y axis equals columns 
-_, subset equals train test split given data test size equals number rows maximum stratify equals data given target name shuffle equals true random state equals seed 
-x equals subset drop given target name axis equals columns 
-y equals subset given target name 
-
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list self categorical mask given i for i in sorted column indexes 
-columns equals list x columns 
-return Dataset 
-Technically this is not the same but it's where it was derived from 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Features: Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupancy, Latitude, Longitude, Price 
-
-Keywords: dataset, subsampling, stratification, random sampling, feature selection
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection.

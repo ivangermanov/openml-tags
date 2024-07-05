@@ -1,11 +1,12 @@
-The Computer Activity database is a comprehensive collection of computer systems activity measures. This dataset was collected from a Sun Sparcstation 20/712 with 128 megabytes of memory running in a multi-user university department, where users would typically engage in a wide range of activities, including accessing the internet, editing files, or running CPU-bound programs.
+Name: CPU Small
+Tags: study
 
-The data was collected continuously on two separate occasions, with system activity being gathered every five seconds on both occasions. The final dataset combines data from both collections, with an equal number of observations coming from each collection epoch.
+The Computer Activity databases are a collection of computer systems activity measures. The data was collected from a Sun Sparcstation with megabytes of memory running in a multi-user university department. Users would typically be doing a large variety of tasks ranging from accessing the internet, editing files or running very CPU-bound programs. The data was collected continuously on two separate occasions. On both occasions, system activity was gathered every few seconds. The final dataset is taken from both occasions with equal numbers of observations coming from each collection epoch.
 
-This dataset includes various system measures, including reads and writes between system memory and user memory, system calls, reads and writes, forks, executions, character transfers, page outs, page ins, and page faults. It also captures process run queue sizes, available memory pages, available disk blocks for page swapping, and CPU usage percentages in user mode, system mode, idle waiting for block I/O, and otherwise idle.
+System measures used include reads and writes between system memory and user memory, number of system calls of various types, characters transferred by read and write calls, page out requests, pages paged out, pages placed on the free list, pages checked for freeing, page attaches, page-in requests, pages paged in, page faults caused by protection errors and address translation, process run queue size, memory pages available to user processes, disk blocks available for page swapping, and portions of time CPUs run in different modes or are idle.
 
-The two different regression tasks obtained from this dataset are predicting the percentage of time CPUs run in user mode from all attributes, and predicting the same using a restricted set of attributes excluding paging information.
+Two different regression tasks are obtained from these databases. The first task, CompAct, aims to predict the portion of time that CPUs run in user mode from all attributes excluding paging information. The second task, CompAct(s), predicts the same variable using a restricted number of attributes.
 
-Characteristics of this dataset include 8192 cases and 13 continuous attributes, featuring reads, writes, system calls, reads, writes, forks, executions, character transfers, process run queue sizes, available memory pages, and available disk blocks for page swapping.
+The original source of this data was the DELVE repository. It was later included in a collection of regression datasets. The dataset consists of thousands of cases with continuous attributes including system reads and writes, system calls, character transfers, queue size, available memory and swap space, and CPU utilization.
 
-Keywords: computer systems, CPU usage, memory management, system calls, regression tasks, dataset characteristics.
+Keywords: computer activity, system performance, CPU utilization, regression task, memory usage

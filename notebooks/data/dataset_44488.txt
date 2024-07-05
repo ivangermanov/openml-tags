@@ -1,19 +1,11 @@
-The Wilt dataset has been subsampled using the following parameters: Seed equal to zero, maximum number of rows set to two thousand, maximum number of columns set to one hundred, maximum number of classes set to ten, and stratification enabled.
+Name: Wilt Seed Zero Number of Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True
 
-This subsampling process was generated with the following source code:
+Tags: Subsampling of the dataset Wilt with seed equal to zero, number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratified equal to true.
 
-A function named subsample takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+Generated with the following source code:
 
-Within this function, a random number generator is initialized with the provided seed value. The input dataset is then split into its feature matrix X and target vector Y.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as parameters. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given parameters. If the number of classes is greater than the maximum number of classes, it selects a subset of classes using a weighted random choice. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum number of columns, it uniformly samples columns. If the number of rows is greater than the maximum number of rows, it stratifies the data and selects a subset of rows. Finally, it returns a dataset with the subset of data, categorical mask, and columns.
 
-If the number of unique classes in the target vector exceeds the maximum allowed, a subset of classes is randomly selected based on their frequency distribution. The indices corresponding to these selected classes are used to filter both the feature matrix and target vector.
+Features: Mean of Green, Mean of Red, Mean of Near Infrared, Standard Deviation of Plan, Class
 
-Next, if the number of columns in the feature matrix exceeds the maximum allowed, a random subset of columns is chosen. The feature matrix is then filtered to include only these selected columns.
-
-Finally, if the number of rows in the filtered feature matrix still exceeds the maximum allowed, stratified sampling is applied to reduce the dataset to the desired size. This involves concatenating the feature matrix and target vector, splitting the resulting dataset into a training set and a subset, and then separating the subset back into its feature matrix and target vector components.
-
-The resulting dataset is returned as an instance of the Dataset class, which includes the filtered feature matrix, target vector, categorical mask, and column names.
-
-Features: Mean Green, Mean Red, Mean Near-Infrared, Standard Deviation Planar, Class
-
-Keywords: machine learning, statistics, subsampling, stratification, dataset reduction
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, random sampling

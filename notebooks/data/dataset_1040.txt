@@ -1,9 +1,20 @@
-Sylva Prior is a dataset derived from the Cover Type dataset, focusing on Ecology and Life Science. The primary task of Sylva is to classify forest cover types, specifically distinguishing between Ponderosa Pine and other types.
+Name: Sylva Prior
+Tags: derived, mythbusting, study
 
-The dataset originates from the United States Forest Service (USFS) Region 2 Resource Information System (RIS) data, where the forest cover type for thirty-by-thirty-meter cells is obtained. This has been transformed into a two-class classification problem.
+Dataset from the Agnostic Learning vs. Prior Knowledge Challenge
 
-There are two tracks in this dataset: the Agnostic Learning Track and the Prior Knowledge Track. The Agnostic Learning Track data consists of 216 input variables, where each pattern comprises four records: two true records matching the target and two randomly selected records. As a result, half of the features are distractors. On the other hand, the Prior Knowledge Track data is identical to the Agnostic Learning Track data, except that the distractors have been removed, and the feature identities have been revealed. In the Prior Knowledge Track, the original forest cover IDs are disclosed for training data.
+Please cite: Datasets from the Agnostic Learning vs. Prior Knowledge Challenge
 
-This dataset contains a total of 108 features, which include elevation, aspect, slope, horizontal distance to hydrology, vertical distance to hydrology, horizontal distance to roadways, hill shade at 9 am, noon, and 3 pm, horizontal distance to fire points, and various wilderness areas. Additionally, there are multiple soil types, ranging from Soil Type 1 to Soil Type 40, along with duplicate features of the aforementioned variables.
+Note: Derived from the covertype dataset
 
-Keywords: Ecology, Life Science, Forest Cover Types, Ponderosa Pine, Classification Problem, Distractors, Feature Identities, Wilderness Areas, Soil Types.
+SYLVA is the ecology database. The task of SYLVA is to classify forest cover types. The forest cover type for thirty by thirty meter cells is obtained from US Forest Service Region Resource Information System data. It has been reduced to a two-class classification problem (classifying Ponderosa pine versus everything else).
+
+The "agnostic learning track" data consists of input variables. Each pattern is composed of four records: two true records matching the target and two records picked at random. Thus half of the features are distracters. The "prior knowledge track" data is identical to the "agnostic learning track" data, except that the distracters are removed and the identity of the features is revealed. For that track, the forest cover original ids are revealed for training data.
+
+Data type: non-sparse
+
+Features include: Elevation, Aspect, Slope, Horizontal Distance To Hydrology, Vertical Distance To Hydrology, Horizontal Distance To Roadways, Hillshade at various times of day, Horizontal Distance To Fire Points, various Wilderness Areas, and numerous Soil Types.
+
+The dataset includes training and validation sets with positive and negative examples. The data originates from the US Forest Service and has been modified for use in machine learning challenges. It provides a rich set of geographical and ecological variables for predicting forest cover types, particularly focusing on distinguishing Ponderosa pine from other types.
+
+Keywords: Forest ecology, Land classification, Machine learning, Geographical data, Soil types, Wilderness areas, Ponderosa pine

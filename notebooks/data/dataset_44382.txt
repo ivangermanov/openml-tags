@@ -1,53 +1,15 @@
-Name: Pol Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Pol Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Social Media, Statistics 
-
-Subsampling of the dataset Pol with seed equal to zero arguments N rows max equal to two thousand arguments N cols max equal to one hundred arguments N classes max equal to ten arguments no stratify equals False 
+Tags: Subsampling of the dataset Pol with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
 Generated with the following source code:
 
-def subsample(self, seed, N rows max equals two thousand, N cols max equals one hundred, N classes max equals ten, stratified equals True):
- 
-random number generator equals numpy dot random dot default random generator seed 
-X equals self X 
-Y equals self Y 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
 
-Uniformly sample classes equals Y unique 
-if length of classes is greater than N classes max:
-    value counts equals Y value counts 
-    selected classes equals random number generator choice classes size equals N classes max replace equals False probability equals value counts divided by sum of value counts 
-Select the indices where one of these classes is present 
-idxs equals Y index Y is in selected classes 
-X equals X iloc idxs 
-Y equals Y iloc idxs 
+The function starts by getting the unique classes in the dataset and selecting a random subset of them. It then selects the indices where one of these classes is present and uses these indices to subset the data. Next, it selects a random subset of columns and uses these columns to subset the data. Finally, it selects a random subset of rows and uses these rows to subset the data.
 
-Uniformly sample columns if required 
-if length of X columns is greater than N cols max:
-    column indexes equals random number generator choice list range length of X columns size equals N cols max replace equals False 
-    sorted column indexes equals sorted column indexes 
-    selected columns equals list X columns sorted column indexes 
-    X equals X selected columns 
-else:
-    sorted column indexes equals list range length of X columns 
+The function returns a new dataset with the subsampled data.
 
-if length of X is greater than N rows max:
-    Stratify accordingly 
-    target name equals Y name 
-    data equals pandas concat X comma Y axis equals columns 
-    underscore comma subset equals train test split data test size equals N rows max stratify equals data target name shuffle equals True random state equals seed 
-    X equals subset drop target name axis equals columns 
-    Y equals subset target name 
+Features: Binary Class
 
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list self categorical mask I for I in sorted column indexes 
-columns equals list X columns 
-return Dataset technically this is not the same but it is where it was derived from 
-dataset equals self dataset 
-X equals X 
-Y equals Y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Features: Binary Class 
-
-Keywords: social media, statistics, subsampling, dataset, stratification
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Subset, Classes, Columns, Rows

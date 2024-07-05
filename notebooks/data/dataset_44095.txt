@@ -1,34 +1,14 @@
-**Spambase**
+**Spambase Reproduced**
+**Tags:**
 
-Tags: Computer Systems, Machine Learning
+The Spam Email Database is a collection of emails that are classified as either spam or not spam. The concept of spam is diverse and includes advertisements for products or websites, make money fast schemes, chain letters, and pornography. Our collection of spam emails came from our postmaster and individuals who had filed spam, while our collection of non-spam emails came from filed work and personal emails.
 
-The Spambase dataset is a collection of emails that were labeled as spam or not spam. The concept of spam is diverse and includes advertisements for products or websites, make money fast schemes, chain letters, pornography, and more.
+The classification task for this dataset is to determine whether a given email is spam or not. The dataset is useful when constructing a personalized spam filter, but one would either have to blind such non-spam indicators or get a very wide collection of non-spam to generate a general-purpose spam filter.
 
-Our collection of spam emails came from our postmaster and individuals who had filed spam. Our collection of non-spam emails came from filed work and personal emails, and hence certain words and phrases, such as "George" and the area code "six five zero", are indicators of non-spam. These are useful when constructing a personalized spam filter. However, one would either have to blind such non-spam indicators or get a very wide collection of non-spam to generate a general-purpose spam filter.
+The dataset contains fifty-four attributes, including word frequency, character frequency, and capital run length attributes. The word frequency attributes indicate the percentage of words in the email that match a particular word. The character frequency attributes indicate the percentage of characters in the email that match a particular character. The capital run length attributes measure the length of sequences of consecutive capital letters.
 
-For background on spam, it is worth noting that spam is a significant problem that affects many people and organizations. It is estimated that a large percentage of all emails sent are spam, and it can be difficult to distinguish between spam and legitimate emails.
+The dataset also includes a class attribute that denotes whether the email was considered spam or not. The class attribute is a nominal attribute with two values: zero for non-spam emails and one for spam emails.
 
-### Attribute Information:
+Typical performance on this dataset is around seven percent misclassification error. False positives, which occur when good mail is marked as spam, are very undesirable. If we insist on zero false positives in the training and testing set, twenty to twenty-five percent of the spam passes through the filter.
 
-The last column denotes whether the email was considered spam or not, i.e., unsolicited commercial email. Most of the attributes indicate whether a particular word or character was frequently occurring in the email. The run-length attributes measure the length of sequences of consecutive capital letters.
-
-### Features:
-
-* Word frequency features
-* Character frequency features
-* Capital run length features
-* Class attribute (spam or not spam)
-
-### Scraped Data:
-
-Dataset Information:
-What do the instances in this dataset represent?
-Emails
-
-Additional Information:
-The classification task for this dataset is to determine whether a given email is spam or not. Typical performance is around seven percent misclassification error. False positives (marking good mail as spam) are very undesirable. If we insist on zero false positives in the training/testing set, twenty to twenty-five percent of the spam passed through the filter.
-
-Has Missing Values?
-Yes
-
-Keywords: Spambase, Spam Filter, Email Classification, Unsolicted Commercial Email, Personalized Spam Filter.
+**Keywords:** Spam Email, Classification, Personalized Spam Filter, Word Frequency, Character Frequency, Capital Run Length.

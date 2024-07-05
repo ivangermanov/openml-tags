@@ -1,39 +1,29 @@
-Tallo Tags: Tallo - a global tree allometry and crown architecture database.
+Tallo is a global tree allometry and crown architecture database. This dataset is a collection of georeferenced and taxonomically standardized records of individual trees for which stem diameter, height, and/or crown radius have been measured. The data was compiled from globally distributed sites and includes measurements for tree species. The dataset is for use case three in the referenced paper, predicting tree height based on climate data and stem diameter.
 
-This dataset is a recreation of the original Tallo dataset using Python scripts. It is a comprehensive collection of georeferenced and taxonomically standardized records of individual trees, comprising measurements of stem diameter, height, and/or crown radius. The data was compiled from numerous globally distributed sites, encompassing a vast range of tree species.
+The dataset contains a large portion of data that is ignored by default, set as attributes to be ignored. Samples are taken from different sources spanning decades, and multiple samples may be taken from distinct trees in the same approximate geographical location. These relationships between samples are ignored when generating tasks.
 
-The dataset includes a wide array of features, including unique tree identifiers, phylogenetic divisions, family and genus names, species binomials, geographic coordinates, and various tree characteristics such as stem diameter, height, and crown radius. Additionally, the dataset incorporates information on biogeographic realms, biome types, and climatic conditions, including mean annual rainfall, rainfall seasonality, aridity indices, mean annual temperatures, and maximum temperatures.
+The dataset features include:
 
-Each record also includes an identifier for trees with height or crown radius values flagged as outliers, as well as a reference code corresponding to the data source from which the record was obtained.
+* Tree ID: a unique tree identifier code
+* Division: the major phylogenetic division, either Angiosperm or Gymnosperm
+* Family: the family name
+* Genus: the genus name
+* Species: the species binomial name
+* Latitude: the latitude in decimal degrees
+* Longitude: the longitude in decimal degrees
+* Stem Diameter: the stem diameter in centimeters, log-scaled
+* Height: the tree height in meters, log-scaled
+* Crown Radius: the crown radius in meters
+* Height Outlier: an identifier for trees with height values flagged as outliers
+* Crown Radius Outlier: an identifier for trees with crown radius values flagged as outliers
+* Reference ID: the reference code corresponding to the data source from which a record was obtained
+* Realm: the biogeographic realm, following the classification of Olson et al.
+* Biome: the biome type, following the classification of Olson et al.
+* Mean Annual Rainfall: the mean annual rainfall in millimeters per year, obtained from the WorldClim2 database
+* Rainfall Seasonality: the rainfall seasonality, obtained from the WorldClim2 database
+* Aridity Index: the aridity index, calculated as mean annual precipitation over potential evapotranspiration, log-scaled
+* Mean Annual Temperature: the mean annual temperature in degrees Celsius, obtained from the WorldClim2 database
+* Maximum Temperature: the maximum temperature of the warmest month in degrees Celsius, obtained from the WorldClim2 database
+* AT AI: the ratio of mean annual temperature over log-scaled aridity index
 
-The constructed dataset and associated metadata are intended for use in predicting tree height based on climate data and stem diameter. As a result, a significant portion of the data is ignored by default, with certain attributes designated as ignored.
-
-It is essential to note that samples were taken from diverse sources across multiple decades, and multiple samples may have been taken from distinct trees in the same approximate geographical location. However, these relationships between samples are disregarded when generating tasks on OpenML.
-
-List of features with descriptions:
-
-| Field | Description |
-| --- | --- |
-| Tree ID | Unique tree identifier code |
-| Division | Major phylogenetic division (Angiosperm or Gymnosperm) |
-| Family | Family name |
-| Genus | Genus name |
-| Species | Species binomial name |
-| Latitude | Latitude (in decimal degrees) |
-| Longitude | Longitude (in decimal degrees) |
-| Stem Diameter Centimeters | Stem diameter (in centimeters), log-scaled (base ten) |
-| Height Meters | Tree height (in meters), log-scaled (base ten) |
-| Crown Radius Meters | Crown radius (in meters) |
-| Height Outlier | Identifier for trees with height values flagged as outliers |
-| Crown Radius Outlier | Identifier for trees with crown radius values flagged as outliers |
-| Reference ID | Reference code corresponding to the data source from which a record was obtained |
-| Realm | Biogeographic realm |
-| Biome | Biome type |
-| Mean Annual Rainfall | Mean annual rainfall (in millimeters per year) |
-| Rainfall Seasonality | Rainfall seasonality (coefficient of variation) |
-| Aridity Index | Aridity index (calculated as mean annual precipitation / potential evapotranspiration), log-scaled (base ten) |
-| Mean Annual Temperature | Mean annual temperature (in degrees Celsius) |
-| Maximum Temperature | Maximum temperature of the warmest month (in degrees Celsius) |
-| AT AI | Ratio of mean annual temperature over log-scaled aridity index |
-
-Keywords: Tallo, global tree allometry, crown architecture, tree characteristics, climatic conditions, biogeographic realms, biome types.
+Keywords: tree allometry, crown architecture, climate data, stem diameter, tree height, biogeographic realm, biome type, rainfall seasonality, aridity index.

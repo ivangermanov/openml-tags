@@ -1,14 +1,17 @@
-Machine Learning, Mathematics 
+Name: Credit G Seed Four Dataset
 
-Subsampling of the dataset Credit G with a specified seed value involves selecting a portion of the data while maintaining its overall characteristics. This process is essential in machine learning to reduce the size of the dataset without compromising its integrity.
+Tags: Subsampling of the Credit G dataset with seed four
 
-The subsampling function takes several parameters, including the seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function begins by uniformly sampling classes from the dataset, ensuring that all classes are represented proportionally. It then selects the corresponding indices where these classes are present.
+This dataset is a subsample of the original Credit G dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then further subsampling the resulting dataset to meet the specified maximum number of rows.
 
-If the number of columns exceeds the specified maximum, the function uniformly samples columns, preserving their order. Similarly, if the number of rows exceeds the maximum, the function employs stratified sampling to select a representative subset of the data.
+The original dataset was first filtered to select a subset of classes, ensuring that the resulting dataset had a balanced representation of each class. This was achieved by selecting a specified number of classes, and then choosing the indices where one of these classes was present.
 
-The resulting dataset consists of the selected features, target variable, and categorical mask. The categorical mask indicates which columns contain categorical variables, essential for preprocessing and modeling.
+Next, the dataset was filtered to select a subset of columns, ensuring that the resulting dataset had a specified maximum number of columns. This was achieved by uniformly sampling the columns and selecting the top specified number of columns.
 
-Features: 
-checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, class 
+Finally, the dataset was subsampled to meet the specified maximum number of rows. This was achieved by stratifying the dataset according to the target variable, and then selecting a subset of rows using a train-test split.
 
-Keywords: subsampling, machine learning, dataset, stratification, categorical variables.
+The resulting dataset has a specified number of rows, columns, and classes, and is a representative subsample of the original Credit G dataset.
+
+Features: Checking Status, Duration, Credit History, Purpose, Credit Amount, Savings Status, Employment, Installment Commitment, Personal Status, Other Parties, Residence Since, Property Magnitude, Age, Other Payment Plans, Housing, Existing Credits, Job, Number of Dependents, Own Telephone, Foreign Worker, Class
+
+Keywords: Credit Dataset, Subsampling, Stratification, Feature Selection, Class Balancing

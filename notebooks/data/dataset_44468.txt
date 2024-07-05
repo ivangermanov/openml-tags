@@ -1,19 +1,11 @@
-Machine Learning Model: Yeast Seed Zero 
+Name: Yeast Seed Zero Number of Rows Two Thousand Number of Classes Ten Number of Columns One Hundred Stratify True
 
-This model is a subsampled version of the Yeast dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
+Tags: Subsampling of the dataset Yeast with seed equal to zero, number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratified equal to true.
 
-The arguments used for subsampling include a seed value of zero, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the stratified sampling approach was employed.
+Generated with the following source code:
 
-The subsampling process began by uniformly selecting classes from the original dataset. If the total number of unique classes exceeded the specified maximum, a random selection of classes was made based on their frequency distribution. The indices corresponding to the selected classes were then identified, and the relevant data points were retained.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as parameters. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given parameters. If the number of classes is greater than the maximum number of classes, it selects a random subset of classes based on their frequency in the data. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum number of columns, it selects a random subset of columns. If the number of rows is greater than the maximum number of rows, it uses stratified sampling to select a subset of the data.
 
-Next, the columns were uniformly sampled. If the total number of columns exceeded the specified maximum, a random selection of columns was made. The selected columns were then retained, and the remaining columns were discarded.
+Features: Protein Localization
 
-Finally, the rows were sampled. If the total number of rows exceeded the specified maximum, a stratified sampling approach was employed to ensure that the class distribution was maintained.
-
-The resulting dataset consists of the sampled data points, along with their corresponding class labels and categorical mask information.
-
-Features include protein localization characteristics.
-
-Tags: Machine Learning, Mathematics
-
-Keywords: subsampling, Yeast dataset, machine learning, stratified sampling, uniform sampling.
+Keywords: Yeast Dataset, Subsampling, Stratified Sampling, Random Number Generator, Protein Localization

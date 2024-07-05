@@ -1,15 +1,11 @@
-Name: Sylvine Seed Three N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Sylvine Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Social Media, Statistics 
+Tags: Subsampling of the dataset Sylvine with seed equals three arguments n rows max equals two thousand arguments n columns max equals one hundred arguments n classes max equals ten arguments no stratify equals true
 
-This dataset is a subsampling of the original Sylvine dataset. The subsampling process involves uniformly sampling classes and columns from the original dataset. It also ensures that the resulting dataset has a maximum number of rows, columns, and classes.
+Generated with the following source code:
 
-The subsampling process starts by selecting a fixed number of classes from the original dataset using a random number generator. This is done to ensure that the resulting dataset has a good representation of all classes. Then, the columns are uniformly sampled to reduce the dimensionality of the dataset.
+The subsample function takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. It then subsets the data accordingly. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data. Finally, it returns a dataset with the subsetted data and the corresponding categorical mask and columns.
 
-If the number of rows in the resulting dataset exceeds a certain threshold, stratified sampling is applied to reduce the number of rows while maintaining the class balance. This involves splitting the dataset into training and testing sets using a stratified approach.
+Features: 
 
-Finally, the categorical columns are converted to strings to conform to OpenML standards. The resulting dataset is then returned with its features, target variable, and categorical mask.
-
-Features: (skipped due to unreadability)
-
-Keywords: social media, statistics, subsampling, stratified sampling, class balance, OpenML
+Keywords: Subsampling, Dataset, Stratified, Random Sampling, Data Subset

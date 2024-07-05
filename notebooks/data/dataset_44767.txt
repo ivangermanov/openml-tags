@@ -1,13 +1,13 @@
-Click Prediction Small Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+Click Prediction Small Seed Four Dataset
 
-This dataset is a subsampling of the Click Prediction Small dataset. It was generated using a specific set of arguments, including a seed value of four, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The stratification option was set to true.
+Tags: Subsampling of the Click Prediction Small Dataset with Seed Four
 
-The subsampling process involved several steps. First, the unique classes in the target variable were identified, and then a random selection of ten classes was made using a probability proportional to their frequency in the dataset. The indices corresponding to these selected classes were then used to subset the data.
+This dataset is a subsample of the Click Prediction Small dataset, generated with a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes are present in the resulting dataset. The number of classes was limited to a maximum of ten.
 
-Next, the columns of the dataset were uniformly sampled to select a maximum of one hundred columns. This was done by generating a random permutation of the column indices and selecting the first one hundred elements of this permutation.
+The columns of the dataset were also uniformly sampled, with a maximum of one hundred columns selected. The resulting dataset has a subset of the original columns, with the categorical columns converted to string format for OpenML compatibility.
 
-Finally, the dataset was further subsampled to reduce its size to a maximum of two thousand rows. This was done using stratified sampling, which ensures that the class distribution is preserved in the subsampled dataset.
+The dataset was generated using a specific source code, which involved using the NumPy random default generator to sample the classes and columns. The stratified sampling method was used to ensure that the resulting dataset is representative of the original dataset.
 
-The resulting dataset contains a subset of the original features, including impression, URL, ad ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, and user ID. 
+The features of this dataset include impression, URL hash, ad identifier, advertiser identifier, depth, position, query identifier, keyword identifier, title identifier, description identifier, and user identifier. The click feature is also included in the dataset.
 
-Keywords: click prediction, subsampling, stratification, dataset reduction
+Keywords: click prediction, dataset subsampling, stratified sampling, OpenML compatibility, categorical columns.

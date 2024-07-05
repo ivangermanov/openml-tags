@@ -1,13 +1,21 @@
-We consider the problem of scheduling tasks on multiple servers, each with limited capacity for central processing unit, memory, and input/output attributes. These tasks have specific durations, earliest start times, and latest end times, as well as resource requirements for central processing unit, memory, and input/output attributes. The tasks can be scheduled on any of the multiple servers, as long as the total resource consumption does not exceed the server's capacity.
+The electricity prices ICON dataset focuses on a cloud computing service scheduling problem. Customers contract to run computing tasks with specific durations, start/end times, and resource requirements for CPU, memory, and I/O. These tasks must be scheduled on multiple servers with limited capacities, allowing concurrent execution if total resource consumption remains below capacity. Tasks cannot be interrupted once started and must run within their release and due dates, not extending past midnight.
 
-All tasks must be completed within their specified time frames, which do not extend beyond midnight between two consecutive days. Once a task is started, it cannot be interrupted and must run for its entire duration. Furthermore, if a server is utilized by a task, it must be operational during that time.
+Machines consume idle power when on and incur startup and shutdown costs. All machines begin and end the planning period in an off state. Electricity prices for the data center vary in real-time throughout the day, requiring the use of forecasts for scheduling. The total cost is determined after applying actual prices to energy consumption in each time period.
 
-In addition to the costs associated with running the allocated tasks, the server also consumes idle power when it is turned on. There are also startup and shutdown costs incurred every time a server is powered on or off. At the beginning and end of the planning period, all servers are turned off.
+The forecast problem involves predicting electricity prices one day in advance using historical and forecasted data from September onwards. Data fields include date and time, holiday information, day of week, week of year, day, month, year, period of day, forecasted wind production, national load forecast, price forecast, temperature and windspeed measurements, CO intensity, actual wind production, actual system load, and actual price.
 
-The electricity price for the data center varies throughout the day and is unknown in advance. A forecast is used to generate a schedule, and the actual cost is determined after the fact by applying the real-time electricity price to the energy consumption in each time period. A single forecast of the price is provided, but there may be significant discrepancies between the forecast and actual prices, allowing for opportunities to create more accurate forecasts using historical data on demand and prices, as well as prior forecast information. It is important to note that a highly accurate forecast does not necessarily guarantee a low-cost schedule.
+The challenge offers opportunities to generate improved forecasts based on historical demand, prices, and previous forecast information. However, a low-error forecast does not guarantee a low-cost schedule. The dataset provides a comprehensive set of features for analysis and prediction, with some fields only available for historical data.
 
-In the forecasting problem, we aim to predict the actual electricity price for the next day based on historical and forecasted data. Historical data is available from September 2011 onward, with missing values denoted by question marks.
+This problem combines elements of resource scheduling, energy management, and price forecasting in a cloud computing context. It requires balancing task execution requirements with fluctuating electricity prices to optimize overall operational costs.
 
-The data includes various fields, including date and time, holiday information, day of the week, week of the year, day, month, year, half-hour period of the day, forecasted wind production, national load forecast, price forecast, actual temperature, actual wind speed, carbon dioxide intensity, actual wind energy production, actual national system load, and actual price.
-
-Keywords: scheduling, forecasting, electricity price, cloud computing, resource allocation, energy consumption.
+Keywords:
+- Cloud computing scheduling
+- Electricity price forecasting
+- Resource allocation
+- Energy optimization
+- Real-time pricing
+- Task scheduling
+- Data center management
+- Renewable energy integration
+- Load balancing
+- Time series prediction

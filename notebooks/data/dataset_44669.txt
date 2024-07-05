@@ -1,11 +1,17 @@
-Gesture Phase Segmentation Processed Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Gesture Phase Segmentation Processed Seed One
 
-This dataset is a subsampling of the Gesture Phase Segmentation Processed dataset, which consists of four thousand five hundred thirty-eight samples. The subsampling was performed using a specific set of arguments, including a seed value of one, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the stratify argument was set to true.
+Tags: Subsampling of the dataset Gesture Phase Segmentation Processed generated with the following source code:
 
-The subsampling process involved uniformly sampling classes from the original dataset, selecting ten classes out of the total number of unique classes. The indices corresponding to these selected classes were then used to filter the dataset, resulting in a reduced number of samples.
+This function subsamples a dataset to reduce its size while maintaining its overall characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, as well as a flag for stratified sampling.
 
-Furthermore, the process also involved uniformly sampling columns from the filtered dataset, selecting one hundred columns out of the total number of columns. This was done to reduce the dimensionality of the dataset while preserving the most important features.
+The function first uniformly samples classes from the dataset, ensuring that the selected classes are representative of the original dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-The resulting dataset consists of two thousand samples, each with one hundred features. The features are represented by column names ranging from X One to X Thirty-Two, and the target variable is represented by the Phase column.
+Next, the function uniformly samples columns from the dataset, selecting a specified number of columns at random. If the number of rows in the dataset exceeds the maximum allowed, the function stratifies the data and samples a subset of rows, ensuring that the sampled data is representative of the original dataset.
 
-Keywords: Gesture Phase Segmentation, subsampling, stratification, feature selection, class selection, dataset reduction.
+The function returns a new dataset with the subsampled data, including the categorical mask and column names.
+
+Features: 
+
+Phase
+
+Keywords: dataset subsampling, stratified sampling, data reduction, reproducibility, class sampling, column sampling.

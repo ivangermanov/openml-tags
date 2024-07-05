@@ -1,17 +1,11 @@
-Subsampling of the dataset Riccardo with the following parameters: 
+Subsampling of the dataset Riccardo with seed equals one, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals True.
 
-The function takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to use stratification. 
+Generated with the following source code:
 
-First, it uniformly samples the classes. If there are more than the specified maximum number of classes, it selects the desired number using a probability proportional to their frequency in the dataset. It then selects the indices where one of these classes is present.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
 
-Next, it uniformly samples the columns if required. If there are more columns than the specified maximum, it randomly chooses the desired number.
+The function uses the train test split function from scikit learn to split the data into a subset and the rest. The subset is then returned as a new dataset.
 
-Finally, it samples the rows accordingly. If there are more rows than the specified maximum, it uses stratified sampling based on the target variable.
+Features: 
 
-The resulting dataset contains only the selected columns and rows, and the categorical mask is adjusted accordingly.
-
-Tags: Machine Learning, Mathematics
-
-Features: various numerical variables
-
-Keywords: subsampling, dataset, machine learning, stratification, sampling
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Generator, Columns, Rows, Classes.

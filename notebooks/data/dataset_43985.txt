@@ -1,12 +1,18 @@
-isolet 
+Isolet Dataset
+
 Tags: Dataset used in the tabular data benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark.
 
-The Isolet dataset was generated as follows: one hundred fifty subjects spoke the name of each letter of the alphabet twice. Hence, there are training examples from each speaker. The speakers are grouped into sets of thirty speakers each, four groups can serve as training set, the last group as the test set. A total of examples are missing, the authors dropped them due to difficulties in recording. This is a good domain for a noisy, perceptual task. It is also a very good domain for testing the scaling abilities of algorithms.
+The Isolet dataset was generated as follows: subjects spoke the name of each letter of the alphabet twice. Hence, there are training examples from each speaker. The speakers are grouped into sets of speakers each, four groups can serve as training set, the last group as the test set. A total of examples are missing, the authors dropped them due to difficulties in recording. This is a good domain for a noisy, perceptual task. It is also a very good domain for testing the scaling abilities of algorithms. For example, an algorithm on this domain is slower than backpropagation!
 
-The Isolet dataset is a good domain for a noisy, perceptual task because it involves speech recognition, which is inherently noisy and prone to errors. Additionally, the large number of speakers and examples makes it an excellent choice for testing the scalability of machine learning algorithms.
+Source: UCI
 
-All attributes are continuous, real-valued attributes scaled into a specific range. The features are described in a research paper and include various types of coefficients, contour features, sonorant features, pre-sonorant features, and post-sonorant features.
+Description
+Isolet (Isolated Letter Speech Recognition) dataset is a good domain for a noisy, perceptual task. It is also a very good domain for testing the scaling abilities of algorithms.
 
-The Isolet dataset has been widely used in research papers, including one on spoken letter recognition and another on error-correcting output codes. These papers demonstrate the versatility and usefulness of the Isolet dataset in machine learning tasks.
+Attributes Information
+All attributes are continuous, real-valued attributes scaled into the range from negative one point zero to one point zero. The features are described in the paper cited below. The features include spectral coefficients, contour features, sonorant features, pre-sonorant features, and post-sonorant features.
 
-Keywords: Isolet, classification, numerical features, speech recognition, machine learning, scalability, noise, perceptual task.
+Relevant Papers
+Spoken letter recognition. In Advances in Neural Information Processing Systems. Error-correcting output codes: A general method for improving multiclass inductive learning programs. Proceedings of the National Conference on Artificial Intelligence. Solving Multiclass Learning Problems via Error-Correcting Output Codes.
+
+Keywords: Isolet, Speech Recognition, Classification, Numerical Features, Perceptual Task, Scaling Abilities.

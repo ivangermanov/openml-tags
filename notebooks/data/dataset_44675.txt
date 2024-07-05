@@ -1,15 +1,15 @@
-Phishing Websites Seed Two Dataset 
+Phishing Websites Dataset Seed Two
 
-This dataset is a subsampled version of the Phishing Websites dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes and columns to reduce the dimensionality of the dataset while preserving its overall structure.
+This dataset is a subsample of the Phishing Websites dataset, generated with a seed of two. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size.
 
-The dataset has been stratified to ensure that the sampled classes are representative of the original distribution. This involved selecting a fixed number of classes based on their frequency in the original dataset and then sampling the corresponding instances.
+The dataset was generated using a Python function that takes in several arguments, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sample. The function uses the NumPy random default generator to ensure reproducibility.
 
-The column selection process involved uniformly choosing a subset of columns from the original dataset. This was done to reduce the feature space while retaining the most informative features.
+The subsampling process first involves selecting a subset of classes. If the number of unique classes exceeds the maximum number of classes, the function selects a random subset of classes, weighted by their frequency in the dataset. The function then selects the indices where one of these classes is present and filters the dataset accordingly.
 
-The resulting dataset consists of a subset of instances and features from the original Phishing Websites dataset. It has been carefully constructed to preserve the underlying relationships between the variables while reducing its size and complexity.
+Next, the function uniformly samples columns if the number of columns exceeds the maximum number of columns. The function selects a random subset of column indices, sorts them, and filters the dataset to include only these columns.
 
-Tags: Economics, Statistics 
+Finally, the function stratifies the dataset according to the target variable and selects a random subset of rows, ensuring that the sample is representative of the original dataset.
 
-Features: Having IP Address, URL Length, Using Shortening Service, Presence of At Symbol, Double Slash Redirecting, Prefix Suffix, Presence of Sub Domain, SSL Final State, Domain Registration Length, Favicon, Port, HTTPS Token, Request URL, URL of Anchor, Links in Tags, Server Form Handler, Submitting to Email, Abnormal URL, Redirect, On Mouse Over, Right Click, Pop Up Window, Iframe, Age of Domain, DNS Record, Web Traffic, Page Rank, Google Index, Links Pointing to Page, Statistical Report 
+The resulting dataset includes a range of features, including whether the URL has an IP address, the length of the URL, the presence of a shortening service, and the domain registration length. The dataset also includes features related to the website's content, such as the presence of a favicon, the use of HTTPS, and the presence of abnormal URLs.
 
-Keywords: phishing websites, dataset, subsampling, stratification, feature selection, economics, statistics
+Keywords: phishing websites, dataset subsampling, stratified sampling, feature selection, URL analysis.

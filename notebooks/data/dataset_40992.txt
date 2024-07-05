@@ -1,13 +1,11 @@
-The Sylva Agnostic dataset is part of the Agnostic Learning versus Prior Knowledge Challenge, which aimed to compare the performance of domain-specific feature engineering (prior knowledge) with algorithms trained on anonymized and preprocessed data without any domain-specific knowledge (agnostic).
+The Sylva Agnostic dataset is derived from the Agnostic Learning vs. Prior Knowledge Challenge. This dataset contains the agnostic version of a dataset from the Remote Sensing and GIS Program of Colorado State University for the time span June 2005 to September 2006. A similar, raw, and not-agnostic dataset is termed the Covertype Dataset and can be found in the UCI Database.
 
-This dataset contains the agnostic version of a dataset from the Remote Sensing and GIS Program of Colorado State University, covering the time span from June 2005 to September 2006. A similar, raw, and not-agnostic dataset is known as the Covertype Dataset and can be found in the UCI Database.
+The task of Sylva is to classify forest cover types. The forest cover type for thirty by thirty meter cells is obtained from the US Forest Service Region Two Resource Information System data. We brought it back to a two-class classification problem, classifying Ponderosa pine versus everything else.
 
-The task of Sylva is to classify forest cover types, where the forest cover type for thirty-by-thirty-meter cells is obtained from US Forest Service Region Two Resource Information System data. We transformed this into a two-class classification problem, classifying Ponderosa pine versus everything else.
+The agnostic data consists of two hundred sixteen input variables. Each pattern is composed of four records: two true records matching the target and two records picked at random. Thus, half of the features are distracters. The prior knowledge data is identical to the agnostic data, except that the distracters are removed and the identity of the features is revealed.
 
-The agnostic data consists of two hundred sixteen input variables. Each pattern is composed of four records: two true records matching the target and two records picked at random. As a result, half of the features are distractors. The prior knowledge data is identical to the agnostic data, except that the distractors are removed and the identity of the features is revealed.
+Data type is non-sparse. This dataset contains samples from both training and validation datasets.
 
-Data type is non-sparse, and the dataset contains samples from both training and validation datasets.
+Original owners are the Remote Sensing and GIS Program, Department of Forest Sciences, College of Natural Resources, Colorado State University, Fort Collins, Colorado.
 
-Original owners are the Remote Sensing and GIS Program, Department of Forest Sciences, College of Natural Resources, Colorado State University, Fort Collins.
-
-Keywords: Agnostic Learning, Prior Knowledge, Forest Cover Types, Classification, Remote Sensing, GIS Program.
+Keywords: forest cover type, agnostic learning, prior knowledge, classification, remote sensing, GIS.

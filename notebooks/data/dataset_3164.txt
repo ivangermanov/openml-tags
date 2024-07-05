@@ -1,18 +1,31 @@
-QSAR-TID-136
-Tags: Images, Machine Learning, MTLQSAR, study_3
+Name: QSAR-TID-136 Tags: MTLQSAR, study_3
 
-This dataset contains QSAR data showing activity values of several compounds on drug target Delta opioid receptor, and it has multiple rows and features including IDs and class feature.
+Source: MetaQSAR project - September 2015
 
-The features represent molecular fingerprints which were generated from SMILES strings using the Pipeline Pilot program.
+Please cite: This dataset contains QSAR data (from ChEMBL version 17) showing activity values (unit is pseudo-pCI50) of several compounds on drug target TID: 136, and it has rows and features (including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50). The features represent FCFP 1024bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Features: MOLECULE_CHEMBL_ID, FCFP6_1024_0, FCFP6_1024_1, FCFP6_1024_2, FCFP6_1024_3, and more...
 
-Features include molecule identifiers, fingerprints, and median pXC50.
+Scraped Data:
+ID: CHEMBL236
+Type: SINGLE PROTEIN
+Preferred Name: Delta opioid receptor
+Synonyms: Delta type opioid receptor, DOR 1, OPRD, OPRD1
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Membrane receptor/Family A G protein coupled receptor/Peptide receptor (family A GPCR)/Short peptide receptor (family A GPCR)/Opioid receptor
 
-The Delta opioid receptor is a single protein, also known as Delta-type opioid receptor, D-OR-1, DOR-1, OPRD, and OPRD1. It belongs to the species group Homo sapiens and is classified as a membrane receptor, family A G protein-coupled receptor, peptide receptor, and opioid receptor.
+Description:
+The delta opioid receptor is a G protein coupled receptor involved in pain modulation and other physiological processes. It belongs to the opioid receptor family and is activated by endogenous opioid peptides as well as exogenous opioid drugs. The receptor is expressed in the central and peripheral nervous systems and plays a role in analgesia, mood regulation, and addiction.
 
-The Delta opioid receptor is involved in various biological processes, including immune response, signal transduction, and G protein-coupled receptor signaling pathways. It is also associated with certain diseases and disorders, such as addiction and pain.
+Relationships:
+The delta opioid receptor is part of several selectivity groups and protein families related to opioid receptors. It has relationships with mu and kappa opioid receptors as part of opioid receptor selectivity groups and families.
 
-Several compounds have been identified as agonists or antagonists of the Delta opioid receptor, including axomadol, ADL-5859, ADL-5747, AZD-7268, and samidorphan. These compounds have undergone various phases of clinical trials and have shown potential therapeutic effects.
+Approved Drugs:
+Several compounds targeting the delta opioid receptor have reached clinical trials, including agonists and partial agonists. Some examples that have progressed to phase 2 or beyond include axomadol, ADL 5859, ADL 5747, and AZD 7268. Samidorphan, a partial agonist, received FDA approval in 2021.
 
-Keywords: QSAR, Delta opioid receptor, machine learning, molecular fingerprints, G protein-coupled receptor, signal transduction, immune response, addiction, pain.
+Gene Ontology:
+The delta opioid receptor is associated with numerous cellular components, molecular functions, and biological processes according to Gene Ontology annotations. These include localization in neuronal membranes and projections, G protein coupled receptor activity, neuropeptide signaling, pain modulation, and regulation of various cellular processes.
+
+Keywords:
+Delta opioid receptor, QSAR, molecular fingerprints, G protein coupled receptor, analgesia, opioid signaling, drug discovery

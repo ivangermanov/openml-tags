@@ -1,7 +1,17 @@
-Fri C One Dataset: This dataset is a binarized version of the original dataset, where the numeric target feature has been converted into a two-class nominal target feature. This was achieved by computing the mean and then classifying all instances with a lower target value as Positive and all others as Negative.
+Name: fri c one two five zero five zero
 
-This dataset belongs to the categories of Chemistry, Life Science, Mythbusting, Study, and features fifty variables, including ozone one through ozone fifty.
+Tags: mythbusting, study
 
-The Binary Class feature has been included to provide a clear classification of the instances.
+Source: Unknown - Date unknown
 
-Keywords: Dataset, Binarized, Nominal Target Feature, Chemistry, Life Science, Mythbusting, Study.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
+
+Features: This dataset contains fifty features labeled as oz followed by a number. The final feature is binaryClass.
+
+This dataset is a modified version of an original dataset, where the numeric target feature has been converted into a binary classification problem. The conversion process involved calculating the mean value of the target feature across all instances. Instances with target values below this mean were classified as positive ('P'), while those above or equal to the mean were classified as negative ('N'). This binarization allows for the application of classification algorithms to what was originally a regression problem.
+
+The dataset consists of fifty input features, each labeled with the prefix "oz" followed by a number. These features likely represent various measurements or attributes relevant to the classification task at hand. The final feature, "binaryClass," serves as the target variable for the classification problem, containing either 'P' or 'N' labels for each instance.
+
+Researchers and data scientists using this dataset should be aware of its modified nature and cite it appropriately in their work. The original source and date of creation for this dataset are unknown, which may limit some aspects of reproducibility or contextual understanding.
+
+Keywords: binarized dataset, classification, feature conversion, mean thresholding, positive-negative labeling

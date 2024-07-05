@@ -1,13 +1,21 @@
-QSAR-TID-100140 Dataset 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 100140. The dataset has multiple rows and features, including IDs and class feature. The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset was obtained from the MetaQSAR project in September 2015 and should be cited accordingly.
+Features include MOLECULE CHEMBL ID and various FCFP fingerprint bits.
 
-The drug target, also known as Serine/Threonine-Protein Kinase c-TAK1, is a single protein enzyme that belongs to the CAMK protein kinase group and CAMK1 family. It has multiple synonyms, including Cdc25C-Associated Protein Kinase 1, cTAK1, CTAK1, C-TAK1, ELKL Motif Kinase 2, and others.
+The dataset describes a serine/threonine protein kinase c TAK also known as Cdc associated protein kinase cTAK CTAK C TAK ELKL motif kinase. It is classified as an Enzyme/Kinase/Protein Kinase/CAMK protein kinase group/CAMK protein kinase CAMK family/CAMK protein kinase MARK subfamily. The protein is found in Homo sapiens.
 
-The enzyme is involved in various cellular processes, including protein phosphorylation, phosphorylation, peptidyl-serine phosphorylation, positive regulation of protein binding, negative regulation of Hippo signaling, intracellular signal transduction, and peptidyl-serine autophosphorylation.
+Gene ontology annotations indicate the protein is involved in various cellular components including cytoplasm, cytosol, plasma membrane, dendrites, and extracellular exosomes. Its molecular functions include nucleotide binding, protein kinase activity, ATP binding, and tau protein binding. Biological processes it participates in are protein phosphorylation, intracellular signal transduction, and regulation of hippo signaling.
 
-It is also associated with multiple cellular components, including cytoplasm, cytosol, plasma membrane, membrane, dendrite, cell projection, and extracellular exosome.
+The protein has entries in multiple databases including UniProt, InterPro, Pfam, and PDBe. It is associated with MAP/microtubule affinity regulating kinase and involved in signaling pathways such as RAF activation, MAP K activation, and regulation of MAPK pathways.
 
-Keywords: QSAR, drug target, Serine/Threonine-Protein Kinase, c-TAK1, enzyme, protein phosphorylation, cellular process.
+Keywords:
+QSAR
+Protein kinase
+Molecular fingerprints
+Signal transduction
+Phosphorylation
+Enzyme activity
+Drug target

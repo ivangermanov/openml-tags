@@ -1,36 +1,21 @@
-This Automobile dataset consists of three types of entities: the specification of an automobile in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other automobiles. The second rating corresponds to the degree to which the automobile is more risky than its price indicates. Automobiles are initially assigned a risk factor symbol associated with its price. Then, if it is more risky or less, this symbol is adjusted by moving it up or down the scale. Actuarians call this process "symboling." A value of plus three indicates that the automobile is risky, minus three that it is probably pretty safe.
+Autos Dataset
 
-The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all automobiles within a particular size classification, such as two-door small, station wagons, sports/specialty, etc., and represents the average loss per car per year. Several of the attributes in the database could be used as a class attribute.
+Tags: study, uci
 
-Sources include the 1985 Model Import Car and Truck Specifications, the 1985 Ward's Automotive Yearbook, Personal Auto Manuals from the Insurance Services Office, and the Insurance Collision Report from the Insurance Institute for Highway Safety.
+Source: UCI - 1987
 
-Attribute information includes:
+Please cite: 1985 Auto Imports Database
 
-* Symboling, ranging from minus three to plus three
-* Normalized Losses, a continuous value ranging from sixty-five to two hundred fifty-six
-* Make, including Alfa Romero, Audi, BMW, Chevrolet, Dodge, Honda, Isuzu, Jaguar, Mazda, Mercedes Benz, Mercury, Mitsubishi, Nissan, Peugeot, Plymouth, Porsche, Renault, Saab, Subaru, Toyota, Volkswagen, and Volvo
-* Fuel Type, either diesel or gas
-* Aspiration, either standard or turbo
-* Number of Doors, either four or two
-* Body Style, including hardtop, wagon, sedan, hatchback, and convertible
-* Drive Wheels, either four-wheel drive, front-wheel drive, or rear-wheel drive
-* Engine Location, either front or rear
-* Wheel Base, a continuous value ranging from eighty-six point six to one hundred twenty point nine
-* Length, a continuous value ranging from one hundred forty-one point one to two hundred eight point one
-* Width, a continuous value ranging from sixty point three to seventy-two point three
-* Height, a continuous value ranging from forty-seven point eight to fifty-nine point eight
-* Curb Weight, a continuous value ranging from one thousand four hundred eighty-eight to four thousand sixty-six
-* Engine Type, including DOHC, DOHCV, L, OHC, OHCF, OHCV, and rotor
-* Number of Cylinders, including eight, five, four, six, three, twelve, and two
-* Engine Size, a continuous value ranging from sixty-one to three hundred twenty-six
-* Fuel System, including one barrel, two barrels, four barrels, IDI, MFI, MPFI, SPDI, and SPFI
-* Bore, a continuous value ranging from two point five four to three point ninety-four
-* Stroke, a continuous value ranging from two point zero seven to four point one seven
-* Compression Ratio, a continuous value ranging from seven to twenty-three
-* Horsepower, a continuous value ranging from forty-eight to two hundred eighty-eight
-* Peak RPM, a continuous value ranging from four thousand one hundred fifty to six thousand six hundred
-* City MPG, a continuous value ranging from thirteen to forty-nine
-* Highway MPG, a continuous value ranging from sixteen to fifty-four
-* Price, a continuous value ranging from five thousand one hundred eighteen to forty-five thousand four hundred
+This dataset consists of three types of entities: the specification of an automobile in terms of various characteristics, its assigned insurance risk rating, and its normalized losses in use as compared to other cars. The second rating corresponds to the degree to which the automobile is more risky than its price indicates. Cars are initially assigned a risk factor symbol associated with its price. Then, if it is more risky (or less), this symbol is adjusted by moving it up (or down) the scale. Actuaries call this process "symboling". A value of plus three indicates that the auto is risky, minus three that it is probably quite safe. The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all automobiles within a particular size classification (two door small, station wagons, sports/specialty, etc.), and represents the average loss per car per year.
 
-Keywords: Automobile, Insurance Risk Rating, Normalized Losses, Symboling, Actuarian, Class Attribute, Vehicle Characteristics, Size Classification, Average Loss Payment.
+Several of the attributes in the database could be used as a "class" attribute. The dataset includes information on various car makes such as Alfa Romeo, Audi, BMW, Chevrolet, Dodge, Honda, Isuzu, Jaguar, Mazda, Mercedes Benz, Mercury, Mitsubishi, Nissan, Peugeot, Plymouth, Porsche, Renault, Saab, Subaru, Toyota, Volkswagen, and Volvo.
+
+Attributes include symboling, normalized losses, make, fuel type, aspiration, number of doors, body style, drive wheels, engine location, wheel base, length, width, height, curb weight, engine type, number of cylinders, engine size, fuel system, bore, stroke, compression ratio, horsepower, peak rpm, city mpg, highway mpg, and price.
+
+The dataset contains both categorical and continuous variables. Categorical variables include fuel type (diesel, gas), aspiration (standard, turbo), number of doors (four, two), body style (hardtop, wagon, sedan, hatchback, convertible), drive wheels (four wheel drive, front wheel drive, rear wheel drive), engine location (front, rear), engine type, number of cylinders, and fuel system.
+
+Continuous variables range from normalized losses (65 to 256), wheel base (86.6 to 120.9), length (141.1 to 208.1), width (60.3 to 72.3), height (47.8 to 59.8), curb weight (1488 to 4066), engine size (61 to 326), bore (2.54 to 3.94), stroke (2.07 to 4.17), compression ratio (7 to 23), horsepower (48 to 288), peak rpm (4150 to 6600), city mpg (13 to 49), highway mpg (16 to 54), and price (5118 to 45400).
+
+This dataset has been used in past research for instance based prediction of real valued attributes in the field of computational intelligence.
+
+Keywords: automobiles, insurance risk, vehicle specifications, symboling, normalized losses, car attributes

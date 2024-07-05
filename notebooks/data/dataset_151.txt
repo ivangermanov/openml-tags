@@ -1,11 +1,25 @@
-The Electricity dataset is a widely used collection of data described and analyzed in various studies. This data was collected from the Australian New South Wales Electricity Market, where prices are not fixed and are affected by the demand and supply of the market, being set every five minutes. To alleviate fluctuations, electricity transfers to/from the neighboring state of Victoria were done. 
+Electricity
 
-The dataset contains a large number of instances, dated from May seventh nineteen ninety-six to December fifth nineteen ninety-eight. Each example of the dataset refers to a period of thirty minutes, resulting in forty-eight instances for each time period of one day. 
+Tags: AzurePilot, concept drift, electricity, mythbusting, OpenML-CC, OpenML, study
 
-Each example on the dataset has several fields: the day of the week, the time stamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label. The class label identifies the change of the price, either up or down, in New South Wales relative to a moving average of the last twenty-four hours, removing the impact of longer-term price trends.
+Electricity is a widely used dataset in the field of data science and machine learning. This data was collected from the Australian New South Wales Electricity Market. In this market, prices are not fixed and are affected by demand and supply dynamics. Prices are set at five-minute intervals. Electricity transfers to and from the neighboring state of Victoria were conducted to alleviate fluctuations.
 
-The data was normalized to facilitate analysis. 
+The dataset, originally named ELEC, contains numerous instances dated from May to December. Each example in the dataset refers to a period of thirty minutes, meaning there are multiple instances for each time period of one day. Each example in the dataset has several fields: the day of the week, the timestamp, the New South Wales electricity demand, the Victoria electricity demand, the scheduled electricity transfer between states, and the class label.
 
-Attribute information includes the date, which is normalized between zero and one; the day of the week; the period, which is the time of the measurement in half-hour intervals over twenty-four hours, also normalized between zero and one; the New South Wales electricity price, normalized between zero and one; the New South Wales electricity demand, normalized between zero and one; the Victoria electricity price, normalized between zero and one; the Victoria electricity demand, normalized between zero and one; and the scheduled electricity transfer between both states, normalized between zero and one.
+The class label identifies the change of the price (UP or DOWN) in New South Wales relative to a moving average of the last twenty-four hours, effectively removing the impact of longer-term price trends. The data was subsequently normalized to enhance its usability in various analytical contexts.
 
-Keywords: Electricity, Australian New South Wales Electricity Market, Demand, Supply, Price Trends.
+Attribute information includes:
+- Date: date within the specified range, normalized between zero and one
+- Day: day of the week
+- Period: time of the measurement in half-hour intervals over twenty-four hours, normalized between zero and one
+- NSWprice: New South Wales electricity price, normalized between zero and one
+- NSWdemand: New South Wales electricity demand, normalized between zero and one
+- VICprice: Victoria electricity price, normalized between zero and one
+- VICdemand: Victoria electricity demand, normalized between zero and one
+- Transfer: scheduled electricity transfer between both states, normalized between zero and one
+
+This dataset has been extensively used in various studies related to concept drift, time series analysis, and electricity price forecasting. It provides a rich source of information for researchers and practitioners working on developing and testing algorithms for handling dynamic and evolving data streams.
+
+The Electricity dataset has been featured in numerous academic papers and research studies, contributing significantly to the advancement of machine learning techniques for handling real-world, time-dependent data. Its widespread use in the data science community has made it a benchmark dataset for evaluating the performance of various algorithms, particularly those designed to adapt to changing patterns in data over time.
+
+Keywords: electricity market, price forecasting, time series, concept drift, data normalization, Australian energy, demand and supply, machine learning benchmark

@@ -1,26 +1,28 @@
-FOREX EUR CHF Hourly Close Dataset 
+Name: FOREX EUR/CHF Hour Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Life Science, Machine Learning 
+Tags: finance, forex, forex close, forex hour
 
-This dataset contains the historical price data of the Forex EUR/CHF pair from Dukascopy. Each instance represents one hourly candlestick. The entire dataset spans from January first to December thirteenth and excludes weekends since Forex markets are not active on those days. The timestamp feature is based on the Europe/Amsterdam time zone.
+Source: Dukascopy Historical Data Feed
 
-The dataset description explains that each row corresponds to one hourly candlestick of the Forex EUR/CHF pair. Since Forex markets do not operate on weekends, there are no entries for those days. The time zone used for the timestamp feature is Europe/Amsterdam.
+Data Description
+This dataset contains the historical price data of the FOREX EUR/CHF currency pair from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by the direction of the mean close price of both the bid and ask prices in the subsequent hour compared to the current hour. In other words, if the mean close price increases in the following hour, the class attribute is true; otherwise, it is false.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-Attributes:
+Attributes
+The dataset contains the following attributes:
 
-* Timestamp: The time of the current data point based on the Europe/Amsterdam time zone.
-* Bid Open: The bid price at the beginning of the given time interval.
-* Bid High: The highest bid price recorded during the specified time interval.
-* Bid Low: The lowest bid price observed during the given time interval.
-* Bid Close: The bid price at the end of the specified time interval.
-* Bid Volume: The frequency of changes in the bid price within the given time interval.
-* Ask Open: The ask price at the beginning of the given time interval.
-* Ask High: The highest ask price recorded during the specified time interval.
-* Ask Low: The lowest ask price observed during the given time interval.
-* Ask Close: The ask price at the end of the specified time interval.
-* Ask Volume: The frequency of changes in the ask price within the given time interval.
-* Class: Whether the average close price will increase in the subsequent hour.
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the Bid Price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the Ask Price changed within this time interval.
+Class: Whether the average price will go up during the next interval.
 
-Keywords: Forex, EUR CHF, Historical Data, Candlestick, Time Series, Finance, Machine Learning
+Keywords: FOREX, EUR/CHF, currency pair, historical data, candlestick, timezone, class attribute, bid price, ask price.

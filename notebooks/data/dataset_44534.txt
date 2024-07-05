@@ -1,15 +1,13 @@
-Subsampling of the Dionis dataset with a Seed of One 
+Name: Dionis Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the Dionis dataset 
+Tags: Subsampling of the dataset Dionis with seed equals one, arguments n rows equals two thousand, arguments n columns equals one hundred, arguments n classes equals ten, and arguments no stratify equals true.
 
-This dataset is a subsample of the Dionis dataset, which originally had forty-one thousand one hundred sixty-seven instances. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset to a more manageable size.
+Generated with the following source code:
 
-The uniform sampling of classes involved selecting a specified maximum number of classes while maintaining their original distribution. This was achieved through probability proportional to the value counts of each class. 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
 
-Next, the columns were uniformly sampled based on a specified maximum number of columns. This involved randomly selecting column indices and then sorting them to ensure consistency.
+The function uses the train test split function from scikit learn to split the data into a subset and a test set. The test size is determined by the nrows max argument. The function then drops the target column from the subset and returns a new dataset with the subsampled data.
 
-Finally, the rows were sampled according to a specified maximum number of rows. This was done using stratified sampling to maintain the original class distribution. The stratification was based on the target variable, and the sampling was performed using a random state to ensure reproducibility.
+Features: 
 
-The resulting dataset consists of the subsampled instances with their corresponding feature values and class labels. The feature names have been retained as they were in the original dataset. 
-
-Keywords: Dionis dataset, subsampling, uniform sampling, stratified sampling, class distribution, feature selection.
+Class

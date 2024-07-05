@@ -1,13 +1,12 @@
-QSAR-TID-101110 Dataset: Machine Learning, Medicine, MTLQSAR, Study Three
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 101110. It has multiple rows and numerous features, including IDs and class features. The features represent FCFP 1024-bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset includes information about molecules, their chemical structures, and properties. It provides a comprehensive collection of data points for machine learning models to learn from and make predictions about the activity of various compounds.
+The dataset focuses on Botulinum neurotoxin type A, a single protein target. Synonyms include atx bna bonT BoNT/A bonT GN. The organism is Clostridium botulinum. The protein target classification is Enzyme/Protease/Metallo protease/Metallo protease MAE clan/Metallo protease M family.
 
-The molecules in this dataset have been tested against a specific protein target, and their activity values have been recorded. These activity values can be used to train machine learning models to predict the activity of new, untested compounds.
+Gene Ontology annotations include extracellular region, membrane, host cell plasma membrane, host cell cytoplasm, host cell membrane, host cell cytoplasmic vesicle, host cell cytosol, host cell synapse, and host cell presynaptic membrane for cellular components. Molecular functions include metalloendopeptidase activity, protein binding, peptidase activity, metallopeptidase activity, zinc ion binding, lipid binding, protein transmembrane transporter activity, hydrolase activity, metal ion binding, toxin activity, and ganglioside GTb binding. Biological processes involve proteolysis, modulation of process of another organism, negative regulation of neurotransmitter secretion, and protein transmembrane transport.
 
-The features in this dataset are molecular fingerprints, which are a way of representing the chemical structure of a molecule as a binary string. These fingerprints can be used as input features for machine learning models.
+The dataset contains information on related molecules, including antibodies that act as Botulinum neurotoxin type A inhibitors. It also includes references to various databases and resources such as UniProt, InterPro, Pfam, and PDBe with associated identifiers and structural information.
 
-Generating fingerprints does not typically require missing value imputation, as all bits are generated. The dataset provides a rich source of information for machine learning models to learn from and make predictions about the activity of various compounds.
-
-Keywords: QSAR, Machine Learning, Molecular Fingerprints, Drug Target, Compound Activity.
+Keywords: QSAR, Botulinum toxin, neurotoxin, protease, drug target, molecular fingerprints, protein classification, gene ontology

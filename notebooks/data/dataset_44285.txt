@@ -1,56 +1,67 @@
-**Meta-Album Birds Dataset (Mini)**
+**Meta Album Birds Dataset (Mini)**
 
-When the Meta-Album was created, the Birds dataset contained images of bird species, but now it has increased the number of species. It has a large collection of images, each with a high-quality resolution, showcasing birds in their natural habitats, which can sometimes lead to biases. Additionally, the dataset is imbalanced regarding the ratio of male species images to female species images.
+When the Meta Album was created, the Birds dataset contained images of bird species, but now it has increased the number of species. It has more than images, each with a resolution of pixels. All the images have their natural background, which can lead to bias since, for example, some birds are frequently found in water backgrounds. Additionally, the dataset is imbalanced regarding the ratio of male species images to female species images.
+
+The preprocessed version distributed in Meta Album is made from the original dataset by resizing all the images to a resolution of pixels using an anti-aliasing filter.
 
 **Dataset Details**
 
-![Birds Sample](https://meta-album.github.io/assets/img/samples/BRD.png)
+![](https://meta-album.github.io/assets/img/samples/BRD.png)
 
-The Meta-Album ID for this dataset is Large Animal Meta-Album Birds. You can access the dataset through the Meta-Album website.
+**Meta Album ID**: Large Resolution Album Birds
 
-The Birds dataset is categorized under Large Animals and is designed for image classification tasks. It contains a vast collection of images, with each image resized to a suitable resolution using an anti-aliasing filter.
+**Meta Album URL**: https://meta-album.github.io/datasets/BRD.html
 
-**Description**
+**Domain ID**: Large Resolution Album
 
-The Birds dataset is a comprehensive collection of images showcasing various bird species in their natural environments. This dataset is ideal for training machine learning models focused on image classification tasks.
+**Domain Name**: Large Animals
 
-**Properties**
+**Dataset ID**: Birds
 
-* Number of classes: multiple
-* Number of images: substantial
-* Keywords: birds, animals
-* Data format: images
-* Image size: suitable for processing
-* License: public domain
-* Original source: Birds 400 - Species Image Classification
-* Original URL: available online
+**Dataset Name**: Birds
 
-**Citing the Dataset**
+**Short Description**: Birds dataset for image classification
 
-To cite the original Birds dataset, use the following reference:
+**Number of Classes**: Multiple
 
-@article{birds,
-title={Birds 400 - Species Image Classification},
-url={available online},
-publisher={Kaggle}
-}
+**Number of Images**: Thousands
 
-**Citing Meta-Album**
+**Keywords**: birds, animals
 
-To cite the Meta-Album dataset, use the following reference:
+**Data Format**: images
 
-@inproceedings{meta-album,
-title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-url={available online},
-year={published online}
-}
+**Image Size**: pixels
 
-**Additional Resources**
+**License (original data release)**: Creative Commons Zero Public Domain
 
-For more information on the Meta-Album dataset, please refer to the published paper. Details on the dataset preprocessing can be found in the supplementary materials. Supporting code is available on the GitHub repository. You can also explore Meta-Album on Papers with Code.
+**License URL (original data release)**: https://creativecommons.org/publicdomain/zero/1.0/
 
-**Alternative Versions**
+**License (Meta Album data release)**: Creative Commons Zero Public Domain
 
-There are alternative versions of this dataset available, including Micro and Extended.
+**License URL (Meta Album data release)**: https://creativecommons.org/publicdomain/zero/1.0/
 
-Keywords: birds, animals, image classification, machine learning, dataset
+**Source**: Birds Image Classification
+
+**Source URL**: https://www.kaggle.com/gpiosenka/100-bird-species
+
+**Created Date**: March
+
+**Contact URL**: https://meta-album.github.io/
+
+**Cite this dataset**
+
+@article{birds, title={Birds Image Classification}, url={https://www.kaggle.com/datasets/gpiosenka/100-bird-species}, publisher={Kaggle} }
+
+**Cite Meta Album**
+
+@inproceedings{meta-album, title={Meta Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, url={https://meta-album.github.io/}, year={} }
+
+**More**
+
+For more information on the Meta Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta Album on Papers with Code.
+
+**Other versions of this dataset**
+
+Micro, Extended
+
+Keywords: birds, animals, image classification, few-shot learning, meta-dataset

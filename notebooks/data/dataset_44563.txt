@@ -1,17 +1,15 @@
-Philippine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Philippine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics 
-
-Sub sampling of the Philippine dataset with a total of forty-one thousand one hundred forty-five entries, using a seed of zero, maximum number of rows of two thousand, maximum number of columns of one hundred, maximum number of classes of ten, and stratification set to true.
+Tags: Subsampling of the dataset Philippine with seed equal to zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-This function subsamples a dataset based on various parameters. It first initializes a random number generator with the given seed. Then, it selects a uniform sample of classes from the dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the dataset accordingly.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-Next, it uniformly samples columns if required, selecting a specified number of columns randomly without replacement. It then filters the dataset based on the selected columns.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and subsets the data accordingly. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it uniformly samples rows from the dataset, selecting a specified number of rows to keep.
 
-If the resulting dataset has more than the maximum allowed number of rows, it uses stratified sampling to select a specified number of rows, ensuring that the class distribution remains the same. Finally, it returns a new dataset object with the subsampled data.
+The function also ensures that categorical columns are converted to string for OpenML compatibility.
 
-Features: The dataset contains a variety of features, including variables one, two, three, four, six, eight, nine, fifteen, seventeen, twenty, twenty-one, twenty-two, twenty-six, thirty-two, thirty-eight, thirty-nine, forty-three, fifty-eight, sixty-four, sixty-six, sixty-seven, sixty-nine, seventy-four, seventy-five, eighty, eighty-seven, ninety-two, ninety-four, ninety-nine, one hundred, one hundred one, and so on.
+Features: 
 
-Keywords: machine learning, mathematics, subsampling, dataset, stratification, random sampling.
+Keywords: Subsampling, Philippine dataset, Stratified sampling, Uniform sampling, Categorical columns.

@@ -1,26 +1,28 @@
-**FOREX usd/dkk Hourly High**
+FOREX USD/DKK Hourly High Tags: finance, forex, forex high, forex hour
 
-Tags: Economics, Finance, Forex, Forex High, Forex Hour, Health
+Source: Dukascopy Historical Data Feed
 
-This dataset contains the historical price data of the Forex USD/DKK exchange rate from Dukascopy. Each row represents a single hourly candlestick, covering a period from January first to December thirteenth. Since the Forex market is not active on weekends, these days are excluded from the dataset.
+Data Description
+This dataset contains the historical price data of the FOREX USD/DKK from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The timestamp feature is set to the Europe/Amsterdam time zone. The class attribute represents the direction of the mean high price of the following hour relative to the current hour. Specifically, if the mean high price is expected to increase in the next hour, the class attribute is labeled as true; otherwise, it is false if the price remains stagnant or decreases.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following hour, and the class attribute is False when the mean High price is going down or stays the same in the following hour.
 
-Please note that this dataset is intended for scientific purposes only and should not be used for actual trading strategies, which require predictions based on close attributes.
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-**Attributes**
+Attributes
+The dataset contains the following attributes:
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam time zone
-* Bid Open: The initial bid price at the start of each hourly interval
-* Bid High: The highest bid price reached during each hourly interval
-* Bid Low: The lowest bid price recorded during each hourly interval
-* Bid Close: The final bid price at the end of each hourly interval
-* Bid Volume: The number of times the bid price changed within each hourly interval
-* Ask Open: The initial ask price at the start of each hourly interval
-* Ask High: The highest ask price reached during each hourly interval
-* Ask Low: The lowest ask price recorded during each hourly interval
-* Ask Close: The final ask price at the end of each hourly interval
-* Ask Volume: The number of times the ask price changed within each hourly interval
-* Class: The direction of the mean high price in the next hour
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone
+Bid Open: The bid price at the start of this time interval
+Bid High: The highest bid price during this time interval
+Bid Low: The lowest bid price during this time interval
+Bid Close: The bid price at the end of this time interval
+Bid Volume: The number of times the Bid Price changed within this time interval
+Ask Open: The ask price at the start of this time interval
+Ask High: The highest ask price during this time interval
+Ask Low: The lowest ask price during this time interval
+Ask Close: The ask price at the end of this time interval
+Ask Volume: The number of times the Ask Price changed within this time interval
+Class: Whether the average price will go up during the next interval
 
-Keywords: Forex, USD/DKK, Candlestick, Historical Data, Financial Market, Trading Strategy
+Keywords: FOREX, USD/DKK, historical data, candlestick, finance, trading

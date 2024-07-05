@@ -1,23 +1,11 @@
-Click Prediction Small Dataset 
+**Click Prediction Small**
 
-Tags: Economics, Human Activities 
+This dataset is derived from the KDD Cup 2012 and is a 0.1% balanced subsample of the original dataset. The data is about advertisements shown alongside search results in a search engine, and whether or not people clicked on these ads. The task is to build the best possible model to predict whether a user will click on a given ad.
 
-This dataset is derived from the KDD Cup competition held in 2012. It is a subsampled version of the original dataset, downsized to contain only 0.1 percent of the original instances. The target feature, which indicates whether a user clicks on an advertisement or not, is reasonably balanced in this dataset, with a ratio of 5 to 1.
+A search session contains information on user identification, the query issued by the user, ads displayed to the user, and a target feature indicating whether a user clicked at least one of the ads in this session. The number of ads displayed to a user in a session is called the depth, and the order of an ad in the displayed list is called the position. An ad is displayed as a short text called the title, followed by a slightly longer text called the description, and a URL.
 
-The dataset revolves around advertisements displayed alongside search results in a search engine, focusing on whether users click on these ads. Each search session includes information about the user ID, the query issued by the user, the ads displayed to the user, and the target feature indicating whether a user clicked on at least one of the ads in the session.
+To construct this dataset, each session was split into multiple instances. Each instance describes an ad displayed under a certain setting, including the depth and position. Instances with the same user identification, ad identification, query, and setting are merged. Each ad and each user have some additional properties located in separate data files that can be looked up using identifications in the instances.
 
-A search session typically displays multiple ads to a user, and the number of ads displayed is referred to as the depth. The order in which an ad appears in the displayed list is referred to as the position. Each ad consists of a short text known as the title, a slightly longer text known as the description, and a URL referred to as the display URL.
+The dataset has the following features: Click, which is a binary variable indicating whether a user clicked on at least one ad; URL Hash, which is a hashed URL for anonymity; Ad Identification; Advertiser Identification, which is important because some advertisers consistently optimize their ads, making the title and description of their ads more attractive than those of others; Depth; Position; Query Identification; Keyword Identification; Title Identification; Description Identification; and User Identification.
 
-To create this dataset, each session was split into multiple instances. Each instance describes an ad displayed under specific settings, including the depth and position. Instances with the same user ID, ad ID, query, and settings were merged together. Additionally, each ad and user have supplementary properties stored in separate data files, accessible through IDs present in the instances.
-
-The dataset encompasses various features, including:
-
-* Click: a binary variable indicating whether a user clicked on at least one ad
-* Impression: the number of search sessions where an ad was displayed to a user who issued a query
-* URL Hash: the URL is anonymized for confidentiality purposes
-* Advertiser ID: certain advertisers consistently optimize their ads, resulting in more attractive titles and descriptions
-* Depth: the number of ads displayed to a user in a session
-* Position: the order of an ad in the displayed list
-* User ID: a unique identifier for each user
-
-Keywords: click prediction, online advertising, search engine, user behavior, advertisement optimization
+Keywords: click prediction, search engine advertising, user behavior, ad optimization, search session analysis

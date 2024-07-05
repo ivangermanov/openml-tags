@@ -1,28 +1,41 @@
-Name: Forex Cad Chf Day High 
+Name: FOREX CAD/CHF Day High
 
-Tags: Finance, Forex, Forex Day, Forex High, History, Transportation 
+Tags: finance, forex, forex day, forex high
 
-**Source**: Dukascopy Historical Data Feed https://www.dukascopy.com/swiss/english/marketwatch/historical/
+Source: Dukascopy Historical Data Feed
 
-Data Description 
-This is the historical price data of the Forex Cad Chf from Dukascopy. One instance, or row, is one candlestick of one day. The entire dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The time zone of the feature Time Stamp is Europe Amsterdam.
+Data Description
+This dataset contains the historical price data of the FOREX CAD/CHF currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is true when the mean High price is going up the following day, and the class attribute is false when the mean High price is going down or staying the same the following day.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
 
-**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.**
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-Attributes 
-Time Stamp: The time of the current data point in Europe Amsterdam 
-Bid Open: The bid price at the start of this time interval 
-Bid High: The highest bid price during this time interval 
-Bid Low: The lowest bid price during this time interval 
-Bid Close: The bid price at the end of this time interval 
-Bid Volume: The number of times the Bid Price changed within this time interval 
-Ask Open: The ask price at the start of this time interval 
-Ask High: The highest ask price during this time interval 
-Ask Low: The lowest ask price during this time interval 
-Ask Close: The ask price at the end of this time interval 
-Ask Volume: The number of times the Ask Price changed within this time interval 
-Class: Whether the average price will go up during the next interval 
+Attributes
+The dataset contains the following attributes:
 
-Keywords: Forex, Cad Chf, Historical Data, Financial Markets, Trading Strategies
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: FOREX, CAD/CHF, currency pair, historical data, finance, trading.

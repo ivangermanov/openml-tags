@@ -1,18 +1,17 @@
 The 2020 Pokémon Dataset
-Tags: Life Science, Medicine
 
-I embarked on a fascinating journey in the realm of data science, starting with basic data visualization techniques. During my search for suitable datasets online, I stumbled upon a Pokémon dataset that immediately caught my attention. As an avid fan of the Pokémon franchise since childhood, having played every main series game, I was thrilled to begin my data visualization endeavors with a dataset that resonated with my passion.
+Tags: Context
 
-However, upon delving deeper into the analysis, I discovered that the existing dataset had several missing values and only featured information on Pokémon from the first seven generations. Given the age of the dataset, this limitation was somewhat anticipated, especially considering the latest generation was introduced recently. I felt compelled to update the data to ensure its relevance and comprehensiveness.
+As I embarked on my data science journey, I began by exploring basic data visualizations. During my search for datasets online, I stumbled upon a Pokémon dataset, which was a delightful surprise, given my lifelong fascination with the franchise. Having played every main series game since I was three, I was thrilled to start my data visualization work with a dataset that held sentimental value. However, upon analyzing the data, I discovered that it contained missing values and only included information on the first seven generations of Pokémon. This was somewhat expected, considering the dataset was three years old, and the latest generation had been revealed recently.
 
-Fortunately, my proficiency in web scraping enabled me to tackle this challenge head-on. I extracted data from reputable sources, including PokémonDB.net and Bulbapedia, over the course of two days. Developing the scraping logic, debugging, and refining the code required meticulous effort, particularly when dealing with complex scenarios like iterating through a single page multiple times and accessing data hidden behind buttons. Once the file was generated, I manually reviewed and corrected any names containing unsupported symbols and rearranged the columns for optimal organization.
+I realized that it was time to update this data, and with my knowledge of web scraping, I was well-equipped to take on the task. I scraped the data from PokémonDB.net and Bulbapedia, which took two days of creating logic, debugging, and perfecting the code. This involved iterating through a single page multiple times and accessing data that was only visible when a button was pressed. Most of my time was spent creating this logic. Once the file was generated, I manually checked and changed some names with unsupported symbols and arranged the columns.
 
-This enriched dataset encompasses a wide range of attributes, including Pokémon names, Pokédex numbers, generations, abilities, physical statistics such as height and weight, typing, defense multipliers against various types, and more. Notably, it incorporates data on all Mega Evolutions, Galarian, Alolan, and alternate forms, bringing the total count to an impressive array of Pokémon. To facilitate filtering and analysis, I added columns indicating whether a Pokémon is legendary, mythical, or a Mega Evolution.
+This dataset contains a comprehensive range of information, including Pokémon names, Pokédex numbers, generations, abilities, physical stats such as height and weight, typing, and defense multipliers against each type. Notably, this data encompasses not only the eight hundred and ninety Pokémon but also their mega evolutions, Galarian, Alolan, and alternate forms. I have also added columns for legendary, mythical, and mega status, allowing users to filter out these Pokémon using queries if needed.
 
-Acknowledgments:
-Data sourced from PokémonDB.net and Bulbapedia.
+Acknowledgments
 
-Features:
-Pokédex Number, Name, Generation, Classification, Abilities, Height, Weight, Type, Base Total, HP, Attack, Defense, Special Attack, Special Defense, Speed, Capture Rate, Base Egg Steps, Base Happiness, Legendary Status, Mythical Status, Mega Evolution Status
+The data was sourced from PokémonDB.net and Bulbapedia.
 
-Keywords: Pokémon, Data Visualization, Web Scraping, Dataset, PokémonDB, Bulbapedia, Mega Evolutions, Galarian Forms, Alolan Forms, Alternate Forms, Legendary Pokémon, Mythical Pokémon.
+Features: Pokédex number, name, generation, classification, abilities, height in meters, weight in kilograms, type one, type two, base total, HP, attack, defense, special attack, special defense, speed, and capture rate.
+
+Keywords: Pokémon, data visualization, web scraping, dataset, Pokédex, generations, abilities, physical stats, typing, defense multipliers.

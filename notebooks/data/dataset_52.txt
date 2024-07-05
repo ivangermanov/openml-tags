@@ -1,47 +1,15 @@
-INDUCE Trains Data Set
+The INDUCE Trains Data set contains information about trains traveling east and west. It was originally created for research on inductive inference and conceptual clustering. The dataset includes attributes describing the cars and loads in each train.
 
-Sources:
-Donor: Center for AI, Software Librarian
-Original Owners:
+The data is provided in both its original relational form and a transformed propositional format. The transformed version has one instance per line with attributes for the number of cars, number of different loads, and details about each car such as number of wheels, length, shape, number of loads, and load shape. There are also Boolean attributes indicating whether certain load types are on adjacent cars.
 
-Date Received: 
-Date Updated:
+Additional background knowledge is supplied that provides a partial ordering on some attribute values. For example, certain car shapes are categorized as "open top" or "closed top".
 
-Past Usage:
-This set most closely resembles the data sets described in the following two publications:
+The prediction task is to determine concise decision rules distinguishing eastbound from westbound trains. Previous research found rules based on attributes like car shapes, lengths, and load shapes. Clustering approaches identified cognitively appealing groupings based on car shape diversity and wheel color consistency.
 
-This dataset has ten attributes, no wheel or load color attributes.
-Both references describe a set of ten trains, five eastbound and five westbound.
-Both refer to the same ten trains as seen by the figures in these publications.
+The dataset contains ten instances, evenly split between eastbound and westbound trains. There are ten attributes in the original format, not including the class attribute. The transformed version has 33 attributes. The number of cars per train varies from three to five.
 
-Results:
-Found the following decision rules:
-There exists car one, car two, load one, and load two such that in front of car one, car two, load contains car one, load one, and load contains car two, load two, load shape load one equals triangle, load shape load two equals polygon implies direction equals east.
-There exists a car one such that length of car one equals short, car shape car one equals closed top implies direction equals east.
-Number of cars equals three or there exists a car one such that car shape car one equals jagged top implies direction equals west.
-There exists a car one such that number of cars length equals long equals two, car shape car one equals open trapezoid, u-shaped or location car one equals two, car shape car one equals closed, rectangle implies direction equals west.
+Attribute values include car shapes like open rectangle, closed rectangle, ellipse, engine, etc. Load shapes include triangle, rectangle, circle, and hexagon. Car lengths are short or long. The number of wheels per car is either two or three.
 
-Relevant Information:
-Additional background knowledge is supplied that provides a partial ordering on some of the attribute values.
-We are providing this dataset both in its original form and in a form similar to the more typical propositional datasets in our repository.
-Since the trains dataset records relations between attributes, this transformation was somewhat challenging.
-However, it may shed some insight on this problem for people who are more familiar with the simple one-instance-per-line dataset format.
-Hierarchy of values: if car shape is one of open rectangle, open trapezoid, u-shaped, double bottom open rectangle, then car shape is open top; if car shape is one of hexagon, ellipse, closed rectangle, jagged top, slope top, engine, then car shape is closed top.
-Prediction Task: Determine concise decision rules distinguishing trains traveling east from those traveling west.
+This dataset provides an interesting challenge for machine learning and data mining techniques due to its relational structure and background knowledge. It allows for exploring methods that can generate human interpretable rules and concepts from structured object descriptions.
 
-Number of Instances: 
-Number of Attributes: Ten, not including the class attribute.
-
-Attributes:
-Car contains train index one, car index two; number of cars in train index; relative positions of cars in train; absolute position of car in train; number of wheels of car index; length of car index; shape of car index; number of loads in car index; description of which cars hold which loads; description of load shape; class direction.
-
-Class: Direction, East or West.
-
-The Following Format Was Used for the Transformed Dataset Representation:
-Attributes: Thirty-three.
-One Instance Per Line.
-
-Attributes:
-Number of Cars; Number of Different Loads; Five Attributes for Each of Cars Two Through Five; Ten Boolean Attributes Describing Whether Two Types of Loads Are on Adjacent Cars of the Train; Class Attribute.
-
-Keywords: Machine Learning, Transportation, Trains, Classification, Decision Rules.
+Keywords: trains, inductive inference, conceptual clustering, relational data, propositional transformation, decision rules, car attributes, load shapes, east/west classification

@@ -1,9 +1,19 @@
-The Gina dataset has been subsampled using a machine learning algorithm with specific parameters. The subsampling process involved uniformly selecting classes from the original dataset, ensuring a maximum number of classes were represented. The algorithm then uniformly sampled columns from the dataset, adhering to a maximum number of columns constraint. Finally, the algorithm stratified the sampling of rows based on the class distribution, ensuring a representative sample.
+Name: Gina Subsampling of the Dataset
 
-This subsampling process generated a new dataset with specific characteristics. The resulting dataset has undergone significant transformations to meet the specified requirements. The algorithm has carefully selected a subset of features from the original dataset, ensuring a balance between class representation and column selection.
+Tags: Subsampling of the dataset Gina with seed equal to zero, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to True.
 
-The Gina dataset has undergone significant processing to arrive at its current state. The subsampling algorithm has carefully balanced the need for representativity with the constraints imposed by the maximum number of classes, columns, and rows. This processing has resulted in a dataset that is both informative and manageable.
+Generated with the following source code:
 
-Features: various numerical and categorical variables
+This function subsamples a dataset. It takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Keywords: machine learning, statistics, dataset subsampling, stratified sampling, feature selection.
+The function first gets the unique classes in the dataset. If there are more classes than the maximum allowed, it selects a random subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
+
+Next, it uniformly samples columns if required. If the number of columns is more than the maximum allowed, it selects a random subset of columns.
+
+Finally, if the number of rows is more than the maximum allowed, it stratifies the dataset accordingly. It concatenates the data and target, splits it into a subset, and then separates the data and target again.
+
+The function returns a dataset with the subsampled data, target, categorical mask, and columns.
+
+Features: (skipped due to unreadability)
+
+Keywords: dataset subsampling, stratification, random sampling, data preprocessing

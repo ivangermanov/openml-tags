@@ -1,11 +1,15 @@
-Higgs Seed Four N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Higgs Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Health, Medicine 
+Tags: Subsampling of the dataset Higgs generated with the following source code:
 
-This dataset is a subsampling of the Higgs dataset. It was generated using a specific set of arguments, including a seed value of four, a maximum number of rows of two thousand, a maximum number of columns of one hundred, a maximum number of classes of ten, and stratification enabled.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling.
 
-The dataset was created by uniformly sampling classes from the original dataset, selecting a subset of columns, and then further sampling the resulting data to meet the specified row limit. The sampling process was stratified according to the class distribution to ensure that the resulting dataset retains a similar class balance to the original.
+The function first uniformly samples classes from the dataset, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and reduces the dataset to these indices.
 
-The dataset features include various physical properties, such as particle energies, momenta, and angles, which are used to characterize high-energy collisions in a particle detector.
+Next, the function uniformly samples columns from the dataset, selecting a specified number of columns. If the dataset has more rows than the specified maximum, it stratifies the sampling according to the target variable, ensuring that the sampled dataset maintains the same class balance as the original.
 
-Keywords: Higgs dataset, subsampling, stratification, class balance, particle physics.
+The function returns a new dataset with the subsampled data, including the categorical mask and column names.
+
+Features: lepton transverse momentum, lepton eta, lepton phi, missing energy magnitude, missing energy phi, jet one pt, jet one eta, jet one phi, jet two pt, jet two eta, jet two phi, jet three pt, jet three eta, jet three phi, jet four pt, jet four eta, jet four phi, mass jj, mass jjj, mass lv, mass jlv, mass bb, mass wbb, mass wwbb, target
+
+Keywords: dataset subsampling, stratified sampling, class balancing, feature selection

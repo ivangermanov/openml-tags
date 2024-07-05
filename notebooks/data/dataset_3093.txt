@@ -1,11 +1,24 @@
-The QSAR-TID-10659 dataset contains QSAR data showing activity values of several compounds on the drug target AMP-Activated Protein Kinase Alpha Two Subunit. This dataset has eighty-one rows and one thousand twenty-six features, including identifiers and class features.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-Features include molecule ChEMBL identifiers and median pseudo-pCI50 values. The features represent FCFP six one thousand twenty-four bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program by Dassault Systèmes BIOVIA.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This protein is also known as Five Prime Amp Activated Protein Kinase Catalytic Subunit Alpha Two, Acetyl CoA Carboxylase Kinase, Ampk, and Ampk Two. It belongs to the species Homo sapiens and is classified as an enzyme, kinase, and protein kinase, specifically a Camk protein kinase group, Camk one family, and Ampk subfamily.
+The target is AMP activated protein kinase, alpha subunit, also known as AMP activated protein kinase catalytic subunit alpha, ACACA kinase, Acetyl CoA carboxylase kinase, AMPK, and AMPK. It is classified as an Enzyme/Kinase/Protein Kinase/CAMK protein kinase group/CAMK protein kinase CAMK family/CAMK protein kinase AMPK subfamily. The organism is Homo sapiens.
 
-Expression Atlas shows that this protein is expressed in various tissues, including the nucleus, nucleoplasm, cytoplasm, Golgi apparatus, cytosol, and other cellular components. Gene Ontology annotations reveal that this protein is involved in numerous biological processes, such as chromatin organization, chromatin remodeling, protein phosphorylation, lipid metabolic process, fatty acid metabolic process, and many others.
+The protein has various Gene Ontology annotations, including nucleotide binding, chromatin binding, protein kinase activity, ATP binding, and metal ion binding for molecular functions. Its biological processes include chromatin organization, protein phosphorylation, fatty acid metabolism, autophagy, signal transduction, and regulation of gene expression. It is localized in the nucleus, cytoplasm, Golgi apparatus, and other cellular components.
 
-This protein also participates in various signaling pathways, including the Wnt signaling pathway, insulin signaling pathway, and TOR signaling pathway. It interacts with other proteins, including Prkaa One, Prkaa Three, and Prkab One, to regulate cellular processes.
+This kinase is involved in energy homeostasis, glucose homeostasis, and lipid metabolism. It responds to cellular stresses and nutrient levels, regulating processes like autophagy, apoptosis, and circadian rhythms. The protein interacts with various pathways including Wnt signaling and TOR signaling.
 
-Keywords: QSAR, AMPK, protein kinase, molecular fingerprints, biological processes, signaling pathways.
+The dataset provides molecular fingerprints that can be used to develop quantitative structure activity relationship (QSAR) models for predicting compound activity on this target. Such models could aid in drug discovery efforts targeting AMP activated protein kinase.
+
+Keywords:
+QSAR
+Molecular fingerprints
+Protein kinase
+Energy metabolism
+Drug target
+Enzyme activity
+Structure activity relationship
+ChEMBL database
+Bioinformatics
+Drug discovery

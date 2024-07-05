@@ -1,9 +1,17 @@
-Eucalyptus Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Eucalyptus Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This is a subsampled version of the Eucalyptus dataset, which has been reduced to facilitate easier handling and analysis. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows.
+Tags: Subsampling of the dataset Eucalyptus with seed equal to zero, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to true.
 
-The class selection process ensured that the resulting dataset retained a diverse range of classes, while the column sampling reduced the dimensionality of the data. The row sampling further reduced the size of the dataset, making it more manageable for analysis.
+Generated with the following source code:
 
-The resulting dataset retains the key characteristics of the original Eucalyptus dataset, including the relationship between variables such as Abbreviation, Replication, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, Planting Material Certificate Number, Diameter at Breast Height, Height, Survival, Vigor, Insect Resistance, Stem Form, Crown Form, Branch Form, and Utility.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified according to the target variable, meaning that the proportion of each class in the subsample is the same as in the original dataset.
 
-Keywords: Eucalyptus dataset, subsampling, class selection, column sampling, row sampling, dimensionality reduction.
+The function first selects a specified number of classes from the original dataset, using a weighted random choice to ensure that the classes are selected in proportion to their frequency in the dataset. It then selects the indices of the rows that correspond to these classes and uses these indices to subset the original dataset.
+
+Next, the function selects a specified number of columns from the subsampled dataset, using a uniform random choice to select the columns. It then subsets the dataset to include only these columns.
+
+Finally, the function selects a specified number of rows from the subsampled dataset, using stratified sampling to ensure that the proportion of each class in the subsample is the same as in the original dataset.
+
+Features: Abbreviation, Replication, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, PMC Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, Utility.
+
+Keywords: dataset subsampling, stratified sampling, random number generation, class selection, column selection, row selection.

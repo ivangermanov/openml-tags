@@ -1,9 +1,19 @@
-This is the famous Web Data dataset in its binary version, retrieved from the libSVM site. The dataset was created by loading all Web Data datasets, including training and testing data, and then joining the test and train data for each subset. Each file was then normalized column-wise according to specific rules.
+This dataset, known as webdata wXa, is tagged with mythbusting, study. It originates from libSVM, though the exact date is unknown. The dataset should be cited as referenced in "Advances in Kernel Methods - Support Vector Learning" published by MIT Press.
 
-If a column contained only one value, it was considered a constant feature and set to zero, effectively removing it due to sparsity. If a column contained two values, the most frequently occurring value was set to zero, while the other was set to one, making it a binary feature. For columns containing more than two values, they were divided by their standard deviation, making them multinary or real features.
+The webdata wXa dataset is a binary version of the famous webdata collection. It was retrieved from the libSVM site and underwent additional preprocessing beyond what was done originally. The creation process involved loading all web data datasets, both train and test sets, then joining the corresponding train and test subsets. Each file was normalized column-wise according to specific rules:
 
-After normalization, all eight files were merged into one and randomly sorted. Finally, any duplicate lines were removed. A script that performs these steps can be found online.
+- Constant features (columns with only one value) were set to zero and removed due to sparsity.
+- Binary features (columns with two values) had the more frequent value set to zero and the less frequent to one.
+- Multinary or real features (columns with more than two values) were divided by their standard deviation.
 
-The resulting dataset has numerous features, although some may not be easily readable. The dataset is useful for machine learning and computer systems studies, particularly in the realm of support vector machines and kernel methods.
+After normalization, all eight files were merged into one and randomly sorted. Duplicate lines were removed in the final step. An R script detailing these preprocessing steps is available on GitHub.
 
-Keywords: Web Data, libSVM, Support Vector Machines, Binary Dataset, Normalization, Sparsity, Binary Features, Multinary Features, Real Features.
+The dataset contains numerous features, including Y and X through X, though the exact number of features is not specified. The features appear to be primarily numerical and may represent various attributes of web data.
+
+Keywords:
+- Webdata
+- Binary classification
+- Support Vector Machines
+- Data preprocessing
+- Feature normalization
+- Machine learning dataset

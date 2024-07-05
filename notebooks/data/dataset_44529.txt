@@ -1,13 +1,15 @@
-Airlines Seed One Dataset 
+Airlines Seed One Dataset with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-This dataset is a subsampling of the Airlines dataset with a seed value of one. The subsampling process involved uniformly sampling classes from the original dataset until a maximum number of classes was reached. The selected classes were then used to filter the data, ensuring only instances belonging to these classes were included.
+This dataset is a subsample of the original airlines dataset. It was generated using a specific source code that involves random sampling of classes, columns, and rows. The sampling was done in a stratified manner to ensure that the resulting dataset is representative of the original dataset.
 
-Once the classes were sampled, the columns were uniformly sampled until a maximum number of columns was reached. This was done to reduce the dimensionality of the dataset.
+The dataset was created by first uniformly sampling classes from the original dataset. If the number of unique classes exceeded ten, a random selection of ten classes was made, with the probability of selection proportional to the frequency of each class. The indices of the samples belonging to these selected classes were then used to subset the original dataset.
 
-The resulting dataset was further subsampled to reach a maximum number of rows. To maintain class balance, stratified sampling was employed during this step.
+Next, the columns of the dataset were uniformly sampled. If the number of columns exceeded one hundred, a random selection of one hundred columns was made. The selected columns were then used to subset the dataset.
 
-The dataset consists of several features, including Airline, Flight, Departure Airport, Destination Airport, Day of the Week, Time, Flight Length, and Delay.
+Finally, the rows of the dataset were sampled. If the number of rows exceeded two thousand, a stratified sampling of two thousand rows was performed. The stratification was done based on the target variable to ensure that the resulting dataset has a similar class distribution as the original dataset.
 
-Tags: Subsampling of the Airlines dataset 
+The resulting dataset has ten classes, one hundred columns, and two thousand rows. It is a stratified sample of the original airlines dataset.
 
-Keywords: dataset, subsampling, class balancing, feature selection, stratified sampling
+Features: Airline, Flight, Airport From, Airport To, Day of the Week, Time, Length, Delay
+
+Keywords: airlines, dataset, subsampling, stratified, random sampling

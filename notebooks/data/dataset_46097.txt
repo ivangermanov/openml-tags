@@ -1,0 +1,13 @@
+The data used in this study includes three hundred sixty-six monthly series, four hundred twenty-seven quarterly series, and five hundred eighteen yearly series. These series were supplied by both tourism bodies, such as Tourism Australia, the Hong Kong Tourism Board, and Tourism New Zealand, and various academics who had used them in previous tourism forecasting studies.
+
+A subset of these series was used for evaluating the forecasting performances of the methods that use explanatory variables. There were ninety-three quarterly series and one hundred twenty-nine yearly series for which explanatory variables were available. With the exception of thirty-four yearly series, which represented tourism numbers by purpose of travel at a national level, all of the other series represented total tourism numbers at a country level of aggregation.
+
+For each series, the data was split into an estimation sample and a hold-out sample, which was hidden from all of the co-authors. For each monthly series, the hold-out sample consisted of the most recent observations; for quarterly data, it was the last observations; and for yearly data, it consisted of the final observations. Each method was implemented, or trained, on the estimation sample, and forecasts were produced for the whole of the hold-out sample for each series. The forecasts were then compared to the actual withheld observations.
+
+The dataset has five columns: id series, which is the identifier of a time series; value, which is the value of the time series at a given time step; date, which is the reconstructed date of the time series in a specific format; time step, which is the time step on the time series; and other columns that reflect the actual time step of the time series.
+
+The data was preprocessed by renaming the first two columns, melting the data, dropping nan values, obtaining the date from the starting year and time step, and defining columns as category and casting date to string and time step to integer.
+
+The test set was preprocessed in the same way as the training set. Finally, the training and test sets were concatenated. If one wants to use the same train and test set as the competition, the last points should be used as the test set.
+
+Keywords: tourism forecasting, time series, explanatory variables, data preprocessing, hold-out sample, estimation sample.

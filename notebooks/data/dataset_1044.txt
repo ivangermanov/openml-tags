@@ -1,11 +1,17 @@
 Eye Movements Dataset
 
-This dataset is a straight-forward classification task where we provide pre-computed feature vectors for each word in the eye movement trajectory, along with class labels. The dataset consists of several assignments, each consisting of a question followed by ten sentences, which are titles of news articles. One of the sentences is the correct answer to the question, five sentences are irrelevant to the question, and four sentences are relevant to the question but do not answer it.
+Tags: grouped data, study, time series
 
-Each assignment is a time sequence of twenty-two dimensional feature vectors, where features are in columns and feature vectors are in rows. The first column is the line number, the second column is the assignment number, and the next twenty-two columns are the different features. Columns twenty-five to twenty-seven contain extra information about the example. The training data set contains the classification label in the twenty-eighth column, which is zero for irrelevant, one for relevant, and two for the correct answer. Each example, or row, represents a single word, and we ask you to return the classification of each read sentence.
+This dataset contains eye movement data from a study on inferring relevance from eye movements. It consists of preprocessed feature vectors for words in eye movement trajectories, along with class labels. The data is organized into assignments, each containing a question followed by ten sentences (news article titles). One sentence is the correct answer, five are irrelevant, and four are relevant but do not answer the question.
 
-The twenty-two features provided are commonly used in psychological studies on eye movement, although not all of them may be relevant in this context. The objective of the challenge is to predict the classification labels, which are irrelevant, relevant, or correct answer.
+The dataset structure includes columns for features, with each row representing a feature vector. Assignments are time sequences of 22-dimensional feature vectors. The first column is the line number, second is the assignment number, and columns 3-24 contain different features. Columns 25-27 provide additional information about each example. For training data, the 28th column contains the classification label: "0" for irrelevant, "1" for relevant, and "2" for the correct answer.
 
-The features include the number of fixations to the word, the number of fixations to the word when it is first encountered, whether a fixation occurred when the sentence containing the word was encountered the first or second time, the duration of previous fixation, and many others. These features capture various aspects of eye movement behavior, such as the frequency and duration of fixations, the order in which words are read, and the pupil diameter.
+Each example (row) represents a single word. The task is to predict the classification of each read sentence. The 22 features provided are commonly used in psychological studies on eye movements, though not all may be relevant in this context.
 
-Keywords: eye movements, classification, psychological studies, relevance prediction, feature extraction.
+Features include various eye movement metrics such as fixation counts, durations, saccade lengths, regression information, and pupil diameter measurements. Some features are specific to individual words, while others apply to entire sentences or titles.
+
+The objective of the challenge associated with this dataset is to predict the classification labels (Irrelevant, Relevant, Correct) based on the provided eye movement features.
+
+This dataset is valuable for research in areas such as cognitive psychology, human-computer interaction, and machine learning applied to eye tracking data. It offers insights into how eye movements can be used to infer relevance and comprehension during reading tasks.
+
+Keywords: eye tracking, relevance prediction, text comprehension, fixations, saccades, pupil dilation, cognitive psychology, machine learning, human-computer interaction

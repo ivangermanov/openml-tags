@@ -1,18 +1,18 @@
-Sonar Dataset 
+Name: Sonar
+Tags: mythbusting, study, uci
 
-Summary: 
-This dataset is used to classify sonar signals into either mines or rocks. The task involves training a network to differentiate between sonar signals bounced off a metal cylinder and those bounced off a roughly cylindrical rock.
+This dataset contains sonar signals used to classify metal cylinders (mines) versus roughly cylindrical rocks. The task is to train a neural network to discriminate between these two types of sonar returns. The data was collected by bouncing sonar signals off objects at various angles and under different conditions.
 
-Problem Description:
-The dataset consists of two files, sonar mines and sonar rocks. The sonar mines file contains 111 patterns obtained by bouncing sonar signals off a metal cylinder at various angles and under various conditions. The sonar rocks file contains 97 patterns obtained from rocks under similar conditions. The transmitted sonar signal is a frequency modulated chirp, rising in frequency. The dataset contains signals obtained from a variety of different aspect angles, spanning ninety degrees for the cylinder and one hundred eighty degrees for the rock. Each pattern is a set of sixty numbers in the range zero point zero to one point zero. Each number represents the energy within a particular frequency band, integrated over a certain period of time. The integration aperture for higher frequencies occurs later in time, since these frequencies are transmitted later during the chirp. 
+The dataset consists of two files: one containing patterns from metal cylinders and another with patterns from rocks. Each pattern is represented by sixty numbers ranging from zero to one, corresponding to the energy within particular frequency bands integrated over time. The signals were obtained from various aspect angles, covering ninety degrees for cylinders and one hundred eighty degrees for rocks.
 
-Methodology:
-This dataset can be used in a number of different ways to test learning speed, quality of ultimate learning, ability to generalize, or combinations of these factors. The dataset is divided randomly into thirteen disjoint sets with sixteen cases in each. For each experiment, twelve of these sets are used as training data, while the thirteenth is reserved for testing. The experiment is repeated thirteen times so that every case appears once as part of a test set. 
+The label for each record indicates whether the object is a rock (R) or a mine (M). While the numbers in the labels are ordered by increasing aspect angle, they do not directly encode the angle.
 
-Results:
-For the aspect angle independent experiments, the results show that the network's performance on the test set was somewhat better when the aspect angles in the training and test sets were balanced. A nearest neighbor classifier on the same data gave an eighty-two point seven percent probability of correct classification. Three trained human subjects were each tested on one hundred signals, chosen at random from the set of two hundred eight returns used to create this dataset. Their responses ranged between eighty-eight percent and ninety-seven percent correct. 
+This dataset can be used to test various aspects of machine learning, including learning speed, quality of ultimate learning, and ability to generalize. Experiments were conducted using both aspect-angle independent and aspect-angle dependent approaches. The aspect-angle independent method involved randomly dividing the data into training and testing sets, while the aspect-angle dependent method attempted to balance the distribution of aspect angles between sets.
 
-References:
-Analysis of Hidden Units in a Layered Network Trained to Classify Sonar Targets
+A standard backpropagation neural network was employed for all experiments, with varying numbers of hidden units. The network's performance was evaluated on both the training and test sets, with results reported for different network configurations.
 
-Keywords: sonar signals, machine learning, classification, neural network, frequency modulated chirp, aspect angles.
+Comparisons were made with other classification methods, including a nearest neighbor classifier and human subjects. Trained human subjects achieved accuracy between eighty-eight and ninety-seven percent, though they may have had access to additional information from the raw sonar signal not present in the processed dataset.
+
+This dataset provides valuable insights into sonar signal classification and the effectiveness of neural networks in distinguishing between mines and rocks based on sonar returns.
+
+Keywords: sonar signals, mine detection, neural networks, classification, frequency analysis, aspect angles, backpropagation

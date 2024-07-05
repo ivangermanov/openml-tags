@@ -1,19 +1,9 @@
-Subsampling of the dataset Volkert with Seed Three 
+Name: Volkert Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Volkert 
+Tags: Subsampling of the dataset Volkert with seed three, generated with the following source code:
 
-Generated with the following source code:
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in a seed value, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling. The function first samples the classes uniformly, then selects the indices where one of these classes is present. It then samples the columns uniformly if required. If the dataset is still too large, it stratifies the sampling accordingly. The function returns a new dataset with the subsampled data.
 
-This function subsamples the dataset by uniformly selecting classes, then sampling columns and finally sampling rows while maintaining class balance.
+Features: (omitted due to unreadability)
 
-The function takes in parameters including a seed for reproducibility, the maximum number of rows, the maximum number of columns, the maximum number of classes, and whether to perform stratified sampling.
-
-First, it selects classes uniformly based on their frequency in the dataset, ensuring that the selected classes represent the overall class distribution. 
-
-Then, it selects columns uniformly, choosing the specified number of columns randomly. 
-
-Finally, it samples rows while maintaining class balance using stratified sampling, ensuring that the resulting dataset has the desired number of rows while preserving the class distribution.
-
-Features: One Hundred Features Selected from the Original Dataset
-
-Keywords: Subsampling, Stratified Sampling, Class Balance, Reproducibility, Dataset, Columns, Rows
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, data reduction

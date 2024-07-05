@@ -1,39 +1,14 @@
-QSAR-TID-10496 Dataset Information
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 10496. The dataset has forty rows and one thousand twenty-six features, including molecule identifiers and class features.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The features represent molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+The dataset focuses on Cathepsin K, a single protein target found in Rattus norvegicus. Cathepsin K is classified as an enzyme, specifically a cysteine protease in the CA clan and C1A family. It is associated with various cellular components including the extracellular region, lysosome, plasma membrane, and intracellular membrane bounded organelles.
 
-Generating molecular fingerprints does not typically require missing value imputation, as all bits are generated.
+Cathepsin K's functions include fibronectin binding, cysteine type endopeptidase activity, collagen binding, and proteoglycan binding. It is involved in numerous biological processes such as intramembranous ossification, proteolysis, thyroid hormone generation, apoptotic processes, immune response, and bone resorption.
 
-Features include molecule identifiers and molecular fingerprints.
+The protein is linked to several InterPro and Pfam domains, including peptidase C1A, protease inhibitor I29, and papain like cysteine peptidase superfamily. It plays roles in cellular responses to various stimuli including zinc ion starvation, tumor necrosis factor, and transforming growth factor beta.
 
-Scraped Data Information
+This comprehensive dataset provides valuable information for studying the structure activity relationships of compounds targeting Cathepsin K, which could aid in drug discovery efforts for conditions related to bone metabolism, immune responses, and proteolysis.
 
-The preferred name for this protein target is Cathepsin K, also known as Cathepsin K Ctsk. It belongs to the species group Rattus norvegicus, and its protein target classification is Enzyme/Protease/Cysteine protease/Cysteine protease CA clan/Cysteine protease C1A family.
-
-Description and Relationship Accession
-
-Cathepsin K is a single protein with accession number O35186.
-
-Gene Ontology Component
-
-This protein is associated with various cellular components, including extracellular region, extracellular space, nucleoplasm, lysosome, plasma membrane, external side of plasma membrane, membrane, apical plasma membrane, and intracellular membrane-bound organelle.
-
-Gene Ontology Function
-
-Cathepsin K is involved in various biological functions, including fibronectin binding, cysteine-type endopeptidase activity, collagen binding, peptidase activity, cysteine-type peptidase activity, cysteine-type endopeptidase activator activity involved in apoptotic process, hydrolase activity, and proteoglycan binding.
-
-Gene Ontology Process
-
-This protein is involved in various biological processes, including intramembranous ossification, proteolysis, thyroid hormone generation, apoptotic process, immune response, positive regulation of peptidase activity, response to organic cyclic compound, collagen catabolic process, developmental process, response to insulin, cellular response to zinc ion starvation, bone resorption, response to ethanol, proteolysis involved in protein catabolic process, negative regulation of cartilage development, cellular response to tumor necrosis factor, cellular response to transforming growth factor beta stimulus, mononuclear cell differentiation, and positive regulation of apoptotic signaling pathway.
-
-InterPro Information
-
-Cathepsin K is associated with various InterPro entries, including Pept_cys_AS, Peptidase_C1A_C, Peptidase_C1A, Prot_inhib_I29, Pept_his_AS, Pept_asp_AS, Papain-like_cys_pep_sf, and Peptidase_C1A_papain-like.
-
-Pfam Information
-
-This protein is associated with two Pfam entries: Peptidase_C1 and Inhibitor_I29.
-
-Keywords: QSAR, Cathepsin K, molecular fingerprints, gene ontology, protein target classification, enzymatic activity, biological functions, cellular components, biological processes.
+Keywords: QSAR, Cathepsin K, molecular fingerprints, cysteine protease, drug target, proteolysis, bone resorption, enzyme activity

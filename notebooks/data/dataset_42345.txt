@@ -1,37 +1,7 @@
-Traffic Violations
+This dataset, Traffic Violations, contains information about traffic violations issued in the County. To protect privacy, any information that could be used to uniquely identify the vehicle, the vehicle owner, or the officer issuing the violation has been removed. 
 
-Tags: Computer Systems, Machine Learning
+For this version, some features were removed and all remaining character features were recoded as nominal factor variables. All punctuation characters were removed from factor levels. The variable "Violation Type" is used as the target by default. The smaller target categories "Safety Equipment Repair Order" and "Emergency Safety Equipment Repair Order" were collapsed into one category labeled "Safety Equipment Repair Order". 
 
-This dataset contains traffic violation information from all electronic traffic violations issued in the County. To maintain privacy, any information that could be used to uniquely identify the vehicle, the vehicle owner, or the officer issuing the violation has been omitted.
+This dataset was downsampled to a smaller size. Unused factor levels and a few almost constant features were dropped. The features included are Description, whether the driver was wearing Seat Belts, whether there was Personal Injury, whether there was Property Damage, whether the driver had a Commercial License, whether the vehicle was a Commercial Vehicle, the State, the type of Vehicle, the Year, Make, and Model of the vehicle, the Color of the vehicle, the Charge, whether the driver Contributed to the Accident, the Race and Gender of the driver, the City and State of the driver, the State of the driver's license, the type of Arrest, and the type of Violation.
 
-For this version, certain features were removed and all remaining character features were recoded as nominal factor variables. Additionally, all punctuation characters were removed from factor levels.
-
-The variable "Violation Type" is used as the target by default. To simplify the analysis, the smaller target categories "Safety Equipment Repair Order" and "Emergency Safety Equipment Repair Order" were combined into one category labeled "Safety Equipment Repair Order".
-
-To reduce the complexity of the dataset, it was downsized to a representative sample. Unused factor levels and nearly constant features were also dropped.
-
-The dataset includes the following features:
-
-* Description
-* Whether seat belts were worn
-* Whether there was personal injury
-* Whether there was property damage
-* Whether the driver had a commercial license
-* Whether the vehicle was commercial
-* The state where the violation occurred
-* The type of vehicle involved
-* The year of the vehicle
-* The make of the vehicle
-* The model of the vehicle
-* The color of the vehicle
-* The charge filed against the driver
-* Whether the driver contributed to the accident
-* The race of the driver
-* The gender of the driver
-* The city where the driver resides
-* The state where the driver resides
-* The state where the driver's license was issued
-* The type of arrest made
-* The type of violation committed
-
-Keywords: traffic violations, computer systems, machine learning, safety equipment repair order, commercial vehicles, vehicle descriptions.
+Keywords: Traffic Violations, Vehicle, Driver, Accident, License, Safety Equipment

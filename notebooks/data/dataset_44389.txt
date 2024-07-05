@@ -1,45 +1,11 @@
-House Sixteen H Seed Two NRows Two Thousand NClasses Ten NCols One Hundred Stratify True 
+Name: House Sixteen H Seed Two
 
-Tags: Subsampling of the dataset House Sixteen H 
+Tags: Subsampling of the dataset House Sixteen H with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
+
 Generated with the following source code:
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
-random number generator = numpy random default random generator with the given seed 
-x equals the feature values 
-y equals the target values 
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data.
 
-Uniformly sample classes equals unique values in the target values 
-if the number of unique classes exceeds the maximum number of classes 
-value counts of each class equals the count of each unique value in the target values 
-selected classes equal randomly chosen classes based on their value counts 
-Select the indices where one of these classes is present equals the index of the target values where the value is in the selected classes 
-x equals the feature values at the selected indices 
-y equals the target values at the selected indices 
+Features: 
 
-Uniformly sample columns if required 
-if the number of columns exceeds the maximum number of columns 
-column indices equal randomly chosen column indices 
-sorted column indices equal the sorted column indices 
-selected columns equal the feature values at the sorted column indices 
-else 
-sorted column indices equal all column indices 
-
-if the number of samples exceeds the maximum number of samples 
-Stratify accordingly 
-target name equals the name of the target values 
-data equals the concatenation of the feature values and target values along the columns 
-_, subset equal the train test split of the data with the target values as the stratification parameter 
-x equals the feature values in the subset excluding the target values 
-y equals the target values in the subset 
-
-We need to convert categorical columns to string for OpenML 
-categorical mask equal the categorical mask of the selected columns 
-columns equal the column names of the feature values 
-return Dataset 
-dataset equals the original dataset 
-x equals the feature values 
-y equals the target values 
-categorical mask equals the categorical mask 
-columns equal the column names 
-
-Keywords: subsampling, dataset, stratified sampling, feature selection, class imbalance
+Keywords: Subsampling, Dataset, Stratified, Random Sampling, Feature Selection

@@ -1,19 +1,17 @@
-Churn Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Churn Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Demographics, Geography 
-
-Sub-sampling of the dataset Churn with a seed of three, arguments of maximum two thousand rows, one hundred columns, ten classes, and stratification set to true. 
+Tags: Subsampling of the dataset Churn with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-The function sub-samples the dataset by first uniformly selecting classes from the unique values in the target variable, ensuring the number of classes does not exceed the specified maximum. It then selects the corresponding indices where these classes are present, reducing the dataset to only include these samples. 
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-Next, the function uniformly samples columns if the number of columns exceeds the specified maximum, selecting a specified number of columns randomly without replacement. 
+First, it samples the classes uniformly. If the number of unique classes is greater than the maximum number of classes, it selects the classes based on their frequency in the data. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-If the remaining dataset still has more rows than the specified maximum, the function uses stratified sampling to select the desired number of rows, ensuring the class distribution remains consistent. 
+Next, it samples the columns uniformly if required. If the number of columns is greater than the maximum number of columns, it selects the columns randomly and filters the data accordingly.
 
-The resulting sub-sampled dataset is returned, including the categorical mask and column information.
+Finally, if the number of rows is greater than the maximum number of rows, it stratifies the data accordingly and samples the rows. It then converts categorical columns to string for OpenML and returns the dataset.
 
-Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number V-Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge...
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class
 
-Keywords: Churn, Sub-sampling, Stratification, Demographics, Geography
+Keywords: Data Subsampling, Stratified Sampling, Feature Selection, Class Sampling, Dataset Generation

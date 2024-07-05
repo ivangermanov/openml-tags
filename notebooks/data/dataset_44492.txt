@@ -1,9 +1,13 @@
-Machine Learning Dataset: Wilt Seed Four Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True
+Name: Wilt Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset is a subsampled version of the original Wilt dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the number of classes did not exceed ten. Additionally, the number of columns was limited to one hundred, and the number of rows was capped at two thousand.
+Tags: Subsampling of the dataset Wilt with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-The stratification parameter was set to true, which means that the sampling was done in a way that preserved the proportion of each class in the original dataset. This is particularly important when working with imbalanced datasets, as it helps maintain the integrity of the underlying relationships between variables.
+Generated with the following source code:
 
-The resulting dataset consists of a selection of features, including mean values for green, red, and near-infrared bands, as well as standard deviation values for the planar band. These features were carefully chosen to represent the most informative aspects of the original dataset.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses a random number generator to select a specified number of rows, columns, and classes from the original dataset. The function first selects the classes to keep, then selects the indices where one of these classes is present, and finally selects the columns to keep. If the number of rows in the resulting dataset is still greater than the specified maximum, it uses stratified sampling to select the final set of rows.
 
-Keywords: machine learning, dataset, subsampling, stratification, feature selection, class imbalance.
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to use stratified sampling. It returns a new dataset with the selected rows, columns, and classes.
+
+Features: Mean of Green, Mean of Red, Mean of Near Infrared, Standard Deviation of Plan, and Class.
+
+Keywords: dataset subsampling, stratified sampling, random number generator, class selection, column selection, row selection.

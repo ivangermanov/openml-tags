@@ -1,29 +1,13 @@
 Intel Stock Prices Historical Data (INTC)
-Tags: Machine Learning, Manufacturing
 
-Context 
-Intel Corporation designs, manufactures, and sells essential technologies for the cloud, smart, and connected devices worldwide. The company operates through several business segments, including Data Center Group, Internet of Things Group, Mobileye, NAND Flash Memory and Storage Solutions Group, Programmable Solutions Group, Client Computing Group, and others. 
+Tags: Context
 
-It offers a wide range of platform products, such as central processing units and chipsets, as well as system-on-chip and multichip packages. Additionally, the company provides non-platform or adjacent products, which include accelerators, boards and systems, connectivity products, and memory and storage products.
+Intel Corporation designs, manufactures, and sells essential technologies for the cloud, smart, and connected devices worldwide. The company operates through several segments, including Data Center Group, Internet of Things Group, Mobileye, Network and Edge Solutions Group, Programmable Solutions Group, Client Computing Group, and All Other segments. It offers platform products, such as central processing units and chipsets, and system-on-chip and multichip packages, as well as non-platform or adjacent products comprising accelerators, boards and systems, connectivity products, and memory and storage products. The company also provides Internet of Things products, including high-performance compute solutions for targeted verticals and embedded applications, and computer vision and machine learning-based sensing, data analysis, localization, mapping, and driving policy technology. It serves original equipment manufacturers, original design manufacturers, and cloud service providers.
 
-Moreover, Intel Corporation offers Internet of things products, comprising high-performance compute solutions for targeted verticals and embedded applications. The company also provides computer vision and machine learning-based sensing, data analysis, localization, mapping, and driving policy technology. Its customers include original equipment manufacturers, original design manufacturers, and cloud service providers.
+The company has collaborations with various organizations to establish a computing platform with privacy-preserving analytics to accelerate the development and validation of clinical algorithms.
 
-The company has collaborated with various organizations, such as University of California San Francisco's Center for Digital Health Innovation, Fortanix, and Microsoft Azure, to establish a computing platform with privacy-preserving analytics to accelerate the development and validation of clinical algorithms. Another collaboration is with Inventec Corporation.
+To download the historical data, a simple code can be used. The code utilizes the yfinance library to fetch the data and then saves it to a CSV file.
 
-Intel Corporation was founded and is headquartered in Santa Clara, California.
+The dataset features a range of historical data, including the date, open, high, low, close, and volume of Intel stock prices.
 
-Code 
-To download historical stock price data, a simple Python script can be used:
-
-import yfinance as yf
-df = yf.download(tickers="INTC")
-df.to_csv('INTC.csv')
-
-Acknowledgements 
-This historical data was collected using a single line of Python code leveraging the Yahoo Finance API and the yfinance library.
-
-Features 
-The dataset includes several columns, namely date, open, high, low, close, adjusted close, and volume.
-
-Keywords: 
-Intel Corporation, Cloud Computing, Machine Learning, Internet of Things, Computer Vision, Manufacturing
+Keywords: Intel Corporation, stock prices, historical data, cloud technology, Internet of Things, computer vision, machine learning.

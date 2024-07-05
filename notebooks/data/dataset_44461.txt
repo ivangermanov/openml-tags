@@ -1,7 +1,17 @@
-Subsampling of the Compass dataset with a specified seed generates a new dataset with reduced number of rows, columns, and classes. This process involves uniformly sampling classes, columns, and rows while maintaining the stratification of the original dataset.
+Compass Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The subsample function takes several arguments, including the seed value, maximum number of rows, columns, and classes, and a boolean indicating whether to perform stratified sampling. The function first samples the classes using value counts and probability, then selects the corresponding indices. It then uniformly samples columns if required, and finally performs stratified sampling on the remaining data to reduce the number of rows.
+This is a subsampling of the dataset Compass with a seed of three. The subsampling was done with the following arguments: the maximum number of rows is two thousand, the maximum number of columns is one hundred, the maximum number of classes is ten, and stratification is true.
 
-The resulting dataset contains the sampled data, along with metadata such as the categorical mask and column names. The sampled data includes features such as sex, age category, race, juvenile felony count, prior counts, days between screening arrest, charge degree, decile score, and recidivism status.
+The subsampling was generated with the following source code:
 
-Keywords: Compass dataset, subsampling, stratified sampling, machine learning, statistics.
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
+
+The function first gets the unique classes from the target variable. If there are more classes than the maximum number of classes, it selects the maximum number of classes using a weighted random choice, where the weights are the value counts of each class. It then selects the indices where one of these classes is present.
+
+Next, the function uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns using a random choice.
+
+Finally, the function stratifies the data accordingly. If the number of rows is greater than the maximum number of rows, it uses train test split to select a subset of the data, stratifying by the target variable.
+
+The resulting dataset has the following features: sex, age, age category, race, juvenile felony count, juvenile misdemeanor count, juvenile other count, prior count, days between screening and arrest, days from compass, charge degree, decile score, score text, type of assessment, decile score, score text, end, and is recid.
+
+Keywords: dataset subsampling, stratification, feature selection, random sampling

@@ -1,28 +1,30 @@
-**FOREX EURCHF Day High**
+**FOREX EUR/CHF Day High**
 
-Tags: Chemistry, Finance, Forex, Forex Day, Forex High, Machine Learning
+Tags: finance, forex, forex day, forex high
 
-This dataset comprises historical price data of the Forex EUR/CHF currency pair obtained from Dukascopy's Historical Data Feed.
+**Source**: Dukascopy Historical Data Feed
 
-Each instance represents a single daily candlestick, with the entire dataset spanning from January to December. As the Forex market is closed on weekends, these days are excluded from the dataset. The timestamp feature is set to the Europe/Amsterdam time zone.
+**Data Description**
 
-The primary objective of this dataset is to predict the direction of the mean high price of the following day based on the current day's prices. To achieve this, the class attribute is defined as follows: if the mean high price increases the following day, the class attribute is set to true; otherwise, it remains false.
+This dataset contains historical price data of the FOREX EUR/CHF currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-Please note that this is a hypothetical task designed for scientific purposes only. In reality, trading strategies should be based on predictions made on close attributes, which are also available in this dataset.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
+
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the start of the daily time interval.
-* **Bid High**: The highest bid price recorded during the daily time interval.
-* **Bid Low**: The lowest bid price recorded during the daily time interval.
-* **Bid Close**: The bid price at the end of the daily time interval.
-* **Bid Volume**: The number of times the bid price changed within the daily time interval.
-* **Ask Open**: The ask price at the start of the daily time interval.
-* **Ask High**: The highest ask price recorded during the daily time interval.
-* **Ask Low**: The lowest ask price recorded during the daily time interval.
-* **Ask Close**: The ask price at the end of the daily time interval.
-* **Ask Volume**: The number of times the ask price changed within the daily time interval.
-* **Class**: A binary indicator representing whether the average high price will increase the following day.
+* **Timestamp**: The time of the current data point in Europe/Amsterdam timezone
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, EURCHF, Currency Pair, Historical Data, Prediction, Machine Learning, Financial Analysis
+**Keywords**: FOREX, EUR/CHF, currency pair, historical data, finance, trading

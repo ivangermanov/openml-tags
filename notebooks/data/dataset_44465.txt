@@ -1,9 +1,18 @@
-Machine Learning and Mathematics 
+Name: KDD Cup 09 Upselling Seed 2
 
-The KDD Cup Nine Up Selling dataset has been subjected to subsampling. This process involved uniformly sampling classes from the unique values present in the target variable. The number of classes sampled was capped at ten. A random sample of one hundred columns was also taken from the dataset. Furthermore, the number of rows was limited to two thousand.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-The sampling strategy employed was stratified, meaning that the class distribution was preserved during the sampling process. This ensured that the resulting subsampled dataset retained the same class balance as the original dataset.
+Generated with the following source code:
 
-The subsampled dataset consists of various features, including Var Six, Thirteen, Twenty One, Twenty Two, and so on. These features were selected randomly from the original dataset. 
+The subsample function is used to reduce the size of the dataset while maintaining its overall characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows and columns, and the maximum number of classes. The function first selects a subset of classes using a stratified sampling approach, ensuring that the resulting dataset has a balanced distribution of classes. It then selects a random subset of columns and rows from the original dataset.
 
-Keywords: Machine Learning, Mathematics, KDD Cup Nine, Up Selling, Subsampling, Stratified Sampling, Feature Selection.
+The function uses the NumPy random default generator to ensure reproducibility. It first selects the unique classes present in the dataset and then chooses a subset of these classes based on their frequency. The indices of the rows corresponding to these classes are then selected, and the dataset is reduced to only include these rows.
+
+If the number of columns in the dataset exceeds the maximum allowed, the function randomly selects a subset of columns. The columns are selected based on their index, and the resulting dataset only includes these columns.
+
+Finally, if the number of rows in the dataset exceeds the maximum allowed, the function uses a stratified sampling approach to select a subset of rows. This ensures that the resulting dataset has a balanced distribution of classes.
+
+Features: 
+Var Six, Var Thirteen, Var Twenty One, Var Twenty Two, Var Twenty Four, Var Twenty Five, Var Twenty Eight, Var Thirty Five, Var Thirty Eight, Var Fifty Seven, Var Sixty Five, Var Seventy Three, Var Seventy Four, Var Seventy Six, Var Seventy Eight, Var Eighty One, Var Eighty Three, Var Eighty Five, Var One Zero Nine, Var One One Two, Var One One Three, Var One One Nine, Var One Two Three, Var One Two Five, Var One Two Six, Var One Three Two, Var One Three Three, Var One Three Four, Var One Four Zero, Var One Four Four, Var One Four Nine, Var One Five Three, Var One Six Zero, Var One Six Three, Var One Nine Four, Var One Nine Six, Var Two Zero One, Var Two Zero Three, Var Two Zero Five, Var Two Zero Seven, Var Two Zero Eight, Var Two One Zero, Var Two One One, Var Two One Eight, Var Two Two One, Var Two Two Three, Var Two Two Five, Var Two Two Seven, Var Two Two Nine, Upselling
+
+Keywords: dataset subsampling, stratified sampling, class balancing, feature selection, reproducibility

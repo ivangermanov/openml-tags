@@ -1,0 +1,9 @@
+Weather Versuchsbeete Tags: Weather measures from Versuchsbeete provided by the Max Planck Institute for Biogeochemistry
+
+Several weather measures are provided by the Max Planck Institute for Biogeochemistry from the Weather Station on Top of the Roof of the Institute Building. We have assembled all the files available as of a certain date on the institute's website.
+
+Preprocessing involved several steps. Firstly, the column named 'Date Time' was renamed to 'date' for clarity. Secondly, the date was parsed with a specific format and converted to a string with a default format used by pandas. Thirdly, values of -9999 were replaced with nan, as they seem to indicate a problem with the measurement. Additionally, it was observed that the measure for precipitation in millimeters started to be recorded from a certain year, and before that, all the values were already NaN.
+
+The dataset features a range of weather-related variables, including temperature and soil moisture measurements at different depths, as well as precipitation data.
+
+Keywords: weather measures, biogeochemistry, weather station, temperature, soil moisture, precipitation

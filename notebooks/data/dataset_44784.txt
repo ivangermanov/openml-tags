@@ -1,19 +1,17 @@
-Porto Seguro Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Strategically Sampled
+Porto Seguro Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Tags: Subsampling of the Porto Seguro dataset with seed equal to one, two thousand rows maximum, one hundred columns maximum, ten classes maximum, and stratification set to true.
+This dataset is a subsample of the Porto Seguro dataset, generated with a specific set of parameters. The subsampling process involved uniformly selecting classes, columns, and rows from the original dataset.
 
-Generated with the following source code:
+The dataset has ten classes, which were selected from the original classes using a random sampling method. The selection was done in a way that ensures the classes are represented proportionally to their original frequency.
 
-This function takes in a dataset and returns a new dataset that has been strategically sampled. The sampling process involves selecting a specified number of classes, columns, and rows while maintaining the balance of classes throughout the process.
+The dataset also has one hundred columns, which were selected uniformly from the original columns. The selection was done randomly, without any specific criteria.
 
-The function begins by uniformly sampling classes from the target variable. If there are more classes than the specified maximum, it selects the top classes based on their frequency. It then selects the indices where one of these classes is present and filters the data accordingly.
+The dataset has two thousand rows, which were selected using a stratified sampling method. This means that the selection was done in a way that ensures the classes are represented proportionally to their original frequency.
 
-Next, it uniformly samples columns if required. If there are more columns than the specified maximum, it randomly selects the specified number of columns while ensuring that the column order is maintained.
-
-Finally, it strategically samples rows using stratified splitting to maintain class balance. The resulting dataset has the specified number of rows, columns, and classes, and it is returned along with its metadata.
+The dataset was generated using a specific seed, which ensures reproducibility of the results.
 
 Features:
 
-(ps ind one, ps ind two category, ps ind three, ...)
+* Various insurance-related features, including policy holder information, car information, and calculation features
 
-Keywords: Porto Seguro, strategic sampling, class balance, column selection, row sampling.
+Keywords: Porto Seguro, dataset, subsampling, stratified sampling, insurance, policy holder, car information

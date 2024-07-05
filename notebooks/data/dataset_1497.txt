@@ -1,34 +1,30 @@
-The Wall Following Robot Navigation Data dataset is categorized under Chemistry, Life Science, OpenML-CC18, OpenML100, study_123, study_14, study_34, study_52, study_7, and study_98.
+Wall-Robot Navigation Dataset
 
-This dataset was collected as the SCITOS G5 robot navigated through a room following the wall in a clockwise direction for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. The data consists of raw values of the measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings were sampled at a rate of nine samples per second. The class labels are Move Forward, Slight Right Turn, Sharp Right Turn, and Slight Left Turn.
+Tags: OpenML-CC, OpenML, study
 
-It is worth noting that the twenty-four ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows, one for each sampling time step. The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a nonlinearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the Multilayer Perceptron network, are able to learn the task and command the robot successfully without collisions.
+Source: UCI
 
-Attribute information includes:
+Please cite: UCI
 
-Ultrasound Sensor at the Front of the Robot (Reference Angle: One Hundred Eighty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Sixty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Fifty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Thirty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Twenty Degrees)
-Ultrasound Reading (Reference Angle: Minus One Hundred Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Ninety Degrees)
-Ultrasound Reading (Reference Angle: Minus Seventy-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Sixty Degrees)
-Ultrasound Reading (Reference Angle: Minus Forty-Five Degrees)
-Ultrasound Reading (Reference Angle: Minus Thirty Degrees)
-Ultrasound Reading (Reference Angle: Minus Fifteen Degrees)
-Reading of Ultrasound Sensor Situated at the Back of the Robot (Reference Angle: Zero Degrees)
-Ultrasound Reading (Reference Angle: Fifteen Degrees)
-Ultrasound Reading (Reference Angle: Thirty Degrees)
-Ultrasound Reading (Reference Angle: Forty-Five Degrees)
-Ultrasound Reading (Reference Angle: Sixty Degrees)
-Ultrasound Reading (Reference Angle: Seventy-Five Degrees)
-Ultrasound Reading (Reference Angle: Ninety Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Five Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Twenty Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Thirty-Five Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Fifty Degrees)
-Ultrasound Reading (Reference Angle: One Hundred Sixty-Five Degrees)
+Wall-Following Robot Navigation Data Data Set
 
-Keywords: robot navigation, ultrasound sensors, classification task, nonlinearly separable, linear classifiers, neural classifiers, collision avoidance.
+The data were collected as the SCITOS G robot navigates through a room following the wall in a clockwise direction for four rounds, using twenty-four ultrasound sensors arranged circularly around its waist. The dataset consists of raw values from measurements of all twenty-four ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of nine samples per second.
+
+The class labels are:
+- Move Forward
+- Slight Right Turn
+- Sharp Right Turn
+- Slight Left Turn
+
+It is worth mentioning that the twenty-four ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows (one for each sampling time step). The wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a non-linearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the MLP network, are able to learn the task and command the robot successfully without collisions.
+
+Attribute Information:
+The dataset includes twenty-four ultrasound sensor readings, labeled US through US, positioned at various angles around the robot. The front sensor (US) is at a reference angle of degrees, with subsequent sensors positioned at degree intervals, both clockwise and counterclockwise, around the robot's circumference. The back sensor (US) is at a reference angle of degrees.
+
+Relevant Papers:
+A study on short-term memory mechanisms in neural network learning of robot navigation tasks was conducted, focusing on this dataset as a case study. The research was presented at the Latin American Robotics Symposium.
+
+Features:
+The features consist of twenty-four variables (V through V) representing the ultrasound sensor readings, along with a Class variable.
+
+Keywords: robot navigation, ultrasound sensors, wall-following, machine learning, classification task, neural networks, non-linear separability

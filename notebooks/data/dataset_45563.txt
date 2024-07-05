@@ -1,27 +1,19 @@
 Dota 2 Games Results Data Set
-Tags: Chemistry, Life Science
+Tags: Dota 2 is a popular computer game with two teams of five players. 
 
-Dota 2 is a highly popular computer game where two teams, each consisting of five players, compete against each other. At the beginning of the game, each player selects a unique hero with distinct strengths and weaknesses.
+Data Set Information: 
+Dota 2 is a popular computer game with two teams of five players. At the start of the game, each player chooses a unique hero with different strengths and weaknesses. The dataset is reasonably sparse as only ten of one hundred thirteen possible heroes are chosen in a given game. All games were played in a space of two hours on the thirteenth of August, two thousand sixteen. 
 
-The dataset is relatively sparse since only ten out of one hundred thirteen possible heroes are chosen in a given game. All games were played within a span of two hours on a specific date.
+The data was collected using a web link. 
 
-The data was collected using a web link.
+Attribute Information: 
+Each row of the dataset is a single game with the following features in the order in the vector: 
+Team that won the game, Cluster Identification related to location, Game mode, such as All Pick, and Game type, such as Ranked. 
+Each element is an indicator for a hero. The value of one indicates that a player from team one played as that hero, and negative one for the other team. A hero can be selected by only one player each game. This means that each row has five ones and five negative ones values. 
 
-Attribute Information:
-Each row of the dataset represents a single game, featuring the following attributes in the specified order:
-
-* The team that won the game
-* Cluster identification related to location
-* Game mode, such as All Pick
-* Game type, such as Ranked
-
-Subsequent attributes consist of indicators for each hero. A value of one signifies that a player from team one played as that hero, whereas a negative one indicates the opposing team. It is essential to note that each hero can only be selected by one player per game, resulting in each row having five ones and five negative ones.
-
-Relevant Papers: Not applicable
-
-Note: This dataset combines the training and test data from UCI.
+Relevant Papers: Not applicable.
 
 Features: 
-Team Won, Cluster Identification, Game Mode, Game Type, followed by indicators for each of the heroes.
+Team that won, Cluster Identification, Game mode, Game type, and hero indicators.
 
-Keywords: Dota 2, Computer Game, Heroes, Teams, Dataset, Computer Science
+Keywords: Dota 2, computer game, heroes, teams, game mode, game type.

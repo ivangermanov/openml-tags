@@ -1,19 +1,9 @@
-Machine Learning and Mathematics Subsampling of the Christine dataset with Seed equals One 
+Subsampling of the dataset Christine with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals True.
+
 Generated with the following source code:
 
-The function subsample takes in parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not. It returns a new dataset.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows from the original dataset. If the number of classes in the original dataset is greater than the specified maximum, it selects the classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and uses these indices to subset the data. If the number of columns in the dataset is greater than the specified maximum, it uniformly samples the columns. Finally, if the number of rows in the dataset is greater than the specified maximum, it uses stratified sampling to select the desired number of rows.
 
-This function first gets the unique classes from the target variable y. If there are more classes than the specified maximum, it selects a random sample of classes based on their frequency.
+The resulting dataset has the following features: 
 
-Then, it selects the indices where one of these classes is present and filters the data accordingly. 
-
-Next, it checks if the number of columns exceeds the specified maximum. If so, it randomly selects a subset of columns.
-
-If the number of rows still exceeds the specified maximum, it uses stratified sampling to select a subset of rows.
-
-Finally, it returns a new dataset with the filtered data, along with the categorical mask and column names.
-
-Features: 
-this dataset contains a wide range of variables including demographic, financial, and behavioral characteristics
-
-Keywords: machine learning, mathematics, subsampling, dataset, stratification
+Keywords: Subsampling, Dataset, Random Sampling, Stratified Sampling, Feature Selection.

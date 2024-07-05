@@ -1,13 +1,11 @@
-Subsampling of the Dataset Riccardo 
+Subsampling of the dataset Riccardo with seed equal to zero, maximum number of rows equal to two thousand, maximum number of columns equal to one hundred, maximum number of classes equal to ten, and stratify equal to true.
 
-Tags: Sociology, Statistics 
+Generated with the following source code:
 
-This dataset is a subsampled version of the Riccardo dataset, generated using a specific set of arguments and parameters. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset. 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratify parameter determines whether the subsample should be stratified according to the target variable.
 
-The class sampling process selects a specified number of unique classes from the original dataset, ensuring that each class has an equal probability of being chosen. If the number of unique classes exceeds the specified maximum, the classes are selected based on their frequency distribution. 
+The dataset Riccardo has been subsampled to have a maximum of two thousand rows, one hundred columns, and ten classes. The subsample has been stratified according to the target variable.
 
-The column sampling process randomly selects a specified number of columns from the original dataset, ensuring that each column has an equal probability of being chosen. If the number of columns exceeds the specified maximum, the columns are selected uniformly at random.
+Features: 
 
-The row sampling process uses stratified sampling to select a specified number of rows from the dataset, ensuring that each class is represented proportionally. This is achieved by concatenating the feature data with the target variable, performing stratified splitting, and then dropping the target variable from the resulting subset.
-
-Keywords: dataset, subsampling, sociology, statistics, stratified sampling, uniform sampling.
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Feature Selection

@@ -1,27 +1,13 @@
-Balance Scale Tags: Artificial, Machine Learning, OpenML-CC18, OpenML100, Shark-Tutorial-Demo-Tag, Study One, Study One Hundred Twenty Three, Study One Hundred Thirty Five, Study Fourteen, Study Thirty Four, Study Thirty Seven, Study Forty One, Study Fifty, Study Fifty Two, Study Seven, Study Seventy, Study Ninety Eight, Study Ninety Nine, UCI 
+Balance Scale Weight & Distance Database
 
-The Balance Scale Weight and Distance Database was generated to model psychological experimental results. Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. 
+This dataset was generated to model psychological experimental results. It is part of the OpenML CC18, OpenML100, and UCI collections, and has been used in various studies and tutorials. The dataset models balance scale phenomena, with each example classified as having the balance scale tip to the right, tip to the left, or remain balanced.
 
-The correct way to find the class is the greater of the product of the left distance and the left weight, and the product of the right distance and the right weight. If these two products are equal, then the balance scale is balanced.
+The attributes in the dataset represent the left weight, left distance, right weight, and right distance of the balance scale. The correct classification is determined by comparing the products of weight and distance on each side. If the left side's product (left distance multiplied by left weight) is greater than the right side's product (right distance multiplied by right weight), the scale tips to the left. If the right side's product is greater, the scale tips to the right. When the products are equal, the scale is balanced.
 
-Attribute Description
-The attributes are the left weight, the left distance, the right weight, and the right distance.
+The dataset contains no missing values. The class attribute has three possible values: L (left), B (balanced), and R (right). Each of the four numerical attributes (left weight, left distance, right weight, right distance) can take on five discrete values ranging from one to five.
 
-Relevant Papers 
-This database was created based on cognitive development models related to balance scale phenomena.
+This dataset has been used in cognitive development research, particularly in modeling how children learn to solve balance scale problems. It provides a simple yet effective way to study decision making processes and the development of mathematical thinking.
 
-Dataset Information 
-Additional Information 
-This data set was generated to model psychological experimental results. Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. The correct way to find the class is the greater of the product of the left distance and the left weight, and the product of the right distance and the right weight. If these two products are equal, then the balance scale is balanced.
+The Balance Scale Weight & Distance Database serves as a valuable resource for machine learning practitioners, cognitive scientists, and researchers interested in decision making processes. It offers a straightforward problem with clear rules, making it suitable for various machine learning algorithms and educational purposes.
 
-Has Missing Values?
-No 
-
-Additional Variable Information 
-Class Name has three possible values: Left, Balanced, and Right.
-Left Weight has five possible values.
-Left Distance has five possible values.
-Right Weight has five possible values.
-Right Distance has five possible values.
-
-Keywords: Balance Scale, Psychological Experimental Results, Weight, Distance, Classification, Cognitive Development Models.
+Keywords: balance scale, cognitive development, decision making, weight, distance, classification, psychological experiments, machine learning

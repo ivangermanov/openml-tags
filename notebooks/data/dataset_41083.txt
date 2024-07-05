@@ -1,13 +1,9 @@
-The Olivetti Faces dataset contains a collection of face images taken between April nineteen ninety-two and April nineteen ninety-four at AT&T Laboratories Cambridge. 
+Olivetti Faces Tags: Vision
 
-There are multiple images of each of forty distinct subjects, with variations including different lighting conditions, facial expressions, and facial details. The images feature a dark, homogeneous background, with the subjects positioned upright and facing forward, allowing for some degree of side movement.
+This dataset contains a set of face images taken at AT&T Laboratories Cambridge between April 1992 and April 1994. There are ten different images of each of forty distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions, such as open or closed eyes, smiling or not smiling, and facial details, such as glasses or no glasses. All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position, with tolerance for some side movement.
 
-Each image has been quantized to two hundred fifty-six grey levels and stored as unsigned eight-bit integers. These values are then converted to floating-point values within the interval zero to one, making them more suitable for use with various machine learning algorithms.
+The image is quantized to 256 grey levels and stored as unsigned eight-bit integers; the loader will convert these to floating point values on the interval from zero to one, which are easier to work with for many algorithms. The target for this database is an integer indicating the identity of the person pictured; however, with only ten examples per class, this relatively small dataset is more interesting from an unsupervised or semi-supervised perspective.
 
-This dataset is particularly intriguing when approached from an unsupervised or semi-supervised perspective, given the limited number of examples available for each class.
+The original dataset consisted of images with a resolution of ninety-two by one hundred twelve, while the version available here consists of sixty-four by sixty-four images. When using these images, please give credit to AT&T Laboratories Cambridge.
 
-When utilizing these images, please provide credit to AT&T Laboratories Cambridge.
-
-Tags: Machine Learning, Manufacturing, Vision
-
-Keywords: Face Images, Facial Expressions, Lighting Conditions, Homogeneous Background, Grey Levels, Floating-Point Values, Unsupervised Learning, Semi-Supervised Learning.
+Keywords: Face Recognition, Image Dataset, Facial Expressions, Lighting Variations, Unsupervised Learning

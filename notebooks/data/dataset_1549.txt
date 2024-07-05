@@ -1,13 +1,22 @@
-AutoUniv is an advanced data generator for classification tasks, aiming to reflect the nuances and heterogeneity of real data. The data can be generated in various formats, including CSV, ARFF, and C4.5.
+AutoUniv Dataset
 
-The AutoUniv dataset provides a unique approach to generating classified examples from a created classification model. To create a model, users specify the number of attributes and their type, which can be either discrete or continuous, as well as the number of classes and the complexity of the underlying rules and noise level. AutoUniv then produces a model through a process of constrained randomized search to satisfy the user's requirements.
+Tags: artificial, study, study, study, study, study
 
-A model can have a significant number of rules, and rare class models can be designed. Moreover, a sequence of models can be designed to reflect concept and/or population drift.
+Source: UCI
 
-AutoUniv creates three text files for a model: a Prolog specification of the model used to generate examples; a user-friendly statement of the classification rules in an "if...then" format; and a statistical summary of the main properties of the model, including its Bayes rate.
+Please cite:
+Dataset Title: AutoUniv Dataset data problem: autoUniv drift
 
-Attributes in the dataset may be discrete with multiple values or continuous. A discrete attribute can be nominal with specific values or integer with sequential values.
+Abstract: AutoUniv is an advanced data generator for classifications tasks. The aim is to reflect the nuances and heterogeneity of real data. Data can be generated in CSV, ARFF or C formats.
 
-The relevance of AutoUniv is further emphasized by its application in various research papers, exploring topics such as modeling the example life cycle in online classification learners, the impact of latency on online classification learning with concept drift, and structure and majority classes in decision tree learning.
+Source: AutoUniv was developed by a researcher. Email provided. AutoUniv website link provided.
 
-Keywords: classification tasks, data generator, heterogeneous data, machine learning, concept drift, population drift, decision tree learning.
+Data Set Information: The user first creates a classification model and then generates classified examples from it. To create a model, the following are specified: the number of attributes (up to a large number) and their type (discrete or continuous), the number of classes (up to several), the complexity of the underlying rules and the noise level. AutoUniv then produces a model through a process of constrained randomized search to satisfy the user's requirements. A model can have up to several thousand rules. Rare class models can be designed. A sequence of models can be designed to reflect concept and/or population drift. AutoUniv creates three text files for a model: a Prolog specification of the model used to generate examples; a user friendly statement of the classification rules in an 'if ... then' format; a statistical summary of the main properties of the model, including its Bayes rate.
+
+Attribute Information: Attributes may be discrete with up to several values or continuous. A discrete attribute can be nominal with values or integer with values.
+
+Relevant Papers: Several papers are cited discussing modeling example life cycle in online classification learning, the impact of latency on online classification learning with concept drift, and structure and majority classes in decision tree learning.
+
+Features: The dataset contains numerous features labeled V through V, as well as a Class feature.
+
+Keywords: classification, data generation, concept drift, machine learning, attribute modeling, rule complexity, online learning

@@ -1,21 +1,17 @@
-Arcade Game Stats 
+Arcade Game Stats
 
-Tags: Computer Systems, Machine Learning 
+Tags: Statistics on a Blockbreaker-like Game
 
-Statistics on a Block Breaker-like Game 
+The dataset is based on a blockbreaker-like game, which is currently under development. The game's foundation is the "Block Breaker" section of the Complete C Unity Developer 2D course, where the developer learned to code and make games. After creating numerous levels, the need arose to sort them by difficulty. Measuring the difficulty of a level is a complex task, and a first-cut solution was to design an auto-play bot that is not perfect, and observe its performance on each level through thousands of trials.
 
-I am in the process of creating a block breaker-like game, where I started with the "Block Breaker" section of the Complete C Unity Developer Two D course, Learn to Code Making Games. After designing numerous levels, I needed to categorize them by difficulty. But how do you quantify the difficulty of a level? 
+A video of the game in auto-play action is available, showcasing the bot's gameplay. The dataset includes the following fields:
 
-A preliminary solution is to create an autoplayer bot that is not perfect and observe its performance on each level over multiple trials. I recorded a video showcasing the autoplayer in action.
+Date: The date and time the game was auto-played
+Level: The name of the level, which includes an estimate of the difficulty from a previous run (no longer valid after tweaking)
+Number of Blocks: The number of blocks that need to be broken to win the level
+Is Win: A boolean indicating whether the auto-play bot broke all the blocks or the ball fell past the paddle
+Elapsed Time: The time in seconds until either winning or losing the game (played at four times the normal speed, so multiply by four to estimate the time a human player might take)
+Score: The total score when the game was won or lost
+Accuracy: The auto-play bot's accuracy, which is tuned with a randomly chosen value; higher numbers indicate a higher likelihood of winning
 
-The following fields are included in the dataset:
-
-Date - the date and time the game was autoplayed 
-Level - the name of the level, initially including an estimated difficulty rating, now outdated due to tweaks made to the game 
-Number of Blocks - the number of blocks required to break to win the level 
-Is Win - a boolean indicating whether the autoplayer successfully cleared all blocks or failed to catch the ball 
-Elapsed Time - the duration of gameplay in seconds until either winning or losing; note that gameplay speed is quadrupled, so actual playing time for humans would be approximately four times this value 
-Score - the cumulative score at the conclusion of the game 
-Accuracy - the autoplayer's precision, which affects the likelihood of winning, with higher values corresponding to increased success rates 
-
-Keywords: Block Breaker, Autoplayer, Difficulty Measurement, Game Development, Machine Learning, Statistics
+Keywords: blockbreaker, game development, level difficulty, auto-play bot, game statistics

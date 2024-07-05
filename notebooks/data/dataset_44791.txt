@@ -1,11 +1,19 @@
-The KDD Cup 2009 Upselling dataset has been subsampled using a specific set of parameters to generate a new dataset. This subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
+Name: KDD Cup 09 Upselling Seed 3
 
-The resulting dataset has been generated with a seed value of three, which ensures reproducibility of the subsampling process. The maximum number of rows has been limited to two thousand, while the maximum number of columns has been capped at one hundred. Furthermore, the number of classes has been restricted to ten.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-Stratification has been applied during the subsampling process to maintain the class distribution of the original dataset. This involves selecting a subset of classes based on their frequency in the original dataset, and then sampling rows and columns accordingly.
+Generated with the following source code:
 
-The subsampled dataset consists of various chemical and physical features, including variables related to molecular properties and reactions. These features have been carefully selected to represent a diverse range of characteristics relevant to the upselling task.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling.
 
-Tags: Chemistry, Machine Learning
+The function first selects a subset of classes, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: subsampling, dataset, chemistry, machine learning, stratification, class distribution.
+Next, it uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by randomly selecting column indices and sorting them to ensure consistency.
+
+If the number of rows still exceeds the maximum allowed, the function stratifies the data and samples a subset of rows. This is done using a train-test split function, which ensures that the sampled data maintains the same class distribution as the original data.
+
+Finally, the function converts categorical columns to strings and returns a new dataset with the subsampled data.
+
+Features: (omitted due to unreadability)
+
+Keywords: dataset subsampling, stratified sampling, class distribution, data reduction

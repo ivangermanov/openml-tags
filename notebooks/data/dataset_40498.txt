@@ -1,30 +1,19 @@
-Wine Quality White 
+Wine Quality White
 
-Tags: Machine Learning, Meteorology 
+This dataset is publicly available for research. The details are described in the reference provided. Please include this citation if you plan to use this database.
 
-This dataset is publicly available for research. The details are described in the referenced paper. Please include the citation if you plan to use this database.
+Title: Wine Quality
 
-Title: Wine Quality 
+Sources Created: 2009
 
-Sources 
-Created in two thousand nine 
+Past Usage: The dataset was used to model wine preferences by data mining from physicochemical properties. Two datasets were created, using red and white wine samples. The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert graded the wine quality between zero, very bad, and ten, very excellent. Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed, including mean absolute deviation and confusion matrix for a fixed error tolerance. Also, the relative importances of the input variables were plotted, as measured by a sensitivity analysis procedure.
 
-Past Usage 
-The referenced paper modeled wine preferences by data mining from physicochemical properties. Two datasets were created, one using red wine samples and the other using white wine samples. The inputs included objective tests, such as pH values, and the output was based on sensory data, which was the median of at least three evaluations made by wine experts. Each expert graded the wine quality between zero, very bad, and ten, very excellent. Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed, including mean absolute deviation and a confusion matrix for a fixed error tolerance. Also, the relative importance of the input variables was plotted, as measured by a sensitivity analysis procedure.
+Relevant Information: The two datasets are related to red and white variants of the Portuguese "Vinho Verde" wine. For more details, consult the Vinho Verde website or the reference provided. Due to privacy and logistic issues, only physicochemical and sensory variables are available, excluding data about grape types, wine brand, and wine selling price. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones. Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, it could be interesting to test feature selection methods, as not all input variables may be relevant.
 
-Relevant Information 
-The two datasets are related to red and white variants of the Portuguese Vinho Verde wine. For more details, consult the Vinho Verde website or the referenced paper. Due to privacy and logistic issues, only physicochemical and sensory variables are available. There is no data about grape types, wine brand, or wine selling price, among others. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, meaning there are many more normal wines than excellent or poor ones. Outlier detection algorithms could be used to detect the few excellent or poor wines. Additionally, it could be interesting to test feature selection methods because we are not sure if all input variables are relevant.
+Attribute Information: The input variables are based on physicochemical tests, including fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol. The output variable is based on sensory data, which is the quality score between zero and ten.
 
-Number of Instances 
-There are four thousand eight hundred ninety-eight instances in the white wine dataset.
+Missing Attribute Values: None
 
-Attribute Information 
-Input variables are based on physicochemical tests and include fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol. The output variable is based on sensory data and represents the quality of the wine, scored between zero and ten.
+Dataset Information: The dataset has no missing values and can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones.
 
-Missing Attribute Values 
-There are no missing attribute values.
-
-Dataset Information 
-Additional information about the dataset includes the fact that it relates to white variants of the Portuguese Vinho Verde wine. There are no missing values, and the dataset can be viewed as either a classification or regression task. The classes are ordered and not balanced, and outlier detection algorithms could be used to detect the few excellent or poor wines.
-
-Keywords: wine quality, machine learning, meteorology, physicochemical properties, sensory data, data mining, regression approach, support vector machine, outlier detection, feature selection.
+Keywords: wine quality, physicochemical properties, sensory data, data mining, regression approach, feature selection, outlier detection.

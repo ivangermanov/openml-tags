@@ -1,25 +1,30 @@
-**FOREX cad/jpy - Minute - High**
-Tags: Finance, Forex, Forex High, Forex Minute, Health, Statistics
+**FOREX CAD/JPY Minute High**
 
-This dataset contains historical price data of the Forex cad/jpy currency pair from Dukascopy. Each instance, or row, represents one candlestick of one minute duration. The entire dataset spans a specific date range and excludes weekends, as Forex markets are not active during these periods.
+Tags: finance, forex, forex high, forex minute
 
-The timestamp feature is set to the Europe/Amsterdam timezone. The class attribute determines the direction of the mean high price in the subsequent minute relative to the current minute. Specifically, if the mean high price increases in the next minute, the class attribute is true; otherwise, it is false.
+**Source**: Dukascopy Historical Data Feed
 
-Please note that this dataset is intended for scientific purposes only and should not be used to inform actual trading decisions. Realistic trade strategies should be based on predictions made using close attributes, which are also available in this dataset.
+**Data Description**
+
+This dataset contains historical price data of the FOREX CAD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January to December and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
+
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
+
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: The time associated with each data point, set to the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the beginning of each time interval.
-* **Bid High**: The highest bid price recorded during each time interval.
-* **Bid Low**: The lowest bid price recorded during each time interval.
-* **Bid Close**: The bid price at the end of each time interval.
-* **Bid Volume**: The number of times the bid price changed within each time interval.
-* **Ask Open**: The ask price at the beginning of each time interval.
-* **Ask High**: The highest ask price recorded during each time interval.
-* **Ask Low**: The lowest ask price recorded during each time interval.
-* **Ask Close**: The ask price at the end of each time interval.
-* **Ask Volume**: The number of times the ask price changed within each time interval.
-* **Class**: Indicates whether the average price will increase in the next time interval.
+* **Timestamp**: The time of the current data point in Europe/Amsterdam
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, cad/jpy, historical data, currency pair, financial markets, trading strategy.
+**Keywords**: FOREX, CAD/JPY, historical data, candlestick, finance, trading

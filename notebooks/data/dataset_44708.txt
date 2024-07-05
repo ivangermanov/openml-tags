@@ -1,17 +1,17 @@
-Amazon Employee Access Seed Zero 
+Name: Amazon Employee Access
 
-Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Amazon Employee Access, Generated with the following source code
 
-This is a subsampled version of the Amazon Employee Access dataset, generated using a specific set of parameters. 
+This dataset is a subsample of the Amazon Employee Access dataset, generated using a specific source code. The subsampling process involved uniformly sampling classes and columns, as well as stratified sampling of rows.
 
-The subsampling process involved uniformly selecting classes from the dataset until the maximum number of desired classes was reached. This was done to ensure that the resulting subsample would have a good representation of all classes present in the original dataset.
+The source code defines a function called subsample, which takes in several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify the sampling. The function uses the NumPy random default generator to ensure reproducibility.
 
-Once the desired classes were selected, the indices where these classes were present were identified, and the corresponding rows were extracted from the original dataset.
+The subsampling process first selects a subset of classes, ensuring that the number of classes does not exceed the maximum specified. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, the process involved uniformly sampling columns from the resulting dataframe until the maximum number of desired columns was reached. This was done to reduce the dimensionality of the dataset while still maintaining a good representation of the underlying relationships between variables.
+Next, the function uniformly samples columns, selecting a subset of columns if the total number of columns exceeds the maximum specified. It then filters the data to include only the selected columns.
 
-Finally, the process involved sampling rows from the resulting dataframe until the maximum number of desired rows was reached. This was done using a stratified approach to ensure that the resulting subsample would still maintain a good balance of all classes present in the original dataset.
+Finally, the function stratifies the sampling of rows, ensuring that the number of rows does not exceed the maximum specified. It uses the train test split function from scikit-learn to perform the stratified sampling.
 
-The resulting subsample consists of the following features: Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, and Role Code.
+The resulting dataset includes the following features: Resource, Manager ID, Role Rollup One, Role Rollup Two, Role Department Name, Role Title, Role Family Description, Role Family, and Role Code.
 
-Keywords: Machine Learning, Mathematics, Data Subsampling, Class Selection, Dimensionality Reduction, Stratified Sampling
+Keywords: Amazon Employee Access, subsampling, stratified sampling, dataset generation, feature selection.

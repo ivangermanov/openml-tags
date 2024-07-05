@@ -1,9 +1,28 @@
-The HIVA dataset is a collection of molecules with their corresponding activity levels against the Human Immunodeficiency Virus (HIV). The primary goal of this dataset is to predict which compounds are active against AIDS HIV infection. Initially, the data had three classes: active, moderately active, and inactive; however, we reduced it to a two-class classification problem, focusing on active versus inactive compounds.
+Name: Hiva Agnostic
+Tags: Invalid ARFF, Study
 
-We represented the molecules using 2000 sparse binary input variables, each variable representing a specific property inferred from the molecular structure. Therefore, the main challenge is to establish a quantitative structure-activity relationship (QSAR) between the molecular structure and its activity, enabling high-throughput screening (HTS) of new compounds without actual testing.
+Source: Unknown - Date unknown
 
-This dataset combines samples from both training and validation sets. The data type is non-sparse, comprising numerous features that describe the molecular properties.
+Please cite: Datasets from the Agnostic Learning vs. Prior Knowledge Challenge
 
-The HIVA dataset is part of the Agnostic Learning vs. Prior Knowledge Challenge, aimed at comparing machine learning approaches with prior knowledge-based methods in solving real-world problems.
+Dataset from: Agnostic Learning vs. Prior Knowledge Challenge website
 
-Keywords: HIVA, QSAR, HTS, Molecular Structure, AIDS, HIV Infection, Machine Learning, Agnostic Learning.
+Modified by TunedIT (converted to ARFF format)
+
+HIVA is the HIV infection database. The task of HIVA is to predict which compounds are active against the AIDS HIV infection. The original data has three classes (active, moderately active, and inactive). We brought it back to a two-class classification problem (active vs. inactive). We represented the data as sparse binary input variables. The variables represent properties of the molecule inferred from its structure. The problem is therefore to relate structure to activity (a quantitative structure-activity relationship problem) to screen new compounds before actually testing them (a high-throughput screening problem).
+
+Data type: Non-sparse
+
+Number of features: Many
+
+Number of examples and check sum: This dataset contains samples from both training and validation datasets.
+
+Features: This dataset contains numerous attributes representing various molecular properties.
+
+This dataset focuses on predicting the activity of compounds against HIV infection. It utilizes binary input variables to represent molecular properties, aiming to establish a relationship between chemical structure and biological activity. The challenge lies in effectively screening potential compounds before conducting physical tests, making it valuable for drug discovery and development processes in the fight against AIDS.
+
+The data has been simplified from a three-class problem to a binary classification task, distinguishing between active and inactive compounds. This transformation allows for more straightforward analysis and prediction models. The sparse binary representation of molecular properties enables efficient computational processing and analysis of the chemical structures.
+
+By leveraging this dataset, researchers and data scientists can develop and test machine learning models to predict the effectiveness of new compounds against HIV. This approach has the potential to accelerate the drug discovery process and contribute to the ongoing efforts to combat the AIDS epidemic.
+
+Keywords: HIV, AIDS, drug discovery, molecular properties, binary classification, structure-activity relationship, high-throughput screening, compound activity prediction

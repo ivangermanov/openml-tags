@@ -1,48 +1,16 @@
-The USNews dataset for the ASA Statistical Graphics Section's Data Analysis Exposition contains information on over thirteen hundred American colleges and universities. The data may be obtained in either of two formats. USNews DATA contains the raw data in comma delimited fields with a single data line for each school. The order of variables is the same as given below for the fixed column version, although the spacing varies for each school. USNews Three DATA has the data arranged in fixed columns, with three data lines for each school and a maximum line length of eighty characters. This dataset is taken from the US News and World Report's Guide to America's Best Colleges. This dataset is protected by copyright, is reproduced with permission of the copyright holder, and may not be downloaded or otherwise copied, except solely for the purpose of analysis in connection with the American Statistical Association's Data Analysis Exposition.
+Name: colleges usnews
+Tags: 
 
-KEY FOR USNews Three DATA
+The USNEWS dataset for the ASA Statistical Graphics Section's Data Analysis Exposition contains information on over American colleges and universities. The data may be obtained in either of two formats. USNEWS.DATA contains the raw data in comma delimited fields with a single data line for each school. The order of variables is the same as given below for the fixed column version, although the spacing varies for each school. USNEWS.DATA has the data arranged in fixed columns, with three data lines for each school and a maximum line length of characters.
 
-Fixed column format with three data lines per school
+This dataset is taken from the U.S. News & World Report's Guide to America's Best Colleges. This dataset is protected by copyright, is reproduced with permission of the copyright holder(s), and may not be downloaded or otherwise copied, except solely for the purpose of analysis in connection with the American Statistical Association's Data Analysis Exposition. The data are reproduced with the permission of the publisher. Most of the data are for the school year. You may wish to consult a copy of the U.S. News source for more detailed descriptions of the variables.
 
-Line One: Federal Identification Number, College Name, State Postal Code
+The dataset includes information such as the Federal ID number, college name, state, public/private indicator, average SAT and ACT scores, application and enrollment statistics, tuition costs, faculty information, and graduation rates. Missing values are denoted with an asterisk.
 
-Line Two: Public Private Indicator, Average Math SAT Score, Average Verbal SAT Score, Average Combined SAT Score, Average ACT Score, First Quartile Math SAT, Third Quartile Math SAT, First Quartile Verbal SAT, Third Quartile Verbal SAT, First Quartile ACT, Third Quartile ACT, Number of Applications Received, Number of Applicants Accepted, Number of New Students Enrolled, Percent of New Students from Top Ten Percent of High School Class, Percent of New Students from Top Twenty Five Percent of High School Class
+To obtain the dataset from Statlib, users can send specific messages to the provided email address. The purpose of the Data Analysis Exposition is to encourage statisticians to demonstrate techniques, especially graphical, for analyzing data and displaying the results of an analysis. Individuals and groups will work with the same set of data and present their analyses at a special session as part of the annual Joint Statistical Meetings.
 
-Line Three: Number of Full Time Undergraduates, Number of Part Time Undergraduates, In-State Tuition, Out-of-State Tuition, Room and Board Costs, Room Costs, Board Costs, Additional Fees, Estimated Book Costs, Estimated Personal Spending, Percent of Faculty with PhDs, Percent of Faculty with Terminal Degree, Student Faculty Ratio, Percent Alumni Who Donate, Instructional Expenditure Per Student, Graduation Rate
+The datasets are drawn from two sources: U.S. News & World Report's Guide to America's Best Colleges and the AAUP (American Association of University Professors) Salary Survey. The U.S. News data contains information on various college-related metrics, while the AAUP data includes average salary, overall compensation, and number of faculty broken down by professor ranks.
 
-Missing values are denoted with an asterisk.
+Participants in the Data Analysis Exposition are encouraged to explore various aspects of the data, such as modeling tuition, clustering colleges into comparison groups, displaying faculty salary structures, or finding ways to rank schools. The main objective is to find innovative ways to display the interesting features of the data.
 
-To obtain the dataset from StatLib, send one of the single-line messages below to the address statlib@lib.stat.cmu.edu:
-
-send usnews.data from colleges
-send usnews-three.data from colleges
-
-For more information on the ASA Statistical Graphics Section's Data Analysis Exposition, send the message:
-
-send readme from colleges
-
-WHAT'S WHAT AMONG AMERICAN COLLEGES AND UNIVERSITIES?
-
-This is the subject of the Data Analysis Exposition sponsored by the Statistical Graphics Section of the American Statistical Association. The purpose of the Exposition is to encourage statisticians to demonstrate techniques, especially graphical, for analyzing data and displaying the results of an analysis. Individuals and groups will work with the same set of data and present their analyses at a special session as part of the annual Joint Statistical Meetings.
-
-The datasets for this Exposition are drawn from two sources: US News and World Report's Guide to America's Best Colleges and the American Association of University Professors' Salary Survey. The US News data contains information on tuition, room and board costs, SAT or ACT scores, application acceptance rates, graduation rate, student faculty ratio, spending per student, and a number of other variables for over thirteen hundred schools.
-
-The raw data and documentation are contained in the files described below. To obtain any of these files, send a message to statlib@lib.stat.cmu.edu of the following form:
-
-send XXXXX from colleges
-
-Available files:
-
-usnews doc: Documentation for the US News data
-usnews data: US News data in comma delimited format
-usnews-three data: US News data in fixed column format
-
-Two versions of each dataset are provided to accommodate users with different software constraints. The comma delimited versions contain information for each college on a separate line with values delimited by commas. The fixed column versions use two or three data lines per school and a maximum line length of eighty characters.
-
-To participate in the Data Analysis Exposition, you must send an abstract form to the American Statistical Association. Information is available from the ASA Meetings Department.
-
-You may choose your own path to proceed in analyzing the data or use some of the suggested questions below to get started. How well can we model tuition using the other variables? How might we cluster colleges into similar comparison groups? How can we best display faculty salary structure? Can we find a reasonable way to rank the schools?
-
-You may work on your own or put together a team. Show off the capabilities of your favorite software package or use the data for a class project and display your students' results. You may choose to consider just a subset of schools or examine regional patterns. The main point is to find innovative ways to display the interesting features of the data.
-
-Keywords: colleges, universities, data analysis, statistical graphics, education, tuition, SAT scores, faculty salaries.
+Keywords: college rankings, higher education statistics, data analysis, statistical graphics, U.S. News & World Report, AAUP salary survey, college admissions, tuition costs, faculty information

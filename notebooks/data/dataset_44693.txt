@@ -1,14 +1,13 @@
-Subsampling of the dataset Satellite with Seed Zero 
+Name: Satellite Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-The Satellite dataset, comprising forty-one thousand observations, underwent subsampling with a specified set of parameters. The resulting dataset contains two thousand rows, one hundred columns, and ten classes. The stratification option was set to true during this process.
+Tags: Subsampling of the dataset Satellite with seed equal to zero, arguments n rows max equal to two thousand, n columns max equal to one hundred, n classes max equal to ten, and no stratify equal to true.
 
-Generated with the Following Source Code:
+Generated with the following source code:
 
-The Python function `subsample` was employed to achieve this outcome. This function initializes a random number generator with the provided seed value. It then selects a specified number of classes uniformly, ensuring representation of all chosen classes in the resulting dataset. Next, it performs uniform sampling on the columns, selecting the specified number of columns while maintaining their original order. Finally, it applies stratified sampling on the rows, taking into account the class distribution.
+The subsample function takes in a seed, n rows max, n columns max, n classes max, and stratified as parameters. It returns a dataset. The function uses numpy's random default random generator with the given seed. It then selects the x and y values from the dataset. If the number of unique classes in y is greater than n classes max, it selects n classes max classes using a weighted random choice based on the value counts of y. It then selects the indices where one of these classes is present and updates x and y accordingly. If the number of columns in x is greater than n columns max, it uniformly samples n columns max columns and updates x. If the number of rows in x is greater than n rows max, it uses train test split with stratification to sample n rows max rows and updates x and y. Finally, it returns a dataset with the updated x, y, categorical mask, and columns.
 
-Features:
+Features: 
 
-This dataset consists of thirty-six variables, including V One, V Two, up to V Thirty-Six, and a target variable.
+Target
 
-Tags: 
-Machine Learning, Mathematics
+Keywords: Satellite, Subsampling, Stratification, Random Sampling, Dataset Generation

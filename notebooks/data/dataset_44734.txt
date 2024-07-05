@@ -1,15 +1,15 @@
-Name: Volkert Seed One 
+Name: Volkert Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-Tags: Health, Medicine 
+Tags: Subsampling of the dataset Volkert with seed one, arguments number of rows two thousand, number of columns one hundred, number of classes ten, and stratify true.
 
-Sub-sampling of the dataset Volkert with a specified seed value. This sub-sampled dataset has been generated using specific parameters, including a maximum number of rows, columns, and classes.
+Generated with the following source code:
 
-The sub-sampling process involves uniformly selecting classes from the original dataset. If the number of unique classes exceeds the specified maximum, the classes are chosen based on their frequency of occurrence. The corresponding indices are then selected, and the dataset is reduced to include only these instances.
+This function subsamples a dataset by uniformly selecting classes, columns, and rows. It ensures that the resulting dataset has the specified number of classes, columns, and rows, while maintaining the original class distribution.
 
-Next, the columns are uniformly sampled if necessary. The column indices are randomly chosen, and the dataset is reduced to include only these columns.
+The function first selects the specified number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present. Next, it uniformly samples columns if required. If the number of rows exceeds the specified maximum, it stratifies the data accordingly and selects a subset of rows.
 
-Finally, the instances are sub-sampled according to the specified maximum number of rows. This is done while maintaining the class distribution through stratified sampling.
+The resulting dataset is returned with the original dataset name, the subsampled features, target variable, categorical mask, and column names.
 
-Features: Various variables have been included in this sub-sampled dataset.
+Features: (omitted due to unreadability)
 
-Keywords: Sub-sampling, Dataset, Classes, Columns, Instances, Stratified Sampling, Class Distribution, Health, Medicine
+Keywords: dataset subsampling, stratified sampling, class distribution, feature selection, row sampling

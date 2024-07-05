@@ -1,13 +1,119 @@
-Timing Attack Dataset Created on September Twenty
+Timing Attack Dataset: Ten Microsecond Delay Created on September Twentieth, Two Thousand Twenty-Two
 
-This dataset contains information about Bleichenbacher Timing Attacks and has been categorized into three main sections: CCS0, TLS0, and DISC0/DISC1.
+Tags: Bleichenbacher Timing Attack
 
-The CCS0 section includes attributes related to the first Change Cipher Spec TCP Acknowledgement, such as source port, destination port, TCP sequence number, acknowledgement number, header length, flags, window size, checksum status, urgent pointer, options, and timestamp values.
+Attribute Descriptions:
 
-The TLS0 section includes attributes related to the first TLS Alert, such as source port, destination port, TCP sequence number, acknowledgement number, header length, flags, window size, checksum status, urgent pointer, options, timestamp values, record content type, record length, alert message level, and alert message description.
+The dataset contains attributes related to Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages.
 
-The DISC0 and DISC1 sections include attributes related to the first and second TCP Disconnect, respectively, such as source port, destination port, TCP sequence number, acknowledgement number, header length, flags, window size, checksum status, urgent pointer, options, and timestamp values.
+Change Cipher Spec TCP Acknowledgement attributes include:
 
-This dataset also includes a label feature, which indicates whether the data is vulnerable to certain types of attacks, including incorrect PKCS#1 padding, correctly formatted PKCS#1 PMS messages but one byte shorter, no zero bytes in the message, wrong first byte, and wrong second byte.
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
 
-Keywords: Bleichenbacher Timing Attack, Change Cipher Spec, TLS Alert, TCP Disconnect, PKCS#1 Padding, Vulnerability Label
+TLS Alert attributes include:
+
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* TLS Record Content Type
+* TLS Record Length
+* TLS Alert Message Level
+* TLS Alert Message Description
+* Message Order
+
+TCP Disconnect attributes include:
+
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
+
+Features:
+
+* Label
+* Change Cipher Spec TCP Acknowledgement attributes
+* TLS Alert attributes
+* TCP Disconnect attributes
+
+Keywords: Timing Attack, Bleichenbacher, TCP, TLS, Change Cipher Spec, TCP Acknowledgement, TLS Alert, TCP Disconnect

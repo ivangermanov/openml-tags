@@ -1,21 +1,11 @@
-Eucalyptus Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
+Name: Eucalyptus Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Computer Systems, Machine Learning
-
-Subsampling of the dataset Eucalyptus with Seed equals Three arguments N Rows Max equals Two Thousand arguments N Cols Max equals One Hundred arguments N Classes Max equals Ten arguments No Stratify equals False.
+Tags: Subsampling of the dataset Eucalyptus with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
 Generated with the following source code:
 
-The function subsample takes in parameters such as seed, number of rows maximum, number of columns maximum, number of classes maximum, and whether to stratify or not, and returns a dataset.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function first initializes a random number generator with the given seed. It then selects a subset of classes from the unique classes in the dataset, ensuring that the number of selected classes does not exceed the maximum number of classes. The function then selects the indices where one of these classes is present and filters the dataset accordingly. If the number of columns exceeds the maximum number of columns, the function uniformly samples columns to reduce the dimensionality. Finally, if the number of rows exceeds the maximum number of rows, the function stratifies the dataset and samples a subset of rows.
 
-The uniform sampling of classes involves selecting unique classes from the target variable, and if the number of unique classes exceeds the maximum allowed, then the function selects a specified number of classes based on their frequency of occurrence.
+Features: Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, PMC Number, Diameter at Breast Height, Height, Survival, Vigor, Insulation Resistance, Stem Form, Crown Form, Branch Form, Utility
 
-The uniform sampling of columns involves selecting a specified number of columns randomly, and if the number of columns exceeds the maximum allowed, then the function selects a specified number of columns randomly.
-
-If the number of rows exceeds the maximum allowed, then the function applies stratified sampling to select a specified number of rows, ensuring that the class distribution is maintained.
-
-Finally, the function converts categorical columns to strings and returns the resulting dataset.
-
-Features: Abbreviation, Representative, Locality, Map Reference, Latitude, Altitude, Rainfall, Frosts, Year, Species, Plantation Management Company Number, Diameter at Breast Height, Height, Survival, Vigor, Inspection Result, Stem Form, Crown Form, Branch Form, Utility.
-
-Keywords: Subsampling, Eucalyptus, Seed, Stratify, Classes, Columns, Rows, Sampling, Machine Learning.
+Keywords: Eucalyptus, Subsampling, Stratification, Dimensionality Reduction, Dataset Generation

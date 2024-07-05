@@ -1,49 +1,66 @@
-QSAR-TID-17075 Tags: MTLQSAR, study_3 
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 17075, and it has fifteen rows and one thousand twenty-six features including IDs and class feature: molecule ChEMBL ID and median pseudo-pCI50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating fingerprints does not usually require missing value imputation as all bits are generated.
+Source: MetaQSAR project - September
 
-Features: molecule ChEMBL ID, fingerprint six one hundred twenty-four zero, fingerprint six one hundred twenty-four one, fingerprint six one hundred twenty-four two, fingerprint six one hundred twenty-four three, fingerprint six one hundred twenty-four four, fingerprint six one hundred twenty-four five, and many more.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Scraped Data: 
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
-ID: ChEMBL four zero two three 
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Melanocortin receptor
+Synonyms: Mcr MC R Melanocortin receptor
+Organism: Rattus norvegicus
+Species Group: No
+Protein Target Classification: Membrane receptor/Family A G protein coupled receptor/Peptide receptor (family A GPCR)/Short peptide receptor (family A GPCR)/Melanocortin receptor
 
-Type: Single Protein 
+Description Relationship Accession
+Melanocortin receptor SINGLE PROTEIN P
 
-Preferred Name: Melanocortin Receptor Three 
+Go Component:
+cytoplasm
+plasma membrane
+membrane
 
-Synonyms: Mc three r, MC three dash R, Melanocortin Receptor Three 
+Go Function:
+G protein coupled receptor activity
+melanocortin receptor activity
+melanocyte stimulating hormone receptor activity
+peptide hormone binding
+neuropeptide binding
 
-Organism: Rattus Norvegicus 
+Go Process:
+regulation of heart rate
+signal transduction
+G protein coupled receptor signaling pathway
+adenylate cyclase modulating G protein coupled receptor signaling pathway
+adenylate cyclase activating G protein coupled receptor signaling pathway
+regulation of blood pressure
+regulation of metabolic process
+circadian regulation of gene expression
+homoiothermy
+locomotor rhythm
+rhythmic process
+sodium ion homeostasis
+regulation of feeding behavior
 
-Species Group: No 
+canSAR Target: P
 
-Protein Target Classification: One, Membrane Receptor, Family A G Protein-Coupled Receptor, Peptide Receptor, Family A GPCR, Short Peptide Receptor, Family A GPCR, Melanocortin Receptor 
+Guide To PHARMACOLOGY
 
-Description Relationship Accession Melanocortin Receptor Three Single Protein P three two two four four
+Reactome: Peptide ligand binding receptors.
 
-Rows per page: fifty-one minus one of one 
+UniProt: P, Q
 
-ChEMBL ID Relationship Pref Name Target Type Loading items...
+InterPro:
+GPCR Rhodpsn
+Melcrt ACTH rcpt
+MC R
+Mcort rcpt
+GPCR Rhodpsn TM
 
-Rows per page: five minus go 
+Pfam: tm
 
-Component: cytoplasm, plasma membrane, membrane 
-
-Go Function: G protein-coupled receptor activity, melanocortin receptor activity, melanocyte-stimulating hormone receptor activity, peptide hormone binding, neuropeptide binding 
-
-Go Process: regulation of heart rate, signal transduction, G protein-coupled receptor signaling pathway, adenylate cyclase-modulating G protein-coupled receptor signaling pathway, adenylate cyclase-activating G protein-coupled receptor signaling pathway, regulation of blood pressure, regulation of metabolic process, circadian regulation of gene expression, homoiothermy, locomotor rhythm, rhythmic process, sodium ion homeostasis, regulation of feeding behavior 
-
-canSAR-Target: P three two two four four 
-
-GuideToPHARMACOLOGY: two eight four 
-
-Reactome: Peptide Ligand-Binding Receptors 
-
-UniProt: P three two two four four, Q four K X A four 
-
-InterPro: GPCR Rhodopsin, Melcrt ACTH rcpt, MC three dash five R, Mcort three rcpt, GPCR Rhodopsin seven TM 
-
-Pfam: seven tm one 
-
-Keywords: QSAR, melanocortin receptor, molecular fingerprints, G protein-coupled receptor, peptide hormone binding, signal transduction, gene expression, metabolic process.
+Keywords: QSAR, molecular fingerprints, melanocortin receptor, G protein coupled receptor, drug target, ChEMBL

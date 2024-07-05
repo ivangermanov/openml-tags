@@ -1,11 +1,17 @@
-The okcupid-stem dataset has been subsampled using a specific set of arguments to generate a new dataset with particular characteristics. This new dataset has been generated with a seed value, which ensures reproducibility of the sampling process.
+Name: OkCupid Stem
 
-The resulting dataset contains a maximum number of rows, columns, and classes, with the option to stratify the sampling process based on the target variable. The original dataset had over forty-two thousand samples, but this subsampled version has been reduced to a more manageable size while maintaining the diversity of the original dataset.
+Tags: Subsampling of the OkCupid Stem dataset with stratification
 
-The sampling process involved selecting a uniform distribution of classes, followed by a uniform selection of columns and finally, a selection of samples while ensuring that the target variable is stratified. This approach helps maintain the balance of the dataset and prevents any particular class or feature from dominating the analysis.
+This dataset is a subsample of the original OkCupid Stem dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniformly sampling columns and rows. The goal was to create a smaller, more manageable dataset while maintaining the overall characteristics of the original data.
 
-The dataset includes a range of features related to demographics, lifestyle, and personal preferences. These features include age, body type, dietary preferences, drinking habits, use of drugs, educational background, ethnicity, height, income level, location, family status, sexual orientation, pet ownership, religious beliefs, gender, astrological sign, smoking habits, language proficiency, and relationship status.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done to reduce the number of classes to a more manageable number, while ensuring that the selected classes were representative of the original data. The classes were selected using a random sampling method, with the probability of selection based on the frequency of each class in the original dataset.
 
-Machine Learning, Medicine 
+Once the classes were selected, the dataset was filtered to include only the rows where one of the selected classes was present. This resulted in a smaller dataset with a reduced number of rows.
 
-Keywords: subsampling, stratification, dataset generation, machine learning, medicine, demographic analysis
+Next, the columns of the dataset were sampled uniformly to reduce the number of features. This was done to simplify the dataset and reduce the dimensionality of the data.
+
+Finally, the rows of the dataset were sampled uniformly to reduce the number of samples. This was done using a stratified sampling method, which ensured that the selected samples were representative of the original data.
+
+The resulting dataset consists of a subset of the original features, including age, body type, diet, drinks, drugs, education, ethnicity, height, income, location, offspring, orientation, pets, religion, sex, sign, smokes, speaks, status, and job.
+
+Keywords: OkCupid Stem, subsampling, stratification, dataset reduction, feature selection, class selection.

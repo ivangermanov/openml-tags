@@ -1,13 +1,49 @@
-Shuttle Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Shuttle Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Shuttle with seed equals two arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals false
 
-This dataset is a subsampled version of the Shuttle dataset, which originally had forty thousand six hundred eighty-five instances. The subsampling was done using a seed value of two, which ensures reproducibility of the results. The maximum number of rows was set to two thousand, while the maximum number of columns was limited to one hundred. Furthermore, the number of classes was restricted to ten.
+Generated with the following source code:
 
-The subsampling process involved several steps. First, the unique classes in the dataset were identified. Since there were more than ten classes, a random selection of ten classes was made, taking into account their frequency of occurrence in the dataset. This ensured that the selected classes were representative of the entire dataset.
+def subsample(self, seed, n rows max, n columns max, n classes max, stratified) -> Dataset:
+random number generator equals np random default rng seed
+x equals self x
+y equals self y
 
-Next, the rows corresponding to the selected classes were extracted from the dataset. After that, a random selection of columns was made, ensuring that the number of columns did not exceed one hundred. Finally, a random sample of two thousand rows was taken from the resulting dataset, while maintaining the class distribution.
+Uniformly sample classes equals y unique
+if length of classes is greater than n classes max:
+value counts equals y value counts
+selected classes equals random number generator choice classes size n classes max replace equals false probability equals value counts divided by sum of value counts
+Select the indices where one of these classes is present
+idxs equals y index y is in selected classes
+x equals x iloc idxs
+y equals y iloc idxs
 
-The resulting dataset has the same characteristics as the original Shuttle dataset, with the exception of the reduced number of rows, columns, and classes. This subsampled dataset is suitable for machine learning experiments that require smaller datasets without sacrificing representativeness.
+Uniformly sample columns if required
+if length of x columns is greater than n columns max:
+columns idxs equals random number generator choice list range length of x columns size n columns max replace equals false
+sorted column idxs equals sorted columns idxs
+selected columns equals list x columns sorted column idxs
+x equals x selected columns
+else:
+sorted column idxs equals list range length of x columns
 
-Keywords: Shuttle dataset, subsampling, machine learning, stratification, class distribution.
+if length of x is greater than n rows max:
+Stratify accordingly
+target name equals y name
+data equals pd concat x y axis equals columns
+_, subset equals train test split data test size equals n rows max stratify equals data target name shuffle equals true random state equals seed
+x equals subset drop target name axis equals columns
+y equals subset target name
+
+We need to convert categorical columns to string for openml
+categorical mask equals self categorical mask i for i in sorted column idxs
+columns equals list x columns
+return Dataset
+Technically this is not the same but it's where it was derived from
+dataset equals self dataset
+x equals x
+y equals y
+categorical mask equals categorical mask
+columns equals columns
+
+Keywords: subsampling, dataset, stratified sampling, feature selection, class sampling

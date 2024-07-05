@@ -1,26 +1,34 @@
-**Fishcatch**
+Name: fishcatch
+Tags: Unknown Source
 
-Tags: Life Science, Statistics
+Please cite: Weight treated as the class attribute. Identifier deleted. As used in research on numeric prediction using instance-based learning with encoding length selection.
 
-This dataset contains 159 observations of seven species of fish caught from Lake Laengelmavesi near Tampere in Finland. Each observation includes eight variables.
+The fishcatch dataset contains sample data on fish caught from Lake Laengelmavesi near Tampere, Finland. It comprises observations of fish species, measurements, and characteristics across multiple variables.
 
-The descriptive abstract explains that all the fish were caught from the same lake, and altogether there are eight variables.
+Dataset Description:
+The dataset consists of observations on fish, including various species such as Bream, Whitewish, Roach, Pike, Perch, and others. Measurements include weight, multiple length measurements, height and width percentages, and sex of the fish.
 
-Variable descriptions:
+Variables:
+- Species (coded numerically, with corresponding Finnish, Swedish, English, and Latin names provided)
+- Weight of the fish in grams
+- Length measurements:
+  - Length from nose to beginning of tail
+  - Length from nose to notch of tail
+  - Length from nose to end of tail
+- Height as a percentage of total length
+- Width as a percentage of total length
+- Sex (male or female)
 
-1. Observation number
-2. Species: A numeric code representing seven species of fish, including Bream, Whitefish, Roach, Pike, Smelt, and Perch.
-3. Weight: The weight of the fish in grams.
-4. Length One: The length from the nose to the beginning of the tail in centimeters.
-5. Length Two: The length from the nose to the notch of the tail in centimeters.
-6. Length Three: The length from the nose to the end of the tail in centimeters.
-7. Height Percentage: The maximal height as a percentage of Length Three.
-8. Width Percentage: The maximal width as a percentage of Length Three.
+The data is presented with values aligned and delimited by blanks, with missing values denoted as NA. Each case is represented by one data line.
 
-Special notes: Height and Width can be calculated by multiplying Height Percentage and Width Percentage with Length Three divided by 100.
+Special Notes:
+Height and width can be calculated using provided percentages and length measurements.
 
-Pedagogical notes: Models and tests have been used, particularly with Species Seven, Perch. Questions include what is the proper weighting when using Length Three as a weighting variable?
+Pedagogical Notes:
+Various statistical models and tests have been applied to the data, particularly focusing on the Perch species. These include linear and non-linear models examining relationships between weight and various length, height, and width measurements. Questions of proper weighting and potential outliers are also addressed.
 
-References: A source book about fish populations in Lake Laengelmavesi has been cited.
+The dataset offers opportunities for exploring dimensional analysis of fish, heteroscedastic modeling, and outlier detection.
 
-Keywords: Fish species, Lake Laengelmavesi, Finland, Weight, Length, Height, Width, Statistics, Life Science.
+References to original sources and data collection methods are provided, originating from Finnish fisheries research in the early 20th century.
+
+Keywords: fish measurements, species classification, biometric data, statistical modeling, aquatic ecology, Finnish lakes, ichthyology

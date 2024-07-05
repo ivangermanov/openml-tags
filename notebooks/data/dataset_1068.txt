@@ -1,17 +1,19 @@
-PC1 Software Defect Prediction 
+PC1 Software Defect Prediction Dataset
 
-One of the NASA Metrics Data Program defect data sets, this dataset contains data from flight software for Earth orbiting satellites. The data comes from McCabe and Halstead features extractors of source code, which were defined in the seventies in an attempt to objectively characterize code features associated with software quality.
+Tags: mythbusting, OpenML-CC18, OpenML100, PROMISE, study
 
-Attribute Information 
+Source: tera-PROMISE - 2004
 
-The dataset consists of twenty-three attributes, including McCabe's line count of code, cyclomatic complexity, essential complexity, design complexity, and Halstead measures such as total operators plus operands, volume, program length, difficulty, intelligence, effort, and others. It also includes counts of lines of code, comments, and blank lines, as well as unique operators, unique operands, total operators, and total operands. Additionally, the dataset contains the number of branches in the flow graph and whether each module has one or more reported defects.
+Please cite: The PROMISE Repository of Software Engineering Databases. School of Information Technology and Engineering, University of Ottawa, Canada.
 
-Relevant Papers 
+This dataset is one of the NASA Metrics Data Program defect data sets, containing information from flight software for an earth-orbiting satellite. The data is derived from McCabe and Halstead feature extractors of source code. These features were defined in the 1970s as an attempt to objectively characterize code features associated with software quality.
 
-Several studies have used this dataset, including an analysis of data quality in the NASA Software Defect Datasets and assessments of predictors of software defects.
+Attribute Information:
+The dataset includes various metrics such as McCabe's line count of code, cyclomatic complexity, essential complexity, design complexity, Halstead metrics (total operators and operands, volume, program length, difficulty, intelligence, effort, time estimator), line counts (code, comments, blank lines), unique operators and operands, total operators and operands, and branch count of the flow graph. The target variable indicates whether a module has one or more reported defects.
 
-Tags: Chemistry, Life Science, Mythbusting, OpenML-CC18, OpenML100, PROMISE, Study 
+Relevant Papers:
+Several studies have been conducted using this dataset, including analyses of data quality in NASA software defect datasets, evaluations of blind spot sampling policies in software engineering, and assessments of software defect predictors. These studies have contributed to the field of software quality assurance and defect prediction.
 
-Features: line count of code, cyclomatic complexity, essential complexity, design complexity, total operators plus operands, volume, program length, difficulty, intelligence, effort, line count of code, count of lines of comments, count of blank lines, unique operators, unique operands, total operators, total operands, branch count, defects 
+The PC1 Software Defect Prediction dataset provides valuable insights into the relationship between various code metrics and the presence of software defects. It has been widely used in research to develop and evaluate predictive models for identifying potentially defective software modules. The dataset's inclusion of both structural and complexity metrics makes it a comprehensive resource for studying software quality and reliability.
 
-Keywords: software defect prediction, NASA, McCabe and Halstead features, software quality, data analysis
+Keywords: software defects, code metrics, NASA, flight software, McCabe complexity, Halstead metrics, defect prediction, software quality

@@ -1,26 +1,38 @@
-**FOREX NZD/USD Hourly Close**
+Name: FOREX NZD/USD Hour Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Machine Learning, Social Media
+Tags: finance, forex, forex close, forex hour
 
-**Data Description**
+Source: Dukascopy Historical Data Feed
 
-This dataset comprises historical price data of the New Zealand Dollar versus United States Dollar (NZD/USD) currency pair, obtained from Dukascopy Historical Data Feed. Each instance represents a single hourly candlestick, with the entire dataset spanning from January to December. Since the Forex market is closed on weekends, there are no entries for Saturdays and Sundays. All timestamps are recorded in the Europe/Amsterdam time zone.
+Data Description:
+This dataset contains the historical price data of the New Zealand Dollar/United States Dollar (NZD/USD) forex pair from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the forex market is not traded during this time. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by comparing the mean close price of the subsequent hour to the mean close price of the current hour. A true classification indicates an upward trend in the mean close price over the next hourly period, while a false classification denotes a downward or stagnant trend.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following hour, and the class attribute is False when the mean Close price is going down or stays the same the following hour.
 
-**Attributes**
+Attributes:
 
-* Timestamp: The date and time of each data point, recorded in the Europe/Amsterdam time zone.
-* Bid Open: The initial bid price at the beginning of each hourly interval.
-* Bid High: The highest bid price reached during each hourly interval.
-* Bid Low: The lowest bid price reached during each hourly interval.
-* Bid Close: The final bid price at the end of each hourly interval.
-* Bid Volume: The frequency of bid price changes within each hourly interval.
-* Ask Open: The initial ask price at the beginning of each hourly interval.
-* Ask High: The highest ask price reached during each hourly interval.
-* Ask Low: The lowest ask price reached during each hourly interval.
-* Ask Close: The final ask price at the end of each hourly interval.
-* Ask Volume: The frequency of ask price changes within each hourly interval.
-* Class: The directional trend of the mean close price over the next hourly period.
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
 
-Keywords: Forex, NZD/USD, Candlestick, Time Series, Classification, Trend Analysis
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: forex, NZD/USD, historical data, candlestick, Europe/Amsterdam timezone, bid and ask prices, class attribute.

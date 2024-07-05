@@ -1,28 +1,15 @@
-Name: Forex Eursgd Hour Close
+Name: FOREX EUR/SGD Hour Close
 
-Tags: Culture, Demographics, Finance, Forex, Forex Close, Forex Hour
+Tags: finance, forex, forex close, forex hour
 
-**Data Source**: Dukascopy Historical Data Feed
+Source: Dukascopy Historical Data Feed
 
-This dataset contains historical price data of the Forex Euro-Singapore Dollar pair from Dukascopy. Each instance represents one candlestick of one hour. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam time zone.
+Data Description
+This dataset contains the historical price data of the FOREX EUR/SGD from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The dataset provides detailed information about the bidding and asking prices during each hourly interval. Specifically, it includes the opening, high, low, and closing bid and ask prices, as well as the volume of bids and asks.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-The class attribute is determined by the direction of the mean close price over the next hourly interval, relative to the current hourly interval. In other words, if the mean close price is expected to increase over the next hour, the class attribute is true; otherwise, it is false.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-The attributes included in this dataset are:
-
-* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
-* Bid Open: The opening bid price for the given hourly interval.
-* Bid High: The highest bid price recorded during the given hourly interval.
-* Bid Low: The lowest bid price recorded during the given hourly interval.
-* Bid Close: The closing bid price for the given hourly interval.
-* Bid Volume: The number of times the bid price changed during the given hourly interval.
-* Ask Open: The opening ask price for the given hourly interval.
-* Ask High: The highest ask price recorded during the given hourly interval.
-* Ask Low: The lowest ask price recorded during the given hourly interval.
-* Ask Close: The closing ask price for the given hourly interval.
-* Ask Volume: The number of times the ask price changed during the given hourly interval.
-* Class: Whether the average price will increase over the next hourly interval.
-
-Keywords: Forex, Euro-Singapore Dollar, Historical Data, Candlestick, Bidding Prices, Asking Prices, Time Series Analysis.
+Keywords: FOREX, EUR/SGD, historical data, candlestick, finance, market analysis

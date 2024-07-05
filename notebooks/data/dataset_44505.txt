@@ -1,15 +1,17 @@
-The Steel Plates Fault dataset has been subsampled using a specific set of parameters. This process involved generating a random number generator with a specified seed value, which ensures reproducibility of the results.
+Name: Steel Plates Fault Dataset with Subsampling
 
-First, the unique classes in the target variable were identified, and then a subset of these classes was randomly selected based on their frequency distribution. This step helps maintain the class balance in the subsampled dataset.
+Tags: Subsampling of the Steel Plates Fault dataset, generated with a specific set of arguments
 
-Next, the columns of the dataset were uniformly sampled to reduce their number to a maximum specified limit. The selected columns were chosen randomly without replacement, ensuring that all columns had an equal chance of being selected.
+This dataset is a subsampled version of the original Steel Plates Fault dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
 
-After column sampling, the rows of the dataset were also uniformly sampled to reduce their number to a maximum specified limit. To maintain class balance, stratified sampling was employed, which ensures that the proportion of each class in the subsampled dataset is similar to that in the original dataset.
+The subsampling process started by selecting a subset of classes from the original dataset. If the number of unique classes exceeded a certain maximum, a random sample of classes was selected, with the probability of each class being selected proportional to its frequency in the original dataset. The indices of the samples belonging to the selected classes were then used to subset the original dataset.
 
-The resulting subsampled dataset has been transformed into a machine learning compatible format, with categorical variables converted to string type.
+Next, the columns of the dataset were uniformly sampled. If the number of columns exceeded a certain maximum, a random sample of columns was selected. The selected columns were then used to subset the dataset.
 
-Tags: Machine Learning, Mathematics
+Finally, the rows of the dataset were uniformly sampled. If the number of rows exceeded a certain maximum, a random sample of rows was selected, stratified by the target variable to maintain the original class distribution.
 
-Features: Various variables related to steel plates fault detection
+The resulting dataset consists of a subset of the original features, with the categorical columns converted to string format for compatibility with OpenML.
 
-Keywords: subsampling, stratified sampling, class balance, machine learning, dataset transformation
+Features: (skipped due to unreadability)
+
+Keywords: Steel Plates Fault, subsampling, dataset, stratified sampling, feature selection

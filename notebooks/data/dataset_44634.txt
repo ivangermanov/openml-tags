@@ -1,23 +1,15 @@
-Segment Seed One N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+Segment Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Tags: Economics, Life Science 
+This dataset is a subsample of the original segment dataset, generated with a specific set of parameters. The subsampling process involved uniformly selecting classes and columns from the original dataset, followed by stratified sampling of rows to ensure a balanced representation of classes.
 
-Sub-sampling of the dataset segment with a seed equal to one arguments number of rows maximum equals two thousand arguments number of columns maximum equals one hundred arguments number of classes maximum equals ten generated with the following source code.
+The subsampling process began by selecting a subset of classes from the original dataset. If the number of unique classes exceeded the maximum allowed, a random selection of classes was made, with the probability of selection proportional to the frequency of each class. The indices of the selected classes were then used to filter the original dataset, reducing it to only include samples from the chosen classes.
 
-The function sub-sample takes five parameters - self, seed, number of rows max, number of columns max, and number of classes max - and returns a dataset.
+Next, the columns of the dataset were uniformly sampled, with the number of columns reduced to the maximum allowed. The selected columns were then used to filter the dataset, reducing it to only include the chosen features.
 
-First, we set up our random number generator using the given seed. Then we get our feature matrix x and target vector y from our dataset. 
+Finally, the rows of the dataset were stratified sampled, with the goal of achieving a balanced representation of classes. This involved concatenating the feature data with the target variable, and then using a stratified sampling algorithm to select a subset of rows.
 
-Next, we uniformly sample classes from our target vector. If the number of unique classes exceeds our maximum allowed number of classes, we select the top classes based on their frequency in our target vector.
+The resulting dataset has two thousand rows, ten classes, and one hundred columns, and is stratified to ensure a balanced representation of classes.
 
-We then select the indices where one of these classes is present and filter our feature matrix and target vector accordingly. 
+Features: Short Line Density, V Edge Mean, V Edge Standard Deviation, H Edge Mean, H Edge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Ex Red Mean, Ex Blue Mean, Ex Green Mean, Value Mean, Saturation Mean, Hue Mean, Class
 
-Afterwards, we uniformly sample columns from our feature matrix if required. If the number of columns exceeds our maximum allowed number of columns, we randomly choose the specified number of columns and filter our feature matrix accordingly.
-
-If our feature matrix still has more rows than our maximum allowed number of rows, we use stratified sampling to get the specified number of rows. This ensures that our sampled dataset maintains the same class distribution as our original dataset.
-
-Finally, we create a new dataset object with our sampled feature matrix, target vector, and other relevant information.
-
-Features: Short Line Density Five, Short Line Density Two, Vegetation Edge Mean, Vegetation Edge Standard Deviation, Habitat Edge Mean, Habitat Edge Standard Deviation, Intensity Mean, Raw Red Mean, Raw Blue Mean, Raw Green Mean, Excess Red Mean, Excess Blue Mean, Excess Green Mean, Value Mean, Saturation Mean, Hue Mean, Class
-
-Keywords: dataset, sub-sampling, stratified sampling, feature matrix, target vector, class distribution
+Keywords: dataset subsampling, stratified sampling, class balancing, feature selection

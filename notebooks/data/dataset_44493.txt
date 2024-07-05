@@ -1,13 +1,17 @@
-Machine Learning Dataset: Numerai Twenty Eight Point Six 
+Name: Numerai Dataset Subsample
 
-This dataset is a subsampled version of the original Numerai Twenty Eight Point Six dataset. The subsampling process involved uniformly selecting classes and columns to reduce the dimensionality of the data. 
+Tags: Subsampling of the Numerai dataset with stratification
 
-The dataset has been subsampled using a random seed value, which ensures reproducibility of the results. A maximum number of rows and columns have been specified to control the size of the dataset. Furthermore, the number of classes has also been limited to reduce complexity.
+This dataset is a subsample of the original Numerai dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows. The goal was to create a smaller dataset that retains the essential characteristics of the original dataset.
 
-In order to maintain class balance, stratified sampling has been employed. This involves dividing the data into subsets based on the class labels and then randomly selecting samples from each subset. This approach helps prevent overfitting to a particular class.
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by randomly choosing classes from the unique values in the target variable, with the probability of selection proportional to the frequency of each class. The selected classes were then used to filter the dataset, retaining only the rows where the target variable belonged to one of the selected classes.
 
-The dataset consists of various attributes, including attribute zero, attribute one, attribute two, attribute three, attribute four, attribute five, attribute six, attribute seven, attribute eight, attribute nine, attribute ten, attribute eleven, attribute twelve, attribute thirteen, attribute fourteen, attribute fifteen, attribute sixteen, attribute seventeen, attribute eighteen, attribute nineteen, attribute twenty, and attribute twenty-one.
+Next, the columns of the dataset were sampled uniformly. If the number of columns exceeded a certain threshold, a random subset of columns was selected. The columns were sorted in ascending order to ensure consistency.
 
-Tags: Machine Learning, Mathematics
+Finally, the rows of the dataset were sampled uniformly. If the number of rows exceeded a certain threshold, a stratified sampling approach was used to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-Keywords: subsampling, machine learning, dataset, stratified sampling, class balance, dimensionality reduction
+The resulting dataset consists of a subset of the original features, with the categorical columns converted to string format for compatibility with OpenML.
+
+Features: attribute zero, attribute one, attribute two, attribute three, attribute four, attribute five, attribute six, attribute seven, attribute eight, attribute nine, attribute ten, attribute eleven, attribute twelve, attribute thirteen, attribute fourteen, attribute fifteen, attribute sixteen, attribute seventeen, attribute eighteen, attribute nineteen, attribute twenty, attribute twenty one
+
+Keywords: dataset subsampling, stratified sampling, uniform sampling, class selection, column selection, row selection, OpenML compatibility.

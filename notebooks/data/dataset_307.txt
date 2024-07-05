@@ -1,27 +1,23 @@
-**Vowel Recognition**
+Vowel Recognition Dataset
 
-This dataset involves speaker-independent recognition of the eleven steady-state vowels of British English using a specified training set of LPC-derived log area ratios.
+Tags: OpenML-CC18, OpenML100, study_1, study_123, study_135, study_14, study_144, study_34, study_50, study_52, study_7, study_76, study_98, study_99, uci
 
-**Description**
+Source: UCI - date unknown
 
-Collected by David Deterding, Mahesan Niranjan, and Tony Robinson, this comprehensive dataset aims to recognize vowels spoken by different individuals. The dataset consists of a three-dimensional array: vowel data [speaker, vowel, input]. There are fifteen individual speakers, each speaking each vowel six times. For each utterance, there are ten floating-point input values.
+Please cite: UCI citation policy
 
-**Problem Statement**
+This dataset focuses on speaker-independent recognition of eleven steady-state vowels in British English using log area ratios derived from linear predictive coding. The data was collected for connectionist analysis and includes a comprehensive description with author comments.
 
-The goal is to train a network using data from speakers zero to forty-seven and then test the network on speakers forty-eight to eighty-nine, reporting the number of correct classifications in the test set. This problem falls under the category of impossible connectionist problems, meaning those without an exact solution.
+The problem is defined by a three-dimensional array: voweldata [speaker, vowel, input]. Speakers are indexed by integers, representing fifteen individuals each pronouncing each vowel six times. Vowels are indexed by integers. Each utterance has ten floating-point input values.
 
-**Methodology**
+The challenge is to train a network using data from a subset of speakers and test it on the remaining speakers, reporting the number of correct classifications in the test set. The goal is to maximize performance in a problem without an exact solution, rather than focusing solely on training speed.
 
-Report the number of test vowels classified correctly, i.e., the number of occurrences when the distance of the correct output to the actual output was the smallest of the set of distances from the actual output to all possible target outputs. Additionally, report the training time, measured in pattern presentations or floating-point operations required, and the level of success achieved on the training and testing data after various amounts of training. Precisely describe the network topology and algorithm used.
+Methodology:
+Report the number of test vowels classified correctly, based on the smallest distance between the actual output and all possible target outputs. Additionally, report training duration (measured in pattern presentations or floating-point operations), success levels on training and testing data at various stages, and provide a precise description of the network topology and algorithm used.
 
-**Variations**
+Variations:
+This benchmark encourages exploration of different node types. Theorizing, experimenting, and hacking are welcome. The use of a cross-entropy distance measure has been discussed and results for this approach would be of interest.
 
-This benchmark encourages exploring different node types. Experiment with various approaches, and correspond with the authors via email if needed. Discussions on using a cross-entropy distance measure would be particularly interesting.
+The dataset includes information on speakers, vowels, and input features. It is designed for classification tasks in speech recognition and has been used in various studies exploring neural network architectures and learning algorithms.
 
-**Notes**
-
-Each result is based on a single trial with random starting weights. Computational limitations restricted the number of trials. Performance peaks at around two hundred fifty correct, after which it decays to varying degrees. Final performance figures are reported after approximately three thousand trials, not the peak performance obtained during the run.
-
-**Tags:** Language, Machine Learning, OpenML-CC18, OpenML100, Study 1, Study 123, Study 135, Study 14, Study 144, Study 34, Study 50, Study 52, Study 7, Study 76, Study 98, Study 99, UCI
-
-**Keywords:** Vowel Recognition, Speaker-Independent, British English, Log Area Ratios, Connectionist Problems, Node Types, Cross-Entropy Distance Measure, Performance Optimization
+Keywords: vowel recognition, speech processing, neural networks, classification, British English, speaker-independent, connectionist analysis

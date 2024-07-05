@@ -1,9 +1,15 @@
-The dataset eye movements has been subsampled using specific parameters to create a new dataset. This process involved uniformly sampling classes from the original dataset, ensuring that only a certain number of classes were selected. The selection was based on the value counts of each class, with the probability of selection being proportional to the value count.
+Name: Eye Movements Seed One
 
-Once the classes were selected, the corresponding indices were identified, and the dataset was filtered to include only those indices. Next, the columns were uniformly sampled, selecting a specific number of columns to include in the new dataset. If the number of rows exceeded a certain threshold, the dataset was further subsampled using stratification, ensuring that the resulting dataset maintained the same distribution of classes as the original dataset.
+Tags: Subsampling of the dataset Eye Movements with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-The resulting dataset includes features such as Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, and others. These features have been carefully selected to ensure that the dataset remains representative of the original dataset.
+Generated with the following source code:
 
-Tags: Earth Science, Meteorology
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the dataset. The function first samples the classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: dataset, subsampling, stratification, classes, columns, rows, earth science, meteorology
+Next, the function samples the columns uniformly if required, selecting a specified number of columns randomly. If the number of rows exceeds the maximum allowed, the function stratifies the data accordingly and splits it into a subset of the specified size.
+
+The function returns a new dataset with the sampled data, including the categorical mask and column names.
+
+Features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label.
+
+Keywords: Eye Movements, Subsampling, Stratification, Random Sampling, Dataset Generation.

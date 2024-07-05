@@ -1,9 +1,11 @@
-Subsampling of the dataset PC Four with Seed Three 
+Name: PC Four Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This dataset is a subsampled version of PC Four, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting a specified number of classes to include in the subsampled dataset. 
+Tags: Subsampling of the dataset PC Four with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-The dataset was then further reduced by uniformly sampling columns, selecting a specified number of columns to retain. Finally, the dataset was reduced to a specified maximum number of rows, while maintaining the class balance through stratification.
+Generated with the following source code:
 
-This subsampled dataset is part of the Life Science and Medicine domain, and includes a range of features related to software metrics and complexity measures. These features include measures of code length, complexity, and maintainability, among others.
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then selects a subset of the data based on the given maximum number of rows, columns, and classes. If the number of classes is greater than the maximum, it selects a subset of classes using a weighted random choice based on the value counts of the classes. It then selects the indices where one of these classes is present. If the number of columns is greater than the maximum, it selects a subset of columns using a uniform random choice. If the number of rows is greater than the maximum, it uses a stratified train test split to select a subset of the data. Finally, it returns a dataset with the selected data and columns.
 
-Keywords: Subsampling, Dataset, Life Science, Medicine, Software Metrics, Complexity Measures.
+Features: Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Lines of Comments, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Halstead Difficulty, Halstead Effort, Halstead Error Estimate, Halstead Length, Halstead Level, Halstead Program Time, Halstead Volume, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Total Lines of Code
+
+Keywords: Subsampling, Dataset, Stratification, Feature Selection, Random Sampling

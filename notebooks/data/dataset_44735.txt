@@ -1,46 +1,17 @@
-Subsampling of the dataset Volkert with seed equals two arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+Name: Volkert Seed Two Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Volkert with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-def subsample(self, seed, number_rows_max, number_columns_max, number_classes_max, stratified):
-    random_number_generator = numpy random default random generator seed
-    x equals self x
-    y equals self y
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified, meaning that the proportion of each class in the subsample is the same as in the original dataset.
 
-Uniformly sample classes equals y unique if length of classes greater than number classes max 
-value counts equals y value counts 
-selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts 
-Select the indices where one of these classes is present index equals y index y is in selected classes 
-x equals x iloc index 
-y equals y iloc index 
+The function first selects a specified number of classes from the original dataset. It does this by getting a list of unique classes, and then using random number generation to select the specified number of classes. It then selects the indices where one of these classes is present, and uses these indices to select the corresponding rows from the original dataset.
 
-Uniformly sample columns if required 
-if length of x columns greater than number columns max 
-column indexes equals random number generator choice list range length of x columns size equals number columns max replace equals false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns sorted column indexes 
-x equals x selected columns 
-else 
-sorted column indexes equals list range length of x columns 
+Next, the function selects a specified number of columns from the original dataset. It does this by getting a list of column indices, and then using random number generation to select the specified number of columns. It then uses these column indices to select the corresponding columns from the original dataset.
 
-if length of x greater than number rows max 
-Stratify accordingly 
-target name equals y name 
-data equals pandas concat x y axis equals columns 
-_, subset equals train test split data test size equals number rows max stratify equals data target name shuffle equals true random state equals seed 
-x equals subset drop target name axis equals columns 
-y equals subset target name 
+Finally, the function selects a specified number of rows from the subsampled dataset. It does this by using the train test split function from scikit learn, with the stratify argument set to true. This ensures that the proportion of each class in the subsample is the same as in the original dataset.
 
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list self categorical mask i for i in sorted column indexes 
-columns equals list x columns 
-return Dataset 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
+Features: (omitted due to unreadability)
 
-Features: 
-
-Tags: Machine Learning, Mathematics
+Keywords: dataset subsampling, stratified sampling, random number generation, class selection, column selection, row selection.

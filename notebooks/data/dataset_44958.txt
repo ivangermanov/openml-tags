@@ -1,23 +1,11 @@
-Auction Verification Dataset
+**Auction Verification**
 
-Tags: Machine Learning, Physical Sciences
+**Data Description**
+This dataset was created to verify properties of a Simultaneous Multi-Round auction model. The creators of the dataset use Business Process Model and Notation to model the design of the German 4G spectrum auction to sell 800 MHz band. The auction has four bidders and six products. A random budget is assigned from the range one to one hundred to each bidder for each product. A reserve price of three is also defined for all products. Further, each bidder has an individual capacity. Each instance in the dataset represents a simulation of an auction.
 
-This dataset was created to verify properties of a Simultaneous Multi-Round auction model. The designers of this dataset used Business Process Model and Notation to model the design of the German Four G Spectrum Auction to sell Eight Hundred MHz band. The auction has Four bidders and Six products. A random budget is assigned from the range One to One Hundred to each bidder for each product. A reserve price of Three is also defined for all products. Furthermore, each bidder has an individual capacity.
+**Attribute Description**
+The dataset contains attributes that describe the auction process and its outcomes. These attributes include the current capacities of the bidders, the price that is currently verified for a product, the currently verified product, the bidder that is currently verified as winner for a product with a certain price, and the result and time of verifying a property against the underlying Petri Net.
 
-Each instance in the dataset represents a simulation of an auction.
+The capacities of the bidders are represented as integers ranging from zero to three. The price that is currently verified for a product is an integer ranging from fifty-nine to ninety. The currently verified product is an integer ranging from one to six. The bidder that is currently verified as winner for a product with a certain price is an integer ranging from one to four. This feature is empty for iterations where the price is not clear yet.
 
-The attributes of this dataset include:
-
-Capacity of Bidder One, Capacity of Bidder Two, Capacity of Bidder Three, and Capacity of Bidder Four, which denote the current capacities of the bidders.
-
-Price denotes the price that is currently verified for the product.
-
-Product denotes the currently verified product.
-
-Winner denotes the bidder that is currently verified as winner for the product with the price. This feature is empty for iterations where the price is not clear yet.
-
-Verification Result, which is ignored in this dataset, denotes whether the current property is satisfied in the underlying Petri Net or not.
-
-Verification Time denotes the time in milliseconds for verifying the current property against the underlying Petri Net, which is the target feature.
-
-Keywords: Auction, Simulation, Business Process Model, Petri Net, Machine Learning, Physical Sciences
+**Keywords:** Auction Verification, Simultaneous Multi-Round Auction, German 4G Spectrum Auction, Business Process Model and Notation, Petri Net.

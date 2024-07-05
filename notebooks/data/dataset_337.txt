@@ -1,9 +1,13 @@
-The SPECTF Heart dataset describes the diagnosis of cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient is classified into two categories: normal and abnormal. The database of SPECT image sets was processed to extract features that summarize the original SPECT images, resulting in forty-four continuous feature patterns created for each patient.
+SPECTF Tags: mythbusting, study
 
-The CLIP three algorithm was used to generate classification rules from these patterns, which were seventy-seven percent accurate when compared to cardiologists' diagnoses. This dataset is suitable for testing machine learning algorithms, comprising two hundred sixty-seven instances described by forty-five attributes. The predicted attribute is Overall Diagnosis, which is a binary class attribute.
+This dataset describes the diagnosis of cardiac Single Proton Emission Computed Tomography (SPECT) images. Patients are classified into two categories: normal and abnormal. The database consists of 267 SPECT image sets (patients) that were processed to extract features summarizing the original SPECT images. This resulted in a 44 continuous feature pattern for each patient. The CLIP3 algorithm was employed to generate classification rules from these patterns, achieving 77.0% accuracy compared to cardiologists' diagnoses.
 
-There are no missing values in this dataset. The Overall Diagnosis attribute is binary, indicating whether the patient's diagnosis is normal or abnormal. The remaining attributes represent counts in different regions of interest during rest and stress tests, ranging from zero to one hundred.
+SPECTF is an excellent dataset for testing machine learning algorithms, containing 267 instances described by 45 attributes. The predicted attribute is OVERALL DIAGNOSIS, which is binary. It's worth noting that the SPECT heart data provides binary data for the same classification task.
 
-This dataset is divided into training and testing data, with eighty instances in the training set and one hundred eighty-seven instances in the testing set.
+The dataset does not contain any missing values. The attributes include the class attribute (OVERALL DIAGNOSIS) and 44 continuous attributes representing counts in various regions of interest (ROI) during rest and stress conditions. All continuous attributes have integer values ranging from 0 to 100.
 
-Keywords: SPECT, cardiac diagnosis, machine learning, classification, cardiac imaging.
+The dataset is divided into training data (80 instances) and testing data (187 instances). This merged version combines the separate train and test sets that are usually distributed. On OpenML, this train test split can be found as one of the possible tasks.
+
+The SPECTF heart data provides valuable insights into cardiac imaging and diagnosis, offering researchers and machine learning practitioners a robust dataset for developing and testing classification algorithms in the medical domain.
+
+Keywords: SPECT imaging, cardiac diagnosis, machine learning, classification, medical data analysis, feature extraction, ROI analysis, rest stress comparison

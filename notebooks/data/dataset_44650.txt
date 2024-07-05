@@ -1,19 +1,16 @@
-Internet Advertisements Dataset 
+Internet Advertisements Seed Two Dataset
 
-This dataset has been subsampled from the original Internet Advertisements dataset, which had forty thousand nine hundred seventy-eight instances. The subsampling process involved uniformly selecting classes and columns to reduce the dataset size while maintaining its representative nature.
+This dataset is a subsample of the Internet Advertisements dataset, with a seed of two. It was generated using the following source code:
 
-The subsampling process began by selecting classes uniformly. Since there were more than ten classes in the original dataset, the most frequent classes were chosen based on their probability distribution. The instances corresponding to these selected classes were then extracted.
+The subsample function takes in several parameters, including the seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify the sample. The function first uniformly samples the classes, then selects the indices where one of these classes is present. It then uniformly samples the columns if required, and finally stratifies the sample accordingly.
 
-Next, the columns were uniformly sampled. As there were more than one hundred columns in the original dataset, a subset of columns was randomly chosen. The instances were then filtered to include only the selected columns.
-
-Finally, the instances were subsampled again to ensure that the total number of rows did not exceed two thousand. This step involved stratifying the data according to the class labels to maintain the representative nature of the dataset.
+The dataset features include URL components, such as the domain name, file path, and query parameters. It also includes original URL components, anchor URL components, and other URL-related features.
 
 Features:
-url address switchboard com, url address keith dumble, url address ucsd edu, url address geoguide ii nh, 
-url derived, url time, url pharmacy gif, url forums, url images go two net com, 
-url users america online com, url address www cqi com, url claw one gif, url ball, 
-url htm images, url buttons, url bull gif, url address www copymat com, 
-url tkaine, url lovisa one, url uk, url nh, url kandinsky t, url uk gif, 
-url web ukonline co uk, url tour 
 
-Keywords: Internet Advertisements, dataset, subsampling, class selection, column selection, instance sampling
+* URL components, such as domain name, file path, and query parameters
+* Original URL components
+* Anchor URL components
+* Other URL-related features
+
+Keywords: Internet Advertisements, URL Components, Subsampling, Stratification

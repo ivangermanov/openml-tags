@@ -1,15 +1,11 @@
-The BTS-Lyrics dataset is a collection of data gathered as a casual project using information from Genius and Big Hit. This dataset currently contains a multitude of albums, each with its unique characteristics.
+The BTS-Lyrics dataset was collated as a casual project using data from Genius and Big Hit. Currently, it contains a collection of albums, with each album having its unique characteristics.
 
-The columns in the dataset include a sequential numerical identifier to uniquely identify each track, the title of the album, the title of the album without non-English characters, the release date of the album in ISO format, and the sequence of the track within the album.
+The dataset has several columns that provide information about each track. The first column is the ID, which is a sequential numerical identifier that uniquely identifies each track. The Album Title column contains the title of the album, while the English Album Title column contains the title of the album without non-English characters.
 
-Additionally, the dataset includes the title of the track, the title of the track with Korean characters, the title of the track without non-English characters, and the English-translated lyrics of the track obtained from Genius, which will be empty for instrumental tracks.
+The Album Release Date column contains the date the album was released in ISO format (Year-Month-Day). The Album Sequence column indicates the sequence of the track in the album. The Track Title column contains the title of the track, while the Korean Track Title column contains the title of the track with Korean characters. The English Track Title column contains the title of the track without non-English characters.
 
-Other columns indicate whether the track is a hidden track, a remix, or features other artists, as well as who performed the track, with multiple individuals separated by semicolons. The dataset also notes whether the track was previously released in an earlier album and the language of the track, categorized as Korean, English, or Not Applicable for instrumentals.
+The Lyrics column contains the English translated lyrics of the track, sourced from Genius. Note that this column will be empty for instrumental tracks. The Hidden Track column indicates whether the track is a hidden track, while the Remix column indicates whether the track is a remix. The Featured column indicates who is featured in the track.
 
-Acknowledgments are given for the banner and profile image inspiration.
+The Performed By column indicates who performed the track, with multiple individuals separated by semicolons. Note that featured artists will not be reflected in this column. The Repackaged column indicates if the track was already released in an earlier album. The Language column indicates the language of the track, with options including Korean, English, and Not Applicable (for instrumentals).
 
-Future improvements planned for the dataset include the addition of Japanese albums.
-
-Features of the dataset include the track identifier, album title, English album title, album release date, album sequence, track title, Korean track title, English track title, lyrics, hidden track indicator, remix indicator, featured artist indicator, performed-by indicator, repackaged indicator, and language.
-
-Keywords: BTS-Lyrics, computer systems, machine learning, music dataset, album metadata, track features, lyrics analysis.
+Keywords: BTS, lyrics, dataset, albums, tracks, language, features

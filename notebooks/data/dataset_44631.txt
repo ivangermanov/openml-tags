@@ -1,17 +1,17 @@
-Subsampling of the dataset KC One with Seed Three 
+Name: KC One Seed Three Rows Two Thousand Columns One Hundred Classes Ten Stratify True
 
-This dataset is a subsampled version of the original KC One dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes were representative of the overall distribution. 
+Tags: Subsampling of the dataset KC One with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-If the number of unique classes exceeded the maximum allowed, a random selection of classes was made based on their frequency of occurrence. The indices corresponding to these selected classes were then used to filter the original dataset, resulting in a reduced dataset with only the relevant samples.
+Generated with the following source code:
 
-Furthermore, if the number of columns in the filtered dataset exceeded the maximum allowed, a uniform sampling of columns was performed to reduce the dimensionality. This involved randomly selecting a specified number of columns from the dataset, while ensuring that the resulting subset retained a good representation of the original features.
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Finally, if the resulting dataset still had more rows than desired, a stratified sampling approach was employed to further reduce the size of the dataset. This ensured that the final subsampled dataset maintained an optimal balance between class representation and overall size.
+The function first selects a specified number of classes from the original dataset using random sampling with replacement. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-The resulting dataset consists of a carefully curated selection of features, including location, volume, edge volume, internal volume, node count, volume, length, degree, incidence, edge, and tree metrics, among others.
+Next, it selects a specified number of columns from the filtered data using random sampling without replacement. If the number of columns in the filtered data is less than or equal to the specified number, it uses all the columns.
 
-Tags: Machine Learning, Mathematics
+Finally, it selects a specified number of rows from the filtered data using stratified sampling to maintain the original distribution of the data. If stratified sampling is not required, it uses random sampling without replacement.
 
-Features: location, volume, edge volume, internal volume, node count, volume, length, degree, incidence, edge, tree metrics
+Features: location, variable group, essential variable group, internal variable group, number, variable, length, density, interface, entity, branch, total operations, total operands, branch count, defects
 
-Keywords: subsampling, dataset reduction, stratified sampling, machine learning, mathematics
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, feature selection

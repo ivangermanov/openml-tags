@@ -1,19 +1,17 @@
-Name: Fabert Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
+Name: Fabert Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Fabert with seed equals three arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+Tags: Subsampling of the dataset Fabert with seed equals three arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-This function is used to subsample a given dataset. It takes several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether to perform stratification.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-The function first uniformly samples classes from the dataset. If there are more classes than the specified maximum, it selects a subset of classes based on their frequency in the dataset. Then, it filters out the instances that do not belong to the selected classes.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Next, the function uniformly samples columns from the dataset. If there are more columns than the specified maximum, it randomly selects a subset of columns.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the distribution of classes is maintained.
 
-After sampling classes and columns, the function applies stratification if required. This ensures that the sampled instances maintain the same class distribution as the original dataset.
+Finally, it returns a new dataset with the selected data, along with the corresponding categorical mask and column names.
 
-Finally, the function returns a new dataset object with the sampled instances, their corresponding labels, and information about which columns are categorical.
+Features: (omitted due to unreadability)
 
-Features: 
-
-Keywords: Fabert, subsampling, stratification, dataset, classes, columns, instances, categorical, labels.
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, class distribution.

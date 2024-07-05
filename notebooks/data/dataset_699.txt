@@ -1,72 +1,65 @@
+Name: disclosure_z
+Tags: StatLib
+
+Source: Unknown - Date unknown
+
+Please cite: Data Used in "A BAYESIAN APPROACH TO DATA DISCLOSURE: OPTIMAL INTRUDER BEHAVIOR FOR CONTINUOUS DATA"
+
 Background:
 
-In this paper, we develop an approach to data disclosure in survey settings by adopting a probabilistic definition of disclosure. Our approach is based on the principle that a data collection agency must consider disclosure from the perspective of an intruder in order to efficiently evaluate data disclosure limitation procedures. The probabilistic definition and our attempt to study optimal intruder behavior lead naturally to a Bayesian formulation.
+This paper develops an approach to data disclosure in survey settings by adopting a probabilistic definition of disclosure due to Dalenius. The approach is based on the principle that a data collection agency must consider disclosure from the perspective of an intruder in order to efficiently evaluate data disclosure limitation procedures. The probabilistic definition and the attempt to study optimal intruder behavior lead naturally to a Bayesian formulation. The methods are applied in a small-scale simulation study using data adapted from an actual survey conducted by the Institute for Social Research at York University.
 
-Data:
+The Data:
 
-Our case study uses data from the survey data Elite Canadian Decision Makers collected by the Institute for Social Research at York University. This survey was conducted using telephone interviews and there were respondents, but many of these did not supply complete data. We have extracted data on twelve variables, each of which was measured on a five-point scale.
+The case study uses data from the survey data Elite Canadian Decision-Makers collected by the Institute for Social Research at York University. This survey was conducted using telephone interviews and there were respondents, but many of these did not supply complete data. Data on variables, each of which was measured on a point scale, has been extracted:
 
-Civil Liberties:
+Civil liberties:
+- Free speech is just not worth it.
+- We have gone too far in pushing equal rights in this country.
+- It is better to live in an orderly society than to allow people so much freedom.
+- Free speech ought to be allowed for all political groups.
 
-* Free speech is just not worth it.
-* We have gone too far in pushing equal rights in this country.
-* It is better to live in an orderly society than to allow people so much freedom.
-* Free speech ought to be allowed for all political groups.
+Attitudes towards Jews:
+- Most Jews do not care what happens to people who are not Jews.
+- Jews are more willing than others to use shady practices to get ahead.
 
-Attitudes Towards Jews:
+Canada-US relationship:
+- Ensure independent Canada.
+- Canada should have free trade with the USA.
+- Canada's way of life is influenced strongly by USA.
+- Canada benefits from US investments.
 
-* Most Jews don't care what happens to people who are not Jews.
-* Jews are more willing than others to use shady practices to get ahead.
+In addition, data on two approximately continuous variables is included:
 
-Canada-US Relationship:
+Personal information:
+- Income: Total family income before taxes (with top-coding at $).
+- Age: Based on year of birth.
 
-* Ensure independent Canada.
-* Canada should have free trade with the USA.
-* Canada's way of life is influenced strongly by the USA.
-* Canada benefits from US investments.
+The original survey data was transformed to create a database of approximately continuous variables. Categorical variables were added to increase the number of levels, and new variables were defined. Cases with missing observations and involving young children were removed, resulting in a database consisting of observations.
 
-Personal Information:
+To enhance continuity, normal distributed variates were added to age observations, uniform variates were added to incomes below $, and incomes exceeding $ were simulated using a t distribution. Normal distributed variates were added to other variables.
 
-* Total family income before taxes (with top-coding).
-* Age based on year of birth.
-
-We transformed the original survey data as follows in order to create a database of approximately continuous variables:
-
-We added categorical variables to increase the number of levels. When necessary, we reversed the order of levels of a response to a question. The new variables are defined as follows:
-
-Civil equals the sum of civil liberties questions. 
-Attitude equals the sum of attitudes towards Jews questions. 
-Can/US equals the sum of Canada-US relationship questions.
-
-After we removed cases with missing observations and two cases involving young children, we had a database consisting of six hundred sixty-two observations.
-
-To enhance continuity, we took the following measures:
-Age: We added normally distributed variates with zero mean and variance four to all observations.
-Income: We added uniformly distributed variates on the range of zero to ten thousand dollars to all incomes below eighty thousand dollars. Since all cases of incomes exceeding eighty thousand dollars were lumped together in the survey, we simulated their values by means of a t-distribution. Drawing values from the upper thirty-eight percent tail of t-distribution, we evaluated the values of income as sixty thousand plus twenty-five thousand times t-distribution.
-Other variables: We added normally distributed variates with zero mean and variance point five to the variables.
-
-We assume that the agency releases information about all variables, except for attitudes towards Jews, which is unavailable to the intruder and is at the center of the intruder's investigation. We denote the released data by Z, with i equals one to six hundred sixty-two, and j equals one to four.
-
-We assume that the intruder's data, X, are accurate and are related to Z via the following transformation:
-x equals z times theta plus xi,
-where theta is a bias removing parameter normally distributed with mean one and variance v, and xi is normally distributed disturbance with zero mean and variance sigma squared.
-
-The following table provides the values of v and sigma squared used in the study:
-v equals point one seven three two for civil liberties, Canada-US relationship, and age, and point one seven three two for income. Sigma squared equals twenty-five for civil liberties and Canada-US relationship, nine for age, and four for income.
+The agency releases information about all variables, except for Attitudes (towards Jews), which is unavailable to the intruder and is at the center of the intruder's investigation. The released data is denoted by Z, and the intruder's data, X, is assumed to be accurate and related to Z via a transformation involving bias removing parameters and normally distributed disturbances.
 
 Data Used in the Computations:
 
-We conducted a complete simulation of the procedures for the complete set of six hundred sixty-two cases. We considered four different scenarios for the simulation.
+A complete simulation of the procedures was conducted for the complete set of cases. Four different scenarios were considered for the simulation:
 
-* The released data contains no bias or noise.
-* The released data contains only noise.
-* The released data contains only bias.
-* The released data contains both bias and noise.
+- The released data contains no bias or noise
+- The released data contains only noise
+- The released data contains only bias
+- The released data contains both bias and noise
+
+Each individual was taken in turn as the object of the intruder's efforts and calculations were carried out.
 
 Structure of the Datasets:
 
-Each attached dataset consists of four space-separated columns containing the data on age, civil liberties, Canada-US relationship, and income respectively.
+Each attached dataset consists of four space-separated columns containing the data on Age, Civil, Can/US and Income ($) respectively.
 
 Dataset: Z
+Information about the dataset
+CLASSTYPE: numeric
+CLASSINDEX: none specific
+Features: Age, Civil, Can/US, Income
 
-Keywords: data disclosure, probabilistic definition, Bayesian formulation, survey settings, intruder behavior, data collection agency, data limitation procedures.
+Keywords: data disclosure, Bayesian approach, survey data, intruder behavior, continuous data, simulation study, Canadian decision-makers, civil liberties, Canada-US relations, data transformation

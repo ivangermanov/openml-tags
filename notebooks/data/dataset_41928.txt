@@ -1,7 +1,13 @@
-The Container Pre-Marshalling Problem Runtime Regression dataset is an extension of the previous dataset, featuring more attributes and a set of test instances. Three distinct sets of attributes are included: one containing the comprehensive set of attributes derived from the second iteration of our Latent Feature Analysis process; another consisting of attributes obtained after the first iteration; and finally, the original attributes utilized in the Premarshalling Astar dataset.
+CPMP 2015 Runtime Regression
 
-In addition to these attribute files, corresponding test data is provided, following an identical naming convention. It is worth noting that the calculation of attributes for the Premarshalling Problem is exceptionally straightforward and rapid; consequently, the attribute costs file has been omitted, as its values would uniformly be zero, regardless of whether original, first iteration, or second iteration attributes are employed. The attribute computation code is accessible via an online repository.
+Tags: Algorithm Selection
 
-This dataset was previously referred to as Premarshalling Astar; however, to conserve storage space, the name was modified. The attributes encompass various aspects, including stack properties, container density, and group characteristics.
+This dataset is an extension of the 2013 pre-marshalling dataset, featuring a more comprehensive set of features and a collection of test instances. The dataset includes three distinct sets of features, each with its own unique characteristics. The first set, feature values, contains the full range of features derived from the second iteration of our latent feature analysis process. The second set, feature values iteration one, includes only the features obtained after the first iteration of the latent feature analysis process. The third set, feature values original, comprises the features used in the original 2013 pre-marshalling dataset.
 
-Keywords: Container Premarshalling, Runtime Regression, Algorithm Selection, Machine Learning, Medicine
+In addition to these feature sets, the dataset also provides test data with an identical naming scheme. Notably, the features for the pre-marshalling problem are extremely easy and fast to compute, which is why the feature costs file has been omitted, as it would indicate a computation time of zero for every feature.
+
+The feature computation code is available online, providing users with a comprehensive understanding of the feature extraction process. Previously, this scenario was referred to as Pre-Marshalling-AStar-2015, but it has been renamed to conserve space.
+
+The dataset features a range of attributes, including the number of stacks, tiers, and the stack to tier ratio, as well as container density, empty stack percentage, and overstowing stack percentage. Other features include group same minimum, maximum, mean, and standard deviation, top good minimum, maximum, mean, and standard deviation, overstowage percentage, and bottom floor left behind. The dataset also includes algorithm and runtime information, along with a unique row identifier.
+
+Keywords: Algorithm Selection, Container Pre-Marshalling, Latent Feature Analysis, Feature Extraction, Runtime Regression.

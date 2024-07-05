@@ -1,15 +1,11 @@
-Adult Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Adult Dataset Subsample with Two Thousand Rows and Ten Classes Tags: Subsampling of the Adult Dataset with Stratification
 
-Tags: Sub sampling of the dataset Adult with seed equals two arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+This dataset is a subsample of the Adult dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, ensuring that the number of classes did not exceed ten. The selected classes were then used to filter the data, retaining only the instances that belonged to these classes.
 
-Generated with the following source code:
+Next, the columns of the dataset were uniformly sampled, reducing the number of columns to one hundred. This was done to reduce the dimensionality of the dataset and make it more manageable.
 
-The function sub sample takes in parameters such as seed, number rows max, number columns max, number classes max, and stratified, and returns a dataset. It first initializes a random number generator with the given seed. Then it gets the features x and labels y from the current object. It uniformly samples classes by getting unique labels, and if there are more than the maximum allowed number of classes, it selects a specified number of classes based on their frequency in the labels. 
+Finally, the dataset was further subsampled to contain a maximum of two thousand rows. This was done using stratified sampling, which ensured that the class distribution in the subsample was representative of the original dataset.
 
-It then gets the indices where the selected classes are present and filters the features and labels accordingly. Next, it uniformly samples columns if required, by selecting a specified number of column indices, sorting them, and getting the corresponding column names. 
+The resulting dataset contains a subset of the original features, including age, work class, education, marital status, occupation, relationship, race, sex, capital gain, capital loss, hours per week, and native country. The class feature has been retained, with ten distinct classes.
 
-If the number of rows exceeds the maximum allowed, it stratifies the data accordingly using train test split, shuffles the data, and sets the random state to the given seed. Finally, it converts categorical columns to strings, creates a new dataset object, and returns it.
-
-Features: Age, Work Class, Education, Marital Status, Occupation, Relationship, Race, Sex, Capital Gain, Hours per Week, Native Country, Class
-
-Keywords: Sub sampling, Adult dataset, Stratification, Feature selection, Random sampling
+Keywords: Adult dataset, subsampling, stratification, class selection, column sampling, dimensionality reduction.

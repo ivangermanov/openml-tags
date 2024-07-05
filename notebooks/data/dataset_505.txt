@@ -1,27 +1,22 @@
-The Tecator Data Set:
+Tecator Dataset
+Tags: OpenML-Reg, study
 
-The task is to predict the fat content of a meat sample based on its near-infrared absorbance spectrum.
+This dataset contains information from the Tecator Infratec Food and Feed Analyzer, which operates in the near infrared wavelength range. The analyzer uses Near Infrared Transmission (NIT) principles to measure the absorbance spectrum of finely chopped pure meat samples with varying moisture, fat, and protein contents.
 
-Statement of Permission from Tecator (the Original Data Source):
+The task associated with this dataset is to predict the fat content of a meat sample based on its near infrared absorbance spectrum. If results from this data are used in publications, researchers are requested to mention the instrument and company name (Tecator) in their work.
 
-These data are recorded on a Tecator Infratec Food and Feed Analyzer working in the wavelength range eight hundred fifty to one thousand fifty nanometers by the Near-Infrared Transmission principle. Each sample contains finely chopped pure meat with different moisture, fat, and protein contents. If results from these data are used in a publication, we want you to mention the instrument and company name (Tecator) in the publication. In addition, please send a preprint of your article to Tecator AB, Box seventy, S-two sixty-three twenty-one Hoganas, Sweden.
+The data are available in the public domain with no responsibility from the original data source. They can be redistributed as long as the permission note is attached. For more information about the instrument, interested parties can contact Perstorp Analytical's representative in their area.
 
-The data are available in the public domain with no responsibility from the original data source. The data can be redistributed as long as this permission note is attached. For more information about the instrument, call Perstorp Analytical's representative in your area.
+The dataset consists of absorbance measurements for each meat sample across channels, along with the contents of moisture (water), fat, and protein. The absorbance is calculated as the negative logarithm (base ) of the transmittance measured by the spectrometer. The three content measurements (moisture, fat, and protein) are determined by analytic chemistry and expressed as percentages.
 
-Description of the Data File:
+The complete dataset includes samples, which are divided into several subsets for model validation and extrapolation studies. These subsets include training data, monitoring data, testing data, and two extrapolation sets focusing on fat and protein content, respectively.
 
-For each meat sample, the data consist of a one hundred channel spectrum of absorbances and the contents of moisture (water), fat, and protein. The absorbance is minus log ten of the transmittance measured by the spectrometer. The three contents, measured in percent, are determined by analytical chemistry. There are two hundred forty samples, which are divided into five data sets for the purpose of model validation and extrapolation studies. The data sets are: Training, Monitoring, Testing, Extrapolation, Fat, and Extrapolation, Protein.
+The spectra have been preprocessed using principal component analysis on the training dataset, with the first principal components (scaled to unit variance) included for each sample. For standard interpolation testing of algorithms, it is recommended to use the first samples for training and the subsequent samples for testing, while ignoring the last samples. The initial principal components are typically used to predict the fat content.
 
-The data for all two hundred forty samples appear at the end of this file - twenty-five lines per sample. The data sets appear in the order of the table above. The spectra are preprocessed using a Principal Component Analysis on the Training data set, and the first twenty-two Principal Components (scaled to unit variance) are included for each sample. Thus, if you want to use the data for a standard (interpolation) test of your algorithm, use samples one through one seventy-two for training and samples one seventy-three through two fifteen for testing (and ignore the last twenty-five samples), and use the first thirteen or so Principal Components to predict the fat content.
+The data file structure includes lines containing absorbance values, principal components, and the contents of moisture, fat, and protein for each sample. The file also provides information on the number of input and output variables, as well as the number of examples in each subset of the data.
 
-Each line contains the one hundred absorbances followed by the twenty-two Principal Components and finally the contents of moisture, fat, and protein. Preceding the data lines, the following lines appear:
+Researchers have used various neural network models to analyze this data, with performance measured by the Standard Error of Prediction (SEP). Different network architectures and methodologies, such as early stopping and Bayesian approaches, have been applied to improve prediction accuracy.
 
-More Details on How to Use the Data:
+This dataset serves as a benchmark for regression models, particularly in spectroscopic analysis and food science applications. It allows for the comparison of different modeling approaches in both interpolation and extrapolation scenarios.
 
-The data are made available as a benchmark for regression models. In order to compare models, it is practical to use the data set as follows: Training and Monitoring combined are used to tune (estimate, train) the model. Some approaches set aside some training data to control overfitting; these data should be a subset of Training plus Monitoring. In this approach, the subset Monitoring was used for this purpose. Testing is used to test the model once it has been tuned. If each model has an element of randomness (as is the case for neural networks), the most reliable measure of performance of a single model is obtained by selecting a handful of models on the basis of Training plus Monitoring and quoting the average of the performances on Testing. In the presence of randomness, it is bad practice to train a lot of models on Training plus Monitoring and then select the best of these on the basis of Testing. Training, Monitoring, and Testing are drawn from the same pool of data, so Testing is used to test the ability of the models to interpolate. The data sets Extrapolation, Fat, and Extrapolation, Protein contain more fat and protein, respectively, and are intended to be used to test the ability of the models to extrapolate.
-
-Performance of Neural Network Models:
-
-The performance is measured as Standard Error of Prediction, which is the root mean square of the difference between the true and the predicted content. For the prediction of fat on the Testing data set, the following results were obtained.
-
-Keywords: Tecator, near-infrared absorbance, meat sample, fat content, Principal Component Analysis, regression models, interpolation, extrapolation.
+Keywords: spectroscopy, near infrared, meat analysis, fat prediction, regression, neural networks, principal component analysis, food science

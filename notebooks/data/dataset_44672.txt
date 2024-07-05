@@ -1,13 +1,15 @@
-Gesture Phase Segmentation Processed Seed Four Dataset 
+Gesture Phase Segmentation Processed Seed Four Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Tags: Machine Learning, Mathematics 
+This dataset is a subsample of the Gesture Phase Segmentation Processed dataset. It was generated using a specific source code that involves uniform sampling of classes and columns, as well as stratified sampling of rows.
 
-This dataset is a subsampled version of the Gesture Phase Segmentation Processed dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes and columns from the original dataset, followed by stratified sampling of rows.
+The dataset was created by first uniformly sampling classes from the original dataset. If the number of unique classes exceeded ten, a random selection of ten classes was made, with the probability of each class being selected proportional to its frequency in the original dataset. The indices where one of these selected classes was present were then used to subset the original dataset.
 
-The subsampling function used to generate this dataset takes several arguments, including a seed value for reproducibility, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean flag indicating whether to use stratification. In this case, the seed value was four, the maximum number of rows was two thousand, the maximum number of columns was one hundred, the maximum number of classes was ten, and stratification was used.
+Next, the dataset was uniformly sampled to select one hundred columns. If the number of columns in the subset dataset exceeded one hundred, a random selection of one hundred columns was made. The selected columns were then used to subset the dataset.
 
-The resulting dataset contains a subset of the original features, which were selected uniformly at random from the available columns. The class labels were also sampled uniformly, with probabilities proportional to their frequencies in the original dataset. The stratification step ensured that the resulting dataset retained an approximately equal distribution of class labels.
+Finally, the dataset was stratified to select two thousand rows. If the number of rows in the subset dataset exceeded two thousand, a stratified sampling approach was used to select two thousand rows, with the target variable being the phase label.
 
-The dataset includes a set of features, although they are not easily interpretable due to their naming convention. These features are accompanied by a phase label, which represents the target variable for machine learning models.
+The resulting dataset has two thousand rows, ten classes, and one hundred columns, and is stratified.
 
-Keywords: machine learning, dataset subsampling, stratified sampling, gesture phase segmentation
+Features: 
+
+Keywords: Gesture Phase Segmentation, Stratified Sampling, Uniform Sampling, Dataset Subsampling

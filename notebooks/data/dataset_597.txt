@@ -1,21 +1,16 @@
-The Friedman Datasets are eighty artificially generated datasets originating from stochastic gradient boosting. 
+Name: fri c two five hundred five
+Tags: artificial
 
-The dataset names are coded according to their specific characteristics, including colinearity degree and sample number. 
+Source: Unknown - Date unknown
 
-These datasets were created using the Friedman function, which includes both linear and nonlinear relationships between input and output, with a normalized noise added to the output. 
+Please cite: The Friedman datasets are artificially generated datasets originating from a study on Stochastic Gradient Boosting. The dataset names are coded to indicate colinearity degree, sample number, and feature number.
 
-This function is particularly useful because it allows researchers to generate datasets with specific properties, such as the ability to test the effects of nonrelated features or to measure an algorithm's robustness to colinearity.
+The Friedman function is widely used for data generation and includes both linear and non-linear relations between input and output. A normalized noise is added to the output. The function incorporates trigonometric and polynomial components.
 
-The Friedman function itself is complex, incorporating multiple variables and mathematical operations. It generates datasets with five features for input, which can then be expanded to include additional features that are independent from the output.
+To measure the effects of non-related features, additional features independent from the output are added to the datasets. To assess algorithm robustness to colinearity, the datasets are generated with varying colinearity degrees, representing the number of features depending on other features.
 
-To create these datasets, various parameters were manipulated, including the number of features, the number of samples, and the colinearity degree. 
+The generated Friedman datasets vary in the number of features, number of samples, and colinearity degrees. Only the first five features are related to the output, while the rest are randomly generated. The datasets encompass different combinations of these parameters, resulting in a comprehensive collection of artificial datasets.
 
-The number of features varied from five to one hundred, although only the first five features are actually related to the output. The remaining features are randomly generated.
+The last attribute in each file represents the target variable. The features are labeled as oz followed by a number.
 
-Similarly, the number of samples ranged from one hundred to one thousand. 
-
-The colinearity degree, which measures the number of features dependent on other features, ranged from zero to four.
-
-By varying these parameters, eighty unique datasets were generated, each with its own distinct characteristics.
-
-Keywords: Friedman Datasets, stochastic gradient boosting, colinearity degree, nonlinear relationships, artificial datasets.
+Keywords: Friedman datasets, artificial data generation, colinearity, stochastic gradient boosting, feature relationships, algorithm robustness

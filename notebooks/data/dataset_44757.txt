@@ -1,20 +1,13 @@
-Subsampling of the dataset Riccardo with Seed Four 
-Tags: Subsampling of the dataset Riccardo 
+Subsampling of the dataset Riccardo with seed equal to four, maximum number of rows equal to two thousand, maximum number of columns equal to one hundred, maximum number of classes equal to ten, and stratify equal to true.
 
 Generated with the following source code:
 
-This function enables the subsampling of a dataset. It takes into account several parameters such as the maximum number of rows, columns, and classes. The function also allows for stratified sampling.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratify parameter determines whether the sampling should be stratified or not.
 
-The function begins by uniformly sampling classes from the dataset. If there are more classes than the specified maximum, it selects the desired number of classes based on their frequency in the dataset.
-
-Next, the function uniformly samples columns from the dataset. If there are more columns than the specified maximum, it randomly selects the desired number of columns.
-
-If the resulting dataset has more rows than the specified maximum, the function applies stratified sampling to ensure that the class distribution is maintained.
-
-Finally, the function returns a new dataset with the subsampled data, along with information about the categorical columns and their corresponding column names.
+The function uses the train test split function from scikit learn to split the data into a subset and the rest. The subset is then returned as a new dataset.
 
 Features: 
 
-V One Hundred Fifteen, Vehicle One Fifty, Vehicle Two Fifty Six, Vehicle Three Thirty Eight, Vehicle Three Forty, Vehicle Three Eighty Three, Vehicle Four Ninety Three, Vehicle Five Forty Nine, Vehicle Five Sixty Seven, Vehicle Five Eighty Nine, Vehicle Seven Zero Two, Vehicle Seven Thirty Three, Vehicle Seven Thirty Six, Vehicle Seven Fifty Three, Vehicle Seven Seventy, Vehicle Eight One Seven, Vehicle Eight Fifty Five, Vehicle Eight Eighty Two, Vehicle Nine Twenty Six, Vehicle Nine Twenty Eight, Vehicle Nine Fifty, Vehicle Nine Fifty Three, and so on...
+The dataset contains a variety of features, including V One Fifteen, V One Fifty, V Two Fifty Six, V Three Thirty Eight, V Three Forty, V Three Eighty Three, V Four Ninety Three, V Five Forty Nine, V Five Sixty Seven, V Five Eighty Nine, V Seven Zero Two, V Seven Thirty Three, V Seven Thirty Six, V Seven Fifty Three, V Seven Seventy, V Eight Seventeen, V Eight Fifty Five, V Eight Eighty Two, V Nine Twenty Six, V Nine Twenty Eight, V Nine Fifty, V Nine Fifty Three, and many more.
 
-Keywords: subsampling, dataset, stratified sampling, classes, columns, rows
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Generator, Feature Selection.

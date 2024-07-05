@@ -1,22 +1,9 @@
-Letter Tags: The Objective is to Identify Each of a Large Number of Black-and-White Rectangular Pixel Displays as One of the Twenty-Six Capital Letters in the English Alphabet.
+The Letter Dataset
 
-The character images were based on twenty different fonts and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, including statistical moments and edge counts, which were then scaled to fit into a range of integer values.
+The objective of this dataset is to identify each of a large number of black-and-white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet. The character images were based on twenty different fonts, and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli. Each stimulus was converted into sixteen primitive numerical attributes, which were then scaled to fit into a range of integer values from zero through fifteen.
 
-The dataset information includes the objective, which is to identify each of the large number of black-and-white rectangular pixel displays as one of the twenty-six capital letters in the English alphabet. The character images were based on twenty different fonts and each letter within these twenty fonts was randomly distorted to produce a file of twenty thousand unique stimuli.
+The dataset does not have any missing values. The dataset information is as follows: the letter dataset is a collection of twenty thousand unique stimuli, each representing a capital letter in the English alphabet. The dataset is typically divided into two parts, with the first sixteen thousand items used for training and the remaining four thousand items used for testing.
 
-The additional information provides more details about the dataset, including the fact that we typically train on the first sixteen thousand items and then use the resulting model to predict the letter category for the remaining four thousand.
+The additional variable information is as follows: the first variable is the capital letter, which can take on twenty-six values from A to Z. The next five variables describe the physical characteristics of the box containing the letter: the horizontal position of the box, the vertical position of the box, the width of the box, the height of the box, and the total number of on pixels in the box. The next six variables describe the statistical characteristics of the on pixels in the box: the mean x of the on pixels, the mean y of the on pixels, the mean x variance, the mean y variance, the mean x y correlation, and the mean of x times x times y. The final six variables describe the edge count characteristics of the box: the mean edge count from left to right, the correlation of the x edge count with y, the mean edge count from bottom to top, the correlation of the y edge count with x, the mean of x times x times y, and the mean of x times y times y.
 
-There are no missing values in this dataset.
-
-Additional variable information includes:
-
-* Lettr: capital letter (twenty-six values from A to Z)
-* X Box: horizontal position of box
-* Y Box: vertical position of box
-* Width: width of box
-* High: height of box
-* On Pix: total number of on pixels
-* X Bar: mean x of on pixels in box
-* Y Bar: mean y of on pixels in box
-
-Keywords: letter recognition, pixel display, font distortion, image classification, machine learning.
+Keywords: letter recognition, pixel displays, capital letters, font distortion, numerical attributes, statistical moments, edge counts.

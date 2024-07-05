@@ -1,11 +1,9 @@
-The RL dataset is part of the Tabular Data Benchmark, specifically designed for classification on categorical and numerical features. It has undergone transformation to conform to the benchmark standards.
+The RL dataset is part of the tabular data benchmark, transformed in a uniform way to facilitate classification on categorical and numerical features. The original dataset belongs to a real-world challenge, where the goal is to expose the research community to datasets of interest, formatted in a uniform way to focus on classification. 
 
-The primary objective of this challenge is to introduce the research community to real-world datasets of significant interest, formatted uniformly despite differences in data types. Participants receive preprocessed matrices, allowing them to focus solely on classification, although additional feature extraction methods are permitted as long as they comply with the rules.
+The data are provided as preprocessed matrices, allowing participants to focus on classification, although additional feature extraction procedures are welcome as long as they do not violate any rules of the challenge. All problems are binary classification problems, assessed with the normalized Area Under the ROC Curve metric. 
 
-All problems presented are binary classification challenges, assessed using the normalized Area Under the Receiver Operating Characteristic Curve (AUC) metric. The identities of the datasets and their respective data types remain concealed, while their structures are disclosed.
+The identity of the datasets and the type of data is concealed, although its structure is revealed. The final score will be the average of rankings on all testing datasets, generating a ranking to determine the winners. The tasks are constrained by a time budget, and the Codalab platform provides computational resources shared by all participants. 
 
-The ultimate score will be calculated as the average of rankings across all testing datasets, generating a comprehensive ranking to determine the winners. Time constraints apply to each task, executed within a shared computational environment provided by the Codalab platform.
+Each code submission will be executed in a compute worker with specific characteristics, ensuring the fairness of the evaluation. When a code submission is evaluated, its execution time is limited to ensure fairness.
 
-Each code submission is executed within a compute worker featuring two cores, eight gigabytes of memory, forty gigabytes of solid-state drive storage, and an Ubuntu operating system. Execution time is limited to ensure fair evaluation.
-
-Keywords: Tabular Data, Classification, Categorical Features, Numerical Features, Binary Classification, AUC Metric, Computational Resources, Time Constraints.
+Keywords: tabular data, classification, categorical features, numerical features, binary classification, Area Under the ROC Curve, computational resources, time budget.

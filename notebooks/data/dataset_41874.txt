@@ -1,26 +1,15 @@
-FOREX eur sgd Day Close 
+Name: Forex Eursgd Day Close
 
-Tags: Finance, Forex, Forex Close, Forex Day, Health 
+Tags: finance, forex, forex close, forex day
 
-This is the historical price data of the Euro versus Singapore Dollar from Dukascopy. Each instance, or row, represents one candlestick for one trading day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is closed on Saturdays and Sundays. The timestamp feature is set to the Europe Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The dataset consists of daily candlesticks, each representing the Bid and Ask prices at various points throughout the trading day. The Bid Open, High, Low, and Close prices reflect the best available price at which traders were willing to buy the currency pair, while the Ask Open, High, Low, and Close prices reflect the best available price at which traders were willing to sell. Additionally, the Bid Volume and Ask Volume represent the number of times the respective prices changed within the given time interval.
+Data Description
+This is the historical price data of the Forex Euro/Singapore Dollar from Dukascopy. One instance, or row, is one candlestick of one day. The whole dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by comparing the mean Close Bid and Close Ask prices of the current day to those of the following day. If the mean Close price increases, the class attribute is labeled as True; otherwise, it is labeled as False.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-Attributes:
+Attributes
+The Timestamp is the time of the current data point in the Europe/Amsterdam timezone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-* Timestamp: The time of the current data point in the Europe Amsterdam timezone
-* Bid Open: The best available buying price at the start of the trading day
-* Bid High: The highest buying price reached during the trading day
-* Bid Low: The lowest buying price reached during the trading day
-* Bid Close: The best available buying price at the close of the trading day
-* Bid Volume: The number of times the buying price changed during the trading day
-* Ask Open: The best available selling price at the start of the trading day
-* Ask High: The highest selling price reached during the trading day
-* Ask Low: The lowest selling price reached during the trading day
-* Ask Close: The best available selling price at the close of the trading day
-* Ask Volume: The number of times the selling price changed during the trading day
-* Class: A binary indicator of whether the mean Close price will increase or decrease the following day 
-
-Keywords: Forex, Euro, Singapore Dollar, Candlestick, Bid, Ask, Trading Day
+Keywords: Forex, Euro, Singapore Dollar, Historical Data, Candlestick, Finance

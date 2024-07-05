@@ -1,15 +1,13 @@
-Subsampling of the dataset PC Four with Seed One
+Name: PC Four Seed One
 
-This dataset is a subsampled version of the original PC Four dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes from the original dataset, selecting a specified number of classes while ensuring that each class has an equal probability of being chosen. 
+Tags: Subsampling of the dataset PC Four with seed equals one, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-The resulting dataset has undergone column selection, where a specified number of columns were randomly chosen from the original dataset. This selection process ensured that the columns were picked uniformly at random.
+Generated with the following source code:
 
-Furthermore, the dataset has been subsampled to a specified number of rows, using stratified sampling to ensure that each class is represented proportionally. This involved concatenating the feature data with the target variable, performing stratified splitting, and then separating the data back into features and target variables.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses the numpy random default random generator to generate random numbers. The function then selects a subset of the data based on the given parameters. It first selects a subset of classes, then selects a subset of columns, and finally selects a subset of rows. The function returns a new dataset with the selected data.
 
-The resulting dataset retains information about its origin, including the original dataset it was derived from. It also includes information about its categorical columns, which have been converted to strings for compatibility with OpenML.
+The dataset is a subsample of the PC Four dataset. The subsample function was used to select a subset of the data based on the given parameters. The parameters were set to select a maximum of two thousand rows, one hundred columns, and ten classes. The stratify parameter was set to true, which means that the function will try to maintain the same class distribution in the subsample as in the original dataset.
 
-Features: Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Lines of Comments, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Total Lines of Code
+Features: Blank Lines of Code, Branch Count, Call Pairs, Lines of Code and Comments, Lines of Comments, Condition Count, Cyclomatic Complexity, Cyclomatic Density, Decision Count, Decision Density, Design Complexity, Design Density, Edge Count, Essential Complexity, Essential Density, Executable Lines of Code, Parameter Count, Halstead Content, Halstead Difficulty, Halstead Effort, Halstead Error Estimate, Halstead Length, Halstead Level, Halstead Program Time, Halstead Volume, Maintenance Severity, Modified Condition Count, Multiple Condition Count, Node Count, Normalized Cyclomatic Complexity, Number of Operands, Number of Operators, Number of Unique Operands, Number of Unique Operators, Number of Lines, Percent Comments, Total Lines of Code.
 
-Tags: Machine Learning, Statistics
-
-Keywords: Subsampling, Stratified Sampling, Feature Selection, Class Balancing, Data Preprocessing
+Keywords: dataset subsampling, stratified sampling, feature selection, class distribution, data reduction.

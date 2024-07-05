@@ -1,13 +1,13 @@
-The Graph Inference Dataset 
+Graph Inference Dataset
 
-Tags: Computer Systems, Machine Learning 
+Tags: 
 
-This dataset consists of graph datasets in CSV format used in the article "Learning Functional Causal Models with Generative Neural Networks". 
+The Graph Inference Dataset contains graph datasets in CSV format, used in the article "Learning Functional Causal Models with Generative Neural Networks". The dataset consists of two main categories: graphs without hidden variables and graphs with hidden variables.
 
-There are two types of files. Files named "*_numdata.csv" contain data of around twenty variables connected in a graph without hidden variables. These files are categorized into four groups: G2, G3, G4, and G5, which refer to graphs with a maximum of two, three, four, and five parents per node, respectively. Each corresponding "*_target.csv" file contains the ground truth of the graph, indicating cause-and-effect relationships.
+The first category includes files with names ending in "_numdata.csv", which contain data of around twenty variables connected in a graph. These graphs have a maximum of two, three, four, or five parents for each node, referred to as G2, G3, G4, and G5 respectively. Each corresponding file ending in "_target.csv" contains the ground truth of the graph, showing the causal relationships between variables.
 
-Files starting with "Big" contain larger graphs with one hundred variables.
+The second category includes files with names starting with "Big", which are larger graphs with one hundred variables. 
 
-The second set of files includes "*_confounders_numdata.csv", which contain data of around twenty variables connected in a graph with three hidden variables. Each corresponding "*_confounders_skeleton.csv" file contains the skeleton of the graph, including spurious links due to common hidden causes. Meanwhile, each "*_confounders_target.csv" file contains the ground truth of the graph, indicating direct visible cause-and-effect relationships while omitting spurious links. The task is to recover the direct visible links between causes and effects while eliminating spurious links from the skeleton.
+The second category also includes files with names ending in "_confounders_numdata.csv", which contain data of around twenty variables connected in a graph with three hidden variables. Each corresponding file ending in "_confounders_skeleton.csv" contains the skeleton of the graph, including spurious links due to common hidden causes. Each file ending in "_confounders_target.csv" contains the ground truth of the graph, showing the direct visible causal relationships between variables. The task is to recover the direct visible links between cause and effect while removing the spurious links from the skeleton.
 
-Keywords: graph inference, causal models, generative neural networks, computer systems, machine learning.
+Keywords: graph inference, causal models, generative neural networks, hidden variables, causal relationships, spurious links.

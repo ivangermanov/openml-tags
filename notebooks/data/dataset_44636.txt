@@ -1,15 +1,13 @@
-Segment Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Segment Seed Three Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-This is a subsampling of the dataset segment with a seed of three. The arguments used include number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and stratify set to true.
+This dataset is a subsample of the original segment dataset, generated with a seed of three. The subsampling process involved uniformly selecting classes and columns, and then stratifying the sample to ensure a representative distribution of classes.
 
-Generated with the following source code:
+The dataset was generated using a custom function that takes in several parameters, including the seed, maximum number of rows, maximum number of columns, maximum number of classes, and a flag for stratification. The function first selects a subset of classes using a weighted random choice, where the weights are based on the value counts of each class. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-The function subsample takes in several parameters including seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified. It uses numpy's random default random generator to select classes and columns uniformly. If there are more classes than the maximum allowed, it selects the top classes based on their frequency in the dataset. It then selects the indices where these classes are present and filters the data accordingly. 
+Next, the function uniformly samples columns if the number of columns exceeds the maximum allowed. It does this by selecting a random subset of column indices and then filtering the data to include only these columns.
 
-If there are more columns than the maximum allowed, it uniformly samples the columns. It also checks if the length of the data is more than the maximum number of rows and stratifies the data accordingly using train test split from scikit learn.
+Finally, the function stratifies the data to ensure a representative distribution of classes. It does this by concatenating the data and target variables, and then using a train-test split function to select a subset of the data. The resulting dataset is then split back into its feature and target variables.
 
-The function finally returns a dataset with the sampled data, columns, and categorical mask.
+The dataset includes a range of features, including short line density, vegetation edge mean and standard deviation, hedge mean and standard deviation, intensity mean, and various color-related features such as raw and excess red, blue, and green means.
 
-Features include short line density, vegetation edge mean, vegetation edge standard deviation, habitat edge mean, habitat edge standard deviation, intensity mean, raw red mean, raw blue mean, raw green mean, excess red mean, excess blue mean, excess green mean, value mean, saturation mean, and hue mean.
-
-Keywords: dataset, subsampling, stratification, classification, feature selection
+Keywords: dataset subsampling, stratification, class selection, column sampling, feature engineering

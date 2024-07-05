@@ -1,48 +1,15 @@
-Philippine Seed Four N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Philippine Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Life Science, Machine Learning 
-
-Subsampling of the dataset Philippine with seed equals four arguments N Rows equals two thousand arguments N Columns equals one hundred arguments N Classes equals ten arguments No Stratify equals False. 
+Tags: Subsampling of the dataset Philippine with seed four, arguments number of rows two thousand, arguments number of columns one hundred, arguments number of classes ten, and arguments no stratify true.
 
 Generated with the following source code:
 
-def subsample(self, seed, NRowsMax, NColsMax, NClassesMax, stratified):
-    random number generator = numpy random default random generator with seed
-    x equals self x
-    y equals self y
-    
-    Uniformly sample classes equals y unique 
-    if length of classes is greater than NClassesMax:
-        value counts equals y value counts
-        selected classes equals random number generator choice of classes with size NClassesMax replace equals false probability equals value counts over sum of value counts
-        
-        Select the indices where one of these classes is present
-        idxs equals y index of y is in selected classes
-        x equals x iloc of idxs
-        y equals y iloc of idxs
-        
-    Uniformly sample columns if required
-    if length of x columns is greater than NColsMax:
-        column indexes equals random number generator choice of range of length of x columns with size NColsMax replace equals false
-        sorted column indexes equals sorted column indexes
-        selected columns equals list of x columns of sorted column indexes
-        x equals x of selected columns
-    else:
-        sorted column indexes equals range of length of x columns
-        
-    if length of x is greater than NRowsMax:
-        Stratify accordingly
-        target name equals y name
-        data equals pandas concat of x and y along columns
-        _, subset equals train test split of data test size equals NRowsMax stratify equals data of target name shuffle equals true random state equals seed
-        x equals subset drop of target name along columns
-        y equals subset of target name
-        
-    We need to convert categorical columns to string for OpenML
-    categorical mask equals list of self categorical mask of i in sorted column indexes
-    columns equals list of x columns
-    return Dataset of dataset equals self dataset x equals x y equals y categorical mask equals categorical mask columns equals columns
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows from the original dataset. The function also ensures that the sampling is stratified, meaning that the proportion of each class in the original dataset is maintained in the new dataset.
 
-Features: Eight, Eleven, Fourteen, Eighteen, Twenty-Two, Twenty-Four, Thirty-Three, Thirty-Five, Thirty-Nine, Forty, Forty-Four, Forty-Five, Fifty, Fifty-Two, Fifty-Three, Fifty-Four, Fifty-Seven, Sixty, Sixty-Three, Sixty-Seven, Seventy-Five, Seventy-Six, Seventy-Eight, Eighty-Three, Eighty-Nine, Ninety-Four, Ninety-Six, Ninety-Nine 
+The function first selects a specified number of classes from the original dataset using random sampling. It then selects the indices where one of these classes is present and uses these indices to subset the original dataset. Next, it selects a specified number of columns from the subsetted dataset using random sampling. Finally, it selects a specified number of rows from the subsetted dataset using stratified sampling.
 
-Keywords: Philippine, Subsampling, Machine Learning, Life Science, Stratify
+The resulting dataset is returned with the specified number of rows, columns, and classes.
+
+Features: (skipped due to unreadability)
+
+Keywords: Philippine dataset, subsampling, stratified sampling, random sampling, dataset reduction.

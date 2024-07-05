@@ -1,24 +1,31 @@
-To demonstrate the RFMTC marketing model, a modified version of RFM, this study adopted the donor database of Blood Transfusion Service Center in Hsin Chu City in Taiwan. The center passes its blood transfusion service bus to one university in Hsin Chu City to gather blood donations approximately every three months. 
+Vowel Tags: Label Ranking
 
-To build an FRMTC model, seven hundred forty-eight donors were randomly selected from the donor database. Each of these seven hundred forty-eight donor data included recency, which is the time period in months since the last donation, frequency, which is the total number of donations, monetary, which is the total amount of blood donated in cubic centimeters, time, which is the time period in months since the first donation, and a binary variable representing whether the individual donated blood in March two thousand seven. 
+Features: 
+A One, A Two, A Three, A Four, A Five, A Six, A Seven, A Eight, A Nine, A Ten, L One, L Two, L Three, L Four, L Five, L Six, L Seven, L Eight, L Nine, L Ten, L Eleven
 
-This binary variable is represented by one if the individual donated blood and zero if they did not donate blood. The Blood Transfusion Service Center is a classification problem.
+Scraped Data: Dataset Information
 
-The variables are described below. 
-Recency is a quantitative variable measured in months, which represents the time period since the last donation. 
-Frequency is also a quantitative variable, which measures the total number of donations made by an individual.
-Monetary is another quantitative variable, which represents the total amount of blood donated by an individual in cubic centimeters.
-Time is a quantitative variable measured in months, which represents the time period since the first donation.
+Additional Information 
 
-Table One displays the descriptive statistics of the data. 
-Five hundred data points were randomly selected as the training set, and the remaining two hundred forty-eight were used as the testing set. 
+To demonstrate the Recency, Frequency, Monetary, Time, and Charity marketing model, a modified version of the traditional Recency, Frequency, and Monetary model, this study adopted the donor database of the Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donated about every three months. To build a Recency, Frequency, Monetary, Time, and Charity model, we selected donors at random from the donor database. These donor data, each one included Recency, Frequency, Monetary, Time, and a binary variable representing whether he or she donated blood in March, two thousand and seven. 
 
-Table One: Descriptive Statistics of the Data
-Variable            Data Type        Measurement        Description        
-Recency            Quantitative     Months            Input            
-Frequency          Quantitative     Times            Input            
-Monetary           Quantitative     Cubic Centimeters Input            
-Time               Quantitative     Months            Input            
-Whether He/She Donated Blood in March Two Thousand Seven Binary         One equals yes, zero equals no Output            
+Has Missing Values? No
 
-Keywords: RFMTC, Marketing Model, Blood Transfusion, Donor Database, Classification Problem, Recency, Frequency, Monetary, Time.
+Additional Variable Information 
+
+Given is the variable name, variable type, the measurement unit, and a brief description. The "Blood Transfusion Service Center" is a classification problem. The order of this listing corresponds to the order of numerals along the rows of the database. 
+
+Recency, Frequency, Monetary, Time, and a binary variable representing whether he or she donated blood in March, two thousand and seven. 
+
+Table One shows the descriptive statistics of the data. We selected data at random as the training set, and the rest as the testing set. 
+
+Table One. Descriptive statistics of the data 
+
+Variable Data Type Measurement Description 
+Recency quantitative Months Input 
+Frequency quantitative Times Input 
+Monetary quantitative c.c. blood Input 
+Time quantitative Months Input 
+Whether he or she donated blood in March, two thousand and seven binary one equals yes zero equals no Output 
+
+Keywords: Blood Transfusion, Donor Database, Marketing Model, Recency, Frequency, Monetary, Time, Charity

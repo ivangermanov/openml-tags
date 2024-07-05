@@ -1,11 +1,13 @@
-California Seed Two Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+California Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Health, Medicine 
+Tags: Subsampling of the dataset California with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
-The California dataset has been subsampled with a seed of two, resulting in a new dataset with a maximum of two thousand rows, one hundred columns, and ten classes. This subsampling process was performed using a uniform sampling method for both classes and columns. 
+Generated with the following source code:
 
-The original California dataset had over forty-four thousand entries, but this new subsampled version has been significantly reduced in size while still maintaining a representative selection of the original data. The goal of this subsampling process was to create a more manageable dataset for analysis and modeling purposes.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function first selects a specified number of classes from the dataset, and then selects the indices where one of these classes is present. It then selects a specified number of columns from the dataset, and finally selects a specified number of rows from the dataset. The function uses stratified sampling to ensure that the selected rows are representative of the original dataset.
 
-The features included in this subsampled dataset include Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupancy, Latitude, Longitude, and Price.
+The dataset California is a large dataset with many features, including Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupation, Latitude, Longitude, and Price. The subsample function is used to reduce the size of this dataset while still maintaining its representative characteristics.
 
-Keywords: California, subsampling, health, medicine, dataset, machine learning, data reduction.
+Features: Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupation, Latitude, Longitude, Price
+
+Keywords: dataset subsampling, stratified sampling, random number generation, data reduction, representative sampling

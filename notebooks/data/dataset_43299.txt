@@ -1,25 +1,29 @@
-Cause-Effect Pairs is a growing database of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
+Cause-Effect is a growing database of two-variable cause-effect pairs created at the Max Planck Institute for Biological Cybernetics in Tübingen, Germany.
 
-Some pairs are high-dimensional; for machine readability, the relevant information about this is coded in metadata. Metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
+Some pairs are high-dimensional, and for machine readability, the relevant information about this is coded in metadata. The metadata contains the following information: number of pair, first column of cause, last column of cause, first column of effect, last column of effect, and dataset weight. The dataset weight should be used for calculating average performance of causal inference methods to avoid a bias introduced by having multiple copies of essentially the same data.
 
-When using this dataset in a publication, please cite the paper "Distinguishing cause from effect using observational data: methods and benchmarks" published in the Journal of Machine Learning Research.
+When using this dataset in a publication, please cite the paper "Distinguishing Cause from Effect Using Observational Data: Methods and Benchmarks" published in the Journal of Machine Learning Research.
+
+The dataset pairs from one to forty-one are taken from the University of California, Irvine Machine Learning Repository.
 
 Overview of all data pairs:
 
-* Pair one: Altitude and Temperature from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Temperature.
-* Pair two: Altitude and Precipitation from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Precipitation.
-* Pair three: Longitude and Temperature from the German Weather Service (Deutscher Wetterdienst), where Longitude causes Temperature.
-* Pair four: Altitude and Sunshine Hours from the German Weather Service (Deutscher Wetterdienst), where Altitude causes Sunshine Hours.
-* Pair five: Abalone dataset, where Age causes Shell Length.
+Variable One, Variable Two, Dataset, Ground Truth
+pair0001: Altitude, Temperature, DWD, ->
+pair0002: Altitude, Precipitation, DWD, ->
+pair0003: Longitude, Temperature, DWD, ->
+pair0004: Altitude, Sunshine Hours, DWD, ->
 
-Information for the Abalone dataset:
-The Abalone dataset was originally owned by the Marine Resources Division, Marine Research Laboratories - Taroona, Department of Primary Industry and Fisheries, Tasmania. The dataset was donated by the University of Tasmania. It was received in December nineteen ninety-five.
+Information for pair0005:
+The Abalone dataset is a collection of data from the Marine Resources Division Marine Research Laboratories in Tasmania, Australia. The dataset was donated by the Department of Computer Science, University of Tasmania.
 
-Attribute information for the Abalone dataset:
-Given is the attribute name, attribute type, the measurement unit, and a brief description. 
-Age is an integer value that gives the age in years plus one point five. 
-Length is a continuous value measured in millimeters representing the longest shell measurement.
+Attribute information:
+Given is the attribute name, attribute type, measurement unit, and a brief description.
+Name, Data Type, Measurement Unit, Description
+Rings, integer, +1.5 gives the age in years
+Length, continuous, mm, Longest shell measurement
 
-Tags: Computer Systems, Graphical Models, Machine Learning, MaRDI, TA3
+Ground truth: Rings cause Length
+Features: Age in years, Longest shell measurement
 
-Keywords: cause-effect pairs, metadata, dataset weight, causal inference, observational data, abalone dataset, age, shell length.
+Keywords: Cause-Effect, Graphical Models, MaRDI, TA3, Causal Inference, Machine Learning, Abalone Dataset

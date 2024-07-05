@@ -1,11 +1,17 @@
-Subsampling of the dataset Eye Movements with Seed Three 
+Name: Eye Movements Seed Three 
 
-This dataset is a subsampled version of the Eye Movements dataset, generated using a specific set of parameters. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the resulting dataset has a maximum number of ten classes. 
+Tags: Subsampling of the dataset Eye Movements generated with the following source code:
 
-The subsampled dataset was then further reduced by uniformly sampling columns, limiting the number of columns to one hundred. Finally, the dataset was reduced again by randomly selecting a specified number of rows while maintaining the stratification of the data. 
+The subsample function is defined to take in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset. 
 
-This process resulted in a dataset with a carefully controlled balance of classes and features. The features included in this dataset are related to eye movements, including fixation durations, saccade lengths, and pupil diameters. These features are important for understanding how humans process visual information.
+The function first initializes a random number generator with the given seed. It then selects a subset of classes from the unique classes in the dataset, ensuring that the number of classes does not exceed the maximum number of classes. 
 
-Tags: Machine Learning, Mathematics
+The function then selects the indices where one of the selected classes is present and filters the data accordingly. 
 
-Keywords: Eye Movements, Subsampling, Stratification, Machine Learning, Data Reduction
+If the number of columns exceeds the maximum number of columns, the function uniformly samples columns to reduce the dimensionality. 
+
+Finally, if the number of rows exceeds the maximum number of rows, the function stratifies the data according to the target variable and samples a subset of rows.
+
+Features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label
+
+Keywords: Eye Movements, Subsampling, Stratification, Dimensionality Reduction, Dataset Generation

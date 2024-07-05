@@ -1,26 +1,30 @@
-**FOREX aud/usd-hour-High**
-Tags: Economics, Finance, Forex, Forex High, Forex Hour
+**FOREX AUD/USD Hourly High**
+
+Tags: finance, forex, forex high, forex hour
+
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
-This is the historical price data of the Foreign Exchange Australian Dollar versus United States Dollar from Dukascopy. One instance, or row, represents one candlestick of one hour. The entire dataset spans a specific date range and does not include weekends, since the Foreign Exchange market is not traded on weekends.
 
-The time zone of the feature Timestamp is Europe/Amsterdam. The class attribute is determined by the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. Specifically, the class attribute is true when the mean High price is increasing in the following hour, and false when the mean High price is decreasing or remains unchanged in the following hour.
+This dataset contains historical price data of the Australian Dollar versus the United States Dollar (AUD/USD) from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans from January to December and does not include weekends, as the Forex market is not traded during this time. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Note** that this is a hypothetical task, intended for scientific purposes only. Realistic trade strategies can only be applied to predictions based on Close attributes, which are also available.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following hour, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following hour, and the class attribute is False when the mean High price is going down (or stays the same) the following hour.
+
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
 
 **Attributes**
 
-* **Timestamp**: The time of the current data point, in the Europe/Amsterdam time zone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price during this time interval.
-* **Bid Low**: The lowest bid price during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the Bid Price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price during this time interval.
-* **Ask Low**: The lowest ask price during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the Ask Price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
 
-Keywords: Forex, Australian Dollar, United States Dollar, Historical Price Data, Candlestick, Time Zone, Amsterdam, Hypothetical Task, Scientific Purposes, Trade Strategies.
+**Keywords**: Forex, AUD/USD, Historical Data, Candlestick, Finance, Trading

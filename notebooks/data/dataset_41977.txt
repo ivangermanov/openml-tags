@@ -1,8 +1,15 @@
-Tuning SVMs 
-Tags: Politics, Study 
+Tuning SVMs Tags: study
 
-This is a meta-dataset describing the Support Vector Machine hyperparameter tuning problem. The target attribute indicates whether tuning is required or default hyperparameter values are sufficient for each dataset (row). Targets were defined using a statistical labeling rule comparing the predictive performance of models induced with default values and tuned ones.
+This is a meta-dataset that describes the Support Vector Machine hyperparameter tuning problem. The target attribute indicates whether tuning is required or default hyperparameter values are enough for each dataset. Targets were defined using a statistical labeling rule comparing the predictive performance of models induced with default values and tuned ones.
 
-Features include characteristics of datasets, differences between various machine learning algorithms, simple statistics about classes and attributes, dimensionality, and other dataset properties. Additionally, there are measures of skewness, kurtosis, correlation, and information theory-based metrics. Model-based features capture aspects of decision trees, while landmarking features describe the performance of various machine learning algorithms on the datasets.
+The dataset features a wide range of characteristics, including dataset properties, differences in performance between various machine learning algorithms, statistical measures, information-theoretic measures, model-based metrics, landmarking metrics, and graph-based metrics.
 
-Class
+The dataset properties include the number of classes, attributes, numeric and nominal features, samples, dimensionality, and other characteristics. The differences in performance between various machine learning algorithms include the differences in performance between Support Vector Machines with different kernels, neural networks, and decision trees.
+
+The statistical measures include skewness, kurtosis, absolute correlation, and other statistical properties of the dataset. The information-theoretic measures include class entropy, attribute entropy, joint entropy, mutual information, and other information-theoretic metrics.
+
+The model-based metrics include the number of nodes, leaves, and nodes per attribute in decision trees, as well as the level and branch metrics. The landmarking metrics include the performance of naive Bayes, decision trees, and neural networks on the dataset. The graph-based metrics include the number of edges, degree, density, and other graph properties.
+
+The goal of this dataset is to predict whether hyperparameter tuning is required for a given dataset, and to provide insights into the characteristics of datasets that benefit from hyperparameter tuning.
+
+Keywords: Support Vector Machines, hyperparameter tuning, meta-dataset, machine learning, dataset characteristics, statistical measures, information-theoretic measures, model-based metrics, landmarking metrics, graph-based metrics.

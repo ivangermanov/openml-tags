@@ -1,23 +1,13 @@
-The dataset contains fifteen classes of instances each, where each class references to a hand movement type in Libras, the Brazilian Sign Language. 
+The dataset contains fifteen classes of hand movement types in Libras, each with twenty-four instances. Each class references a specific hand movement type in Libras. 
 
-Features include various attributes describing the hand movement, although they are not explicitly named in a human-readable format.
+In the video pre-processing, a time normalization is carried out by selecting frames from each video, according to a uniform distribution. In each frame, the centroid pixels of the segmented objects, which are the hands, are found, composing the discrete version of the curve. All curves are normalized in the unitary space. 
 
-Scraped Data: 
-Dataset Information 
-Additional Information 
+To prepare these movements for analysis by algorithms, a mapping operation is carried out, where each curve is mapped into a representation with ninety features, representing the coordinates of movement. 
 
-The Movement Libras dataset contains fifteen classes of instances each, where each class references to a hand movement type in Libras, the Brazilian Sign Language. 
+Some sub-datasets are offered to support comparisons of results. 
 
-In the video preprocessing, a time normalization was carried out by selecting frames from each video, according to a uniform distribution. In each frame, the centroid pixels of the segmented objects, namely the hand, were found, which composed the discrete version of the curve F with points. All curves were normalized in the unitary space.
+The dataset does not have missing values. 
 
-To prepare these movements to be analyzed by algorithms, a mapping operation was performed, wherein each curve F was mapped into a representation with features, representing the coordinates of movement.
+The dataset contains ninety numeric features and one feature for the class, which is an integer. 
 
-Some sub-datasets are offered in order to support comparisons of results.
-
-Has Missing Values? 
-No 
-
-Additional Variable Information 
-The dataset consists of numeric variables and one variable for the class.
-
-Keywords: Libras, Hand Movement, Video Preprocessing, Time Normalization, Curve Mapping, Algorithm Analysis
+Keywords: Libras, hand movement, video pre-processing, time normalization, curve normalization, feature mapping, algorithm analysis.

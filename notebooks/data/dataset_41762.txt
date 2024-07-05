@@ -1,28 +1,26 @@
-**FOREX audsgd Hour Close**
+Name: FOREX AUD/SGD Hour Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Machine Learning, Manufacturing
+Tags: finance, forex, forex close, forex hour
 
-**Source**: Dukascopy Historical Data Feed
+Source: Dukascopy Historical Data Feed
 
-**Data Description**
+Data Description:
+This dataset contains the historical price data of the FOREX AUD/SGD from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-This dataset comprises historical price data of the Forex Australian Dollar-Singapore Dollar (AUD/SGD) from Dukascopy. Each instance represents one candlestick of one hour duration. The entire dataset spans from January to December and excludes weekends, as the Forex market is closed during these periods. The timestamp feature adheres to the Europe/Amsterdam timezone.
+The dataset has a class attribute, which is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is True when the mean Close price is going up in the following hour, and False when the mean Close price is going down or stays the same in the following hour.
 
-The class attribute signifies the direction of the mean close price of the subsequent hour relative to the mean close price of the current minute. Specifically, the class attribute assumes a value of true when the mean close price rises in the subsequent hour and false when the mean close price declines or remains stagnant.
+Attributes:
+Timestamp: The time of the current data point, in the Europe/Amsterdam timezone.
+Bid Open: The bid price at the start of this time interval.
+Bid High: The highest bid price during this time interval.
+Bid Low: The lowest bid price during this time interval.
+Bid Close: The bid price at the end of this time interval.
+Bid Volume: The number of times the Bid Price changed within this time interval.
+Ask Open: The ask price at the start of this time interval.
+Ask High: The highest ask price during this time interval.
+Ask Low: The lowest ask price during this time interval.
+Ask Close: The ask price at the end of this time interval.
+Ask Volume: The number of times the Ask Price changed within this time interval.
+Class: Whether the average price will go up during the next interval.
 
-**Attributes**
-
-* **Timestamp**: The time of the current data point, aligned with the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the commencement of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price observed during this time interval.
-* **Bid Close**: The bid price at the conclusion of this time interval.
-* **Bid Volume**: The frequency of changes in the bid price within this time interval.
-* **Ask Open**: The ask price at the initiation of this time interval.
-* **Ask High**: The highest ask price registered during this time interval.
-* **Ask Low**: The lowest ask price noted during this time interval.
-* **Ask Close**: The ask price at the termination of this time interval.
-* **Ask Volume**: The number of changes in the ask price within this time interval.
-* **Class**: An indicator of whether the average price will appreciate during the next interval.
-
-Keywords: Forex, AUD/SGD, Candlestick, Time Series, Machine Learning, Finance
+Keywords: FOREX, AUD/SGD, historical data, candlestick, finance, trading.

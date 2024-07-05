@@ -1,11 +1,13 @@
-Click Prediction Small Seed Three NRows Two Thousand NClasses Ten NCols One Hundred Stratify True
+Click Prediction Small Seed Three Dataset
 
-This dataset is a subsampling of the Click Prediction Small dataset with a specific set of parameters. It was generated using a particular source code that defines a function called subsample. This function takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify.
+Tags: Subsampling of the Click Prediction Small Dataset with Seed Three
 
-The function first uniformly samples classes from the original dataset, ensuring that the number of classes does not exceed the specified maximum. It then selects the indices where one of these classes is present and subsets the data accordingly.
+This dataset is a subsample of the Click Prediction Small dataset, generated with a specific set of arguments. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that the selected classes are present in the resulting dataset. The number of classes was limited to a maximum of ten.
 
-Next, the function uniformly samples columns from the resulting dataset, ensuring that the number of columns does not exceed the specified maximum. If necessary, it also stratifies the data according to the target variable.
+The columns of the dataset were also uniformly sampled, with a maximum of one hundred columns selected. The resulting dataset has a subset of the original columns, with the categorical columns converted to string format for OpenML compatibility.
 
-Finally, the function returns a new dataset object containing the subsampled data, along with metadata such as the categorical mask and column names.
+The dataset was generated using a specific source code, which involved using the NumPy random default generator to sample the classes and columns. The stratified sampling method was used to ensure that the resulting dataset is representative of the original dataset.
 
-Keywords: subsampling, dataset, stratification, sampling, classification.
+The features of this dataset include impression, URL hash, ad identifier, advertiser identifier, depth, position, query identifier, keyword identifier, title identifier, description identifier, and user identifier. The click feature is also included in the dataset.
+
+Keywords: click prediction, dataset subsampling, stratified sampling, OpenML compatibility, categorical columns.

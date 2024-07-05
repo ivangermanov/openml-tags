@@ -1,17 +1,39 @@
-Title of Database: Blocks Classification
+Page-blocks Dataset
+Tags: study_1, study_37, study_41, study_50, study_7, study_70, study_76, uci
 
-This database is concerned with the classification of blocks of a page layout of a document that has been detected by a segmentation process. This is an essential step in document analysis in order to separate text from graphic areas.
+Source: Unknown
 
-The problem consists in classifying all the blocks into five classes: text, horizontal line, picture, vertical line, and graphic. For a detailed presentation of the problem, see the relevant literature on multistrategy learning for document recognition.
+Please cite: Title of Database: Blocks Classification
 
-All instances have been personally checked so that low noise is present in the data. The dataset contains five thousand four hundred seventy-three examples coming from fifty-four distinct documents. Each observation concerns one block. All attributes are numeric and are in a format readable by C4.5.
+This dataset has been used to explore various simplification methods for decision trees. The problem involves classifying all the blocks of the page layout of a document that has been detected by a segmentation process. This is a crucial step in document analysis for separating text from graphic areas. The five classes are: text, horizontal line, picture, vertical line, and graphic.
 
-The relevant information about this dataset is that each block is described by ten attributes: the height of the block, the length of the block, the area of the block, the eccentricity of the block, the percentage of black pixels within the block, the percentage of black pixels after the application of the Run Length Smoothing Algorithm, the mean number of white-black transitions, the total number of black pixels in the original bitmap of the block, the total number of black pixels in the bitmap of the block after the Run Length Smoothing Algorithm, and the number of white-black transitions in the original bitmap of the block.
+The examples come from distinct documents, with each observation concerning one block. All attributes are numeric, and the data are in a format readable by C4.5. The instances have been personally checked to ensure low noise in the data.
 
-There are no missing values in this dataset. The class distribution is as follows: most of the blocks are classified as text, followed by horizontal lines, pictures, vertical lines, and graphics.
+Relevant Information:
+The examples come from distinct documents. Each observation concerns one block. All attributes are numeric. Data are in a format readable by C4.5.
 
-Summary statistics for the variables are also available, including means, standard deviations, minimum and maximum values, and correlation coefficients.
+Number of Instances: Multiple thousand
 
-Tags: Images, Machine Learning, UCI
+Attributes:
+Height: integer. Height of the block.
+Length: integer. Length of the block.
+Area: integer. Area of the block (height * length).
+Eccentricity: continuous. Eccentricity of the block (length / height).
+Percentage of black pixels: continuous. Percentage of black pixels within the block.
+Percentage of black pixels after RLSA: continuous. Percentage of black pixels after the application of the Run Length Smoothing Algorithm.
+Mean number of white-black transitions: continuous.
+Total black pixels: integer. Total number of black pixels in the original bitmap of the block.
+Total black pixels after RLSA: integer. Total number of black pixels in the bitmap of the block after the RLSA.
+White-black transitions: integer. Number of white-black transitions in the original bitmap of the block.
 
-Keywords: document analysis, page layout, classification, machine learning, images
+Missing Attribute Values: No missing values.
+
+Class Distribution:
+The majority class is text, followed by horizontal line, picture, vertical line, and graphic.
+
+Summary Statistics:
+Variables include height, length, area, eccentricity, percentage of black pixels, percentage of black pixels after RLSA, mean number of white-black transitions, total black pixels, total black pixels after RLSA, and white-black transitions.
+
+The dataset is suitable for classification tasks, with the class type being nominal and the class index at the last position.
+
+Keywords: document analysis, page layout, text classification, image segmentation, decision trees

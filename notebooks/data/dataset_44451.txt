@@ -1,24 +1,13 @@
-Machine Learning, Mathematics
+Name: Subsample of the RL Dataset with Three Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-Subsampling of the dataset RL with seed equals three, maximum number of rows two thousand, maximum number of columns one hundred, maximum number of classes ten, and stratification equals true.
+Tags: Subsampling of the RL dataset with seed equal to three, maximum number of rows equal to two thousand, maximum number of columns equal to one hundred, maximum number of classes equal to ten, and stratification enabled
 
 Generated with the following source code:
 
-The function subsample takes in parameters self, seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to stratify or not. It returns a dataset. 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses the NumPy random default generator to ensure reproducibility. The function first selects a subset of classes based on their frequency in the dataset, and then selects the corresponding rows. If the number of columns exceeds the maximum, it uniformly samples the columns. Finally, if the number of rows exceeds the maximum, it uses stratified sampling to select the rows.
 
-First, it sets up a random number generator using the given seed. Then, it gets the feature matrix x and the target vector y from the given dataset. 
+The RL dataset is a large dataset with forty-four thousand one hundred sixty rows. The subsample function is used to reduce the size of the dataset while preserving its characteristics. The resulting dataset has two thousand rows, one hundred columns, and ten classes. The stratification option is enabled to ensure that the classes are represented proportionally in the subsample.
 
-Next, it uniformly samples classes from the unique values in the target vector y. If there are more classes than the maximum allowed, it selects the maximum number of classes based on their frequency in the target vector. 
+Features: The dataset contains various features, including V One, V Five, V Six, V Eight, V Fourteen, V Fifteen, V Seventeen, V Eighteen, V Nineteen, V Twenty, V Twenty-One, V Twenty-Two, and the class label.
 
-After selecting the classes, it gets the indices where one of these classes is present and uses these indices to filter the feature matrix x and the target vector y. 
-
-Then, it uniformly samples columns from the feature matrix x. If there are more columns than the maximum allowed, it selects the maximum number of columns randomly. 
-
-If the resulting dataset has more rows than the maximum allowed, it uses stratified sampling to reduce the number of rows to the maximum allowed. 
-
-Finally, it converts categorical columns to strings and returns the resulting dataset along with its metadata.
-
-Features: 
-class
-
-Keywords: subsampling, machine learning, stratification, dataset, sampling
+Keywords: dataset subsampling, stratified sampling, class balancing, feature selection, data reduction

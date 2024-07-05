@@ -1,19 +1,17 @@
-California Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+California Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Sub sampling of the dataset California with seed equals four arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals false 
+Tags: Subsampling of the dataset California with seed equal to four, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to false.
 
 Generated with the following source code:
 
-The function sub sample takes in parameters such as seed, number rows max, number columns max, number classes max, and stratified, and returns a dataset.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-First, it sets up a random number generator using the given seed. Then it selects the input data x and output data y from the original dataset.
+First, it samples the classes uniformly, selecting the indices where one of the selected classes is present. Then, it samples the columns uniformly if required. 
 
-If there are more classes than the maximum allowed, it uniformly samples the classes based on their frequency in the data. It then selects the indices where one of these classes is present and updates x and y accordingly.
+If the number of rows is greater than the maximum, it stratifies the data accordingly, using the target name, and splits the data into a subset of the desired size. 
 
-Next, if there are more columns than the maximum allowed, it uniformly samples the columns and updates x accordingly.
+Finally, it converts categorical columns to string for open machine learning, and returns a dataset with the subsampled data, categorical mask, and columns.
 
-If there are more rows than the maximum allowed, it uses stratified sampling to select a subset of the data based on the class distribution.
+Features: Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupation, Latitude, Longitude, and Price.
 
-Finally, it converts categorical columns to strings and returns a new dataset with the sub sampled data.
-
-Features: Median Income, House Age, Average Rooms, Average Bedrooms, Population, Average Occupation, Latitude, Longitude, Price
+Keywords: Subsampling, California Dataset, Stratified Sampling, Feature Selection, Data Preprocessing.

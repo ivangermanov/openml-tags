@@ -1,24 +1,15 @@
-**FOREX eur pln minute Close**
+Name: Forex Eur/Pln Minute Close
 
-Tags: Finance, Forex, Forex Close, Forex Minute, Social Media, Text and Literature
+Tags: finance, forex, forex close, forex minute
 
-This is the historical price data of the Forex Euro-Polish Zloty pair from Dukascopy. Each instance, or row, represents one candlestick of one minute. The entire dataset spans a specific date range, excluding weekends since the Forex market is not active on those days. The timestamp feature is set to the Europe Amsterdam time zone.
+Source: Dukascopy Historical Data Feed
 
-The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask prices of the following minute, relative to the mean Close Bid and Close Ask prices of the current minute. In other words, the class attribute is true when the mean Close price increases in the following minute, and false when the mean Close price decreases or remains the same.
+Data Description
+This is the historical price data of the Forex Eur/Pln from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-Attributes:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following minute, and the class attribute is False when the mean Close price is going down, or stays the same, the following minute.
 
-* Timestamp: The time of the current data point, which is set to the Europe Amsterdam time zone.
-* Bid Open: The bid price at the beginning of this time interval.
-* Bid High: The highest bid price recorded during this time interval.
-* Bid Low: The lowest bid price recorded during this time interval.
-* Bid Close: The bid price at the end of this time interval.
-* Bid Volume: The number of times the bid price changed within this time interval.
-* Ask Open: The ask price at the beginning of this time interval.
-* Ask High: The highest ask price recorded during this time interval.
-* Ask Low: The lowest ask price recorded during this time interval.
-* Ask Close: The ask price at the end of this time interval.
-* Ask Volume: The number of times the ask price changed within this time interval.
-* Class: Whether the average price will increase during the next interval.
+Attributes
+The Timestamp is the time of the current data point, in the Europe/Amsterdam timezone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-Keywords: Forex, Euro-Polish Zloty, Candlestick, Time Series, Financial Market, Trading.
+Keywords: Forex, Eur/Pln, historical price data, candlestick, timezone, class attribute, bid price, ask price.

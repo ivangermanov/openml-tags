@@ -1,110 +1,119 @@
-Timing Attack Dataset - Ten Micro Seconds Delay Created On September Eighth, Two Thousand Twenty-Two
+Timing Attack Dataset: Ten Microsecond Delay Created on September Eighth, Two Thousand and Twenty-Two
 
 Tags: Bleichenbacher Timing Attack
 
 Attribute Descriptions:
 
-The dataset contains attributes related to three types of packets: Change Cipher Spec, TLS Alert, and TCP Disconnect.
+The dataset contains attributes related to Change Cipher Spec TCP Acknowledgement, TLS Alert, and TCP Disconnect messages.
 
-For each packet type, there are several attributes that describe various aspects of the packet. These include source port, destination port, sequence number, acknowledgment number, header length, flags, window size, checksum status, urgent pointer, options, and timestamp.
+Change Cipher Spec TCP Acknowledgement attributes include:
 
-The packets are further divided into multiple categories based on their characteristics, such as whether they contain a correct PKCS#1 PMS message or not, whether they have a zero byte in the message, and so on.
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
+
+TLS Alert attributes include:
+
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* TLS Record Content Type
+* TLS Record Length
+* TLS Alert Message Level
+* TLS Alert Message Description
+* Message Order
+
+TCP Disconnect attributes include:
+
+* TCP Source Port
+* TCP Destination Port
+* TCP Source or Destination Port
+* TCP Stream Index
+* TCP Segment Length
+* TCP Sequence Number
+* TCP Next Sequence Number
+* TCP Acknowledgment Number
+* TCP Header Length
+* TCP Reserved Flag
+* TCP Nonce Flag
+* TCP Congestion Window Reduced Flag
+* TCP ECN-Echo Flag
+* TCP Urgent Flag
+* TCP Acknowledgment Flag
+* TCP Push Flag
+* TCP Reset Flag
+* TCP Syn Flag
+* TCP Fin Flag
+* TCP Window Size Value
+* TCP Calculated Window Size
+* TCP Window Size Scaling Factor
+* TCP Checksum Status
+* TCP Urgent Pointer
+* TCP Options NOP
+* TCP Option Kind
+* TCP Option Length
+* TCP Options Timestamp Value
+* TCP Time Delta
+* Message Order
 
 Features:
 
-label
-Change Cipher Spec TCP Source Port
-Change Cipher Spec TCP Destination Port
-Change Cipher Spec TCP Stream Index
-Change Cipher Spec TCP Segment Length
-Change Cipher Spec TCP Sequence Number
-Change Cipher Spec TCP Next Sequence Number
-Change Cipher Spec TCP Acknowledgment Number
-Change Cipher Spec TCP Header Length
-Change Cipher Spec TCP Flags - Reserved
-Change Cipher Spec TCP Flags - Nonce
-Change Cipher Spec TCP Flags - Congestion Window Reduced
-Change Cipher Spec TCP Flags - ECN-Echo
-Change Cipher Spec TCP Flags - Urgent
-Change Cipher Spec TCP Flags - Acknowledgment
-Change Cipher Spec TCP Flags - Push
-Change Cipher Spec TCP Flags - Reset
-Change Cipher Spec TCP Flags - SYN
-Change Cipher Spec TCP Flags - FIN
-Change Cipher Spec TCP Window Size Value
-Change Cipher Spec TCP Calculated Window Size
-Change Cipher Spec TCP Window Size Scaling Factor
-Change Cipher Spec TCP Checksum Status
-Change Cipher Spec TCP Urgent Pointer
-Change Cipher Spec TCP Options NOP
-Change Cipher Spec TCP Option Kind
-Change Cipher Spec TCP Option Length
-Change Cipher Spec TCP Options Timestamp Value
-Change Cipher Spec TCP Time Delta
-Change Cipher Spec Order
+* Label
+* Change Cipher Spec TCP Acknowledgement attributes
+* TLS Alert attributes
+* TCP Disconnect attributes
 
-TLS Alert TCP Source Port
-TLS Alert TCP Destination Port
-TLS Alert TCP Stream Index
-TLS Alert TCP Segment Length
-TLS Alert TCP Sequence Number
-TLS Alert TCP Next Sequence Number
-TLS Alert TCP Acknowledgment Number
-TLS Alert TCP Header Length
-TLS Alert TCP Flags - Reserved
-TLS Alert TCP Flags - Nonce
-TLS Alert TCP Flags - Congestion Window Reduced
-TLS Alert TCP Flags - ECN-Echo
-TLS Alert TCP Flags - Urgent
-TLS Alert TCP Flags - Acknowledgment
-TLS Alert TCP Flags - Push
-TLS Alert TCP Flags - Reset
-TLS Alert TCP Flags - SYN
-TLS Alert TCP Flags - FIN
-TLS Alert TCP Window Size Value
-TLS Alert TCP Calculated Window Size
-TLS Alert TCP Window Size Scaling Factor
-TLS Alert TCP Checksum Status
-TLS Alert TCP Urgent Pointer
-TLS Alert TCP Options NOP
-TLS Alert TCP Option Kind
-TLS Alert TCP Option Length
-TLS Alert TCP Options Timestamp Value
-TLS Alert TCP Time Delta
-TLS Alert Record Content Type
-TLS Alert Record Length
-TLS Alert Message Level
-TLS Alert Message Description
-TLS Alert Order
-
-TCP Disconnect TCP Source Port
-TCP Disconnect TCP Destination Port
-TCP Disconnect TCP Stream Index
-TCP Disconnect TCP Segment Length
-TCP Disconnect TCP Sequence Number
-TCP Disconnect TCP Next Sequence Number
-TCP Disconnect TCP Acknowledgment Number
-TCP Disconnect TCP Header Length
-TCP Disconnect TCP Flags - Reserved
-TCP Disconnect TCP Flags - Nonce
-TCP Disconnect TCP Flags - Congestion Window Reduced
-TCP Disconnect TCP Flags - ECN-Echo
-TCP Disconnect TCP Flags - Urgent
-TCP Disconnect TCP Flags - Acknowledgment
-TCP Disconnect TCP Flags - Push
-TCP Disconnect TCP Flags - Reset
-TCP Disconnect TCP Flags - SYN
-TCP Disconnect TCP Flags - FIN
-TCP Disconnect TCP Window Size Value
-TCP Disconnect TCP Calculated Window Size
-TCP Disconnect TCP Window Size Scaling Factor
-TCP Disconnect TCP Checksum Status
-TCP Disconnect TCP Urgent Pointer
-TCP Disconnect TCP Options NOP
-TCP Disconnect TCP Option Kind
-TCP Disconnect TCP Option Length
-TCP Disconnect TCP Options Timestamp Value
-TCP Disconnect TCP Time Delta
-TCP Disconnect Order
-
-Keywords: Timing Attack, Bleichenbacher, TCP, TLS, PKCS#1, PMS, Cipher Spec, TCP Disconnect, TLS Alert.
+Keywords: Timing Attack, Bleichenbacher, TCP, TLS, Change Cipher Spec, TCP Acknowledgement, TLS Alert, TCP Disconnect

@@ -1,16 +1,16 @@
 **Meta Album Subcellular Human Protein Dataset (Micro)**
 
-This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification Kaggle competition and comprises images of proteins in human cells, each of which belongs to one or more out of twenty-eight classes. The labels correspond to protein organelle localizations.
+This dataset is a subset of the Subcellular dataset in the Protein Atlas project. The original dataset stems from the Human Protein Atlas Image Classification Kaggle competition. The dataset comprises images of human cells, each of which belongs to one or more out of twenty-eight classes. The labels correspond to protein organelle localizations.
 
-For Meta Album, we performed two modifications: first, we turned the dataset into a multi-class dataset by dropping all images belonging to more than a single class and also those images that belong to classes with less than forty members; second, we converted the remaining images into RGB simply by dropping the yellow channel, which was also a common practice in the competition. Finally, and as for all datasets in Meta Album, the images from the original dataset were resized to a uniform size.
+For Meta Album, we performed two modifications: we turned the dataset into a multi-class dataset by dropping all images belonging to more than a single class and also those images that belong to classes with less than forty members; we converted the remaining images into RGB simply by dropping the yellow channel; this was also a common practice in the competition. Finally, and as for all datasets in Meta Album, the images from the original dataset were resized to a smaller image size.
 
 **Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/PRT.png)
 
-**Meta Album ID**: MCR PRT
+**Meta Album ID**: Meta Album PRT
 **Meta Album URL**: https://meta-album.github.io/datasets/PRT.html
-**Domain ID**: MCR
+**Domain ID**: Microscopy
 **Domain Name**: Microscopy
 **Dataset ID**: PRT
 **Dataset Name**: Subcellular Human Protein
@@ -20,9 +20,9 @@ For Meta Album, we performed two modifications: first, we turned the dataset int
 **Keywords**: Human Protein, Subcellular
 **Data Format**: Images
 **Image Size**: One twenty-eight by one twenty-eight pixels
-**License (original data release)**: Creative Commons Attribution-ShareAlike three point zero
+**License (original data release)**: Creative Commons Attribution-ShareAlike 3.0
 **License URL (original data release)**: https://www.proteinatlas.org/about/licence
-**License (Meta Album data release)**: Creative Commons Attribution-ShareAlike three point zero
+**License (Meta Album data release)**: Creative Commons Attribution-ShareAlike 3.0
 **License URL (Meta Album data release)**: https://www.proteinatlas.org/about/licence
 **Source**: The Human Protein Atlas
 **Source URL**: https://proteinatlas.org https://www.kaggle.com/c/human-protein-atlas-image-classification
@@ -32,16 +32,19 @@ For Meta Album, we performed two modifications: first, we turned the dataset int
 @article{subcellular,
 title={A subcellular map of the human proteome},
 journal={Science},
-volume={three fifty-six},
+volume={356},
+number={6340},
+year={},
 publisher={American Association for the Advancement of Science}
 }
 
 **Cite Meta Album**
 
 @inproceedings{meta-album,
-title={Meta Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
 booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-url = {https://meta-album.github.io/}
+url = {https://meta-album.github.io/},
+year = {}
 }
 
 **More**
@@ -53,4 +56,4 @@ For more information on the Meta Album dataset, please see the NeurIPS paper. Fo
 [Mini](https://www.openml.org/d/44308)
 [Extended](https://www.openml.org/d/44342)
 
-Keywords: Human Protein, Subcellular, Microscopy, Image Classification, Proteome.
+Keywords: Human Protein, Subcellular, Microscopy, Image Classification, Few-Shot Learning

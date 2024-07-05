@@ -1,21 +1,16 @@
-**lSVT Voice Rehabilitation Data Set**
+Dataset: LSVT Voice Rehabilitation Data Set
+Tags: study, study, study
 
-Tags: Chemistry, Life Science, Study Fifty, Study Fifty-Two, Study Seven
+The LSVT Voice Rehabilitation Data Set was created by researchers at the University of Oxford. It contains samples from participants and features, with the aim of assessing whether voice rehabilitation treatment leads to phonations considered 'acceptable' or 'unacceptable' (a binary class classification problem).
 
-The dataset was created by the University of Oxford.
+The original research demonstrated that it is possible to correctly replicate experts' binary assessment with approximately accuracy using both fold cross-validation and leave-one-subject-out validation. The researchers experimented with both random forests and support vector machines, using standard approaches for optimizing the SVM's hyperparameters. It would be interesting if other researchers could improve on this finding using advanced machine learning tools.
 
-Abstract:
-The aim of this dataset is to assess whether voice rehabilitation treatment leads to phonations considered acceptable or unacceptable, which is a binary class classification problem. It consists of one hundred twenty-six samples from fourteen participants, with three hundred nine features.
+Each attribute (feature) in the dataset corresponds to the application of a speech signal processing algorithm which aims to characterize the signal objectively. These algorithms include standard perturbation analysis methods, wavelet-based features, fundamental frequency-based features, and tools used to mine nonlinear time-series. Due to the extensive number of attributes, interested readers are referred to the relevant papers for further details.
 
-Data Set Information:
-The original research demonstrated that it is possible to correctly replicate the experts' binary assessment with approximately ninety percent accuracy using both ten-fold cross-validation and leave-one-subject-out validation. Researchers experimented with both random forests and support vector machines, using standard approaches for optimizing the SVM's hyperparameters. It will be interesting if researchers can improve on this finding using advanced machine learning tools.
+The dataset was introduced in a paper published in IEEE Transactions on Neural Systems and Rehabilitation Engineering. Further details about the speech signal processing algorithms can be found in additional publications, including a doctoral thesis and papers presented at international symposiums.
 
-Details for the dataset can be found in the following paper titled "Objective Automatic Assessment of Rehabilitative Speech Treatment in Parkinson's Disease".
+The features in the dataset are labeled as V followed by a number, with over features in total. These features represent various aspects of speech signal analysis and processing.
 
-Attribute Information:
-Each attribute corresponds to the application of a speech signal processing algorithm, which aims to characterize objectively the signal. These algorithms include standard perturbation analysis methods, wavelet-based features, fundamental frequency-based features, and tools used to mine nonlinear time-series. Due to the extensive number of attributes, interested readers are referred to the relevant papers for further details.
+This dataset provides valuable information for researchers studying voice rehabilitation, particularly in the context of Parkinson's disease. It offers opportunities for developing and testing machine learning algorithms to assess speech treatment outcomes objectively.
 
-Relevant Papers:
-The dataset was introduced in "Objective Automatic Assessment of Rehabilitative Speech Treatment in Parkinson's Disease". Further details about the speech signal processing algorithms can be found in "Accurate Telemonitoring of Parkinson's Disease Symptom Severity Using Nonlinear Speech Signal Processing and Statistical Machine Learning", "Nonlinear Speech Analysis Algorithms Mapped to a Standard Metric Achieve Clinically Useful Quantification of Average Parkinson's Disease Symptom Severity", and "New Nonlinear Markers and Insights into Speech Signal Degradation for Effective Tracking of Parkinson's Disease Symptom Severity".
-
-Keywords: voice rehabilitation, speech signal processing, Parkinson's disease, machine learning, classification problem.
+Keywords: voice rehabilitation, speech signal processing, Parkinson's disease, machine learning, binary classification, cross-validation, speech treatment assessment

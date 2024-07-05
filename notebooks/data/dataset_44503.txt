@@ -1,17 +1,17 @@
-Subsampling of the dataset Steel Plates Fault with a specified seed value generates a new dataset.
+Name: Steel Plates Fault Dataset
 
-This generated dataset has been created using the following source code:
+Tags: Subsampling of the Steel Plates Fault dataset, generated with a specific set of arguments.
 
-The function `subsample` takes in several parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratification.
+This dataset is a subsample of the original Steel Plates Fault dataset, generated using a specific set of arguments. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset. The goal was to reduce the size of the dataset while maintaining its overall characteristics.
 
-Within this function, the dataset is first filtered to select a specified number of classes. If the number of unique classes exceeds the maximum allowed, a subset of classes is randomly selected based on their frequency of occurrence in the dataset.
+The subsampling process started by selecting a subset of classes from the original dataset. This was done by uniformly sampling the unique classes present in the dataset, with a maximum number of classes allowed. The selected classes were then used to filter the dataset, selecting only the rows where one of these classes was present.
 
-Next, the dataset is filtered to include only the columns corresponding to the selected classes. The column selection process is also randomized to ensure uniform sampling.
+Next, the columns of the dataset were uniformly sampled, with a maximum number of columns allowed. The selected columns were then used to create a new dataset with the reduced number of columns.
 
-If the resulting dataset still has more rows than the specified maximum, a stratified sampling approach is employed to reduce the number of rows while maintaining class balance.
+Finally, the rows of the dataset were uniformly sampled, with a maximum number of rows allowed. This was done using stratified sampling, where the target variable was used to ensure that the sample was representative of the original dataset.
 
-Finally, the categorical columns are converted to strings, and the resulting dataset is returned along with its corresponding metadata.
+The resulting dataset has a reduced number of rows, columns, and classes, making it more manageable for analysis and modeling.
 
-Features included in this dataset include various attributes related to steel plates.
+Features: (skipped due to unreadability)
 
-Machine Learning, Mathematics
+Keywords: Steel Plates Fault, dataset subsampling, stratified sampling, class sampling, column sampling, row sampling.

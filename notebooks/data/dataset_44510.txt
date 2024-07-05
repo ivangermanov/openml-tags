@@ -1,15 +1,13 @@
-APS Failure Seed Two Dataset with Two Thousand Rows and Ten Classes 
+APS Failure Seed Two Dataset
 
-This dataset is a subsampled version of the APS Failure dataset, which contains forty-one thousand one hundred thirty-eight samples. The subsampling process was performed using a random seed of two, and the resulting dataset has two thousand rows, ten classes, and one hundred columns.
+Tags: Subsampling of the APS Failure dataset with seed equals two
 
-The subsampling algorithm first uniformly sampled classes from the original dataset. Since there were more than ten unique classes, the algorithm selected ten classes based on their frequency in the original dataset. It then selected the indices where one of these classes was present and filtered the data accordingly.
+This dataset is a subsample of the APS Failure dataset, which has been reduced to two thousand rows, one hundred columns, and ten classes. The subsampling process was stratified to ensure that the class distribution is preserved.
 
-Next, the algorithm uniformly sampled columns from the filtered data. Since there were more than one hundred columns, it randomly chose one hundred column indices and selected the corresponding columns.
+The dataset was generated using the following source code:
 
-Finally, the algorithm stratified the data according to the target variable and randomly sampled two thousand rows while maintaining the class distribution.
+The subsample function takes in a seed value, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling. It first uniformly samples the classes, then selects the indices where one of these classes is present. Next, it uniformly samples the columns if required. Finally, it stratifies the sampling accordingly and returns the subsampled dataset.
 
-Features include various sensor readings, such as acceleration, temperature, and pressure, among others.
+Features: Airflow, Age, Ambient Temperature, Atmospheric Pressure, Battery Voltage, and many more.
 
-Machine Learning, Mathematics
-
-Keywords: subsampling, dataset, machine learning, mathematics, stratification, sensor readings
+Keywords: APS Failure, Subsampling, Stratified Sampling, Dataset Reduction, Feature Selection.

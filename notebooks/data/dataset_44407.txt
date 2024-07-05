@@ -1,18 +1,15 @@
-Name: Phoneme Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
-Tags: Health, Medicine 
+Name: Phoneme Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Subsampling of the dataset Phoneme with seed equals zero arguments N Rows equals two thousand, N Columns equals one hundred, N Classes equals ten, and No Stratify equals False. 
+Tags: Subsampling of the dataset Phoneme with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
 Generated with the following source code:
 
-The function subsample takes in parameters including seed, N Rows Max, N Columns Max, N Classes Max, and Stratified, and returns a dataset. 
-It uses NumPy's default random generator to generate random numbers.
-It then selects unique classes from the target variable, and if there are more than N Classes Max, it chooses a specified number of classes using their value counts as probabilities.
-It then selects the indices where one of these classes is present, and subsets the data accordingly.
-If the number of columns exceeds N Columns Max, it uniformly samples columns, sorts them, and subsets the data again.
-Finally, if the number of rows exceeds N Rows Max, it uses Stratified Train Test Split to split the data into a subset of the specified size.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as arguments, and returns a dataset. It uses the numpy random default random generator to ensure reproducibility. The function first gets the unique classes from the target variable y, and if the number of classes is greater than nclasses max, it selects a subset of classes using the value counts of each class as probabilities. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Features: 
-(Class feature is omitted due to being unreadable)
+If the number of columns is greater than ncols max, the function uniformly samples columns by selecting a subset of column indices and sorting them. It then subsets the data to include only these columns. If the number of rows is greater than nrows max, the function uses stratified sampling to select a subset of rows, ensuring that the class distribution is preserved.
 
-Keywords: Subsampling, Phoneme, Health, Medicine, Dataset, Stratification
+The function returns a dataset with the subsampled data, including the categorical mask and column names.
+
+Features: Class
+
+Keywords: Phoneme dataset, subsampling, stratified sampling, dataset generation.

@@ -1,23 +1,23 @@
-The Post Operative Patient Data Set
+**Post-Operative Patient Data Set**
 
-The classification task of this database is to determine where patients in a post operative recovery area should be sent to next, which is a critical decision that healthcare professionals must make. Because hypothermia is a significant concern after surgery, the attributes correspond roughly to body temperature measurements.
+The classification task of this database is to determine where patients in a postoperative recovery area should be sent to next, which is a critical decision that requires careful consideration of various factors. Because hypothermia is a significant concern after surgery, the attributes correspond roughly to body temperature measurements, which are essential in determining the patient's overall health and well-being.
 
 ### Attribute Information
 
-The dataset includes various attributes that are relevant to determining the appropriate course of action for patients recovering from surgery. These include:
+The dataset consists of nine attributes that are crucial in making an informed decision about the patient's discharge. These attributes are:
 
-* Internal Temperature, which is categorized as high, mid, or low
-* Surface Temperature, which is also categorized as high, mid, or low
-* Oxygen Saturation, which is classified as excellent, good, fair, or poor
-* Blood Pressure, which is categorized as high, mid, or low
-* Stability of Surface Temperature, which is described as stable, moderately stable, or unstable
-* Stability of Core Temperature, which is also described as stable, moderately stable, or unstable
-* Stability of Blood Pressure, which is similarly described as stable, moderately stable, or unstable
-* Perceived Comfort at Discharge, which is measured on a scale from zero to twenty
-* Discharge Decision, which determines whether the patient will be sent to the Intensive Care Unit, prepared to go home, or sent to the general hospital floor
+1. Patient's Internal Temperature, which is categorized as high, mid, or low based on the Celsius scale.
+2. Patient's Surface Temperature, which is also categorized as high, mid, or low based on the Celsius scale.
+3. Oxygen Saturation, which is classified as excellent, good, fair, or poor based on the percentage of oxygen in the blood.
+4. Last Measurement of Blood Pressure, which is categorized as high, mid, or low based on the blood pressure reading.
+5. Stability of Patient's Surface Temperature, which is classified as stable, moderately stable, or unstable.
+6. Stability of Patient's Core Temperature, which is also classified as stable, moderately stable, or unstable.
+7. Stability of Patient's Blood Pressure, which is classified as stable, moderately stable, or unstable.
+8. Patient's Perceived Comfort at Discharge, which is measured as an integer between zero and twenty.
+9. Discharge Decision, which is categorized as Intensive Care Unit, prepared to go home, or general hospital floor.
 
 ### Additional Information
 
-This dataset has missing values, which may present challenges for analysis and modeling. The results of using the LERS algorithm on this dataset have achieved forty-eight percent accuracy.
+The dataset has missing values, and the classification task is to determine the discharge decision based on the attributes mentioned above. The results of the LERS (LEM2) algorithm show an accuracy of forty-eight percent.
 
-Keywords: post operative care, patient recovery, hypothermia, body temperature, oxygen saturation, blood pressure, stability, comfort, discharge decision.
+**Keywords:** Post-Operative Patient, Body Temperature, Hypothermia, Discharge Decision, Intensive Care Unit, Blood Pressure, Oxygen Saturation.

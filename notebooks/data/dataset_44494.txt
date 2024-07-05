@@ -1,47 +1,19 @@
-Machine Learning, Mathematics 
+Name: Numerai Dataset Subsample
 
-Subsampling of the dataset Numerai Twenty Eight Point Six with Seed Equal to One 
+Tags: Subsampling of the Numerai dataset with seed equals one, two thousand rows, one hundred columns, ten classes, and stratification enabled.
 
 Generated with the following source code:
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, stratified) -> Dataset:
-random number generator = numpy random default random generator with the given seed 
-features = self features 
-target variable = self target variable 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Uniformly sample classes equals target variable unique values 
-if length of classes is greater than maximum number of classes: 
-value counts = target variable value counts 
-selected classes = random number generator choice of classes with size equal to maximum number of classes, without replacement, with probability equal to value counts divided by sum of value counts 
-Select the indices where one of these classes is present equals target variable index where target variable is in selected classes 
-features = features at these indices 
-target variable = target variable at these indices 
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Uniformly sample columns if required 
-if length of features columns is greater than maximum number of columns: 
-column indices = random number generator choice of range of length of features columns with size equal to maximum number of columns, without replacement 
-sorted column indices = sort column indices 
-selected columns = list of features columns at these indices 
-features = features with only these columns 
-else: 
-sorted column indices = range of length of features columns 
-if length of features is greater than maximum number of rows: 
-Stratify accordingly 
-target name = target variable name 
-data = pandas concatenate features and target variable along columns 
-_, subset = sklearn model selection train test split of data with test size equal to maximum number of rows, stratifying by target name, shuffling, with random state equal to seed 
-features = subset dropping target name along columns 
-target variable = subset target name 
+Next, it uniformly samples columns from the filtered data if the number of columns exceeds the specified maximum. It sorts the selected column indices to maintain the original order.
 
-We need to convert categorical columns to string for OpenML 
-categorical mask = list of self categorical mask at these indices 
-columns = list of features columns 
-return Dataset 
-Technically this is not the same but it is where it was derived from 
-dataset equals self dataset 
-features equals features 
-target variable equals target variable 
-categorical mask equals categorical mask 
-columns equals columns 
+If the number of rows exceeds the specified maximum, the function uses stratified sampling to select the desired number of rows. This ensures that the sampled data maintains the original distribution of classes.
 
-Keywords: machine learning, mathematics, subsampling, dataset, stratified sampling
+Finally, the function converts categorical columns to string format and returns the subsampled dataset.
+
+Features: 
+
+Keywords: dataset subsampling, random sampling, stratification, data filtering, column selection, row selection, categorical conversion.

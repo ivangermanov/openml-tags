@@ -1,19 +1,15 @@
-This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand forty-eight by two thousand forty-eight, using a parameterizable SGEMM GPU kernel with a large number of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as the four last columns. All times are measured in milliseconds.
+**Sgemm Gpu Kernel Performance**
 
-There are fourteen parameters, the first ten are ordinal and can only take up to four different powers of two values, and the four last variables are binary. Out of a huge number of total parameter combinations, only a subset are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations.
+**Data Description**
 
-The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and a NVIDIA GeForce graphics card. We used the gemm fast kernel from the automatic OpenCL kernel tuning library CLTune.
+This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand and forty-eight by two thousand and forty-eight, using a parameterizable SGEMM GPU kernel with a large number of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as the four last columns. All times are measured in milliseconds. There are fourteen parameters, the first ten of which are ordinal and can only take up to four different powers of two values, and the four last variables are binary. Out of a total of over one million three hundred twenty-seven thousand parameter combinations, only a quarter of a million are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations. The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core i5 processor, sixteen gigabytes of RAM, and a NVIDIA GeForce GTX six eighty GPU. We use the 'gemm fast' kernel from the automatic OpenCL kernel tuning library.
 
-The attributes include Matrix Work Group, Number Work Group, Kernel Work Group, Matrix Dimension Columns, Number Dimensions Columns, Matrix Dimension Rows, Number Dimensions Rows, Kernel Width, Vector Width Matrix, Vector Width Number, Stride Matrix, Stride Number, Shared Memory A, Shared Memory B, Run One, Run Two, Run Three, and Run Four.
+**Attribute Description**
 
-Matrix Work Group and Number Work Group represent per-matrix two-dimensional tiling at the work group level, which can take values of sixteen, thirty-two, sixty-four, or one hundred twenty-eight. Kernel Work Group represents the inner dimension of two-dimensional tiling at the work group level, which can take values of sixteen or thirty-two. 
+The first two attributes, Matrix Work Group and Number Work Group, represent per-matrix two-dimensional tiling at workgroup level. The third attribute, Kernel Work Group, represents the inner dimension of two-dimensional tiling at workgroup level. The next two attributes, Matrix Dimension Column and Number Dimension Column, represent local workgroup size. The following two attributes, Matrix Dimension A and Number Dimension B, represent local memory shape. The eighth attribute, Kernel Work Item, represents kernel loop unrolling factor. The ninth and tenth attributes, Vector Width Matrix and Vector Width Number, represent per-matrix vector widths for loading and storing. The eleventh and twelfth attributes, Stride Matrix and Stride Number, enable stride for accessing off-chip memory within a single thread. The thirteenth and fourteenth attributes, Shared Memory A and Shared Memory B, represent per-matrix manual caching of the two-dimensional workgroup tile.
 
-Matrix Dimension Columns, Number Dimensions Columns, Matrix Dimension Rows, and Number Dimensions Rows represent local work group size, which can take values of eight, sixteen, or thirty-two. Matrix Dimension Rows and Number Dimensions Rows also represent local memory shape, which can take values of eight, sixteen, or thirty-two. 
+**Performance Times**
 
-Kernel Width represents kernel loop unrolling factor, which can take values of two or eight. Vector Width Matrix and Vector Width Number represent per-matrix vector widths for loading and storing, which can take values of one, two, four, or eight. 
+The performance times are reported as four independent runs using the same parameters, ranging from thirteen point two five to three thousand three hundred ninety-seven point zero eight milliseconds.
 
-Stride Matrix and Stride Number enable stride for accessing off-chip memory within a single thread, which can take values of zero or one. Shared Memory A and Shared Memory B represent per-matrix manual caching of the two-dimensional work group tile, which can take values of zero or one. 
-
-Run One, Run Two, Run Three, and Run Four represent performance times in milliseconds for four independent runs using the same parameters, ranging from thirteen point twenty-five to three thousand three hundred ninety-seven point zero eight.
-
-Keywords: SGEMM, GPU kernel, matrix-matrix product, OpenCL, kernel tuning, performance optimization.
+**Keywords:** GPU kernel performance, matrix-matrix product, SGEMM, OpenCL, kernel tuning, performance optimization.

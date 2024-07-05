@@ -1,31 +1,30 @@
-The SGEMM GPU Kernel Performance Dataset 
+**SGEMM GPU Kernel Performance**
 
-Tags: Computer Systems, Machine Learning 
+**Dataset Description**
 
-This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand forty-eight by two thousand forty-eight, using a parameterizable Single Precision General Matrix Multiply GPU kernel with hundreds of thousands of possible parameter combinations. For each tested combination, four runs were performed and their results are reported as separate columns. All times are measured in milliseconds. 
+This dataset measures the running time of a matrix-matrix product, where all matrices have a size of two thousand and forty-eight by two thousand and forty-eight, using a parameterizable Single Precision General Matrix Multiply GPU kernel with two hundred and forty-one thousand six hundred possible parameter combinations. For each tested combination, four runs were performed and their results are reported as the four last columns. All times are measured in milliseconds. There are fourteen parameters, the first ten of which are ordinal and can only take up to four different powers of two values, and the four last variables are binary. Out of one million three hundred and twenty-seven thousand one hundred and four total parameter combinations, only two hundred and forty-one thousand six hundred are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations. The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core i5 processor, sixteen gigabytes of RAM, and an NVIDIA GeForce GTX six eighty GPU. We use the 'gemm fast' kernel from the automatic OpenCL kernel tuning library 'CL Tune'.
 
-There are fourteen parameters, the first ten of which are ordinal and can only take up to four different power-of-two values, and the remaining four variables are binary. Out of millions of total parameter combinations, only hundreds of thousands are feasible due to various kernel constraints. This dataset contains the results for all these feasible combinations.
+**Note**: For this kind of dataset, it is usually better to work with the logarithm of the running times (see, for example, Machine Learning-Based Auto-Tuning for Enhanced Performance Portability of OpenCL Applications).
 
-The experiment was run on a desktop workstation running Ubuntu Linux with an Intel Core processor, sixteen gigabytes of RAM, and a NVIDIA GeForce graphics processing unit. We use the gemm fast kernel from the automatic OpenCL kernel tuning library CLTune.
+**Attribute Description**
 
-Note: For this kind of dataset, it is usually better to work with the logarithm of the running times.
+**Independent Variables**
 
-Independent Variables:
+* Matrix Work Group and Number Work Group: per-matrix two-dimensional tiling at workgroup level
+* Kernel Work Group: inner dimension of two-dimensional tiling at workgroup level
+* Matrix Dimension C and Number Dimension C: local workgroup size
+* Matrix Dimension A and Number Dimension B: local memory shape
+* Kernel Work Item: kernel loop unrolling factor
+* Vector Width Matrix and Vector Width Number: per-matrix vector widths for loading and storing
+* Stride Matrix and Stride Number: enable stride for accessing off-chip memory within a single thread
+* Shared Memory A and Shared Memory B: per-matrix manual caching of the two-dimensional workgroup tile
 
-Per-matrix two-dimensional tiling at workgroup level 
-Inner dimension of two-dimensional tiling at workgroup level 
-Local workgroup size 
-Local memory shape 
-Kernel loop unrolling factor 
-Per-matrix vector widths for loading and storing 
-Enable stride for accessing off-chip memory within a single thread 
-Per-matrix manual caching of the two-dimensional workgroup tile
+**Output**
 
-Output:
+* Run One, Run Two, Run Three, Run Four: performance times in milliseconds for four independent runs using the same parameters. They range between thirteen point two five and three thousand three hundred and ninety-seven point zero eight. Run One is used as the default target variable.
 
-Performance times in milliseconds for four independent runs using the same parameters. They range between thirteen point twenty-five and three thousand three hundred ninety-seven point zero eight. The first run is used as the default target variable.
+**Related Studies**
 
-Related Studies:
-Sobol Tensor Trains for Global Sensitivity Analysis
+Sobol Tensor Trains for Global Sensitivity Analysis.
 
-Keywords: SGEMM, GPU kernel, matrix multiplication, OpenCL, kernel tuning, performance optimization
+**Keywords**: GPU kernel performance, matrix-matrix product, OpenCL, kernel tuning, auto-tuning, performance portability.

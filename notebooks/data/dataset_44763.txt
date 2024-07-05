@@ -1,11 +1,13 @@
-Subsampling of the dataset Click Prediction Small with a specified seed value, generated with specific arguments, including maximum number of rows, columns, and classes, as well as a flag for stratification.
+Click Prediction Small Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Health, Machine Learning
+This dataset is a subsample of the Click Prediction Small dataset, which has been reduced in size to facilitate faster processing and experimentation. The subsampling process was performed using a random seed of zero, which ensures reproducibility of the results.
 
-This dataset was generated using the following source code:
+The dataset was subsampled to have a maximum of two thousand rows, one hundred columns, and ten classes. The stratified sampling method was used to ensure that the class distribution in the subsample is representative of the original dataset.
 
-The function subsample takes several parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a flag indicating whether to use stratified sampling. It first initializes a random number generator with the specified seed value. Then, it selects a uniform sample of classes from the unique values in the target variable, up to the maximum specified number of classes. The function then selects the indices corresponding to these chosen classes and uses them to subset the feature matrix and target variable. Next, it uniformly samples columns from the feature matrix, up to the maximum specified number of columns. Finally, if the resulting dataset still has more rows than the maximum specified number, it uses stratified sampling to reduce the number of rows to the desired amount.
+The features in this dataset include impression, URL, ad identifier, advertiser identifier, depth, position, query identifier, keyword identifier, title identifier, description identifier, and user identifier. The click feature is the target variable.
 
-Features: impression, URL hash, advertisement ID, advertiser ID, depth, position, query ID, keyword ID, title ID, description ID, user ID, and click.
+The subsampling process involved several steps. First, the classes were uniformly sampled to select the required number of classes. Then, the columns were uniformly sampled to select the required number of columns. Finally, the rows were stratified sampled to select the required number of rows.
 
-Keywords: machine learning, health, dataset, subsampling, stratification, feature selection.
+The resulting dataset is a smaller and more manageable version of the original Click Prediction Small dataset, which can be used for faster experimentation and prototyping.
+
+Keywords: click prediction, dataset subsampling, stratified sampling, feature selection, class distribution.

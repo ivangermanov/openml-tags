@@ -1,13 +1,15 @@
-Name: Wilt Seed Two N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Wilt Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics 
-
-Sub sampling of the dataset Wilt with seed equals two arguments N Rows equals two thousand arguments NC Columns equals one hundred arguments NC Classes equals ten arguments No Stratify equals False 
+Tags: Subsampling of the dataset Wilt with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
 Generated with the following source code:
 
-The function subsample takes in several parameters including seed, number rows maximum, number columns maximum, number classes maximum, and stratified, and returns a dataset. It uses numpy's random default generator to ensure reproducibility. It first extracts the unique classes from the target variable, and if there are more than the specified maximum number of classes, it selects a subset of them using a weighted random choice based on their frequencies. It then selects the corresponding rows from the data. Next, it uniformly samples the columns if there are more than the specified maximum number of columns. Finally, it uniformly samples the rows if there are more than the specified maximum number of rows, using stratified sampling if specified.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-Features: Mean Green, Mean Red, Mean Near Infrared, Standard Deviation Plan, Class 
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and uses these indices to subset the dataset. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it uniformly samples rows from the dataset, selecting a specified number of rows to keep.
 
-Keywords: machine learning, mathematics, sub sampling, dataset, stratified sampling, numpy, random sampling
+The function also ensures that the categorical columns are converted to string format for OpenML.
+
+Features: Mean of Green, Mean of Red, Mean of Near Infrared, Standard Deviation of Plan, Class
+
+Keywords: dataset subsampling, stratified sampling, class selection, column selection, row selection, categorical conversion

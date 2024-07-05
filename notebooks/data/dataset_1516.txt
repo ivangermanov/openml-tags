@@ -1,34 +1,18 @@
-**Robot Execution Failures Data Set**
+Robot Failures LP Dataset
+Tags: mf less than, study
 
-Tags: Chemistry, Life Science
+This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by force/torque samples collected at regular time intervals.
 
-**Abstract**
-This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
+The dataset focuses on failures in approach to grasp position. It is part of a larger collection that includes datasets on failures in transfer of parts, position of parts after transfer failures, failures in approach to ungrasp position, and failures in motion with parts.
 
-**Source**
-Original Owner and Donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal
+To improve classification accuracy, several feature transformation strategies were developed and evaluated, based on statistical summary features and discrete Fourier transform. These strategies enabled an average improvement of accuracy.
 
-**Data Set Information**
-The donation includes five data sets, each of which defines a different learning problem:
+The dataset contains numeric features, all integer-valued. Each feature represents a force or torque measured after failure detection. Failure instances are characterized by force/torque samples collected at regular intervals immediately after failure detection. The total observation window for each failure instance was milliseconds.
 
-* LP1 (This Data Set): failures in approach to grasp position
-* LP2: failures in transfer of a part
-* LP3: position of part after a transfer failure
-* LP4: failures in approach to ungrasp position
-* LP5: failures in motion with part
+Examples in the dataset are described with a class label followed by the evolution of forces and torques in the observation window. There is a total of features, representing the progression of forces and torques over time.
 
-In order to improve classification accuracy, a set of five feature transformation strategies (based on statistical summary features, discrete Fourier transform, etc.) was defined and evaluated. This enabled an average improvement of twenty percent in accuracy.
+This dataset is part of a broader study on robot learning at the task level, particularly in the assembly domain. The research explores integration and learning in supervision of flexible assembly systems, as well as feature transformation strategies for robot learning problems.
 
-**Attribute Information**
-All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was three hundred fifteen milliseconds. Each example is described as follows:
+The dataset originates from research conducted at a university in Portugal. It has been used in several academic papers exploring robot learning, feature transformation, and supervision of assembly systems.
 
-Class Force X one, Force Y one, Force Z one, Torque X one, Torque Y one, Torque Z one,..., Force X fifteen, Force Y fifteen, Force Z fifteen, Torque X fifteen, Torque Y fifteen, Torque Z fifteen
-
-where Force X one through Force X fifteen is the evolution of force X in the observation window, the same for Force Y, Force Z, and the torques; there is a total of ninety features.
-
-**Relevant Papers**
-Robot Learning at the Task Level: a Study in the Assembly Domain
-Feature Transformation Strategies for a Robot Learning Problem, in Feature Extraction, Construction and Selection. A Data Mining Perspective
-Integration and Learning in Supervision of Flexible Assembly Systems, in IEEE Transactions on Robotics and Automation
-
-Keywords: Robot Execution Failures, Force Measurements, Torque Measurements, Failure Detection, Classification Accuracy, Feature Transformation Strategies
+Keywords: robot failures, force measurements, torque measurements, grasp position, feature transformation, assembly domain, flexible assembly systems, robot learning

@@ -1,7 +1,29 @@
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: Calpain Two, and it has numerous rows and features including IDs and class feature: Molecule ChEMBL ID and Median PXc Fifty. The features represent FCFP One Thousand Twenty Four Bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systemes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+QSAR TID Tags: MTLQSAR, study
 
-The dataset is part of the MetaQSAR project from September Two Thousand Fifteen. It contains QSAR data from ChEMBL version Seventeen showing activity values of several compounds on drug target Calpain Two. Calpain Two is also known as Calcium Activated Neutral Proteinase Two, Calpain Two Catalytic Subunit, Calpain Two Large Subunit, Calpain Large Polypeptide L Two, and Calpain M Type. It belongs to the species group Homo Sapiens and is classified as an enzyme, protease, cysteine protease, cysteine protease CA clan, and cysteine protease C Two family.
+This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-The dataset provides information about the expression atlas, go component, go function, and go process of Calpain Two. It also includes information from various databases such as UniProt, InterPro, Pfam, and PDBe. The dataset is related to various biological processes including response to hypoxia, blastocyst development, proteolysis, myoblast fusion, female pregnancy, and response to mechanical stimulus.
+Features: MOLECULE CHEMBL ID, FCFP, MEDIAN PXC
 
-Keywords: QSAR, Calpain Two, MetaQSAR, ChEMBL, FCFP, Molecular Fingerprints, Pipeline Pilot, SMILES, Homo Sapiens, Enzyme, Protease, Cysteine Protease.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Calpain
+Synonyms: Calcium activated neutral proteinase, Calpain catalytic subunit, Calpain large subunit, Calpain large polypeptide L, Calpain M type
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Protease/Cysteine protease/Cysteine protease CA clan/Cysteine protease C family
+
+Description: Calpain catalytic subunit
+Relationship: SINGLE PROTEIN
+Accession: P
+
+ChEMBL ID: CHEMBL
+Relationship: SUPERSET OF
+Pref Name: Calpain
+Target Type: PROTEIN FAMILY
+
+Expression Atlas, GoComponent, GoFunction, GoProcess, Wikipedia, GuideToPHARMACOLOGY, IntAct, PharmGKB, Pharos, Reactome, UniProt, InterPro, Pfam, and PDBe data are also provided, detailing various aspects of the protein's structure, function, and interactions.
+
+The dataset focuses on quantitative structure activity relationship (QSAR) modeling for drug discovery, utilizing molecular fingerprints and activity data for compounds targeting a specific protein. It aims to predict compound activity based on structural features, supporting the development of new potential drug candidates.
+
+Keywords: QSAR, molecular fingerprints, drug target, enzyme, protease, calpain, structure activity relationship, ChEMBL, compound activity prediction

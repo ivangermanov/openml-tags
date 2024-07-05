@@ -1,20 +1,17 @@
 COVID-19 Visualisation and Epidemic Analysis Data
+Tags: COVID-19 Dataset for Epidemic Model Development
 
-Tags: Computer Systems, Machine Learning
+I have combined several data sources to create an integrated dataset involving country-level COVID-19 confirmed, recovered, and fatalities cases, which can be used to build epidemic models such as SIR and SIR with mortality. This dataset also includes information regarding population, which can be used for calculating incidence rate and prevalence rate.
 
-This COVID-19 dataset is designed for epidemic model development, combining multiple data sources to provide an integrated dataset involving country-level COVID-19 confirmed, recovered, and fatalities cases. This comprehensive dataset enables the construction of various epidemic models, including SIR and SIR with mortality.
+My approach is to retrieve cumulative confirmed cases, fatalities, and recovered cases since the beginning of the pandemic from the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE) COVID-19 dataset, merged with country code as well as population of each country. For the purpose of building epidemic models, I calculated information regarding daily new confirmed cases, recovered cases, and fatalities, together with remaining confirmed cases, which equal to cumulative confirmed cases minus cumulative recovered cases minus cumulative fatalities.
 
-By incorporating information regarding population, users can calculate incidence rates and prevalence rates. A notable application based on this dataset has been published online, offering a visual representation of the data.
+I have not yet found credible data sources regarding probable cases of various countries, but I will add them once I find them.
 
-The approach involves retrieving cumulative confirmed cases, fatalities, and recovered cases from the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE) COVID-19 dataset, merging it with country codes and population data for each country. To facilitate epidemic modeling, daily new confirmed cases, recovered cases, and fatalities were calculated, along with remaining confirmed cases, which equals cumulative confirmed cases minus cumulative recovered cases minus cumulative fatalities.
-
-Currently, credible data sources for probable cases across various countries are lacking, but they will be added once discovered.
-
-The dataset includes the following columns:
+The dataset includes the following information:
 
 * Date of the record
-* Country or Region name
-* Alpha-3 code for map visualization purposes
+* Country or region name
+* Country code for map visualization
 * Population of the given country or region
 * Cumulative confirmed cases
 * Cumulative fatalities
@@ -22,14 +19,15 @@ The dataset includes the following columns:
 * Daily new confirmed cases
 * Daily new fatalities
 * Daily new recovered cases
-* Remaining infected cases, calculated as cumulative confirmed cases minus cumulative recovered cases minus cumulative fatalities
+* Remaining infected cases, which equal to cumulative confirmed cases minus cumulative recovered cases minus cumulative fatalities
 
-Acknowledgments:
-The primary data source for confirmed cases, recovered cases, and deaths is JHU CSSE. Country-level population data primarily originates from storage.guidotti.dev and Worldometer.
+Acknowledgements
+The data source of confirmed cases, recovered cases, and deaths is JHU CSSE. The data source of the country-level population mainly comes from various online sources.
 
-Inspiration behind creating this dataset includes developing a country-level COVID-19 case tracking dashboard, gaining insights into incidence rates, prevalence rates, mortality rates, and recovery rates across various countries, and constructing epidemic models for forecasting purposes.
+Inspiration
+This dataset can be used for building a country-level COVID-19 case track dashboard, gaining insights regarding the incidence rate, prevalence rate, mortality, and recovery rate of various countries, and building epidemic models for forecasting.
 
-Features:
-Date, Country Region, Alpha-3 Code, Population, Cumulative Confirmed Cases, Cumulative Fatalities, Cumulative Recovered Cases, Daily New Confirmed Cases, Daily New Fatalities, Daily New Recovered Cases, Remaining Infected Cases
+Features
+Date, Country Region, Country Code, Population, Cumulative Confirmed Cases, Cumulative Fatalities, Cumulative Recovered Cases, Daily New Confirmed Cases, Daily New Fatalities, Daily New Recovered Cases, Remaining Confirmed Cases
 
-Keywords: COVID-19, epidemic modeling, SIR model, mortality rate, recovery rate, incidence rate, prevalence rate, country-level data, population data, forecasting.
+Keywords: COVID-19, Epidemic Model, Country-Level Data, Population, Incidence Rate, Prevalence Rate, Mortality Rate, Recovery Rate.

@@ -1,13 +1,17 @@
-Machine Learning and Mathematics dataset named Madeline has undergone subsampling with specific parameters. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size.
+Name: Madeline Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-The original dataset had a large number of rows and columns, which were reduced to a maximum of two thousand rows and one hundred columns, respectively. Additionally, the number of classes was limited to ten.
+Tags: Subsampling of the dataset Madeline with seed equal to four, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-To ensure representative sampling, the classes were first uniformly sampled based on their frequency in the dataset. Then, the columns were uniformly sampled without replacement.
+Generated with the following source code:
 
-If the number of rows exceeded the maximum allowed, the dataset was further split using stratified sampling to maintain class balance. This involved concatenating the features and target variable, followed by splitting the data into subsets using the target variable as the stratification criterion.
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-Finally, the categorical columns were converted to strings, and the resulting subsampled dataset was returned along with its metadata, including the column names and categorical mask.
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Features include various variables such as demographic information, financial metrics, and other relevant attributes.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the distribution of classes is maintained.
 
-Keywords: machine learning, mathematics, dataset subsampling, stratified sampling, class balance, feature selection.
+Finally, it converts categorical columns to string format and returns the new dataset with the selected features, target variable, and categorical mask.
+
+Features: (skipped due to unreadability)
+
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, feature selection.

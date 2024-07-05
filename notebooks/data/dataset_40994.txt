@@ -1,25 +1,23 @@
-Climate Model Simulation Crashes Dataset
+Climate Model Simulation Crashes
 
-Tags: Computer Systems, Economics, OpenML-CC18
+Tags: OpenML-CC18, Study 135, Study 98, Study 99
 
-Source: UCI Machine Learning Repository
+Source: UCI
 
-This dataset contains records of simulation crashes encountered during climate model uncertainty quantification ensembles. Ensemble members were constructed using a Latin Hypercube method in LLNL's Uncertainty Quantification Pipeline software system to sample the uncertainties of eighteen model parameters within the Parallel Ocean Program component of the Community Climate System Model.
+This dataset contains records of simulation crashes encountered during climate model uncertainty quantification ensembles. Ensemble members were constructed using a Latin hypercube method in Lawrence Livermore National Laboratory's Uncertainty Quantification Pipeline software system to sample the uncertainties of eighteen model parameters within the Parallel Ocean Program component of the Community Climate System Model. Three separate Latin hypercube ensembles were conducted, each containing one hundred eighty ensemble members. A significant number of simulations failed for numerical reasons at combinations of parameter values.
 
-The goal is to use classification to predict simulation outcomes (fail or succeed) from input parameter values, and to use sensitivity analysis and feature selection to determine the causes of simulation crashes.
-
-The dataset consists of twenty-one attributes, including eighteen climate model input parameters scaled in the interval zero to one, and one attribute representing the simulation outcome, which is either zero for failure or one for success.
-
-Data Set Information:
-
-This dataset was constructed using LLNL's Uncertainty Quantification Pipeline and was created under the auspices of the US Department of Energy by Lawrence Livermore National Laboratory.
+The goal is to use classification to predict simulation outcomes (fail or succeed) from input parameter values, and to use sensitivity analysis and feature selection to determine the causes of simulation crashes. Further details about the data and methods are given in the publication "Failure Analysis of Parameter-Induced Simulation Crashes in Climate Models".
 
 Attribute Information:
 
-The eighteen climate model input parameters include various constants, correction factors, and scale values related to ocean currents, atmospheric conditions, and other environmental factors. The outcome attribute indicates whether the simulation crashed or succeeded.
+The goal is to predict climate model simulation outcomes given scaled values of climate model input parameters. The dataset consists of eighteen climate model parameters scaled in the interval from zero to one, and the simulation outcome, which is either failure or success.
 
 Relevant Papers:
 
-Failure Analysis of Parameter-Induced Simulation Crashes in Climate Models.
+Failure Analysis of Parameter-Induced Simulation Crashes in Climate Models
 
-Keywords: climate modeling, simulation crashes, uncertainty quantification, Latin Hypercube, sensitivity analysis, feature selection.
+Features:
+
+Study, Run, Vertical Constant Correction, Vertical Constant Two, Vertical Constant Three, Vertical Constant Four, Vertical Constant Five, Vertical Constant Seven, Absolute Humidity Correction, Absolute Humidity Bolus, Sea Level Correction, Efficiency Factor, Tidal Mix Maximum, Vertical Decay Scale, Convection Correction, Background Vertical Diffusion Coefficient One, Background Vertical Diffusion Coefficient Ban, Background Vertical Diffusion Coefficient Equation, Background Vertical Diffusion Coefficient Psim, Prandtl, Outcome
+
+Keywords: Climate Model, Simulation Crashes, Uncertainty Quantification, Latin Hypercube, Parameter Values, Sensitivity Analysis, Feature Selection.

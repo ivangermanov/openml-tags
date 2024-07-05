@@ -1,26 +1,30 @@
-**FOREX USD/JPY Minute High**
+FOREX USD/JPY Minute High
 
-Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+Tags: finance, forex, forex high, forex minute
 
-**Data Description**
+Source: Dukascopy Historical Data Feed
 
-This dataset contains historical price data of the Foreign Exchange rate between the United States Dollar and Japanese Yen, obtained from Dukascopy's Historical Data Feed. Each instance represents one candlestick of one minute, covering a period from January to December. Since the Foreign Exchange market is closed on weekends, there is no data available for these days. The timestamps are in the Europe/Amsterdam time zone.
+Data Description
 
-The class attribute indicates the direction of the mean high price of the following minute relative to the current minute. Specifically, it is true if the mean high price increases in the next minute, and false otherwise.
+This dataset contains historical price data of the FOREX USD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Attributes**
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
 
-* Timestamp: The time of the current data point
-* Bid Open: The bid price at the start of this time interval
-* Bid High: The highest bid price during this time interval
-* Bid Low: The lowest bid price during this time interval
-* Bid Close: The bid price at the end of this time interval
-* Bid Volume: The number of times the bid price changed within this time interval
-* Ask Open: The ask price at the start of this time interval
-* Ask High: The highest ask price during this time interval
-* Ask Low: The lowest ask price during this time interval
-* Ask Close: The ask price at the end of this time interval
-* Ask Volume: The number of times the ask price changed within this time interval
-* Class: Whether the average high price will increase during the next interval
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-Keywords: Foreign Exchange, Forex, Historical Data, Candlestick, Time Series, Finance, Machine Learning.
+Attributes
+
+Timestamp: The time of the current data point in Europe/Amsterdam
+Bid Open: The bid price at the start of this time interval
+Bid High: The highest bid price during this time interval
+Bid Low: The lowest bid price during this time interval
+Bid Close: The bid price at the end of this time interval
+Bid Volume: The number of times the Bid Price changed within this time interval
+Ask Open: The ask price at the start of this time interval
+Ask High: The highest ask price during this time interval
+Ask Low: The lowest ask price during this time interval
+Ask Close: The ask price at the end of this time interval
+Ask Volume: The number of times the Ask Price changed within this time interval
+Class: Whether the average price will go up during the next interval
+
+Keywords: FOREX, USD/JPY, historical data, candlestick, finance, trading

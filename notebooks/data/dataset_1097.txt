@@ -1,12 +1,34 @@
-ICU 
-Tags: Chemistry, Life Science 
+Name: ICU Tags
 
-The dataset consists of two hundred subjects from a larger study on the survival of patients following admission to an Adult Intensive Care Unit. This study utilized logistic regression to predict the probability of survival for these patients until their discharge from the hospital. The dependent variable is the binary variable Vital Status. Nineteen possible predictor variables, both discrete and continuous, were also observed.
+Source: Unknown - Date unknown
 
-Description: 
-The data includes nineteen possible predictor variables, which include the patient's demographics, medical history, and physiological measurements. These variables aim to help predict the patient's vital status upon discharge from the hospital.
+Please cite: Datasets of Data And Story Library, project illustrating use of basic statistic methods, converted to arff format by Hakan Kjellerstrand. Source: TunedIT: http://tunedit.org/repo/DASL DASL file http://lib.stat.cmu.edu/DASL/Datafiles/ICU.html
 
-Variables:
-The dataset includes the following variables: Identification Number, Vital Status, Age, Sex, Race, Service at ICU Admission, Cancer Diagnosis, Chronic Renal Failure, Infection, Cardiopulmonary Resuscitation, Systolic Blood Pressure, Heart Rate, Previous Illnesses, Type of Admission, Fraction of Inspired Oxygen, Partial Pressure of Oxygen, pH Level, Partial Pressure of Carbon Dioxide, Bicarbonate Level, Creatinine Level, and Glasgow Coma Scale Score.
+Reference: Authorization: Contact authors
 
-Keywords: Intensive Care Unit, Logistic Regression, Survival Analysis, Vital Status, Demographics, Medical History, Physiological Measurements.
+Description: The data consist of subjects from a larger study on the survival of patients following admission to an adult intensive care unit (ICU). The study employed logistic regression to predict the probability of survival for these patients until their discharge from the hospital. The dependent variable is the binary variable Vital Status (STA). Nineteen possible predictor variables, both discrete and continuous, were also observed.
+
+Variable Names:
+ID: ID number of the patient
+STA: Vital status (Lived or Died)
+AGE: Patient's age in years
+SEX: Patient's sex (Male or Female)
+RACE: Patient's race (White, Black, or Other)
+SER: Service at ICU admission (Medical or Surgical)
+CAN: Is cancer part of the present problem? (Yes or No)
+CRN: History of chronic renal failure (Yes or No)
+INF: Infection probable at ICU admission (Yes or No)
+CPR: CPR prior to ICU admission (Yes or No)
+SYS: Systolic blood pressure at ICU admission
+HRA: Heart rate at ICU admission
+PRE: Previous admission to an ICU within six months (Yes or No)
+TYP: Type of admission (Elective or Emergency)
+FRA: Long bone, multiple, neck, single area, or hip fracture (Yes or No)
+PO2: PO2 from initial blood gases
+PH: PH from initial blood gases
+PCO: PCO2 from initial blood gases
+BIC: Bicarbonate from initial blood gases
+CRE: Creatinine from initial blood gases
+LOC: Level of consciousness at ICU admission
+
+Keywords: Intensive Care Unit, Patient Survival, Logistic Regression, Medical Data, Vital Status, Predictor Variables

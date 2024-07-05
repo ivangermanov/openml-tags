@@ -1,11 +1,33 @@
-Fruitfly Dataset
+Name: fruitfly
+Tags: survival, survival-analysis
 
-This dataset is a designed experiment that examines the relationship between sexual activity and the lifespan of male fruitflies. The experiment involves manipulating the sexual activity of male fruitflies by providing them with either one or eight receptive virgin females per day, and comparing their longevity to that of two control groups. One control group consists of males kept with one or eight newly inseminated females, while the other control group consists of males kept without females.
+Source: Unknown
 
-The dataset contains five variables: ID, Partners, Type, Longevity, and Thorax. The ID variable represents the serial number of each male fruitfly within its respective group. The Partners variable indicates the number of female companions each male has, which can be zero, one, or eight. The Type variable describes the type of companion, which can be a virgin female, a newly inseminated female, or no female. The Longevity variable measures the lifespan of each male fruitfly in days. The Thorax variable represents the length of each male fruitfly's thorax in millimeters.
+Please cite: Identifier attribute deleted.
 
-The story behind the data is that the experiment was conducted to investigate whether increased sexual activity reduces the lifespan of male fruitflies, as has been observed in female fruitflies. The results showed that males supplied with eight virgin females per day had a shorter lifespan than those supplied with one virgin female per day, suggesting a cost of increased reproduction in terms of reduced longevity.
+Sexual activity and the lifespan of male fruitflies
 
-Teachers can use this dataset to teach various statistical concepts, including analysis of variance, classical analysis of covariance, and multiple regression. The dataset is particularly useful for illustrating the importance of considering confounding variables, such as thorax length, when analyzing the relationship between sexual activity and longevity. It also provides opportunities for discussing statistical interactions and the role of intermediate variables.
+Type: Designed (almost factorial) experiment
 
-Keywords: fruitfly, lifespan, sexual activity, longevity, thorax length, confounding variables, statistical interactions, intermediate variables.
+Size: observations, variables
+
+Descriptive Abstract: A cost of increased reproduction in terms of reduced longevity has been shown for female fruitflies, but not for males. The flies used were an outbred stock. Sexual activity was manipulated by supplying individual males with one or eight receptive virgin females per day. The longevity of these males was compared with that of two control types. The first control consisted of two sets of individual males kept with one or eight newly inseminated females. Newly inseminated females will not usually remate for at least two days, and thus served as a control for any effect of competition with the male for food or space. The second control was a set of individual males kept with no females. There were males in each of the five groups, which were treated identically in number of anaesthetizations (using CO2) and provision of fresh food medium.
+
+Source: Figure in the article "Sexual Activity and the Lifespan of Male Fruitflies" by [Authors]. Nature, [Volume], [Pages], [Year].
+
+Variable Descriptions:
+ID: Serial No. within each group (the order in which data points were abstracted)
+PARTNERS: Number of companions (zero, one or eight)
+TYPE: Type of companion
+zero: newly pregnant female
+one: virgin female
+nine: not applicable (when PARTNERS=zero)
+LONGEVITY: Lifespan, in days
+THORAX: Length of thorax, in mm
+SLEEP: Percentage of each day spent sleeping
+
+Special Notes: 'Compliance' of the males in the two experimental groups was documented as follows: On two days per week throughout the life of each experimental male, the females that had been supplied as virgins to that male were kept and examined for fertile eggs. The insemination rate declined from approximately seven females/day at age one week to just under two/day at age eight weeks in the males supplied with eight virgin females per day, and from just under one/day at age one week to approximately zero point six/day at age eight weeks in the males supplied with one virgin female per day. These 'compliance' data were not supplied for individual males, but the authors say that "There were no significant differences between the individual males within each experimental group."
+
+Story Behind the Data: [Researcher] found this dataset in Nature and was attracted by the way the raw data were presented in classical analysis of covariance style in Figure. He read the data points from the graphs and brought them to the attention of a colleague with whom he was teaching the applied statistics course. [Colleague] thought that with only three explanatory variables (THORAX, plus PARTNERS and TYPE to describe the five groups), it would not be challenging enough as a data-analysis project. He suggested adding another variable. [Researcher] added SLEEP, a variable not mentioned in the published article. Teachers can contact us about the construction of this variable. (We prefer to divulge the details at the end of the data-analysis project.) Further discussion of the background and pedagogical use of this dataset can be found in [Author] and in [Authors].
+
+Pedagogical Notes: This has been the most successful and the most memorable dataset we have used in an "applications of statistics" course, which we have taught for ten years. The most common analysis techniques have been analysis of variance, classical analysis of covariance, and multiple regression. Because the variable THORAX is so strong (it explains about one third of the variance in LONGEVITY), it is important to consider it to increase the precision of between-group contrasts. When students first check and find that the distributions of thorax length, and in particular, the mean thorax length, are very similar in the different groups, many of them are willing to say (in epidemiological terminology) that THORAX is not a confounding variable, and that it can be omitted from the analysis. There is usually lively discussion about the primary contrast. The five groups and their special structure allow opportunities for students to understand and verbalize what we mean by the term "statistical interaction." There is also much debate as to whether one should take the SLEEP variable into account. Some students say that it is an 'intermediate' variable. Some students formally test the mean level of SLEEP across groups, find one pair where there is a statistically significant difference, and want to treat it as a confounding variable. A few students muse about how it

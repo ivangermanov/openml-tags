@@ -1,31 +1,30 @@
 Echocardiogram Data
 
 Source Information:
-
-The dataset was donated by and collected by Dr. at The Reed Institute.
+The dataset was donated by and collected from the Reed Institute.
 
 Past Usage:
-
-The dataset has been previously used to predict patient survival after a heart attack. One study applied an exemplar-based learning approach to predict survival and achieved an accuracy of eighty-seven correct predictions out of one hundred sixteen instances. Another study used a different set of instances and achieved a sixty-one percent accuracy in predicting patient mortality. Additionally, a Cox regression analysis was performed, resulting in a sixty percent accuracy in predicting patient mortality.
+The dataset has been used in various studies to predict patient survival after a heart attack. One study applied an exemplar-based learning program to predict survival and achieved an accuracy of eighty-seven correct and twenty-nine incorrect predictions. Another study used a different set of instances and achieved a sixty-one percent accuracy in predicting patient death. A Cox regression application also recorded a sixty percent accuracy in predicting patient death.
 
 Relevant Information:
-
-All patients in the dataset have experienced a heart attack at some point in the past. The goal is to predict from various attributes whether a patient will survive for at least one year following the heart attack. The most challenging aspect of this problem is accurately predicting patient mortality.
+All patients in the dataset have suffered heart attacks in the past. The goal is to predict from the given variables whether a patient will survive at least one year after the heart attack. The most challenging part of this problem is correctly predicting that a patient will not survive.
 
 Number of Instances:
-One hundred thirty-two instances are present in the dataset.
+The dataset contains one hundred thirty-two instances.
 
 Number of Attributes:
-Thirteen numeric-valued attributes are present in the dataset.
+The dataset has thirteen numeric-valued attributes.
 
 Attribute Information:
-
-Survival refers to the number of months a patient has survived since the heart attack. Still Alive is a binary variable indicating whether the patient is alive or deceased at the end of the survival period. Age at Heart Attack refers to the patient's age in years when the heart attack occurred. Pericardial Effusion is a binary variable indicating the presence or absence of fluid around the heart. Fractional Shortening is a measure of cardiac contractility, with lower values being more abnormal. EPSS refers to E-point Septal Separation, another measure of cardiac contractility, with larger values being more abnormal. LVDD refers to Left Ventricular End-Diastolic Dimension, a measure of heart size, with larger values indicating sicker hearts. Wall Motion Score measures the movement of left ventricle segments, while Wall Motion Index is derived from Wall Motion Score and the number of segments seen. Mult is a derivative variable that can be ignored. Name refers to the patient's name, while Group is a meaningless variable. Alive at One Year is a Boolean variable derived from Survival and Still Alive, indicating whether the patient was alive at one year post-heart attack.
+The attributes include the number of months a patient survived, a binary variable indicating whether the patient is still alive, the patient's age at the time of the heart attack, the presence of pericardial effusion, fractional shortening, E-point septal separation, left ventricular end-diastolic dimension, wall motion score, wall motion index, a derivative variable, the patient's name, a meaningless group variable, and a binary variable indicating whether the patient was alive at one year.
 
 Missing Attribute Values:
-Some attributes contain missing values denoted by question marks.
+Some attributes have missing values, denoted by a question mark.
 
-Distribution of Attribute Values:
-The distribution of the Still Alive attribute shows eighty-eight instances where the patient is deceased and forty-three instances where the patient is alive. The distribution of the Alive at One Year attribute shows fifty instances where the patient did not survive, twenty-four instances where the patient survived, and fifty-eight instances with missing values.
+Distribution of Attributes:
+The distribution of the still-alive attribute is eighty-eight dead and forty-three alive, with one missing value. The distribution of the alive-at-one attribute is fifty patients who were not alive at one year, twenty-four patients who were alive at one year, and fifty-eight missing values.
 
-Keywords: echocardiogram, heart attack, patient survival, cardiac contractility, heart size.
+Features:
+The dataset includes attributes related to patient survival, heart condition, and echocardiogram results.
+
+Keywords: echocardiogram, heart attack, patient survival, prediction, machine learning.

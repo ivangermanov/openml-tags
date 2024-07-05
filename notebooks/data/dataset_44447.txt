@@ -1,9 +1,17 @@
-Cover Type Seed Four with Two Thousand Rows, One Hundred Columns, and Ten Classes, Using Stratification
+Name: Cover Type Seed Four with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-This dataset is a subsampled version of the Cover Type dataset, generated using a specific set of parameters. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniformly sampling columns and rows.
+Tags: Subsampling of the dataset Cover Type with seed equals four, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
-The dataset features include elevation, aspect, slope, horizontal distance to hydrology, vertical distance to hydrology, horizontal distance to roadways, hillshade at nine am, noon, and three pm, horizontal distance to fire points, wilderness areas, and various soil types.
+Generated with the following source code:
 
-Machine learning algorithms can be applied to this dataset to predict the cover type based on these features. The dataset has been stratified to ensure that each class is represented proportionally.
+This function subsamples a dataset. It takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Tags: Machine Learning, Mathematics
+The function first uniformly samples classes. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present.
+
+Next, it uniformly samples columns if required. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns. It then selects the corresponding columns.
+
+If the number of rows is greater than the maximum number of rows, it stratifies accordingly. It concatenates the data and target, and then uses train test split to get a subset of the data. It then drops the target column and returns the subsampled dataset.
+
+Features: Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at Nine Am, Hillshade at Noon, Hillshade at Three Pm, Horizontal Distance to Fire Points, Wilderness Area One, Wilderness Area Two, Wilderness Area Three, Wilderness Area Four, Soil Type One, Soil Type Two, Soil Type Three, Soil Type Four, Soil Type Five, Soil Type Six, Soil Type Seven, Soil Type Eight, Soil Type Nine, Soil Type Ten, Soil Type Eleven, Soil Type Twelve, Soil Type Thirteen, Soil Type Fourteen, Soil Type Fifteen, Soil Type Sixteen, Soil Type Seventeen, Soil Type Eighteen, Soil Type Nineteen, Soil Type Twenty, Soil Type Twenty One, Soil Type Twenty Two, Soil Type Twenty Three, Soil Type Twenty Four, Soil Type Twenty Five, Soil Type Twenty Six, Soil Type Twenty Seven, Soil Type Twenty Eight, Soil Type Twenty Nine, Soil Type Thirty, Soil Type Thirty One, Soil Type Thirty Two, Soil Type Thirty Three, Soil Type Thirty Four, Soil Type Thirty Five, Soil Type Thirty Six, Soil Type Thirty Seven, Soil Type Thirty Eight, Soil Type Thirty Nine, Soil Type Forty, class.
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, data preprocessing.

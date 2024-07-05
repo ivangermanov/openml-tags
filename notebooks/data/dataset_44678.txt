@@ -1,11 +1,13 @@
-Name: Sylvine Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Sylvine Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Manufacturing, Statistics 
+Tags: Subsampling of the dataset Sylvine with seed equal to zero, arguments nrows max equal to two thousand, ncols max equal to one hundred, nclasses max equal to ten, and no stratify equal to true.
 
-Sub-sampling of the dataset Sylvine with a seed of zero arguments number rows maximum equals two thousand arguments number columns maximum equals one hundred arguments number classes maximum equals ten arguments no stratify equals true generated with the following source code 
+Generated with the following source code:
 
-The function sub-sample takes in several parameters including a seed, maximum number rows, maximum number columns, maximum number classes, and whether to stratify or not. It uses the numpy random default random generator to ensure reproducibility. It first gets the unique classes from the target variable, and if there are more than the specified maximum number of classes, it selects a specified number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it checks if the number of columns exceeds the specified maximum, and if so, it uniformly samples the columns. Finally, it checks if the number of rows exceeds the specified maximum, and if so, it uses the train test split function from scikit learn to split the data into a subset, ensuring that the target variable is stratified.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses the numpy random default random generator to generate random numbers. The function then selects a subset of the data based on the given parameters. It first selects a subset of classes, then selects a subset of columns, and finally selects a subset of rows. The function returns a new dataset with the selected data.
 
-Features: (skipped due to being unreadable)
+The dataset is subsampled to reduce its size while maintaining its original characteristics. The subsampling is done in a stratified manner to ensure that the new dataset has the same class distribution as the original dataset. The function is useful for reducing the size of large datasets while preserving their essential features.
 
-Keywords: dataset, sub-sampling, manufacturing, statistics, stratification, reproducibility, numpy, scikit learn
+Features: The dataset contains twenty features, including V One, V Two, V Three, and so on, up to V Twenty, and a class feature.
+
+Keywords: dataset subsampling, stratified sampling, data reduction, feature selection, class distribution.

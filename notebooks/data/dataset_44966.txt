@@ -1,11 +1,26 @@
-Solar Flare Tags: **Data Description**
+**Solar Flare Dataset**
 
-The Solar Flare dataset aims to predict the number of common solar flares based on various characteristics of active regions on the sun. This dataset contains three classes, each representing the frequency of a specific type of solar flare occurring within a twenty-four-hour period.
+**Data Description**
+The Solar Flare dataset is used to predict the number of common solar flares. The database contains three classes, each representing the number of times a certain type of solar flare occurred in a twenty-four hour period. Each instance represents captured features for one active region on the sun.
 
 **Attribute Description**
+The dataset consists of thirteen attributes, which are:
 
-The dataset includes thirteen attributes that describe different aspects of active regions on the sun. These attributes are:
+* Class, which is a code for the class of the solar flare, modified according to the Zurich class system
+* Largest Spot Size, which is a code for the size of the largest spot on the sun
+* Spot Distribution, which is a code for the distribution of spots on the sun
+* Activity, which represents the level of activity on the sun, with one indicating reduced activity and two indicating unchanged activity
+* Evolution, which represents the evolution of the solar flare, with one indicating decay, two indicating no growth, and three indicating growth
+* Previous Activity, which represents the level of flare activity in the previous twenty-four hours, with one indicating nothing as big as an M1, two indicating one M1, and three indicating more activity than one M1
+* Complex, which indicates whether the region is historically complex, with one indicating yes and two indicating no
+* Complex Path, which indicates whether the region became historically complex on this pass across the sun's disk, with one indicating yes and two indicating no
+* Area, which represents the size of the active region, with one indicating small and two indicating large
+* Area of the Largest Spot, which represents the size of the largest spot
+* C-Class Flares, which is the target feature, representing the number of common solar flares produced by the region in the following twenty-four hours
+* M-Class Flares, which represents the number of moderate solar flares produced by the region in the following twenty-four hours
+* X-Class Flares, which represents the number of severe solar flares produced by the region in the following twenty-four hours
 
-Class, which represents the modified Zurich classification; Largest Spot Size, which codes for the size of the largest spot; Spot Distribution, which codes for the distribution of spots; Activity, which indicates whether the region's activity is reduced or unchanged; Evolution, which describes the region's evolution as either decaying, not growing, or growing; Previous Activity, which codes for the level of flare activity in the preceding twenty-four-hour period; Complex, which indicates whether the region is historically complex; Complex Path, which indicates whether the region became historically complex during its passage across the sun's disk; Area, which categorizes the region's size as small or large; Area of the Largest Spot, which measures the area of the largest spot; and finally, the target features: C-Class Flares, M-Class Flares, and X-Class Flares, which represent the number of common, moderate, and severe flares produced by the region in the subsequent twenty-four hours, respectively.
+**Scraped Data**
+The dataset has been divided into two sections, with the second section having undergone more error correction and being considered more reliable.
 
-Keywords: Solar Flare Prediction, Active Regions, Sun Characteristics, Flare Classification, Space Weather Forecasting
+**Keywords:** Solar Flares, Active Region, Spot Size, Activity Level, Evolution, Flare Prediction

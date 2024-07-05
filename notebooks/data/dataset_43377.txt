@@ -1,29 +1,27 @@
-Pulsar Dataset HTRU2 
-Tags: Machine Learning, Manufacturing 
+Pulsar Dataset HTRU2 Tags: Description
 
-Pulsars are a rare type of neutron star that produce radio emission detectable on Earth. They are of considerable scientific interest as probes of space-time, the interstellar medium, and states of matter. Machine learning tools are now being used to automatically label pulsar candidates to facilitate rapid analysis. In particular, classification systems are widely adopted, which treat the candidate data sets as binary classification problems.
+Pulsars are a rare type of Neutron star that produce radio emission detectable on Earth. They are of considerable scientific interest as probes of space-time, the interstellar medium, and states of matter. Machine learning tools are now being used to automatically label pulsar candidates to facilitate rapid analysis. In particular, classification systems are widely adopted, which treat the candidate data sets as binary classification problems.
 
-Attribute Information:
-Each candidate is described by eight continuous variables and a single class variable. The first four are simple statistics obtained from the integrated pulse profile, which is an array of continuous variables that describe a longitude-resolved version of the signal that has been averaged in both time and frequency. The remaining four variables are similarly obtained from the Dispersion Measure Signal-to-Noise Ratio curve.
+Attribute Information
 
-These variables are summarized below:
-The mean of the integrated profile, which gives an idea of the overall shape of the pulse.
-The standard deviation of the integrated profile, which indicates the amount of variation present in the signal.
-The excess kurtosis of the integrated profile, which is a measure of how tailed the distribution is.
-The skewness of the integrated profile, which indicates how asymmetrical the distribution is.
-The mean of the Dispersion Measure Signal-to-Noise Ratio curve, which describes how the signal changes with respect to frequency.
-The standard deviation of the Dispersion Measure Signal-to-Noise Ratio curve, which indicates the amount of variation present in the signal.
-The excess kurtosis of the Dispersion Measure Signal-to-Noise Ratio curve, which is a measure of how tailed the distribution is.
-The skewness of the Dispersion Measure Signal-to-Noise Ratio curve, which indicates how asymmetrical the distribution is.
-The class, which determines whether the candidate is a pulsar or not.
+Each candidate is described by eight continuous variables and a single class variable. The first four are simple statistics obtained from the integrated pulse profile, which is an array of continuous variables that describe a longitude-resolved version of the signal that has been averaged in both time and frequency. The remaining four variables are similarly obtained from the Dispersion Measure-Signal-to-Noise Ratio curve.
 
-Integrated Pulse Profile:
-Each pulsar produces a unique pattern of pulse emission known as its pulse profile, which is like a fingerprint of the pulsar. It is possible to identify pulsars from their pulse profile alone. However, the pulse profile varies slightly in every period, making the pulsar hard to detect. This is because their signals are non-uniform and not entirely stable over time. Nevertheless, these profiles do become stable when averaged over many thousands of rotations.
+These variables are summarised below:
 
-Dispersion Measure Signal-to-Noise Ratio Curve:
-Radio waves emitted from pulsars reach Earth after traveling long distances in space, which is filled with free electrons. Since radio waves are electromagnetic in nature, they interact with these electrons, resulting in slowing down of the wave. The important point is that pulsars emit a wide range of frequencies, and the amount by which the electrons slow down the wave depends on the frequency. Waves with higher frequency are slowed down less as compared to waves with lower frequency, i.e., lower frequencies reach the telescope later than higher frequencies. This is called dispersion.
+The mean of the integrated profile, which provides a general idea of the overall shape of the pulse profile. The standard deviation of the integrated profile, which gives an indication of the amount of variation in the pulse profile. The excess kurtosis of the integrated profile, which is a measure of how tailed or peaked the pulse profile is. The skewness of the integrated profile, which is a measure of how asymmetrical the pulse profile is.
 
-Dataset Summary:
-The dataset consists of a large number of examples, with a significant imbalance between positive and negative examples.
+The mean of the Dispersion Measure-Signal-to-Noise Ratio curve, which provides information about the overall shape of the curve. The standard deviation of the Dispersion Measure-Signal-to-Noise Ratio curve, which gives an indication of the amount of variation in the curve. The excess kurtosis of the Dispersion Measure-Signal-to-Noise Ratio curve, which is a measure of how tailed or peaked the curve is. The skewness of the Dispersion Measure-Signal-to-Noise Ratio curve, which is a measure of how asymmetrical the curve is.
 
-Keywords: Pulsar, Machine Learning, Binary Classification, Pulse Profile, Dispersion Measure Signal-to-Noise Ratio Curve, Space-Time, Interstellar Medium, States of Matter
+Integrated Pulse Profile
+
+Each pulsar produces a unique pattern of pulse emission known as its pulse profile. It is like a fingerprint of the pulsar, and it is possible to identify pulsars from their pulse profile alone. However, the pulse profile varies slightly in every period, making the pulsar hard to detect. This is because their signals are non-uniform and not entirely stable over time. Nevertheless, these profiles do become stable when averaged over many thousands of rotations.
+
+Dispersion Measure-Signal-to-Noise Ratio Curve
+
+Radio waves emitted from pulsars reach Earth after traveling long distances in space, which is filled with free electrons. Since radio waves are electromagnetic in nature, they interact with these electrons, resulting in slowing down of the wave. The important point is that pulsars emit a wide range of frequencies, and the amount by which the electrons slow down the wave depends on the frequency. Waves with higher frequency are slowed down less compared to waves with lower frequency. This is called dispersion.
+
+Dataset Summary
+
+The dataset consists of a large number of examples, with a significant class imbalance between positive and negative examples.
+
+Keywords: Pulsars, Neutron stars, Radio emission, Machine learning, Classification, Pulse profile, Dispersion Measure-Signal-to-Noise Ratio curve.

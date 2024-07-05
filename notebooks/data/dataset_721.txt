@@ -1,9 +1,15 @@
-The pwLinear Dataset: A Binarized Version for Myth-Busting and Study Purposes
+Name: pwLinear
 
-Tags: Binarized, Chemistry, Life Science, Mythbusting, Study
+Tags: binarized, mythbusting, study
 
-This dataset is a binarized version of the original dataset, converted to facilitate easier analysis and study. The numeric target feature has been replaced with a two-class nominal target feature, where values below the mean are classified as Positive (P) and those above as Negative (N).
+Source: Unknown - Date unknown
 
-Features include various chemical and life science-related attributes.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Keywords: Binarized Dataset, Chemistry, Life Science, Myth-Busting, Study Purposes
+This dataset is a modified version of an original dataset, focusing on binary classification. The transformation process involves calculating the mean of the target feature and using it as a threshold to categorize instances. Those falling below the mean are labeled as positive, while those above are considered negative. This binarization technique simplifies the original numeric target into a more straightforward two-class problem.
+
+The dataset contains various features, including a1 through a10, which likely represent different attributes or characteristics relevant to the classification task. The final feature, binaryClass, represents the transformed target variable, now containing only two possible values: 'P' for positive instances and 'N' for negative instances.
+
+Researchers and data scientists interested in binary classification problems or those studying the effects of data transformation on model performance may find this dataset particularly useful. It provides an opportunity to compare results between the original numeric target and the binarized version, potentially offering insights into the impact of such transformations on various machine learning algorithms.
+
+Keywords: binary classification, data transformation, threshold-based labeling, feature engineering, machine learning dataset, positive-negative categorization

@@ -1,17 +1,13 @@
-Cover Type Seed Zero with Two Thousand Rows, Ten Classes, One Hundred Columns, and Stratification Enabled
+Name: Cover Type Seed Zero
 
-Tags: Machine Learning, Mathematics
+Tags: Subsampling of the dataset Cover Type with seed equal to zero
 
-This dataset is a subsampled version of the Cover Type dataset, featuring two thousand rows, ten classes, and one hundred columns, with stratification enabled.
+This dataset is a subsample of the original Cover Type dataset. It was generated using a specific source code that involves random sampling of classes, columns, and rows. The sampling was done in a stratified manner to ensure that the resulting dataset is representative of the original dataset.
 
-The subsampling process involved uniformly selecting classes from the original dataset, ensuring that all chosen classes were represented proportionally. The selected classes were then used to filter the data, retaining only the relevant instances.
+The dataset features a selection of variables, including Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at nine am, Hillshade at noon, Hillshade at three pm, Horizontal Distance to Fire Points, and Wilderness Area. It also includes various Soil Types.
 
-Next, the columns were uniformly sampled to reduce the feature space to one hundred columns. This step helped to mitigate the curse of dimensionality and improve model performance.
+The subsampling process involved uniformly sampling classes, columns, and rows. The classes were sampled based on their frequency in the original dataset, and the columns were sampled uniformly. The rows were sampled in a stratified manner to ensure that the resulting dataset has the same class distribution as the original dataset.
 
-Finally, the dataset was further subsampled to meet the two-thousand-row limit, while maintaining the class balance using stratification.
+The resulting dataset has a specific number of rows, columns, and classes. It was generated using a random seed of zero, which ensures reproducibility of the results.
 
-Features:
-
-Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hill Shade Nine Am, Hill Shade Noon, Hill Shade Three Pm, Horizontal Distance to Fire Points, Wilderness Area, Soil Type
-
-Keywords: Cover Type, Subsampling, Stratification, Machine Learning, Feature Selection, Class Balance
+Keywords: Cover Type, Subsampling, Stratified Sampling, Random Seed, Dataset Generation

@@ -1,19 +1,17 @@
-Name: Phoneme Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Phoneme Seed Three N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Meteorology, Transportation 
+Tags: Subsampling of the dataset Phoneme with seed equal to three, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-Sub sampling of the dataset Phoneme with a seed of three, generated using the following source code:
+Generated with the following source code:
 
-The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether or not to stratify. It returns a dataset.
+The subsample function takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to uniformly sample classes from the unique values in the target variable y. If the number of unique classes exceeds nclasses max, it selects nclasses max classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-First, it sets up a random number generator using the given seed. Then, it gets the input features and output labels from the original dataset.
+Next, it uniformly samples columns if required. If the number of columns exceeds ncols max, it selects ncols max columns randomly and subsets the data accordingly.
 
-Next, it selects a subset of classes uniformly at random. If there are more classes than the maximum allowed, it chooses the most frequent ones proportionally to their frequency in the dataset. It then filters out the instances that do not belong to these selected classes.
+Finally, if the number of rows exceeds nrows max, it stratifies the data according to the target variable and selects a subset of nrows max rows using train test split.
 
-Afterwards, it selects a subset of columns uniformly at random. If there are more columns than the maximum allowed, it picks a random subset of them. Otherwise, it keeps all the columns.
+The function returns a dataset with the subsampled data, categorical mask, and column names.
 
-Finally, it reduces the number of instances to the maximum allowed while maintaining the class balance using stratified sampling. The resulting dataset consists of the filtered instances, the corresponding labels, and information about which columns are categorical.
+Features: Class
 
-Features: (Skipped due to unreadability)
-
-Keywords: Phoneme dataset, subsampling, stratification, feature selection, class balance
+Keywords: Phoneme dataset, subsampling, stratified sampling, feature selection, class selection.

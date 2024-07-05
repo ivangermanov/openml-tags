@@ -1,37 +1,24 @@
-**Bridges**
-Tags: Transportation, UCI
+The bridges dataset, tagged as UCI, is derived from the Pittsburgh bridges data. This version removes instances with missing values in the target attribute to avoid confusion in benchmarking results. The dataset was originally not intended for classification but has been widely used as such in literature, with the last attribute serving as the target.
 
-This dataset is derived from the original version by removing all instances with missing values in the last attribute. The Bridges dataset is originally not a classification dataset, but it is used extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking results. Therefore, these instances have been removed.
+The dataset contains information about various bridges, including their location, construction date, purpose, dimensions, and structural characteristics. It comprises both continuous/integer and nominal attributes, with some attributes having mixed types.
 
-The Bridges dataset is compiled from various sources and was created on August 1, 1990.
+Attribute information includes:
+- Identifier for each example
+- River (A, M, O)
+- Location (numbered from 1 to 52)
+- Year erected (ranging from 1818 to 1986, also categorized as CRAFTS, EMERGING, MATURE, MODERN)
+- Purpose (WALK, AQUEDUCT, RR, HIGHWAY)
+- Length (ranging from 804 to 4558, also categorized as SHORT, MEDIUM, LONG)
+- Number of lanes (1, 2, 4, 6)
+- Clear G (N, G)
+- Type of deck (THROUGH, DECK)
+- Material (WOOD, IRON, STEEL)
+- Span (SHORT, MEDIUM, LONG)
+- Relative length (S, S-F, F)
+- Type of bridge (WOOD, SUSPENSION, SIMPLE T, ARCH, CANTILEVER, CONTINUOUS T)
 
-Attribute Information:
+There are two versions of the database: V1 contains the original examples, while V2 contains descriptions after discretizing numeric properties. The domain is considered a DESIGN domain, where five properties (design description) need to be predicted based on seven specification properties.
 
-The type field states whether a property is continuous or integer (continuous) or nominal. For properties with continuous and nominal types, the range of continuous numbers is given first, followed by the possible values of the nominal.
+The dataset contains missing values, which may impact analysis and modeling efforts. Researchers using this dataset should be aware of these missing values and handle them appropriately in their studies.
 
-* Identifier of the examples
-* River location, categorized as A, M, or O
-* Location, ranging from 1 to 52
-* Year erected, ranging from 1818 to 1986, categorized as Crafts, Emerging, Mature, or Modern
-* Purpose, categorized as Walk, Aqueduct, Railroad, or Highway
-* Length, ranging from 804 to 4558, categorized as Short, Medium, or Long
-* Number of lanes, categorized as 1, 2, 4, or 6
-* Clearance grade, categorized as N or G
-* Type of bridge design, categorized as Through or Deck
-* Material used, categorized as Wood, Iron, or Steel
-* Span length, categorized as Short, Medium, or Long
-* Relative level, categorized as S, S-F, or F
-* Bridge type, categorized as Wood, Suspension, Simple-T, Arch, Cantilever, or Continuous-T
-
-Features:
-Identifier, River Location, Location, Year Erected, Purpose, Length, Number of Lanes, Clearance Grade, Bridge Design, Material Used, Span Length, Relative Level, Bridge Type
-
-Scraped Data:
-Dataset Information
-Additional Information
-There are two versions to the database: one contains the original examples, and the other contains descriptions after discretizing numeric properties. There are no classes in the domain; rather, this is a design domain where five properties (design description) need to be predicted based on seven specification properties.
-
-Has Missing Values?
-No
-
-Keywords: Bridges, Transportation, UCI, Classification, Design Domain
+Keywords: bridges, classification, design prediction, structural characteristics, civil engineering, Pittsburgh, UCI dataset

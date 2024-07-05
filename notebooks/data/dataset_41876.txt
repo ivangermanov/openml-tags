@@ -1,24 +1,15 @@
-**FOREX eur/dkk - Minute - Close**
-Tags: Demographics, Finance, Forex, Forex Close, Forex Minute, Geography
+Name: Forex Eur/Dkk Minute Close
 
-**Data Description**
-This dataset contains the historical price data of the Forex Euro-Danish Krone currency pair from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans a specific time period, excluding weekends, since the Forex market is not traded on weekends.
+Tags: finance, forex, forex close, forex minute
 
-The timezone of the feature Timestamp is set to Europe/Amsterdam. The class attribute is determined by the direction of the mean of the Close Bid and the Close Ask prices of the following minute, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is true when the mean Close price increases in the following minute, and false when the mean Close price decreases or remains the same in the following minute.
+Source: Dukascopy Historical Data Feed
 
-**Attributes**
+Data Description
+This is the historical price data of the Forex Eur/Dkk from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-* **Timestamp**: The time of the current data point, specified in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: A binary indicator of whether the average price will increase or decrease in the next interval.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following minute, and the class attribute is False when the mean Close price is going down, or stays the same, the following minute.
 
-Keywords: Forex, Euro, Danish Krone, Currency Pair, Historical Price Data, Candlestick, Time Interval, Bid Price, Ask Price.
+Attributes
+The Timestamp is the time of the current data point, in the Europe/Amsterdam timezone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
+
+Keywords: Forex, Eur/Dkk, historical price data, candlestick, timezone, class attribute, bid price, ask price.

@@ -1,28 +1,15 @@
-FOREX EurTry Hourly Close 
+Name: Forex Eur Try Hour Close
 
-Tags: finance, foreign exchange, foreign exchange close, foreign exchange hourly, human activities, machine learning 
+Tags: finance, forex, forex close, forex hour
 
-Source: Dukascopy Historical Data Feed 
+Source: Dukascopy Historical Data Feed
 
-Data Description 
+Data Description
+This is the historical price data of the Forex Eur Try from Dukascopy. One instance, or row, is one candlestick of one hour. The whole dataset has a data range and does not include weekends, since the Forex is not traded on weekends. The timezone of the feature Timestamp is Europe Amsterdam.
 
-This is the historical price data of the Foreign Exchange Euro versus Turkish Lira from Dukascopy. One instance, or row, represents one candlestick of one hour. The entire dataset spans from a certain date to another, excluding weekends, as the Foreign Exchange market is not traded on weekends. The time zone of the feature Time Stamp is Europe Amsterdam. 
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following hour, and the class attribute is False when the mean Close price is going down, or stays the same, the following hour.
 
-The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current hour. This means the class attribute is true when the mean Close price is going up the following hour, and the class attribute is false when the mean Close price is going down, or stays the same, the following hour. 
+Attributes
+The Timestamp is the time of the current data point in Europe Amsterdam time zone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-Attributes 
-
-Time Stamp: The time of the current data point, in the Europe Amsterdam time zone 
-Bid Open: The bid price at the start of this time interval 
-Bid High: The highest bid price during this time interval 
-Bid Low: The lowest bid price during this time interval 
-Bid Close: The bid price at the end of this time interval 
-Bid Volume: The number of times the Bid Price changed within this time interval 
-Ask Open: The ask price at the start of this time interval 
-Ask High: The highest ask price during this time interval 
-Ask Low: The lowest ask price during this time interval 
-Ask Close: The ask price at the end of this time interval 
-Ask Volume: The number of times the Ask Price changed within this time interval 
-Class: Whether the average price will go up during the next interval 
-
-Keywords: Foreign Exchange, Euro, Turkish Lira, Candlestick, Hourly, Close Price, Bid Price, Ask Price, Time Zone, Machine Learning
+Keywords: Forex, Eur Try, Historical Data, Candlestick, Finance

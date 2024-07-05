@@ -1,9 +1,7 @@
-The NYC Taxi Green December 2016 dataset is a collection of Trip Record Data provided by the New York City Taxi and Limousine Commission. This dataset includes TLC trips of the green line in December and was downloaded on a specific date. For a detailed description of all variables in the dataset, please refer to the TLC homepage.
+The NYC Taxi Green December 2016 dataset is a collection of trip record data provided by the New York City Taxi and Limousine Commission. This dataset includes trips of the green line in December 2016 and was downloaded on a specific date. For a detailed description of all variables in the dataset, please refer to the Taxi and Limousine Commission's homepage.
 
-The variable Tip Amount was chosen as the target variable. The variable Total Amount is ignored by default, otherwise the target could be predicted deterministically. The Date Variables Pickup DateTime and Dropoff DateTime, which are ignored by default, could be used to compute additional Time Features.
+The target variable chosen for this dataset is the tip amount. The total amount variable is ignored by default to prevent deterministic prediction. The date variables, including pickup and drop-off dates and times, could be used to compute additional time features. However, in this version, only trips with a payment type of credit card are included, as tips are not included for most other payment types.
 
-In this version, we chose only trips with Payment Type equal to Credit Card, as tips are not included for most other payment types. We also removed the variables Trip Distance and Fare Amount to increase the importance of the categorical features Pickup Location ID and Dropoff Location ID.
+Additionally, the variables trip distance and fare amount were removed to increase the importance of the categorical features pickup location ID and drop-off location ID. The remaining features include vendor ID, store and forward flag, rate code ID, pickup location ID, drop-off location ID, passenger count, extra, MTA tax, tip amount, tolls amount, improvement surcharge, trip type, pickup date, pickup hour, pickup minute, drop-off date, drop-off hour, and drop-off minute.
 
-Features include Vendor Identification, Store and Forward Flag, Rate Code Identification, Pickup Location ID, Dropoff Location ID, Passenger Count, Extra, MTA Tax, Tip Amount, Tolls Amount, Improvement Surcharge, Trip Type, Pickup Date Day, Pickup Date Hour, Pickup Date Minute, Dropoff Date Day, Dropoff Date Hour, and Dropoff Date Minute.
-
-Keywords: NYC Taxi, Trip Record Data, Green Line, Credit Card, Categorical Features, Time Features, Payment Type.
+Keywords: NYC Taxi, Green Line, Trip Record Data, Tip Amount, Credit Card, Pickup Location, Drop-off Location.

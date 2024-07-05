@@ -1,26 +1,38 @@
-**FOREX GBP/USD Hourly Close**
+Name: FOREX GBP/USD Hour Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Health, Medicine
+Tags: finance, forex, forex close, forex hour
 
-**Data Description**
-This dataset contains the historical price data of the Forex GBP/USD currency pair, sourced from Dukascopy Historical Data Feed. Each instance represents one hourly candlestick, with a total data range spanning from January to December. As the Forex market is closed on weekends, there are no data points for Saturday and Sunday.
+Source: Dukascopy Historical Data Feed
 
-The timestamp feature is set to the Europe/Amsterdam timezone. The class attribute is determined by the direction of the mean close price of the subsequent hour, relative to the mean close price of the current hour. Specifically, the class attribute is true if the mean close price increases in the next hour, and false if it decreases or remains unchanged.
+Data Description:
+This dataset contains the historical price data of the FOREX GBP/USD from Dukascopy. Each instance, or row, represents one candlestick of one hour. The entire dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-**Attributes**
-The dataset consists of the following attributes:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-* Timestamp: The time of the current data point, represented in the Europe/Amsterdam timezone.
-* Bid Open: The bid price at the start of the hourly interval.
-* Bid High: The highest bid price recorded during the hourly interval.
-* Bid Low: The lowest bid price recorded during the hourly interval.
-* Bid Close: The bid price at the end of the hourly interval.
-* Bid Volume: The number of times the bid price changed within the hourly interval.
-* Ask Open: The ask price at the start of the hourly interval.
-* Ask High: The highest ask price recorded during the hourly interval.
-* Ask Low: The lowest ask price recorded during the hourly interval.
-* Ask Close: The ask price at the end of the hourly interval.
-* Ask Volume: The number of times the ask price changed within the hourly interval.
-* Class: Indicates whether the average price will increase or decrease in the next hourly interval.
+Attributes:
 
-Keywords: Forex, GBP/USD, Currency Pair, Historical Data, Candlestick, Time Series Analysis, Finance, Trading.
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: FOREX, GBP/USD, historical data, candlestick, finance, trading.

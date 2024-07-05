@@ -1,29 +1,25 @@
-The Robot Execution Failures Data Set 
+Robot Failures LP Dataset
 
-Abstract:
-This data set contains force and torque measurements on a robot after failure detection. Each failure is characterized by fifteen force/torque samples collected at regular time intervals.
+Tags: mf less than, study, study, study, study
 
-Source:
-Original owner and donor, Universidade Nova de Lisboa, Monte da Caparica, Portugal.
+This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by force/torque samples collected at regular time intervals.
 
-Data Set Information:
-The donation includes five data sets, each of which defines a different learning problem: 
-failures in approach to grasp position, 
-failures in transfer of a part, 
-position of part after a transfer failure, 
-failures in approach to ungrasp position, 
-and 
-failures in motion with part.
-In order to improve classification accuracy, a set of five feature transformation strategies based on statistical summary features, discrete Fourier transform, etc. was defined and evaluated, enabling an average improvement of twenty percent in accuracy.
+The dataset includes multiple subsets, each defining a different learning problem:
 
-Attribute Information:
-All features are numeric, although they are integer-valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of fifteen force/torque samples collected at regular time intervals starting immediately after failure detection; the total observation window for each failure instance was three hundred fifteen milliseconds. Each example is described as follows: 
-class Force X one, Force Y one, Force Z one, Torque X one, Torque Y one, Torque Z one, Force X two, Force Y two, Force Z two, Torque X two, Torque Y two, Torque Z two,..., Force X fifteen, Force Y fifteen, Force Z fifteen, Torque X fifteen, Torque Y fifteen, Torque Z fifteen, 
-where Force X one through Force X fifteen is the evolution of force Fx in the observation window, the same for Fy, Fz, and the torques; there is a total of ninety features.
+- Failures in approach to grasp position
+- Failures in transfer of a part
+- Position of part after a transfer failure
+- Failures in approach to ungrasp position (This specific dataset)
+- Failures in motion with part
 
-Relevant Papers:
-Robot Learning at the Task Level: a Study in the Assembly Domain,
-Feature Transformation Strategies for a Robot Learning Problem,
-Integration and Learning in Supervision of Flexible Assembly Systems,
+To improve classification accuracy, several feature transformation strategies were defined and evaluated, based on statistical summary features and discrete Fourier transform. This enabled an average improvement in accuracy.
 
-Keywords: robot execution, failures data set, force measurement, torque measurement, failure detection, classification accuracy, feature transformation strategies, assembly domain, flexible assembly systems.
+All features are numeric, though integer-valued. Each feature represents a force or torque measured after failure detection. Each failure instance is characterized by force/torque samples collected at regular time intervals starting immediately after failure detection. The total observation window for each failure instance was of milliseconds.
+
+Each example is described with a class followed by the evolution of forces and torques in the observation window. There is a total of features, representing the progression of forces and torques over time.
+
+The dataset originates from research in robot learning at the task level, particularly in the assembly domain. It has been used in studies on feature transformation strategies for robot learning problems and integration of learning in supervision of flexible assembly systems.
+
+This dataset provides valuable information for researchers and practitioners working on robotic systems, particularly in areas of failure detection, task learning, and assembly operations. The multiple learning problems and feature transformation strategies offer rich opportunities for developing and testing machine learning algorithms in the context of robotic applications.
+
+Keywords: Robot failures, Force measurements, Torque measurements, Assembly domain, Feature transformation, Task learning, Failure detection, Robotic systems, Machine learning, Classification accuracy

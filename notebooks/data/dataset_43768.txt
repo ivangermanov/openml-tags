@@ -1,23 +1,19 @@
-Traffic-counting-using-cameras 
-Tags: Manufacturing, Social Media 
+Traffic-counting-using-cameras Tags: Context
 
-These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. The Telraam device is an innovative tool that allows individuals to participate in traffic monitoring. 
+These data come from a camera that is part of the Telraam device, which makes counting cameras available to interested citizens. This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France).
 
-This camera is located at Place Général de Gaulle, Paris (Mouans Sartoux, France), and it is one of many devices deployed across the city. 
+What exactly does the Telraam measure? Telraam counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and the analysis performed by the Raspberry Pi, a small computer on which the device is based. The analysis simply uses the size and speed of the passing object.
 
-So, what exactly does the Telraam measure? It counts pedestrians, cyclists, cars, and freight or heavy vehicles. This is done using images taken by the device camera and analyzed by the Raspberry Pi, a small computer on which the device is based. The analysis is quite simple, relying on the size and speed of the passing object.
+Each hour, the camera records the following data: the percentage of camera activity, counting of pedestrians, cars, bicycles, and trucks (total, left, and right of the street), and a histogram of car speeds for the intervals zero to ten, ten to twenty, twenty to thirty, and so on, up to seventy and more.
 
-Each hour, the camera records the following data: 
-the percentage of camera activity; 
-the count of pedestrians, cars, bicycles, and trucks (total, as well as those moving to the left and right of the street); 
-and a histogram of car speeds for various intervals (from zero to ten kilometers per hour, ten to twenty, twenty to thirty, and so on up to seventy kilometers per hour and above).
+Why a percentage of camera activity? Telraam does not count when it is dark. This camera has constraints because to perform the counts, it does image recognition. The camera is not active at night, and the camera is not active one hundred percent of the time in daylight; therefore, the percentage of activity is indicated. When the camera is partially active, the counts are prorated using this percentage to estimate the activity in the observed hour. The camera may be out of service for a period.
 
-But why do we need to know the percentage of camera activity? Well, the Telraam device does not count during nighttime hours, when visibility is limited. Moreover, even during daylight hours, the camera is not always fully operational, so the percentage of activity is indicated to provide context for the recorded data. When the camera is only partially active, the counts are adjusted proportionally using this percentage to estimate the actual activity in the observed hour.
+Content
 
-The data have been flattened into a CSV file. The original data in JSON format can be retrieved in real-time via an API call. The API documentation provides detailed information on how to access these data.
+The data has been flattened in a CSV file. The original data (JSON) can be retrieved in real-time using a POST request.
 
-The dataset contains several columns, including time, ID, timezone, percentage of uptime, pedestrian count, bicycle count, car count, lorry count, and histograms of car speeds.
+Columns: time, id, timezone, percentage up, pedestrian, bike, car, lorry, pedestrian left, bike left, car left, lorry left, pedestrian right, bike right, car right, lorry right, car speed zero to ten, car speed ten to twenty, car speed twenty to thirty, car speed forty to fifty, car speed fifty to sixty, car speed sixty to seventy.
 
-This dataset offers exciting opportunities for time series forecasting, allowing researchers to predict traffic flow patterns and identify trends over time.
+Inspiration: Time series forecasting, predict traffic flow.
 
-Keywords: Telraam, traffic monitoring, pedestrian count, cyclist count, car count, freight vehicle count, camera activity, Raspberry Pi, time series forecasting.
+Keywords: traffic counting, camera, Telraam, pedestrians, cyclists, cars, freight vehicles, image recognition, Raspberry Pi, time series forecasting.

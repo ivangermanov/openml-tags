@@ -1,15 +1,31 @@
-Gas Turbine 2011
+Name: Gas Turbine 2011
+Tags: test
 
-Tags: Human Activities, Images Test
+Features: Ambient Temperature, Ambient Pressure, Ambient Humidity, Air Filter Difference Pressure, Gas Turbine Exhaust Pressure, Turbine Inlet Temperature, Turbine After Temperature, Compressor Discharge Pressure, Turbine Energy Yield, Carbon Monoxide, Nitrogen Oxides
 
-The dataset contains instances of eleven sensor measures aggregated over one hour from a gas turbine located in Turkey's northwestern region for the purpose of studying flue gas emissions, namely carbon monoxide and nitrogen oxides. The data comes from the same power plant as the Combined Cycle Power Plant dataset used for predicting hourly net energy yield. However, this data is collected in another data range and includes gas turbine parameters, such as turbine inlet temperature and compressor discharge pressure, in addition to the ambient variables.
+The dataset contains instances of eleven sensor measures aggregated over one hour from a gas turbine located in Turkey's northwestern region for the purpose of studying flue gas emissions, namely Carbon Monoxide and Nitrogen Oxides. The data comes from the same power plant as the dataset used for predicting hourly net energy yield. By contrast, this data is collected in another data range and includes gas turbine parameters, such as Turbine Inlet Temperature and Compressor Discharge Pressure, in addition to the ambient variables.
 
-The dataset does not have missing values. The explanations of sensor measurements and their brief statistics are given below. The ambient temperature ranges from a minimum of minus six point twenty-three degrees Celsius to a maximum of thirty-seven point one degrees Celsius, with a mean of seventeen point seventy-one degrees Celsius. The ambient pressure ranges from nine hundred eighty-five point eight five millibars to one thousand thirty-six point five six millibars, with a mean of one thousand thirteen point zero seven millibars. The ambient humidity ranges from twenty-four point oh eight percent to one hundred point two zero percent, with a mean of seventy-seven point eighty-seven percent. 
+Note that the dates are not given in the instances, but the data are sorted in chronological order. See the attribute information and relevant paper for details. Kindly follow the protocol mentioned in the paper, using the first three years' data for training and cross-validation and the last two for testing, for reproducibility and comparability of works.
 
-The air filter difference pressure ranges from two point oh nine millibars to seven point sixty-one millibars, with a mean of three point ninety-three millibars. The gas turbine exhaust pressure ranges from seventeen point seventy millibars to forty point seventy-two millibars, with a mean of twenty-five point fifty-six millibars. The turbine inlet temperature ranges from one thousand point zero eight five degrees Celsius to one thousand one hundred point zero eight nine degrees Celsius, with a mean of one thousand eighty-one point four three degrees Celsius. 
+The dataset can be well used for predicting Turbine Energy Yield using ambient variables as features.
 
-The turbine after temperature ranges from five hundred eleven point oh four degrees Celsius to five hundred fifty point six one degrees Celsius, with a mean of five hundred forty-six point one six degrees Celsius. The compressor discharge pressure ranges from nine point eight five millibars to fifteen point one six millibars, with a mean of twelve point oh six millibars. 
+Has Missing Values? No
 
-The turbine energy yield ranges from one hundred point oh two megawatt hours to one hundred seventy-nine point five megawatt hours, with a mean of one hundred thirty-three point five one megawatt hours. The carbon monoxide ranges from zero point zero milligrams per cubic meter to forty-four point one milligrams per cubic meter, with a mean of two point three seven milligrams per cubic meter. The nitrogen oxides range from twenty-five point nine milligrams per cubic meter to one hundred nineteen point nine one milligrams per cubic meter, with a mean of sixty-five point two nine milligrams per cubic meter.
+Additional Variable Information:
 
-Keywords: gas turbine, flue gas emissions, carbon monoxide, nitrogen oxides, ambient temperature, ambient pressure, ambient humidity, turbine inlet temperature, compressor discharge pressure.
+The explanations of sensor measurements and their brief statistics are given below.
+
+Variable (Abbreviation) Unit
+Ambient Temperature (AT) degrees Celsius
+Ambient Pressure (AP) millibars
+Ambient Humidity (AH) percentage
+Air Filter Difference Pressure (AFDP) millibars
+Gas Turbine Exhaust Pressure (GTEP) millibars
+Turbine Inlet Temperature (TIT) degrees Celsius
+Turbine After Temperature (TAT) degrees Celsius
+Compressor Discharge Pressure (CDP) millibars
+Turbine Energy Yield (TEY) megawatt-hours
+Carbon Monoxide (CO) milligrams per cubic meter
+Nitrogen Oxides (NOx) milligrams per cubic meter
+
+Keywords: Gas Turbine, Flue Gas Emissions, Carbon Monoxide, Nitrogen Oxides, Turbine Energy Yield, Ambient Variables, Power Plant.

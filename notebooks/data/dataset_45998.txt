@@ -1,0 +1,13 @@
+The three thousand and three series of the M3 Competition were selected on a quota basis to include various types of time series data, such as micro, industry, and macro, and different time intervals between successive observations, including yearly, quarterly, and monthly. In order to ensure that enough data were available to develop an adequate forecasting model, it was decided to have a minimum number of observations for each type of data. This minimum was set to ensure that the models had sufficient data to learn from and make accurate predictions.
+
+The classification of the three thousand and three series according to the two major groupings is shown in Table One. All the time series data are strictly positive, and a test was done on all the forecasted values to avoid any problems in the various Mean Absolute Percentage Error measures. In the case of a negative value, it was substituted by zero.
+
+The participating experts were asked to make a certain number of forecasts beyond the available data they had been given. Their forecasts were subsequently compared by the authors, and the actual values referred to such forecasts were not available to the participating experts when they were making their forecasts and were not, therefore, used in developing their forecasting model.
+
+The time series were melted and restructured into four columns: Series, which is the identifier of a time series; Category, which is the category of a time series; Value, which is the value of the time series at a specific date; and date, which is the date of the value in the default pandas format.
+
+The preprocessing steps included melting the data, obtaining columns Time Step and Value; dropping nan values, which correspond to time series that are shorter than the time series with maximum length; replacing values of zero for Starting Year and Starting Month with their median; creating a date column using the Time Step, Starting Year, and Starting Month; and dropping columns N, NF, Starting Year, Time Step, and Starting Month, and renaming column Series to id_series.
+
+The features of the dataset include id_series, Category, Value, and date.
+
+Keywords: M3 Competition, time series forecasting, monthly data, quota basis, forecasting model, Mean Absolute Percentage Error, preprocessing steps.

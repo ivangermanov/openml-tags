@@ -1,17 +1,19 @@
-Name: Connect Four Seed Two 
+Name: Connect Four Seed Two
 
-Tags: Meteorology, Transportation 
+Tags: Subsampling of the dataset Connect Four with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-This dataset is a subsampled version of the original Connect Four dataset. It was generated using a specific set of arguments, including a seed value of two, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. The sampling process was performed in a stratified manner.
+Generated with the following source code:
 
-The subsampling process involved several steps. First, the unique classes in the original dataset were identified. If there were more than ten classes, a random selection of ten classes was made based on their relative frequencies. The indices of the instances belonging to these selected classes were then retrieved.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-Next, the columns of the dataset were uniformly sampled. If there were more than one hundred columns, a random selection of one hundred columns was made. The selected columns were then used to create a new dataset.
+First, it samples the classes uniformly. If the number of unique classes is greater than the maximum number of classes, it selects the classes based on their frequency in the data. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Finally, the instances in the new dataset were uniformly sampled. If there were more than two thousand instances, a random selection of two thousand instances was made while maintaining the original class distribution.
+Next, it samples the columns uniformly if required. If the number of columns is greater than the maximum number of columns, it selects the columns randomly and filters the data accordingly.
 
-Features: 
+Finally, it samples the rows. If the number of rows is greater than the maximum number of rows, it uses stratified sampling to select the rows, ensuring that the class distribution is preserved.
 
-(class column)
+The function returns a dataset with the sampled data, along with the categorical mask and column names.
 
-Keywords: Connect Four, Meteorology, Transportation, Stratified Sampling, Class Distribution
+Features: (omitted due to unreadability)
+
+Keywords: Connect Four, dataset subsampling, stratified sampling, random sampling, data preprocessing.

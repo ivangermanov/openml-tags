@@ -1,38 +1,11 @@
-This is a PROMISE Software Engineering Repository data set made publicly available in order to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering.
+This dataset, known as kc1-top5, is associated with tags including mythbusting, PROMISE, and various study numbers. It is part of the PROMISE Software Engineering Repository, made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. Users publishing material based on PROMISE datasets are requested to follow the acknowledgment guidelines posted on the PROMISE repository web page.
 
-Title: Class-Level Data for KC1 
+The dataset contains class-level data for KC1, including a defect level attribute to indicate defectiveness. The defect level is marked as DEF if the module is in the top 5% in defect count ranking, and NODEF otherwise.
 
-This dataset includes a Defectiveness attribute to indicate whether a module is in the top five percent in defect count ranking.
+This data has been utilized in research investigating the effect of module size on defect prediction using static measures. The study employed various machine learning algorithms to predict defective modules in several NASA products. Observations indicated that a large portion of the modules were small, as measured by lines of code. Experiments on data subsets partitioned by module size yielded higher prediction performance for subsets including larger modules. Additionally, defect prediction using class-level data for KC1 resulted in improved performance compared to method-level data.
 
-Sources 
-Creator: 
-Date: 
-Contact: 
+The dataset includes numerous features at the class level, such as percentage of public data, access to public data, coupling between objects, depth, lack of cohesion of methods, number of children, dependency on child, fan in, response for class, and weighted methods per class. It also contains features transformed from method level to class level, including various metrics related to lines of code, complexity, and Halstead metrics.
 
-Donor: 
+These findings suggest that quality assurance activities can be better guided if defect predictions are made using data from larger modules. The dataset provides valuable insights into software metrics and their relationship to defect prediction, which can be crucial for improving software quality and development processes.
 
-Past Usage 
-This data set was used for investigating the effect of module size on defect prediction using static measures. Several machine learning algorithms were used to predict the defective modules in five NASA products, namely, CM1, JM1, KC1, KC2, and PC1. A set of static measures were used as predictor variables. While doing so, it was observed that a large portion of the modules were small, as measured by lines of code. When experimenting on the data subsets created by partitioning according to module size, higher prediction performance was obtained for the subsets that included larger modules. It was also found that defect prediction using class-level data for KC1 rather than method-level data resulted in improved prediction performance compared to using method-level data. These findings suggest that quality assurance activities can be guided even better if defect predictions are made by using data that belongs to larger modules.
-
-Features 
-The descriptions of the features are taken from the MDP Glossary. 
-
-Feature Used as the Response Variable 
-Defect Level: DEF if the class is in the top five percent in defect ranking, NODEF otherwise. 
-
-Features at Class Level Originally 
-Percent Public Data: The percentage of data that is public and protected data in a class. In general, lower values indicate greater encapsulation. It is a measure of encapsulation. 
-Access to Public Data: The amount of times that a class's public and protected data is accessed. In general, lower values indicate greater encapsulation. It is a measure of encapsulation. 
-Coupling Between Objects: The number of distinct non-inheritance-related classes on which a class depends. If a class that is heavily dependent on many classes outside of its hierarchy is introduced into a library, all the classes upon which it depends need to be introduced as well. This may be acceptable, especially if the classes which it references are already part of a class library and are even more fundamental than the specified class. 
-Depth: The level for a class. For instance, if a parent has one child, the depth for the child is two. Depth indicates at what level a class is located within its class hierarchy. In general, inheritance increases when depth increases. 
-Lack of Cohesion of Methods: For each data field in a class, the percentage of the methods in the class using that data field; the percentages are averaged then subtracted from one hundred percent. The Lack of Cohesion of Methods metric indicates low or high percentage of cohesion. If the percentage is low, the class is cohesive. If it is high, it may indicate that the class could be split into separate classes that will individually have greater cohesion. 
-Number of Children: The number of classes derived from a specified class. 
-Dependent on Child: Whether a class is dependent on a descendant. 
-Fan-In: This is a count of calls by higher modules. 
-Response for Class: A count of methods implemented within a class plus the number of methods accessible to an object class due to inheritance. In general, lower values indicate greater polymorphism. 
-Weighted Methods per Class: A count of methods implemented within a class (rather than all methods accessible within the class hierarchy). In general, lower values indicate greater polymorphism.
-
-Features Transformed to Class Level 
-Transformation was achieved by obtaining minimum, maximum, sum, and average values over all the methods in a class. Therefore, this dataset includes four features for all of the following features that were originally at the method level but transformed to the class level. 
-
-Keywords: defect prediction, software engineering, class-level data, PROMISE repository, static measures, machine learning algorithms.
+Keywords: software engineering, defect prediction, module size, static measures, class-level data, software metrics, quality assurance, NASA products, machine learning, PROMISE repository

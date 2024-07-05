@@ -1,40 +1,46 @@
-The Meta Album Boats Dataset is a collection of images featuring various types of maritime vessels in their natural environments. This dataset is derived from the original Marvel dataset, which contains over 138,000 images of twenty-six different boat classes. To preprocess these images, the top and bottom three rows or the left and right three columns were duplicated based on the original image's orientation, resulting in square images. These square images were then resized to 128x128 pixels using an anti-aliasing filter.
+**Meta Album Boats Dataset (Micro)**
+
+The original version of the Meta Album boats dataset is called the Marvel dataset, which can be found on GitHub. It has a large collection of images of twenty-six different maritime vessels in their natural background. Each class has a varying number of images, and the images are of variable resolutions. To preprocess this dataset, we either duplicate the top and bottom-most three rows or the left and right most three columns based on the orientation of the original image to create square images. No cropping was applied because the boats occupy most of the image, and applying this technique would lead to incomplete images. Finally, the square images were resized into a uniform size using an anti-aliasing filter.
 
 **Dataset Details**
 
-The Meta Album Boats Dataset consists of twenty classes with eight hundred images in total. The images are 128x128 pixels in size and are available under the Creative Commons Attribution-NonCommercial 4.0 license.
+![Sample Image](https://meta-album.github.io/assets/img/samples/BTS.png)
 
-**Meta Album Information**
-Meta Album ID: Vehicles Boats Type
-Meta Album URL: https://meta-album.github.io/datasets/Boats.html
-Domain ID: Vehicles
-Domain Name: Vehicles
-Dataset ID: Boats
-Dataset Name: Boats
-Short Description: A dataset containing images of various boats
-Number of Classes: Twenty
-Number of Images: Eight Hundred
-Keywords: Vehicles, Boats
-Data Format: Images
-Image Size: 128x128 pixels
-License: Creative Commons Attribution-NonCommercial 4.0
-License URL: https://creativecommons.org/licenses/by-nc/4.0/
-Source: Marvel: A Large-Scale Image Dataset for Maritime Vessels
-Source URL: https://github.com/avaapm/marveldataset2016
-Created Date: March 
-Contact Email: meta-album@chalearn.org
-Contact URL: https://meta-album.github.io/
+**Meta Album ID**: Vehicles Boats
+**Meta Album URL**: https://meta-album.github.io/datasets/Boats.html
+**Domain ID**: Vehicles
+**Domain Name**: Vehicles
+**Dataset ID**: Boats
+**Dataset Name**: Boats
+**Short Description**: A dataset with images of different boats
+**Number of Classes**: Twenty
+**Number of Images**: Eight hundred
+**Keywords**: vehicles, boats
+**Data Format**: images
+**Image Size**: Uniform size
+**License (original data release)**: Cite paper to use dataset
+**License (Meta Album data release)**: Creative Commons Attribution-NonCommercial 4.0
+**License URL (Meta Album data release)**: https://creativecommons.org/licenses/by-nc/4.0/
+**Source**: Marvel: A Large-Scale Image Dataset for Maritime Vessels
+**Source URL**: https://github.com/avaapm/marveldataset2016
+**Created Date**: March
+**Contact Email**: meta-album@chalearn.org
+**Contact URL**: https://meta-album.github.io/
 
-**Citing this Dataset**
-Please cite the original Marvel dataset paper when using this dataset.
+**Cite this dataset**
 
-**Citing Meta-Album**
-Please cite the Meta-Album paper when using this dataset.
+@InProceedings{Marvel, title={Marvel: A Large-Scale Image Dataset for Maritime Vessels}, booktitle={Computer Vision -- ACCV}, year={}, publisher={Springer International Publishing}, address={}, pages={}, isbn={} }
 
-**Additional Resources**
-For more information on the Meta-Album dataset, please refer to the NeurIPS 2022 paper. For details on dataset preprocessing, please see the supplementary materials. Supporting code can be found on the GitHub repository. Meta-Album is also listed on Papers with Code.
+**Cite Meta-Album**
 
-**Other Versions of this Dataset**
-Other versions of this dataset include the Mini and Extended versions.
+@inproceedings{meta-album, title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification}, booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, url = {https://meta-album.github.io/}, year = {} }
 
-Keywords: boats, vehicles, maritime vessels, image classification, computer vision, chemistry, computer systems
+**More**
+
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
+
+**Other versions of this dataset**
+
+Mini, Extended
+
+Keywords: boats, vehicles, maritime vessels, image classification, few-shot learning

@@ -1,13 +1,13 @@
-Phishing Websites Seed Zero Dataset 
+Phishing Websites Dataset Subsampling with Seed Zero
 
-This dataset is a subsampled version of the Phishing Websites dataset, specifically generated with a seed value of zero. The subsampling process involved uniformly selecting classes and columns from the original dataset.
+This dataset is a subsampling of the Phishing Websites dataset with a seed of zero. The subsampling was done using a specific set of arguments, including a maximum number of rows, columns, and classes, as well as a stratification parameter.
 
-The dataset has undergone several transformations to reduce its size while maintaining its representativeness. First, the number of classes was reduced to ensure that the dataset is manageable for machine learning models. This was done by randomly selecting classes based on their frequency of occurrence in the original dataset. 
+The subsampling process involved uniformly sampling classes from the original dataset, selecting a subset of columns, and then sampling rows from the resulting dataset. The goal was to create a smaller dataset that still retains the essential characteristics of the original dataset.
 
-Next, the number of columns was also reduced to focus on the most important features. This was achieved by uniformly sampling columns from the original dataset. The resulting dataset consists of a selection of the most informative features that are relevant for distinguishing between phishing websites.
+The resulting dataset has a specific set of features, including whether the URL has an IP address, the length of the URL, the presence of a shortening service, and the presence of an at symbol. Other features include the prefix and suffix of the URL, the presence of a subdomain, the final state of the SSL certificate, and the length of time the domain has been registered.
 
-The dataset contains a range of features that are useful for identifying phishing websites. These include features related to the website's domain registration, URL structure, and web traffic patterns. Other features focus on the website's content, such as the presence of certain HTML elements or the use of specific keywords.
+The dataset also includes features related to the website's favicon, port, and HTTPS token, as well as the URL of the anchor and the links in tags. Additionally, it includes features related to submitting to email, abnormal URLs, redirects, and mouseover events. The dataset also includes features related to the age of the domain, DNS records, web traffic, page rank, and Google index.
 
-Tags: Chemistry, Machine Learning
+The dataset is designed to be used for machine learning and data analysis tasks, and is particularly useful for training models to detect phishing websites.
 
-Keywords: Phishing Websites, Machine Learning, Dataset, Subsampling, Feature Selection, Web Traffic Patterns, Domain Registration.
+Keywords: phishing websites, dataset subsampling, machine learning, data analysis, URL features, website characteristics.

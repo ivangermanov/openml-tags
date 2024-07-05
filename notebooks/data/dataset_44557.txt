@@ -1,19 +1,13 @@
-Vehicle Seed Four N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Name: Vehicle Subsample with Four Random Seed and Two Thousand Rows
 
-Tags: Demographics, Social Media 
+Tags: Subsampling of the dataset Vehicle with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to true.
 
-Subsampling of the dataset Vehicle with seed equals Four 
+Generated with the following source code:
 
-Generated with the following source code 
+This function subsamples a dataset by uniformly selecting classes and columns, and then stratifying the sample according to the target variable. The function takes in a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sample.
 
-The function subsample takes in five parameters: self, seed, number rows max, number columns max, number classes max, and stratified. It returns a dataset. The function uses numpy's default random generator with the given seed. It then selects a subset of the data based on the given parameters. 
+The function first selects a subset of classes by uniformly sampling from the unique classes in the target variable. It then selects the indices where one of these classes is present and subsets the data accordingly. Next, it uniformly samples columns if required, and subsets the data again. Finally, it stratifies the sample according to the target variable using train test split, and returns a new dataset with the subsampled data.
 
-If the number of unique classes exceeds the maximum allowed, it selects the top classes based on their frequency. It then selects the rows corresponding to these classes. 
+Features: Compactness, Circularity, Distance Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, and Class.
 
-If the number of columns exceeds the maximum allowed, it uniformly samples the columns. 
-
-Finally, if the total number of rows exceeds the maximum allowed, it performs stratified sampling to select the desired number of rows. 
-
-Features: Compactness, Circularity, Distance Circular Ratio, Radius Aspect Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness about Major, Skewness about Minor, Kurtosis about Major, Kurtosis about Minor, Hollows Ratio, and Class.
-
-Keywords: Subsampling, Dataset, Stratified Sampling, Demographics, Social Media, Feature Selection.
+Keywords: Vehicle Dataset, Subsampling, Stratification, Feature Selection, Data Preprocessing.

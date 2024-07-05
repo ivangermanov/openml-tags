@@ -1,17 +1,21 @@
-Life Science, Machine Learning
+**Data Description**
 
-This dataset contains Frames Per Second (FPS) measurements of video games executed on computers. Each row of the dataset describes the outcome of FPS measurement for a video game executed on a computer. A computer is characterized by its Central Processing Unit (CPU) and Graphics Processing Unit (GPU). Both the CPU and GPU have their names resolved to technical specifications.
+This dataset contains Frames Per Second (FPS) measurement of video games executed on computers. Each row of the dataset describes the outcome of FPS measurement (outcome is attribute FPS) for a video game executed on a computer. A computer is characterized by the Central Processing Unit (CPU) and the Graphics Processing Unit (GPU). For both, the name is resolved to technical specifications that describe the factory state of the respective component. The game is characterized by the name, the displayed resolution, and the quality setting that was adjusted during the measurement.
 
-The technical specifications of the CPU include its Number of Physical Cores, Number of Threads, Base Clock Speed in Megahertz, Total Size of Level One Cache in Kilobytes, Total Size of Level Two Cache in Kilobytes, Total Size of Level Three Cache in Megabytes, Physical Size of the Die in Square Meter, Frequency in Megahertz, Multiplier, whether the Multiplier is Unlocked, Process Size in Nanometer, Thermal Design Power in Watt, Count of Transistors in Million, and Turbo Clock Speed in Megahertz.
+**Attribute Description**
 
-The technical specifications of the GPU include its Bandwidth in Megabytes per second, Base Clock Speed in Megahertz, Boost Clock Speed in Megahertz, Number of Computing Units, Physical Size of the Die in Square Meter, Number of Execution Units, Theoretical Float Thirty-Two Performance in Mega Floating Point Operations per second, Width of Memory Bus in Bits, Size of Memory in Megabytes, Theoretical Pixel Rate in Mega Pixels per second, Process Size in Nanometer, Number of Render Output Units, Number of Shading Units, Number of Texture Mapping Units, Theoretical Texture Rate in Kilo Texels per second, Count of Transistors in Million, Architecture Code, Memory Type, Version of Open Computing Language, Version of Shader Model, Version of Vulkan, Version of OpenGL, and Bus Interface.
+CPU
 
-The game is characterized by its Name, Displayed Resolution, and Quality Setting that was adjusted during the measurement.
+The CPU attributes include the number of physical cores, number of threads, base clock in megahertz, total size of level one cache in kilobytes, total size of level two cache in kilobytes, total size of level three cache in megabytes, physical size of the die in square meters, frequency in megahertz, multiplier of CPU, whether the multiplier is locked or unlocked, used process size in nanometers, thermal design power in watts, count of transistors in millions, and turbo clock in megahertz.
 
-From the original data, only those observations are considered where the Dataset feature's value is fps-benchmark, and then the column is removed.
+GPU
 
-Attributes:
+The GPU attributes include bandwidth in megabytes per second, base clock in megahertz, boost clock in megahertz, number of computing units, physical size of die in square meters, number of execution units, theoretical Float 32 performance in megaflops per second, width of memory bus in bits, size of memory in megabytes, theoretical pixel rate in megapixels per second, used process size in nanometers, number of render output units, number of shading units, number of texture mapping units, theoretical texture rate in kilotexels per second, number of transistors in millions, architecture code, memory type, version of OpenCL, version of shader model, version of Vulkan, version of OpenGL, and bus interface.
 
-Central Processing Unit Name, Central Processing Unit Number of Physical Cores, Central Processing Unit Number of Threads, Central Processing Unit Base Clock Speed, Central Processing Unit Total Size of Level One Cache, Central Processing Unit Total Size of Level Two Cache, Central Processing Unit Total Size of Level Three Cache, Central Processing Unit Physical Size of the Die, Central Processing Unit Frequency, Central Processing Unit Multiplier, Central Processing Unit whether Multiplier is Unlocked, Central Processing Unit Process Size, Central Processing Unit Thermal Design Power, Central Processing Unit Count of Transistors, Central Processing Unit Turbo Clock Speed, Graphics Processing Unit Name, Graphics Processing Unit Architecture, Graphics Processing Unit Bandwidth, Graphics Processing Unit Base Clock Speed, Graphics Processing Unit Boost Clock Speed, Graphics Processing Unit Bus Interface, Graphics Processing Unit Number of Computing Units, Graphics Processing Unit Physical Size of the Die, Graphics Processing Unit DirectX, Graphics Processing Unit Number of Execution Units, Graphics Processing Unit Theoretical Float Thirty-Two Performance, Graphics Processing Unit Width of Memory Bus, Graphics Processing Unit Size of Memory, Graphics Processing Unit Memory Type, Graphics Processing Unit Open Computing Language, Graphics Processing Unit OpenGL, Graphics Processing Unit Pixel Rate, Graphics Processing Unit Process Size, Graphics Processing Unit Number of Render Output Units, Graphics Processing Unit Shader Model, Graphics Processing Unit Number of Shading Units, Graphics Processing Unit Number of Texture Mapping Units, Graphics Processing Unit Texture Rate, Graphics Processing Unit Count of Transistors, Graphics Processing Unit Vulkan, Game Name, Game Resolution, Game Setting, Frames Per Second
+Game
 
-Keywords: Frames Per Second, Video Games, Computers, Central Processing Unit, Graphics Processing Unit, Technical Specifications, Machine Learning, Life Science.
+The game attributes include the game name, displayed resolution, and quality setting.
+
+**Tags:** fps_benchmark
+
+**Keywords:** Frames Per Second, Video Games, Computer Hardware, CPU, GPU, Performance Measurement

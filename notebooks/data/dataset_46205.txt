@@ -1,0 +1,13 @@
+Solar Power Tags: Solar Power Production
+
+This dataset contains a single very long daily time series representing the solar power production in megawatts recorded per every four seconds starting from August first, two thousand nineteen in Australia. It was downloaded from the Australian Energy Market Operator online platform.
+
+The length of this time series is substantial. It is not clear which were the preprocessing steps and how the data was acquired from the original website.
+
+There are four columns: the identifier of a time series, the value of the time series at a given time step, the time step on the time series, and the date of the time series in the format year-month-day.
+
+Preprocessing involved renaming columns, exploding the value column, creating a time step column from the exploded data, creating a date column from the start timestamp and time step column by offsetting the start timestamp by four seconds times the time step, and dropping the start timestamp column. The identifier of a time series was defined as a category and the value was cast to a float.
+
+Features: identifier of a time series, value, time step, date
+
+Keywords: solar power, Australia, energy market, time series, megawatts, preprocessing

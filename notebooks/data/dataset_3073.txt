@@ -1,9 +1,14 @@
-The QSAR-TID-191 dataset contains Quantitative Structure-Activity Relationship (QSAR) data from ChEMBL version seventeen, showcasing activity values measured in pseudo-pCI50 units for various compounds targeting the drug target identified as TID: one hundred ninety-one. This dataset comprises four thousand four hundred forty-two rows and one thousand twenty-six features, including IDs and a class feature denoted as MOLECULE_CHEMBL_ID and MEDIAN_PXC50.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-The features in this dataset represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from SMILES strings utilizing the Pipeline Pilot program developed by Dassault Systèmes BIOVIA. Notably, generating fingerprints typically does not necessitate missing value imputation since all bits are generated.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC. The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-This dataset originates from the MetaQSAR project, launched in September two thousand fifteen.
+The dataset focuses on Human immunodeficiency virus type protease, also known as pol Pol polyprotein. This target is classified as an Enzyme/Protease/Aspartic protease/Aspartic protease AA clan/Aspartic protease AA subfamily. It is associated with Human immunodeficiency virus and belongs to the Species Group.
 
-Tags: Chemistry, Life Science, MTLQSAR, study three
+Several compounds in the dataset target this protease, including darunavir, saquinavir, telinavir, brecanavir, and amprenavir. These are small molecule inhibitors of HIV protease, with some having reached advanced clinical phases and received regulatory approval. The compounds typically have names ending in "vir" and act by inhibiting the viral protease essential for HIV replication.
 
-Keywords: QSAR, ChEMBL, molecular fingerprints, Pipeline Pilot, MetaQSAR, drug target, TID.
+The target protein is associated with multiple Gene Ontology terms, including aspartic type endopeptidase activity, hydrolase activity, and proteolysis. It is also linked to various protein databases and classification systems such as UniProt, InterPro, Pfam, and PDBe.
+
+This QSAR dataset provides valuable information for studying HIV protease inhibitors and developing potential new antiviral therapies. The molecular fingerprint features allow for detailed analysis of structure activity relationships among the compounds targeting this crucial viral enzyme.
+
+Keywords: QSAR, HIV protease, molecular fingerprints, antiviral compounds, structure activity relationships, ChEMBL, drug discovery, protease inhibitors, FCFP

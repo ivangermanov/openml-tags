@@ -1,13 +1,11 @@
-The CNAE Nine dataset has been subsampled using a specific set of arguments to generate a new dataset. This process involved setting a seed value, maximum number of rows, maximum number of columns, and maximum number of classes, as well as determining whether to use stratification.
+Name: CNAE Nine Seed Three
 
-The resulting dataset contains a selection of features, including variables two, four, twenty-five, and so on. The original dataset had more features, but they were uniformly sampled down to the maximum allowed number.
+Tags: Subsampling of the dataset CNAE Nine with seed equals three arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-To ensure representativeness, the classes were also uniformly sampled, with probabilities based on their frequency in the original dataset. The selected classes were then used to filter the data, reducing the number of rows to the maximum allowed.
+Generated with the following source code:
 
-Further sampling was done to reduce the number of columns, again using uniform sampling without replacement. The resulting dataset has a specified number of rows, columns, and classes, and maintains the stratification of the original dataset.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as arguments. It returns a dataset. The function uses a random number generator with the given seed. It then uniformly samples classes from the unique classes in the dataset, selecting the indices where one of these classes is present. If the number of columns is greater than the maximum, it uniformly samples columns. If the number of rows is greater than the maximum, it stratifies accordingly using train test split. The function then returns a dataset with the subsampled data, categorical mask, and columns.
 
-This subsampling process allows for a more manageable dataset while preserving the essential characteristics of the original data.
+Features: 
 
-Tags: Health, Statistics
-
-Keywords: dataset, subsampling, stratification, classes, features
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Columns, Rows, Classes

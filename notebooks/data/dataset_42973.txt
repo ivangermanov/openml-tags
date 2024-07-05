@@ -1,15 +1,23 @@
 **Relative Location of CT Slices on Axial Axis Data Set**
 
-This dataset consists of features extracted from Computed Tomography (CT) images. The class variable is numeric and denotes the relative location of the CT slice on the axial axis of the human body.
+**Tags:** ct-slice-localization
 
-The data was retrieved from a set of CT images from different patients. Each CT slice is described by two histograms in polar space. The first histogram describes the location of bone structures in the image, while the second histogram describes the location of air inclusions inside the body. Both histograms are concatenated to form the final feature vector. Bins that are outside of the image are marked with a specific value.
+**Source:** UCI
 
-The class variable, which represents the relative location of an image on the axial axis, was constructed by manually annotating distinct landmarks in each CT volume with known locations. The location of slices in between landmarks was interpolated.
+**Please cite:** UCI
 
-### Attribute Information
+The dataset consists of features extracted from Computed Tomography (CT) images. The class variable is numeric and denotes the relative location of the CT slice on the axial axis of the human body. The data was retrieved from a set of CT images from different patients. Each CT slice is described by two histograms in polar space. The first histogram describes the location of bone structures in the image, while the second histogram describes the location of air inclusions inside the body. Both histograms are concatenated to form the final feature vector. Bins that are outside of the image are marked with a specific value.
 
-* Patient ID: Each ID identifies a different patient
-* Histograms describing bone structures and air inclusions
-* Reference: Relative location of the image on the axial axis (class value)
+The class variable, which represents the relative location of an image on the axial axis, was constructed by manually annotating distinct landmarks in each CT Volume with known location. The location of slices in between landmarks was interpolated.
 
-Keywords: Computed Tomography, CT images, axial axis, bone structures, air inclusions, histograms, landmarks, interpolation.
+**Attribute Information**
+
+The dataset contains attributes that describe each CT slice. One of the attributes is the patient ID, which identifies a different patient. The other attributes describe the histograms of bone structures and air inclusions.
+
+The relative location of the image on the axial axis is the class value, which ranges from the top of the head to the soles of the feet.
+
+**Dataset Information**
+
+The data was retrieved from a large set of CT images from different patients, including male and female patients. Each CT slice is described by two histograms in polar space, which are concatenated to form the final feature vector. The class variable was constructed by manually annotating distinct landmarks in each CT Volume with known location.
+
+**Keywords:** CT images, axial axis, bone structures, air inclusions, histograms, polar space, patient ID, relative location.

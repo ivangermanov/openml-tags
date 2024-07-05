@@ -1,59 +1,19 @@
-Combined-Wine-Data Dataset
+Combined Wine Data
 
 Tags: Citation Request
 
-This dataset is publicly available for research. Please cite the following source when using this database:
+This dataset is publicly available for research. The details are described in the reference provided below. Please include this citation if you plan to use this database.
 
-Modeling Wine Preferences by Data Mining from Physico-Chemical Properties. In Decision Support Systems.
+The dataset is related to the Portuguese "Vinho Verde" wine, with two variants: red and white wine samples. The inputs include objective tests, such as pH values, and the output is based on sensory data, which is the median of at least three evaluations made by wine experts. Each expert graded the wine quality between zero (very bad) and ten (very excellent).
 
-Title: Wine Quality
+Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed, including mean absolute deviation and confusion matrix for a fixed error tolerance. Also, the relative importances of the input variables were plotted, as measured by a sensitivity analysis procedure.
 
-Sources
+The datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones. Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, it could be interesting to test feature selection methods, as several of the attributes may be correlated.
 
-Created By: University of Minho and CVRVV
+The dataset consists of eleven input variables, based on physicochemical tests, and one output variable, based on sensory data. The input variables include fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol. The output variable is the quality of the wine, scored between zero and ten.
 
-Past Usage:
-Modeling Wine Preferences by Data Mining from Physico-Chemical Properties. In Decision Support Systems.
+There are no missing attribute values in the dataset.
 
-The dataset consists of two subsets, one for red wine and another for white wine, collected from the Portuguese Vinho Verde region. The input variables include objective tests such as pH values, while the output is based on sensory data evaluated by wine experts. Each expert graded the wine quality between zero (very bad) and ten (excellent).
+Fixed acidity refers to most acids involved with wine or fixed or nonvolatile, which do not evaporate readily. Volatile acidity is the amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste. Citric acid is found in small quantities and can add freshness and flavor to wines. Residual sugar is the amount of sugar remaining after fermentation stops, and it is rare to find wines with less than one gram per liter and wines with greater than forty-five grams per liter are considered sweet. Chlorides refer to the amount of salt in the wine. Free sulfur dioxide is the free form of SO2, which exists in equilibrium between molecular SO2 and bisulfite ion, and it prevents microbial growth and the oxidation of wine. Total sulfur dioxide is the amount of free and bound forms of SO2, and in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over fifty ppm, SO2 becomes evident in the nose and taste of wine. Density is the density of water, which is close to that of water, depending on the percent alcohol and sugar content. pH describes how acidic or basic a wine is on a scale from zero (very acidic) to fourteen (very basic), and most wines are between three and four on the pH scale. Sulphates are a wine additive that can contribute to sulfur dioxide gas levels, which acts as an antimicrobial and antioxidant. Alcohol is the percent alcohol content of the wine.
 
-Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Various metrics were computed, including mean absolute deviation and confusion matrix for a fixed error tolerance.
-
-Relevant Information:
-The two datasets are related to red and white variants of the Portuguese Vinho Verde wine. Due to privacy and logistical issues, only physico-chemical and sensory variables are available. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced, with many more normal wines than excellent or poor ones. Outlier detection algorithms could be used to detect the few excellent or poor wines. It would also be interesting to test feature selection methods.
-
-Number of Instances: Red Wine - One Thousand Five Hundred Ninety-Nine; White Wine - Four Thousand Eight Hundred Ninety-Eight.
-Number of Attributes: Eleven plus output attribute.
-
-Attribute Information:
-For more information, please refer to the source article.
-
-Input Variables:
-Fixed Acidity (tartaric acid - grams per decimeter cubed)
-Volatile Acidity (acetic acid - grams per decimeter cubed)
-Citric Acid (grams per decimeter cubed)
-Residual Sugar (grams per decimeter cubed)
-Chlorides (sodium chloride - grams per decimeter cubed)
-Free Sulfur Dioxide (milligrams per decimeter cubed)
-Total Sulfur Dioxide (milligrams per decimeter cubed)
-Density (grams per centimeter cubed)
-pH
-Sulphates (potassium sulphate - grams per decimeter cubed)
-Alcohol (by volume)
-
-Output Variable:
-Quality (score between zero and ten)
-
-Description of Attributes:
-Fixed Acidity: Most acids involved with wine are fixed or non-volatile.
-Volatile Acidity: The amount of acetic acid in wine, which at high levels can lead to an unpleasant, vinegary taste.
-Citric Acid: Found in small quantities, citric acid adds freshness and flavor to wines.
-Residual Sugar: The amount of sugar remaining after fermentation stops, with rare wines having less than one gram per liter and sweet wines having more than forty-five grams per liter.
-Chlorides: The amount of salt in the wine.
-Free Sulfur Dioxide: Prevents microbial growth and oxidation of wine.
-Total Sulfur Dioxide: Amount of free and bound forms of sulfur dioxide.
-Density: Depends on the percentage of alcohol and sugar content.
-pH: Describes how acidic or basic a wine is on a scale from zero to fourteen.
-Sulphates: Contribute to sulfur dioxide gas levels, acting as an antimicrobial and antioxidant.
-
-Keywords: Wine Quality, Physico-Chemical Properties, Sensory Data, Regression Approach, Feature Selection Methods, Outlier Detection Algorithms.
+Keywords: wine quality, physicochemical properties, sensory data, data mining, regression approach, classification, feature selection, outlier detection.

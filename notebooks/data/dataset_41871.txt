@@ -1,26 +1,17 @@
-FOREX USDDKK Hour Close
+FOREX USD/DKK Hourly Close Data
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Language, Text and Literature
+Tags: finance, forex, forex close, forex hour
 
-Data Description:
+Source: Dukascopy Historical Data Feed
 
-This dataset contains the historical price data of the US Dollar versus Danish Krone (USD/DKK) Forex pair, obtained from Dukascopy Historical Data Feed. Each instance represents a single hourly candlestick, covering the period from January first to December thirteenth. Since Forex markets do not operate on weekends, these days are excluded from the dataset. The timestamp feature is set to the Europe/Amsterdam timezone.
+Data Description
 
-The class attribute is determined by comparing the mean of the Close Bid and Close Ask prices for the current hour with the mean of the Close Bid and Close Ask prices for the subsequent hour. A value of true indicates an upward trend, whereas false signifies a downward or stagnant trend.
+This dataset contains the historical price data of the FOREX USD/DKK currency pair from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-Attributes:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-* Timestamp: The date and time of each data point, specified in the Europe/Amsterdam timezone.
-* Bid Open: The opening bid price for each hourly interval.
-* Bid High: The highest bid price recorded during each hourly interval.
-* Bid Low: The lowest bid price recorded during each hourly interval.
-* Bid Close: The closing bid price for each hourly interval.
-* Bid Volume: The frequency of changes to the bid price within each hourly interval.
-* Ask Open: The opening ask price for each hourly interval.
-* Ask High: The highest ask price recorded during each hourly interval.
-* Ask Low: The lowest ask price recorded during each hourly interval.
-* Ask Close: The closing ask price for each hourly interval.
-* Ask Volume: The frequency of changes to the ask price within each hourly interval.
-* Class: A binary indicator of the future trend in the mean close price.
+Attributes
 
-Keywords: Forex, USD/DKK, Candlestick, Time Series, Finance, Market Trends, Currency Exchange.
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
+
+Keywords: FOREX, USD/DKK, currency pair, historical data, candlestick, timezone, class attribute, bid price, ask price.

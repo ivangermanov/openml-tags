@@ -1,9 +1,20 @@
-The Artificial Characters dataset is a collection of artificially generated data that describes the structure of capital letters. Specifically, it focuses on the letters A, C, D, E, F, G, H, L, P, and R. Each letter's structure is broken down into a set of segments, resembling how an automatic program would segment an image. There are six hundred descriptions for each letter.
+Name: artificial-characters
+Tags: artificial, OpenML, study, uci
 
-Originally, each instance of a letter was stored in a separate file, containing between one and seven segments, numbered zero through six. These files have since been merged, resulting in a single dataset. The first five instances describe the first five segments of the first segmentation of the first letter, followed by another seven instances describing another segmentation of the same letter, and so on.
+This database has been artificially generated. It describes the structure of capital letters A, C, D, E, F, G, H, L, P, R, indicated by numbers in that order. Each letter's structure is described by a set of segments (lines) which resemble the way an automatic program would segment an image. The dataset consists of numerous such descriptions per letter.
 
-The dataset contains several attributes that provide information about each segment. The object number indicates the number of the segment, ranging from zero to seven. The initial and final coordinates of a segment in a Cartesian plane are also included, represented by four variables: XX1, YY1, XX2, and YY2. Additionally, the size of each segment is calculated using the geometric distance between two points, A and B. Finally, the diagonal attribute represents the length of the diagonal of the smallest rectangle enclosing the character's picture, which remains constant across all objects.
+Originally, each 'instance' (letter) was stored in a separate file, each consisting of between one and seven segments, numbered sequentially. Here they are merged. That means that the first several instances describe the first segments of the first segmentation of the first letter (A). Additionally, the training set and test set are merged. The subsequent instances describe another segmentation (also of the letter A) and so on.
 
-This dataset has been used in various research studies, including those focused on learning fuzzy concept definitions and learning quantitative features in symbolic environments.
+Attribute Information:
+- Object number: the number of the segment
+- Initial and final coordinates of a segment in a Cartesian plane
+- Size: the length of a segment computed by using the geometric distance between two points
+- Diagonal: the length of the diagonal of the smallest rectangle which includes the picture of the character. The value of this attribute is the same in each object.
 
-Keywords: Artificial Characters, capital letters, image segmentation, Cartesian plane, geometric distance, fuzzy concept definitions, symbolic environments.
+Relevant Papers:
+- "Learning Fuzzy Concept Definitions", IEEE-Fuzzy Conference
+- "Learning Quantitative Feature in a Symbolic Environment", LNAI
+
+This dataset is sourced from UCI (University of California, Irvine) Machine Learning Repository. Please cite UCI when using this dataset in research or publications.
+
+Keywords: artificial characters, letter segmentation, machine learning, pattern recognition, UCI dataset, capital letters, geometric features

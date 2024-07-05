@@ -1,55 +1,13 @@
-Australian Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Australian Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Australian with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-Subsampling of the dataset Australian with seed equal to four 
-arguments number rows maximum equal to two thousand 
-arguments number columns maximum equal to one hundred 
-arguments number classes maximum equal to ten 
-arguments no stratify equals false 
+Generated with the following source code:
 
-Generated with the following source code: 
+The function subsample takes in self, seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses numpy's random default random generator to generate random numbers. It then selects a subset of the data based on the given parameters. If the number of classes is greater than nclasses max, it selects a random subset of classes based on their value counts. It then selects the indices where one of these classes is present and subsets the data accordingly. If the number of columns is greater than ncols max, it selects a random subset of columns. If the number of rows is greater than nrows max, it uses train test split to select a stratified subset of the data.
 
-def subsample(self, seed, number rows maximum equals two thousand, number columns maximum equals one hundred, number classes maximum equals ten, stratified equals true) -> Dataset: 
-random number generator equals numpy random default random generator seed 
-x equals self x 
-y equals self y 
+The function returns a dataset with the subsampled data, including the categorical mask and column names.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes maximum: 
-value counts equals y value counts 
-selected classes equals random number generator choice classes, size equals number classes maximum, replace equals false, probability equals value counts divided by sum of value counts 
-Select the indices where one of these classes is present 
-indices equals y index y is in selected classes 
-x equals x iloc indices 
-y equals y iloc indices 
+Features: (skipped due to unreadability)
 
-Uniformly sample columns if required 
-if length of x columns is greater than number columns maximum: 
-columns indices equals random number generator choice list range length of x columns, size equals number columns maximum, replace equals false 
-sorted column indices equals sorted columns indices 
-selected columns equals list x columns sorted column indices 
-x equals x selected columns 
-else: 
-sorted column indices equals list range length of x columns 
-if length of x is greater than number rows maximum: 
-Stratify accordingly 
-target name equals y name 
-data equals pandas concat x and y along columns 
-_, subset equals train test split data, test size equals number rows maximum, stratify equals data target name, shuffle equals true, random state equals seed 
-x equals subset drop target name along columns 
-y equals subset target name 
-We need to convert categorical columns to string for open machine learning 
-categorical mask equals list of self categorical mask for each index in sorted column indices 
-columns equals list x columns 
-return Dataset 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Features: 
-(Australian dataset features were skipped due to being unreadable)
-
-Keywords: subsampling, machine learning, mathematics, dataset, stratification, sampling
+Keywords: subsampling, dataset, stratified sampling, random sampling, data preprocessing

@@ -1,26 +1,15 @@
-**FOREX aud sgd minute High**
+FOREX AUD/SGD Minute High Tags: finance, forex, forex high, forex minute
 
-Tags: Computer Systems, Finance, Forex, Forex High, Forex Minute, Machine Learning
+Source: Dukascopy Historical Data Feed
 
-This dataset contains historical price data of the Forex aud sgd from Dukascopy. Each instance represents one candlestick of one minute. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is based on the Europe Amsterdam time zone.
+Data Description
+This dataset contains historical price data of the FOREX AUD/SGD from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute denotes the direction of the mean high price in the subsequent minute relative to the mean high price of the current minute. In other words, the class attribute is true when the mean high price increases in the following minute, and false when it decreases or remains unchanged.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following minute, relative to the High Bid and the High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up in the following minute, and the class attribute is False when the mean High price is going down or stays the same in the following minute.
 
-Please note that this is a hypothetical task intended for scientific purposes only. Realistic trading strategies should be applied to predictions based on close attributes, which are also available.
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-**Attributes**
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-* **Timestamp**: The time of the current data point in the Europe Amsterdam time zone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price during this time interval.
-* **Bid Low**: The lowest bid price during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price during this time interval.
-* **Ask Low**: The lowest ask price during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
-
-Keywords: Forex, aud sgd, machine learning, candlestick, time series analysis, financial markets.
+Keywords: FOREX, AUD/SGD, historical data, candlestick, finance, trading

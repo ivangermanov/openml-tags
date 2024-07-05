@@ -1,19 +1,13 @@
-Electricity Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True 
+Name: Electricity Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Chemistry, Earth Science 
+Tags: Subsampling of the dataset Electricity with seed equals Four, arguments nrows max equals Two Thousand, arguments ncols max equals One Hundred, arguments nclasses max equals Ten, arguments no stratify equals False.
 
-Subsampling of the dataset Electricity with a seed equal to four. The arguments include number of rows maximum equal to two thousand, number of columns maximum equal to one hundred, number of classes maximum equal to ten, and no stratify equals true. This was generated using the following source code.
+Generated with the following source code:
 
-The function subsample takes in several parameters including self, seed, number of rows max, number of columns max, number of classes max, and stratified. It returns a dataset. First, it creates a random number generator using the given seed. Then, it selects the feature matrix and target vector from the given dataset. Next, it uniformly samples the classes by selecting a specified number of unique classes based on their frequency in the target vector. 
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses a random number generator with the given seed to sample the dataset. It first samples the classes uniformly, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly. Next, it samples the columns uniformly, selecting a specified number of columns. If the number of rows exceeds the maximum allowed, it uses stratified sampling to select a subset of the data, ensuring that the class distribution is preserved.
 
-If there are more unique classes than the specified maximum, it selects the top frequent classes. Otherwise, it uses all unique classes. After selecting the classes, it filters the feature matrix and target vector to only include samples belonging to the selected classes. 
+The function returns a new dataset with the sampled data, including the categorical mask and column names.
 
-Then, it uniformly samples the columns of the feature matrix if necessary. If the number of columns exceeds the specified maximum, it randomly selects a specified number of columns without replacement. Otherwise, it uses all columns. After sampling the columns, it sorts the column indices to maintain consistency. 
+Features: Date, Day, Period, New South Wales Price, New South Wales Demand, Victoria Price, Victoria Demand, Transfer, Class.
 
-Finally, if the number of samples exceeds the specified maximum, it stratifies the samples according to the target vector. It concatenates the feature matrix and target vector, then splits them into subsets using a stratified split method. The resulting subsets are used as the new feature matrix and target vector. 
-
-The function returns a dataset containing the sampled feature matrix, target vector, categorical mask, and column names. The categorical mask is created by filtering the original categorical mask using the selected column indices.
-
-Features: Date, Day, Period, Price, Demand, Transfer, Class
-
-Keywords: Electricity, Subsampling, Stratification, Random Sampling, Feature Matrix, Target Vector.
+Keywords: Electricity, Subsampling, Stratified Sampling, Dataset, Classes, Columns, Rows.

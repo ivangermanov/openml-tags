@@ -1,26 +1,13 @@
-Magic Telescope Dataset Subsampling with Seed One 
+Magic Telescope Dataset Subsampling with Seed One
 
-This dataset is a subsampling of the Magic Telescope dataset with a seed value of one. The subsampling process involves uniformly sampling classes, columns, and rows from the original dataset.
+This dataset is a subsample of the Magic Telescope dataset, generated with a seed of one. The subsampling process involved uniformly sampling classes and columns, as well as stratified sampling of rows.
 
-The subsampling process starts by selecting classes uniformly. If there are more classes than the maximum allowed number of classes, the classes are selected based on their frequency in the dataset. The indices where these selected classes are present are then used to filter the data.
+The original dataset was reduced to a maximum of ten classes, and the classes were selected based on their frequency in the original dataset. The selected classes were then used to filter the data, and the resulting dataset was further reduced to a maximum of one hundred columns. The columns were selected uniformly at random from the remaining columns.
 
-Next, the columns are uniformly sampled if the number of columns exceeds the maximum allowed number of columns. The selected columns are then used to filter the data further.
+Finally, the dataset was reduced to a maximum of two thousand rows, using stratified sampling to ensure that the class distribution was preserved. The stratified sampling was performed using the train test split function from scikit-learn, with the target variable being the class label.
 
-Finally, the rows are sampled using stratification if the number of rows exceeds the maximum allowed number of rows. This ensures that the sampled data maintains the same class distribution as the original dataset.
+The resulting dataset consists of the selected features and the corresponding class labels. The features include length, width, size, concentration, asymmetry, and distance, among others. The class labels are categorical and have been converted to string format for use with OpenML.
 
-The resulting dataset has undergone significant subsampling, with only a fraction of the original data remaining. Despite this, the dataset still maintains its original characteristics and can be used for various machine learning tasks.
+Tags: Subsampling of the Magic Telescope dataset with seed one
 
-Features:
-
-* Length
-* Width
-* Size
-* Concentration
-* Asymmetry
-* Alpha
-* Distance
-* Class
-
-Tags: Statistics, Text and Literature 
-
-Keywords: subsampling, dataset, machine learning, stratification, uniform sampling
+Keywords: dataset subsampling, stratified sampling, class reduction, column selection, row reduction

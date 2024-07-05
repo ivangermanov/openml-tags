@@ -1,14 +1,17 @@
-Subsampling of the dataset KDD Cup Nine Upselling with a specified seed value. This dataset is part of the education and machine learning domains.
+Name: KDD Cup 09 Upselling Seed 4
 
-The subsampling process involves uniformly selecting classes from the available unique classes in the dataset. If the number of unique classes exceeds the maximum allowed, a random selection is made based on the value counts of each class.
+Tags: Subsampling of the dataset KDD Cup 09 Upselling
 
-Next, the columns are uniformly sampled if the total number of columns exceeds the maximum allowed. The selected columns are then used for further processing.
+Generated with the following source code:
 
-If the resulting dataset still has more rows than the maximum allowed, stratified sampling is applied to ensure an even distribution of classes in the final dataset. This is achieved by concatenating the feature data with the target variable, performing a train-test split, and then separating the features and target variables again.
+This dataset is a subsample of the original KDD Cup 09 Upselling dataset, which has been reduced in size to facilitate faster processing and analysis. The subsampling process involved uniformly selecting classes and columns from the original dataset, while ensuring that the resulting dataset remains stratified and representative of the original data.
 
-Finally, the categorical columns are converted to strings, and the resulting dataset is returned with its corresponding metadata, including the column names and categorical mask.
+The subsampling process began by selecting a subset of classes from the original dataset, with the goal of reducing the number of classes to a maximum of ten. This was achieved by uniformly sampling the classes, with the probability of selection proportional to the frequency of each class in the original dataset.
 
-Features: 
-Var Four Hundred Three, Var Five Twenty, Var Nine Hundred,..., 
+Once the classes were selected, the columns of the dataset were uniformly sampled to reduce the number of features to a maximum of one hundred. This was done to reduce the dimensionality of the dataset and make it more manageable for analysis.
 
-Keywords: Subsampling, Stratified Sampling, Machine Learning, Education, Dataset
+Finally, the rows of the dataset were stratified and sampled to reduce the total number of samples to a maximum of two thousand. This was done to ensure that the resulting dataset remains representative of the original data, while also reducing the computational resources required for analysis.
+
+Features: (removed due to unreadability)
+
+Keywords: KDD Cup 09, Upselling, Subsampling, Stratification, Dimensionality Reduction

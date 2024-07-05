@@ -1,80 +1,17 @@
-Road Safety Seed Four N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Road Safety Seed Four Rows Two Thousand Columns One Hundred Classes Ten Stratify True
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Road Safety with seed equals four, arguments nrows equals two thousand, arguments ncols equals one hundred, arguments nclasses equals ten, and arguments no stratify equals true.
 
-Subsampling of the dataset Road Safety with seed equals four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true generated with the following source code:
+Generated with the following source code:
 
-def subsample(self, seed: int, number_rows_max: int = two thousand, number_columns_max: int = one hundred, number_classes_max: int = ten, stratified: bool = true,) -> Dataset:
-random number generator = numpy random default random generator seed 
-x equals self x 
-y equals self y 
+The function subsample takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes max: 
-value counts equals y value counts 
-selected classes equals random number generator choice classes, size equals number classes max, replace equals false, probability equals value counts over sum of value counts, 
-Select the indices where one of these classes is present index equals y index y is in selected classes 
-x equals x iloc index 
-y equals y iloc index 
+The function first gets the unique classes from the target variable. If there are more classes than the maximum allowed, it selects a random subset of classes based on their frequency. It then selects the indices where one of these classes is present and subsets the data accordingly.
 
-Uniformly sample columns if required 
-if length of x columns is greater than number columns max: 
-column indexes equals random number generator choice list range length of x columns, size equals number columns max, replace equals false, 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns sorted column indexes 
-x equals x selected columns 
-else: 
-sorted column indexes equals list range length of x columns 
+Next, if the number of columns is greater than the maximum allowed, it randomly selects a subset of columns. If the number of rows is greater than the maximum allowed, it uses stratified sampling to select a subset of rows.
 
-if length of x is greater than number rows max: 
-Stratify accordingly target name equals y name 
-data equals pandas concat x y axis equals columns 
-_, subset equals sklearn model selection train test split data, test size equals number rows max, stratify equals data target name, shuffle equals true, random state equals seed, 
-x equals subset drop target name axis equals columns 
-y equals subset target name 
+Finally, it returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-We need to convert categorical columns to string for openml 
-categorical mask equals self categorical mask i for i in sorted column indexes 
-columns equals list x columns 
-return Dataset 
-technically this is not the same but its where it was derived from dataset equals self dataset, 
-x equals x, 
-y equals y, 
-categorical mask equals categorical mask, 
-columns equals columns, 
+Features: Vehicle Reference, Vehicle Type, Vehicle Manoeuvre, Vehicle Location, Hit Object in Carriageway, Hit Object off Carriageway, Was Vehicle Left Hand Drive, Age of Driver, Age Band of Driver, Engine Capacity, Propulsion Code, Age of Vehicle, Location Easting, Location Northing, Longitude, Latitude, Police Force, Number of Vehicles, Number of Casualties, Local Authority, Road Number, Urban or Rural Area, Vehicle Reference, Casualty Reference, Sex of Casualty, Age of Casualty, Age Band of Casualty, Pedestrian Location, Pedestrian Movement, Casualty Type, Casualty IMD Decile, Sex of Driver
 
-Features: 
-Vehicle Reference, 
-Vehicle Type, 
-Vehicle Manoeuvre, 
-Vehicle Location Restricted Lane, 
-Hit Object in Carriageway, 
-Hit Object off Carriageway, 
-Was Vehicle Left Hand Drive, 
-Age of Driver, 
-Age Band of Driver, 
-Engine Capacity, 
-Propulsion Code, 
-Age of Vehicle, 
-Location Easting OSGR, 
-Location Northing OSGR, 
-Longitude, 
-Latitude, 
-Police Force, 
-Number of Vehicles, 
-Number of Casualties, 
-Local Authority District, 
-First Road Number, 
-Second Road Number, 
-Urban or Rural Area, 
-Casualty Reference, 
-Sex of Casualty, 
-Age of Casualty, 
-Age Band of Casualty, 
-Pedestrian Location, 
-Pedestrian Movement, 
-Casualty Type, 
-Casualty IMD Decile, 
-Sex of Driver
-
-Keywords: Road Safety, Machine Learning, Subsampling, Dataset, Stratification
+Keywords: Road Safety, Subsampling, Stratified Sampling, Dataset, Machine Learning

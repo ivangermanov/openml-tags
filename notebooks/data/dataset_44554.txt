@@ -1,13 +1,21 @@
-Vehicle Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Using Stratification Tags: Subsampling of the Vehicle Dataset 
+Name: Vehicle Seed One 
 
-This dataset is a subsampled version of the original Vehicle dataset. It was generated using a specific set of arguments, including a seed value of one, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, stratification was used during the sampling process.
+Tags: Subsampling of the dataset Vehicle with seed one 
 
-The subsampling process involved several steps. First, the unique classes in the dataset were identified, and then a selection of ten classes was made using a random choice method that took into account the value counts of each class. The indices of the samples belonging to these selected classes were retained, while the others were discarded. 
+Generated with the following source code: 
 
-Next, the columns of the dataset were sampled uniformly to reduce their number to one hundred. This was done by randomly selecting column indices and then sorting them to ensure consistency. If the resulting dataset still had more than two thousand rows, stratified sampling was applied again to reduce the row count while maintaining the class balance.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset. 
 
-Finally, the categorical columns were converted to strings to conform to OpenML requirements. The resulting dataset consists of the sampled features, target variable, and categorical mask, along with metadata information about its origin.
+The function first gets the random number generator with the given seed. It then gets the features and target from the dataset. 
 
-Features: Compactness, Circularity, Radius Ratio, Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Rectangularity, Scaled Variance Major, Scaled Variance Minor, Scaled Radius of Gyration, Skewness About Major, Skewness About Minor, Kurtosis About Major, Kurtosis About Minor, Hollows Ratio, Class
+If the number of unique classes is more than the maximum number of classes, it selects the classes to keep based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the features and target accordingly. 
 
-Keywords: Vehicle dataset, subsampling, stratification, feature selection, class balancing
+If the number of columns is more than the maximum number of columns, it uniformly samples the columns to keep. 
+
+If the number of rows is more than the maximum number of rows, it stratifies the data accordingly and samples the rows to keep. 
+
+Finally, it converts categorical columns to string and returns the dataset with the filtered features, target, categorical mask, and columns. 
+
+Features: Compactness, Circularity, Distance Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity 
+
+Keywords: Vehicle Dataset, Subsampling, Stratification, Feature Selection

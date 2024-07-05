@@ -1,17 +1,15 @@
-Subsampling of the dataset MFEAT Factors with Seed Three
+Name: MFeat Factors Seed Three
 
-This dataset is a subsample of the MFEAT Factors dataset, generated using a specific set of arguments and parameters. The subsampling process involves uniformly selecting classes and columns from the original dataset.
+Tags: Subsampling of the dataset MFeat Factors with seed equals three
 
-The arguments used to generate this dataset include a seed value of three, a maximum number of rows of two thousand, a maximum number of columns of one hundred, and a maximum number of classes of ten. Additionally, the stratification option is set to true, which means that the sampling is done in a way that preserves the class distribution of the original dataset.
+This dataset is a subsample of the original MFeat Factors dataset. It was generated using a specific source code that involves uniform sampling of classes and columns, as well as stratified sampling of rows.
 
-The subsampling process first selects a subset of classes from the original dataset using uniform sampling. If the number of unique classes exceeds the maximum allowed, the selection is done based on the frequency of each class. Once the classes are selected, the corresponding rows are extracted from the original dataset.
+The subsample was created by first uniformly sampling classes from the original dataset. If the number of unique classes exceeded a certain maximum, the classes were selected based on their frequency in the dataset. The indices where these selected classes were present were then used to subset the original data.
 
-Next, the process uniformly samples columns from the resulting dataset. If the number of columns exceeds the maximum allowed, a random subset of columns is selected. Finally, if the number of rows still exceeds the maximum allowed, stratified sampling is used to select a subset of rows that preserve the class distribution.
+Next, the columns were uniformly sampled if the number of columns exceeded a certain maximum. The selected columns were then used to subset the data.
 
-The resulting dataset consists of the selected rows and columns, along with a categorical mask indicating which columns contain categorical variables. The dataset also includes information about its origin, including the original dataset name and the arguments used to generate it.
+Finally, the rows were stratified sampled based on the target variable. This involved concatenating the data and target variable, and then using a train-test split function to select a subset of the data.
 
-Features: 
+The resulting dataset has a specific set of features, including attributes one, five, six, eight, eleven, twelve, thirteen, sixteen, seventeen, twenty-two, twenty-three, twenty-six, twenty-nine, thirty-three, thirty-five, thirty-nine, forty-two, forty-three, forty-five, forty-six, forty-seven, forty-nine, fifty-two, fifty-four, fifty-six, fifty-seven, sixty, sixty-two, sixty-three, sixty-seven, sixty-nine, seventy-three, seventy-seven, eighty-one, eighty-two, eighty-three, eighty-five, eighty-six, eighty-nine, ninety-two, ninety-four, ninety-five, ninety-six, ninety-eight, ninety-nine, one hundred, one hundred seven, one hundred eight, one hundred eleven, one hundred twelve, one hundred fourteen, one hundred eighteen, one hundred nineteen, one hundred twenty-one, one hundred twenty-four, one hundred twenty-five, one hundred twenty-seven, one hundred twenty-eight, one hundred thirty-two, one hundred thirty-four, one hundred thirty-five, one hundred thirty-eight, one hundred forty, one hundred forty-one, one hundred forty-two, one hundred forty-three, one hundred forty-eight, one hundred forty-nine, one hundred fifty, one hundred fifty-two, one hundred fifty-four, one hundred fifty-five, one hundred fifty-six, one hundred fifty-seven, one hundred fifty-eight, one hundred sixty-one, one hundred sixty-two, one hundred sixty-five, one hundred sixty-eight, one hundred seventy, one hundred seventy-two, one hundred seventy-seven, one hundred seventy-nine, one hundred eighty-one, one hundred eighty-two, one hundred eighty-three, one hundred eighty-five, one hundred eighty-eight, one hundred ninety-three, one hundred ninety-six, one hundred ninety-nine, two hundred, two hundred one, two hundred three, two hundred four, two hundred seven, two hundred ten, two hundred twelve, two hundred fourteen, two hundred fifteen.
 
-att One, att Five, att Six, att Eight, att Eleven, att Twelve,... 
-
-Keywords: MFEAT Factors, subsampling, stratification, uniform sampling, categorical variables.
+Keywords: dataset subsampling, stratified sampling, uniform sampling, feature selection, data preprocessing.

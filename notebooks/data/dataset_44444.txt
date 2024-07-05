@@ -1,17 +1,19 @@
-Cover Type Seed One 
+Name: Cover Type Seed One
 
-Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Cover Type with seed equals one arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-Subsampling of the dataset Cover Type 
+Generated with the following source code:
 
-This dataset is a subsample of the original Cover Type dataset. It was generated using a specific set of parameters including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a flag for stratification. 
+This function subsamples a dataset. It takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-The subsampling process began by uniformly sampling classes from the original dataset. The goal was to select a limited number of classes while maintaining a representative distribution. This was achieved by selecting classes based on their frequency in the original dataset. 
+The function first gets the unique classes in the dataset. If there are more classes than the maximum allowed, it selects a random subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present.
 
-Next, the columns were uniformly sampled to reduce the dimensionality of the dataset. The selection of columns was random, but ensured that the resulting dataset retained a good representation of the original features.
+Next, it uniformly samples columns if required. If the number of columns is more than the maximum allowed, it selects a random subset of columns.
 
-Finally, the number of rows was reduced through stratified sampling to ensure that the resulting dataset maintained a balanced distribution of classes. 
+If the number of rows is more than the maximum allowed, it stratifies the data accordingly. It concatenates the data and target, splits it into a subset of the desired size, and then separates the data and target again.
 
-Features include Elevation, Aspect, Slope, Distance to Hydrology, Distance to Roadways, Hillshade, Distance to Fire Points, Wilderness Area, and Soil Type.
+Finally, it converts categorical columns to string and returns the subsampled dataset.
 
-Keywords: Cover Type, Subsampling, Machine Learning, Stratification, Dimensionality Reduction
+Features: Elevation, Aspect, Slope, Horizontal Distance to Hydrology, Vertical Distance to Hydrology, Horizontal Distance to Roadways, Hillshade at Nine Am, Hillshade at Noon, Hillshade at Three Pm, Horizontal Distance to Fire Points, Wilderness Area One, Wilderness Area Two, Wilderness Area Three, Wilderness Area Four, Soil Type One, Soil Type Two, Soil Type Three, Soil Type Four, Soil Type Five, Soil Type Six, Soil Type Seven, Soil Type Eight, Soil Type Nine, Soil Type Ten, Soil Type Eleven, Soil Type Twelve, Soil Type Thirteen, Soil Type Fourteen, Soil Type Fifteen, Soil Type Sixteen, Soil Type Seventeen, Soil Type Eighteen, Soil Type Nineteen, Soil Type Twenty, Soil Type Twenty One, Soil Type Twenty Two, Soil Type Twenty Three, Soil Type Twenty Four, Soil Type Twenty Five, Soil Type Twenty Six, Soil Type Twenty Seven, Soil Type Twenty Eight, Soil Type Twenty Nine, Soil Type Thirty, Soil Type Thirty One, Soil Type Thirty Two, Soil Type Thirty Three, Soil Type Thirty Four, Soil Type Thirty Five, Soil Type Thirty Six, Soil Type Thirty Seven, Soil Type Thirty Eight, Soil Type Thirty Nine, Soil Type Forty, class
+
+Keywords: dataset subsampling, stratification, feature selection, class selection, random sampling

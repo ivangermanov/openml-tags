@@ -1,13 +1,19 @@
-KDD Cup Ninety Nine Seed Four Dataset 
+Name: KDD Cup Ninety-Nine Seed Four
 
-This dataset is a subsampling of the KDD Cup Ninety Nine dataset with a seed of four. It has been generated using a specific source code written in Python.
+Tags: Subsampling of the dataset KDD Cup Ninety-Nine with seed equals four, arguments nrows max equals two thousand, arguments ncols max equals one hundred, arguments nclasses max equals ten, arguments no stratify equals true.
 
-The subsample function takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to use stratified sampling. In this case, the seed value is four, the maximum number of rows is two thousand, the maximum number of columns is one hundred, and the maximum number of classes is ten.
+Generated with the following source code:
 
-The function first uniformly samples the classes, selecting a specified number of unique classes from the dataset. It then selects the indices where one of these classes is present and uses these indices to subset the data.
+This function subsamples a dataset. It takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-Next, the function uniformly samples the columns, selecting a specified number of columns from the dataset. Finally, it stratifies the data according to the target variable and subsets the data to the desired number of rows.
+The function first uniformly samples classes. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present.
 
-The resulting dataset contains a selection of features, including duration, protocol type, service, flag, and others related to network traffic and system access. The dataset is tagged as relating to Agriculture and Earth Science.
+Next, the function uniformly samples columns. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns. It then selects the corresponding columns from the dataset.
 
-Keywords: KDD Cup Ninety Nine, dataset, subsampling, stratified sampling, network traffic, system access, agriculture, earth science.
+If the number of rows is greater than the maximum number of rows, the function stratifies the dataset accordingly. It concatenates the dataset with its target variable, performs a train-test split with stratification, and then separates the dataset back into its features and target variable.
+
+Finally, the function converts categorical columns to string and returns the subsampled dataset.
+
+Features: duration, protocol type, service, flag, source bytes, destination bytes, land, wrong fragment, urgent, hot, number of failed logins, logged in, number of compromised, root shell, su attempted, number of root, number of file creations, number of shells, number of access files, number of outbound commands, is host login, is guest login, count, server count, server error rate, server error rate, error rate, server error rate, same server rate, different server rate, server different host rate, destination host count, destination host server count, destination host same server rate, destination host different server rate, destination host same source port rate, destination host server different host rate, destination host error rate, destination host server error rate, error rate, destination host server error rate, target.
+
+Keywords: dataset subsampling, stratification, feature selection, class sampling, column sampling.

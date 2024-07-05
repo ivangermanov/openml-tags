@@ -1,13 +1,15 @@
-Name: Dionis Seed Two N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Dionis Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Dionis generated with four thousand one hundred sixty-seven samples 
+Tags: Subsampling of the dataset Dionis with seed equals two arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
-This dataset has been generated through a process of subsampling, which involves selecting a smaller portion of data from the larger Dionis dataset. This subsampling process has been performed using a specific set of parameters, including a seed value of two, a maximum number of two thousand rows, a maximum number of one hundred columns, and a maximum number of ten classes. Additionally, the stratification option has been enabled, which ensures that the subsampled data maintains a similar distribution of classes as the original dataset.
+Generated with the following source code:
 
-The subsampling process involves several steps, including uniformly sampling classes, selecting the corresponding indices, and then uniformly sampling columns if necessary. The resulting dataset consists of two thousand samples, each with one hundred features, and belongs to one of ten classes.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to select a random subset of the data. The function first selects a random subset of classes, then selects a random subset of columns, and finally selects a random subset of rows. The stratified argument determines whether the sampling should be stratified or not.
+
+The function starts by getting the unique classes in the dataset and selecting a random subset of them. It then selects the indices where one of these classes is present and uses these indices to select the corresponding rows and columns from the dataset. If the number of columns is greater than the maximum allowed, it selects a random subset of columns. If the number of rows is greater than the maximum allowed, it uses the train test split function from scikit learn to select a stratified random subset of rows.
+
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
 Features: 
 
-Class 
-
-Keywords: Subsampling, Dataset, Dionis, Stratification, Classes, Columns, Rows, Seed Value
+Class

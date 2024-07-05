@@ -1,15 +1,11 @@
-Australian Seed Three N Rows Two Thousand NC Classes Ten NC Columns One Hundred Stratify True 
+Australian Seed Three Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Australian with seed equal to three, arguments number of rows maximum equal to two thousand, arguments number of columns maximum equal to one hundred, arguments number of classes maximum equal to ten, and arguments no stratify equal to false.
 
-Sub sampling of the dataset Australian with a specified seed value. This sub sampling process involves reducing the number of rows, columns, and classes in the original dataset while maintaining the overall characteristics of the data. The goal is to create a smaller, more manageable dataset that still accurately represents the original data.
+Generated with the following source code:
 
-The sub sampling process begins by selecting a specified number of classes from the original dataset. If the number of unique classes exceeds the maximum allowed, a random selection is made based on the frequency of each class. This ensures that the sampled classes are representative of the overall distribution of classes in the original dataset.
+The function subsample takes in a seed, number of rows maximum, number of columns maximum, number of classes maximum, and a stratified boolean as parameters. It returns a dataset. The random number generator is set with the given seed. The input data x and y are taken from the original dataset. The unique classes in y are found and if there are more classes than the maximum allowed, a random selection of classes is made based on their frequency in the dataset. The indices where these selected classes are present are found and used to subset the data x and y. If the number of columns in x is more than the maximum allowed, a random selection of columns is made and the data x is subsetted accordingly. If the number of rows in x is more than the maximum allowed, the data is split using train test split with stratification based on the target variable y. The categorical columns are converted to string format and the dataset is returned with the subsetted data x, y, categorical mask, and columns.
 
-Next, the sub sampling process selects a specified number of columns from the original dataset. If the number of columns exceeds the maximum allowed, a random selection is made without replacement. This ensures that the sampled columns are diverse and representative of the overall characteristics of the data.
+Features: 
 
-Finally, the sub sampling process selects a specified number of rows from the sampled columns and classes. If the number of rows exceeds the maximum allowed, a stratified sampling approach is used to ensure that the sampled rows are representative of the overall distribution of classes in the original dataset.
-
-The resulting sub sampled dataset is a smaller, more manageable version of the original dataset that still accurately represents the overall characteristics of the data. This sub sampled dataset can be used for machine learning model training and testing, allowing for faster and more efficient development of predictive models.
-
-Keywords: sub sampling, machine learning, dataset, stratified sampling, class distribution, column selection, row selection.
+Keywords: Australian dataset, subsampling, stratification, random selection, dataset generation.

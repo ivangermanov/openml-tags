@@ -1,16 +1,16 @@
-Quality Prediction in a Mining Process 
-Tags: Context 
+**Quality Prediction in a Mining Process**
 
-The dataset originates from one of the most critical components of a mining process: a flotation plant. The primary objective is to utilize this data to forecast the level of impurity present in the ore concentrate. Since this impurity is measured every hour, if we can accurately predict the percentage of silica (impurity) in the ore concentrate, we can empower engineers by providing them with early information to take prompt action. Consequently, they will be able to take corrective measures in advance, thereby reducing the level of impurity, if necessary, and contributing to environmental sustainability by decreasing the amount of ore that ends up in tailings as a result of reduced silica in the ore concentrate.
+**Context**
+The dataset originates from a crucial part of a mining process: a flotation plant. The primary objective is to utilize this data to predict the amount of impurity in the ore concentrate. As this impurity is measured every hour, if we can predict the silica content in the ore concentrate, we can provide engineers with early information to take corrective actions and empower them to reduce impurity, if necessary, and also contribute to environmental sustainability by minimizing the amount of ore that goes to tailings.
 
-Content 
+**Content**
+The dataset consists of a time and date range, spanning from March to September. Some columns were sampled every twenty seconds, while others were sampled on an hourly basis. The second and third columns represent quality measures of the iron ore pulp right before it is fed into the flotation plant. Columns four to eight are the most critical variables that impact the ore quality at the end of the process. Columns nine to twenty-two contain process data, including level and air flow inside the flotation columns, which also affect ore quality. The last two columns represent the final iron ore pulp quality measurement from the laboratory. The target is to predict the percentage of silica in the iron ore concentrate.
 
-The initial column displays a time and date range spanning from March to September. Certain columns were sampled every twenty seconds, while others were sampled on an hourly basis. The second and third columns represent quality measures of the iron ore pulp immediately prior to its introduction into the flotation plant. Columns four through eight encompass the most significant variables influencing the final ore quality. Columns nine through twenty-two comprise process data, including levels and airflow within the flotation columns, which also impact ore quality. The final two columns contain the ultimate iron ore pulp quality measurements obtained from the laboratory. The target is to forecast the final column, representing the percentage of silica in the iron ore concentrate.
+**Inspiration**
+The community's assistance is sought to answer the following questions: Is it possible to predict the percentage of silica concentrate every minute? How many steps ahead can we predict the percentage of silica in concentrate? This would enable engineers to act in a predictive and optimized manner, mitigating the percentage of iron that could have gone to tailings. Is it possible to predict the percentage of silica in concentrate without using the percentage of iron concentrate column, as they are highly correlated?
 
-Inspiration 
+**Features**
+date, Iron Feed, Silica Feed, Starch Flow, Ore Pulp Flow, Ore Pulp pH, Ore Pulp Density, Flotation Column Air Flow, Flotation Column Level
 
-Having worked extensively on this dataset, I am eager to explore whether the community can assist in addressing the following queries: Can we predict the percentage of silica concentrate every minute? How many steps (hours) ahead can we forecast the percentage of silica in concentrate? Answering these questions would enable engineers to operate in a proactive and optimized manner, minimizing the percentage of iron that might otherwise end up in tailings.
-
-Features:
-date, percent Iron Feed, percent Silica Feed, Starch Flow, Amina Flow, Ore Pulp Flow, Ore Pulp pH, Ore Pulp Density, 
-Keywords: mining process, flotation plant, ore concentrate, silica prediction, iron ore quality, environmental sustainability.
+**Keywords**
+mining process, flotation plant, ore concentrate, silica prediction, environmental sustainability, process optimization

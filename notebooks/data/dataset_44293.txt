@@ -1,67 +1,58 @@
-The Meta-Album PlantNet Dataset is a subset of the Pl@ntNet-300k dataset, which is itself a sampling of the Pl@ntNet Project's repository. This dataset is created by sampling the Pl@ntNet-300k dataset, retaining only the twenty-five most populous classes, belonging to twenty-one genera, for a total of images. Each image contains a colored one hundred twenty-eight by one hundred twenty-eight image of a plant or a part of a plant from the corresponding class.
+**Meta Album PlantNet Dataset (Mini)**
 
-This dataset is sourced by citizen botanists from around the world, and then confirmed using a weighted reliability score from other users, such that each image has been reviewed by an average of citizen botanists. The images are scaled from their initial variable width using the Inter-Area anti-aliasing filter from OpenCV. Almost all images were initially square; cropping by taking the largest possible square with the center at the middle of the initial image was applied otherwise.
+The Meta-Album PlantNet dataset is created by sampling the Pl@ntNet-300k dataset, itself a sampling of the Pl@ntNet Project's repository. The images and labels that enter this database are sourced by citizen botanists from around the world, then confirmed using a weighted reliability score from other users, such that each image has been reviewed by an average of citizen botanists. Of the classes in the original Pl@ntNet-300k dataset, PLT_NET retains the most populous classes, belonging to genera, for a total of images, with a minimum and maximum image distribution per class. Each image contains a colored image of a plant or a piece of a plant from the corresponding class, scaled from the initial variable width using the INTER_AREA anti-aliasing filter from Open-CV. Almost all images were initially square; cropping by taking the largest possible square with center at the middle of the initial image was applied otherwise.
 
-### Dataset Details
+**Dataset Details**
 
-![](https://meta-album.github.io/assets/img/samples/PlantNet.png)
+![Sample Image](https://meta-album.github.io/assets/img/samples/PLT_NET.png)
 
-**Meta Album ID**: Plant PlantNet
-**Meta Album URL**: https://meta-album.github.io/datasets/PlantNet.html
-**Domain ID**: Plants
+**Meta Album ID**: PLT.PLT_NET
+**Meta Album URL**: https://meta-album.github.io/datasets/PLT_NET.html
+**Domain ID**: PLT
 **Domain Name**: Plants
-**Dataset ID**: PlantNet
+**Dataset ID**: PLT_NET
 **Dataset Name**: PlantNet
-**Short Description**: A dataset of plants with different species of plants
-**Classes**: Twenty-Five
-**Images**: Multiple
-**Keywords**: Ecology, Plants, Plant Species
-**Data Format**: Images
-**Image Size**: One Hundred Twenty-Eight by One Hundred Twenty-Eight
-**License (original data release)**: Creative Commons Attribution Four Point Zero International
-**License URL (original data release)**: https://zenodo.org/record/Four Seven Two Six Six Five Three https://creativecommons.org/licenses/by/Four Point Zero/legalcode
-**License (Meta-Album data release)**: Creative Commons Attribution Four Point Zero International
-**License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by/Four Point Zero/legalcode
+**Short Description**: Plants Dataset with different species of plants
+**Classes**: 
+**Images**: 
+**Keywords**: ecology, plants, plant species
+**Data Format**: images
+**Image size**: 
+**License (original data release)**: Creative Commons Attribution International
+**License URL (original data release)**: https://zenodo.org/record/4726653 https://creativecommons.org/licenses/by/legalcode
+**License (Meta-Album data release)**: Creative Commons Attribution International
+**License URL (Meta-Album data release)**: https://creativecommons.org/licenses/by/legalcode
 **Source**: PlantNet
-**Source URL**: https://plantnet.org/en/Twenty Twenty-One/Three Thirty/A-plntnet-dataset-for-machine-learning-researchers/
-**Original Dataset**: PlantNet
-**Meta Album Author**: 
-**Created Date**: 
-**Contact**: 
-**Contact Email**: meta-album@chalearn.org
-**Contact URL**: https://meta-album.github.io/
+**Source URL**: https://plantnet.org/en/2021/03/30/a-plntnet-dataset-for-machine-learning-researchers/
 
-### Cite this dataset
+**Cite this dataset**
 
-```
-@inproceedings{plantnethreehundredk,
-  title={Pl@ntNet-Three Hundred K: a plant image dataset with high label ambiguity and a long-tailed distribution},
-  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-  url={https://openreview.net/forum?id=eLYinDtIt}
+@inproceedings{plntnetk,
+title={Pl@ntNet-300K: a plant image dataset with high label ambiguity and a long-tailed distribution},
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+year={},
+url={https://openreview.net/forum?id=eLYinD0TtIt}
 }
-```
 
-### Cite Meta-Album
+**Cite Meta-Album**
 
-```
-@inproceedings{metaalbumtwothousandtwentytwo,
-  title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-  url = {https://meta-album.github.io/},
-  year = {}
+@inproceedings{meta-album-,
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+url = {https://meta-album.github.io/},
+year = {}
 }
-```
 
-### More
+**More**
 
-For more information on the Meta-Album dataset, please see the NeurIPS paper.
-For details on the dataset preprocessing, please see the supplementary materials.
-Supporting code can be found on our GitHub repo.
-Meta-Album on Papers with Code.
+For more information on the Meta-Album dataset, please see the [[NeurIPS paper]](https://meta-album.github.io/paper/Meta-Album.pdf)
+For details on the dataset preprocessing, please see the [[supplementary materials]](https://openreview.net/attachment?id=70_Wx-dON3q&name=supplementary_material)
+Supporting code can be found on our [[GitHub repo]](https://github.com/meta-album)
+Meta-Album on Papers with Code [[Meta-Album]](https://paperswithcode.com/dataset/meta-album)
 
-### Other versions of this dataset
+**Other versions of this dataset**
 
-[[Micro]]
-[[Extended]]
+[[Micro]](https://www.openml.org/d/)
+[[Extended]](https://www.openml.org/d/)
 
-Keywords: Ecology, Plants, Plant Species, Machine Learning, Computer Vision, Citizen Science.
+Keywords: ecology, plants, plant species, machine learning, image classification

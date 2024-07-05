@@ -1,49 +1,17 @@
-Name: Polarity Sub Sampling Seed Two Rows Two Thousand Classes Ten Columns One Hundred Strategically Sampled 
+Name: Pol Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the polarity dataset with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no strategy equals false 
+Tags: Subsampling of the dataset Pol with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals false
 
 Generated with the following source code:
 
-def subsample(self, seed, maximum number of rows, maximum number of columns, maximum number of classes, strategic sampling)
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-Random Number Generator equals numpy random default random generator given seed 
-x equals self x 
-y equals self y 
+First, it samples the classes uniformly, selecting the indices where one of the chosen classes is present. Then, it samples the columns uniformly if required. 
 
-Uniformly sample classes equals unique values in y 
-if total number of classes is more than maximum number of classes 
-value counts equals value counts of y 
-selected classes equals random choice of total classes given size equals maximum number of classes replacement equals false probability equals value counts divided by total value counts 
-select the indices where one of these classes is present 
-index equals index of y where y is in selected classes 
-x equals x given index 
-y equals y given index 
+If the number of rows exceeds the maximum, it stratifies the data accordingly, using the target name and the random state from the seed. 
 
-Uniformly sample columns if required 
-if total number of columns in x is more than maximum number of columns 
-column indexes equals random choice of range of total column indexes given size equals maximum number of columns replacement equals false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list of x columns given sorted column indexes 
-x equals x given selected columns 
-else 
-sorted column indexes equals range of total column indexes 
+Finally, it converts categorical columns to string for OpenML and returns a new dataset with the sampled data, categorical mask, and columns.
 
-if total number of rows in x is more than maximum number of rows 
-strategically sample accordingly 
-target name equals name of y 
-data equals concatenation of x and y along columns 
-_, subset equals train test split of data given test size equals maximum number of rows strategic sampling equals data given target name shuffling equals true random state equals seed 
-x equals subset drop target name along columns 
-y equals subset given target name 
+Features: Binary Class
 
-We need to convert categorical columns to string for open machine learning 
-categorical mask equals list of self categorical mask given index in sorted column indexes 
-columns equals list of x columns 
-return dataset 
-dataset equals technically not the same but it is where it was derived from 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Keywords: polarity, subsampling, strategic sampling, machine learning, classification
+Keywords: Subsampling, Dataset, Stratification, Random Sampling, Data Preprocessing

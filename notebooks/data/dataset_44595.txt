@@ -1,17 +1,17 @@
-Name: Blood Transfusion Service Center Seed Two 
+Name: Blood Transfusion Service Center
 
-Tags: Subsampling of the dataset Blood Transfusion Service Center with seed equals two arguments number rows max equals two thousand arguments number cols max equals one hundred arguments number classes max equals ten arguments no stratify equals true 
+Tags: Subsampling of the dataset Blood Transfusion Service Center with seed, number of rows, number of columns, number of classes, and stratify arguments.
 
 Generated with the following source code:
 
-The function subsample takes in several parameters including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. It uses numpy's default random generator to ensure reproducibility.
+The subsample function takes in a dataset and returns a subsampled version of it. It uses the NumPy random default random generator to ensure reproducibility. The function first selects a subset of classes from the original dataset, ensuring that the number of classes does not exceed the maximum allowed. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-First, it selects the unique classes present in the target variable. If there are more classes than the specified maximum, it uses value counts to determine the probability of each class being selected and then chooses the specified number of classes randomly without replacement. 
+Next, the function uniformly samples columns from the dataset, ensuring that the number of columns does not exceed the maximum allowed. It then selects the corresponding columns from the dataset.
 
-Next, it filters out the samples that do not belong to the chosen classes. It then checks if the number of columns exceeds the specified maximum. If so, it randomly selects the specified number of column indices without replacement, sorts them, and filters out the columns that were not selected.
+If the number of rows in the dataset exceeds the maximum allowed, the function uses stratified sampling to select a subset of rows. This ensures that the class distribution is preserved in the subsampled dataset.
 
-Finally, if the remaining number of samples exceeds the specified maximum, it uses train-test splitting with stratification based on the target variable to reduce the number of samples. The resulting dataset is then returned along with its metadata.
+Finally, the function returns a new dataset with the subsampled data, along with the corresponding categorical mask and column names.
 
-Features: (not included due to being unreadable)
+Features: (skipped due to unreadability)
 
-Keywords: Blood Transfusion Service Center, subsampling, stratification, numpy, reproducibility, value counts, probability, random selection, column filtering, train-test splitting
+Keywords: Blood Transfusion Service Center, dataset subsampling, stratified sampling, class distribution, reproducibility.

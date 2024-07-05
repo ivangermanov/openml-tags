@@ -1,14 +1,19 @@
-First Order Theorem Proving Seed Zero Dataset 
+Name: First Order Theorem Proving Seed Zero
 
-This dataset is a subsampled version of the First Order Theorem Proving dataset. It was generated using a specific set of arguments, including a random seed of zero, a maximum number of rows, a maximum number of columns, and a maximum number of classes. Additionally, the stratification argument was set to true.
+Tags: Subsampling of the dataset First Order Theorem Proving
 
-The subsampling process involved uniformly sampling classes from the original dataset, followed by selecting the indices where one of the chosen classes was present. This resulted in a reduced dataset with a specified number of rows.
+Generated with the following source code:
 
-Furthermore, the columns were also uniformly sampled, resulting in a final dataset with a specified number of columns.
+The subsample function is defined to take in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-This dataset is particularly relevant to the fields of economics and machine learning, where theorem proving and dataset subsampling are important concepts.
+The function first initializes a random number generator with the given seed. It then selects a subset of classes from the unique classes in the dataset, ensuring that the number of selected classes does not exceed the maximum number of classes. The indices where one of these classes is present are selected, and the corresponding data and target values are subsetted.
 
-Features:
-Class 
+If the number of columns in the dataset exceeds the maximum number of columns, the function uniformly samples columns to reduce the dimensionality. The selected columns are then subsetted from the original data.
 
-Keywords: First Order Theorem Proving, dataset subsampling, economics, machine learning, stratification, uniform sampling.
+If the number of rows in the dataset exceeds the maximum number of rows, the function stratifies the data accordingly and splits it into a subset of the desired size. The target values are then separated from the data.
+
+Finally, the function returns a dataset with the subsetted data, target values, categorical mask, and column names.
+
+Features: 
+
+Keywords: First Order Theorem Proving, Subsampling, Dataset, Stratification, Dimensionality Reduction

@@ -1,11 +1,70 @@
-The QSAR-TID-100975 dataset contains QSAR data showing activity values of several compounds on drug target TID: 100975. It has seventy-five rows and one thousand twenty-six features, including IDs and class feature: MOLECULE_CHEMBL_ID and MEDIAN_PXC50. The features represent FCFP six one hundred twenty-four bit molecular fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive resource for QSAR modeling. The data was sourced from ChEMBL version seventeen and contains information on the activity values of various compounds against the drug target TID: 100975.
+Source: MetaQSAR project - September 
 
-The dataset includes features such as molecule ChEMBL ID, median PXc50, and fingerprint features generated using the FCFP six algorithm. These features are used to describe the molecular structure of the compounds and their potential interactions with the drug target.
+Please cite: This dataset contains QSAR data (from ChEMBL version ) showing activity values (unit is pseudo pCI) of several compounds on drug target TID:, and it has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated. This makes the dataset suitable for QSAR modeling and other machine learning applications.
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
-The drug target TID: 100975 is a serine/threonine-protein kinase SRPK three, also known as muscle-specific serine kinase one. It belongs to the CMGC protein kinase group and is involved in various biological processes, including spliceosomal complex assembly, protein phosphorylation, and muscle tissue development.
+Scraped Data:
+ID: CHEMBL
+Type: SINGLE PROTEIN
+Preferred Name: Serine/threonine protein kinase SRPK
 
-Keywords: QSAR, drug target, molecular fingerprints, machine learning, protein kinase, biological processes.
+Synonyms: MSSK MSSK Muscle specific serine kinase  Serine/arginine rich protein specific kinase  Serine/threonine protein kinase 
+
+Organism: Homo sapiens
+Species Group: No
+Protein Target Classification: Enzyme/Kinase/Protein Kinase/CMGC protein kinase group/CMGC protein kinase SRPK family
+
+Description Relationship Accession SRSF protein kinase  SINGLE PROTEIN
+
+Expression Atlas
+
+Go Component:
+cellular component
+nucleus
+cytoplasm
+
+Go Function:
+nucleotide binding
+protein kinase activity
+protein serine/threonine kinase activity
+protein binding
+ATP binding
+kinase activity
+transferase activity
+protein serine kinase activity
+
+Go Process:
+spliceosomal complex assembly
+protein phosphorylation
+muscle organ development
+skeletal muscle tissue development
+phosphorylation
+peptidyl serine phosphorylation
+cell differentiation
+intracellular signal transduction
+regulation of mRNA processing
+muscle tissue development
+
+Guide To PHARMACOLOGY
+
+IntAct
+
+PharmGKB: SRSF protein kinase 
+
+Pharos: Tchem
+
+UniProt
+
+InterPro:
+Protein kinase domain
+Serine/Threonine kinase active site
+Kinase like domain superfamily
+Protein kinase ATP binding site
+
+Pfam: Protein kinase
+
+Keywords: QSAR, molecular fingerprints, protein kinase, drug target, ChEMBL

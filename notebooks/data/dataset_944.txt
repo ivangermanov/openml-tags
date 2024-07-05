@@ -1,7 +1,17 @@
-The Echo Months dataset has been binarized, converting its numeric target feature into a two-class nominal target feature. This process involves calculating the mean and subsequently categorizing all instances with a lower target value as Positive and all others as Negative.
+Name: Echo Months
 
-This dataset is relevant to the fields of Chemistry and Life Science, and is particularly useful for myth-busting and studying various phenomena.
+Tags: binarized, mythbusting, study
 
-The dataset includes several features, including whether an individual was still alive, their age, and various heart-related metrics.
+Source: Unknown - Date unknown
 
-Keywords: Binarized Data, Target Feature, Chemistry, Life Science, Myth-Busting, Study Dataset.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
+
+Features: still alive, age, pericardial, fractional, epss, lvdd, wall score, wall index, alive at one, binary class
+
+This dataset, known as Echo Months, has been binarized from its original form to create a simplified two-class classification problem. The process involved calculating the mean of the target feature and using this value as a threshold to categorize instances. Those falling below the mean were labeled as positive, while those above were designated as negative. This transformation allows for easier analysis and application of binary classification algorithms.
+
+The dataset encompasses various medical and health-related features, including patient survival status, age, cardiac measurements, and wall-related scores. These attributes provide a comprehensive view of patient health and potential cardiac issues. The binarization process has resulted in a new feature called "binary class," which serves as the target variable for classification tasks.
+
+Researchers and data scientists utilizing this dataset should be aware of its modified nature and cite it appropriately in their work. The original source and date of creation remain unknown, highlighting the importance of proper attribution and acknowledgment of the dataset's limitations.
+
+Keywords: echo months, binarized dataset, cardiac health, classification, medical data, patient survival, heart measurements

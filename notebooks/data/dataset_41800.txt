@@ -1,26 +1,38 @@
-**FOREX cadjpy-minute-Close**
+Name: FOREX CAD/JPY Minute Close
 
-Tags: Economics, Finance, Forex, Forex Close, Forex Minute
+Tags: finance, forex, forex close, forex minute
 
-This dataset contains historical price data of the Forex Canadian Dollar/Japanese Yen pair from Dukascopy.
+Source: Dukascopy Historical Data Feed
 
-Each instance, or row, represents a single candlestick of one-minute duration. The entire dataset spans a specific period of time, excluding weekends when the Forex market is closed.
+Data Description:
+This dataset contains the historical price data of the FOREX CAD/JPY currency pair from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The timestamp feature is in the Europe/Amsterdam timezone. The class attribute indicates the direction of the mean close price between the current and subsequent minutes. Specifically, it denotes whether the mean close price is increasing or decreasing (or remains unchanged) in the following minute.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up in the following minute, and the class attribute is False when the mean Close price is going down or stays the same in the following minute.
 
-The attributes included in this dataset are:
+Attributes:
 
-* Timestamp: The time of the current data point (in Europe/Amsterdam)
-* Bid Open: The bid price at the start of this time interval
-* Bid High: The highest bid price recorded during this time interval
-* Bid Low: The lowest bid price recorded during this time interval
-* Bid Close: The bid price at the end of this time interval
-* Bid Volume: The frequency of changes in the bid price within this time interval
-* Ask Open: The ask price at the start of this time interval
-* Ask High: The highest ask price recorded during this time interval
-* Ask Low: The lowest ask price recorded during this time interval
-* Ask Close: The ask price at the end of this time interval
-* Ask Volume: The frequency of changes in the ask price within this time interval
-* Class: Whether the average price will rise during the next interval
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
 
-Keywords: Forex, Canadian Dollar, Japanese Yen, Candlestick, Time Series, Financial Markets.
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: FOREX, CAD/JPY, currency pair, historical data, candlestick, finance, trading.

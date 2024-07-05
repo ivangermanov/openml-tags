@@ -1,13 +1,19 @@
-Bio Response Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True 
+Name: Bioresponse Seed One 
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Bioresponse with seed one 
 
-Sub-sampling of the dataset Bio Response with a seed equals one, arguments number rows max equals two thousand, number columns max equals one hundred, number classes max equals ten, and no stratify equals true.
+Generated with the following source code: 
 
-Generated with the following source code:
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the target variable, then uniformly sampling columns from the feature variables, and finally uniformly sampling rows from the resulting dataset. The function also ensures that the subsample is stratified according to the target variable. 
 
-The function sub-sample takes in five parameters - seed, number rows maximum, number columns maximum, number classes maximum, and stratified - and returns a dataset. It first initializes a random number generator using the given seed. Then, it uniformly samples the classes from the unique values in the target variable y, ensuring the number of classes does not exceed the maximum allowed. The indices where these classes are present are then selected, and the feature matrix x and target variable y are filtered accordingly. Next, it uniformly samples the columns if the number of columns exceeds the maximum allowed, selecting a specified number of columns randomly. If the total number of rows exceeds the maximum allowed, it uses stratified sampling to select a specified number of rows while maintaining the class balance. Finally, it returns a new dataset with the sampled feature matrix, target variable, categorical mask, and column names.
+The function takes in several parameters, including the seed for the random number generator, the maximum number of rows, columns, and classes to include in the subsample, and a boolean indicating whether to stratify the subsample. 
 
-Features: ... (omitted due to being machine-readable only)
+The function first gets the unique classes in the target variable and selects a subset of these classes to include in the subsample. It then selects the indices of the rows where one of these classes is present and uses these indices to subset the feature and target variables. 
 
-Keywords: sub-sampling, machine learning, dataset, stratified sampling, feature selection.
+Next, the function uniformly samples columns from the feature variables, selecting a subset of the columns to include in the subsample. 
+
+Finally, the function uniformly samples rows from the resulting dataset, selecting a subset of the rows to include in the subsample. 
+
+The function returns a new dataset that is a subsample of the original, with the specified number of rows, columns, and classes. 
+
+Keywords: subsampling, dataset, stratification, random sampling, feature selection.

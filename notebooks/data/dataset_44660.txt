@@ -1,17 +1,11 @@
-Subsampling of the dataset Churn with Seed equals Two 
+Name: Churn Seed Two Rows Two Thousand Columns One Hundred Classes Ten Stratify True
 
-Tags: Machine Learning, Mathematics 
+Tags: Subsampling of the dataset Churn with seed equals two, arguments nrows max equals two thousand, ncols max equals one hundred, nclasses max equals ten, and no stratify equals true.
 
-This dataset is a subsampled version of the original Churn dataset, which has been reduced in size to facilitate machine learning model training and testing. The subsampling process involves uniformly selecting a specified number of classes, columns, and rows from the original dataset.
+Generated with the following source code:
 
-The subsampling process begins by uniformly sampling classes from the original dataset. If the number of unique classes exceeds the specified maximum, the classes are sampled based on their frequency in the dataset. The indices corresponding to the selected classes are then used to filter the dataset.
+The function subsample takes in a seed, nrows max, ncols max, nclasses max, and stratified as parameters. It returns a dataset. The function uses numpy's random default random generator with the given seed. It then selects the features x and target y from the dataset. If the number of unique classes in the target is greater than nclasses max, it uniformly samples the classes based on their value counts. It then selects the indices where one of these classes is present and updates x and y accordingly. If the number of columns in x is greater than ncols max, it uniformly samples the columns. If the number of rows in x is greater than nrows max, it stratifies the data accordingly using train test split from scikit learn. It then returns a new dataset with the updated x, y, categorical mask, and columns.
 
-Next, the columns of the dataset are uniformly sampled if the number of columns exceeds the specified maximum. The selected columns are chosen randomly, and the dataset is filtered accordingly.
+Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class.
 
-Finally, the rows of the dataset are sampled using stratified sampling to ensure that the resulting dataset retains the same class distribution as the original dataset. This involves concatenating the feature columns with the target column, performing stratified splitting, and then separating the feature columns and target column again.
-
-The resulting dataset consists of the subsampled feature matrix and target vector, along with metadata including the categorical mask and column names.
-
-Features: State, Account Length, Area Code, Phone Number, International Plan, Voice Mail Plan, Number of Voice Mail Messages, Total Day Minutes, Total Day Calls, Total Day Charge, Total Evening Minutes, Total Evening Calls, Total Evening Charge, Total Night Minutes, Total Night Calls, Total Night Charge, Total International Minutes, Total International Calls, Total International Charge, Number of Customer Service Calls, Class
-
-Keywords: Subsampling, Machine Learning, Dataset, Classes, Columns, Rows, Stratified Sampling, Categorical Mask, Column Names.
+Keywords: Churn, Subsampling, Stratification, Feature Selection, Dataset Generation.

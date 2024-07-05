@@ -1,13 +1,17 @@
-Machine Learning Dataset: Dilbert Seed Two 
+Name: Dilbert Seed Two Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset is a subsampling of the original Dilbert dataset. It was generated using a specific set of parameters, including a seed value of two, a maximum of two thousand rows, a maximum of one hundred columns, and a maximum of ten classes. The stratification option was set to true.
+Tags: Subsampling of the dataset Dilbert with seed equals two arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-The subsampling process involved several steps. First, the unique classes in the target variable were identified. If there were more than ten unique classes, a random selection of ten classes was made, taking into account the distribution of each class in the original dataset. The indices corresponding to these selected classes were then used to subset the feature matrix and target vector.
+Generated with the following source code:
 
-Next, if the number of columns exceeded one hundred, a random selection of one hundred column indices was made. These column indices were sorted in ascending order, and the corresponding columns were selected from the feature matrix.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of classes, columns, and rows from the original dataset. The function ensures that the subsample is stratified, meaning that the proportion of each class in the subsample is the same as in the original dataset.
 
-Finally, if the number of rows exceeded two thousand, a stratified sampling approach was employed to select a subset of two thousand rows. This ensured that the distribution of classes in the subsampled dataset was similar to that in the original dataset.
+The function first selects a specified number of classes from the original dataset. It does this by getting a list of unique classes, and then using random number generation to select the specified number of classes. It then selects the indices where one of these classes is present, and uses these indices to subset the original dataset.
 
-The resulting dataset consists of a feature matrix and target vector, along with additional metadata such as the categorical mask and column names.
+Next, the function selects a specified number of columns from the subsampled dataset. It does this by getting a list of column indices, and then using random number generation to select the specified number of columns. It then uses these column indices to subset the dataset.
 
-Keywords: machine learning, dataset, subsampling, stratification, classification.
+Finally, the function selects a specified number of rows from the subsampled dataset. It does this by using the train test split function from scikit learn, with the stratify argument set to true. This ensures that the proportion of each class in the subsample is the same as in the original dataset.
+
+Features: 
+
+Keywords: dataset subsampling, stratified sampling, random number generation, class selection, column selection, row selection.

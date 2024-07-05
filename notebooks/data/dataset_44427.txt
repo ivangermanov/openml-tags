@@ -1,52 +1,17 @@
-Subsampling of the dataset Eye Movements with seed equals four arguments number rows max equals two thousand arguments number columns max equals one hundred arguments number classes max equals ten arguments no stratify equals true.
+Name: Eye Movements Seed Four N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Generated with the following source code:
+Tags: Subsampling of the dataset Eye Movements generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified)
--> Dataset:
-random number generator equals numpy dot random dot default random generator opened in parentheses seed closed parentheses
-x equals self dot x
-y equals self dot y
+The subsample function takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a stratified boolean as arguments. It returns a dataset after performing uniform sampling on classes, columns, and rows.
 
-Uniformly sample classes equals y dot unique
-if length of classes is greater than number classes maximum
-value counts equals y dot value counts
-selected classes equals random number generator dot choice opened in parentheses classes comma size equals number classes maximum comma replace equals false comma probability equals value counts divided by sum of value counts closed parentheses
+The function first uniformly samples classes from the unique classes present in the dataset. If the number of unique classes exceeds the maximum number of classes, it selects the required number of classes based on their frequency in the dataset.
 
-Select the indices where one of these classes is present
-indices equals y dot index opened in parentheses y dot is in opened in parentheses selected classes closed parentheses closed parentheses
-x equals x dot iloc opened in parentheses indices closed parentheses
-y equals y dot iloc opened in parentheses indices closed parentheses
+Next, it selects the indices where one of the selected classes is present and filters the dataset accordingly. Then, it uniformly samples columns if the number of columns exceeds the maximum number of columns.
 
-Uniformly sample columns if required
-if length of x dot columns is greater than number columns maximum
-column indices equals random number generator dot choice opened in parentheses list range length of x dot columns closed parentheses comma size equals number columns maximum comma replace equals false closed parentheses
-sorted column indices equals sorted column indices
-selected columns equals list x dot columns opened in parentheses sorted column indices closed parentheses
-x equals x opened in parentheses selected columns closed parentheses
-else
-sorted column indices equals list range length of x dot columns
+After that, it checks if the number of rows exceeds the maximum number of rows. If so, it performs stratified sampling on the dataset to ensure that the class distribution is maintained.
 
-if length of x is greater than number rows maximum
-stratify accordingly
-target name equals y dot name
-data equals pandas dot concat opened in parentheses x comma y comma axis equals quote columns quote closed parentheses
-_, subset equals sklearn dot model selection dot train test split opened in parentheses data comma test size equals number rows maximum comma stratify equals data opened in parentheses target name closed parentheses comma shuffle equals true comma random state equals seed closed parentheses
-x equals subset dot drop opened in parentheses target name comma axis equals quote columns quote closed parentheses
-y equals subset opened in parentheses target name closed parentheses
+Finally, it returns a dataset with the sampled data, categorical mask, and column names.
 
-We need to convert categorical columns to string for OpenML
-categorical mask equals list comprehension self dot categorical mask opened in parentheses i closed parentheses for i in sorted column indices
-columns equals list x dot columns
-return Dataset opened in parentheses 
-dataset equals self dot dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns closed parentheses
+Features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, Label
 
-Features: Line Number, Assignment Number, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protecting, Title Number, Word Number, Label
-
-Tags: Machine Learning, Statistics
-
-Keywords: subsampling, dataset, machine learning, statistics, stratification, OpenML
+Keywords: Eye Movements, Subsampling, Stratified Sampling, Dataset, Uniform Sampling

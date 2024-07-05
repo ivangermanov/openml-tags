@@ -1,9 +1,11 @@
-Within robotics, Inverse Dynamics Algorithms are used to calculate the torques that a robot's motors must deliver to make the robot's endpoint move in the way prescribed by its current task. This is a crucial aspect of robotic control, as it enables robots to perform complex movements and tasks with precision and accuracy.
+**Data Description**
 
-The Sarcos dataset consists of forty-five thousand data points, collected at one hundred hertz from an actual robot performing various rhythmic and discrete movement tasks. This corresponds to seven point five minutes of data collection. The task is to map from a twenty-one dimensional input space, comprising seven joint positions, seven joint velocities, and seven joint accelerations, to the corresponding seven joint torques.
+Within robotics, inverse dynamics algorithms are used to calculate the torques that a robot's motors must deliver to make the robot's end-point move in the way prescribed by its current task. This is a crucial aspect of robotics, as it enables robots to perform complex movements and tasks with precision and accuracy. Inverse dynamics is a fundamental concept in robotics, and its applications are vast and varied. For more information on inverse dynamics, please refer to the provided link.
 
-The attributes within this dataset include seven joint positions, seven joint velocities, seven joint accelerations, and seven joint torques, which serve as the target variables. One of these joint torques will be taken as the target feature, while the others will be ignored as alternate target features.
+The dataset consists of a large collection of data points, gathered at a frequency of one hundred hertz from an actual robot performing various rhythmic and discrete movement tasks. This corresponds to a substantial amount of data collection, equivalent to seven and a half minutes of continuous data. The task at hand is to map from a twenty-one-dimensional input space, comprising seven joint positions, seven joint velocities, and seven joint accelerations, to the corresponding seven joint torques.
 
-Tags: Machine Learning, Sociology
+**Attribute Description**
 
-Keywords: Inverse Dynamics, Robotics, Torque Calculation, Robot Control, Movement Tasks, Joint Positions, Joint Velocities, Joint Accelerations.
+The dataset consists of twenty-eight attributes, which can be broadly categorized into four groups. The first group consists of seven joint positions, which are essential in determining the robot's movement and orientation. The second group comprises seven joint velocities, which are critical in calculating the robot's speed and acceleration. The third group consists of seven joint accelerations, which are vital in determining the robot's rate of change of acceleration. The fourth group consists of seven joint torques, which are the target variables in this dataset. One of these joint torques, namely the twenty-second attribute, is taken as the target feature, while the others are ignored as alternate target features.
+
+Keywords: robotics, inverse dynamics, robot movement, joint positions, joint velocities, joint accelerations, joint torques.

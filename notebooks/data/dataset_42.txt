@@ -1,83 +1,20 @@
-Soybean Dataset 
+Soybean Dataset
+Tags: OpenML, study, uci
 
-This is the Large Soybean Database from the UCI repository, with its training and test database combined into a single file. There are nineteen classes, only the first fifteen of which have been used in prior work. The folklore seems to be that the last four classes are unjustified by the data since they have so few examples. 
-
-There are thirty-five categorical attributes, some nominal and some ordered. The value "does not apply" means does not apply. The values for attributes are encoded numerically, with the first value encoded as zero, the second as one, and so forth. An unknown value is encoded as question mark.
+This large soybean database from the UCI repository combines training and test data into a single file. It contains nineteen classes, though only the first fifteen have been commonly used in prior research. The last four classes are considered potentially unjustified due to having very few examples. The dataset includes thirty-five categorical attributes, both nominal and ordered. "Does not apply" is represented by "dna". Attribute values are numerically encoded, with the first value as "zero", the second as "one", and so on. Unknown values are denoted by a question mark.
 
 Attribute Information:
+The attributes cover various aspects of soybean plants and their environment, including planting date, plant stand, precipitation, temperature, hail occurrence, crop history, area damaged, severity of damage, seed treatment, germination rate, plant growth, leaf characteristics, stem conditions, fruiting bodies, decay, mycelium presence, internal discoloration, sclerotia, fruit pods, fruit spots, seed condition, mold growth, seed discoloration, seed size, shriveling, and root health.
 
-Date includes April, May, June, July, August, September, October, and unknown.
+Classes:
+The dataset includes nineteen classes representing various soybean diseases and conditions, such as diaporthe stem canker, charcoal rot, rhizoctonia root rot, phytophthora rot, brown stem rot, powdery mildew, downy mildew, brown spot, bacterial blight, bacterial pustule, purple seed stain, anthracnose, phyllosticta leaf spot, alternaria leaf spot, frog eye leaf spot, diaporthe pod and stem blight, cyst nematode, two four d injury, and herbicide injury.
 
-Plant Stand includes Normal, Less than Normal, and unknown.
+Relevant Research:
+Previous studies have utilized this dataset for classification knowledge representation in noisy domains and concept simplification with predictive accuracy. The dataset has been widely used in machine learning research, particularly for developing and testing classification algorithms.
 
-Precipitation includes Less than Normal, Normal, Greater than Normal, and unknown.
+Missing Values:
+The dataset contains missing values, which are represented by question marks in the attribute listings.
 
-Temperature includes Less than Normal, Normal, Greater than Normal, and unknown.
+This comprehensive soybean disease dataset provides valuable information for researchers and practitioners in agriculture and plant pathology, enabling the development of diagnostic tools and predictive models for soybean diseases.
 
-Hail includes Yes, No, and unknown.
-
-Crop History includes Different Last Year, Same Last Year, Same Last Two Years, Same Last Seven Years, and unknown.
-
-Area Damaged includes Scattered, Low Areas, Upper Areas, Whole Field, and unknown.
-
-Severity includes Minor, Potentially Severe, Severe, and unknown.
-
-Seed Treatment includes None, Fungicide, Other, and unknown.
-
-Germination includes Ninety to One Hundred Percent, Eighty to Eighty-Nine Percent, Less than Eighty Percent, and unknown.
-
-Plant Growth includes Normal, Abnormal, and unknown.
-
-Leaves include Normal, Abnormal, and unknown.
-
-Leaf Spots Halo includes Absent, Yellow Halos, No Yellow Halos, and unknown.
-
-Leaf Spots Margin includes With Small Margin, Without Small Margin, Does Not Apply, and unknown.
-
-Leaf Spot Size includes Less than One Eighth, Greater than One Eighth, Does Not Apply, and unknown.
-
-Leaf Shread includes Absent, Present, and unknown.
-
-Leaf Malformation includes Absent, Present, and unknown.
-
-Leaf Mildew includes Absent, Upper Surface, Lower Surface, and unknown.
-
-Stem includes Normal, Abnormal, and unknown.
-
-Lodging includes Yes, No, and unknown.
-
-Stem Cankers includes Absent, Below Soil, Above Soil, Above Secondary Node, and unknown.
-
-Canker Lesion includes Does Not Apply, Brown, Dark Brown Black, Tan, and unknown.
-
-Fruiting Bodies include Absent, Present, and unknown.
-
-External Decay includes Absent, Firm and Dry, Watery, and unknown.
-
-Mycelium includes Absent, Present, and unknown.
-
-Internal Discoloration includes None, Brown, Black, and unknown.
-
-Sclerotia include Absent, Present, and unknown.
-
-Fruit Pods include Normal, Diseased, Few Present, Does Not Apply, and unknown.
-
-Fruit Spots include Absent, Colored, Brown with Black Specks, Distorted, Does Not Apply, and unknown.
-
-Seed includes Normal, Abnormal, and unknown.
-
-Mold Growth includes Absent, Present, and unknown.
-
-Seed Discoloration includes Absent, Present, and unknown.
-
-Seed Size includes Normal, Less than Normal, and unknown.
-
-Shriveling includes Absent, Present, and unknown.
-
-Roots include Normal, Rotted, Galls Cysts, and unknown.
-
-Class Labels:
-
-Diaporthe Stem Canker, Charcoal Rot, Rhizoctonia Root Rot, Phytophthora Rot, Brown Stem Rot, Powdery Mildew, Downy Mildew, Brown Spot, Bacterial Blight, Bacterial Pustule, Purple Seed Stain, Anthracnose, Phyllosticta Leaf Spot, Alternaria Leaf Spot, Frog Eye Leaf Spot, Diaporthe Pod and Stem Blight, Cyst Nematode, Two Four D Injury, Herbicide Injury.
-
-Keywords: agriculture, machine learning, openml100, soybean disease diagnosis, expert system, categorical attributes, nominal attributes, ordered attributes.
+Keywords: soybean diseases, plant pathology, categorical attributes, classification, machine learning, agricultural data, crop diagnostics

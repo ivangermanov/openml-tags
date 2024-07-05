@@ -1,15 +1,13 @@
-Fabert Seed One Dataset with Two Thousand Rows, Ten Classes, and One Hundred Columns, Using Stratification
+Name: Fabert Seed One Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This dataset is a subsampled version of the Fabert dataset, generated using a specific set of arguments and parameters. The subsampling process involved uniformly sampling classes, columns, and rows from the original dataset.
+Tags: Subsampling of the dataset Fabert with seed one, generated with the following source code:
 
-The class sampling process involved selecting ten unique classes from the original dataset, ensuring that the selected classes were present in the sampled dataset. This was done to maintain a balanced representation of classes in the subsampled dataset.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including the seed for reproducibility, the maximum number of rows, columns, and classes, as well as a flag for stratified sampling.
 
-The column sampling process involved selecting one hundred columns from the original dataset, ensuring that the selected columns were representative of the overall dataset. This was done to reduce the dimensionality of the dataset while preserving its essential characteristics.
+The function first selects a subset of classes to maintain, ensuring that the number of classes does not exceed the maximum allowed. It then selects the corresponding data points and columns, and finally reduces the number of rows to the maximum allowed while maintaining the class distribution.
 
-The row sampling process involved selecting two thousand rows from the original dataset, ensuring that the selected rows were representative of the overall dataset. This was done using stratification, which involves splitting the dataset into training and testing sets based on the class distribution.
+The resulting dataset is a subsampled version of the original Fabert dataset, with one hundred columns and two thousand rows, stratified across ten classes.
 
-The resulting dataset consists of two thousand rows, ten classes, and one hundred columns. The dataset has been transformed to ensure that categorical columns are represented as strings, making it suitable for use in machine learning algorithms.
+Features: (omitted due to unreadability)
 
-Tags: Machine Learning, Statistics
-
-Keywords: subsampling, dataset, stratification, machine learning, statistics
+Keywords: dataset subsampling, stratified sampling, class distribution, data reduction.

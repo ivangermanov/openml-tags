@@ -1,35 +1,44 @@
-Acknowledgments 
+Acknowledgements
 
-The data was scraped from Booking.com. All data in the file is publicly available to everyone already. The data is originally owned by Booking.com. 
+The data was scraped from Booking.com. All data in the file is publicly available to everyone already. The data is originally owned by Booking.com. Please contact the dataset owner if you want to use this dataset somewhere else.
 
-Data Context 
+Data Context
 
 This dataset contains customer reviews and scoring of luxury hotels across Europe. Meanwhile, the geographical location of hotels are also provided for further analysis.
 
-Data Content 
+Data Content
 
-The CSV file contains seventeen fields. The description of each field is as follows:
+The csv file contains seventeen fields. The description of each field is as follows:
 
-Hotel Address: Address of hotel.
-Review Date: Date when reviewer posted the corresponding review.
-Average Score: Average Score of the hotel, calculated based on the latest comment in the last year.
-Hotel Name: Name of Hotel 
-Reviewer Nationality: Nationality of Reviewer 
-Negative Review: Negative Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it should be: 'No Negative'
-Review Total Negative Word Counts: 
-Positive Review: Positive Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it should be: 'No Positive'
-Review Total Positive Word Counts:
-Reviewer Score: Score the reviewer has given to the hotel, based on his/her experience 
-Total Number of Reviews:
-Tags: Tags reviewer gave the hotel.
-Days Since Review: Duration between the review date and scrape date.
-Latitude: Latitude of the hotel 
-Longitude: Longitude of the hotel 
+Hotel Address: The address of the hotel.
+Review Date: The date when the reviewer posted the corresponding review.
+Average Score: The average score of the hotel, calculated based on the latest comment in the last year.
+Hotel Name: The name of the hotel.
+Reviewer Nationality: The nationality of the reviewer.
+Negative Review: The negative review the reviewer gave to the hotel. If the reviewer does not give a negative review, then it should be: 'No Negative'.
+Review Total Negative Word Counts: The total number of words in the negative review.
+Positive Review: The positive review the reviewer gave to the hotel. If the reviewer does not give a positive review, then it should be: 'No Positive'.
+Review Total Positive Word Counts: The total number of words in the positive review.
+Reviewer Score: The score the reviewer has given to the hotel, based on their experience.
+Total Number of Reviews: The total number of valid reviews the hotel has.
+Tags: The tags the reviewer gave the hotel.
+Days Since Review: The duration between the review date and scrape date.
+Latitude: The latitude of the hotel.
+Longitude: The longitude of the hotel.
 
-In order to keep the text data clean, I removed Unicode and punctuation in the text data and transformed text into lower case. No other preprocessing was performed.
+In order to keep the text data clean, the dataset owner removed Unicode and punctuation in the text data and transformed the text into lower case. No other preprocessing was performed.
 
-Inspiration 
+Inspiration
 
-The dataset is large and informative, allowing users to have a lot of fun exploring it! Some potential ideas include fitting a regression model on reviews and score to see which words are more indicative to a higher/lower score; performing a sentiment analysis on the reviews; finding correlation between reviewer's nationality and scores; creating beautiful and informative visualizations on the dataset; clustering hotels based on reviews; and developing a simple recommendation engine to the guest who is fond of a special characteristic of hotel. The possibilities are endless!
+The dataset is large and informative, and it is believed that you can have a lot of fun with it! Some ideas to further inspire users are:
 
-Keywords: hotel reviews, Europe, luxury hotels, sentiment analysis, recommendation engine, clustering, visualization.
+Fit a regression model on reviews and score to see which words are more indicative to a higher or lower score.
+Perform a sentiment analysis on the reviews.
+Find correlation between reviewer's nationality and scores.
+Create beautiful and informative visualizations on the dataset.
+Cluster hotels based on reviews.
+Create a simple recommendation engine to the guest who is fond of a special characteristic of hotel.
+
+The idea is unlimited! Please, have a look into the data, generate some ideas, and leave a master kernel here!
+
+Keywords: hotel reviews, luxury hotels, Europe, sentiment analysis, recommendation engine, customer reviews.

@@ -1,36 +1,49 @@
-Autism Spectrum Disorder Screening Data for Adults
+Autism Screening Tags: Data Set
 
-Tags: Computer Systems, Machine Learning
+Autistic Spectrum Disorder Screening Data for Adults
 
-This dataset is designed to facilitate the development of efficient and accessible autism spectrum disorder (ASD) screening methods for adults. ASD is a neurodevelopmental condition characterized by significant healthcare costs, which can be reduced through early diagnosis. However, current diagnostic procedures are lengthy and costly, highlighting the need for innovative solutions.
+Autistic Spectrum Disorder (ASD) is a neurodevelopmental condition associated with significant healthcare costs, and early diagnosis can significantly reduce these costs. Unfortunately, waiting times for an ASD diagnosis are lengthy, and procedures are not cost-effective. The economic impact of autism and the increase in the number of ASD cases across the world reveal an urgent need for the development of easily implemented and effective screening methods. Therefore, a time-efficient and accessible ASD screening is imminent to help health professionals and inform individuals whether they should pursue a formal clinical diagnosis.
 
-The increasing prevalence of ASD globally necessitates the creation of comprehensive datasets focused on behavioral traits. Currently, there is a scarcity of autism-related datasets, particularly those centered around clinical or screening aspects. Most existing datasets are genetic in nature, limiting their applicability in developing accurate ASD screening tools.
+The rapid growth in the number of ASD cases worldwide necessitates datasets related to behavioral traits. However, such datasets are rare, making it difficult to perform thorough analyses to improve the efficiency, sensitivity, specificity, and predictive accuracy of the ASD screening process. Presently, very limited autism datasets associated with clinical or screening are available, and most of them are genetic in nature. Hence, we propose a new dataset related to autism screening of adults that contains twenty features to be utilized for further analysis, especially in determining influential autistic traits and improving the classification of ASD cases.
 
-To address this gap, we propose a novel dataset consisting of twenty features aimed at identifying influential autistic traits and enhancing the classification of ASD cases. This dataset combines ten behavioral features derived from the AQ-10-Adult questionnaire with ten individual characteristic features proven effective in distinguishing ASD cases from controls in behavioral science research.
+In this dataset, we record ten behavioral features (Autism Quotient-10-Adult) plus ten individual characteristics that have proved to be effective in detecting ASD cases from controls in behavioral science.
 
 Data Type: Multivariate
-Attribute Type: Categorical, Continuous, and Binary
+
+Attribute Type: Categorical, continuous, and binary
+
 Area: Medical, Health, and Social Science
+
 Format Type: Non-Matrix
-Number of Instances: 704 records
-Number of Attributes: 21 fields per record
+
+Number of Instances (records in the dataset): 704
+
+Number of Attributes (fields within each record): 21
+
+Relevant Information: For further information about the attributes/features, see below table.
 
 Attribute Information:
 
-* Age: Age in years
-* Gender: Male or Female
-* Ethnicity: List of common ethnicities in text format
-* Born with Jaundice: Yes or No
-* Family Member with PDD: Yes or No
-* Who is Completing the Test: Parent, Self, Caregiver, Medical Staff, Clinician, etc.
-* Country of Residence: List of countries in text format
-* Used the Screening App Before: Yes or No
-* Screening Method Type: The type of screening method chosen based on age category
-* Question 1-10 Answers: Binary answers based on the screening method used
-* Screening Score: Final score obtained using the scoring algorithm of the screening method
+Attribute Type Description
+Age Number Age in years
+Gender String Male or Female
+Ethnicity String List of common ethnicities in text format
+Born with Jaundice Boolean (yes or no) Whether the case was born with jaundice
+Family Member with PDD Boolean (yes or no) Whether any immediate family member has a PDD
+Who is Completing the Test String Parent, self, caregiver, medical staff, clinician, etc.
+Country of Residence String List of countries in text format
+Used the Screening App Before Boolean (yes or no) Whether the user has used a screening app
+Screening Method Type Integer The type of screening methods chosen based on age category
+Question 1 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 2 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 3 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 4 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 5 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 6 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 7 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 8 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 9 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Question 10 Answer Binary (0, 1) The answer code of the question based on the screening method used
+Screening Score Integer The final score obtained based on the scoring algorithm of the screening method used
 
-Relevant Papers:
-
-(removed to maintain anonymity)
-
-Keywords: Autism Spectrum Disorder, ASD Screening, Machine Learning, Behavioral Traits, Clinical Diagnosis, Healthcare Costs.
+Keywords: Autistic Spectrum Disorder, ASD Screening, Machine Learning, Behavioral Traits, Healthcare Costs, Neurodevelopmental Condition.

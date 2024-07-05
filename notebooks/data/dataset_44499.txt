@@ -1,50 +1,13 @@
-Credit G Seed One N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Credit-G Dataset Subsampling with Seed One
 
-Tags: Machine Learning, Mathematics 
+This dataset is a subsample of the credit-g dataset, generated with a seed of one. The subsampling process involved uniformly sampling classes and columns to reduce the dataset size. The resulting dataset has a maximum of two thousand rows, one hundred columns, and ten classes.
 
-Subsampling of the dataset Credit G with seed equals one arguments number rows max equals two thousand, arguments number columns max equals one hundred, arguments number classes max equals ten, arguments no strategize equals true generated with the following source code:
+The subsampling process began by selecting classes from the original dataset. If the number of unique classes exceeded ten, a random sample of ten classes was chosen, with the probability of selection proportional to the value counts of each class. The indices where these selected classes were present were then used to subset the data.
 
-def subsample(self, seed: int, number_rows_max: int = two thousand, number_cols_max: int = one hundred, number_classes_max: int = ten, strategized: bool = true) -> Dataset:
-random number generator = numpy random default random generator seed 
-x equals self x 
-y equals self y 
+Next, the columns were uniformly sampled if the number of columns exceeded one hundred. A random sample of one hundred column indices was chosen, and the corresponding columns were selected. The column indices were sorted to maintain the original column order.
 
-Uniformly sample classes equals y unique 
-if length of classes is greater than number classes max:
-value counts equals y value counts 
-selected classes equals random number generator choice classes size equals number classes max replace equals false probability equals value counts divided by sum of value counts 
-Select the indices where one of these classes is present 
-idxs equals y index y is in selected classes 
-x equals x iloc idxs 
-y equals y iloc idxs 
+Finally, if the number of rows exceeded two thousand, the data was stratified and split using the train test split function from scikit-learn. The stratification was based on the target variable, and the random state was set to the seed value.
 
-Uniformly sample columns if required 
-if length of x columns is greater than number cols max:
-column indexes equals random number generator choice list range length of x columns size equals number cols max replace equals false 
-sorted column indexes equals sorted column indexes 
-selected columns equals list x columns sorted column indexes 
-x equals x selected columns 
-else:
-sorted column indexes equals list range length of x columns 
-if length of x is greater than number rows max:
-strategize accordingly 
-target name equals y name 
-data equals pandas concat x comma y axis equals columns 
-_, subset equals train test split data test size equals number rows max strategize equals data target name shuffle equals true random state equals seed 
-x equals subset drop target name axis equals columns 
-y equals subset target name 
+The resulting dataset contains the following features: checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, and class.
 
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list of self categorical mask for i in sorted column indexes 
-columns equals list x columns 
-return Dataset 
-technically this is not the same but it's where it was derived from 
-dataset equals self dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-
-Features: checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number dependents, own telephone, foreign worker, class
-
-Keywords: machine learning, mathematics, dataset, subsampling, credit g
+Keywords: credit-g dataset, subsampling, stratification, feature selection, class sampling, column sampling.

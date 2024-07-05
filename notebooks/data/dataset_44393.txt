@@ -1,13 +1,17 @@
-The dataset kdd ipums la ninety seven small has been subsampled with a specific set of arguments to create a new dataset. This new dataset has been generated using a Python function called subsample, which takes several arguments including a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean indicating whether to stratify or not.
+Name: KDD IPUMS LA Ninety Seven Small Seed One
 
-The function first uniformly samples classes from the original dataset, selecting a specified maximum number of classes. It then selects the indices where one of these classes is present and subsets the original data accordingly.
+Tags: Subsampling of the dataset KDD IPUMS LA Ninety Seven Small with seed equal to one, arguments number of rows equal to two thousand, arguments number of columns equal to one hundred, arguments number of classes equal to ten, and arguments no stratify equal to true.
 
-Next, the function uniformly samples columns from the resulting dataset, selecting a specified maximum number of columns. If the resulting dataset still has more rows than the specified maximum, it uses stratified sampling to select a specified maximum number of rows.
+Generated with the following source code:
 
-The resulting dataset is then returned with its corresponding metadata, including the categorical mask and column names. The categorical mask is necessary because some columns may contain categorical values that need to be treated specially.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to uniformly sample classes, columns, and rows from the original dataset.
 
-The features of this dataset include various socioeconomic indicators such as household income, family size, number of children, occupation score, and poverty status, among others.
+The function first gets the unique classes from the target variable, and if there are more classes than the maximum allowed, it selects a subset of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Tags: Subsampling of the dataset kdd ipums la ninety seven small
+Next, if the number of columns is more than the maximum allowed, it uniformly samples a subset of columns. If the number of rows is more than the maximum allowed, it uses stratified sampling to select a subset of rows.
 
-Keywords: subsampling, dataset, socioeconomic indicators, stratified sampling, categorical mask.
+Finally, it converts categorical columns to string format and returns a new dataset with the subsampled data.
+
+Features: value, rent, family size, number of children, elderly children, young children, number of siblings, age, occupation score, socioeconomic index, total income, wage income, business income, farm income, social security income, welfare income, other income, poverty, and binary class.
+
+Keywords: dataset subsampling, stratified sampling, feature selection, class sampling, column sampling, row sampling.

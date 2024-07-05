@@ -1,24 +1,13 @@
-Click Prediction Small Dataset
+Click Prediction Small (Tags: derived)
 
-Tags: Chemistry, Derived, Life Science
+This dataset is derived from the KDD Cup. The data is subsampled to a fraction of the original number of instances, downsampling the majority class (click equals zero) so that the target feature is reasonably balanced. The data pertains to advertisements displayed alongside search results in a search engine, and whether users clicked on these ads. The objective is to construct the most effective model to predict if a user will click on a given advertisement.
 
-This dataset is derived from the KDD Cup Challenge. It is a subset of the original data, containing only one percent of the total instances, with the majority class (click equals zero) downsampled to achieve a reasonable balance of five to one.
+A search session contains information on user identification, the query issued by the user, ads displayed to the user, and a target feature indicating whether a user clicked at least one of the ads in this session. The number of ads displayed to a user in a session is called 'depth'. The order of an ad in the displayed list is called 'position'. An ad is displayed as a short text called 'title', followed by a slightly longer text called 'description', and a URL called 'display URL'.
 
-The dataset focuses on online advertising, specifically predicting whether a user will click on a particular advertisement displayed alongside search results. Each search session includes information on the user ID, query issued by the user, ads displayed, and the target feature indicating whether the user clicked on any of the ads in the session.
+To construct this dataset, each session was split into multiple instances. Each instance describes an ad displayed under a certain setting (depth, position). Instances with the same user identification, ad identification, query, and setting are merged. Each ad and each user have additional properties located in separate data files that can be looked up using identifications in the instances.
 
-An ad is characterized by its title, description, and display URL. Additionally, each ad and user have supplementary properties stored in separate files, accessible via IDs in the instances.
+The dataset includes features such as Click (binary variable indicating whether a user clicked on at least one ad), Impression (the number of search sessions in which an ad was impressed by a user who issued a query), URL hash (URL is hashed for anonymity), Ad identification, Advertiser identification, Depth, Position, Query identification, Keyword identification, Title identification, Description identification, and User identification.
 
-The dataset comprises various features, including:
+This version of the dataset includes additional unlabeled data and is intended for a machine learning challenge. The complete labeled version of this dataset is kept private for the duration of the challenge.
 
-* Click, a binary variable signifying whether a user clicked on at least one ad
-* Impression, representing the number of search sessions where an Ad ID was impressed by a User ID issuing a Query
-* URL Hash, a hashed version of the URL for anonymity
-* Ad ID and Advertiser ID, with some advertisers consistently optimizing their ads to make them more appealing
-* Depth, the number of ads displayed to a user in a session
-* Position, the order of an ad in the displayed list
-* Query ID, a key referencing the data file containing query tokens
-* Keyword ID, a key linking to purchased keyword tokens
-* Title ID and Description ID, keys referencing title and description tokens respectively
-* User ID, also serving as a key for user profiles, with a special value of zero denoting unidentified users
-
-Keywords: online advertising, click prediction, search results, user behavior, advertising optimization.
+Keywords: Click prediction, Search engine advertising, User behavior, Machine learning challenge, Ad impressions, Query analysis, Advertiser performance

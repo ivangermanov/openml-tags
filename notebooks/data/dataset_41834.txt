@@ -1,24 +1,15 @@
-**FOREX USD/CAD Day Close**
+Name: FOREX USD/CAD Day Close
 
-Tags: Agriculture, Chemistry, Finance, Forex, Forex Close, Forex Day
+Tags: finance, forex, forex close, forex day
 
-This dataset contains the historical price data of the Forex USD/CAD exchange rate from Dukascopy. Each instance represents one candlestick of one trading day. The entire dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not active on these days. The timestamp feature is set to the Europe/Amsterdam time zone.
+Source: Dukascopy Historical Data Feed
 
-The class attribute is determined by the direction of the mean close price of the following day relative to the mean close price of the current day. Specifically, if the mean close price is expected to increase the following day, the class attribute is true; otherwise, it is false.
+Data Description
+This dataset contains the historical price data of the FOREX USD/CAD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The dataset includes the following attributes:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam time zone.
-* Bid Open: The opening bid price at the start of the trading day.
-* Bid High: The highest bid price recorded during the trading day.
-* Bid Low: The lowest bid price recorded during the trading day.
-* Bid Close: The closing bid price at the end of the trading day.
-* Bid Volume: The number of times the bid price changed during the trading day.
-* Ask Open: The opening ask price at the start of the trading day.
-* Ask High: The highest ask price recorded during the trading day.
-* Ask Low: The lowest ask price recorded during the trading day.
-* Ask Close: The closing ask price at the end of the trading day.
-* Ask Volume: The number of times the ask price changed during the trading day.
-* Class: A boolean indicating whether the mean close price will increase or decrease the following day.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-Keywords: Forex, USD/CAD, exchange rate, historical data, candlestick, trading day, class attribute, mean close price.
+Keywords: FOREX, USD/CAD, historical data, candlestick, finance, trading

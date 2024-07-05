@@ -1,19 +1,15 @@
-Nomao Data Set
+The Nomao dataset contains information about places (name, phone, localization, etc.) collected from various sources. The primary task is deduplication, which involves detecting when different data entries refer to the same place. Each instance in the dataset compares two spots.
 
-The Nomao data set collects information about various places, including their names, phone numbers, and localizations, from multiple sources. The primary goal of this data set is to detect duplicate entries, which refer to the same location. Each instance in the data set compares two different spots.
+This dataset was enriched during the Nomao Challenge, organized in conjunction with the Active Learning in Real world Applications workshop at the ECML PKDD conference. It consists of instances labeled by human experts, with a mix of continuous and nominal attributes.
 
-Data Set Characteristics:
-The Nomao data set is univariate and belongs to the computer science domain. It contains real-valued attributes and is suitable for classification tasks. This data set also contains missing values.
+The dataset comprises instances labeled with "human prior" as well as instances labeled using various active learning methods such as "marg," "wmarg," "wmarg," "rand" (random selection), "baseline," "nomao," and "tsun." These different labeling methods were employed during the challenge to explore various approaches to the deduplication task.
 
-Data Set Information:
-The Nomao data set consists of thirty-four thousand four hundred sixty-five instances, which are a mix of continuous and nominal values. These instances are labeled by human experts. The first twenty-nine thousand one hundred four instances were labeled using human prior knowledge. The remaining instances were labeled using different active learning methods, including marg, wmarg, wmarg five, rand, baseline, nomao, and tsun.
+There are attributes in total, including continuous and nominal features. The features cover various aspects of place information, including name similarity, address components, geographic coordinates, and contact details. Similarity measures such as intersection, Levenshtein distance, and trigram similarity are used to compare different fields between the two spots being evaluated.
 
-Attribute Information:
-This data set contains one hundred twenty attributes, out of which eighty-nine are continuous, and thirty-one are nominal. These attributes include the label and id. Missing data are represented by question marks. The labels are plus one if the spots being compared should be merged, and minus one if they do not refer to the same entity.
+Labels in the dataset are either plus one if the concerned spots should be merged, or minus one if they do not refer to the same entity. Missing data is allowed and represented by question marks.
 
-The first attribute is the id, which is a combination of the names of the compared spots separated by a sharp symbol. The remaining attributes are divided into categories based on the type of information, such as clean name, city, zip, street, website, country name, geocoder locality name, geocoder input address, geocoder output address, geocoder postal code number, geocoder country name code, phone, fax, street number, geocode coordinates long, geocode coordinates lat, coordinates long, coordinates lat, geocode coordinates difference, and coordinates difference.
+The dataset is characterized as univariate and falls within the computer science domain. It is primarily used for classification tasks and includes real valued attributes. The presence of missing values adds an additional layer of complexity to the data analysis process.
 
-Relevant Papers:
-Design and Analysis of the Nomao Challenge - Active Learning in the Real-World.
+This dataset is part of several collections and studies, including OpenML CC, OpenML, and various other research initiatives. It serves as a valuable resource for researchers and practitioners working on deduplication, entity resolution, and active learning problems in real world scenarios.
 
-Keywords: Nomao, deduplication, active learning, real-world applications, computer science, classification, machine learning.
+Keywords: deduplication, place data, active learning, classification, similarity measures, entity resolution, missing values, OpenML

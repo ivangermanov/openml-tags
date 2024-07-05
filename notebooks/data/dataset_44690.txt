@@ -1,13 +1,15 @@
-Wine Quality White Dataset Subsampling 
+Name: Wine Quality White Seed Two
 
-Machine Learning, Mathematics
+Tags: Subsampling of the dataset Wine Quality White with seed equals two
 
-This dataset is a subsampled version of the Wine Quality White dataset. It was generated using a specific set of parameters, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a stratification option.
+This dataset is a subsample of the original Wine Quality White dataset. It was generated using a specific source code that involves random sampling of classes, columns, and rows. The subsampling process was done to reduce the size of the original dataset while maintaining its overall characteristics.
 
-The subsampling process involved uniformly sampling classes from the original dataset until the desired number of classes was reached. Then, the indices where one of these classes was present were selected, and the corresponding data points were retained. 
+The subsampling process started by uniformly sampling classes from the original dataset. If the number of unique classes exceeded a certain maximum, the classes were selected based on their frequency of occurrence. The indices where these selected classes were present were then used to subset the original dataset.
 
-If necessary, the columns were also uniformly sampled until the desired number of columns was reached. The remaining data points were then split into a subset based on the specified maximum number of rows, ensuring that the class distribution was maintained through stratification.
+Next, the columns of the dataset were uniformly sampled if the number of columns exceeded a certain maximum. The selected columns were chosen randomly, and the dataset was subsetted accordingly.
 
-The resulting dataset consists of various features, including V One, V Two, V Three, V Four, V Five, V Six, V Seven, V Eight, V Nine, V Ten, V Eleven, and Class.
+Finally, the rows of the dataset were sampled if the number of rows exceeded a certain maximum. The sampling was done in a stratified manner to maintain the class balance of the original dataset.
 
-Keywords: Wine Quality White, machine learning, mathematics, subsampling, stratification, class distribution
+The resulting dataset has a specific set of features, including V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, and Class.
+
+Keywords: Wine Quality, Subsampling, Dataset, Random Sampling, Stratified Sampling, Class Balance.

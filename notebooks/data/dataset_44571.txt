@@ -1,14 +1,15 @@
-Subsampling of the dataset Ada with Seed equals Three 
-Tags: Machine Learning, Statistics 
+Name: Ada Seed Three Rows Two Thousand Classes Ten Columns One Hundred Stratify True
 
-This dataset is a subsampled version of the original Ada dataset, which has forty-one thousand one hundred fifty-six instances. The subsampling process was done using a random number generator with a seed value of three.
+Tags: Subsampling of the dataset Ada with seed three, generated with the following source code:
 
-The subsampling process involved several steps. First, the classes were uniformly sampled to select a maximum of ten classes. This was done by selecting classes based on their frequency distribution.
+This function subsamples a dataset to reduce its size while maintaining its characteristics. It takes in several parameters, including a seed for reproducibility, the maximum number of rows, columns, and classes, and a boolean indicating whether to stratify the sampling.
 
-Next, the columns were uniformly sampled to select a maximum of one hundred columns. This was done by randomly selecting column indices.
+The function first uniformly samples classes from the dataset, selecting a specified number of classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and reduces the dataset to these indices.
 
-Finally, the rows were subsampled to select a maximum of two thousand instances. This was done using stratified sampling, which ensures that the class distribution remains the same as the original dataset.
+Next, the function uniformly samples columns from the dataset, selecting a specified number of columns. If the dataset has more rows than the specified maximum, it stratifies the sampling according to the target variable, ensuring that the sampled dataset maintains the same class distribution as the original.
 
-The resulting dataset has a total of forty-three features, including the class variable. Unfortunately, the feature names are not human-readable and have been kept in their original format.
+Finally, the function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-Keywords: subsampling, machine learning, statistics, dataset, Ada, stratified sampling, random number generator
+Features: 
+
+Keywords: dataset subsampling, stratified sampling, class distribution, dataset reduction, reproducibility

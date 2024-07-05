@@ -1,11 +1,19 @@
-The Japanese Vowels dataset records six hundred forty time series of twelve Linear Prediction Cepstrum coefficients taken from nine male speakers. The data was collected for examining a newly developed classifier for multidimensional curves, also known as multidimensional time series. Nine male speakers uttered two Japanese vowels, specifically the vowel sound /ae/, successively. For each utterance, with the analysis parameters described below, a twelve degree Linear Prediction Analysis was applied to obtain a discrete-time series with twelve Linear Prediction Cepstrum coefficients. This means that one utterance by a speaker forms a time series whose length is in the range seven to twenty-nine and each point of a time series is of twelve features, namely the twelve coefficients.
+Japanese Vowels
 
-Similar data are available for different utterances, including /ei/, /iu/, /uo/, and /oa/, in addition to /ae/. 
+Tags: grouped data, OpenML CC, OpenML, study, time series, uci
 
-This dataset has been used in previous studies, including Multidimensional Curve Classification Using Passing-Through Regions, published in Pattern Recognition Letters.
+This dataset records time series of LPC cepstrum coefficients taken from male speakers. The data was collected for examining a newly developed classifier for multidimensional curves (multidimensional time series). Male speakers uttered two Japanese vowels "ae" successively. For each utterance, linear prediction analysis was applied to obtain a discrete time series with LPC cepstrum coefficients. One utterance by a speaker forms a time series whose length ranges from seven to twenty nine, and each point of a time series has twelve features (coefficients).
 
-Each line represents twelve Linear Prediction Cepstrum coefficients in increasing order, separated by spaces, and corresponds to one analysis frame. Lines are organized into blocks, which are a set of seven to twenty-nine lines separated by blank lines, and correspond to a single speech utterance of /ae/ with seven to twenty-nine frames. Each speaker is a set of consecutive blocks. 
+Similar data are available for different utterances "ei", "iu", "uo", "oa" in addition to "ae". The total number of time series is six hundred and forty. Two hundred and seventy time series were used for training and three hundred and seventy for testing.
 
-There are two files, ae.train and ae.test, which contain the training and testing datasets respectively. The training dataset contains two hundred seventy time series, while the testing dataset contains three hundred seventy time series. 
+Analysis parameters include a sampling rate of ten kilohertz, frame length of twenty five point six milliseconds, shift length of six point four milliseconds, and degree of LPC coefficients of twelve.
 
-Keywords: Japanese Vowels, Multidimensional Curves, Time Series, Classifier, Linear Prediction Cepstrum Coefficients
+Each line in the data files represents twelve LPC coefficients in increasing order, separated by spaces, corresponding to one analysis frame. Lines are organized into blocks, which are sets of seven to twenty nine lines separated by blank lines, corresponding to a single speech utterance of "ae" with seven to twenty nine frames. Each speaker is represented by a set of consecutive blocks.
+
+In the training file, there are thirty blocks for each speaker. In the test file, speakers have varying numbers of blocks, ranging from twenty four to eighty eight.
+
+The dataset has been used in past research on multidimensional curve classification using passing through regions. Commercial use of the data requires permission from the donor.
+
+Features include speaker, utterance, frame, and twelve coefficient values.
+
+Keywords: Japanese vowels, time series, speech recognition, linear prediction coding, cepstrum coefficients, multidimensional curves, pattern recognition

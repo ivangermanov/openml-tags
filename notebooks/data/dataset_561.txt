@@ -1,19 +1,16 @@
-Relative CPU Performance Data
+Name: CPU
+Tags: UCI
 
-This dataset provides information about the relative performance of different computer systems. It contains data on various characteristics of these systems, including the vendor, model name, machine cycle time, minimum and maximum main memory, cache memory, minimum and maximum channels, and published and estimated relative performance.
+The CPU dataset contains information on relative CPU performance. It was originally used for numeric prediction using instance-based learning with encoding length selection. The dataset includes attributes such as vendor name, machine cycle time, minimum and maximum main memory, cache memory, minimum and maximum channels, published relative performance, and estimated relative performance.
 
-The dataset was created using a linear regression method to estimate the relative performance values. This method is described in detail in the original article.
+The estimated relative performance values were calculated using a linear regression method. The dataset comprises instances with various predictive attributes, non-predictive attributes, a goal field, and the linear regression's estimate. There are no missing attribute values in this dataset.
 
-There are two hundred nine instances in this dataset, each representing a different computer system. Each instance has ten attributes, including six predictive attributes, two non-predictive attributes, one goal field, and the linear regression's guess.
+The vendor names include a wide range of computer manufacturers such as Amdahl, Apollo, BASF, Burroughs, CDC, DEC, Honeywell, HP, IBM, and many others. The model names consist of numerous unique symbols. Machine cycle time is measured in nanoseconds, while memory attributes are measured in kilobytes. Channel attributes are measured in units.
 
-The attributes include vendor name, model name, machine cycle time in nanoseconds, minimum main memory in kilobytes, maximum main memory in kilobytes, cache memory in kilobytes, minimum channels in units, maximum channels in units, published relative performance, and estimated relative performance from the original article.
+The published relative performance (PRP) serves as the class value and is continuously valued. The PRP values range from to over, with the majority of instances falling in the range. Summary statistics for various attributes show correlations with the PRP, with maximum main memory having the highest correlation.
 
-There are no missing attribute values in this dataset. The class distribution is continuous, with published relative performance values ranging from zero to over one thousand.
+Past usage of this dataset includes linear regression prediction of relative CPU performance, which recorded an average deviation from actual values. Instance-based prediction methods have also been applied to this dataset with similar results, requiring no transformations.
 
-Summary statistics are available for each attribute, including minimum, maximum, mean, standard deviation, and correlation with published relative performance.
+This dataset provides valuable information for researchers and practitioners interested in computer performance analysis, machine learning applications in hardware evaluation, and comparative studies of different CPU models and manufacturers.
 
-This dataset has been used in previous studies, including linear regression prediction of relative CPU performance and instance-based prediction of real-valued attributes.
-
-Tags: Chemistry, Life Science, UCI
-
-Keywords: Computer Systems, Relative Performance, Linear Regression, Machine Cycle Time, Main Memory, Cache Memory, Channels, Published Relative Performance, Estimated Relative Performance.
+Keywords: CPU performance, machine learning, hardware evaluation, linear regression, instance-based prediction, computer manufacturers, memory attributes, channel attributes

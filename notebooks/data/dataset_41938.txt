@@ -1,15 +1,42 @@
-PAR Ten Regression Dataset 
+MIP 2016 PAR10 Regression Dataset
 
-This dataset contains the PAR Ten performances of modern solvers on the solvable instances of Mixed Integer Programming Library Two Thousand and Ten. 
+This dataset is part of the Open Algorithm Challenge and contains PAR10 performances of modern solvers on the solvable instances of MIPLIB 2010. The algorithm runtime data was directly taken from the evaluations of the solvers. The features were generated using the MIP feature computation code, and to record runtimes of the feature computations, a runsolver was used.
 
-The algorithm runtime data was directly taken from the multi-threaded table of evaluations. 
+The dataset includes a wide range of features, including problem type, number of variables, number of constraints, number of non-zero coefficients, and many others. These features provide a comprehensive description of the mixed-integer programming problems and can be used to analyze and predict the performance of solvers.
 
-The features were generated using the Mixed Integer Programming feature computation code from the University of British Columbia. 
+The dataset is particularly useful for algorithm selection, as it provides a large collection of instances with varying characteristics, allowing for a thorough evaluation of different solvers and their performance on different types of problems.
 
-To record runtimes of the feature computations, Run Solver was used. 
+Features:
 
-Part of Open Algorithm Challenge Twenty-Seventeen, also known as Mira.
+* Problem type
+* Number of variables
+* Number of constraints
+* Number of non-zero coefficients
+* Linear programming average
+* Linear programming L2 average
+* Linear programming L infinity
+* Linear programming objective value
+* Number of binary variables
+* Number of integer variables
+* Number of continuous variables
+* Number of semi-continuous variables
+* Number of non-continuous variables
+* Ratio of binary variables
+* Ratio of integer variables
+* Ratio of continuous variables
+* Ratio of semi-continuous variables
+* Ratio of non-continuous variables
+* Support size average
+* Support size median
+* Support size variance coefficient
+* Support size Q90 MQ10
+* Right-hand side coefficients average
+* Right-hand side coefficients variance coefficient
+* Variable constraint degree average
+* Variable constraint degree median
+* Variable constraint degree variance coefficient
+* Variable constraint degree Q90 MQ10
+* Variable weight average
+* Variable weight variance coefficient
 
-Features: Problem Type, Number of Variables, Number of Constraints, Number of Non-Zero Coefficients, Number of Quadratic Variables, Number of Quadratic Constraints, Number of Quadratic Non-Zero Coefficients, Linear Programming Average, Linear Programming L Two Average, Linear Programming L Infinity, Linear Programming Objective Value, Number of Binary Variables, Number of Integer Variables, Number of Continuous Variables, Number of Semi-Continuous Variables, Number of Semi-Integer Variables, Ratio of Binary Variables, Ratio of Integer Variables, Ratio of Continuous Variables, Ratio of Semi-Continuous Variables, Ratio of Semi-Integer Variables, Number of Integer Dot Variables, Ratio of Integer Dot Variables, Number of Unbounded Discrete, Ratio of Unbounded Discrete, Support Size Average, Support Size Median, Support Size Variation Coefficient, Support Size Quartile Nine Zero Quartile One Zero, Right-Hand Side Constant Zero Average, Right-Hand Side Constant Zero Variation Coefficient, Right-Hand Side Constant One Average, Right-Hand Side Constant One Variation Coefficient, Right-Hand Side Constant Two Average, Right-Hand Side Constant Two Variation Coefficient.
-
-Keywords: Algorithm Selection, Economics, Regression, Mixed Integer Programming, Feature Computation, Solver Evaluation.
+Keywords: Mixed-Integer Programming, Algorithm Selection, Solver Performance, Feature Computation, Linear Programming.

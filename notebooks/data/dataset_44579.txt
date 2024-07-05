@@ -1,11 +1,11 @@
-The Diabetes One Thirty US dataset has been subsampled using a specific set of parameters to create a new dataset. This process involves selecting a random subset of the original data while ensuring that certain conditions are met.
+Diabetes One Thirty US Seed One Dataset
 
-The subsampling process begins by uniformly selecting classes from the unique values present in the target variable. In cases where there are more classes than the specified maximum, a random selection is made based on the value counts of each class. The indices corresponding to the selected classes are then used to filter the data.
+This dataset is a subsample of the Diabetes One Thirty US dataset, generated with a seed of one. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-Next, the columns are sampled uniformly if their number exceeds the specified maximum. This is done by randomly choosing column indices and sorting them to maintain their original order.
+The dataset was subsampled to have a maximum of ten classes, one hundred columns, and two thousand rows. The subsampling process was stratified to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-Finally, the number of rows is reduced to the specified maximum if necessary. To ensure that the resulting dataset remains representative, stratified sampling is employed according to the target variable.
+The dataset features include patient information such as race, gender, age, weight, and admission details. It also includes medical information such as laboratory procedures, medications, and diagnoses. Additionally, the dataset contains information about the patient's medical history, including previous hospitalizations and medications.
 
-The resulting dataset contains a subset of the original features, including demographic information, medical history, and treatment details. These features are crucial in understanding the complexities of diabetes management and predicting patient outcomes.
+The dataset was generated using a Python script that utilized the NumPy and Pandas libraries. The script employed random sampling to select the classes, columns, and rows, ensuring that the resulting dataset was representative of the original dataset.
 
-Keywords: Diabetes Management, Data Subsampling, Stratified Sampling, Feature Selection, Medical Data Analysis
+Keywords: Diabetes, Subsampling, Stratified Sampling, Patient Information, Medical History

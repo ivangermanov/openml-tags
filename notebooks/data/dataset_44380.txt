@@ -1,17 +1,17 @@
-Cover Type Seed Three Dataset 
+Name: Cover Type Seed Three with Two Thousand Rows, Ten Classes, and One Hundred Columns, Stratified
 
-This dataset is a subsampling of the Cover Type dataset. It was generated using a specific set of arguments, including a seed value of three, a maximum number of rows, a maximum number of columns, a maximum number of classes, and a stratification parameter.
+Tags: Subsampling of the dataset Cover Type with seed equals three, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals false. 
 
-The original Cover Type dataset was uniformly sampled to select a subset of classes, ensuring that each class had an equal probability of being chosen. This resulted in a reduced number of classes, which were then used to filter the data and select the relevant instances.
+Generated with the following source code:
 
-Next, the dataset was uniformly sampled again to select a subset of columns, ensuring that each column had an equal probability of being chosen. This resulted in a reduced number of columns, which were then used to create the final dataset.
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification, and returns a dataset. It uses a random number generator with the given seed to sample the data. 
 
-If the dataset still had more instances than desired, it was further stratified to ensure that each class was proportionally represented in the final dataset.
+First, it samples the classes uniformly, selecting the indices where one of the chosen classes is present. Then, it samples the columns uniformly if required. 
 
-The resulting dataset has undergone significant transformations to reduce its size while preserving its essential characteristics.
+If the number of rows exceeds the maximum, it stratifies the data accordingly, using the target name, and splits the data into a subset of the desired size. 
 
-Tags: Health, Medicine
+Finally, it converts categorical columns to string for OpenML, and returns a dataset with the subsampled data, categorical mask, and columns.
 
-Features: 
+Features: (skipped due to unreadability)
 
-Keywords: Cover Type, sampling, stratification, classes, columns, instances, health, medicine
+Keywords: Cover Type, Subsampling, Stratification, Random Sampling, Dataset Generation

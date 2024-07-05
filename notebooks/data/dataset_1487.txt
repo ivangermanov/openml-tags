@@ -1,46 +1,38 @@
-Ozone Level Detection Dataset
+Dataset: Ozone Level 8hr
 
-Abstract:
-This collection includes two ground ozone level datasets, namely the eight-hour peak set and the one-hour peak set. These datasets were gathered between 1998 and 2004 in the Houston, Galveston, and Brazoria areas.
+Tags: OpenML-CC18, OpenML100, study_123, study_14, study_34, study_50, study_52, study_7, study_98, study_99
 
-Data Set Information:
-The datasets consist of various attributes, including temperature measurements taken at different times throughout the day, denoted by the prefix "T", and wind speed measurements denoted by the prefix "WS". Specifically, the attributes include:
+Source: UCI
 
-* Peek Wind Speed, which represents the resultant wind speed (i.e., the average of the wind vector)
-* Average Wind Speed
-* Peak Temperature
-* Average Temperature
-* Temperature at 850 hPa level (approximately 1500 meters high)
-* Relative Humidity at 850 hPa
-* East-West Direction Wind at 850 hPa
-* North-South Direction Wind at 850 hPa
-* Geopotential Height at 850 hPa
-* Temperature at 700 hPa level (approximately 3100 meters high)
-* Relative Humidity at 700 hPa
-* East-West Direction Wind at 700 hPa
-* North-South Direction Wind at 700 hPa
-* Geopotential Height at 700 hPa
-* Temperature at 500 hPa level (approximately 5500 meters high)
-* Relative Humidity at 500 hPa
-* East-West Direction Wind at 500 hPa
-* North-South Direction Wind at 500 hPa
-* Geopotential Height at 500 hPa
-* K-Index, a measure of atmospheric instability
-* T-Totals, a measure of atmospheric instability
-* Sea Level Pressure
-* Change in Sea Level Pressure from the Previous Day
-* Precipitation
+Citation: Forecasting skewed biased stochastic ozone days: analyses, solutions and beyond, Knowledge and Information Systems, Vol. 14, No. 3, 2008.
 
-Attribute Information:
-The Texas Commission on Environmental Quality (TCEQ) places significant importance on several key attributes, including:
+Abstract: This collection includes two ground ozone level data sets. The first is the eight-hour peak set (eighthr.data), and the second is the one-hour peak set (onehr.data). The data were collected from 1998 to 2004 in the Houston, Galveston, and Brazoria area.
 
-* Local Ozone Peak Prediction
-* Upwind Ozone Background Level
-* Precursor Emissions Related Factor
-* Maximum Temperature in Degrees Fahrenheit
-* Base Temperature Where Net Ozone Production Begins (50°F)
-* Solar Radiation Total for the Day
-* Wind Speed Near Sunrise
-* Wind Speed Mid-Day
+Data Set Information: The attributes beginning with T represent temperature measurements taken at various times throughout the day, while those starting with WS indicate wind speed at different times. Some key attributes include:
 
-Keywords: ozone level detection, temperature measurement, wind speed, atmospheric instability, sea level pressure, precipitation, local ozone peak prediction, upwind ozone background level, precursor emissions related factor, maximum temperature, base temperature, solar radiation total, wind speed near sunrise, wind speed mid-day
+WSR_PK: Continuous. Peak wind speed (resultant, average of wind vector)
+WSR_AV: Continuous. Average wind speed
+T_PK: Continuous. Peak temperature
+T_AV: Continuous. Average temperature
+T85: Continuous. Temperature at 850 hPa level (approximately 1500 m height)
+RH85: Continuous. Relative Humidity at 850 hPa
+U85: Continuous. U wind (east-west direction wind at 850 hPa)
+V85: Continuous. V wind (north-south direction wind at 850 hPa)
+HT85: Continuous. Geopotential height at 850 hPa (similar to height at low altitude)
+
+The dataset also includes measurements at 700 hPa (roughly 3100 m height) and 500 hPa (roughly 5500 m height) levels, as well as other meteorological indices such as K-Index, T-Totals, Sea Level Pressure, and precipitation.
+
+Attribute Information: Several important attributes highly valued by the Texas Commission on Environmental Quality (TCEQ) are specified, including:
+
+O3: Local ozone peak prediction
+Upwind: Upwind ozone background level
+EmFactor: Precursor emissions related factor
+Tmax: Maximum temperature in degrees Fahrenheit
+Tb: Base temperature where net ozone production begins (50°F)
+SRd: Solar radiation total for the day
+WSa: Wind speed near sunrise (using 09-12 UTC forecast mode)
+WSp: Wind speed mid-day (using 15-21 UTC forecast mode)
+
+Relevant Papers: The dataset is discussed in detail in "Forecasting skewed biased stochastic ozone days: analyses, solutions and beyond" (Knowledge and Information Systems, Vol. 14, No. 3, 2008). This paper covers the dataset's use and various experiments using state-of-the-art methods, including cross-validation and streaming approaches. A shorter version of the paper, focusing on analyses and solutions, was presented at ICDM 2006.
+
+Keywords: ozone levels, air quality, meteorological data, environmental monitoring, time series forecasting, Houston area, atmospheric conditions, wind speed, temperature, humidity

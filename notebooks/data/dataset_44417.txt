@@ -1,23 +1,17 @@
-Subsampling of the dataset Higgs with Seed Zero 
+Name: Higgs Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-Tags: Subsampling of the dataset Higgs 
+Tags: Subsampling of the dataset Higgs generated with the following source code:
 
-Generated with the following source code:
+This function subsamples a dataset. It takes in a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a subsampled dataset.
 
-The function subsample takes five parameters - seed, number of rows maximum, number of columns maximum, number of classes maximum, and stratified - and returns a dataset.
+The function first uniformly samples classes from the dataset. If the number of unique classes is greater than the maximum number of classes, it selects the maximum number of classes using their value counts as probabilities. It then selects the indices where one of these classes is present.
 
-First, we set up a random number generator with the given seed. Then we select the input data and output labels. 
+Next, it uniformly samples columns from the dataset. If the number of columns is greater than the maximum number of columns, it selects the maximum number of columns. It then selects the corresponding columns from the dataset.
 
-We uniformly sample classes from the unique labels in the output. If there are more classes than the specified maximum, we choose the required number of classes based on their frequency in the data. 
+Finally, if the number of rows is greater than the maximum number of rows, it stratifies the dataset accordingly. It concatenates the dataset with its target variable, splits it into a subset of the desired size, and separates the features and target variable again.
 
-We then select the indices where one of these chosen classes is present and filter our input data and output labels accordingly.
+The resulting dataset is then returned, along with its categorical mask and column names.
 
-Next, we uniformly sample columns if required. If the number of columns exceeds the specified maximum, we randomly choose the required number of columns and sort them. 
+Features: lepton PT, lepton eta, lepton phi, missing energy magnitude, missing energy phi, jet one PT, jet one eta, jet one phi, jet two PT, jet two eta, jet two phi, jet three PT, jet three eta, jet three phi, jet four PT, jet four eta, jet four phi, m jj, m jjj, m lv, m jlv, m bb, m wbb, m wwbb, target
 
-If the number of rows still exceeds the specified maximum, we use stratified sampling to reduce the number of rows while maintaining the class balance.
-
-Finally, we convert categorical columns to strings and return a new dataset with the subsampled data, labels, and column information.
-
-Features: Lepton Transverse Momentum, Lepton Eta, Lepton Phi, Missing Energy Magnitude, Missing Energy Phi, Jet One Pt, Jet One Eta, Jet One Phi, ... , Target
-
-Keywords: Subsampling, Higgs Dataset, Stratified Sampling, Feature Selection, Class Balancing
+Keywords: dataset subsampling, stratified sampling, feature selection, class selection, random sampling

@@ -1,14 +1,15 @@
-Subsampling of the dataset Robert with a specified seed value resulted in a new dataset with reduced dimensions. The sampling process involved uniformly selecting classes from the original dataset until the desired number of classes was reached, and then selecting the corresponding indices where these classes were present. 
+Name: Robert Subsampling Dataset
 
-The next step was to uniformly sample columns if the number of columns exceeded the maximum allowed. This was done by randomly choosing column indices and sorting them to ensure consistency.
+Tags: Subsampling of the Robert dataset with stratification
 
-If the resulting dataset still had more rows than desired, the sampling process continued by using stratified sampling to ensure an even distribution of classes in the new dataset. This involved concatenating the feature data with the target variable, splitting the data into subsets using stratified sampling, and then separating the feature data and target variable again.
+This dataset is a subsampled version of the original Robert dataset, with a focus on stratified sampling to maintain class balance. The subsampling process involved uniformly selecting classes, columns, and rows to reduce the dataset size while preserving its essential characteristics.
 
-Finally, the categorical columns were converted to strings to comply with OpenML requirements. 
+The subsampling process began by selecting a subset of classes from the original dataset. This was done by uniformly sampling the unique classes present in the dataset, with the probability of selection proportional to the class frequency. The selected classes were then used to filter the dataset, retaining only the instances that belonged to these classes.
 
-Tags: Machine Learning, Mathematics
+Next, the columns of the dataset were uniformly sampled to reduce the feature dimensionality. This was done by randomly selecting a subset of columns from the original dataset, without replacement. The selected columns were then used to create a new dataset with the reduced feature set.
 
-Features: 
-V One Forty-Two, V One Ninety-Seven,... 
+Finally, the rows of the dataset were stratified sampled to reduce the dataset size. This was done by using a stratified sampling approach, where the instances were split into training and testing sets based on the class labels. The testing set was then used to create the final subsampled dataset.
 
-Keywords: dataset, sampling, machine learning, stratification, OpenML
+The resulting dataset has a reduced size, with a focus on maintaining class balance and preserving the essential characteristics of the original dataset.
+
+Keywords: subsampling, stratification, class balance, dataset reduction, feature selection

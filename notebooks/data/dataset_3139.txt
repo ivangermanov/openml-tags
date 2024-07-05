@@ -1,47 +1,24 @@
-QSAR-TID-20113 Dataset
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 20113. The features represent FCFP 1024bit molecular fingerprints, which were generated from SMILES strings using the Pipeline Pilot program, Dassault Systèmes BIOVIA.
+This dataset contains QSAR data from ChEMBL showing activity values (in pseudo pCI50 units) of various compounds on drug target TID. It comprises rows and features, including molecule IDs and median pXC50 values. The features represent FCFP bit Molecular Fingerprints generated from SMILES strings using Pipeline Pilot software from Dassault Systèmes BIOVIA. Fingerprint generation typically does not require missing value imputation as all bits are generated.
 
-The dataset has 728 rows and 1026 features, including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXc50.
+The target protein is LXR beta (Liver X receptor beta), also known as LXRB, NER, and NRH. It is a single protein target found in Homo sapiens. LXR beta belongs to the transcription factor/nuclear receptor family, specifically the nuclear hormone receptor subfamily  group H member.
 
-Generating Fingerprints does not usually require missing value imputation as all bits are generated.
+LXR beta is involved in various biological processes, including regulation of transcription, lipid metabolism, cholesterol homeostasis, and cell differentiation. It functions as a DNA binding transcription factor, nuclear receptor, and has roles in protein binding and zinc ion binding. The protein is localized in the nucleus, cytoplasm, and chromatin.
 
-Features:
+Several small molecule compounds have been studied as potential LXR beta modulators or agonists, reaching early clinical trial phases. These include BMS, LXR, CS, and hyodeoxycholic acid. The protein has been the subject of numerous studies related to lipid metabolism, cholesterol transport, and gene expression regulation.
 
-* MOLECULE CHEMBL ID
-* FCFP Six One Zero Two Four
-*...
+LXR beta is involved in multiple signaling pathways and biological processes, including hormone mediated signaling, regulation of macrophage derived foam cell differentiation, triglyceride biosynthesis, cholesterol efflux, and lipid storage. It also plays a role in regulating the response to endoplasmic reticulum stress and cold induced thermogenesis.
 
-Scraped Data:
+The protein has been studied using various experimental techniques and is cataloged in multiple biological databases, including UniProt, InterPro, Pfam, and PDBe. It is also referenced in pathway databases such as Reactome, where it is implicated in pathways related to lipid metabolism and gene expression regulation.
 
-ID: CHEMBL Four Zero Nine Three
-Type: Single Protein
-Preferred Name: LXR Beta
-Synonyms: Liver X Receptor Beta, LXRB, NER, NR One H Two, Nuclear Receptor NER
-Organism: Homo Sapiens
-Species Group: No
-Protein Target Classification: One. Transcription Factor/Nuclear Receptor/Nuclear Hormone Receptor Subfamily One/Nuclear Hormone Receptor Subfamily One Group H/Nuclear Hormone Receptor Subfamily One Group H Member Three
-
-Description: Oxysterols Receptor LXR-Beta
-Relationship: Accession Oxysterols Receptor LXR-Beta
-Single Protein
-
-Items per Page: Five One. Showing One-Five out of Five Records.
-
-Browse All Parent Molecule CHEMBL ID Parent Molecule Name Parent Molecule Type Mechanism of Action Max Phase First Approval USAN Stem References.
-
-One. Small Molecule Error. CHEMBL Three Five Four Five Zero Four Seven BMS Eight Five Two Nine Two Seven Small Molecule LXR-Beta Modulator One --- --- From PubMed CHEMBL Three Five Four Five Zero Four Seven (Parent) One.
-
-Two. Error. CHEMBL Four Five Six Two Three Seven LXR Six Two Three Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Four Five Six Two Three Seven (Parent) One, Two.
-
-Three. Small Molecule Error. CHEMBL Three Five Four Five Four One Eight BMS Seven Seven Nine Seven Eight eight Small Molecule LXR-Beta Agonist One --- --- From Other PubMed CHEMBL Three Five Four Five Four One Eight (Parent) One, Two.
-
-Four. Small Molecule Error. CHEMBL Three Five Four Five Two Three Eight CS Eight Zero Eight Zero Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Three Five Four Five Two Three Eight (Parent) One.
-
-Five. Error. CHEMBL Two Seven Two Six Twenty-One HYODEOXYCHOLIC ACID Small Molecule LXR-Beta Agonist One --- --- From PubMed CHEMBL Two Seven Two Six Twenty-One (Parent) One, Two.
-
-Showing One-Five out of Five Records.
-
-Expression Atlas One. P Five Five Zero Five Five Go Component Six. Go Function Fourteen. Go Process Thirty-Four. 
-
-Keywords: QSAR, Drug Target, LXR-Beta, Nuclear Receptor, Transcription Factor, Lipid Metabolism, Cholesterol Homeostasis, Gene Regulation.
+Keywords:
+QSAR
+LXR beta
+Nuclear receptor
+Lipid metabolism
+Transcription factor
+Cholesterol homeostasis
+Small molecule modulators
+Gene expression regulation

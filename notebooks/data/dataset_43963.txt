@@ -1,19 +1,19 @@
-The CPS1988 dataset is tagged with Machine Learning and Statistics.
-
+**Source**
 This dataset was obtained from the AER R package.
 
-Cross-section data originates from the March 1988 Current Population Survey conducted by the United States Census Bureau. The data consists of a sample of men between the ages of eighteen and seventy with positive annual income exceeding fifty dollars in nineteen ninety-two, who are neither self-employed nor working without pay. Wages are deflated by the Personal Consumption Expenditure deflator for nineteen ninety-two.
+**Data Description**
+The Cross-Section Data originates from the March Current Population Survey by the US Census Bureau. The data is a sample of men aged eighteen to seventy with positive annual income greater than fifty dollars, who are not self-employed nor working without pay. Wages are deflated by the deflator of Personal Consumption Expenditure. A problem with Current Population Survey data is that it does not provide actual work experience. It is therefore customary to compute experience as age minus education minus six, as was done by previous researchers, this may be considered potential experience. As a result, some respondents have negative experience.
 
-A problem inherent to CPS data is that it does not provide actual work experience. Therefore, it is customary to compute experience as age minus education minus six, as was done previously, which may be considered potential experience. Consequently, some respondents have negative experience.
+**Attribute Information**
+* Wage: Wage in dollars per week.
+* Education: Number of years of education.
+* Experience: Number of years of potential work experience.
+* Ethnicity: Factor with levels Caucasian and African American.
+* SMSA: Factor. Does the individual reside in a Standard Metropolitan Statistical Area?
+* Region: Factor with levels Northeast, Midwest, South, and West.
+* Part-time: Factor. Does the individual work part-time?
 
-Attribute information includes:
+**Citation Request**
+Applied Econometrics with R. New York: Springer-Verlag. URL https://CRAN.R-project.org/package=AER
 
-* Wage, which represents the weekly wage in dollars.
-* Education, which denotes the number of years of education.
-* Experience, which signifies the number of years of potential work experience.
-* Ethnicity, which is a factor with two levels, Caucasian and African American.
-* SMSA, which stands for Standard Metropolitan Statistical Area and is also a factor.
-* Region, which is a factor with four levels, namely Northeast, Midwest, South, and West.
-* Part-time, which indicates whether the individual works part-time.
-
-Keywords: Current Population Survey, wages, education, experience, ethnicity, SMSA, region, part-time.
+Keywords: Current Population Survey, Wage, Education, Experience, Ethnicity, SMSA, Region, Part-time

@@ -1,30 +1,30 @@
-FOREX Eur Sek Day High 
+FOREX EUR/SEK Day High
 
-Tags: Culture, Finance, Forex, Forex Day, Forex High, Images 
+Tags: finance, forex, forex day, forex high
 
-**Source**: Dukascopy Historical Data Feed 
+Source: Dukascopy Historical Data Feed
 
-**Data Description**
+Data Description
 
-This dataset contains the historical price data of the Forex Eur/Sek currency pair from Dukascopy. Each instance represents one candlestick of one day, providing a comprehensive overview of the market trends and fluctuations. The entire dataset spans a specific period, excluding weekends when the Forex market is closed.
+This dataset contains historical price data of the FOREX EUR/SEK from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The timestamp feature is set to the Europe/Amsterdam timezone, ensuring accurate and consistent timing information. The class attribute is particularly noteworthy, as it indicates the direction of the mean high price of the following day relative to the current day. Specifically, the class attribute is true when the mean high price is expected to rise the following day, and false when it is expected to fall or remain stagnant.
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
 
-**Note**: This dataset is intended for scientific purposes only and should not be used for actual trading decisions. Realistic trade strategies should be based on predictions of close attributes, which are also available in this dataset.
+Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes, which are also available.
 
-**Attributes**
+Attributes
 
-* Timestamp: The time of the current data point, accurately represented in the Europe/Amsterdam timezone.
-* Bid Open: The initial bid price at the start of the specified time interval.
-* Bid High: The highest bid price recorded during this time interval.
-* Bid Low: The lowest bid price observed during this time interval.
-* Bid Close: The final bid price at the end of the specified time interval.
-* Bid Volume: The frequency of changes in the bid price within this time interval.
-* Ask Open: The initial ask price at the start of the specified time interval.
-* Ask High: The highest ask price recorded during this time interval.
-* Ask Low: The lowest ask price observed during this time interval.
-* Ask Close: The final ask price at the end of the specified time interval.
-* Ask Volume: The frequency of changes in the ask price within this time interval.
-* Class: An indicator of whether the average high price is expected to increase or decrease in the next time interval.
+Timestamp: The time of the current data point in Europe/Amsterdam
+Bid Open: The bid price at the start of this time interval
+Bid High: The highest bid price during this time interval
+Bid Low: The lowest bid price during this time interval
+Bid Close: The bid price at the end of this time interval
+Bid Volume: The number of times the Bid Price changed within this time interval
+Ask Open: The ask price at the start of this time interval
+Ask High: The highest ask price during this time interval
+Ask Low: The lowest ask price during this time interval
+Ask Close: The ask price at the end of this time interval
+Ask Volume: The number of times the Ask Price changed within this time interval
+Class: Whether the average price will go up during the next interval
 
-Keywords: Forex, Eur Sek, Candlestick, Historical Data, Currency Pair, Market Trends, Timezone, Class Attribute, Trading Strategies.
+Keywords: FOREX, EUR/SEK, historical data, candlestick, finance, trading

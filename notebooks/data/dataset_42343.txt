@@ -1,12 +1,9 @@
-KDD98
-Tags: Dataset
+The KDD98 dataset is a challenge that aims to estimate the return from a direct mailing in order to maximize donation profits. This dataset represents a problem of binary classification, specifically whether there was a response to the mailing. The target variable has been correctly encoded as a binary factor.
 
-The KDD98 Challenge is a dataset aimed at estimating the return on investment from direct mailings to maximize donation profits. This dataset represents a classic problem of binary classification, where the goal is to predict whether there will be a response to the mailing.
+The features "Home Phone Donations", "Major Hispanic Urban Concentration", "Income", "Wealth One", and "Wealth Two" were recoded as nominal factor variables, and the constant feature "Recency, Frequency, and Monetary Value" was removed from the dataset. Additionally, the majority class was downsampled to forty percent of its original size, and unused factor levels were dropped.
 
-To improve the usability of the data, certain modifications have been made. Specifically, the features H Phone D, M Huc Two, Income, Wealth One, and Wealth Two were recoded as nominal factor variables. Additionally, the constant feature R F A Two R was removed from the dataset.
+The dataset includes a wide range of features, including information about the individual's age, date of birth, and donation history, as well as demographic information such as their occupation, education level, and household composition. Other features include information about the individual's interests and hobbies, such as whether they own a boat or play a musical instrument.
 
-To address the issue of class imbalance, the majority class was downsized to forty percent of its original size. Furthermore, unused factor levels were dropped to simplify the data.
+The goal of this challenge is to develop a model that can accurately predict whether an individual will respond to a direct mailing, based on these features. By doing so, organizations can maximize their donation profits by targeting their mailings to the most likely responders.
 
-Some notable features of this dataset include Acceptor Category One, Acceptor Category Two, Acceptance Date Ten, Acceptance Date Eleven, and so on. Other important features encompass Age, Average Gift, Bible, Boats, Card Gift, and many others.
-
-Keywords: Binary Classification, Direct Mailing, Donation Profits, Data Preprocessing, Class Imbalance
+Keywords: direct mailing, donation profits, binary classification, demographic data, donation history.

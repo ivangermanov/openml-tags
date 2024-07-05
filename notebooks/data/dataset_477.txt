@@ -1,15 +1,22 @@
-fl2000 Tags: **Author**: **Source**: 
+Name: fl2000
+Tags: 
 
-County Data from the Presidential Election in Florida 
+Source: Unknown - Date unknown
 
-These data are derived from three sources. The candidate vote counts are the final certified counts reported by the Florida Division of Elections. These were obtained from the National Opinion Research Center website in the file Certified Results. Note that these do not include the federal absentee votes, so that Al Gore's total vote is actually higher here than George W. Bush's.
+Please cite: County data from the 2000 Presidential Election in Florida. Compiled by Department of Statistics, University of Florida
 
-The undervote and overvote counts were extracted from the National Opinion Research Center ballot-level data. Since the aligned file is too large to work with in R, or almost any other program, a Unix program called cut was used to extract just the necessary columns. The results were then read into R and processed there.
+These data are derived from three sources, described below. As far as I am aware, you are free to use these data in any way that you see fit, though some acknowledgement is always appreciated. The candidate vote counts are the final certified counts reported by the Florida Division of Elections. These were obtained from the NORC website in the file Cert results.csv. Note that these do NOT include the federal absentee votes (so that one candidate's total vote is actually higher here than the other's).
 
-The technology and columns data were extracted from the Media Group data from the National Opinion Research Center website. Technology refers to the type of voting machine used, and Columns refers to whether the ballot listed the presidential candidates in a single column on a single page, or spread over two columns or two pages of the ballot. These agree with some earlier data that were obtained from the New York Times website, except that in the Media Group data the Palm Beach County ballot, the famous butterfly ballot, was listed as having one column. It is definitely a two-column ballot, which is the designation recorded here. 
+The undervote and overvote counts were extracted from the NORC ballot level data in the file aligned.txt. Since aligned.txt is too large to work with in R (or almost any other program) a standard UNIX program was used to extract just the columns needed. Then the results were read into R and processed there.
 
-Images of most of the ballots can be found on the New York Times website. 
+The technology and columns data were extracted from the Media Group data from the NORC website. "Technology" is simply the type of voting machine used, and "columns" is indicated as one if the ballot listed the presidential candidates in a single column on a single page, and two if the presidential candidates were spread over two columns or two pages of the ballot. These agree with some earlier data that had been obtained from the NY Times website, except that in the media group data one county's ballot (the famous butterfly ballot) was listed as having one column. This would definitely be considered a two column ballot, so that is the designation recorded here.
 
-Features: county, technology, columns, undervote, overvote, candidate vote counts
+At one time it was thought that another county also used a two column ballot, but this was incorrect (the ballot listed the candidates and parties in English and Spanish in opposing columns). Images of most of the ballots can be found on the New York Times website.
 
-Keywords: Florida, Presidential Election, Voting Machines, Ballots, Vote Counts
+Information about the dataset
+CLASSTYPE: nominal
+CLASSINDEX: two
+
+Features: county, technology, columns, under, over, candidate names
+
+Keywords: Presidential Election, Florida, vote counts, ballot data, voting technology

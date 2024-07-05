@@ -1,26 +1,15 @@
-**FOREX Eur Sek Day Close**
+Name: Forex EUR/SEK Day Close
 
-Tags: Finance, Forex, Forex Close, Forex Day, Machine Learning, Manufacturing
+Tags: finance, forex, forex close, forex day
 
-**Source**: Dukascopy Historical Data Feed 
+Source: Dukascopy Historical Data Feed
 
-**Data Description**
-This dataset contains historical price data of the Forex Eur Sek from Dukascopy. Each instance represents one candlestick of one day. The entire dataset spans a specific time period and excludes weekends, as the Forex market is not active on those days. The timestamp feature is set to the Europe Amsterdam timezone.
+Data Description
+This dataset contains historical price data of the Forex EUR/SEK currency pair from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the Forex market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-The class attribute is determined by the direction of the mean close price of the following day, relative to the mean close price of the current minute. In other words, the class attribute is true if the mean close price increases the following day, and false if it decreases or remains the same.
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following day, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following day, and the class attribute is False when the mean Close price is going down or stays the same the following day.
 
-**Attributes**
-* **Timestamp**: The time of the current data point, represented in the Europe Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+Attributes
+The Timestamp attribute represents the time of the current data point in the Europe/Amsterdam timezone. The Bid Open attribute is the bid price at the start of this time interval. The Bid High attribute is the highest bid price during this time interval. The Bid Low attribute is the lowest bid price during this time interval. The Bid Close attribute is the bid price at the end of this time interval. The Bid Volume attribute is the number of times the Bid Price changed within this time interval. The Ask Open attribute is the ask price at the start of this time interval. The Ask High attribute is the highest ask price during this time interval. The Ask Low attribute is the lowest ask price during this time interval. The Ask Close attribute is the ask price at the end of this time interval. The Ask Volume attribute is the number of times the Ask Price changed within this time interval. The Class attribute determines whether the average price will go up during the next interval.
 
-Keywords: Forex, Eur Sek, Historical Data, Candlestick, Time Series, Finance, Machine Learning
+Keywords: Forex, EUR/SEK, currency pair, historical data, finance, trading

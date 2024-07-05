@@ -1,11 +1,19 @@
-The Two D Planes dataset is a machine learning and statistics dataset, specifically designed for regression analysis, belonging to the OpenML-Reg nineteen collection and study one thirty.
+Name: Two Dimensional Planes
+Tags: OpenML Regression, Study, Synthetic
 
-This artificial dataset is described in a research paper, with variance one instead of two. The ten attributes are generated independently using specific probability distributions. The first attribute has a fifty percent chance of being minus one or one. The remaining nine attributes have a one-third probability of being minus one, zero, or one.
+This is an artificial dataset described in a statistical reference book. It generates values for ten attributes independently using specific probabilities. The first attribute has equal probability of being negative one or positive one. The remaining attributes have equal probability of being negative one, zero, or positive one.
 
-The target variable Y is obtained using a predefined rule based on the value of the first attribute. If the first attribute is one, then Y is calculated as three plus three times the second attribute, plus two times the third attribute, plus the fourth attribute, plus a random error term with a standard deviation of one. If the first attribute is minus one, then Y is calculated as minus three plus three times the fifth attribute, plus two times the sixth attribute, plus the seventh attribute, plus a random error term with a standard deviation of one.
+The target variable Y is obtained using a rule based on the value of the first attribute. If the first attribute is positive one, Y is calculated using a linear combination of the second, third, and fourth attributes plus random noise. If the first attribute is negative one, Y is calculated using a different linear combination of the fifth, sixth, and seventh attributes plus random noise.
 
-This dataset consists of forty thousand seven hundred sixty-eight cases, each with eleven continuous attributes. It is part of a collection of regression datasets available online.
+This dataset is part of a collection of regression datasets. It consists of cases with continuous attributes. The original source is a statistical reference book.
 
-Features: x one, x two, x three, x four, x five, x six, x seven, x eight, x nine, x ten, target variable Y
+Features: x one through x ten, y
 
-Keywords: machine learning, regression analysis, statistics, synthetic dataset, probability distribution, target variable, random error term, continuous attributes, dataset collection.
+Keywords:
+- Artificial dataset
+- Regression
+- Synthetic data
+- Probability-based attributes
+- Linear combinations
+- Random noise
+- Continuous variables

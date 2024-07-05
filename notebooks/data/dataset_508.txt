@@ -1,15 +1,22 @@
-The National Football League Passes dataset lists all-time NFL passers through nineteen ninety-four by the NFL passing efficiency rating. Associated passing statistics from which this rating is computed are included. The dataset lists statistics for twenty-six players. The first twenty-five are the top twenty-five all-time career best rating leaders recognized by the NFL. The twenty-sixth player has statistics which include his performance in the All-America Football Conference, which is not recognized by the NFL.
-
-The statistics given are current through the nineteen ninety-four regular season. Only passers with a minimum of fifteen hundred career passing attempts are included. The NFL describes how to compute its rating in its nineteen seventy-seven document "National Football League Passer Rating System" through the use of tables. No formula is explicitly stated for rating. However, examining the tables in the "National Football League Passer Rating System," one can infer that NFL passer rating is calculated based on completion percentage, touchdown percentage, interception percentage, and yards per attempt.
-
-If certain conditions are met, which is true of most passers having a reasonable number of passing attempts, then the rating formula simplifies to a combination of these four performance standards. Note that the weights on interception percentage and yards per attempt are greatest in magnitude, closely followed by touchdown percentage. The weight on completion percentage is a distant fourth in magnitude.
-
-Using the NFL data, one can uncover, at least approximately, the simplified rating formula using multiple regression. Students can be told that NFL rating is based on performance standards established for completion percentage, average gain, touchdown percentage, and interception percentage. However, the actual formula for rating is not widely publicized. Once the rating formula is uncovered, one can see the relative weights that the NFL assigns to these four performance standards.
-
-Also, by citing unusual passers who do not satisfy certain conditions, an instructor can remind students of the dangers of extrapolation when building regression models. These unusual passers can include those with very high or low ratings due to their unique performance statistics.
-
-The dataset includes variables such as passing attempts, passing completions, passing yards, touchdowns by passing, interceptions, NFL rating, and name of NFL player.
+National Football League Passes Dataset
 
 Tags: sport, study
 
-Keywords: National Football League, passer rating, passing efficiency, completion percentage, touchdown percentage, interception percentage, yards per attempt.
+Source: StatLib
+
+Please cite: National Football League Passes
+
+This dataset lists all-time NFL passers through the regular season by the NFL passing efficiency rating. Associated passing statistics from which this rating is computed are included. The dataset contains statistics for players, with the top career best rating leaders recognized by the NFL. One additional player's statistics include performance in the All-America Football Conference, which is not recognized by the NFL. The statistics are current through the regular season. Only passers with a minimum of career passing attempts are included.
+
+The NFL describes how to compute its rating in its document "National Football League Passer Rating System" through the use of tables. No formula is explicitly stated for rating. However, by examining the tables, one can infer that NFL passer rating is calculated using a complex formula involving completion percentage, touchdown percentage, interception percentage, and yards per attempt. The formula includes truncation to ensure values fall within specific ranges, resulting in a minimal rating and a maximal rating.
+
+For most passers with a reasonable number of passing attempts, the rating formula can be simplified to a more straightforward calculation involving the same four performance metrics. The weights on interception percentage and yards per attempt are greatest in magnitude, closely followed by touchdown percentage, with completion percentage having the least impact.
+
+Classroom Use of this Data:
+Using the NFL data, students can uncover the simplified rating formula using multiple regression. The actual formula for rating is not widely publicized, but students can be informed that it is based on performance standards for completion percentage, average gain, touchdown percentage, and interception percentage. Once uncovered, the relative weights assigned to these performance standards can be analyzed. Instructors can use examples of unusual passers to demonstrate the dangers of extrapolation when building regression models.
+
+The dataset includes variables such as passing attempts, passing completions, passing yards, touchdowns by passing, interceptions, NFL rating, and the name of the NFL player. These statistics provide a comprehensive view of a quarterback's performance and efficiency.
+
+This dataset offers opportunities for statistical analysis, regression modeling, and discussions on the relative importance of different performance metrics in evaluating quarterback efficiency. It also serves as an excellent example for teaching about the complexities of sports statistics and the potential pitfalls of applying statistical models to extreme cases.
+
+Keywords: NFL, quarterback rating, passing statistics, regression analysis, performance metrics, sports analytics

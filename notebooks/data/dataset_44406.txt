@@ -1,17 +1,19 @@
-Name: Bank Marketing Seed Four 
+Name: Bank Marketing Seed Four
 
-Tags: Subsampling of the dataset Bank Marketing generated with a specific set of arguments.
+Tags: Subsampling of the dataset Bank Marketing with seed equals four
 
-This dataset is a subsampled version of the original Bank Marketing dataset, which contains forty-four thousand one hundred twenty-six entries. The subsampling process involved selecting a limited number of rows, columns, and classes while maintaining the overall distribution of the data.
+Generated with the following source code:
 
-The subsampling method used a uniform sampling approach to select the desired number of classes, ensuring that each class had an equal probability of being chosen. Once the classes were selected, the corresponding data points were retained, and the rest were discarded.
+The function subsample takes in several parameters, including a seed, the maximum number of rows, the maximum number of columns, the maximum number of classes, and a boolean indicating whether to stratify or not. It returns a dataset.
 
-A similar approach was employed to sample the columns, where a specified number of columns were randomly chosen from the original dataset. The resulting dataset consists of the selected columns and their corresponding values.
+The function first initializes a random number generator with the given seed. It then selects a subset of the classes, ensuring that the number of classes does not exceed the maximum number of classes. The indices where one of these classes is present are selected, and the corresponding data is subsetted.
 
-To maintain the stratification of the data, the sampling method employed a stratified split, which ensured that the distribution of the target variable was preserved. This was achieved by using a random state to ensure reproducibility.
+If the number of columns exceeds the maximum number of columns, the function uniformly samples the columns. It then selects the corresponding columns from the data.
 
-The resulting dataset consists of a subset of the original data, with a reduced number of rows, columns, and classes. The categorical variables have been converted to strings to facilitate further processing.
+If the number of rows exceeds the maximum number of rows, the function stratifies the data accordingly and selects a subset of the data using train test split.
 
-Features: Age, Marital Status, Education Level, Job Type, Housing Situation, Contact Method 
+Finally, the function converts categorical columns to string and returns a dataset with the subsetted data, the categorical mask, and the column names.
 
-Keywords: Bank Marketing, Data Subsampling, Stratified Sampling, Feature Selection, Dataset Reduction
+Features: 
+
+Keywords: Bank Marketing, Subsampling, Stratification, Random Sampling, Dataset Generation

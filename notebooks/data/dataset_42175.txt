@@ -1,17 +1,18 @@
 Credit Card Fraud Detection
 
-Tags: Astronomy, Machine Learning
+Context
+It is crucial for credit card companies to recognize fraudulent credit card transactions to prevent customers from being charged for items they did not purchase. This is essential to maintain customer trust and prevent financial losses.
 
-It is crucial for credit card companies to identify fraudulent transactions accurately, ensuring customers are not charged for items they did not purchase. 
+Content
+The dataset contains transactions made by credit cards in September 2013 by European cardholders. The dataset presents transactions that occurred over two days, where we have fraudulent transactions. The dataset is highly unbalanced, with the positive class (frauds) accounting for a small percentage of all transactions. It contains only numerical input variables, which are the result of a Principal Component Analysis transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data.
 
-The Credit Card Fraud Detection dataset comprises transactions made by European cardholders in September 2013. Over a two-day period, there were 492 fraudulent transactions among 284,807 total transactions. Due to the highly unbalanced nature of the dataset, the positive class (fraudulent transactions) accounts for a mere fraction of total transactions.
+Features
+The dataset includes the time elapsed between each transaction and the first transaction in the dataset, as well as the transaction amount. The transaction amount can be used for example-dependent cost-sensitive learning. The response variable is the class, which takes a value of one in case of fraud and zero otherwise.
 
-The dataset consists solely of numerical input variables resulting from Principal Component Analysis (PCA) transformations, except for the Time and Amount features. The Time feature represents the number of seconds elapsed between each transaction and the first transaction in the dataset. The Amount feature denotes the transaction amount, which can be utilized for example-dependent cost-sensitive learning. 
+Inspiration
+The goal is to identify fraudulent credit card transactions. Given the class imbalance ratio, it is recommended to measure the accuracy using the Area Under the Precision-Recall Curve. Confusion matrix accuracy is not meaningful for unbalanced classification.
 
-The Class feature serves as the response variable, assuming a value of one in cases of fraud and zero otherwise.
+Acknowledgements
+The dataset has been collected and analyzed during a research collaboration on big data mining and fraud detection.
 
-Given the significant class imbalance, evaluating model performance using the Area Under the Precision-Recall Curve (AUPRC) is recommended instead of relying solely on confusion matrix accuracy.
-
-The dataset was compiled and analyzed through a collaborative effort between Worldline and the Machine Learning Group of the Université Libre de Bruxelles (ULB) focused on big data mining and fraud detection.
-
-Keywords: Credit Card Fraud Detection, Machine Learning, Unbalanced Classification, Principal Component Analysis, Cost-Sensitive Learning, Class Imbalance, Area Under the Precision-Recall Curve.
+Keywords: Credit Card Fraud Detection, Unbalanced Classification, Principal Component Analysis, Cost-Sensitive Learning, Area Under the Precision-Recall Curve.

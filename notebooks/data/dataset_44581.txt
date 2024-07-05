@@ -1,15 +1,11 @@
-Diabetes One Thirty US Seed Three 
+Diabetes One Thirty US Seed Three Dataset
 
-This dataset is a subsampling of the Diabetes One Thirty US dataset with a seed of three. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
+This dataset is a subsample of the Diabetes One Thirty US dataset, generated with a seed of three. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-The subsampling process started by selecting classes from the unique values in the target variable. Since there were more than ten classes, a random selection of ten classes was made using their value counts as probabilities. The indices where these selected classes were present were then used to filter the data.
+The dataset was subsampled to have a maximum of ten classes, one hundred columns, and two thousand rows. The subsampling process was stratified to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-Next, the columns were uniformly sampled to reduce their number to one hundred. This was done by randomly selecting column indices without replacement. The selected column indices were then used to filter the data.
+The dataset features include patient information such as encounter ID, patient number, race, gender, age, weight, and admission details. It also includes medical information such as laboratory procedures, medications, and diagnoses. Additionally, the dataset contains information about the patient's medical history, including previous hospitalizations and medications.
 
-Finally, the rows were stratified according to the target variable and sampled to reduce their number to two thousand. This was done using a train-test split function with stratification based on the target variable.
+The dataset was generated using a Python script that utilized the NumPy library to perform random sampling. The script ensured that the subsampled dataset retained the same characteristics as the original dataset by stratifying the sampling process.
 
-The resulting dataset has a subset of the original data with reduced dimensions while maintaining its overall characteristics.
-
-Features include encounter ID, patient number, race, gender, age, weight, admission type ID, discharge disposition ID, admission source ID, time in hospital, payer code, medical specialty, number of lab procedures, number of procedures, number of medications, number of outpatient visits, number of emergency visits, number of inpatient visits, diagnosis one, diagnosis two, diagnosis three, number of diagnoses, maximum glucose serum, A1C result, and various medication indicators.
-
-Keywords: Diabetes, subsampling, stratification, dimensionality reduction, dataset sampling.
+Keywords: Diabetes, Subsampling, Stratified Sampling, Medical Dataset, Patient Information, Medical History.

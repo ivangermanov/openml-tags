@@ -1,24 +1,30 @@
-**FOREX AUDCAD Day High**
+**FOREX AUD/CAD Day High**
 
-Tags: Economics, Finance, Forex, Forex Day, Forex High, Geography
+Tags: finance, forex, forex day, forex high
 
-This dataset contains historical price data of the Forex Australian Dollar versus Canadian Dollar (AUDCAD) exchange rate from Dukascopy. Each instance represents one daily candlestick. The dataset spans from January to December and excludes weekends, as Forex markets are closed during these periods. The timestamp feature is based on the Europe/Amsterdam timezone.
-
-The dataset is designed for hypothetical scientific analysis, and realistic trading strategies should only be applied to predictions based on closing prices. The class attribute indicates whether the mean high price will increase or decrease (or remain the same) in the following day compared to the current day.
+**Source**: Dukascopy Historical Data Feed
 
 **Data Description**
 
-* **Timestamp**: The time of each data point, based on the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the beginning of the daily interval.
-* **Bid High**: The highest bid price recorded during the daily interval.
-* **Bid Low**: The lowest bid price recorded during the daily interval.
-* **Bid Close**: The bid price at the end of the daily interval.
-* **Bid Volume**: The frequency of changes in the bid price within the daily interval.
-* **Ask Open**: The ask price at the beginning of the daily interval.
-* **Ask High**: The highest ask price recorded during the daily interval.
-* **Ask Low**: The lowest ask price recorded during the daily interval.
-* **Ask Close**: The ask price at the end of the daily interval.
-* **Ask Volume**: The frequency of changes in the ask price within the daily interval.
-* **Class**: A binary indicator of whether the mean high price will increase or decrease (or remain the same) in the following day.
+This dataset contains historical price data of the FOREX AUD/CAD from Dukascopy. Each instance, or row, represents one candlestick of one day. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-Keywords: Forex, AUDCAD, Exchange Rate, Historical Data, Candlestick, Time Series Analysis
+The class attribute is the direction of the mean of the High Bid and the High Ask of the following day, relative to the High Bid and High Ask mean of the current minute. This means the class attribute is True when the mean High price is going up the following day, and the class attribute is False when the mean High price is going down or stays the same the following day.
+
+**Note that this is a hypothetical task, meant for scientific purposes only. Realistic trade strategies can only be applied to predictions on Close attributes (also available).**
+
+**Attributes**
+
+* **Timestamp**: The time of the current data point (Europe/Amsterdam)
+* **Bid Open**: The bid price at the start of this time interval
+* **Bid High**: The highest bid price during this time interval
+* **Bid Low**: The lowest bid price during this time interval
+* **Bid Close**: The bid price at the end of this time interval
+* **Bid Volume**: The number of times the Bid Price changed within this time interval
+* **Ask Open**: The ask price at the start of this time interval
+* **Ask High**: The highest ask price during this time interval
+* **Ask Low**: The lowest ask price during this time interval
+* **Ask Close**: The ask price at the end of this time interval
+* **Ask Volume**: The number of times the Ask Price changed within this time interval
+* **Class**: Whether the average price will go up during the next interval
+
+Keywords: FOREX, AUD/CAD, historical data, candlestick, finance, trading

@@ -1,39 +1,20 @@
-Localization Data for Person Activity Data Set
+Localization Data for Person Activity Dataset
 
-Abstract:
-This data set contains recordings of five individuals performing various daily activities. Each participant wore four sensors, also referred to as tags, while performing the same scenario multiple times.
+This dataset contains recordings of five individuals performing various activities while wearing four sensors (tags) placed on their ankles, belt, and chest. Each person repeated the same scenario five times. The data was collected at the Jozef Stefan Institute in Ljubljana, Slovenia.
 
-Dataset Title: Localization Data for Person Activity
-Tags: Chemistry, Concept Drift, Life Science
-Source: UCI
+The dataset provides localization data for each tag, with each instance representing a specific tag's position. Tags can be identified by one of the attributes in the data. The activities recorded include walking, falling, lying down, sitting down, standing up from various positions, and being on all fours.
 
-Data Set Information:
-The participants involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance in the data set represents a localization reading for one of these tags, which can be identified using specific attributes.
+Attributes in the dataset include:
 
-Attribute Information:
-An instance example is comprised of the following attributes:
+- Sequence Name: Identifies the person and repetition
+- Tag Identifier: Specifies the location of the tag (ankle left, ankle right, chest, or belt)
+- Timestamp: Unique numeric value
+- Date: Formatted as day.month.year hour:minute:second:millisecond
+- X, Y, Z coordinates: Numeric values representing the tag's position
+- Activity: The action being performed at the time of recording
 
-* Sequence Name: This attribute identifies the sequence of activities performed by each individual.
-* Tag Identifier: This attribute specifies the type of tag worn by the participant, including ankle left, ankle right, belt, and chest.
-* Timestamp: A unique numeric value representing the time of each reading.
-* Date: The date of each reading in the format day.month.year hour:minute:second:millisecond.
-* X Coordinate of the Tag: The x-axis coordinate of the tag's location.
-* Y Coordinate of the Tag: The y-axis coordinate of the tag's location.
-* Z Coordinate of the Tag: The z-axis coordinate of the tag's location.
-* Activity: The type of activity being performed by the participant, including walking, falling, lying down, sitting, standing up, and others.
+The data does not contain any missing values. It was created to support research in ambient intelligence and independent living care. The dataset can be used to study human activity recognition, localization techniques, and potentially concept drift in movement patterns over time.
 
-Relevant Papers:
-An agent-based approach to care in independent living has been explored using this data set.
+This dataset is valuable for researchers working on agent-based approaches to care in independent living environments, as well as those studying human movement patterns and activity recognition using wearable sensors.
 
-Features:
-(V1, V2, V3, V4, V5, V6, V7, Class)
-
-Scraped Data:
-Dataset Information
-Additional Information
-People involved in the data collection process wore four tags, specifically placed on their ankle left, ankle right, belt, and chest. Each instance is a localization data for one of the tags. The tag can be identified by one of the attributes.
-
-Has Missing Values?
-No
-
-Keywords: person activity, localization data, sensor readings, daily activities, agent-based approach, independent living.
+Keywords: activity recognition, localization data, wearable sensors, ambient intelligence, independent living, human movement analysis

@@ -1,0 +1,13 @@
+Car Parts Tags: Monthly Sales of Car Parts
+
+The dataset consists of a multivariate time series with a single series, identified by the column "id series", which has a value of zero. The time series spans from January 1998 to March 2002, with a total of forty-seven months.
+
+The dataset has undergone several preprocessing steps. Firstly, the dataset was transposed to facilitate easier analysis. The column names, which originally represented the IDs of car parts, were renamed to "value" followed by a numerical suffix, ranging from zero to two thousand six hundred seventy-three. The date column was standardized to the format year-month-day.
+
+To ensure the integrity of the time series, missing dates were filled, and the dates were verified to be evenly spaced at monthly intervals. A new column, "time step", was created to represent the increasing values of the time step for the time series.
+
+Any missing values in the dataset were replaced with zeros, which is a reasonable assumption, as it may indicate that the car part was no longer sold after a certain period. The "value" columns were cast to integer data type, and the "id series" column was cast to categorical data type.
+
+The dataset features a date column, an id series column, and two thousand six hundred seventy-seven value columns, each representing the sales of a specific car part.
+
+Keywords: Car Parts, Monthly Sales, Multivariate Time Series, Preprocessing, Time Step.

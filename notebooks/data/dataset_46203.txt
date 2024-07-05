@@ -1,0 +1,11 @@
+Saugeen River Daily
+
+Tags: Mean daily flow in cubic meters per second of the Saugeen River
+
+The Saugeen River Daily dataset contains the mean daily flow in cubic meters per second of the Saugeen River at Walkerton, from January first, nineteen fifteen to December thirty-first, nineteen seventy-nine.
+
+Preprocessing involved resetting the index and dropping the unnecessary column. The date column was renamed and standardized to the format year-month-day. A new column, id series, was created with a value of zero, as there is only one long time series. The dataset was checked to ensure there were no missing dates and that the frequency of the time series was daily. A time step column was created with increasing values of time step for the time series. The value column was cast to float, and the id series column was defined as a category.
+
+Features: id series, date, value, time step
+
+Keywords: Saugeen River, daily flow, cubic meters, Walkerton, time series

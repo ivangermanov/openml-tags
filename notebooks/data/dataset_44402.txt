@@ -1,49 +1,15 @@
-Bank Marketing Seed Zero N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Bank Marketing Seed Zero
 
-Tags: Subsampling of the Bank Marketing dataset with seed equals zero arguments dot nrows equals two thousand arguments dot ncols equals one hundred arguments dot nclasses equals ten arguments dot no stratify equals false 
+Tags: Subsampling of the Bank Marketing dataset with seed equal to zero
 
 Generated with the following source code:
 
-def subsample(self, seed, nrows max, ncols max, nclasses max, stratified) -> Dataset:
-random number generator equals numpy dot random dot default random generator opened parenthesis seed closed parenthesis 
-x equals self dot x 
-y equals self dot y 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. The function uses random sampling to select the desired number of classes, columns, and rows from the original dataset. If the number of classes in the original dataset is greater than the specified maximum number of classes, the function selects the classes with the highest frequency. If the number of columns in the original dataset is greater than the specified maximum number of columns, the function selects the columns randomly. If the number of rows in the original dataset is greater than the specified maximum number of rows, the function uses stratified sampling to select the desired number of rows.
 
-Uniformly sample classes equals y dot unique 
-if length of classes is greater than nclasses max then 
-value counts equals y dot value counts 
-selected classes equals random number generator dot choice opened parenthesis classes comma size equals nclasses max comma replace equals false comma probability equals value counts divided by sum of value counts closed parenthesis 
-Select the indices where one of these classes is present 
-idxs equals y dot index opened parenthesis y dot isin opened parenthesis classes closed parenthesis closed parenthesis 
-x equals x dot iloc opened parenthesis idxs closed parenthesis 
-y equals y dot iloc opened parenthesis idxs closed parenthesis 
+The function returns a new dataset with the selected rows, columns, and classes. The categorical mask is also updated to reflect the selected columns.
 
-Uniformly sample columns if required 
-if length of x dot columns is greater than ncols max then 
-columns indexes equals random number generator dot choice opened parenthesis list of range of length of x dot columns closed parenthesis comma size equals ncols max comma replace equals false closed parenthesis 
-sorted column indexes equals sorted opened parenthesis columns indexes closed parenthesis 
-selected columns equals list of x dot columns opened parenthesis sorted column indexes closed parenthesis 
-x equals x opened parenthesis selected columns closed parenthesis 
-else 
-sorted column indexes equals list of range of length of x dot columns 
-if length of x is greater than nrows max then 
-Stratify accordingly 
-target name equals y dot name 
-data equals pandas dot concat opened parenthesis x comma y comma axis equals quote columns quote closed parenthesis 
-underscore comma subset equals sklearn model selection dot train test split opened parenthesis data comma test size equals nrows max comma stratify equals data opened parenthesis target name closed parenthesis comma shuffle equals true comma random state equals seed closed parenthesis 
-x equals subset dot drop opened parenthesis target name comma axis equals quote columns quote closed parenthesis 
-y equals subset opened parenthesis target name closed parenthesis 
+Features: 
 
-We need to convert categorical columns to string for OpenML 
-categorical mask equals list of self dot categorical mask opened parenthesis i closed parenthesis for i in sorted column indexes 
-columns equals list of x dot columns 
-return Dataset opened parenthesis 
-Technically this is not the same but it's where it was derived from 
-dataset equals self dot dataset 
-x equals x 
-y equals y 
-categorical mask equals categorical mask 
-columns equals columns 
-closed parenthesis 
+The dataset contains the following features: Age, Marital Status, Education, and Class.
 
-Keywords: Bank Marketing, Subsampling, Dataset, Stratify, OpenML
+Keywords: Bank Marketing, Subsampling, Random Sampling, Stratified Sampling, Dataset.

@@ -1,15 +1,15 @@
-Subsampling of the Fabert dataset with seed equals two arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true.
+Name: Fabert Seed Two N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
+
+Tags: Subsampling of the dataset Fabert with seed equals two arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
 Generated with the following source code:
 
-The function subsample takes in several parameters including seed, maximum number rows, maximum number columns, maximum number classes, and whether or not to use stratification. It uses numpy's random default generator to uniformly sample classes and columns from the dataset.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility.
 
-First, it samples classes from the dataset, ensuring that the total number of classes does not exceed the maximum allowed. Then, it selects the indices where one of these classes is present and updates the x and y variables accordingly.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and subsets the data accordingly. Next, it uniformly samples columns from the dataset, selecting a specified number of columns to keep. Finally, it uniformly samples rows from the dataset, selecting a specified number of rows to keep.
 
-Next, it samples columns from the dataset, ensuring that the total number of columns does not exceed the maximum allowed. Finally, if the number of rows exceeds the maximum allowed, it uses train test split from scikit learn to split the data into subsets while maintaining the same class distribution.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names.
 
-The function returns a new dataset object with the updated x, y, categorical mask, and column information.
+Features: 
 
-Features include various variables such as thirty, thirty-one, forty, forty-six, sixty-one, and many others.
-
-Keywords: subsampling, dataset, stratification, numpy, scikit learn.
+Keywords: dataset subsampling, stratified sampling, numpy random generator, reproducibility, data preprocessing

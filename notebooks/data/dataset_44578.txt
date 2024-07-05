@@ -1,9 +1,11 @@
-Diabetes One Thirty US 
+Diabetes One Thirty US Seed Zero 
 
-This dataset is a subsampled version of the original Diabetes One Thirty US dataset, containing two thousand rows, one hundred columns, and ten classes. The sampling process was performed using a uniform distribution across classes, ensuring an equal representation of each class. 
+This dataset is a subsample of the Diabetes One Thirty US dataset, generated with a seed of zero. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-The dataset contains various features related to patients' demographics, medical history, and treatment outcomes. These features include encounter ID, patient number, race, gender, age, weight, admission type, discharge disposition, admission source, time spent in hospital, payer code, medical specialty, laboratory procedures, number of procedures, medications, outpatient visits, emergency visits, inpatient visits, diagnoses, glucose serum levels, A1C results, and medication types.
+The dataset was subsampled to have a maximum of ten classes, one hundred columns, and two thousand rows. The subsampling process was stratified to ensure that the resulting dataset retained the same class distribution as the original dataset.
 
-To generate this dataset, a random number generator was used to select classes, columns, and rows. The selection process ensured that the resulting dataset maintains a balanced representation of classes. 
+The dataset features include patient information such as race, gender, age, weight, and admission details. It also includes medical information such as laboratory procedures, medications, and diagnoses. Additionally, the dataset contains information about the patient's medical history, including previous hospitalizations and medications.
 
-Tags: Machine Learning, Mathematics
+The dataset was generated using a Python script that utilized the NumPy and Pandas libraries. The script employed random sampling to select the classes, columns, and rows, ensuring that the resulting dataset was representative of the original dataset.
+
+Keywords: Diabetes, Subsampling, Stratification, Patient Information, Medical History

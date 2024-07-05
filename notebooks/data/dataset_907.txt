@@ -1,9 +1,14 @@
-The ChSCase Census Four dataset is a binarized version of the original data set. This means that the numeric target feature has been converted into a two-class nominal target feature. This was achieved by computing the mean and then classifying all instances with a lower target value as Positive and all others as Negative.
+Name: CHSCase Census
+Tags: Study, Study, Study, Study
 
-This dataset belongs to the categories of Chemistry and Life Science studies.
+Source: Unknown - Date unknown
 
-Features include several columns of data.
+Please cite: Binarized version of the original data set (see version one). It converts the numeric target feature to a two-class nominal target feature by computing the mean and classifying all instances with a lower target value as positive ('P') and all others as negative ('N').
 
-Binary Class is a key aspect of this dataset.
+This dataset is a modified version of an original census-related dataset. The primary modification involves the transformation of a numeric target feature into a binary classification problem. This was achieved by calculating the mean value of the target feature across all instances. Subsequently, instances with target values below this mean were classified as positive ('P'), while those at or above the mean were classified as negative ('N'). This binarization process simplifies the original multi-class or continuous target variable into a more straightforward two-class problem, which can be beneficial for certain types of analysis or machine learning tasks.
 
-Keywords: ChSCase Census Four, binarized, Chemistry, Life Science, Binary Class, nominal target feature.
+The dataset includes various features related to census information, though the specific nature of these features is not detailed in the provided description. The binary classification target makes this dataset suitable for tasks such as predictive modeling, where the goal might be to forecast whether an individual falls into the 'P' or 'N' category based on the other available features.
+
+Researchers and data scientists using this dataset should be aware of its modified nature and cite it appropriately in their work. The original source and date of the dataset are unknown, which may be important to note for those considering its use in academic or professional contexts.
+
+Keywords: Census data, Binary classification, Data transformation, Predictive modeling, Mean-based thresholding, Positive and negative classes, Feature conversion

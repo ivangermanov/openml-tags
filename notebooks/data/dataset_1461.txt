@@ -1,9 +1,45 @@
-The Bank Marketing dataset is related to direct marketing campaigns of a Portuguese banking institution. These marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to assess whether the product, namely a bank term deposit, would be subscribed or not.
+Bank Marketing Dataset
 
-The classification goal is to predict if the client will subscribe a term deposit. This dataset contains seventeen input variables and one output variable. The input variables include bank client data, such as age, job, marital status, education, and whether they have credit in default. It also includes information related to the last contact of the current campaign, including the contact communication type, day, and month of the last contact, as well as the duration of the last contact. Additionally, there are other attributes, including the number of contacts performed during this campaign and for this client, the number of days that passed by after the client was last contacted from a previous campaign, the number of contacts performed before this campaign and for this client, and the outcome of the previous marketing campaign.
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_218, study_241, study_50, study_99
 
-The output variable is whether the client has subscribed a term deposit. This dataset does not contain any missing values.
+Source: UCI
 
-There are four versions of this dataset, including bank-additional-full with all examples and twenty inputs, bank-additional with ten percent of the examples and twenty inputs, bank-full with all examples and seventeen inputs, and bank with ten percent of the examples and seventeen inputs. The smaller datasets are provided to test more computationally demanding machine learning algorithms.
+Please cite: Proceedings of the European Simulation and Modelling Conference - ESM'2011, Guimarães, Portugal, October, 2011. EUROSIS.
 
-Keywords: Bank Marketing, direct marketing, term deposit, Portuguese banking institution, phone calls.
+Bank Marketing
+
+This dataset is related to direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were conducted via phone calls. Often, multiple contacts with the same client were necessary to determine if the product (bank term deposit) would be subscribed or not. The classification goal is to predict whether the client will subscribe to a term deposit (variable y).
+
+Attribute Information:
+
+Bank client data:
+- Age (numeric)
+- Job: type of job (categorical: administrative, unknown, unemployed, management, housemaid, entrepreneur, student, blue collar, self employed, retired, technician, services)
+- Marital status (categorical: married, divorced, single; note: "divorced" includes divorced and widowed)
+- Education (categorical: unknown, secondary, primary, tertiary)
+- Default: has credit in default? (binary: yes, no)
+- Balance: average yearly balance, in euros (numeric)
+- Housing: has housing loan? (binary: yes, no)
+- Loan: has personal loan? (binary: yes, no)
+
+Related to the last contact of the current campaign:
+- Contact: contact communication type (categorical: unknown, telephone, cellular)
+- Day: last contact day of the month (numeric)
+- Month: last contact month of year (categorical: Jan, Feb, Mar, ..., Nov, Dec)
+- Duration: last contact duration, in seconds (numeric)
+
+Other attributes:
+- Campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+- Pdays: number of days that passed after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+- Previous: number of contacts performed before this campaign and for this client (numeric)
+- Poutcome: outcome of the previous marketing campaign (categorical: unknown, other, failure, success)
+
+Output variable (desired target):
+- Y: has the client subscribed to a term deposit? (binary: yes, no)
+
+Additional Information:
+The data is related to direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact with the same client was required to determine if the product (bank term deposit) would be subscribed or not. There are four datasets available, varying in size and number of input variables. The smallest datasets are provided to test more computationally demanding machine learning algorithms (e.g., SVM).
+
+The classification goal is to predict if the client will subscribe (yes/no) to a term deposit. This dataset does not contain missing values.
+
+Keywords: bank marketing, direct marketing, term deposit, customer behavior, telemarketing, financial services, predictive modeling, classification task

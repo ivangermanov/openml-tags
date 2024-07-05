@@ -1,27 +1,23 @@
-The LED Display Domain dataset is a simple domain containing seven boolean attributes and ten classes, representing the set of decimal digits. The dataset is inspired by LED displays, which contain seven light-emitting diodes, hence the reason for seven attributes. 
+LED Display Domain Dataset
 
-Each attribute represents one of the seven LEDs, with values of zero or one indicating whether the corresponding light is on or off for the decimal digit. However, each attribute value has a ten percent probability of being inverted, introducing noise into the dataset.
+Tags: Artificial, Keel, OpenML100, Study, UCI
 
-The class attribute is an integer representing the possible digits shown on the display. Without the noise, the problem would be straightforward, but the introduction of inverted values makes it more challenging.
+Source: UCI, KEEL
 
-Knowing the optimal Bayes rate for this database is valuable, and in this case, the misclassification rate is twenty-six percent, resulting in seventy-four percent classification accuracy.
+This simple domain contains seven Boolean attributes and ten classes, representing the set of decimal digits. Recall that LED displays contain seven light-emitting diodes, hence the reason for seven attributes. The class attribute is an integer, representing the possible digits shown on the display. The problem would be easy if not for the introduction of noise. In this case, each attribute value has a probability of having its value inverted, making it a challenging task.
 
-Attribute information includes:
+The LED display data set is valuable to know the optimal Bayes rate for these databases. In this case, the misclassification rate is significant, resulting in a classification accuracy of seventy-four percent.
 
-* Seven boolean attributes, each representing one of the seven LEDs
-* Each attribute value has a ten percent chance of being inverted
-* The class attribute is an integer ranging from zero to nine, inclusive
+Attribute Information
 
-Scraped data provides additional information about the dataset:
+The seven attributes, V one through V seven, represent each of the seven LEDs, with values either zero or one, according to whether the corresponding light is on or not for the decimal digit. Each attribute has a probability of being inverted, adding to the complexity of the problem.
 
-* This simple domain contains seven boolean attributes and ten concepts, representing the set of decimal digits
-* The problem would be easy without the introduction of noise, where each attribute value has a ten percent probability of being inverted
-* Knowing the optimal Bayes rate for this database is valuable, and in this case, the misclassification rate is twenty-six percent, resulting in seventy-four percent classification accuracy
+Dataset Information
 
-There are no missing values in the dataset.
+This simple domain contains seven Boolean attributes and ten concepts, the set of decimal digits. The problem would be easy if not for the introduction of noise. In this case, each attribute value has a probability of having its value inverted. It's valuable to know the optimal Bayes rate for these databases.
 
-Additional variable information explains that all attribute values are either zero or one, indicating whether the corresponding light is on or off for the decimal digit. Each attribute, excluding the class attribute, has a ten percent chance of being inverted.
+Additional Information
 
-Tags: Artificial, Keel, Machine Learning, Meteorology, OpenML100, Study 
+The dataset does not have missing values. All attribute values are either zero or one, according to whether the corresponding light is on or not for the decimal digit. Each attribute, excluding the class attribute, has a probability of being inverted.
 
-Keywords: LED display, decimal digits, boolean attributes, noise, classification accuracy, Bayes rate
+Keywords: LED Display, Decimal Digits, Boolean Attributes, Noise, Classification Accuracy, Bayes Rate.

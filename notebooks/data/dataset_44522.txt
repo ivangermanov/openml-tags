@@ -1,9 +1,13 @@
-The dataset Fabert Seed Four Rows Two Thousand Classes Ten Columns One Hundred Stratify True belongs to the categories of Demographics and Statistics. This dataset is a subsampling of the original Fabert dataset.
+Name: Fabert Seed Four Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-This dataset was generated using a Python function called subsample, which takes several arguments, including a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and whether to perform stratified sampling.
+Tags: Subsampling of the dataset Fabert with seed equals four arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true
 
-The function first selects a uniform sample of classes from the original dataset, ensuring that all classes are represented. It then selects a uniform sample of columns from the dataset, if necessary. Finally, it performs stratified sampling on the remaining data points to ensure that the resulting dataset has the desired number of rows.
+Generated with the following source code:
 
-The resulting dataset contains a subset of the original features, including various demographic variables. 
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses random number generation to select a specified number of rows, columns, and classes from the original dataset. The function first selects the classes, then the columns, and finally the rows. It uses stratified sampling to ensure that the selected rows are representative of the original dataset.
 
-Keywords: demographics, statistics, subsampling, stratified sampling, dataset generation.
+The function takes in several arguments, including the seed for the random number generator, the maximum number of rows, columns, and classes to select, and a boolean indicating whether to use stratified sampling. It returns a new dataset with the selected rows, columns, and classes.
+
+Features: 
+
+Keywords: Subsampling, Dataset, Stratified Sampling, Random Number Generation, Data Selection

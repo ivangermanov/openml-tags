@@ -1,11 +1,27 @@
-The QSAR-TID-100107 dataset contains Quantitative Structure-Activity Relationship (QSAR) data showing activity values of several compounds on a specific drug target. This dataset has forty-one rows and one thousand twenty-six features, including identifiers and a class feature.
+QSAR TID Dataset
 
-The features in this dataset represent Fingerprints of six-point pharmacophore features with a diameter of one thousand twenty-four bits, which were generated from Simplified Molecular Input Line Entry System (SMILES) strings. These Fingerprints were obtained using the Pipeline Pilot program from Dassault Systèmes BIOVIA.
+Tags: MTLQSAR, study
 
-Generating Fingerprints typically does not require missing value imputation since all bits are generated. The dataset was created as part of the MetaQSAR project in September 2015.
+Source: MetaQSAR project - September
 
-This dataset is suitable for machine learning and QSAR modeling studies, particularly those focused on predicting the activity of compounds against a specific drug target. By analyzing the relationships between the molecular structures and their corresponding activity values, researchers can gain insights into the underlying mechanisms of action and identify potential lead compounds for further development.
+Please cite: This dataset contains QSAR data (from ChEMBL version) showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Tags: Health, Medicine, MTLQSAR, study
+Features: MOLECULE CHEMBL ID, FCFP, and many more molecular fingerprint features.
 
-Keywords: QSAR, drug target, molecular fingerprints, machine learning, MetaQSAR project.
+This dataset provides quantitative structure-activity relationship (QSAR) information for drug compounds targeting a specific protein. The data was sourced from the ChEMBL database and processed to generate molecular fingerprints, which are binary representations of chemical structures. These fingerprints allow for computational analysis of chemical properties and their relationship to biological activity.
+
+The activity values are measured in pseudo pCI units, which relate to the potency of the compounds against the target protein. The dataset includes both compound identifiers and the calculated fingerprint features, enabling researchers to explore structure-activity relationships and potentially develop predictive models for drug efficacy.
+
+The use of FCFP (functional-class fingerprints) provides a detailed representation of the chemical structures, capturing important functional groups and their arrangements within the molecules. This level of detail is crucial for understanding how structural features contribute to a compound's activity against the target protein.
+
+By providing this curated dataset, the MetaQSAR project aims to facilitate drug discovery research and the development of new computational methods in medicinal chemistry and cheminformatics.
+
+Keywords:
+- QSAR (Quantitative Structure-Activity Relationship)
+- Molecular Fingerprints
+- Drug Discovery
+- ChEMBL Database
+- Structure-Activity Relationships
+- Cheminformatics
+- Medicinal Chemistry
+- Computational Drug Design

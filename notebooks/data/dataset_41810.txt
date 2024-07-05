@@ -1,25 +1,15 @@
-**FOREX aud/chf-minute-Close**
+Name: FOREX AUD CHF Minute Close
 
-Tags: Demographics, Economics, Finance, Forex, Forex Close, Forex Minute
+Tags: finance, forex, forex close, forex minute
 
-**Data Description**
-This dataset contains historical price data of the Forex Australian Dollar/Swiss Franc currency pair from Dukascopy. Each instance represents one candlestick of one minute. The dataset spans from January first to December thirteenth and excludes weekends, as the Forex market is not traded on weekends. The timestamp feature is set to the Europe/Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The class attribute represents the direction of the mean close price compared to the subsequent minute. It is true if the mean close price increases in the following minute and false if it decreases or remains the same.
+Data Description
+This is the historical price data of the FOREX Australian Dollar versus Swiss Franc from Dukascopy. One instance, or row, is one candlestick of one minute. The whole dataset has a data range from a specific start date to a specific end date and does not include weekends, since the FOREX is not traded on weekends. The time zone of the feature Timestamp is Europe Amsterdam.
 
-**Attributes**
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following minute, relative to the Close Bid and Close Ask mean of the current minute. This means the class attribute is True when the mean Close price is going up the following minute, and the class attribute is False when the mean Close price is going down or stays the same the following minute.
 
-* **Timestamp**: The time of the current data point in the Europe/Amsterdam timezone.
-* **Bid Open**: The bid price at the start of this time interval.
-* **Bid High**: The highest bid price recorded during this time interval.
-* **Bid Low**: The lowest bid price recorded during this time interval.
-* **Bid Close**: The bid price at the end of this time interval.
-* **Bid Volume**: The number of times the bid price changed within this time interval.
-* **Ask Open**: The ask price at the start of this time interval.
-* **Ask High**: The highest ask price recorded during this time interval.
-* **Ask Low**: The lowest ask price recorded during this time interval.
-* **Ask Close**: The ask price at the end of this time interval.
-* **Ask Volume**: The number of times the ask price changed within this time interval.
-* **Class**: Whether the average price will increase during the next interval.
+Attributes
+The Timestamp is the time of the current data point in the Europe Amsterdam time zone. The Bid Open is the bid price at the start of this time interval. The Bid High is the highest bid price during this time interval. The Bid Low is the lowest bid price during this time interval. The Bid Close is the bid price at the end of this time interval. The Bid Volume is the number of times the Bid Price changed within this time interval. The Ask Open is the ask price at the start of this time interval. The Ask High is the highest ask price during this time interval. The Ask Low is the lowest ask price during this time interval. The Ask Close is the ask price at the end of this time interval. The Ask Volume is the number of times the Ask Price changed within this time interval. The Class is whether the average price will go up during the next interval.
 
-Keywords: Forex, Australian Dollar, Swiss Franc, Currency Pair, Historical Price Data, Candlestick, Time Series Analysis, Financial Markets, Trading.
+Keywords: FOREX, Australian Dollar, Swiss Franc, historical price data, candlestick, time zone, class attribute, mean Close price.

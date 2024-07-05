@@ -1,11 +1,17 @@
-The Nomao dataset has been subsampled with a seed value of zero, resulting in a dataset with two thousand rows, one hundred columns, and ten classes. The subsampling process involved uniformly sampling classes from the original dataset, ensuring that all classes were represented proportionally. 
+Name: Nomao Seed Zero N Rows Two Thousand N Classes Ten N Columns One Hundred Stratify True
 
-If the number of unique classes exceeded ten, the most common classes were selected based on their frequency distribution. The corresponding indices where these classes were present were then used to filter the dataset. 
+Tags: Subsampling of the dataset Nomao with seed equals zero arguments n rows equals two thousand arguments n columns equals one hundred arguments n classes equals ten arguments no stratify equals true
 
-Next, uniform sampling was applied to select columns, ensuring that the maximum number of columns did not exceed one hundred. This involved randomly selecting column indices without replacement, sorting them, and using them to filter the dataset.
+Generated with the following source code:
 
-Finally, the dataset was further reduced by uniformly sampling rows while maintaining class balance through stratification. This ensured that the resulting dataset retained the same distribution of classes as the original dataset. 
+The function subsample takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the desired number of classes, columns, and rows while maintaining the original distribution of the data.
 
-The resulting dataset contains features including various variables denoted by V followed by a numerical identifier. 
+The function first selects a specified number of classes from the original dataset using uniform random sampling. It then selects the indices where one of these classes is present and filters the data accordingly.
 
-Keywords: Nomao dataset, subsampling, machine learning, statistics, stratification, uniform sampling.
+Next, it uniformly samples columns if required, selecting a specified number of columns from the filtered data. If the number of rows in the filtered data exceeds the specified maximum, it uses stratified sampling to select the desired number of rows, ensuring that the distribution of classes is maintained.
+
+Finally, it converts categorical columns to string format and returns the new dataset with the specified number of rows, columns, and classes.
+
+Features: (skipped due to unreadability)
+
+Keywords: dataset subsampling, random sampling, stratified sampling, data filtering, categorical columns.

@@ -1,0 +1,9 @@
+Vehicle Trips Tags: Daily Pickup Data for Three Hundred Twenty-Nine For-Hire Vehicle Companies from January through August Two Thousand Fifteen.
+
+There is also a file containing daily pickup data for three hundred twenty-nine for-hire vehicle companies from January through August two thousand fifteen.
+
+Preprocessing involved several steps. First, column names were renamed to improve clarity. The "Number of Trips" column was renamed to "Value Zero", "Number of Vehicles" was renamed to "Value One", "Base Number" was renamed to "Identification Series", and "Pick Up Date" was renamed to "Date". Next, the "Base Name" column was dropped as it contained redundant information already present in the "Identification Series" column. The "Identification Series" column was then trimmed of white spaces and capitalized for consistency. The "Date" column was standardized to the format Year-Month-Day. Furthermore, instances of " - " in the "Value One" column were replaced with Not a Number values. To ensure evenly spaced values with daily frequency, missing dates were added to the time series, with missing values considered as Not a Number. A new column, "Time Step", was created with increasing values for each time series. Finally, the "Value" columns were cast to float to accommodate Not a Number values, and the "Identification Series" column was cast as a category.
+
+Features: Date, Identification Series, Value Zero, Value One, Time Steps
+
+Keywords: For-Hire Vehicle, Daily Pickup, Time Series, Preprocessing, Data Standardization

@@ -1,40 +1,17 @@
-Vehicle Classification Dataset
+Vehicle Tags: Label Ranking
 
-The primary goal of this dataset is to categorize a given silhouette as one of four types of vehicles, utilizing a set of features extracted from the silhouette. The vehicle may be viewed from various angles.
+Features: Compactness, Circularity, Distance Circularity, Radius Ratio, Principal Axis Aspect Ratio, Maximum Length Aspect Ratio, Scatter Ratio, Elongatedness, Principal Axis Rectangularity, Maximum Length Rectangularity, Scaled Variance Along Major Axis, Scaled Variance Along Minor Axis, Scaled Radius of Gyration, Skewness About Major Axis, Skewness About Minor Axis, Kurtosis About Major Axis, Kurtosis About Minor Axis, Hollows Ratio
 
-This dataset was originally gathered to discover a method of distinguishing three-dimensional objects within a two-dimensional image by applying an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measurements of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree through computer induction. This object recognition strategy was successfully employed to differentiate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
+The purpose of this dataset is to classify a given silhouette as one of four types of vehicle, using a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.
 
-Description:
+This dataset was originally gathered to find a method of distinguishing three-dimensional objects within a two-dimensional image by application of an ensemble of shape feature extractors to the two-dimensional silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction. This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans, and buses viewed from constrained elevation but all angles of rotation.
 
-The features were extracted from the silhouettes by the Hierarchical Image Processing System extension Binary Attribute Noise Tolerance and Type Suite, which extracts a combination of scale-independent features utilizing both classical moments-based measures such as scaled variance, skewness, and kurtosis about the major and minor axes, and heuristic measures like hollows, circularity, rectangularity, and compactness.
+The features were extracted from the silhouettes by a hierarchical image processing system extension, which extracts a combination of scale-independent features utilizing both classical moments-based measures and heuristic measures. Four model vehicles were used for the experiment: a double-decker bus, a Chevrolet van, a Saab, and an Opel Manta. This particular combination of vehicles was chosen with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.
 
-Four "Corgie" model vehicles were utilized for the experiment: a double-decker bus, Chevrolet van, Saab nine thousand, and an Opel Manta four hundred. This particular combination of vehicles was selected with the expectation that the bus, van, and either one of the cars would be readily distinguishable, but it would be more challenging to differentiate between the cars.
+The images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation. The vehicles were placed on a diffuse backlit surface, and the vehicles were painted matte black to minimize highlights. The images were captured using a framestore connected to a computer. All images were captured with a spatial resolution and were quantized to greylevels. These images were thresholded to produce binary vehicle silhouettes, negated, and thereafter subjected to shrink-expand-expand-shrink modules to remove image noise.
 
-The images were acquired by a camera looking downward at the model vehicle from a fixed angle of elevation. The vehicles were positioned on a diffuse backlit surface, and they were painted matte black to minimize highlights. The images were captured using a frame store connected to a workstation. All images were captured with a spatial resolution of pixels quantized to gray levels. These images were thresholded to produce binary vehicle silhouettes, negated to comply with the processing requirements of Binary Attribute Noise Tolerance and Type Suite, and thereafter subjected to shrink-expand-expand-shrink Hierarchical Image Processing System modules to eliminate salt-and-pepper image noise.
+The vehicles were rotated, and their angle of orientation was measured using a radial graticule beneath the vehicle. Two sets of images, each set covering a full three-hundred-sixty-degree rotation, were captured for each vehicle. The vehicle was rotated by a fixed angle between images. These datasets are known as e2 and e3 respectively. A further two sets of images, e4 and e5, were captured with the camera at elevations.
 
-The vehicles were rotated, and their angle of orientation was measured using a radial graticule beneath the vehicle. Zero and one hundred eighty degrees corresponded to head-on and rear views, respectively, while ninety and two hundred seventy degrees corresponded to profiles in opposite directions.
+Has Missing Values? No
 
-Two sets of images, each set covering a full three hundred sixty-degree rotation, were captured for each vehicle. The vehicle was rotated by a fixed angle between images. These datasets are known as Experiment Two and Experiment Three, respectively. A further two sets of images were captured with the camera at elevations of thirty-seven point five degrees and thirty point eight degrees, respectively.
-
-Attributes:
-
-Compactness
-Circularity
-Distance Circularity
-Radius Ratio
-Pr Axis Aspect Ratio
-Max Length Aspect Ratio
-Scatter Ratio
-Elongatedness
-Pr Axis Rectangularity
-Max Length Rectangularity
-Scaled Variance Along Major Axis
-Scaled Variance Along Minor Axis
-Scaled Radius of Gyration
-Skewness About Major Axis
-Skewness About Minor Axis
-Kurtosis About Major Axis
-Kurtosis About Minor Axis
-Hollows Ratio
-
-Keywords: Vehicle Classification, Shape Feature Extraction, Silhouette Analysis, Object Recognition, Computer Vision, Machine Learning
+Keywords: Vehicle Classification, Silhouette Analysis, Shape Features, Object Recognition, Image Processing

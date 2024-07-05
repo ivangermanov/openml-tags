@@ -1,15 +1,11 @@
-Subsampling of the dataset Shuttle with a specified seed value generates a new dataset with reduced number of rows, columns, and classes while maintaining the overall characteristics of the original dataset.
+Shuttle Seed Four N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True
 
-The subsampling process involves several steps. First, the unique classes in the target variable are identified, and if there are more than the specified maximum number of classes, a subset of classes is randomly selected using a probability proportional to their frequency in the dataset.
+Tags: Subsampling of the dataset Shuttle with seed equal to four, arguments nrows max equal to two thousand, arguments ncols max equal to one hundred, arguments nclasses max equal to ten, and arguments no stratify equal to false.
 
-Next, the indices where one of the selected classes is present are identified, and the corresponding rows from the feature matrix and target variable are extracted. This ensures that the resulting dataset has a balanced representation of the selected classes.
+Generated with the following source code:
 
-If the number of columns in the feature matrix exceeds the specified maximum, a random subset of columns is selected uniformly. The resulting dataset consists of the selected columns and the corresponding rows.
+The function subsample takes in self, seed, nrows max, ncols max, nclasses max, and stratified as parameters. It uses numpy's random default generator to set the seed. It then selects the x and y values from the dataset. If the number of unique classes in y is greater than nclasses max, it selects nclasses max classes using a weighted random choice based on the value counts of y. It then selects the indices where one of these classes is present and updates x and y accordingly. If the number of columns in x is greater than ncols max, it uniformly samples ncols max columns and updates x. If the number of rows in x is greater than nrows max, it uses train test split with stratification to sample nrows max rows and updates x and y. Finally, it returns a new dataset with the updated x, y, categorical mask, and columns.
 
-Finally, if the number of rows in the resulting dataset still exceeds the specified maximum, stratified sampling is applied to reduce the number of rows while maintaining the class balance.
+Features: Class
 
-The resulting dataset is a subsampled version of the original Shuttle dataset, with a reduced number of rows, columns, and classes, while preserving the overall characteristics of the original dataset.
-
-Machine Learning, Statistics
-
-Keywords: subsampling, dataset, stratified sampling, class balance, feature selection.
+Keywords: Subsampling, Dataset, Shuttle, Stratification, Random Sampling

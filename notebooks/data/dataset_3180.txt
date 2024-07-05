@@ -1,51 +1,21 @@
-QSAR-TID-12162 Tags: Machine Learning, MTLQSAR, study_3, Text & Literature
+QSAR TID Dataset
+Tags: MTLQSAR, study
 
-This dataset contains QSAR data showing activity values of several compounds on drug target TID: 12162. The features represent FCFP six one hundred twenty-four bit molecular fingerprints, which were generated from smiles strings. They were obtained using the pipeline pilot program, Dassault Systèmes BIOVIA.
+This dataset contains QSAR data from ChEMBL version showing activity values (unit is pseudo pCI) of several compounds on drug target TID. It has rows and features (including IDs and class feature: MOLECULE CHEMBL ID and MEDIAN PXC). The features represent FCFP bit Molecular Fingerprints which were generated from SMILES strings. They were obtained using the Pipeline Pilot program, Dassault Systèmes BIOVIA. Generating Fingerprints does not usually require missing value imputation as all bits are generated.
 
-Generating fingerprints does not usually require missing value imputation as all bits are generated. The dataset has one hundred eleven rows and one thousand twenty-six features, including IDs and class feature molecule chembl id and median px fifty.
+Features include MOLECULE CHEMBL ID and numerous FCFP fingerprint bits.
 
-The dataset contains QSAR data from ChEMBL version seventeen, showing activity values of several compounds on drug target TID: 12162. The features represent molecular fingerprints, which were generated from smiles strings using the pipeline pilot program, Dassault Systèmes BIOVIA.
+The dataset pertains to Cathepsin B, a single protein target also known as BCSB, Cathepsin B heavy chain, Cathepsin B light chain, and CTSB. It is found in Bos taurus and classified as an Enzyme/Protease/Cysteine protease/Cysteine protease CA clan/Cysteine protease C family.
 
-This dataset is part of the MetaQSAR project, which aims to provide a comprehensive collection of QSAR datasets for machine learning and cheminformatics applications.
+Gene Ontology annotations indicate Cathepsin B is involved in various cellular components including the extracellular region, lysosome, plasma membrane, and melanosome. Its molecular functions encompass endopeptidase activity, cysteine type peptidase activity, and collagen binding. Biological processes it participates in include proteolysis, thyroid hormone generation, collagen catabolism, and viral entry into host cells.
 
-Scraped Data:
-ID: Cathepsin B
-Type: Single Protein
-Preferred Name: Cathepsin B
-Synonyms: BCSB, Cathepsin B Heavy Chain, Cathepsin B Light Chain, CTSB
-Organism: Bos Taurus
-Species Group: No
-Protein Target Classification: Enzyme/Protease/Cysteine Protease/Cysteine Protease CA Clan/Cysteine Protease C1A Family
+The target is associated with several database entries including UniProt, InterPro, Pfam, and PDBe. It plays roles in pathways such as collagen degradation, MHC class II antigen presentation, and neutrophil degranulation according to Reactome annotations.
 
-Description:
-Relationship Accession:
-Cathepsin B is a single protein target classified under enzyme/protease/cysteine protease/cysteine protease CA clan/cysteine protease C1A family.
-
-Go Component:
-Extracellular Region, Extracellular Space, Lysosome, Plasma Membrane, External Side of Plasma Membrane, Membrane, Apical Plasma Membrane, Melanosome, Perinuclear Region of Cytoplasm, Peptidase Inhibitor Complex
-
-Go Function:
-Endopeptidase Activity, Cysteine-Type Endopeptidase Activity, Collagen Binding, Peptidase Activity, Cysteine-Type Peptidase Activity, Hydrolase Activity, Proteoglycan Binding
-
-Go Process:
-Proteolysis, Thyroid Hormone Generation, Negative Regulation of Peptidase Activity, Collagen Catabolic Process, Epithelial Cell Differentiation, Decidualization, Viral Entry into Host Cell, Regulation of Catalytic Activity, Proteolysis Involved in Protein Catabolic Process, Cellular Response to Thyroid Hormone Stimulus
-
-CanSAR-Target:
-P07688
-
-Reactome:
-Collagen Degradation, Trafficking and Processing of Endosomal TLR, MHC Class II Antigen Presentation, Neutrophil Degranulation
-
-UniProt:
-P07688, Q3ZC03
-
-InterPro:
-Pept_cys_AS, Peptidase_C1A_C, Propeptide_C1A, Peptidase_C1A, Pept_his_AS, Pept_asp_AS, Papain-Like_Cys_Pep_Sf
-
-Pfam:
-PF00112, PF08127
-
-PDBe:
-1ITO, 1QDQ, 1SP4, 2DC6, 2DC7, 2DC8, 2DC9, 2DCA, 2DCB, 2DCC, 2DCD
-
-Keywords: QSAR, Machine Learning, MTLQSAR, Cheminformatics, MetaQSAR, Cathepsin B, Molecular Fingerprints, Smiles Strings.
+Keywords:
+QSAR
+Cathepsin B
+Molecular fingerprints
+Proteolysis
+Cysteine protease
+Drug target
+ChEMBL

@@ -1,15 +1,19 @@
-Machine Learning Dataset: Dilbert 
+Name: Dilbert Seed Zero 
 
-This dataset is a subsample of the original Dilbert dataset, generated using a specific set of parameters. The sampling process involves uniform selection of classes, columns, and rows to ensure a representative subset of the original data.
+Tags: Subsampling of the dataset Dilbert with seed equals zero arguments number of rows equals two thousand arguments number of columns equals one hundred arguments number of classes equals ten arguments no stratify equals true 
 
-The sampling algorithm starts by selecting a specified number of unique classes from the target variable. If the number of unique classes exceeds the maximum allowed, the algorithm selects the required number of classes using their relative frequencies as weights. It then filters the data to include only the instances belonging to the selected classes.
+Generated with the following source code: 
 
-Next, the algorithm selects a specified number of columns uniformly at random. If the number of columns exceeds the maximum allowed, it filters the data to include only the selected columns.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It does this by first uniformly sampling classes from the dataset, then uniformly sampling columns, and finally uniformly sampling rows. The function uses the numpy random default random generator to ensure reproducibility. 
 
-Finally, the algorithm selects a specified number of instances using stratified sampling to maintain the class distribution. This ensures that the sampled data retains the same class proportions as the original data.
+The function first gets the unique classes in the dataset and selects a specified number of classes to keep. It then selects the indices where one of these classes is present and subsets the data accordingly. 
 
-The resulting dataset contains a subset of the original features, which are not human-readable. However, the dataset retains its machine learning relevance and can be used for various modeling tasks.
+Next, the function uniformly samples columns from the dataset. If the number of columns is greater than the specified maximum, it selects a specified number of columns to keep. 
 
-Tags: Machine Learning, Mathematics 
+Finally, the function uniformly samples rows from the dataset. If the number of rows is greater than the specified maximum, it selects a specified number of rows to keep, stratifying accordingly to ensure that the class distribution is preserved. 
 
-Keywords: subsampling, dataset, machine learning, stratified sampling, class distribution.
+The function returns a new dataset with the subsampled data, along with the categorical mask and column names. 
+
+Features: 
+
+Keywords: dataset subsampling, stratified sampling, class distribution, column selection, row selection

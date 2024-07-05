@@ -1,35 +1,20 @@
-**PBC Dataset**
-**Tags:** Health, Medicine
+Name: PBC
+Tags: Unknown Source
 
-The Primary Biliary Cirrhosis dataset is a collection of four hundred eighteen observations, each representing a patient, with twenty variables recorded from the Mayo Clinic trial.
+Please cite: Case number deleted. X treated as the class attribute. As used in research on numeric prediction using instance-based learning with encoding length selection.
 
-This dataset contains information from four hundred twenty-four patients who met the eligibility criteria for the randomized placebo-controlled trial of the drug D-penicillamine, conducted between nineteen seventy-four and nineteen eighty-four. Three hundred twelve cases participated in the randomized trial, and their data is largely complete. The remaining one hundred twelve cases did not participate in the clinical trial but consented to have basic measurements recorded and to be followed for survival.
+The dataset contains observations and variables recorded from the Mayo Clinic trial in primary biliary cirrhosis (PBC) of the liver conducted between and. PBC patients referred to Mayo Clinic during that interval met eligibility criteria for the randomized placebo controlled trial of the drug D-penicillamine. The first cases in the dataset participated in the randomized trial and contain largely complete data. The additional cases did not participate in the clinical trial but consented to have basic measurements recorded and to be followed for survival. A few cases were lost to follow-up shortly after diagnosis. Missing data items are denoted by a period. At least one space separates each variable in the data file.
 
-Missing data items are denoted by a period. Each variable in the dataset file is separated by at least one space. Censoring was due to liver transplantation for twenty-five subjects.
+Censoring was due to liver transplantation for several subjects. The data are in free format with at least one blank space separating each variable. Variables include days between registration and death or censoring, treatment code, age, sex, presence of ascites, hepatomegaly, spiders, edema, and various blood test results.
 
-The variables contained in the dataset are:
+The Mayo Clinic conducted a double-blinded randomized trial comparing D-penicillamine with a placebo. Patients met eligibility criteria, and both the treating physician and patient agreed to participate in the randomized trial for many cases. Clinical, biochemical, serologic, and histologic parameters were recorded for the clinical trial patients. The data were analyzed for presentation in the clinical literature, recording disease and survival status.
 
-* Case number
-* The number of days between registration and the earlier of death, liver transplantation, or study analysis time
-* Death indicator, where one indicates time to death and zero indicates time to censoring
-* Treatment code, where one represents D-penicillamine and two represents placebo
-* Age in years
-* Sex, where zero represents male and one represents female
-* Presence of ascites, where zero represents no and one represents yes
-* Presence of hepatomegaly, where zero represents no and one represents yes
-* Presence of spiders, where zero represents no and one represents yes
-* Presence of edema, where zero represents no edema, zero point five represents edema present without diuretic therapy, and one represents edema despite diuretic therapy
-* Serum bilirubin
-* Serum cholesterol
-* Albumin
-* Urine copper
-* Alkaline phosphatase
-* SGOT
-* Triglycerides
-* Platelet count
-* Prothrombin time
-* Histologic stage of disease, graded from one to four
+Primary biliary cirrhosis is a rare but fatal chronic liver disease of unknown cause, with a prevalence of about cases per million population. The primary pathologic event appears to be the destruction of interlobular bile ducts, potentially mediated by immunologic mechanisms. This dataset is significant as controlled clinical trials are challenging to complete for rare diseases, and it represents the largest existing uniformly diagnosed, treated, and followed case series for PBC.
 
-This dataset provides an opportunity to study the natural history of Primary Biliary Cirrhosis, a rare but fatal chronic liver disease of unknown cause. The data can be used to estimate a survival distribution, test for differences between two groups, and estimate covariate effects via a regression model.
+The data present an opportunity to study the natural history of the disease. Despite the immunosuppressive properties of D-penicillamine, no detectable differences were found between the survival time distributions for the treatment and placebo groups. This suggests these groups can be combined to study the association between survival time from randomization and clinical measurements.
 
-Keywords: Primary Biliary Cirrhosis, Liver Disease, Survival Analysis, Clinical Trial, D-penicillamine.
+In the early to mid-s, successful liver transplant rates increased substantially, becoming an effective therapy for PBC. The Mayo Clinic dataset is therefore one of the last allowing a study of the natural history of PBC in patients treated with only supportive care or its equivalent.
+
+The PBC data can be used to estimate survival distribution, test for differences between groups, and estimate covariate effects via regression models.
+
+Keywords: Primary biliary cirrhosis, Mayo Clinic trial, D-penicillamine, survival analysis, liver disease, clinical data, randomized controlled trial

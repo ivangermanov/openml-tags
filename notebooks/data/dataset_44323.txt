@@ -1,79 +1,76 @@
-**The Meta Album Cars Dataset Extended**
+**Meta Album Cars Dataset (Extended)**
 
-The original Cars dataset was collected in two thousand thirteen and contains more than sixteen thousand images from one hundred ninety-six classes of cars. Most images are taken on the road, but some have different backgrounds, and each image has only one car. Each class can have a varying number of images of variable resolutions.
+The original Cars dataset was collected in the year two thousand thirteen, and it contains more than sixteen thousand images from one hundred ninety-six classes of cars. Most images are on the road, but some have different backgrounds, and each image has only one car. Each class can have a variable number of images of variable resolutions. The preprocess version for this dataset was obtained by creating square images either duplicating the top and bottom-most three rows or the left and right most three columns based on the orientation of the original image. In this case, cropping was not applied to create the square images since following this technique results in losing too much information from the cars. Then, the square images were resized into one hundred twenty-eight by one hundred twenty-eight pixels using an anti-aliasing filter.
 
 **Dataset Details**
 
 ![Sample Image](https://meta-album.github.io/assets/img/samples/CRS.png)
 
-**Meta Album ID:** Vehicle Cars Relation Set
+**Meta Album ID**: Vehicles Cars
 
-**Meta Album URL:** https://meta-album.github.io/datasets/Cars.html
+**Meta Album URL**: https://meta-album.github.io/datasets/Cars.html
 
-**Domain ID:** Vehicle Classification Learning
+**Domain ID**: Vehicles
 
-**Domain Name:** Vehicles
+**Domain Name**: Vehicles
 
-**Dataset ID:** Cars Relation Set
+**Dataset ID**: Cars
 
-**Dataset Name:** Cars
+**Dataset Name**: Cars
 
-**Short Description:** A dataset with images of different car models
+**Short Description**: Dataset with images of different car models
 
-**Number of Classes:** One hundred ninety-six
+**Number of Classes**: One hundred ninety-six
 
-**Number of Images:** Sixteen thousand one hundred eighty-five
+**Number of Images**: Over sixteen thousand
 
-**Keywords:** vehicles, cars
+**Keywords**: vehicles, cars
 
-**Data Format:** images
+**Data Format**: images
 
-**Image Size:** One twenty-eight pixels by one twenty-eight pixels
+**Image Size**: one hundred twenty-eight by one hundred twenty-eight pixels
 
-**License (original data release):** Image Net License
+**License (original data release)**: ImageNet License
 
-**License URL (original data release):** https://ai.stanford.edu/~jkrause/cars/car_dataset.html https://www.image-net.org/download.php
+**License URL (original data release)**: https://ai.stanford.edu/~jkrause/cars/car_dataset.html https://www.image-net.org/download.php
 
-**License (Meta-Album data release):** Image Net License
+**License (Meta-Album data release)**: ImageNet License
 
-**License URL (Meta-Album data release):** https://www.image-net.org/download.php
+**License URL (Meta-Album data release)**: https://www.image-net.org/download.php
 
-**Source:** Stanford Cars Dataset
+**Source**: Stanford Cars Dataset
 
-**Source URL:** https://ai.stanford.edu/~jkrause/cars/car_dataset.html
+**Source URL**: https://ai.stanford.edu/~jkrause/cars/car_dataset.html
 
-### **Citing this Dataset**
+**Created Date**: March
 
-When citing this dataset, please use the following format:
+**Contact URL**: https://meta-album.github.io/
 
-```
-@inproceedings{CarsDataset,
-  title = {Three Dimensional Object Representations for Fine-Grained Categorization},
-  booktitle = {Fourth International IEEE Workshop on Three Dimensional Representation and Recognition},
-  year = {},
-  address = {},
+**Cite this dataset**
+
+@inproceedings{ThreeDObjectRepresentationsForFineGrainedCategorization,
+title = {Three-Dimensional Object Representations for Fine-Grained Categorization},
+booktitle = {Fourth International IEEE Workshop on Three-Dimensional Representation and Recognition},
+year = {},
+address = {},
+author = {}
 }
-```
 
-### **Citing Meta-Album**
+**Cite Meta-Album**
 
-When citing Meta-Album, please use the following format:
-
-```
-@inproceedings{MetaAlbum,
-  title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
-  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-  url = {https://meta-album.github.io/},
-  year = {}
+@inproceedings{MetaAlbumMultiDomainMetaDatasetForFewShotImageClassification,
+title={Meta-Album: Multi-domain Meta-Dataset for Few-Shot Image Classification},
+booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+url = {https://meta-album.github.io/},
+year = {}
 }
-```
 
-### **More Information**
+**More**
 
-For more information on the Meta-Album dataset, please refer to the NeurIPS two thousand twenty-two paper. For details on the dataset preprocessing, please refer to the supplementary materials. Supporting code can be found on the GitHub repository. Meta-Album is also available on Papers with Code.
+For more information on the Meta-Album dataset, please see the NeurIPS paper. For details on the dataset preprocessing, please see the supplementary materials. Supporting code can be found on our GitHub repository. Meta-Album on Papers with Code.
 
-### **Other Versions of this Dataset**
+**Other versions of this dataset**
 
-There are other versions of this dataset available, including Micro and Mini.
+Micro, Mini
 
-Keywords: cars, vehicles, images, classification, dataset, machine learning, computer vision
+Keywords: vehicles, cars, images, dataset, classification

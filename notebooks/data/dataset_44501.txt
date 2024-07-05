@@ -1,21 +1,13 @@
-Machine Learning, Mathematics 
+Credit G Seed Three Dataset with Two Thousand Rows, One Hundred Columns, and Ten Classes, Stratified
 
-Subsampling of the dataset Credit-G with Seed equals Three 
+This dataset is a subsample of the credit-g dataset, generated with a seed of three. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset to a manageable size. The dataset has ten classes, one hundred columns, and two thousand rows.
 
-Generated with the following source code:
+The subsampling process began by selecting classes. The unique classes in the dataset were identified, and if there were more than ten classes, a random sample of ten classes was selected. The indices where these classes were present were then selected, and the dataset was reduced to only include these indices.
 
-The function subsample takes in parameters including seed, maximum number of rows, maximum number of columns, maximum number of classes, and whether to use stratification or not. 
+Next, the columns were sampled. If the dataset had more than one hundred columns, a random sample of one hundred columns was selected. The columns were sorted, and the selected columns were used to reduce the dataset.
 
-It first uniformly samples classes from the unique values in the target variable, ensuring the number of classes does not exceed the maximum allowed. 
+Finally, the rows were sampled. If the dataset had more than two thousand rows, a stratified sample of two thousand rows was selected. The stratification was based on the target variable, and the sample was shuffled to ensure randomness.
 
-Then, it selects the indices where one of these classes is present and uses them to filter the input data and target variable. 
+The resulting dataset has ten classes, one hundred columns, and two thousand rows. The dataset includes features such as checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, and class.
 
-Next, it uniformly samples columns if the number of columns exceeds the maximum allowed, selecting the specified number of columns randomly without replacement. 
-
-Afterwards, if the number of rows exceeds the maximum allowed, it uses stratified sampling to select the specified number of rows, ensuring the distribution of classes is preserved.
-
-Finally, it converts categorical columns to strings, returns a new dataset with the subsampled data, target variable, and categorical mask.
-
-Features include checking status, duration, credit history, purpose, credit amount, savings status, employment, installment commitment, personal status, other parties, residence since, property magnitude, age, other payment plans, housing, existing credits, job, number of dependents, own telephone, foreign worker, and class.
-
-Keywords: machine learning, mathematics, subsampling, dataset, stratification, sampling
+Keywords: credit dataset, subsampling, stratification, class sampling, column sampling, row sampling

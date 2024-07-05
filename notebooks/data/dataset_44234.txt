@@ -1,30 +1,15 @@
-Machine Learning, Meteorology
+The Bank Marketing Data Set UCI is related to direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product, a bank term deposit, would be subscribed or not.
 
-The Bank Marketing Data Set UCI is related to direct marketing campaigns of a Portuguese banking institution. These marketing campaigns were based on phone calls. Often, more than one contact to the same client was required in order to assess whether the product, namely a bank term deposit, would be subscribed or not.
+There are four datasets: bank additional full, bank additional, bank full, and bank. The bank additional full dataset has all examples and twenty inputs, ordered by date from May to November. The bank additional dataset has ten percent of the examples, randomly selected from the bank additional full dataset, and twenty inputs. The bank full dataset has all examples and seventeen inputs, ordered by date, and is an older version of the dataset with less inputs. The bank dataset has ten percent of the examples, randomly selected from the bank full dataset, and seventeen inputs, and is an older version of the dataset with less inputs.
 
-There are four datasets available: bank additional full, bank additional, bank full, and bank. The largest dataset, bank additional full, contains all forty-one thousand one hundred eighty-eight examples and twenty input variables, ordered chronologically from May two thousand eight to November two thousand ten. This dataset is very similar to the data analyzed in previous studies. A smaller dataset, bank additional, contains only ten percent of the examples, randomly selected from the larger dataset, and also includes twenty input variables. The older versions of these datasets, bank full and bank, contain seventeen input variables and fewer examples.
+The smallest datasets are provided to test more computationally demanding machine learning algorithms, such as Support Vector Machines. The classification goal is to predict if the client will subscribe a term deposit or not.
 
-The classification goal is to predict whether the client will subscribe to a term deposit or not, which is represented by the output variable y.
+The input variables include bank client data, such as age, job, marital status, education, default, balance, housing, and loan. The job types include administration, unknown, unemployed, management, housemaid, entrepreneur, student, blue collar, self-employed, retired, and technician. The marital status includes married, divorced, and single. The education levels include unknown, secondary, primary, and tertiary. The default variable indicates if the client has credit in default or not. The balance is the average yearly balance in euros. The housing and loan variables indicate if the client has a housing loan or personal loan, respectively.
 
-Input variables include:
+The input variables also include data related to the last contact of the current campaign, such as contact communication type, last contact day of the month, last contact month of the year, and last contact duration in seconds. The contact communication types include unknown, telephone, and cellular. The last contact month of the year includes January, February, March, and so on.
 
-* Age, which represents the client's age
-* Job, which represents the type of job held by the client
-* Marital Status, which represents the client's marital status
-* Education, which represents the client's level of education
-* Default, which indicates whether the client has credit in default
-* Balance, which represents the average yearly balance in euros
-* Housing, which indicates whether the client has a housing loan
-* Loan, which indicates whether the client has a personal loan
-* Contact, which represents the type of communication used in the last contact
-* Day, which represents the last contact day of the month
-* Month, which represents the last contact month of the year
-* Duration, which represents the last contact duration in seconds
-* Campaign, which represents the number of contacts performed during this campaign and for this client
-* Pdays, which represents the number of days that passed since the client was last contacted from a previous campaign
-* Previous, which represents the number of contacts performed before this campaign and for this client
-* Poutcome, which represents the outcome of the previous marketing campaign
+The other attributes include the number of contacts performed during this campaign and for this client, the number of days that passed by after the client was last contacted from a previous campaign, the number of contacts performed before this campaign and for this client, and the outcome of the previous marketing campaign. The outcome of the previous marketing campaign includes unknown, other, failure, and success.
 
-Output variable y represents whether the client has subscribed a term deposit or not.
+The output variable is whether the client has subscribed a term deposit or not.
 
-Keywords: Bank Marketing, Direct Marketing, Term Deposit, Phone Calls, Client Subscription, Classification Goal.
+Keywords: bank marketing, direct marketing, phone calls, term deposit, client subscription, machine learning algorithms.

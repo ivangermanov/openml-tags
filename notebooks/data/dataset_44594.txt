@@ -1,27 +1,11 @@
-Blood Transfusion Service Center Seed One Name
+Name: Blood Transfusion Service Center
 
-Tags: Subsampling of the Blood Transfusion Service Center dataset with seed equals one arguments number rows equals two thousand arguments number columns equals one hundred arguments number classes equals ten arguments no stratify equals true
+Tags: Subsampling of the dataset Blood Transfusion Service Center with seed equals one, arguments number of rows equals two thousand, arguments number of columns equals one hundred, arguments number of classes equals ten, and arguments no stratify equals true.
 
 Generated with the following source code:
 
-def subsample(self, seed, number rows maximum, number columns maximum, number classes maximum, stratified)
+The function subsample takes in a seed, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean for stratification. It uses a random number generator with the given seed to uniformly sample classes, columns, and rows from the dataset. If the number of classes exceeds the maximum, it selects the classes based on their frequency in the dataset. It then selects the indices where one of these classes is present and filters the data accordingly. If the number of columns exceeds the maximum, it uniformly samples the columns. If the number of rows exceeds the maximum, it uses stratified sampling to select the rows. Finally, it returns a new dataset with the subsampled data.
 
-The function takes in parameters such as a seed value, maximum number of rows, maximum number of columns, maximum number of classes, and a boolean value indicating whether to use stratification.
+Features: (Skipped due to unreadability)
 
-Random Number Generator is used with the given seed value to ensure reproducibility of results. The input data X and Y are taken from the dataset.
-
-Uniformly Sample Classes - If the number of unique classes in the dataset exceeds the maximum allowed number of classes, then a subset of classes is randomly selected based on their frequency distribution.
-
-Select Indices - The indices corresponding to the selected classes are identified, and the input data X and Y are filtered accordingly.
-
-Uniformly Sample Columns - If the number of columns in the dataset exceeds the maximum allowed number of columns, then a subset of columns is randomly selected.
-
-Stratified Sampling - If the number of rows in the dataset exceeds the maximum allowed number of rows, then stratified sampling is applied using the train-test-split function from scikit-learn library.
-
-Categorical Columns - Categorical columns are converted to string format to ensure compatibility with OpenML.
-
-Return Dataset - A new dataset object is created with the processed data X, Y, categorical mask, and column names.
-
-Features: 
-
-Keywords: Blood Transfusion Service Center, dataset, subsampling, stratification, random sampling, OpenML.
+Keywords: Blood Transfusion Service Center, Subsampling, Stratification, Random Sampling, Dataset.

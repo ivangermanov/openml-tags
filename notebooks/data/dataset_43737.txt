@@ -1,25 +1,20 @@
-Aircraft Pricing Dataset 
-
+Aircraft Pricing Dataset
 Tags: 
 
-For a more comprehensive dataset with many more features, check out the Yacht/Motorboat Pricing Data dataset.
+For a more comprehensive dataset with many more features, check out the Yacht/Motorboat Pricing Data dataset. 
 
-Context 
-What are the most important factors in determining the price of a new or used aircraft? Is it the type of aircraft? The year of manufacture? The manufacturer? Or other characteristics? These are some of the questions regarding the used and new aircraft markets that I hope to answer with this dataset. 
+What are the most important features in determining the price of a new or used aircraft? Is it the aircraft type, year, manufacturer, or other characteristics? This is one of many questions regarding the used/new aircraft markets I hope to answer with this dataset. The dataset contains aircraft that are for sale around the world. The data was scraped during the month of July.
 
-The dataset contains a large collection of aircraft that are currently for sale around the world. The data was gathered during July of last year. 
+The data was scraped from various websites using the Scrapy framework for Python. The content scraped includes new or used price, currency, category, year, make, model, location, serial number, registration number, total hours, engine one hours, engine two hours, prop one hours, prop two hours, total seats, flight rules, and national origin.
 
-Content 
-The data was gathered from various websites using the Scrapy framework for Python. The script used to gather the data can be found online. 
+Keep in mind that the data was scraped from two different sources. Some of the data, such as new or used, engine one hours, engine two hours, prop one hours, prop two hours, total seats, and flight rules, was only easily accessible on one source, thus is missing for part of the dataset.
 
-The gathered content includes the following information about each aircraft: whether it is new or used, its price and currency, category, year of manufacture, make, model, location, serial number, registration number, total hours of operation, hours of operation for each engine and propeller, total seating capacity, flight rules, and national origin. 
+Flight Rules: Visual Flight Rules versus Instrument Flight Rules. In a nutshell, an aircraft equipped with Instrument Flight Rules is one where a pilot can fully navigate an aircraft using instruments in the cockpit. Any aircraft flying over a certain altitude, by law, has to be equipped with Instrument Flight Rules equipment. Beyond the Horizon means that an aircraft is equipped with a radar, but doesn't fully meet Instrument Flight Rules criteria. Visual Flight Rules refer to flying an aircraft by visually observing the surroundings.
 
-Keep in mind that the data was gathered from two different sources. As a result, some information, such as whether the aircraft is new or used, engine hours, propeller hours, seating capacity, and flight rules, is missing for part of the dataset because it was only easily accessible on one of the sources. 
+Some of the terms used within total hours, engine one, engine two, prop one, prop two columns include Since Major Overhaul, Since New, Since Prop Overhaul, Since Factory Overhaul, Since Overhaul, Since Top Overhaul, and Since Factory Re-manufactured.
 
-FAQ 
-Flight Rules: There are two types of flight rules: Visual Flight Rules and Instrument Flight Rules. In simple terms, an aircraft equipped with Instrument Flight Rules is one where a pilot can fully navigate the aircraft using instruments in the cockpit. Any aircraft flying above eighteen thousand feet must, by law, be equipped with Instrument Flight Rules equipment. Beyond the Horizon refers to an aircraft equipped with a radar but does not fully meet Instrument Flight Rules criteria. Visual Flight Rules refer to the set of regulations under which a pilot operates an aircraft in weather conditions generally clear enough to allow the pilot to see where they are going. Instrument Flight Rules, on the other hand, refer to the set of regulations under which a pilot operates an aircraft primarily by reference to instruments. 
+Thank you for checking out this dataset and happy analyzing!
 
-Features: 
-Condition, Price, Currency, Category, Year, Make, Model, Location, Serial Number, Registration Number, Total Hours, Engine One Hours, Engine Two Hours, Prop One Hours, Prop Two Hours, Total Seats, Flight Rules, National Origin
+Features: Condition, Price, Currency, Category, Year, Make, Model, Location, Serial Number, Registration, Total Hours, Total Seats, Flight Rules, National Origin
 
-Keywords: aircraft pricing, dataset, market analysis, flight rules, instrumentation
+Keywords: aircraft pricing, aircraft market, flight rules, aircraft characteristics, aircraft features, aircraft dataset.

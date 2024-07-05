@@ -1,24 +1,39 @@
-FOREX EUR USD Hourly Close Dataset
+Name: FOREX EUR/USD Hour Close
 
-Tags: Finance, Forex, Forex Close, Forex Hour, Transportation
+Tags: finance, forex, forex close, forex hour
 
-This dataset contains historical price data of the Forex EUR/USD pair from Dukascopy. Each instance represents one hourly candlestick. The dataset covers the period from January to December and excludes weekends, as the Forex market is closed during these days. The timestamp feature is set to the Europe/Amsterdam timezone.
+Source: Dukascopy Historical Data Feed
 
-The dataset provides information on various aspects of the Forex market, including bid and ask prices, volumes, and directions of price movements. The class attribute indicates whether the mean close price is expected to increase or decrease in the following hour.
+Data Description
+This dataset contains the historical price data of the FOREX EUR/USD from Dukascopy. Each instance, or row, represents one candlestick of one hour. The dataset spans a specific time period and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 
-Attributes:
+The class attribute is the direction of the mean of the Close Bid and the Close Ask of the following hour, relative to the Close Bid and Close Ask mean of the current minute. In other words, the class attribute is True when the mean Close price is going up in the following hour, and the class attribute is False when the mean Close price is going down or stays the same in the following hour.
 
-* Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
-* Bid Open: The bid price at the start of the hourly interval.
-* Bid High: The highest bid price reached during the hourly interval.
-* Bid Low: The lowest bid price reached during the hourly interval.
-* Bid Close: The bid price at the end of the hourly interval.
-* Bid Volume: The number of times the bid price changed within the hourly interval.
-* Ask Open: The ask price at the start of the hourly interval.
-* Ask High: The highest ask price reached during the hourly interval.
-* Ask Low: The lowest ask price reached during the hourly interval.
-* Ask Close: The ask price at the end of the hourly interval.
-* Ask Volume: The number of times the ask price changed within the hourly interval.
-* Class: Whether the average price is expected to rise or fall in the next hourly interval.
+Attributes
+The dataset consists of the following attributes:
 
-Keywords: Forex, EUR USD, Historical Data, Candlestick, Finance, Trading, Market Analysis
+Timestamp: The time of the current data point in the Europe/Amsterdam timezone.
+
+Bid Open: The bid price at the start of this time interval.
+
+Bid High: The highest bid price during this time interval.
+
+Bid Low: The lowest bid price during this time interval.
+
+Bid Close: The bid price at the end of this time interval.
+
+Bid Volume: The number of times the Bid Price changed within this time interval.
+
+Ask Open: The ask price at the start of this time interval.
+
+Ask High: The highest ask price during this time interval.
+
+Ask Low: The lowest ask price during this time interval.
+
+Ask Close: The ask price at the end of this time interval.
+
+Ask Volume: The number of times the Ask Price changed within this time interval.
+
+Class: Whether the average price will go up during the next interval.
+
+Keywords: FOREX, EUR/USD, historical data, candlestick, finance, market analysis

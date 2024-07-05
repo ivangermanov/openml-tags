@@ -1,82 +1,18 @@
-Title: Protein Localization Sites 
+Dataset: ecoli
+Tags: study, uci
 
-The dataset is about predicting the cellular localization sites of proteins in Escherichia coli. 
+Title: Protein Localization Sites
 
-Creator and Maintainer: 
-Institute of Molecular and Cellular Biology 
-Osaka University 
+This dataset contains information on protein localization sites in E. coli bacteria. It was created and maintained by the Institute of Molecular and Cellular Biology at Osaka University in Japan. The data has been used for predicting the cellular localization sites of proteins using various machine learning methods, including probabilistic classification systems, binary decision trees, and Bayesian classifiers.
 
-Donor: 
-UCI 
+The dataset consists of instances for E. coli proteins, with each instance having several attributes. These attributes include methods for signal sequence recognition, scores for membrane spanning region prediction, and analyses of amino acid content. The class labels represent different localization sites within the bacterial cell, such as cytoplasm, inner membrane, periplasm, and outer membrane.
 
-See also: Yeast Database 
+Previous research using this dataset and its predecessors has focused on developing expert systems for predicting protein localization in gram negative bacteria and eukaryotic cells. The accuracy of these prediction methods has been reported to be around for E. coli proteins.
 
-Past Usage: 
-Reference: A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins 
-Results: Eighty-one percent for E coli with an ad hoc structured probability model. Similar accuracy for binary decision tree and Bayesian classifier methods. 
-Predicted Attribute: Localization site of protein (non-numeric). 
+The attributes in the dataset provide various scores and binary indicators related to protein structure and composition. These include McGeoch's method for signal sequence recognition, von Heijne's method for signal sequence recognition, and scores from discriminant analysis of amino acid content. Some attributes are specific to certain types of proteins, such as the presence of charge on the N terminus of predicted lipoproteins.
 
-Number of Instances: For the E coli dataset 
-Number of Attributes: For E coli dataset, there are eight attributes (seven predictive, one name). 
+The class distribution shows that the majority of proteins in the dataset are localized in the cytoplasm, followed by the inner membrane without signal sequence, and the periplasm. There are also smaller numbers of proteins localized in other sites such as the outer membrane and various types of lipoproteins.
 
-Attribute Information:
-Sequence Name was accession number for the Swiss Prot database 
-Mc Geoch's method for signal sequence recognition 
-Von Heijne's method for signal sequence recognition 
-Von Heijne's signal peptidase two consensus sequence score (binary attribute) 
-Presence of charge on N terminus of predicted lipoproteins (binary attribute) 
-Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
-Score of the ALOM membrane spanning region prediction program 
-Score of ALOM program after excluding putative cleavable signal regions from the sequence 
+This dataset is valuable for researchers studying protein localization and developing computational methods for predicting where proteins will be found within bacterial cells. It has applications in fields such as molecular biology, bioinformatics, and protein engineering.
 
-Missing Attribute Values: There are none 
-
-Class Distribution: 
-The class is the localization site 
-Cytoplasm 
-Inner membrane without signal sequence 
-Perisplasm 
-Inner membrane uncleavable signal sequence 
-Outer membrane 
-Outer membrane lipoprotein 
-Inner membrane lipoprotein 
-Inner membrane cleavable signal sequence 
-
-Features: 
-Mc Geoch's method for signal sequence recognition 
-Von Heijne's method for signal sequence recognition 
-Von Heijne's signal peptidase two consensus sequence score 
-Presence of charge on N terminus of predicted lipoproteins 
-Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
-Score of the ALOM membrane spanning region prediction program 
-Score of ALOM program after excluding putative cleavable signal regions from the sequence 
-Localization site of protein 
-
-Scraped Data: 
-Dataset Information 
-Additional Information 
-References describe a predecessor to this dataset and its development 
-They also give results for classification by a rule based expert system with that version of the dataset 
-
-Has Missing Values: No 
-
-Additional Variable Information: 
-Accession number for the Swiss Prot database 
-Mc Geoch's method for signal sequence recognition 
-Von Heijne's method for signal sequence recognition 
-Von Heijne's signal peptidase two consensus sequence score 
-Presence of charge on N terminus of predicted lipoproteins 
-Score of discriminant analysis of the amino acid content of outer membrane and periplasmic proteins 
-Score of the ALOM membrane spanning region prediction program 
-Score of ALOM program after excluding putative cleavable signal regions from the sequence 
-Class labels: 
-Cytoplasm 
-Inner membrane without signal sequence 
-Perisplasm 
-Inner membrane uncleavable signal sequence 
-Outer membrane 
-Outer membrane lipoprotein 
-Inner membrane lipoprotein 
-Inner membrane cleavable signal sequence 
-
-Keywords: Protein Localization Sites, Escherichia coli, Machine Learning, Life Science, UCI.
+Keywords: protein localization, E. coli, cellular compartments, signal sequences, machine learning, bioinformatics, membrane proteins, amino acid analysis

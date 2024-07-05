@@ -1,27 +1,15 @@
-Subsampling of the dataset Eye Movements with Seed equals Two 
-Tags: Machine Learning, Mathematics 
+Name: Eye Movements Seed Two Dataset
 
-The dataset Eye Movements, consisting of forty-four thousand one hundred fifty-seven entries, underwent subsampling with specific parameters. The subsampling process utilized a specified seed value of two for reproducibility purposes. Additionally, the number of rows was capped at two thousand, while the maximum number of columns was set to one hundred. Furthermore, the number of classes was limited to ten.
+Tags: Subsampling of the Eye Movements dataset generated with the following source code:
 
-Generated with the following source code:
+This dataset is a subsample of the original Eye Movements dataset, with a seed value of two. The subsampling process involved uniformly sampling classes, columns, and rows to reduce the dataset size while maintaining its overall characteristics.
 
-This Python function facilitates the subsampling of datasets. It accepts several arguments, including a seed value, the maximum number of rows, columns, and classes, as well as an option for stratification. The function employs NumPy's default random number generator to ensure randomness.
+The subsampling process started by selecting a subset of classes from the original dataset. If the number of unique classes exceeded the maximum allowed, a random sample of classes was chosen based on their frequency in the dataset. The indices of the selected classes were then used to filter the dataset, reducing its size.
 
-Initially, the function retrieves the input data and corresponding labels. In cases where the number of unique classes exceeds the specified maximum, the function selects the desired number of classes using a weighted random choice based on their frequency in the dataset. This ensures that the sampled dataset maintains an adequate representation of each class.
+Next, the columns of the dataset were uniformly sampled to reduce their number. If the number of columns exceeded the maximum allowed, a random sample of columns was chosen, and the dataset was filtered accordingly.
 
-Next, the function filters the input data to only include entries corresponding to the selected classes. If necessary, the function then randomly samples columns from the filtered data to reach the specified column limit.
+Finally, the rows of the dataset were uniformly sampled to reduce their number. If the number of rows exceeded the maximum allowed, a stratified sampling approach was used to ensure that the resulting dataset maintained the same class distribution as the original dataset.
 
-Finally, if the resulting dataset still contains more entries than the maximum allowed, the function employs stratified sampling to select the desired number of rows while maintaining the original class distribution.
+The resulting dataset consists of the following features: Line Number, Assignment Number, First Fixation, Second Fixation, Previous Fixation Duration, First Fixation Duration, First Pass Fixation Duration, Next Fixation Duration, First Saccade Length, Last Saccade Length, Previous Fixation Position, Landing Position, Leaving Position, Total Fixation Duration, Mean Fixation Duration, Regression Length, Next Word Regression, Regression Duration, Pupil Diameter Maximum, Pupil Diameter Lag, Time Protection, Title Number, Word Number, and Label.
 
-Features:
-
-* Line Number
-* Assignment Number
-* First Fixation
-* Second Fixation
-* Previous Fixation Duration
-* Title Number
-* Word Number
-* Label
-
-Keywords: subsampling, machine learning, mathematics, dataset, stratification, random sampling.
+Keywords: Eye Movements, Subsampling, Stratified Sampling, Dataset Reduction, Feature Selection.

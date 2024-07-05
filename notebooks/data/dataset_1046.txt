@@ -1,23 +1,19 @@
-This is a PROMISE Software Engineering Repository data set made publicly available in order to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE data sets, then please follow the acknowledgement guidelines posted on the PROMISE repository web page.
+Title: Recurrent Event (Defect Fix) and Size Data for Mozilla Classes
 
-The data set is distributed under the Creative Commons Attribution-Share Alike License. You are free to share, copy, distribute, and transmit the work, as well as remix, adapt, or build upon it, under certain conditions.
+Tags: mythbusting, OpenML, PROMISE, study, time series
 
-Title: Recurrent Event Defect Fix and Size Data for Mozilla Classes
+This dataset includes a binary attribute (event) to show defect fixes. The data is at the "observation" level. Each modification made to a C++ class was entered as an observation. A newly added class created an observation. The observation period was between May and February.
 
-This data set includes a binary attribute to show defect fix and is at the observation level. Each modification made to a C++ class was entered as an observation. A newly added class created an observation. The observation period was between May twenty-ninth, two thousand two, and February twenty-second, two thousand six.
+This is a PROMISE Software Engineering Repository dataset made publicly available to encourage repeatable, verifiable, refutable, and/or improvable predictive models of software engineering. If you publish material based on PROMISE datasets, please follow the acknowledgment guidelines posted on the PROMISE repository web page.
 
-Sources:
+The dataset is distributed under the Creative Commons Attribution Share Alike License. Users are free to share (copy, distribute, and transmit the work) and remix (adapt the work) under the following conditions: Attribution (you must attribute the work in the manner specified by the author or licensor, but not in any way that suggests they endorse you or your use of the work) and Share Alike (if you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar, or a compatible license).
 
-Creator: 
-Date: 
-Contact: 
+For any reuse or distribution, you must make clear to others the license terms of this work. Any of the above conditions can be waived if you get permission from the copyright holder. Apart from the remix rights granted under this license, nothing in this license impairs or restricts the author's moral rights.
 
-Donor: 
+The dataset was used for modeling the effect of size on defect proneness for open source software. Quality is becoming increasingly important with the continuous adoption of open source software. Previous research has found that there is generally a positive relationship between module size and defect proneness. Therefore, in open source software development, it is important to monitor module size and understand its impact on defect proneness.
 
-Past Usage:
-This data set was used for studying the effect of size on defect proneness for open-source software. Previous research has found that there is generally a positive relationship between module size and defect proneness. Therefore, in open-source software development, it is important to monitor module size and understand its impact on defect proneness. However, traditional approaches to quality modeling, which measure specific system snapshots and obtain future defect counts, are not well-suited because open-source modules usually evolve and their size changes over time.
+Traditional approaches to quality modeling, which measure specific system snapshots and obtain future defect counts, are not well suited because open source modules usually evolve and their size changes over time. In this study, Cox proportional hazards modeling with recurrent events was used to study the effect of class size on defect proneness in the Mozilla product. The effect of size was found to be significant, and this effect on defect proneness was quantified.
 
-Features:
-This data set is used to create a conditional Cox Proportional Hazards Model. It includes the following attributes: identification assigned to each separate C++ class, a time infinitesimally greater than the time of the modification that created this observation, either the time of the next modification, or the end of the observation period, or the time of deletion, whichever comes first, a binary attribute to show defect fix, the number of source lines of code of the C++ classes at the time of the modification, and a state attribute initially set to zero and becomes one after the class experiences an event.
+The dataset includes features such as a numeric identification assigned to each separate C++ class, start and end times for modifications, a binary event indicator for defect fixes, class size measured in source lines of code, and a state indicator for whether a class has experienced an event.
 
-Keywords: PROMISE, software engineering, defect fix, open-source software, module size, defect proneness, Cox Proportional Hazards Model, Mozilla classes.
+Keywords: software engineering, defect prediction, open source software, Mozilla, class size, Cox proportional hazards model, recurrent events, software quality

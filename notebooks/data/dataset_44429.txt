@@ -1,15 +1,19 @@
-Dataset Name: Jannis Seed One 
+Subsampling of the dataset Jannis with seed one, where the maximum number of rows is two thousand, the maximum number of columns is one hundred, and the maximum number of classes is ten, and stratification is set to false. 
 
-Tags: Chemistry, Earth Science 
+Generated with the following source code:
 
-This dataset is a subsampling of the original Jannis dataset, which has been reduced in size to facilitate easier handling and analysis. The subsampling process involved uniformly selecting classes from the original dataset, followed by uniform sampling of columns and rows.
+The function subsample takes in a dataset and returns a new dataset that is a subsample of the original. It uses the numpy random default random generator to ensure reproducibility. 
 
-The resulting dataset has been generated using a specific set of parameters, including a random seed, maximum number of rows, maximum number of columns, and maximum number of classes. The stratification option has also been enabled to ensure that the resulting dataset maintains a representative distribution of classes.
+First, it uniformly samples classes from the dataset, ensuring that the number of classes does not exceed the maximum number of classes. It then selects the indices where one of these classes is present and subsets the data accordingly. 
 
-The dataset features have been selected from the original set, with a focus on retaining a diverse range of variables. These features include various chemical and earth science-related properties.
+Next, it uniformly samples columns from the dataset, ensuring that the number of columns does not exceed the maximum number of columns. 
 
-The subsampling process has been implemented using a Python function, which utilizes NumPy and Pandas libraries to perform the necessary operations. The function takes into account the specified parameters and ensures that the resulting dataset meets the desired criteria.
+Finally, if the number of rows exceeds the maximum number of rows, it uses stratified sampling to ensure that the class distribution is preserved. 
 
-Features: Various Chemical Properties 
+The resulting dataset is then returned, along with the categorical mask and column names.
 
-Keywords: Subsampling, Chemistry, Earth Science, Data Reduction, Feature Selection
+Features: 
+
+Tags: Subsampling of the dataset Jannis
+
+Keywords: subsampling, dataset, stratification, reproducibility, class distribution

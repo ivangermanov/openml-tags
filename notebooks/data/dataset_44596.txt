@@ -1,14 +1,17 @@
-Blood Transfusion Service Center Seed Three N Rows Two Thousand N Classes Ten N Cols One Hundred Stratify True 
+Name: Blood Transfusion Service Center
 
-This dataset is a subsampling of the Blood Transfusion Service Center dataset, which has been randomly sampled using a seed value of three. The maximum number of rows has been set to two thousand, the maximum number of columns to one hundred, and the maximum number of classes to ten. 
+Tags: Subsampling of the dataset Blood Transfusion Service Center with seed, number of rows, number of columns, number of classes, and stratify arguments.
 
-The sampling process first involves uniformly selecting classes from the original dataset, ensuring that the chosen classes are representative of the overall distribution. This is done to maintain the stratification of the original dataset. 
+Generated with the following source code:
 
-Next, the columns are sampled uniformly, selecting a specified number of columns from the total available. This is done to reduce the dimensionality of the dataset while preserving its essential characteristics. 
+The subsample function takes in a dataset and returns a new dataset with a specified number of rows, columns, and classes. It uses random sampling to select the classes, columns, and rows. The function first selects the classes, then the columns, and finally the rows. It uses stratified sampling to ensure that the classes are represented proportionally in the new dataset.
 
-Finally, the rows are sampled according to the specified maximum number, again maintaining the stratification of the original dataset. This ensures that the resulting subsampled dataset remains representative of the original.
+The function takes in several arguments, including the seed for random sampling, the maximum number of rows, columns, and classes, and a boolean indicating whether to use stratified sampling. It returns a new dataset with the specified characteristics.
 
-Features: 
-Class
+The dataset is subsampled by first selecting the classes, then the columns, and finally the rows. The classes are selected using random sampling, with the probability of each class being selected proportional to its frequency in the original dataset. The columns are then selected randomly, and the rows are selected using stratified sampling to ensure that the classes are represented proportionally.
 
-Keywords: Blood Transfusion Service Center, subsampling, stratification, dimensionality reduction, dataset sampling.
+The resulting dataset has the specified number of rows, columns, and classes, and is suitable for use in machine learning algorithms.
+
+Features: (not provided, as they are unreadable)
+
+Keywords: dataset subsampling, random sampling, stratified sampling, machine learning, data preprocessing.
