@@ -10,6 +10,45 @@
 
 %all the other includes etc. are done in the thesis.sty file.
 \usepackage{thesis}
+\usepackage[table]{xcolor}
+\usepackage{tabularx} % for responsive width columns
+\usepackage{array}
+% \usepackage{arxiv}
+\usepackage{lipsum}
+\usepackage{pgfgantt}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage{import}
+\usepackage{longtable}
+% \usepackage[colorinlistoftodos]{todonotes}
+\graphicspath{ {./images/} }
+
+\usepackage[numbers,square]{natbib}
+\usepackage{amsmath}
+\usepackage{cleveref}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{algorithmic,algorithm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{positioning,bayesnet}
+\usepackage{comment}
+
+\Crefname{figure}{Figure}{Figures} % For capitalized (start of sentence)
+\crefname{figure}{Figure}{Figures} % For lowercase
+\Crefname{table}{Table}{Tables} % For capitalized (start of sentence)
+\crefname{table}{Table}{Tables} % For lowercase
 
 %
 % These commands need to be defined in order to produce a correct and personalized document
@@ -55,13 +94,13 @@
 % \linenumbers
 
 %It could be handy to have a list of todos and brainstorms in your thesis
-\chapter*{*General todos*}\todo{remove this chapter}
-\input{chapters/general_todos}
+% \chapter*{*General todos*}\todo{remove this chapter}
+% \input{chapters/general_todos}
 
 \chapter*{Abstract}\label{chapter:abstract}
 \input{chapters/abstract}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 %An executive summary if you want:
 %\chapter*{Executive summary}\label{chapter:executive_summary}
@@ -73,23 +112,23 @@
 \chapter*{Acknowledgements}\label{chapter:acknowledgements}
 \input{chapters/acknowledgements}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \tableofcontents
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \listoffigures
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \listoftables
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
-\lstlistoflistings
+% \lstlistoflistings
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \chapter{Introduction}\label{chapter:introduction}
 \setcounter{page}{0}
@@ -97,38 +136,44 @@
 %from here on, start the 'real' page numbering, from 1, with normal digits
 \input{chapters/introduction}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \chapter{Preliminaries}\label{chapter:preliminaries}
 \input{chapters/preliminaries}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
-\chapter{First Real Chapter}\label{chapter:first_real_chapter}
-\input{chapters/first_real_chapter}
+% \chapter{Literature Review}\label{chapter:literature_review}
+% \input{chapters/literature_review}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
-\chapter{Second Real Chapter}\label{chapter:second_real_chapter}
-\input{chapters/second_real_chapter}
+\chapter{Methodology}\label{chapter:methodology}
+\input{chapters/methodology}
 
-\clearemptydoublepage
+% \clearemptydoublepage
+\chapter{Results}\label{chapter:results}
+\input{chapters/results}
 
-\chapter{Conclusions}\label{chapter:conclusions}
+% \clearemptydoublepage
+
+\chapter{Conclusions and Recommendations}\label{chapter:conclusions}
 \input{chapters/conclusions}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 %Choose a good bibliography style, plain would do often, but these might be nice too
 %\bibliographystyle{these}
-\bibliographystyle{plain}
+% \bibliographystyle{plain}
+% \bibliography{references}
+\bibliographystyle{unsrtnat}
 \bibliography{references}
 
-\clearemptydoublepage
+% \clearemptydoublepage
 
 \appendix
 \addcontentsline{toc}{chapter}{Appendix}
 
-\input{appendices/main}
+\input{appendices/broad_literature_review}
 
 \end{document}

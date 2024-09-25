@@ -1,13 +1,36 @@
-This is a demo \LaTeX template you can use for your TU/e Master of Science thesis. It can of course also be used for theses at other universities (be sure to use a high quality picture!!!) and other types of theses.
+Topic modeling is a rapidly growing field with applications in various contexts that include text corpora - social media posts \cite{curiskis_evaluation_2020,paul_discovering_2014,pennacchiotti_investigating_2011}, books \cite{raj_p_m_sentiment_2022}, newspapers \cite{jacobi_quantitative_2018,nicholson_search_2020,marjanen_topic_2020}, legal documents \cite{silveira_topic_nodate,oneill_analysis_2016}, research papers \cite{asmussen_smart_2019} and financial reports \cite{el_mokhtari_using_2020,garcia-mendez_automatic_2023}, to name a few. Topic models can take a large corpus of documents as input and extract the latent topics present in the corpus \cite{blei_latent_2001}. A topic refers to a recurring pattern of words (terms) or phrases that commonly occur together in a set of documents \cite{abdelrazek_topic_2022}. For instance, in a collection of news articles, a topic $T_1$ may consist of the terms \textit{election}, \textit{candidate}, and \textit{vote}, while another topic $T_2$ may consist of the terms \textit{stock}, \textit{market}, and \textit{investment}.
 
-In this particular template special care has been taken to position the thesis title correctly on the front page for the TU/e see-through box in the default cover. However, please check (and double check!) if this is still correct before you send your thesis to the repro shop and have copies printed. Additionally, we defined the command \textbackslash todo\{\} that produces a \todo{The ToDo note} ToDo note in the margin (and introduces some white space in the text unfortunately).
+\citet{churchill_evolution_2022} define a topic model to be a mathematical model that takes as input a set of documents $D$, and returns a set of topics $T$ that represent the content of $D$ in an accurate and coherent manner. The documents within the collection can subsequently be tagged with these identified topics. This process enables users to discern the importance of each topic both within individual documents and across the entire collection.
 
-Good luck with your thesis and be sure to share the end result with us on \url{joosbuijs.wordpress.com}!
+OpenML \cite{vanschoren_openml_2014} is a platform designed for machine learning researchers to share and manage data. It facilitates global collaboration by allowing users to present new datasets for analysis and share their findings, including code, models, predictions, and evaluations. OpenML ensures the clear definition of tasks and organizes all contributions online for easy accessibility, reuse, and discussion.
 
-\vspace{10pt}
+For each dataset, OpenML provides a dedicated page that contains detailed information such as a general dataset description, attribution details, and characteristics of the data, as well as statistics on the data distribution. Additionally, OpenML supports the use of tags on datasets, facilitating easier filtering and searchability.
 
-Joos Buijs
+\section{Problem formulation and goal}
+In OpenML, datasets are currently categorized using manual tagging. However, many datasets lack semantic tags that are readable by humans. This situation presents an opportunity for a Master's thesis project aimed at developing an unsupervised, automated topic modelling system for tagging datasets. Given that most datasets come with descriptions, applying topic modeling to extract topics is an innovative approach to generate and assign relevant tags. Most topic modeling techniques are unsupervised, meaning they do not require labeled data for training. This characteristic makes them suitable for the task of tagging OpenML datasets, as the tags are not predefined.
 
-Eindhoven,
+Applying topic modeling to extract topics as tags could improve how users interact with the OpenML platform. Specifically, it could make the process of searching and filtering through the extensive collection of datasets more efficient, thus improving dataset discoverability. The addition of semantic tags based on the topics identified in the descriptions could also lead to better organization and management of datasets, thereby improving data governance on the platform.
 
-March 2013.
+Automating the process of tagging can save considerable time for researchers and data scientists who would otherwise have to tag datasets manually. This method ensures consistency in the tags applied and enriches the datasets' metadata, making them more useful and accessible.
+
+Furthermore, previous work by \citeauthor{das_openmlscripts_nodate} has shown the potential of using scripts to automate the tagging of datasets in OpenML \cite{das_openmlscripts_nodate}. \citeauthor{das_openmlscripts_nodate}'s approach involved using dataset descriptions and a predefined list of tags to prompt GPT-3.5-turbo to assign relevant semantic tags to each dataset. This method demonstrated the feasibility of classifying datasets with a set of predefined tags, similar to the dataset tags in the Wolfram Data Repository \cite{noauthor_wolfram_nodate}.
+
+The main goal of this research is to explore the potential of unsupervised topic modeling when applied to the dataset descriptions of OpenML. By extracting topics from the descriptions, we can use the terms in the topics as tags for the datasets.
+
+
+
+\section{Research questions}
+To refine the main goal of the research, we define the following research questions:
+\begin{itemize}
+    \item{\textbf{RQ1 — What are the specifications of the OpenML dataset descriptions, and what impact may they have on model performance?}} Explore the dataset descriptions in OpenML and analyze their characteristics to understand the challenges and opportunities for extracting topics. Evaluate whether additional preprocessing steps are necessary to improve the quality of the descriptions to be used as input for the topic model.
+    \item{\textbf{RQ2 — What are the different approaches to topic modeling that can be applied to the OpenML dataset descriptions, and what are the tradeoffs involved in their use?}} Investigate existing topic modeling techniques and architectures and assess their suitability for extracting topics from the dataset descriptions, while considering tradeoffs such as computational cost, scalability, and model complexity. Additionally, explore strategies to ensure that the generated tags can be continuously refined and improved as new topic modeling approaches and advancements become available.
+    \item{\textbf{RQ3 — What are suitable automated evaluation metrics for assessing the quality of the topics and terms extracted by the topic model?}} Define and implement automated evaluation metrics to quantitatively measure the quality of the topics and terms extracted by the topic model. Compare the performance of different topic models (benchmarks) using these metrics.
+    \item{\textbf{RQ4 — What are suitable human evaluation methods for assessing the quality of the topics and terms extracted by the topic model?}} Define and implement human-centered evaluation strategies to assess the usefulness and coherence of the topics and terms from a human perspective. This evaluation will consider how well the extracted topics align with a human's understanding and expectations.
+\end{itemize}
+
+\section{Contributions}
+This research aims to contribute to the OpenML platform by providing a novel approach to tagging datasets. By automating the tagging process, the research can improve the efficiency of dataset management and organization on the platform. This contribution can benefit researchers and data scientists who use OpenML by making it easier to search for and filter datasets based on their content.
+
+Furthermore, the research aims to explore the potential of topic modeling when applied to dataset descriptions, an area that to our knowledge has not been studied. By doing so, it seeks to contribute new insights to the field of topic modeling, which has been applied in various contexts but not extensively in the categorization of datasets based on their descriptions.
+
+Another contribution of this research is the development of a new topic model that not only extracts topics from the specific context of OpenML dataset descriptions, but that is also generalizable to other text corpora. We also provide a set of automated and human evaluation metrics to assess the quality of the topics and terms extracted by the model.
