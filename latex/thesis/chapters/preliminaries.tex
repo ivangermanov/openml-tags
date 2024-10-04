@@ -274,6 +274,8 @@ SBERT addresses this issue by incorporating a Siamese network architecture with 
     \label{fig:bi_vs_cross}
 \end{figure}
 
+GPT \cite{radford_improving_nodate, radford_language_nodate, brown_language_2020}, BERT \cite{devlin_bert_2019}, T5 \cite{raffel_exploring_2020} and other similar models based on transformers are called large language models (LLMs). They are pre-trained on large corpora of text data and fine-tuned for specific tasks. LLMs have been shown to achieve state-of-the-art performance on a wide range of NLP tasks, including text classification, question answering, and language translation. However, the computational cost of training and fine-tuning LLMs is high, and they require large amounts of data to achieve good performance. In addition, LLMs are often criticized for their lack of interpretability, as the internal workings of the model are complex and difficult to understand.
+
 BERTopic can use any embedding technique or architecture, provided the language model used for generating document embeddings is fine-tuned for semantic similarity. Hence, the quality of BERTopic's clustering improves as more advanced language models are developed, allowing BERTopic to evolve alongside advancements in embedding techniques. This proves particularly useful in the context of topic modeling, since the quality of the embeddings directly influences the quality of the topics generated.
 
 The Massive Text Embedding Benchmark (MTEB) \cite{muennighoff_mteb_2023} is a benchmark that evaluates the performance of various embedding models on a wide range of tasks. It provides a comprehensive comparison of the performance of different embedding models, including SBERT, RoBERTa \cite{liu_roberta_2019}, and BERT. By leveraging MTEB, the user can select the most suitable embedding model for their specific use case.
@@ -448,7 +450,10 @@ To illustrate this, consider the hockey-related cluster. Table \ref{tab:ctfidf_h
 
 After generating the c-TF-IDF representations, we obtain a collection of words that describe a collection of documents. c-TF-IDF is a method for quickly producing accurate topic representations. However, the field of NLP is rapidly advancing, with frequent new developments. To make use of these developments, BERTopic offers the option to refine c-TF-IDF topics further using GPT \cite{radford_improving_nodate, radford_language_nodate, brown_language_2020}, KeyBERT \cite{grootendorst_maartengrkeybert_2024}, spaCy \cite{noauthor_explosionspacy_nodate}, and other techniques, many of which are integrated within the BERTopic library. Users can also implement their own fine-tuning methods, allowing for a high degree of customization.
 
-In particular, the topics generated through c-TF-IDF can be viewed as canditate topics, comprising a set of terms and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of architectures such as large language models more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
+In particular, the topics generated through c-TF-IDF can be viewed as candidate topics, comprising a set of terms and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of architectures such as large language models more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
+
+\subsection{Zeroshot Text Classification}
+\todo{Write about zeroshot text classification. Moritz Laurer paper}
 
 \subsection{Evaluation metrics}
 
@@ -491,15 +496,21 @@ Additionally, perplexity has not been found to be correlated with human judgment
 
 A topic is defined as a discrete distribution over words, with the expectation that this word set is interpretable by humans. For interpretability, the words generated should collectively convey a single semantic meaning. Topic coherence metrics evaluate how related the top-k words of a topic are to one another.
 
-\citet{newman_automatic_2010} measure coherence by examining the lexical similarity between word pairs, employing various similarity measures and identifying mutual information as the most reliably performing measure. The pointwise mutual information, $PMI$, between a pair of words $(w_i, w_j)$ is calculated as follows:
+\citet{newman_automatic_2010} measure coherence by examining the lexical similarity between word pairs, employing various similarity measures and identifying mutual information as the most reliably performing measure. The pointwise mutual information, \textit{PMI}, and the normalized pointwise mutual information, \textit{NPMI} \cite{bouma_normalized_nodate}, between a pair of words $(w_i, w_j)$ are calculated as follows \cite{lau_machine_2014}:
 
-\[PMI(w_i, w_j) = \frac{\log p(w_i, w_j)}{p(w_i)p(w_j)}\]
+\[
+\text{PMI}(w_i) = \sum_{j}^{N-1} \log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}
+\]
+
+\[
+\text{NPMI}(w_i) = \sum_{j}^{N-1} \frac{\log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}}{-\log P(w_i, w_j)}
+\]
 
 This formula quantifies the difference between the probability of $w_i$ and $w_j$ occurring together compared to the probabilities of them appearing independently within the corpus. Here, $p(w_i,w_j)$ represents the joint probability of both words occurring together, while $p(w_i)$ and $p(w_j)$ are the individual probabilities $w_i$ and $w_j$ occurring in the corpus.
 
 Topic coherence suffers from the same disadvantages as perplexity, as it cannot account for terms that are not present in the original corpus. In fact, it is important to mention that most modern topic models cannot be adequately evaluated using only perplexity or coherence \cite{doogan_topic_2021, hoyle_is_2021}.
 
-Additionally, a known trade-off exists between coherence and perplexity \cite{chang_reading_2009}, where optimizing for lower perplexity often results in decreased coherence. Nonetheless, as opposed to perplexity, coherence has been found to correlate with human judgment \cite{doogan_topic_2021, hoyle_is_2021, lee_human_2017, newman_evaluating_2010}.
+Additionally, a known trade-off exists between coherence and perplexity \cite{chang_reading_2009}, where optimizing for lower perplexity often results in decreased coherence. Nonetheless, as opposed to perplexity, coherence has been found to correlate with human judgment \cite{doogan_topic_2021, hoyle_is_2021, lee_human_2017, newman_evaluating_2010, mimno_optimizing_nodate, lau_machine_2014}.
 
 \subsubsection{Topic diversity}
 Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
@@ -516,7 +527,7 @@ When ground truth topics are missing, alternative metrics like purity are used. 
 
 OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is an open-source framework for the training, analysis, and comparison of topic models across various datasets and evaluation metrics.
 
-It allows for the optimization of model hyper-parameters for experimental comparison. OCTIS introduces a pipeline for topic modeling (\cref{fig:octis}), which includes dataset preprocessing, training topic models, evaluation metrics, hyperparameter optimization, and visualization through an interactive web dashboard.
+It allows for the optimization of model hyper-parameters for experimental comparison. OCTIS introduces a pipeline for topic modeling (\cref{fig:octis}), which includes dataset preprocessing, training topic models, evaluation metrics, hyperparameter optimization, and visualization.
 
 \begin{figure}[h] % adjust placement if needed
     \centering
@@ -532,3 +543,8 @@ The discovery of optimal hyper-parameter settings relies on a Bayesian Optimizat
 BO is a sequential, model-based optimization technique for noisy black-box functions that are costly and complex to evaluate directly, such as topic models. Its main idea involves using all previously evaluated hyperparameter settings to approximate the performance metric's value, and then selecting new, likely better hyperparameter settings for the next run. The approximation is done by a probabilistic \textit{surrogate model}, which has a prior belief of the objective function based on observed hyperparameter settings. The selection of the next hyperparameter settings is driven by optimizing an \textit{acquisition function}, which uses the uncertainty within the posterior distribution to guide the exploration of the parameter space.
 
 OCTIS is useful for our use case, as it provides a unified framework for training the proposed BERTopic model alongside the baseline models, facilitating their comparison across a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} employed OCTIS to evaluate the model's performance.
+
+Additionally, we can utilize OCTIS' hyperparameter optimization capabilities (BO) to approximate the optimal hyperparameter settings for the proposed BERTopic model.
+
+\subsection{Summary}
+This chapter provides a partial answer to RQ2 by presenting various approaches to topic modeling that can be applied to the OpenML dataset descriptions. We have identified state-of-the-art models, as well as potential baselines for comparison. Additionally, we have addressed part of RQ3 by outlining the evaluation metrics that can be used to assess the performance of the topic models.
