@@ -4,74 +4,32 @@ from tqdm import tqdm
 from scipy.sparse import csr_matrix
 from typing import Mapping, List, Tuple, Any
 from bertopic.representation._base import BaseRepresentation
-from anthropic import Anthropic
-from anthropic.types import ContentBlock
+from mistralai import Mistral
+from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
+from mistral_common.protocol.instruct.request import ChatCompletionRequest
+import json
+import os
 
 from ._utils import (
     DEFAULT_PROMPT,
     DEFAULT_CHAT_PROMPT,
     create_prompt,
     fetch_response_with_retry,
+    append_to_json
 )
 
 
-class ClaudeAI(BaseRepresentation):
-    """Using the Claude API to generate topic labels based on Claude 3.5.
-
-    Arguments:
-        client: An `anthropic.Anthropic` client
-        model: Model to use within Claude, defaults to `"claude-3-sonnet-20240229"`.
-        generator_kwargs: Kwargs passed to `anthropic.Anthropic.messages.create`
-                          for fine-tuning the output.
-        prompt: The prompt to be used in the model. If no prompt is given,
-                `self.default_prompt_` is used instead.
-                NOTE: Use `"[KEYWORDS]"` and `"[DOCUMENTS]"` in the prompt
-                to decide where the keywords and documents need to be
-                inserted.
-        delay_in_seconds: The delay in seconds between consecutive prompts
-                          in order to prevent RateLimitErrors.
-        nr_docs: The number of documents to pass to Claude if a prompt
-                 with the `["DOCUMENTS"]` tag is used.
-        max_tokens: The maximum number of tokens in the prompt, including documents and keywords
-
-    Usage:
-
-    To use this, you will need to install the anthropic package first:
-
-    `pip install anthropic`
-
-    Then, get yourself an API key and use Claude's API as follows:
-
-    ```python
-    from anthropic import Anthropic
-    from bertopic.representation import ClaudeAI
-    from bertopic import BERTopic
-
-    # Create your representation model
-    client = Anthropic(api_key='your_api_key')
-    representation_model = ClaudeAI(client, delay_in_seconds=5)
-
-    # Use the representation model in BERTopic on top of the default pipeline
-    topic_model = BERTopic(representation_model=representation_model)
-    ```
-
-    You can also use a custom prompt:
-
-    ```python
-    prompt = "I have the following documents: [DOCUMENTS] \nThese documents are about the following topic: '"
-    representation_model = ClaudeAI(client, prompt=prompt, delay_in_seconds=5)
-    ```
-    """
-
+class MistralAI(BaseRepresentation):
     def __init__(
         self,
-        client: Anthropic,
-        model: str = "claude-3-sonnet-20240229",
+        client: Mistral,
+        model: str = "mistral-large-latest",
         prompt: str = None,
         generator_kwargs: Mapping[str, Any] = {},
         delay_in_seconds: float = None,
         nr_docs: int = 4,
         max_tokens: int = 2048,
+        cache: bool = True,
     ):
         self.client = client
         self.model = model
@@ -80,8 +38,9 @@ class ClaudeAI(BaseRepresentation):
         self.delay_in_seconds = delay_in_seconds
         self.nr_docs = nr_docs
         self.max_tokens = max_tokens
+        self.cache = cache
         self.prompts_ = []
-
+        self.tokenizer = MistralTokenizer.from_model(model)
         self.generator_kwargs = generator_kwargs
         if self.generator_kwargs.get("model"):
             self.model = self.generator_kwargs.pop("model")
@@ -112,7 +71,6 @@ class ClaudeAI(BaseRepresentation):
             c_tf_idf, documents, topics, 500, self.nr_docs
         )
 
-        # Generate using Claude's Language Model
         updated_topics = {}
         for topic, docs in tqdm(
             repr_docs_mappings.items(), disable=not topic_model.verbose
@@ -120,7 +78,8 @@ class ClaudeAI(BaseRepresentation):
             truncated_docs = []
             current_tokens = 0
             for doc in docs:
-                doc_tokens = self.client.count_tokens(doc)
+                # doc_tokens = self.tokenizer(doc)
+                doc_tokens = len(self.tokenizer.encode_chat_completion(ChatCompletionRequest(messages=[{"role": "user", "content": [{"type": "text", "text": doc}]}])).tokens)
                 if current_tokens + doc_tokens <= self.max_tokens:
                     truncated_docs.append(doc)
                     current_tokens += doc_tokens
@@ -139,15 +98,19 @@ class ClaudeAI(BaseRepresentation):
 
             try:
                 output_text = fetch_response_with_retry(
-                    self.client.messages.create,
+                    self.client.chat.complete,
                     max_retries=10,
                     delay=self.delay_in_seconds or 2,
                     model=self.model,
                     messages=messages,
                     **self.generator_kwargs,
                 )
-                print(output_text.content[0].text.strip())
-                label = output_text.content[0].text.strip()
+                print(output_text.choices[0].message.content)
+                label = output_text.choices[0].message.content
+                if self.cache:
+                    os.makedirs("./extensions/_cache", exist_ok=True)
+                    json_label = json.loads(label)
+                    append_to_json("./extensions/_cache/mistral.json", json_label)
                 updated_topics[topic] = [(label, 1)]
             except Exception as e:
                 print(f"Error occurred: {e}")
