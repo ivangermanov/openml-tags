@@ -5,6 +5,7 @@ For the reader that is primarily interested in the approach that will be central
 Readers interested in a comprehensive overview of the field are invited to explore the broader literature in \cref{sec:broad_literature_review}, which provides a detailed account of topic modeling techniques, their applications and history.
 
 \section{Latent Dirichlet Allocation}
+\label{sec:latent_dirichlet_allocation}
 % refer to section with broad literature review
 Latent Dirichlet Allocation (LDA) \cite{blei_latent_2001} is a seminal and widely adopted generative probabilistic model that assumes documents are a mixture of topics, and topics are a mixture of words. It is based on the bag-of-words assumption, i.e. the order of words in a document does not matter.
 
@@ -95,6 +96,7 @@ For \(i\) from \(1\) to \(\text{MaxIter}\):
 The algorithm begins with initial, possibly random, values for the variables \(\theta\), \(z\), and \(\phi\), and proceeds through a series of iterations up to a predefined maximum number, \(\text{MaxIter}\). At each iteration \(i\), the value of \(\theta_i\) is sampled from its conditional distribution given the current values of \(z\) and \(\phi\), denoted \(z_{i-1}\) and \(\phi_{i-1}\) to reflect their values from the previous iteration, alongside any observed data or parameters \(w\), \(\alpha\), and \(\beta\). Following this, \(z_i\) is updated based on the new \(\theta_i\) and the previous \(\phi_{i-1}\), and finally, \(\phi_i\) is sampled using the latest values of \(\theta_i\) and \(z_i\). This sequential updating of variables leverages the simpler conditional distributions to approximate the complex joint distribution. As the number of iterations increases, the algorithm converges, meaning the samples generated become representative of the target distribution.
 
 \section{Non-negative Matrix Factorization}
+\label{sec:non-negative_matrix_factorization}
 Non-negative Matrix Factorization (NMF) \cite{shahnaz_document_2006, kasiviswanathan_emerging_2011, yan_learning_2013} is a technique where an original matrix, consisting of non-negative values, is decomposed into two distinct matrices. The fundamental principle of NMF is that the product of these two matrices approximates the original matrix. This decomposition is a form of dimensionality reduction. The large original matrix typically represents a set of documents, with each document being a vector of words. The two resultant matrices in NMF are the word-topic matrix and the topic-document matrix. The topic-word matrix shows the association between topics and words, while the topic-document matrix shows the relationship between topics and individual documents.
 
 \Cref{fig:nmf} illustrates the decomposition of a matrix \(A\) into two matrices \(W\) and \(H\). The matrix \(A\) is a non-negative matrix, and the matrices \(W\) and \(H\) are also non-negative. The product of \(W\) and \(H\) approximates \(A\). \(A\) represents the word-document matrix, where each row corresponds to a word and each column corresponds to a document. \(W\) represents the word-topic matrix, where each row corresponds to a word and each column corresponds to a topic. \(H\) represents the topic-document matrix, where each row corresponds to a topic and each column corresponds to a document.
@@ -160,6 +162,7 @@ Here, \( \oslash \) denotes element-wise division, and \( \mathbf{1} \) is a mat
 Just like in the case of the Frobenius norm, the KL divergence-based NMF aims to iteratively update \( W \) and \( H \) until the decrease in \( D(A || WH) \) is below a certain threshold, signaling convergence. However, it is important to note that this optimization problem is non-convex, and the solution found may represent a local minimum.
 
 \section{Top2Vec}
+\label{sec:top2vec}
 A limitation of LDA and NMF is that they disregard semantic relationships between words, thus neglecting context. As a result, text embedding techniques which capture context have become popular as an NLP technique.
 
 \subsection{Embeddings}
@@ -202,6 +205,7 @@ Given labels for each cluster of dense documents in the embeddings, topic vector
 In the embeddings, every point represents a topic that is best described semantically by its nearest word vectors. Therefore, the word vectors that are closest to a topic vector are those that are most representative of it semantically. The distance of each word vector to the topic vector will indicate how semantically similar the word is to the topic. The words closest to the topic vector can be seen as the words that are most similar to all documents into the dense area, as the topic vector is the centroid of that area. These words can be used to summarize the common topic of the documents in the dense area.
 
 \section{BERTopic}
+\label{sec:bertopic}
 Top2Vec simplifies the process of generating topics by clustering embeddings of words and documents. Inspired from Top2Vec, BERTopic \cite{grootendorst_bertopic_2022} is a state-of-the-art topic model that builds on top of the embeddings approach.
 
 BERTopic generates representations of topics through a six-step process:
@@ -453,7 +457,29 @@ After generating the c-TF-IDF representations, we obtain a collection of words t
 In particular, the topics generated through c-TF-IDF can be viewed as candidate topics, comprising a set of terms and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of architectures such as large language models more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
 
 \subsection{Zeroshot Text Classification}
-\todo{Write about zeroshot text classification. Moritz Laurer paper}
+Zeroshot Text Classification refers to the ability of a model to classify text into predefined categories without having been explicitly trained on those particular categories. This method leverages large pre-trained models that have a broad understanding of language, enabling them to generalize to new tasks without needing specific labeled data for fine-tuning.
+
+In the context of Natural Language Inference (NLI), this can be achieved by reframing classification tasks as entailment tasks. NLI systems are trained to determine whether a given \textit{hypothesis} (a statement) is entailed (i.e., is true or supported) by a \textit{premise} (another statement). For zeroshot text classification, we can treat the task as determining which hypothesis (category) is entailed by a given text.
+
+The zeroshot classification process can be broken down as follows:
+\begin{itemize}
+    \item \textbf{Input Text}: This is the text we want to classify. For example, \textit{"The economy is improving rapidly."}
+    
+    \item \textbf{Hypothesis Generation}: Each potential label or class is verbalized as a hypothesis. For instance, when classifying topics, a few hypotheses might be:
+    \begin{itemize}
+        \item \textit{"This text is about politics."}
+        \item \textit{"This text is about economics."}
+        \item \textit{"This text is about sports."}
+    \end{itemize}
+    
+    \item \textbf{Model Evaluation}: A pre-trained NLI model is used to evaluate how well each hypothesis is entailed by the input text. In zeroshot classification, the model calculates the probability that each hypothesis is true, given the input text.
+    
+    \item \textbf{Prediction}: The hypothesis with the highest probability is selected as the predicted label for the input text. Alternatively, the model can return the probabilities for each hypothesis, making it possible to assign multiple labels to the input text.
+\end{itemize}
+
+For example, in the case of the input text \textit{"The economy is improving rapidly"}, the model would likely assign the highest probability to the hypothesis \textit{"This text is about economics."}
+
+In their recent work, \citet{laurer_building_2024} propose an efficient approach to zeroshot text classification using NLI as a universal task. They demonstrate that NLI can be leveraged to generalize across a wide range of classification tasks, such as topic classification, sentiment analysis, and stance detection. By training a universal classifier on a combination of NLI datasets and non-NLI classification datasets, they achieve significant improvements in zeroshot performance, with a 9.4\% increase compared to NLI-only models. Their approach capitalizes on the ability to verbalize classification labels as hypotheses, allowing the model to determine which hypothesis is most consistent with the input text. This method not only improves classification flexibility but also reduces the need for task-specific fine-tuning, making it applicable to diverse applications.
 
 \subsection{Evaluation metrics}
 
@@ -493,6 +519,7 @@ However, using perplexity as an evaluation metric for our use case has several d
 Additionally, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Furthermore, non-generative models like NMF do not have a defined perplexity score because they do not provide probabilities of word sequences.
 
 \subsubsection{Interpretability and Topic coherence}
+\label{sec:topic_coherence}
 
 A topic is defined as a discrete distribution over words, with the expectation that this word set is interpretable by humans. For interpretability, the words generated should collectively convey a single semantic meaning. Topic coherence metrics evaluate how related the top-k words of a topic are to one another.
 
@@ -513,7 +540,12 @@ Topic coherence suffers from the same disadvantages as perplexity, as it cannot 
 Additionally, a known trade-off exists between coherence and perplexity \cite{chang_reading_2009}, where optimizing for lower perplexity often results in decreased coherence. Nonetheless, as opposed to perplexity, coherence has been found to correlate with human judgment \cite{doogan_topic_2021, hoyle_is_2021, lee_human_2017, newman_evaluating_2010, mimno_optimizing_nodate, lau_machine_2014}.
 
 \subsubsection{Topic diversity}
+\label{sec:topic_diversity}
 Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
+
+\subsubsection{Silhouette score}
+\label{sec:silhouette_score}
+Silhouette score \cite{shahapure_cluster_2020} is a metric used to evaluate the quality of clusters in unsupervised learning. It measures how similar an object is to its own cluster compared to other clusters. The silhouette score ranges from -1 to 1, where a score closer to 1 indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters. Conversely, a score closer to -1 suggests that the object is poorly matched to its own cluster and well matched to neighboring clusters. A score of 0 indicates that the object is on the boundary between two clusters.
 
 \subsubsection{Classification evaluation metrics}
 
@@ -546,5 +578,5 @@ OCTIS is useful for our use case, as it provides a unified framework for trainin
 
 Additionally, we can utilize OCTIS' hyperparameter optimization capabilities (BO) to approximate the optimal hyperparameter settings for the proposed BERTopic model.
 
-\subsection{Summary}
-This chapter provides a partial answer to RQ2 by presenting various approaches to topic modeling that can be applied to the OpenML dataset descriptions. We have identified state-of-the-art models, as well as potential baselines for comparison. Additionally, we have addressed part of RQ3 by outlining the evaluation metrics that can be used to assess the performance of the topic models.
+\section{Chapter summary}
+This chapter provides a partial answer to \hyperref[rq2]{\textbf{RQ2}} by presenting various approaches to topic modeling that can be applied to the OpenML dataset descriptions. We have identified state-of-the-art models, as well as potential baselines for comparison. Additionally, we have addressed part of \hyperref[rq3]{\textbf{RQ3}} by outlining the evaluation metrics that can be used to assess the performance of the topic models.
