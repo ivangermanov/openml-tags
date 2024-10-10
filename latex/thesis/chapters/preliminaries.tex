@@ -539,6 +539,8 @@ Topic coherence suffers from the same disadvantages as perplexity, as it cannot 
 
 Additionally, a known trade-off exists between coherence and perplexity \cite{chang_reading_2009}, where optimizing for lower perplexity often results in decreased coherence. Nonetheless, as opposed to perplexity, coherence has been found to correlate with human judgment \cite{doogan_topic_2021, hoyle_is_2021, lee_human_2017, newman_evaluating_2010, mimno_optimizing_nodate, lau_machine_2014}.
 
+Many authors contend that the field of topic modeling has largely converged on coherence as the primary evaluation metric \cite{doogan_topic_2021, hoyle_is_2021, mimno_optimizing_nodate, lau_machine_2014}. This is because coherence is more closely aligned with human judgment, making it a more reliable measure for evaluating topic models. However, these authors also acknowledge that coherence is not without limitations and advocate for more human evaluations, as well as the development of new metrics that better capture the complexities of topic models, particularly modern neural topic models.
+
 \subsubsection{Topic diversity}
 \label{sec:topic_diversity}
 Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
@@ -556,7 +558,7 @@ Coverage examines the extent to which the concepts within the document collectio
 When ground truth topics are missing, alternative metrics like purity are used. Purity measures the model's accuracy under the assumption that documents are always assigned to the dominant topic. This metric aims to penalize models that assign a large number of low probability topics to documents, in contrast to models that assign a high probability to a single topic from the document corpus.
 
 \subsubsection{OCTIS}
-
+\label{sec:octis}
 OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is an open-source framework for the training, analysis, and comparison of topic models across various datasets and evaluation metrics.
 
 It allows for the optimization of model hyper-parameters for experimental comparison. OCTIS introduces a pipeline for topic modeling (\cref{fig:octis}), which includes dataset preprocessing, training topic models, evaluation metrics, hyperparameter optimization, and visualization.
