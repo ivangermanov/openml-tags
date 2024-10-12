@@ -141,10 +141,14 @@ stringstyle=\color[rgb]{0.627,0.126,0.941},  %
 
 % Headers for the other pages
 \pagestyle{fancy}{
-\fancyhead[LE,RO]{\slshape \leftmark} % \rightmark = represent section heading
-\fancyhead[LO,RE]{\slshape } % \leftmark = represent chapter heading
+  \fancyhead[LE,RO]{}
+  \fancyhead[LO,RE]{}
 }
+% Redefine \sectionmark to do nothing
+\renewcommand{\sectionmark}[1]{}
 
+% Redefine \chaptermark to only set the chapter title
+% \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 % Line numbers every 5 lines
 \modulolinenumbers[5]
 
