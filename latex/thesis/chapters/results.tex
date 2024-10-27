@@ -1,6 +1,7 @@
 In this chapter, we present the results following the methodology described in Chapter~\ref{chapter:methodology}. We first present the results of the data exploration, preprocessing and augmentation. We then present the results of the automated evaluation, including topic coherence scores, topic diversity scores, silhouette scores, comparison with baseline models, and hyperparameter tuning. Then, we show the tag generation pipeline, including the base BERTopic model and its subcomponents and hyperparameters, the additional fine-tuning model, and zeroshot classifier. Finally, we present the results of the human evaluation, followed by the results of the large-scale automated evaluation.
 
 \section{Data exploration, preprocessing and augmentation}
+\label{sec:data_exploration}
 Following an initial exploratory data analysis, we identified several methods for augmenting the dataset descriptions. The dataset descriptions are augmented with the following additional information:
 
 \begin{itemize}
@@ -314,7 +315,9 @@ The second assumption for ANOVA is that the residuals have equal variance. We ap
     \label{tab:levene_bartlett}
 \end{table}
 
-Applying Welch's ANOVA to the NPMI and diversity values, we find that there are statistically significant differences between the models for both metrics (\cref{tab:welch_anova}). For NPMI, 90.75\% of the variance is explained by the model, and for diversity, 81.50\% of the variance is explained by the model. These are both large effect sizes, suggesting that the models have a substantial impact on both metrics. We then perform post-hoc tests to determine which models are significantly different from one another. We use the Games-Howell post-hoc test, which is appropriate when the assumption of equal variance is violated. The results of the Games-Howell post-hoc test for the NPMI values are shown in \cref{tab:games_howell_npmi}. We observe that the BERTopic models are significantly different from the other models, but not from each other. Similarly, the results of the Games-Howell post-hoc test for the diversity values are shown in \cref{tab:games_howell_diversity}. We observe that the BERTopic models are significantly different from the other models, but not from each other.
+Applying Welch's ANOVA to the NPMI and diversity values, we find that there are statistically significant differences between the models for both metrics (\cref{tab:welch_anova}). For NPMI, 90.75\% of the variance is explained by the model, and for diversity, 81.50\% of the variance is explained by the model. These are both large effect sizes, suggesting that the models have a substantial impact on both metrics.
+
+We then perform post-hoc tests to determine which models are significantly different from one another. We use the Games-Howell post-hoc test, which is appropriate when the assumption of equal variance is violated. The results of the Games-Howell post-hoc test for the NPMI values are shown in \cref{tab:games_howell_npmi}. We observe that the BERTopic models are significantly different from the other models, but generally not much from each other. Similarly, the results of the Games-Howell post-hoc test for the diversity values are shown in \cref{tab:games_howell_diversity}. We observe that the BERTopic models are significantly different from the other models, but not from each other.
 
 \begin{table}[ht]
     \centering
@@ -324,8 +327,8 @@ Applying Welch's ANOVA to the NPMI and diversity values, we find that there are 
         \toprule
         \textbf{Metric}    & \textbf{Source} & \textbf{df1} & \textbf{df2} & \textbf{F-value} & \textbf{p-value}            & \textbf{np2} \\
         \midrule
-        \textbf{NPMI}      & Model           & 7            & 231.601      & 2549.36          & $3.165650 \times 10^{-215}$ & 0.90749                            \\
-        \textbf{Diversity} & Model           & 7            & 232.705      & 1091.24          & $4.954462 \times 10^{-174}$ & 0.815016                           \\
+        \textbf{NPMI}      & Model           & 7            & 231.601      & 2549.36          & $3.165650 \times 10^{-215}$ & 0.90749      \\
+        \textbf{Diversity} & Model           & 7            & 232.705      & 1091.24          & $4.954462 \times 10^{-174}$ & 0.815016     \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -410,27 +413,195 @@ Applying Welch's ANOVA to the NPMI and diversity values, we find that there are 
     \end{tabular}
 \end{table}
 
-\section{Tag Generation Pipeline}
-\subsection{Base BERTopic Model}
-\subsection{Fine-tuning Results}
-\subsection{Zeroshot Classifier Performance}
+\section{Tag Generation}
+In \cref{sec:tag_generation} and \cref{fig:tag_generation_pipeline}, we presented the tag generation pipeline on a high level. \cref{fig:tag_generation_pipeline_specifics}, which is similar to \cref{fig:tag_generation_pipeline} shows the specifics of the tag generation pipeline. In particular, we show which specific submodels we used for the different steps in the pipeline:
+\begin{enumerate}
+    \item \textbf{Original Descriptions}: Same as in the high-level pipeline, we start with the original OpenML dataset descriptions.
+    \item \textbf{Augmented Descriptions}: In \cref{sec:data_exploration}, we discussed how we augment the descriptions with additional information.
+    \item \textbf{Prompt Descriptions Human-Readable}: For this step, we used the \texttt{Llama-3-70b} model, as it was a model offering a good balance between performance and computational resources at the time of the experiment. We engineered a prompt to extract keyword tags from each individual description. We do not include the prompt here for brevity, but it is available in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
+    \item \textbf{Create Embeddings}: We use the \texttt{Salesforce/SFR-Embedding-2\_R} model, which was the best performing model on the MTEB benchmark \cite{muennighoff_mteb_2023}.
+    \item \textbf{Base BERTopic Model}: For dimensionality reduction, clustering, bag-of-words construction and c-TF-IDF calculation, we use the hyperparameter-optimized BERTopic model.
+    \item \textbf{Fine-tune to Extract Tags}: For the fine-tuning step, we use the \texttt{Llama-3-70b} model. We prompt the model to generate tags for each cluster. The prompt can again be found in the repository.
+    \item \textbf{Zeroshot Classifier}: We use the \texttt{MoritzLaurer/deberta-v3-large-zeroshot-v2.0} model \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024}, which at the time of the experiment was the best performing model for the zeroshot text classification task.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/tag_generation_pipeline_specifics.pdf}
+    \caption{Tag generation pipeline specifics}
+    \label{fig:tag_generation_pipeline_specifics}
+\end{figure}
+
+\subsection{Results}
+We now show the results of the output of the tag generation pipeline. \cref{fig:top_50_frequency} shows the top 50 regular tags by frequency, while \cref{fig:top_50_overarching_frequency} shows the top 50 overarching tags by frequency. We see that the tags are quite diverse, covering a wide range of topics. The regular tags are more specific, while the overarching tags are more general.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/top_50_frequency.pdf}
+    \caption{Top 50 tags by frequency}
+    \label{fig:top_50_frequency}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/top_50_overarching_frequency.pdf}
+    \caption{Top 50 overarching tags by frequency}
+    \label{fig:top_50_overarching_frequency}
+\end{figure}
+
+Investigating the tag counts in more detail, we see that the distribution of the tags is highly skewed. \cref{fig:box_plot_tag_counts} shows a box plot of the tag counts, while \cref{fig:box_plot_overarching_tag_counts} shows a box plot of the overarching tag counts. We see that the majority of tags have a low count, with a few tags having a very high count. This is expected, as natural language has been found to follow Zipf's law (Zipfian distribution), where a few terms are very common, while the majority of terms are rare \cite{zipf_psycho-biology_1935, piantadosi_zipfs_2014}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/box_plot_tag_counts.pdf}
+    \caption{Box plot of tag counts}
+    \label{fig:box_plot_tag_counts}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/box_plot_overarching_tag_counts.pdf}
+    \caption{Box plot of overarching tag counts}
+    \label{fig:box_plot_overarching_tag_counts}
+\end{figure}
+
+We observe the same pattern when looking at histograms of the tag counts. \cref{fig:histogram_tag_counts} shows the histogram of tag counts, while \cref{fig:histogram_tag_counts_log} shows the histogram of tag counts on a log scale. We see that the distribution is highly skewed, with a few tags having a very high count. In \cref{fig:histogram_overarching_tag_counts} and \cref{fig:histogram_overarching_tag_counts_log}, we see the same pattern for the overarching tags. It is important to note that the number of regular tags is approx. 6300 and the number of overarching tags is approx. 300. This is also expected, as the overarching tags are more general and should cover a wider range of topics.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_tag_counts.pdf}
+    \caption{Histogram of tag counts}
+    \label{fig:histogram_tag_counts}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_tag_counts_log.pdf}
+    \caption{Histogram of tag counts (log scale)}
+    \label{fig:histogram_tag_counts_log}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_overarching_tag_counts.pdf}
+    \caption{Histogram of overarching tag counts}
+    \label{fig:histogram_overarching_tag_counts}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_overarching_tag_counts_log.pdf}
+    \caption{Histogram of overarching tag counts (log scale)}
+    \label{fig:histogram_overarching_tag_counts_log}
+\end{figure}
+
+We now turn to investigating the tag scores, which are a measure from 0 to 1 that the zeroshot classifier assigns to each tag based on each individual description. \cref{fig:histogram_scores} shows the histogram of tag scores, while \cref{fig:histogram_overarching_scores} shows the histogram of overarching tag scores. We see that the distribution of scores is skewed, with a few tags having a very low score (close to 0) and a few tags having a very high score (close to 1), with the remaining tags having scores in between. This means that the zeroshot classifier is filtering out tags that are not relevant to the descriptions, while assigning high scores to tags that are relevant.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_scores.pdf}
+    \caption{Histogram of tag scores}
+    \label{fig:histogram_scores}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/histogram_overarching_scores.pdf}
+    \caption{Histogram of overarching tag scores}
+    \label{fig:histogram_overarching_scores}
+\end{figure}
+
+\section{Human evaluation}
+In this section, we present the results of the human evaluation based on the definition of the study design in \cref{sec:human_evaluation}.
+
+\subsection{Materials}
+For the study we design three surveys that follow the structure in \cref{sec:human_evaluation}.
+
+The same dataset descriptions are used across all three surveys to maintain consistency. Based on a pilot study, we select three texts for the \textit{Individual Document Evaluation} stage and two for the \textit{Document Pair Evaluation} stage. The selection criteria focus on appropriate length and complexity to ensure participant comprehension. This number of texts allows participants to complete the survey within approximately 45 minutes, balancing the need for sufficient data collection while preventing participant fatigue.
+
+For brevity, we include only a few examples of the text-tag pairs used in the surveys. All three surveys can be found in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024} under the names of \texttt{proposed\_model\_survey.pdf}, \texttt{baseline\_survey.pdf}, and \texttt{human\_generated\_survey.pdf}.
+
+An example text from the first stage, \textit{Individual Document Evaluation}:
+
+\begin{quote}
+    \textbf{FOREX USD/JPY Minute High}
+
+    This dataset contains historical price data of the FOREX USD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
+\end{quote}
+
+This text is contained in all three surveys, and for each survey, a different set of tags is provided. \cref{tab:tag_comparison} shows a comparison of tags for different models.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|}
+        \hline
+        \textbf{Proposed Model} & \textbf{Human-Generated Survey} & \textbf{Baseline Model} \\ \hline
+        Historical Price Data   & Historical Price Data           & Thyrotropin             \\ \hline
+        Minute Interval         & Forex                           & Minute                  \\ \hline
+        Historical Data         & USD/JPY                         & USD                     \\ \hline
+        Forex                   & Currency Pairs                  & Releasing               \\ \hline
+        Candlestick             & Yearly Data                     & High                    \\ \hline
+        Minute                  & Finance                         & Bid                     \\ \hline
+        High                    & Minute High                     & Ask                     \\ \hline
+    \end{tabular}
+    \caption{Comparison of Tags for Different Models}
+    \label{tab:tag_comparison}
+\end{table}
+
+For the first task, \textit{Intruder Detection}, an intruder tag, which the participant must identify, is added to the set of tags for each text. The intruder tag is selected at random from the tags of another OpenML dataset.
+
+In the second task, \textit{Tag Quality Assessment}, for each tag, participants are asked to rate the relevance and generality. For each tag set, participants are asked to rate the coverage.
+
+In the second stage, \textit{Document Pair Evaluation}, participants are provided pairs of texts. For example, one pair consists of the following two texts:
+
+\begin{quote}
+    \textbf{Movies on Netflix, Prime Video, Hulu, and Disney+}
+
+    This dataset is an amalgamation of data that was scraped, comprising a comprehensive list of movies available on various streaming platforms, and the IMDb dataset, which provides inspiration for analysis.
+
+    Which streaming platform or platforms can I find this movie on? This dataset allows us to explore the availability of movies across different streaming services. Additionally, we can examine the average IMDb rating of movies produced in a specific country, providing insights into the quality of films from different regions.
+
+    \textbf{Popular Movies of IMDb}
+
+    TMDB.org is a crowd-sourced movie information database widely used by various film-related consoles, sites, and apps, such as XBMC, MythTV, and Plex. Dozens of media managers, mobile apps, and social sites utilize its API. At the time of writing, TMDB lists a substantial number of films, which is considerably fewer than IMDb. While not as comprehensive as IMDb, it holds extensive information for most popular and Hollywood films.
+\end{quote}
+
+In the first task, \textit{Common Tags Identification}, participants are asked to identify tags that are common to both texts, i.e., the intersection of the two tag sets. For instance, for the two tag sets in \cref{tab:tag_comparison_two_datasets}, the common tags are "Film", "Entertainment", "Movies", and "Media" (as predicted by the model).
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+        \hline
+        \textbf{Movies on Netflix, Prime Video, Hulu, and Disney+} & \textbf{Popular Movies of IMDb} \\ \hline
+        Film                                                       & Entertainment                   \\ \hline
+        Media                                                      & Technology                      \\ \hline
+        Entertainment                                              & Film                            \\ \hline
+        Movies                                                     & Media                           \\ \hline
+        Film Industry                                              & Movies                          \\ \hline
+        Streaming Platforms                                        & Popular Movies                  \\ \hline
+                                                                   & Film Information                \\ \hline
+    \end{tabular}
+    \caption{Comparison of Tags for Two Datasets}
+    \label{tab:tag_comparison_two_datasets}
+\end{table}
 
 
-\section{Human Evaluation Results}
-\subsection{Relevance Ratings}
-\subsection{Generality Ratings}
-\subsection{Coverage Ratings}
-\subsection{Shared Coverage Ratings}
-\subsection{Intruder Detection Task Results}
-\subsection{Inter-rater Reliability Analysis}
+In the second task, \textit{Shared Coverage Assessment}, participants are asked to rate the shared coverage of the tags for both texts.
 
-\section{Large-scale Automated Evaluation Results}
-\subsection{GPT-4-mini Intruder Detection Results}
-\subsection{GPT-4-mini Tag Quality Assessment Results}
-\subsection{Comparison with Human Evaluation Results}
+\subsection{Participants}
+Bla bla bla
+Bla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla bla
 
-\section{Model Robustness and Generalizability}
-\subsection{Performance Across Different Document Types}
-\subsection{Consistency of Tag Generation}
 
-\section{Summary of Key Findings}
+\subsection{Large-scale automated evaluation}
+\subsubsection{Automated Intruder Detection}
+GPT-4-mini
+\subsubsection{Tag Quality Assessment}
+
+\subsubsection{Comparison with Human Evaluation}
+
+% \subsection{Model Robustness}
+\subsection{Limitations}
+
+\section{Chapter conclusion}
+We answered the research questions for the study, which we defined in methodology, which answers one of the research questions of the thesis (rq4 i believe)

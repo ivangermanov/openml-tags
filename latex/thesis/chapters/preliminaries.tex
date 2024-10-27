@@ -221,7 +221,7 @@ BERTopic generates representations of topics through a six-step process:
 
 While these steps are the default, BERTopic offers a degree of modularity. Each step in the process is relatively independent from the others. For instance, the bag-of-words step does not depend on the specific embedding model used for document embeddings, which provides flexibility in how the bag-of-words representation is calculated.
 
-As a result, BERTopic is highly modular, maintaining its ability to generate topics across different sub-models. This means that BERTopic effectively allows for the construction of customized topic models, appropriate for the specific use case. Additionally, the modularity of BERTopic ensures that it can be easily adapted to incorporate new advancements in the field of NLP, since each component can be changed independently from the others. \Cref{fig:modularity_modified} (inspired by \cite{grootendorst_algorithm_nodate}) illustrates the six steps of BERTopic, presented from bottom to top. It highlights the possibility of employing various techniques at each step of the process. For example, one could choose between SBERT or spaCy for document embedding, UMAP \cite{mcinnes_umap_2020} or PCA \cite{abdi_principal_2010} for dimensionality reduction, and GPT or KeyBERT \cite{grootendorst_maartengrkeybert_2024} for the fine-tuning phase.
+As a result, BERTopic is highly modular, maintaining its ability to generate topics across different submodels. This means that BERTopic effectively allows for the construction of customized topic models, appropriate for the specific use case. Additionally, the modularity of BERTopic ensures that it can be easily adapted to incorporate new advancements in the field of NLP, since each component can be changed independently from the others. \Cref{fig:modularity_modified} (inspired by \cite{grootendorst_algorithm_nodate}) illustrates the six steps of BERTopic, presented from bottom to top. It highlights the possibility of employing various techniques at each step of the process. For example, one could choose between SBERT or spaCy for document embedding, UMAP \cite{mcinnes_umap_2020} or PCA \cite{abdi_principal_2010} for dimensionality reduction, and GPT or KeyBERT \cite{grootendorst_maartengrkeybert_2024} for the fine-tuning phase.
 
 \begin{figure}[h] % adjust placement if needed
     \centering
@@ -456,8 +456,8 @@ After generating the c-TF-IDF representations, we obtain a collection of words t
 
 In particular, the topics generated through c-TF-IDF can be viewed as candidate topics, comprising a set of terms and representative documents. These can serve as a foundation for further refinement of topic representations. The availability of representative documents for each topic can be useful, as it enables fine-tuning on a reduced number of documents, thereby reducing computational demands. This makes the use of architectures such as large language models more viable in production environments, often resulting in shorter processing times compared to the steps of dimensionality reduction and clustering.
 
-\subsection{Zeroshot Text Classification}
-Zeroshot Text Classification refers to the ability of a model to classify text into predefined categories without having been explicitly trained on those particular categories. This method leverages large pre-trained models that have a broad understanding of language, enabling them to generalize to new tasks without needing specific labeled data for fine-tuning.
+\subsection{Zeroshot text classification}
+Zeroshot text classification refers to the ability of a model to classify text into predefined categories without having been explicitly trained on those particular categories. This method leverages large pre-trained models that have a broad understanding of language, enabling them to generalize to new tasks without needing specific labeled data for fine-tuning.
 
 In the context of Natural Language Inference (NLI), this can be achieved by reframing classification tasks as entailment tasks. NLI systems are trained to determine whether a given \textit{hypothesis} (a statement) is entailed (i.e., is true or supported) by a \textit{premise} (another statement). For zeroshot text classification, we can treat the task as determining which hypothesis (category) is entailed by a given text.
 
@@ -580,5 +580,5 @@ OCTIS is useful for our use case, as it provides a unified framework for trainin
 
 Additionally, we can utilize OCTIS' hyperparameter optimization capabilities (BO) to approximate the optimal hyperparameter settings for the proposed BERTopic model.
 
-\section{Chapter summary}
+\section{Chapter conclusion}
 This chapter provides a partial answer to \hyperref[rq2]{\textbf{RQ2}} by presenting various approaches to topic modeling that can be applied to the OpenML dataset descriptions. We have identified state-of-the-art models, as well as potential baselines for comparison. Additionally, we have addressed part of \hyperref[rq3]{\textbf{RQ3}} by outlining the evaluation metrics that can be used to assess the performance of the topic models.
