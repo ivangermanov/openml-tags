@@ -515,9 +515,7 @@ We now turn to investigating the tag scores, which are a measure from 0 to 1 tha
 In this section, we present the results of the human evaluation based on the definition of the study design in \cref{sec:human_evaluation}.
 
 \subsection{Materials}
-For the study we design three surveys that follow the structure in \cref{sec:human_evaluation}.
-
-The same dataset descriptions are used across all three surveys to maintain consistency. Based on a pilot study, we select three texts for the \textit{Individual Document Evaluation} stage and two for the \textit{Document Pair Evaluation} stage. The selection criteria focus on appropriate length and complexity to ensure participant comprehension. This number of texts allows participants to complete the survey within approximately 45 minutes, balancing the need for sufficient data collection while preventing participant fatigue.
+The same dataset descriptions were used across all three surveys to maintain consistency. Based on a pilot study, we selected three texts for the \textit{Individual Document Evaluation} stage and two for the \textit{Document Pair Evaluation} stage. The selection criteria focused on appropriate length and complexity to ensure participant comprehension. This number of texts allowed participants to complete the survey within approximately 45 minutes, balancing the need for sufficient data collection while preventing participant fatigue.
 
 For brevity, we include only a few examples of the text-tag pairs used in the surveys. All three surveys can be found in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024} under the names of \texttt{proposed\_model\_survey.pdf}, \texttt{baseline\_survey.pdf}, and \texttt{human\_generated\_survey.pdf}.
 
@@ -529,30 +527,30 @@ An example text from the first stage, \textit{Individual Document Evaluation}:
     This dataset contains historical price data of the FOREX USD/JPY from Dukascopy. Each instance, or row, represents one candlestick of one minute. The dataset spans from January first to December thirteenth and does not include weekends, as the FOREX market is not traded on weekends. The timezone of the feature Timestamp is Europe/Amsterdam.
 \end{quote}
 
-This text is contained in all three surveys, and for each survey, a different set of tags is provided. \cref{tab:tag_comparison} shows a comparison of tags for different models.
+This text was contained in all three surveys, and for each survey, a different set of tags was provided. \cref{tab:tag_comparison} shows a comparison of tags for different models.
 
 \begin{table}[h]
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|}
         \hline
-        \textbf{Proposed Model} & \textbf{Human-Generated Survey} & \textbf{Baseline Model} \\ \hline
-        Historical Price Data   & Historical Price Data           & Thyrotropin             \\ \hline
-        Minute Interval         & Forex                           & Minute                  \\ \hline
-        Historical Data         & USD/JPY                         & USD                     \\ \hline
-        Forex                   & Currency Pairs                  & Releasing               \\ \hline
-        Candlestick             & Yearly Data                     & High                    \\ \hline
-        Minute                  & Finance                         & Bid                     \\ \hline
-        High                    & Minute High                     & Ask                     \\ \hline
+        \textbf{Proposed Model} & \textbf{Human-Generated} & \textbf{Baseline Model} \\ \hline
+        Historical Price Data   & Historical Price Data    & Thyrotropin             \\ \hline
+        Minute Interval         & Forex                    & Minute                  \\ \hline
+        Historical Data         & USD/JPY                  & USD                     \\ \hline
+        Forex                   & Currency Pairs           & Releasing               \\ \hline
+        Candlestick             & Yearly Data              & High                    \\ \hline
+        Minute                  & Finance                  & Bid                     \\ \hline
+        High                    & Minute High              & Ask                     \\ \hline
     \end{tabular}
     \caption{Comparison of Tags for Different Models}
     \label{tab:tag_comparison}
 \end{table}
 
-For the first task, \textit{Intruder Detection}, an intruder tag, which the participant must identify, is added to the set of tags for each text. The intruder tag is selected at random from the tags of another OpenML dataset.
+For the first task, \textit{Intruder Detection}, an intruder tag, which the participant had to identify, was added to the set of tags for each text. The intruder tag was selected at random from the tags of another OpenML dataset.
 
-In the second task, \textit{Tag Quality Assessment}, for each tag, participants are asked to rate the relevance and generality. For each tag set, participants are asked to rate the coverage.
+In the second task, \textit{Tag Quality Assessment}, for each tag, participants were asked to rate the relevance and generality. For each tag set, participants were asked to rate the coverage.
 
-In the second stage, \textit{Document Pair Evaluation}, participants are provided pairs of texts. For example, one pair consists of the following two texts:
+In the second stage, \textit{Document Pair Evaluation}, participants were provided pairs of texts. For example, one pair consisted of the following two texts:
 
 \begin{quote}
     \textbf{Movies on Netflix, Prime Video, Hulu, and Disney+}
@@ -566,7 +564,7 @@ In the second stage, \textit{Document Pair Evaluation}, participants are provide
     TMDB.org is a crowd-sourced movie information database widely used by various film-related consoles, sites, and apps, such as XBMC, MythTV, and Plex. Dozens of media managers, mobile apps, and social sites utilize its API. At the time of writing, TMDB lists a substantial number of films, which is considerably fewer than IMDb. While not as comprehensive as IMDb, it holds extensive information for most popular and Hollywood films.
 \end{quote}
 
-In the first task, \textit{Common Tags Identification}, participants are asked to identify tags that are common to both texts, i.e., the intersection of the two tag sets. For instance, for the two tag sets in \cref{tab:tag_comparison_two_datasets}, the common tags are "Film", "Entertainment", "Movies", and "Media" (as predicted by the model).
+In the first task, \textit{Common Tags Identification}, participants were asked to identify tags that were common to both texts, i.e., the intersection of the two tag sets. For instance, for the two tag sets in \cref{tab:tag_comparison_two_datasets}, the common tags were "Film", "Entertainment", "Movies", and "Media" (as predicted by the model).
 
 \begin{table}[h]
     \centering
@@ -586,12 +584,614 @@ In the first task, \textit{Common Tags Identification}, participants are asked t
 \end{table}
 
 
-In the second task, \textit{Shared Coverage Assessment}, participants are asked to rate the shared coverage of the tags for both texts.
+In the second task, \textit{Shared Coverage Assessment}, participants were asked to rate the shared coverage of the tags for both texts.
 
 \subsection{Participants}
-Bla bla bla
-Bla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla bla
+For the \textit{proposed model} survey, we recruited 21 participants, all of whom completed the survey. For the \textit{baseline model} survey, we recruited 19 participants, and for the \textit{human-generated} survey, we recruited 18 participants. There was a large overlap between the participants in the three surveys, with 93.3\% of participants completing all three surveys.
 
+As for the background of the participants, \cref{fig:education_pie} shows the education level of the participants. We see that the majority of participants have a Bachelor's degree, followed by a Master's degree. This is expected, as the aim of the study was to recruit individuals with a background that aligns with the background of OpenML users.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/education_pie.pdf}
+    \caption{Education level of participants}
+    \label{fig:education_pie}
+\end{figure}
+
+\cref{fig:age_range_pie} shows the age range of the participants. We see that the majority of participants are between 25 and 34 years old.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/age_range_pie.pdf}
+    \caption{Age range of participants}
+    \label{fig:age_range_pie}
+\end{figure}
+
+\cref{fig:english_prof_pie} shows the English proficiency of the participants. We see that the majority of participants possess a high level of English proficiency.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/english_prof_pie.pdf}
+    \caption{English proficiency of participants}
+    \label{fig:english_prof_pie}
+\end{figure}
+
+\subsection{Results}
+\subsubsection{Stage 1 — Task 1: Intruder Detection}
+\cref{fig:intruder_detection_results} presents the intruder detection results for all three texts (\textit{League of Legends}, \textit{Forex} and \textit{Lung Cancer}), for all three surveys. The proposed model performed notably better than the baseline model, but slightly lagged behind the human-generated tags. The human-generated tags achieved the highest performance with a perfect score. These results indicate that human-generated tags were of higher quality, as participants more readily identified the intruder tags. This higher detection suggests that intruder tags were less related to the source text, demonstrating greater cohesion among the human-generated tag sets.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/intruder_detection_results.pdf}
+    \caption{Intruder detection results}
+    \label{fig:intruder_detection_results}
+\end{figure}
+
+\subsubsection{Stage 1 — Task 2: Tag Quality Assessment}
+\cref{fig:tags_analysis_baseline}, \cref{fig:tags_analysis_proposed}, and \cref{fig:tags_analysis_human} show the tag quality assessment results for the baseline model, the proposed model, and the human-generated tags, respectively. The histograms display the distribution of scores for relevance, generality, and coverage across all surveys, combining data from all three texts. For each measure, we include the mean scores, standard deviations, and 95\% confidence intervals.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_relevance.pdf}\label{fig:tags_analysis_baseline_relevance}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_generality.pdf}\label{fig:tags_analysis_baseline_generality}}
+
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_coverage.pdf}\label{fig:tags_analysis_baseline_coverage}}
+    \caption{Tag quality assessment results for the baseline model}
+    \label{fig:tags_analysis_baseline}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_relevance.pdf}\label{fig:tags_analysis_model_relevance}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_generality.pdf}\label{fig:tags_analysis_model_generality}}
+
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_coverage.pdf}\label{fig:tags_analysis_model_coverage}}
+    \caption{Tag quality assessment results for the proposed model}
+    \label{fig:tags_analysis_proposed}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_relevance.pdf}\label{fig:tags_analysis_human_relevance}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_generality.pdf}\label{fig:tags_analysis_human_generality}}
+
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_coverage.pdf}\label{fig:tags_analysis_human_coverage}}
+    \caption{Tag quality assessment results for the human-generated tags}
+    \label{fig:tags_analysis_human}
+\end{figure}
+
+Analysis of the scoring metrics revealed that the proposed model demonstrated superior performance compared to the baseline model. For relevance scores (higher is better), the baseline model achieved a mean of 2.39, while the proposed model achieved 3.63, which is closer to the human-generated tags' score of 3.95. Regarding generality, where larger standard deviations indicate a better balance between general and specific tags, the proposed model (SD = 1.40) performed better than the baseline (SD = 1.33) and nearly matched human-generated tags (SD = 1.41). In terms of coverage, the proposed model (mean = 4.46) outperformed the baseline model (mean = 2.65) and was close to the human-generated tags (mean = 4.54).
+
+The human-generated tags achieved the best scores in relevance, generality and coverage, indicating that the human-generated tags were of higher quality. The proposed model outperformed the baseline model by a wide margin, and only somewhat lagged behind the human-generated tags. This suggests that the proposed model was able to generate better tags than the baseline model, but still not quite as high-quality as human-generated tags.
+
+Another notable observation (\cref{fig:tags_correlations}) is the correlation between relevance and generality scores. For the baseline model, the correlation was -0.42, for the proposed model, it was -0.59, and for human-generated tags, it was -0.19. This indicates that evaluators found more specific tags to be more relevant, which is expected, as more specific tags are more likely to be relevant to the text. However, the inclusion of more general tags can also be beneficial, as they provide a broader context.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_baseline.pdf}\label{fig:tags_correlations_baseline}}
+    \hfill
+    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_model.pdf}\label{fig:tags_correlations_model}}
+
+    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_human.pdf}\label{fig:tags_correlations_human}}
+    \caption{Relevance and generality correlations comparison}
+    \label{fig:tags_correlations}
+\end{figure}
+
+Additionally, we inspect the cumulative relevance and generality scores by tag type (regular vs. overarching tags, as explained in \cref{sec:tag_generation}) in \cref{fig:tags_analysis_human_multiple_documents} for human-generated tags and in \cref{fig:tags_analysis_model_multiple_documents} for the proposed model. We see that the relevance scores are higher for regular tags than for overarching tags, while the generality scores are higher for overarching tags than for regular tags. This second observation indicates that the pipeline we designed was successful in generating more specific tags for regular tags and more general tags for overarching tags.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/tags_analysis_human_multiple_documents.pdf}
+    \caption{Cumulative relevance and generality scores by tag type (human-generated)}
+    \label{fig:tags_analysis_human_multiple_documents}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/tags_analysis_model_multiple_documents.pdf}
+    \caption{Cumulative relevance and generality scores by tag type (proposed model)}
+    \label{fig:tags_analysis_model_multiple_documents}
+\end{figure}
+
+
+The histograms provided here only show the aggregated results across all three texts, across all tags. For readers interested in the details for each individual text or tag, additional information can be found in the \textit{human\_evaluation\_analysis.ipynb} notebook in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
+
+\paragraph{Inter-rater Reliability}
+We calculated the inter-rater reliability for the relevance, generality, and coverage scores using multiple metrics, including Fleiss' Kappa, Interclass Correlation Coefficient (ICC) and Krippendorff's Alpha. We do not use Cohen's Kappa, and use Fleiss' Kappa instead, as it is more suitable for multiple raters and multiple categories.
+
+\cref{fig:kappa_comparison} shows the Fleiss' Kappa values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that all values are small, indicating slight agreement at best. However, it is important to note that our data are Likert scale data, which are ordinal, and are not handled well by Fleiss' Kappa, as it treats categories as nominal.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+        \hline
+        \textbf{Evaluation metric} & \textbf{Baseline} & \textbf{Proposed Model} & \textbf{Human-Generated} \\
+        \hline
+        Relevance        & 0.15 & 0.12 & 0.04 \\
+        Generality       & -0.02 & 0.18 & 0.10 \\
+        Coverage         & 0.03 & 0.01 & -0.02 \\
+        Shared Coverage  & 0.03 & 0.06 & -0.01 \\
+        \hline
+    \end{tabular}
+    \caption{Fleiss' Kappa values comparison for different evaluation metrics across models}
+    \label{tab:fleiss_kappa_comparison}
+\end{table}
+
+We also used ICC to assess the consistency of ratings across our raters (\cref{fig:icc_baseline,fig:icc_model,fig:icc_human}). Among the main forms of ICC, ICC(1) assumes random raters and absolute agreement, ICC(2) assumes random raters with consistency agreement, while ICC(3) is designed for fixed raters with consistency agreement. Furthermore, ICC(3,k) specifically measures the reliability of averaged ratings rather than individual ratings. ICC(3,k) is most appropriate for our study design because we have a fixed set of participants rating the same texts across different conditions (baseline, proposed model, and human-generated tags), and we are interested in the reliability of averaged ratings rather than individual ratings. ICC(3,k) accounts for systematic differences in how individual participants use the rating scale while providing reliability estimates for the averaged scores, making it the most suitable choice for comparing the reliability of ratings across our three tag generation methods.
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.45         & 16.65      & 1.68e-40   & [0.31, 0.64]    \\
+            ICC2          & 0.46         & 25.92      & 1.18e-57   & [0.31, 0.65]    \\
+            ICC3          & 0.57         & 25.92      & 1.18e-57   & [0.42, 0.74]    \\
+            ICC1k         & 0.94         & 16.65      & 1.68e-40   & [0.90, 0.97]    \\
+            ICC2k         & 0.94         & 25.92      & 1.18e-57   & [0.89, 0.97]    \\
+            ICC3k         & 0.96         & 25.92      & 1.18e-57   & [0.93, 0.98]    \\
+            \hline
+        \end{tabular}
+        \caption*{(a) Relevance}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & -0.03        & 0.53       & 0.711      & [-0.04, 0.15]   \\
+            ICC2          & 0.00         & 0.99       & 0.416      & [-0.02, 0.17]   \\
+            ICC3          & 0.00         & 0.99       & 0.416      & [-0.04, 0.28]   \\
+            ICC1k         & -0.87        & 0.53       & 0.711      & [-4.49, 0.78]   \\
+            ICC2k         & 0.00         & 0.99       & 0.416      & [-0.56, 0.80]   \\
+            ICC3k         & -0.01        & 0.99       & 0.416      & [-1.98, 0.88]   \\
+            \hline
+        \end{tabular}
+        \caption*{(b) Generality}
+    \end{minipage}
+
+    \vspace{1em}
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.33         & 10.16      & 1.80e-04   & [0.08, 0.95]    \\
+            ICC2          & 0.34         & 21.51      & 7.14e-07   & [0.10, 0.95]    \\
+            ICC3          & 0.52         & 21.51      & 7.14e-07   & [0.18, 0.98]    \\
+            ICC1k         & 0.90         & 10.16      & 1.80e-04   & [0.61, 1.00]    \\
+            ICC2k         & 0.91         & 21.51      & 7.14e-07   & [0.67, 1.00]    \\
+            ICC3k         & 0.95         & 21.51      & 7.14e-07   & [0.81, 1.00]    \\
+            \hline
+        \end{tabular}
+        \caption*{(c) Coverage}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.04         & 1.69       & 0.202      & [-0.04, 0.99]   \\
+            ICC2          & 0.06         & 3.65       & 0.072      & [-0.01, 0.99]   \\
+            ICC3          & 0.12         & 3.65       & 0.072      & [-0.02, 0.99]   \\
+            ICC1k         & 0.41         & 1.69       & 0.202      & [-2.24, 1.00]   \\
+            ICC2k         & 0.55         & 3.65       & 0.072      & [-0.18, 1.00]   \\
+            ICC3k         & 0.73         & 3.65       & 0.072      & [-0.64, 1.00]   \\
+            \hline
+        \end{tabular}
+        \caption*{(d) Shared Coverage}
+    \end{minipage}
+    \caption{ICC values for different rating types (baseline model)}
+    \label{fig:icc_baseline}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.34         & 11.93      & 2.88e-30   & [0.22, 0.53]    \\
+            ICC2          & 0.35         & 19.27      & 7.72e-47   & [0.22, 0.54]    \\
+            ICC3          & 0.47         & 19.27      & 7.72e-47   & [0.32, 0.65]    \\
+            ICC1k         & 0.92         & 11.93      & 2.88e-30   & [0.85, 0.96]    \\
+            ICC2k         & 0.92         & 19.27      & 7.72e-47   & [0.86, 0.96]    \\
+            ICC3k         & 0.95         & 19.27      & 7.72e-47   & [0.91, 0.98]    \\
+            \hline
+        \end{tabular}
+        \caption*{(a) Relevance}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.46         & 18.68      & 1.94e-35   & [0.30, 0.68]    \\
+            ICC2          & 0.46         & 31.71      & 4.86e-53   & [0.30, 0.69]    \\
+            ICC3          & 0.59         & 31.71      & 4.86e-53   & [0.43, 0.78]    \\
+            ICC1k         & 0.95         & 18.68      & 1.94e-35   & [0.90, 0.98]    \\
+            ICC2k         & 0.95         & 31.71      & 4.86e-53   & [0.90, 0.98]    \\
+            ICC3k         & 0.97         & 31.71      & 4.86e-53   & [0.94, 0.99]    \\
+            \hline
+        \end{tabular}
+        \caption*{(b) Generality}
+    \end{minipage}
+
+    \vspace{1em}
+
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.05         & 2.06       & 0.137      & [-0.02, 0.79]   \\
+            ICC2          & 0.07         & 5.57       & 0.007      & [0.01, 0.79]    \\
+            ICC3          & 0.18         & 5.57       & 0.007      & [0.02, 0.91]    \\
+            ICC1k         & 0.51         & 2.06       & 0.137      & [-0.91, 0.99]   \\
+            ICC2k         & 0.63         & 5.57       & 0.007      & [0.12, 0.99]    \\
+            ICC3k         & 0.82         & 5.57       & 0.007      & [0.27, 1.00]    \\
+            \hline
+        \end{tabular}
+        \caption*{(c) Coverage}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.19         & 5.99       & 0.019      & [0.00, 1.00]    \\
+            ICC2          & 0.20         & 10.25      & 0.004      & [0.02, 1.00]    \\
+            ICC3          & 0.31         & 10.25      & 0.004      & [0.03, 1.00]    \\
+            ICC1k         & 0.83         & 5.99       & 0.019      & [0.09, 1.00]    \\
+            ICC2k         & 0.84         & 10.25      & 0.004      & [0.34, 1.00]    \\
+            ICC3k         & 0.90         & 10.25      & 0.004      & [0.43, 1.00]    \\
+            \hline
+        \end{tabular}
+        \caption*{(d) Shared Coverage}
+    \end{minipage}
+    \caption{ICC values for different rating types (proposed model)}
+    \label{fig:icc_model}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.13         & 3.70       & 5.26e-07   & [0.06, 0.28]    \\
+            ICC2          & 0.15         & 8.70       & 7.21e-20   & [0.07, 0.31]    \\
+            ICC3          & 0.30         & 8.70       & 7.21e-20   & [0.18, 0.50]    \\
+            ICC1k         & 0.73         & 3.70       & 5.26e-07   & [0.52, 0.87]    \\
+            ICC2k         & 0.77         & 8.70       & 7.21e-20   & [0.59, 0.89]    \\
+            ICC3k         & 0.89         & 8.70       & 7.21e-20   & [0.80, 0.95]    \\
+            \hline
+        \end{tabular}
+        \caption*{(a) Relevance}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.34         & 10.38      & 9.38e-21   & [0.20, 0.56]    \\
+            ICC2          & 0.35         & 16.76      & 5.01e-32   & [0.21, 0.57]    \\
+            ICC3          & 0.47         & 16.76      & 5.01e-32   & [0.31, 0.68]    \\
+            ICC1k         & 0.90         & 10.38      & 9.38e-21   & [0.82, 0.96]    \\
+            ICC2k         & 0.91         & 16.76      & 5.01e-32   & [0.83, 0.96]    \\
+            ICC3k         & 0.94         & 16.76      & 5.01e-32   & [0.89, 0.97]    \\
+            \hline
+        \end{tabular}
+        \caption*{(b) Generality}
+    \end{minipage}
+
+    \vspace{1em}
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & -0.02        & 0.59       & 0.560      & [-0.05, 0.55]   \\
+            ICC2          & 0.00         & 1.09       & 0.348      & [-0.02, 0.56]   \\
+            ICC3          & 0.00         & 1.09       & 0.348      & [-0.04, 0.70]   \\
+            ICC1k         & -0.71        & 0.59       & 0.560      & [-5.77, 0.96]   \\
+            ICC2k         & 0.05         & 1.09       & 0.348      & [-0.65, 0.96]   \\
+            ICC3k         & 0.08         & 1.09       & 0.348      & [-2.78, 0.98]   \\
+            \hline
+        \end{tabular}
+        \caption*{(c) Coverage}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
+            \hline
+            ICC1          & 0.10         & 3.09       & 0.088      & [-0.02, 0.99]   \\
+            ICC2          & 0.12         & 4.25       & 0.055      & [-0.01, 0.99]   \\
+            ICC3          & 0.15         & 4.25       & 0.055      & [-0.02, 1.00]   \\
+            ICC1k         & 0.68         & 3.09       & 0.088      & [-0.78, 1.00]   \\
+            ICC2k         & 0.70         & 4.25       & 0.055      & [-0.20, 1.00]   \\
+            ICC3k         & 0.76         & 4.25       & 0.055      & [-0.42, 1.00]   \\
+            \hline
+        \end{tabular}
+        \caption*{(d) Shared Coverage}
+    \end{minipage}
+    \caption{ICC values for different rating types (human-generated tags)}
+    \label{fig:icc_human}
+\end{figure}
+
+Looking at the ICC(3,k) values for relevance, where the F-statistic indicates the ratio of between-group to within-group variance (higher values showing stronger rater agreement), we see that the proposed model achieved an ICC of 0.95 ($F=19.27$, $p=7.72\times10^{-47}$, CI$_{95\%}$[0.91,0.98]), the baseline model an ICC of 0.96 ($F=25.92$, $p=1.18\times10^{-57}$, CI$_{95\%}$[0.93,0.98]), and the human-generated tags an ICC of 0.89 ($F=8.70$, $p=7.21\times10^{-20}$, CI$_{95\%}$[0.80,0.95]). For generality, the proposed model performed best with an ICC of 0.97 ($F=31.71$, $p=4.86\times10^{-53}$, CI$_{95\%}$[0.94,0.99]), followed by human-generated tags at 0.94 ($F=16.76$, $p=5.01\times10^{-32}$, CI$_{95\%}$[0.89,0.97]), while the baseline model showed poor reliability with -0.01 ($F=0.99$, $p=0.416$, CI$_{95\%}$[-1.98,0.88]) and a non-significant $p$-value indicating unreliable results. For coverage, the baseline model achieved the highest reliability at 0.95 ($F=21.51$, $p=7.14\times10^{-7}$, CI$_{95\%}$[0.81,1.00]), followed by the proposed model at 0.82 ($F=5.57$, $p=0.007$, CI$_{95\%}$[0.27,1.00]), while human-generated tags performed poorly at 0.08 ($F=1.09$, $p=0.348$, CI$_{95\%}$[-2.78,0.98]) with non-significant results. For shared coverage, the proposed model showed the strongest reliability at 0.90 ($F=10.25$, $p=0.004$, CI$_{95\%}$[0.43,1.00]), followed by human-generated tags at 0.76 ($F=4.25$, $p=0.055$, CI$_{95\%}$[-0.42,1.00]) and the baseline model at 0.73 ($F=3.65$, $p=0.072$, CI$_{95\%}$[-0.64,1.00]), though the latter two had borderline significant $p$-values suggesting less reliable results.
+
+Similar to Fleiss' Kappa, ICC is not ideal for ordinal data, as it assumes continuous data. This is why Krippendorff's Alpha, which can handle both ordinal and nominal data, is a better choice. \cref{tab:kalpha} shows the Krippendorff's Alpha values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that the baseline model performs best in shared coverage ($\alpha=0.4818$), while showing moderate reliability for generality ($\alpha=0.2863$) and coverage ($\alpha=0.2600$), but lower reliability for relevance ($\alpha=0.1687$). The proposed model shows strongest reliability in coverage ($\alpha=0.5647$), moderate reliability in shared coverage ($\alpha=0.2497$) and relevance ($\alpha=0.2263$), but lower reliability in generality ($\alpha=0.1671$). The human-generated tags show the highest reliability for relevance ($\alpha=0.4692$) and coverage ($\alpha=0.4503$), but lower reliability for generality ($\alpha=0.2044$) and shared coverage ($\alpha=0.1898$). Overall, these values indicate moderate to fair agreement across all three approaches, with different strengths in different evaluation metrics.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lccc}
+        \hline
+        \textbf{Metric} & \textbf{Baseline} & \textbf{Proposed Model} & \textbf{Human-Generated} \\
+        \hline
+        Relevance       & 0.1687            & 0.2263                  & 0.4692                   \\
+        Generality      & 0.2863            & 0.1671                  & 0.2044                   \\
+        Coverage        & 0.2600            & 0.5647                  & 0.4503                   \\
+        Shared Coverage & 0.4818            & 0.2497                  & 0.1898                   \\
+        \hline
+    \end{tabular}
+    \caption{Krippendorff's Alpha values for different rating types across models}
+    \label{tab:kalpha}
+\end{table}
+
+\subsubsection{Stage 2 — Task 1: Common Tags Identification}
+The confusion matrices in \cref{fig:first_pair_common_tags_confusion_matrix_baseline}, \cref{fig:first_pair_common_tags_confusion_matrix_model}, and \cref{fig:first_pair_common_tags_confusion_matrix_human} show the common tags confusion matrix comparison for the first pair of texts. The confusion matrices in \cref{fig:second_pair_common_tags_confusion_matrix_baseline}, \cref{fig:second_pair_common_tags_confusion_matrix_model}, and \cref{fig:second_pair_common_tags_confusion_matrix_human} show the common tags confusion matrix comparison for the second pair of texts.
+
+The top-left quadrant of the confusion matrix represents the true positives, i.e., the number of tags that the model predicted as common tags that human evaluators also identified as common tags. Top bottom-right quadrant represents the true negatives, i.e., the number of tags that the model predicted as not common tags that human evaluators also identified as not common tags. The top-right quadrant represents the false negatives, i.e., the number of tags that the model predicted as not common tags that human evaluators identified as common tags. The bottom-left quadrant represents the false positives, i.e., the number of tags that the model predicted as common tags that human evaluators identified as not common tags.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:first_pair_common_tags_confusion_matrix_baseline}}
+    \hfill
+    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_model.pdf}\label{fig:first_pair_common_tags_confusion_matrix_model}}
+
+    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_human.pdf}\label{fig:first_pair_common_tags_confusion_matrix_human}}
+    \caption{Common tags confusion matrix comparison for the first pair}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:second_pair_common_tags_confusion_matrix_baseline}}
+    \hfill
+    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_model.pdf}\label{fig:second_pair_common_tags_confusion_matrix_model}}
+
+    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_human.pdf}\label{fig:second_pair_common_tags_confusion_matrix_human}}
+    \caption{Common tags confusion matrix comparison}
+\end{figure}
+
+In \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recall, specificity, and F1-Score between the first and second pairs for the baseline model, the proposed model, and human-generated tags, respectively. We see that the proposed model outperformed the baseline model, but still lagged behind human-generated tags. This indicates that the proposed model was able to identify common tags more accurately than the baseline model, but still not quite as accurately as human evaluators.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcccccc}
+        \hline
+        \multirow{2}{*}{\textbf{Metric}} & \multicolumn{2}{c}{\textbf{Baseline}} & \multicolumn{2}{c}{\textbf{Proposed Model}} & \multicolumn{2}{c}{\textbf{Human-Generated}} \\
+        \cline{2-7}
+        & First & Second & First & Second & First & Second \\
+        \hline
+        Accuracy    & 0.69 & 0.60 & 0.87 & 0.76 & 0.83 & 0.86 \\
+        Precision   & 0.40 & 1.00 & 0.81 & 0.58 & 0.84 & 0.69 \\
+        Recall      & 0.47 & 0.29 & 0.87 & 0.79 & 0.74 & 0.85 \\
+        Specificity & 0.76 & 1.00 & 0.87 & 0.75 & 0.89 & 0.86 \\
+        F1-Score    & 0.43 & 0.45 & 0.83 & 0.67 & 0.79 & 0.76 \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of evaluation metrics between first and second pairs across all models}
+    \label{tab:metrics_comparison_combined}
+\end{table}
+
+\paragraph{Statistical significance}
+We additionally perform Kruskal-Wallis tests to determine if the differences in the evaluation metrics between the baseline model, the proposed model, and human-generated tags are statistically significant. The Kruskal-Wallis test is a non-parametric test that compares the medians of two or more groups. We use this test because our data are ordinal and do not meet the assumptions of parametric tests.
+
+\cref{tab:kruskal_wallis} shows the results of the Kruskal-Wallis H test for the different evaluation metrics. We see that the differences in relevance, coverage, and shared coverage are statistically significant, while the differences in generality are not statistically significant. The H-statistic indicates the magnitude of difference between the groups, with higher values suggesting greater differences. The highest H-statistic is observed for relevance (H = 239.29), indicating substantial differences in how participants rated tag relevance across the three methods. Coverage (H = 65.54) and shared coverage (H = 47.82) also show considerable differences, while generality shows minimal differences (H = 4.56).
+
+The effect sizes, measured by $\eta^2$, provide additional insight into the practical significance of these differences. According to common interpretation guidelines, $\eta^2$ values of 0.01, 0.06, and 0.14 represent small, medium, and large effects, respectively. The results show large effect sizes for coverage ($\eta^2 = 0.562$), shared coverage ($\eta^2 = 0.405$), and relevance ($\eta^2 = 0.300$). In contrast, generality shows a negligible effect size ($\eta^2 = 0.005$), further supporting the lack of meaningful differences in generality ratings across the three methods. The p-values (< 0.001) for relevance, coverage, and shared coverage indicate that these differences are highly unlikely to have occurred by chance, while the non-significant p-value for generality (p = 0.102) suggests that any observed differences in generality ratings could be due to random variation.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+        \hline
+        \textbf{Metric} & \textbf{H-statistic} & \textbf{p-value} & \textbf{$\eta^2$} \\
+        \hline
+        Relevance & 239.29 & < 0.001 & 0.300 \\
+        Generality & 4.56 & 0.102 & 0.005 \\
+        Coverage & 65.54 & < 0.001 & 0.562 \\
+        Shared Coverage & 47.82 & < 0.001 & 0.405 \\
+        \hline
+    \end{tabular}
+    \caption{Kruskal-Wallis H test results for different evaluation metrics}
+    \label{tab:kruskal_wallis}
+\end{table}
+
+After finding these statistically significant differences, we perform post-hoc pairwise comparisons using Dunn's test with Bonferroni correction to identify which groups differ from each other. \cref{fig:dunns_test} shows the p-values for the post-hoc tests for relevance, generality, coverage, and shared coverage. The results indicate that the differences between the baseline model and the proposed model, as well as between the baseline model and human-generated tags, are statistically significant for all metrics. The differences between the proposed model and human-generated tags are also statistically significant for relevance, coverage, and shared coverage, but not for generality.
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lccc}
+            \hline
+            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+            \hline
+            Baseline & 1.000 & < 0.001 & < 0.001 \\
+            Human    & < 0.001 & 1.000 & 0.011 \\
+            Model    & < 0.001 & 0.011 & 1.000 \\
+            \hline
+        \end{tabular}
+        \caption*{(a) Relevance}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lccc}
+            \hline
+            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+            \hline
+            Baseline & 1.000 & 1.000 & 0.417 \\
+            Human    & 1.000 & 1.000 & 0.158 \\
+            Model    & 0.417 & 0.158 & 1.000 \\
+            \hline
+        \end{tabular}
+        \caption*{(b) Generality}
+    \end{minipage}
+
+    \vspace{1em}
+
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lccc}
+            \hline
+            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+            \hline
+            Baseline & 1.000 & < 0.001 & < 0.001 \\
+            Human    & < 0.001 & 1.000 & 1.000 \\
+            Model    & < 0.001 & 1.000 & 1.000 \\
+            \hline
+        \end{tabular}
+        \caption*{(c) Coverage}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \begin{tabular}{lccc}
+            \hline
+            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+            \hline
+            Baseline & 1.000 & < 0.001 & < 0.001 \\
+            Human    & < 0.001 & 1.000 & 0.511 \\
+            Model    & < 0.001 & 0.511 & 1.000 \\
+            \hline
+        \end{tabular}
+        \caption*{(d) Shared Coverage}
+    \end{minipage}
+    \caption{Dunn's post-hoc test p-values for different metrics}
+    \label{fig:dunns_test}
+\end{figure}
+
+We include Cliff's Delta effect size to provide additional context on the magnitude of differences between groups. Cliff's Delta is a non-parametric effect size measure that quantifies the difference between two groups by calculating the probability that a randomly selected observation from one group will be greater than a randomly selected observation from the other group. The effect sizes are interpreted as small (0.147), medium (0.33), and large (0.474) based on common guidelines. \cref{tab:cliffs_delta} shows the effect sizes for the different metrics and comparisons. We see that baseline scores differ substantially from both human and model scores for most metrics. For relevance ratings, there are large negative effects when comparing baseline to both human ($\delta = -0.703$) and model ($\delta = -0.599$), indicating that baseline tags were rated consistently lower in relevance. The small positive effect between human and model ratings ($\delta = 0.163$) suggests that model-generated tags achieve relevance levels comparable to human-generated ones.
+
+Generality shows a different pattern, with negligible effects across all comparisons ($\delta$ ranging from 0.014 to 0.112), indicating that all three methods produce tags with similar levels of generality.
+
+Coverage metrics reveal the most pronounced differences. Both overall coverage and shared coverage show large negative effects when comparing baseline to human ($\delta = -0.885$ and $-0.789$ respectively) and model ($\delta = -0.888$ and $-0.681$ respectively). This strongly suggests that both human and model-generated tag sets provide substantially better coverage than baseline tags. The negligible to small effects between human and model coverage scores ($\delta = -0.053$ for coverage, $\delta = 0.200$ for shared coverage) indicate that the model achieves coverage levels similar to human performance.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llrl}
+        \hline
+        \textbf{Metric} & \textbf{Comparison} & \textbf{Delta} & \textbf{Effect} \\
+        \hline
+        \multirow{3}{*}{Relevance} 
+            & Baseline vs Human & -0.703 & Large \\
+            & Baseline vs Model & -0.599 & Large \\
+            & Human vs Model    &  0.163 & Small \\
+        \hline
+        \multirow{3}{*}{Generality}
+            & Baseline vs Human &  0.014 & Negligible \\
+            & Baseline vs Model &  0.112 & Negligible \\
+            & Human vs Model    &  0.101 & Negligible \\
+        \hline
+        \multirow{3}{*}{Coverage}
+            & Baseline vs Human & -0.885 & Large \\
+            & Baseline vs Model & -0.888 & Large \\
+            & Human vs Model    & -0.053 & Negligible \\
+        \hline
+        \multirow{3}{*}{Shared Coverage}
+            & Baseline vs Human & -0.789 & Large \\
+            & Baseline vs Model & -0.681 & Large \\
+            & Human vs Model    &  0.200 & Small \\
+        \hline
+    \end{tabular}
+    \caption{Cliff's Delta effect sizes for different metrics and comparisons}
+    \label{tab:cliffs_delta}
+\end{table}
+
+To provide a comprehensive analysis of effect sizes, we calculated Cohen's d alongside Cliff's Delta, while acknowledging its limitations for our data characteristics. Given our ordinal Likert scale data, likely non-normal distribution, and small sample size (n=21), Cohen's d results should be interpreted with caution. Nevertheless, as shown in \cref{tab:cohens_d}, the calculations reveal strong effects that align with our Cliff's Delta findings. For relevance, large negative effects were found comparing baseline to both human ($d = -1.589$) and model ($d = -1.254$), with a small to medium effect between human and model ($d = 0.293$). Generality showed negligible to small effects across comparisons ($d$ ranging from 0.027 to 0.202). Coverage metrics demonstrated the largest effects, with very large negative effects when comparing baseline to both human ($d = -2.454$) and model ($d = -2.539$) for overall coverage, and similarly large effects for shared coverage (baseline vs human: $d = -1.882$; baseline vs model: $d = -1.485$). The human vs model comparisons showed negligible effects for coverage ($d = -0.078$) and small to medium effects for shared coverage ($d = 0.391$). While these results support our main findings, we primarily rely on Cliff's Delta as our effect size measure due to its better alignment with our data characteristics and non-parametric analysis approach.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llrl}
+        \hline
+        \textbf{Metric} & \textbf{Comparison} & \textbf{Cohen's d} & \textbf{Effect} \\
+        \hline
+        \multirow{3}{*}{Relevance} 
+            & Baseline vs Human & -1.589 & Very Large \\
+            & Baseline vs Model & -1.254 & Very Large \\
+            & Human vs Model    &  0.293 & Small-Medium \\
+        \hline
+        \multirow{3}{*}{Generality}
+            & Baseline vs Human &  0.027 & Negligible \\
+            & Baseline vs Model &  0.202 & Small-Medium \\
+            & Human vs Model    &  0.178 & Small \\
+        \hline
+        \multirow{3}{*}{Coverage}
+            & Baseline vs Human & -2.454 & Very Large \\
+            & Baseline vs Model & -2.539 & Very Large \\
+            & Human vs Model    & -0.078 & Negligible \\
+        \hline
+        \multirow{3}{*}{Shared Coverage}
+            & Baseline vs Human & -1.882 & Very Large \\
+            & Baseline vs Model & -1.485 & Very Large \\
+            & Human vs Model    &  0.391 & Small-Medium \\
+        \hline
+    \end{tabular}
+    \caption{Cohen's d effect sizes for different metrics and comparisons}
+    \label{tab:cohens_d}
+\end{table}
+
+\subsubsection{Stage 2 — Task 2: Common Tags Quality Assessment}
+\cref{fig:first_pair_common_tags_quality} and \cref{fig:second_pair_common_tags_quality} show the common tags coverage comparison for the first and second pairs, respectively.
+
+Similar to the tag quality assessment, we see that the proposed model outperformed the baseline model, but still lagged behind human-generated tags, for both pairs of texts.
+
+For the first pair, the proposed model achieved a mean coverage of 4.67, while the baseline model achieved a mean coverage of 3.32. The human-generated tags achieved a mean coverage of 4.83. For the second pair, the proposed model achieved a mean coverage of 4.14, while the baseline model achieved a mean coverage of 2.89. The human-generated tags achieved a mean coverage of 4.50.
+
+This indicates that the proposed model was able to identify common tags more accurately than the baseline model, but still not quite as accurately as human evaluators.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_baseline.pdf}\label{fig:first_pair_common_tags_coverage_baseline}}
+    \hfill
+    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_model.pdf}\label{fig:first_pair_common_tags_coverage_model}}
+
+    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_human.pdf}\label{fig:first_pair_common_tags_coverage_human}}
+    \caption{Common tags coverage comparison for the first pair}
+    \label{fig:first_pair_common_tags_quality}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_baseline.pdf}\label{fig:second_pair_common_tags_coverage_baseline}}
+    \hfill
+    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_model.pdf}\label{fig:second_pair_common_tags_coverage_model}}
+
+    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_human.pdf}\label{fig:second_pair_common_tags_coverage_human}}
+    \caption{Common tags coverage comparison}
+    \label{fig:second_pair_common_tags_quality}
+\end{figure}
 
 \subsection{Large-scale automated evaluation}
 \subsubsection{Automated Intruder Detection}
