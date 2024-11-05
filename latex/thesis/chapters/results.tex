@@ -256,12 +256,12 @@ As mentioned earlier, we had 10 runs for each model and topic number combination
 
 The first assumption for ANOVA is that the residuals are normally distributed. We apply the Shapiro-Wilk test to check whether the residuals for the NPMI values (the differences between the observed and predicted NPMI values) are normally distributed. The Shapiro-Wilk test returned a statistic of 0.905 and a p-value of 3.30e-18, indicating a significant deviation from normality. Although the statistic is relatively close to 1, suggesting that the residuals are not drastically non-normal, the extremely small p-value suggests that the deviation is statistically significant. As for the diversity values, the Shapiro-Wilk test returned a statistic of 0.968 and a p-value of 8.70e-10, also indicating a significant deviation from normality, but with a statistic even closer to 1.
 
-Given this result, we further inspect the residuals using visual diagnostics with QQ plots and histograms to assess the nature and extent of the deviation from normality. If the deviation is minor, ANOVA may still be appropriate. \cref{fig:qqplot_npmi} and \cref{fig:histogram_npmi} show the QQ plot and histogram of the residuals for the NPMI values, respectively. We observe that the residuals are approximately normally distributed, with some deviations at the tails. \cref{fig:qqplot_diversity} and \cref{fig:histogram_diversity} show the QQ plot and histogram of the residuals for the diversity values, respectively. We observe a similar pattern for the diversity residuals, with some deviations at the tails. Given that ANOVA is relatively robust to deviations at the tails, since extreme values do not have a large impact on the F-statistic, we consider this assumption to be met.
+Given this result, we further inspect the residuals using visual diagnostics with Q\-Q plots and histograms to assess the nature and extent of the deviation from normality. If the deviation is minor, ANOVA may still be appropriate. \cref{fig:qqplot_npmi} and \cref{fig:histogram_npmi} show the Q\-Q plot and histogram of the residuals for the NPMI values, respectively. We observe that the residuals are approximately normally distributed, with some deviations at the tails. \cref{fig:qqplot_diversity} and \cref{fig:histogram_diversity} show the Q\-Q plot and histogram of the residuals for the diversity values, respectively. We observe a similar pattern for the diversity residuals, with some deviations at the tails. Given that ANOVA is relatively robust to deviations at the tails, since extreme values do not have a large impact on the F-statistic, we consider this assumption to be met.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/qqplot_npmi.pdf}
-    \caption{QQ plot of the residuals for the NPMI values}
+    \caption{Q\-Q plot of the residuals for the NPMI values}
     \label{fig:qqplot_npmi}
 \end{figure}
 
@@ -275,7 +275,7 @@ Given this result, we further inspect the residuals using visual diagnostics wit
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/qqplot_diversity.pdf}
-    \caption{QQ plot of the residuals for the diversity values}
+    \caption{Q\-Q plot of the residuals for the diversity values}
     \label{fig:qqplot_diversity}
 \end{figure}
 
@@ -629,40 +629,61 @@ As for the background of the participants, \cref{fig:education_pie} shows the ed
 \end{figure}
 
 \subsubsection{Stage 1 — Task 2: Tag Quality Assessment}
-\cref{fig:tags_analysis_baseline}, \cref{fig:tags_analysis_proposed}, and \cref{fig:tags_analysis_human} show the tag quality assessment results for the baseline model, the proposed model, and the human-generated tags, respectively. The histograms display the distribution of scores for relevance, generality, and coverage across all surveys, combining data from all three texts. For each measure, we include the mean scores, standard deviations, and 95\% confidence intervals.
+\cref{fig:tags_analysis_comparison_relevance,fig:tags_analysis_comparison_generality,fig:tags_analysis_comparison_coverage} show the tag quality assessment results for the baseline model, the proposed model, and the human-generated tags, respectively. The histograms display the distribution of scores for relevance, generality, and coverage across all surveys, combining data from all three texts. For each measure, we include the mean scores, standard deviations, and 95\% confidence intervals.
 
 \begin{figure}[h]
     \centering
-    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_relevance.pdf}\label{fig:tags_analysis_baseline_relevance}}
-    \hfill
-    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_generality.pdf}\label{fig:tags_analysis_baseline_generality}}
-
-    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_coverage.pdf}\label{fig:tags_analysis_baseline_coverage}}
-    \caption{Tag quality assessment results for the baseline model}
-    \label{fig:tags_analysis_baseline}
+    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_relevance_comparison.pdf}
+    \caption{Aggregated relevance scores by model}
+    \label{fig:tags_analysis_comparison_relevance}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_relevance.pdf}\label{fig:tags_analysis_model_relevance}}
-    \hfill
-    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_generality.pdf}\label{fig:tags_analysis_model_generality}}
-
-    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_coverage.pdf}\label{fig:tags_analysis_model_coverage}}
-    \caption{Tag quality assessment results for the proposed model}
-    \label{fig:tags_analysis_proposed}
+    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_generality_comparison.pdf}
+    \caption{Aggregated generality scores by model}
+    \label{fig:tags_analysis_comparison_generality}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_relevance.pdf}\label{fig:tags_analysis_human_relevance}}
-    \hfill
-    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_generality.pdf}\label{fig:tags_analysis_human_generality}}
-
-    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_coverage.pdf}\label{fig:tags_analysis_human_coverage}}
-    \caption{Tag quality assessment results for the human-generated tags}
-    \label{fig:tags_analysis_human}
+    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_coverage_comparison.pdf}
+    \caption{Aggregated coverage scores by model}
+    \label{fig:tags_analysis_comparison_coverage}
 \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_relevance.pdf}\label{fig:tags_analysis_baseline_relevance}}
+%     \hfill
+%     \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_generality.pdf}\label{fig:tags_analysis_baseline_generality}}
+
+%     \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_baseline_coverage.pdf}\label{fig:tags_analysis_baseline_coverage}}
+%     \caption{Tag quality assessment results for the baseline model}
+%     \label{fig:tags_analysis_baseline}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_relevance.pdf}\label{fig:tags_analysis_model_relevance}}
+%     \hfill
+%     \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_generality.pdf}\label{fig:tags_analysis_model_generality}}
+
+%     \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_coverage.pdf}\label{fig:tags_analysis_model_coverage}}
+%     \caption{Tag quality assessment results for the proposed model}
+%     \label{fig:tags_analysis_proposed}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_relevance.pdf}\label{fig:tags_analysis_human_relevance}}
+%     \hfill
+%     \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_generality.pdf}\label{fig:tags_analysis_human_generality}}
+
+%     \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_coverage.pdf}\label{fig:tags_analysis_human_coverage}}
+%     \caption{Tag quality assessment results for the human-generated tags}
+%     \label{fig:tags_analysis_human}
+% \end{figure}
 
 Analysis of the scoring metrics revealed that the proposed model demonstrated superior performance compared to the baseline model. For relevance scores (higher is better), the baseline model achieved a mean of 2.39, while the proposed model achieved 3.63, which is closer to the human-generated tags' score of 3.95. Regarding generality, where larger standard deviations indicate a better balance between general and specific tags, the proposed model (SD = 1.40) performed better than the baseline (SD = 1.33) and nearly matched human-generated tags (SD = 1.41). In terms of coverage, the proposed model (mean = 4.46) outperformed the baseline model (mean = 2.65) and was close to the human-generated tags (mean = 4.54).
 
@@ -676,45 +697,48 @@ Another notable observation (\cref{fig:tags_correlations}) is the correlation be
     \hfill
     \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_model.pdf}\label{fig:tags_correlations_model}}
 
-    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_human.pdf}\label{fig:tags_correlations_human}}
+    \subfloat[Human-generated]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_human.pdf}\label{fig:tags_correlations_human}}
     \caption{Relevance and generality correlations comparison}
     \label{fig:tags_correlations}
 \end{figure}
 
-Additionally, we inspect the cumulative relevance and generality scores by tag type (regular vs. overarching tags, as explained in \cref{sec:tag_generation}) in \cref{fig:tags_analysis_human_multiple_documents} for human-generated tags and in \cref{fig:tags_analysis_model_multiple_documents} for the proposed model. We see that the relevance scores are higher for regular tags than for overarching tags, while the generality scores are higher for overarching tags than for regular tags. This second observation indicates that the pipeline we designed was successful in generating more specific tags for regular tags and more general tags for overarching tags.
+Additionally, we inspect the aggergated relevance and generality scores by tag type (regular vs. overarching tags, as explained in \cref{sec:tag_generation}) in \cref{fig:tags_analysis_human_multiple_documents} for human-generated tags and in \cref{fig:tags_analysis_model_multiple_documents} for the proposed model. We see that the relevance scores are higher for regular tags than for overarching tags, while the generality scores are higher for overarching tags than for regular tags. This second observation indicates that the pipeline we designed was successful in generating more specific tags for regular tags and more general tags for overarching tags.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/tags_analysis_human_multiple_documents.pdf}
-    \caption{Cumulative relevance and generality scores by tag type (human-generated)}
+    \subfloat[Aggregated relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_multiple_documents_relevance.pdf}\label{fig:tags_analysis_human_multiple_documents_relevance}}
+    \hfill
+    \subfloat[Aggregated generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_human_multiple_documents_generality.pdf}\label{fig:tags_analysis_human_multiple_documents_generality}}
+    \caption{Aggregated relevance and generality scores by tag type (human-generated)}
     \label{fig:tags_analysis_human_multiple_documents}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/tags_analysis_model_multiple_documents.pdf}
-    \caption{Cumulative relevance and generality scores by tag type (proposed model)}
+    \subfloat[Aggregated relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_relevance.pdf}\label{fig:tags_analysis_model_multiple_documents_relevance}}
+    \hfill
+    \subfloat[Aggregated generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_generality.pdf}\label{fig:tags_analysis_model_multiple_documents_generality}}
+    \caption{Aggregated relevance and generality scores by tag type (proposed model)}
     \label{fig:tags_analysis_model_multiple_documents}
 \end{figure}
-
 
 The histograms provided here only show the aggregated results across all three texts, across all tags. For readers interested in the details for each individual text or tag, additional information can be found in the \textit{human\_evaluation\_analysis.ipynb} notebook in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
 
 \paragraph{Inter-rater Reliability}
 We calculated the inter-rater reliability for the relevance, generality, and coverage scores using multiple metrics, including Fleiss' Kappa, Interclass Correlation Coefficient (ICC) and Krippendorff's Alpha. We do not use Cohen's Kappa, and use Fleiss' Kappa instead, as it is more suitable for multiple raters and multiple categories.
 
-\cref{fig:kappa_comparison} shows the Fleiss' Kappa values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that all values are small, indicating slight agreement at best. However, it is important to note that our data are Likert scale data, which are ordinal, and are not handled well by Fleiss' Kappa, as it treats categories as nominal.
+\cref{tab:fleiss_kappa_comparison} shows the Fleiss' Kappa values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that all values are small, indicating slight agreement at best. However, it is important to note that our data are Likert scale data, which are ordinal, and are not handled well by Fleiss' Kappa, as it treats categories as nominal.
 
 \begin{table}[h]
     \centering
     \begin{tabular}{lccc}
         \hline
-        \textbf{Evaluation metric} & \textbf{Baseline} & \textbf{Proposed Model} & \textbf{Human-Generated} \\
+        \textbf{Evaluation metric} & \textbf{Baseline model} & \textbf{Proposed model} & \textbf{Human-generated} \\
         \hline
-        Relevance        & 0.15 & 0.12 & 0.04 \\
-        Generality       & -0.02 & 0.18 & 0.10 \\
-        Coverage         & 0.03 & 0.01 & -0.02 \\
-        Shared Coverage  & 0.03 & 0.06 & -0.01 \\
+        Relevance                  & 0.15              & 0.12                    & 0.04                     \\
+        Generality                 & -0.02             & 0.18                    & 0.10                     \\
+        Coverage                   & 0.03              & 0.01                    & -0.02                    \\
+        Shared Coverage            & 0.03              & 0.06                    & -0.01                    \\
         \hline
     \end{tabular}
     \caption{Fleiss' Kappa values comparison for different evaluation metrics across models}
@@ -936,7 +960,7 @@ We also used ICC to assess the consistency of ratings across our raters (\cref{f
         \end{tabular}
         \caption*{(d) Shared Coverage}
     \end{minipage}
-    \caption{ICC values for different rating types (human-generated tags)}
+    \caption{ICC values for different rating types (human-generated)}
     \label{fig:icc_human}
 \end{figure}
 
@@ -948,7 +972,7 @@ Similar to Fleiss' Kappa, ICC is not ideal for ordinal data, as it assumes conti
     \centering
     \begin{tabular}{lccc}
         \hline
-        \textbf{Metric} & \textbf{Baseline} & \textbf{Proposed Model} & \textbf{Human-Generated} \\
+        \textbf{Metric} & \textbf{Baseline model} & \textbf{Proposed model} & \textbf{Human-generated} \\
         \hline
         Relevance       & 0.1687            & 0.2263                  & 0.4692                   \\
         Generality      & 0.2863            & 0.1671                  & 0.2044                   \\
@@ -961,28 +985,30 @@ Similar to Fleiss' Kappa, ICC is not ideal for ordinal data, as it assumes conti
 \end{table}
 
 \subsubsection{Stage 2 — Task 1: Common Tags Identification}
-The confusion matrices in \cref{fig:first_pair_common_tags_confusion_matrix_baseline}, \cref{fig:first_pair_common_tags_confusion_matrix_model}, and \cref{fig:first_pair_common_tags_confusion_matrix_human} show the common tags confusion matrix comparison for the first pair of texts. The confusion matrices in \cref{fig:second_pair_common_tags_confusion_matrix_baseline}, \cref{fig:second_pair_common_tags_confusion_matrix_model}, and \cref{fig:second_pair_common_tags_confusion_matrix_human} show the common tags confusion matrix comparison for the second pair of texts.
+The confusion matrices in \cref{fig:first_pair_common_tags_confusion_matrix} show the common tags confusion matrix comparison for the first pair of texts. The confusion matrices in \cref{fig:second_pair_common_tags_confusion_matrix} show the common tags confusion matrix comparison for the second pair of texts.
 
 The top-left quadrant of the confusion matrix represents the true positives, i.e., the number of tags that the model predicted as common tags that human evaluators also identified as common tags. Top bottom-right quadrant represents the true negatives, i.e., the number of tags that the model predicted as not common tags that human evaluators also identified as not common tags. The top-right quadrant represents the false negatives, i.e., the number of tags that the model predicted as not common tags that human evaluators identified as common tags. The bottom-left quadrant represents the false positives, i.e., the number of tags that the model predicted as common tags that human evaluators identified as not common tags.
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:first_pair_common_tags_confusion_matrix_baseline}}
+    \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:first_pair_common_tags_confusion_matrix_baseline}}
     \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_model.pdf}\label{fig:first_pair_common_tags_confusion_matrix_model}}
+    \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_confusion_matrix_model.pdf}\label{fig:first_pair_common_tags_confusion_matrix_model}}
 
-    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_confusion_matrix_human.pdf}\label{fig:first_pair_common_tags_confusion_matrix_human}}
+    \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_confusion_matrix_human.pdf}\label{fig:first_pair_common_tags_confusion_matrix_human}}
     \caption{Common tags confusion matrix comparison for the first pair}
+    \label{fig:first_pair_common_tags_confusion_matrix}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:second_pair_common_tags_confusion_matrix_baseline}}
+    \subfloat[Baseline model]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:second_pair_common_tags_confusion_matrix_baseline}}
     \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_model.pdf}\label{fig:second_pair_common_tags_confusion_matrix_model}}
+    \subfloat[Proposed model]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_model.pdf}\label{fig:second_pair_common_tags_confusion_matrix_model}}
 
-    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_confusion_matrix_human.pdf}\label{fig:second_pair_common_tags_confusion_matrix_human}}
+    \subfloat[Human-generated]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_human.pdf}\label{fig:second_pair_common_tags_confusion_matrix_human}}
     \caption{Common tags confusion matrix comparison}
+    \label{fig:second_pair_common_tags_confusion_matrix}
 \end{figure}
 
 In \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recall, specificity, and F1-Score between the first and second pairs for the baseline model, the proposed model, and human-generated tags, respectively. We see that the proposed model outperformed the baseline model, but still lagged behind human-generated tags. This indicates that the proposed model was able to identify common tags more accurately than the baseline model, but still not quite as accurately as human evaluators.
@@ -991,15 +1017,15 @@ In \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recal
     \centering
     \begin{tabular}{lcccccc}
         \hline
-        \multirow{2}{*}{\textbf{Metric}} & \multicolumn{2}{c}{\textbf{Baseline}} & \multicolumn{2}{c}{\textbf{Proposed Model}} & \multicolumn{2}{c}{\textbf{Human-Generated}} \\
+        \multirow{2}{*}{\textbf{Metric}} & \multicolumn{2}{c}{\textbf{Baseline model}} & \multicolumn{2}{c}{\textbf{Proposed model}} & \multicolumn{2}{c}{\textbf{Human-generated}}                           \\
         \cline{2-7}
-        & First & Second & First & Second & First & Second \\
+                                         & First                                 & Second                                      & First                                        & Second & First & Second \\
         \hline
-        Accuracy    & 0.69 & 0.60 & 0.87 & 0.76 & 0.83 & 0.86 \\
-        Precision   & 0.40 & 1.00 & 0.81 & 0.58 & 0.84 & 0.69 \\
-        Recall      & 0.47 & 0.29 & 0.87 & 0.79 & 0.74 & 0.85 \\
-        Specificity & 0.76 & 1.00 & 0.87 & 0.75 & 0.89 & 0.86 \\
-        F1-Score    & 0.43 & 0.45 & 0.83 & 0.67 & 0.79 & 0.76 \\
+        Accuracy                         & 0.69                                  & 0.60                                        & 0.87                                         & 0.76   & 0.83  & 0.86   \\
+        Precision                        & 0.40                                  & 1.00                                        & 0.81                                         & 0.58   & 0.84  & 0.69   \\
+        Recall                           & 0.47                                  & 0.29                                        & 0.87                                         & 0.79   & 0.74  & 0.85   \\
+        Specificity                      & 0.76                                  & 1.00                                        & 0.87                                         & 0.75   & 0.89  & 0.86   \\
+        F1-Score                         & 0.43                                  & 0.45                                        & 0.83                                         & 0.67   & 0.79  & 0.76   \\
         \hline
     \end{tabular}
     \caption{Comparison of evaluation metrics between first and second pairs across all models}
@@ -1019,10 +1045,10 @@ The effect sizes, measured by $\eta^2$, provide additional insight into the prac
         \hline
         \textbf{Metric} & \textbf{H-statistic} & \textbf{p-value} & \textbf{$\eta^2$} \\
         \hline
-        Relevance & 239.29 & < 0.001 & 0.300 \\
-        Generality & 4.56 & 0.102 & 0.005 \\
-        Coverage & 65.54 & < 0.001 & 0.562 \\
-        Shared Coverage & 47.82 & < 0.001 & 0.405 \\
+        Relevance       & 239.29               & < 0.001          & 0.300             \\
+        Generality      & 4.56                 & 0.102            & 0.005             \\
+        Coverage        & 65.54                & < 0.001          & 0.562             \\
+        Shared Coverage & 47.82                & < 0.001          & 0.405             \\
         \hline
     \end{tabular}
     \caption{Kruskal-Wallis H test results for different evaluation metrics}
@@ -1037,11 +1063,11 @@ After finding these statistically significant differences, we perform post-hoc p
         \centering
         \begin{tabular}{lccc}
             \hline
-            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+                     & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
             \hline
-            Baseline & 1.000 & < 0.001 & < 0.001 \\
-            Human    & < 0.001 & 1.000 & 0.011 \\
-            Model    & < 0.001 & 0.011 & 1.000 \\
+            Baseline & 1.000             & < 0.001        & < 0.001        \\
+            Human    & < 0.001           & 1.000          & 0.011          \\
+            Model    & < 0.001           & 0.011          & 1.000          \\
             \hline
         \end{tabular}
         \caption*{(a) Relevance}
@@ -1050,11 +1076,11 @@ After finding these statistically significant differences, we perform post-hoc p
         \centering
         \begin{tabular}{lccc}
             \hline
-            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+                     & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
             \hline
-            Baseline & 1.000 & 1.000 & 0.417 \\
-            Human    & 1.000 & 1.000 & 0.158 \\
-            Model    & 0.417 & 0.158 & 1.000 \\
+            Baseline & 1.000             & 1.000          & 0.417          \\
+            Human    & 1.000             & 1.000          & 0.158          \\
+            Model    & 0.417             & 0.158          & 1.000          \\
             \hline
         \end{tabular}
         \caption*{(b) Generality}
@@ -1066,11 +1092,11 @@ After finding these statistically significant differences, we perform post-hoc p
         \centering
         \begin{tabular}{lccc}
             \hline
-            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+                     & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
             \hline
-            Baseline & 1.000 & < 0.001 & < 0.001 \\
-            Human    & < 0.001 & 1.000 & 1.000 \\
-            Model    & < 0.001 & 1.000 & 1.000 \\
+            Baseline & 1.000             & < 0.001        & < 0.001        \\
+            Human    & < 0.001           & 1.000          & 1.000          \\
+            Model    & < 0.001           & 1.000          & 1.000          \\
             \hline
         \end{tabular}
         \caption*{(c) Coverage}
@@ -1079,11 +1105,11 @@ After finding these statistically significant differences, we perform post-hoc p
         \centering
         \begin{tabular}{lccc}
             \hline
-            & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
+                     & \textbf{Baseline} & \textbf{Human} & \textbf{Model} \\
             \hline
-            Baseline & 1.000 & < 0.001 & < 0.001 \\
-            Human    & < 0.001 & 1.000 & 0.511 \\
-            Model    & < 0.001 & 0.511 & 1.000 \\
+            Baseline & 1.000             & < 0.001        & < 0.001        \\
+            Human    & < 0.001           & 1.000          & 0.511          \\
+            Model    & < 0.001           & 0.511          & 1.000          \\
             \hline
         \end{tabular}
         \caption*{(d) Shared Coverage}
@@ -1104,25 +1130,25 @@ Coverage metrics reveal the most pronounced differences. Both overall coverage a
         \hline
         \textbf{Metric} & \textbf{Comparison} & \textbf{Delta} & \textbf{Effect} \\
         \hline
-        \multirow{3}{*}{Relevance} 
-            & Baseline vs Human & -0.703 & Large \\
-            & Baseline vs Model & -0.599 & Large \\
-            & Human vs Model    &  0.163 & Small \\
+        \multirow{3}{*}{Relevance}
+                        & Baseline model vs Human-generated   & -0.703         & Large           \\
+                        & Baseline model vs Proposed model   & -0.599         & Large           \\
+                        & Human-generated vs Proposed model      & 0.163          & Small           \\
         \hline
         \multirow{3}{*}{Generality}
-            & Baseline vs Human &  0.014 & Negligible \\
-            & Baseline vs Model &  0.112 & Negligible \\
-            & Human vs Model    &  0.101 & Negligible \\
+                        & Baseline model vs Human-generated   & 0.014          & Negligible      \\
+                        & Baseline model vs Proposed model   & 0.112          & Negligible      \\
+                        & Human-generated vs Proposed model      & 0.101          & Negligible      \\
         \hline
         \multirow{3}{*}{Coverage}
-            & Baseline vs Human & -0.885 & Large \\
-            & Baseline vs Model & -0.888 & Large \\
-            & Human vs Model    & -0.053 & Negligible \\
+                        & Baseline model vs Human-generated   & -0.885         & Large           \\
+                        & Baseline model vs Proposed model   & -0.888         & Large           \\
+                        & Human-generated vs Proposed model      & -0.053         & Negligible      \\
         \hline
         \multirow{3}{*}{Shared Coverage}
-            & Baseline vs Human & -0.789 & Large \\
-            & Baseline vs Model & -0.681 & Large \\
-            & Human vs Model    &  0.200 & Small \\
+                        & Baseline model vs Human-generated   & -0.789         & Large           \\
+                        & Baseline model vs Proposed model   & -0.681         & Large           \\
+                        & Human-generated vs Proposed model      & 0.200          & Small           \\
         \hline
     \end{tabular}
     \caption{Cliff's Delta effect sizes for different metrics and comparisons}
@@ -1137,25 +1163,25 @@ To provide a comprehensive analysis of effect sizes, we calculated Cohen's d alo
         \hline
         \textbf{Metric} & \textbf{Comparison} & \textbf{Cohen's d} & \textbf{Effect} \\
         \hline
-        \multirow{3}{*}{Relevance} 
-            & Baseline vs Human & -1.589 & Very Large \\
-            & Baseline vs Model & -1.254 & Very Large \\
-            & Human vs Model    &  0.293 & Small-Medium \\
+        \multirow{3}{*}{Relevance}
+                        & Baseline model vs Human-generated   & -1.589             & Very Large      \\
+                        & Baseline model  vs Proposed model   & -1.254             & Very Large      \\
+                        & Human-generated vs Model      & 0.293              & Small-Medium    \\
         \hline
         \multirow{3}{*}{Generality}
-            & Baseline vs Human &  0.027 & Negligible \\
-            & Baseline vs Model &  0.202 & Small-Medium \\
-            & Human vs Model    &  0.178 & Small \\
+                        & Baseline model vs Human-generated   & 0.027              & Negligible      \\
+                        & Baseline model vs Proposed model   & 0.202              & Small-Medium    \\
+                        & Human-generated vs Proposed model      & 0.178              & Small           \\
         \hline
         \multirow{3}{*}{Coverage}
-            & Baseline vs Human & -2.454 & Very Large \\
-            & Baseline vs Model & -2.539 & Very Large \\
-            & Human vs Model    & -0.078 & Negligible \\
+                        & Baseline model vs Human-generated   & -2.454             & Very Large      \\
+                        & Baseline model vs Proposed model   & -2.539             & Very Large      \\
+                        & Human-generated vs Proposed model      & -0.078             & Negligible      \\
         \hline
         \multirow{3}{*}{Shared Coverage}
-            & Baseline vs Human & -1.882 & Very Large \\
-            & Baseline vs Model & -1.485 & Very Large \\
-            & Human vs Model    &  0.391 & Small-Medium \\
+                        & Baseline model vs Human-generated   & -1.882             & Very Large      \\
+                        & Baseline model vs Proposed model   & -1.485             & Very Large      \\
+                        & Human-generated vs Proposed model      & 0.391              & Small-Medium    \\
         \hline
     \end{tabular}
     \caption{Cohen's d effect sizes for different metrics and comparisons}
@@ -1163,7 +1189,7 @@ To provide a comprehensive analysis of effect sizes, we calculated Cohen's d alo
 \end{table}
 
 \subsubsection{Stage 2 — Task 2: Common Tags Quality Assessment}
-\cref{fig:first_pair_common_tags_quality} and \cref{fig:second_pair_common_tags_quality} show the common tags coverage comparison for the first and second pairs, respectively.
+\cref{fig:first_pair_common_tags_coverage_comparison,fig:second_pair_common_tags_coverage_comparison} show the common tags coverage comparison for the first and second pairs, respectively.
 
 Similar to the tag quality assessment, we see that the proposed model outperformed the baseline model, but still lagged behind human-generated tags, for both pairs of texts.
 
@@ -1173,35 +1199,204 @@ This indicates that the proposed model was able to identify common tags more acc
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_baseline.pdf}\label{fig:first_pair_common_tags_coverage_baseline}}
-    \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_model.pdf}\label{fig:first_pair_common_tags_coverage_model}}
+    \includegraphics[width=1\textwidth]{figures/first_pair_common_tags_coverage_comparison.pdf}
+    \caption{Common tags coverage by model for the first pair}
+    \label{fig:first_pair_common_tags_coverage_comparison}
+\end{figure}
 
-    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/first_pair_common_tags_coverage_human.pdf}\label{fig:first_pair_common_tags_coverage_human}}
-    \caption{Common tags coverage comparison for the first pair}
-    \label{fig:first_pair_common_tags_quality}
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_baseline.pdf}\label{fig:first_pair_common_tags_coverage_baseline}}
+%     \hfill
+%     \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_model.pdf}\label{fig:first_pair_common_tags_coverage_model}}
+
+%     \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_human.pdf}\label{fig:first_pair_common_tags_coverage_human}}
+%     \caption{Common tags coverage comparison for the first pair}
+%     \label{fig:first_pair_common_tags_quality}
+% \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/second_pair_common_tags_coverage_comparison.pdf}
+    \caption{Common tags coverage by model for the second pair}
+    \label{fig:second_pair_common_tags_coverage_comparison}
+\end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_baseline.pdf}\label{fig:second_pair_common_tags_coverage_baseline}}
+%     \hfill
+%     \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_model.pdf}\label{fig:second_pair_common_tags_coverage_model}}
+
+%     \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_human.pdf}\label{fig:second_pair_common_tags_coverage_human}}
+%     \caption{Common tags coverage comparison}
+%     \label{fig:second_pair_common_tags_quality}
+% \end{figure}
+
+\subsection{Large-scale automated evaluation}
+We follow the methodology outlined in \cref{sec:large_scale_evaluation} to evaluate the intruder detection performance of the proposed model. As an LLM, we pick \textit{GPT-4-mini} as the model for this evaluation, as it is a smaller and relatively less expensive compared to larger models.
+
+\subsubsection{Automated Intruder Detection}
+\cref{fig:gpt_intruder_detection_accuracy} shows the automated intruder detection accuracy for the proposed model. We see that the LLM managed to detect 88.3\% of intruders, which is a promising result. This indicates that the LLM was able to detect the majority of intruders in the dataset, indicating that the tags generated by the proposed model are cohesive.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/gpt_intruder_detection_accuracy.pdf}
+    \caption{Automated intruder detection accuracy}
+    \label{fig:gpt_intruder_detection_accuracy}
+\end{figure}
+
+We observe that the intruder detection accuracy decreases as the number of tags increases, as shown in \cref{fig:gpt_accuracy_by_num_tags}. This is expected, as the model has to consider more tags, making it more challenging to detect intruders.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/gpt_accuracy_by_num_tags.pdf}
+    \caption{Intruder detection accuracy by number of tags}
+    \label{fig:gpt_accuracy_by_num_tags}
+\end{figure}
+
+This finding is corroborated by the correlation analysis in \cref{fig:gpt_correlation_num_tags}, which shows a negative correlation between the number of tags and intruder detection accuracy.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/gpt_correlation_num_tags.pdf}
+    \caption{Correlation between number of tags and intruder detection accuracy}
+    \label{fig:gpt_correlation_num_tags}
+\end{figure}
+
+\subsubsection{Automated Tag Quality Assessment}
+\cref{fig:gpt_relevance_vs_generality} shows the correlation between relevance and generality for the proposed model. We see that there is a positive correlation between relevance and generality. This is surprising, as the human evaluation showed a negative correlation between relevance and generality.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/gpt_relevance_vs_generality.pdf}
+    \caption{Correlation between relevance and generality}
+    \label{fig:gpt_relevance_vs_generality}
+\end{figure}
+
+% \cref{fig:gpt_average_relevance_score_per_tag} and \cref{fig:gpt_average_generality_score_per_tag} shows a histogram of the average relevance and generality scores per tag, respectively. We see how many tags are rated as extremely relevant (5), very relevant (4), etc., and how many tags are rated as very general (5), somewhat general (4), etc.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/gpt_average_relevance_score_per_tag.pdf}
+%     \caption{Average relevance score per tag}
+%     \label{fig:gpt_average_relevance_score_per_tag}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/gpt_average_generality_score_per_tag.pdf}
+%     \caption{Average generality score per tag}
+%     \label{fig:gpt_average_generality_score_per_tag}
+% \end{figure}
+
+\cref{fig:gpt_relevance_score_distribution,fig:gpt_generality_score_distribution,fig:gpt_coverage_score_distribution} show the distribution of relevance, generality, and coverage scores, respectively. We see that the mean relevance score is 4.11, the mean generality score is 3.29, and the mean coverage score is 3.72. This indicates that the tags generated by the proposed model are generally relevant, somewhat general, with a decent standard deviation, and provide good coverage, according to the LLM.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/gpt_relevance_score_distribution.pdf}
+    \caption{Distribution of relevance scores}
+    \label{fig:gpt_relevance_score_distribution}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_baseline.pdf}\label{fig:second_pair_common_tags_coverage_baseline}}
-    \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_model.pdf}\label{fig:second_pair_common_tags_coverage_model}}
-
-    \subfloat[Human-generated tags]{\includegraphics[width=0.45\textwidth]{figures/second_pair_common_tags_coverage_human.pdf}\label{fig:second_pair_common_tags_coverage_human}}
-    \caption{Common tags coverage comparison}
-    \label{fig:second_pair_common_tags_quality}
+    \includegraphics[width=0.8\textwidth]{figures/gpt_generality_score_distribution.pdf}
+    \caption{Distribution of generality scores}
+    \label{fig:gpt_generality_score_distribution}
 \end{figure}
 
-\subsection{Large-scale automated evaluation}
-\subsubsection{Automated Intruder Detection}
-GPT-4-mini
-\subsubsection{Tag Quality Assessment}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/gpt_coverage_score_distribution.pdf}
+    \caption{Distribution of coverage scores}
+    \label{fig:gpt_coverage_score_distribution}
+\end{figure}
 
-\subsubsection{Comparison with Human Evaluation}
+\cref{fig:gpt_tag_type_relevance_distribution,fig:gpt_tag_type_generality_distribution} show the distribution of relevance and generality scores by tag type. As expected, the keyword tags were found to be the most relevant, since they were most specific to each text. However, interestingly, the LLM found them to be slightly more general than the regular tags.
 
-% \subsection{Model Robustness}
-\subsection{Limitations}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/relevance_distribution.pdf}
+    \caption{Distribution of relevance scores by tag type}
+    \label{fig:gpt_tag_type_relevance_distribution}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/generality_distribution.pdf}
+    \caption{Distribution of generality scores by tag type}
+    \label{fig:gpt_tag_type_generality_distribution}
+\end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/relevance_distribution.pdf}
+%     \caption{Relevance score distribution}
+%     \label{fig:relevance_distribution}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/generality_distribution.pdf}
+%     \caption{Generality score distribution}
+%     \label{fig:generality_distribution}
+% \end{figure}
+
+
+\paragraph{Statistical significance}
+The Q-Q plots in \cref{fig:all_qq_plots} show the distribution of relevance, generality, and coverage scores, respectively. We see that the scores are not normally distributed, which is expected given the ordinal nature of the Likert scale data, and is similar to the human evaluation results.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_relevance_qq_plot.pdf}\label{fig:gpt_relevance_qq_plot}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_generality_qq_plot.pdf}\label{fig:gpt_generality_qq_plot}}
+
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_coverage_qq_plot.pdf}\label{fig:gpt_coverage_qq_plot}}
+    \caption{Q-Q plots for evaluation metrics}
+    \label{fig:all_qq_plots}
+\end{figure}
+
+\cref{tab:normality_comparison} shows the results of the normality tests for the relevance, generality, and coverage scores. We see that the Shapiro-Wilk test and Anderson-Darling test both indicate that the scores are not normally distributed.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Normality tests across metrics}
+    \begin{tabular}{llll}
+        \hline
+        \textbf{Test} & \textbf{Relevance} & \textbf{Generality} & \textbf{Coverage} \\
+        \hline
+        Shapiro-Wilk Statistic & 0.8799 & 0.8799 & 0.5734 \\
+        Shapiro-Wilk p-value & <0.0001 & <0.0001 & <0.0001 \\
+        Anderson-Darling Statistic & 1905.4133 & 2641.2348 & 1154.0435 \\
+        \hline
+    \end{tabular}
+    \label{tab:normality_comparison}
+\end{table}
+
+\cref{tab:distribution_comparison} shows the distribution metrics for the relevance, generality, and coverage scores. Looking at the mean, median, mode, standard deviation, skewness, skewness z-score, and kurtosis, we see that the scores are generally well-distributed, with a slight to moderate negative skewness and kurtosis. The negative skewness shows that the distribution is left-skewed, and the kurtosis values indicate that the distribution is platykurtic (less peaked than a normal distribution). These findings corroborate the Q-Q plots and normality test results.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Distribution metrics comparison}
+    \begin{tabular}{llll}
+        \hline
+        \textbf{Metric} & \textbf{Relevance} & \textbf{Generality} & \textbf{Coverage} \\
+        \hline
+        Mean & 3.1651 & 3.2869 & 3.7210 \\
+        Median & 3.0 & 3.0 & 4.0 \\
+        Mode & 3 & 3 & 4 \\
+        Standard Deviation & 0.8667 & 0.8705 & 0.4536 \\
+        Skewness & -0.3014 & -0.3544 & -0.9979 \\
+        Skewness z-score & -0.33 & -10.41 & -1.08 \\
+        Kurtosis & -0.0148 & -0.0169 & -0.7863 \\
+        \hline
+    \end{tabular}
+    \label{tab:distribution_comparison}
+\end{table}
+
+% \subsection{Limitations}
 
 \section{Chapter conclusion}
 We answered the research questions for the study, which we defined in methodology, which answers one of the research questions of the thesis (rq4 i believe)
