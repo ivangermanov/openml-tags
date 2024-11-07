@@ -166,6 +166,22 @@
   file = {/Users/ivang/Zotero/storage/VU3BXZJV/Archetti and Candelieri - 2019 - Bayesian Optimization and Data Science.pdf}
 }
 
+@inproceedings{artac_incremental_2002,
+  title = {Incremental {{PCA}} for On-Line Visual Learning and Recognition},
+  booktitle = {2002 {{International Conference}} on {{Pattern Recognition}}},
+  author = {Artac, M. and Jogan, M. and Leonardis, A.},
+  year = {2002},
+  month = aug,
+  volume = {3},
+  pages = {781-784 vol.3},
+  issn = {1051-4651},
+  doi = {10.1109/ICPR.2002.1048133},
+  urldate = {2024-11-06},
+  abstract = {The methods for visual learning that compute a space of eigenvectors by Principal Component Analysis (PCA) traditionally require a batch computation step. Since this leads to potential problems when dealing with large sets of images, several incremental methods for the computation of the eigenvectors have been introduced. However such learning cannot be considered as an on-line process, since all the images are retained until the final step of computation of space of eigenvectors, when their coefficients in this subspace are computed. In this paper we propose a method that allows for simultaneous learning and recognition. We show that we can keep only the coefficients of the learned images and discard the actual images and still are able to build a model of appearance that is fast to compute and open-ended. We performed extensive experimental testing which showed that the recognition rate and reconstruction accuracy are comparable to those obtained by the batch method.},
+  keywords = {Educational programs,Image databases,Information science,Principal component analysis},
+  file = {/Users/ivang/Zotero/storage/3IMKJ4DW/1048133.html}
+}
+
 @article{asmussen_smart_2019,
   title = {Smart Literature Review: A Practical Topic Modelling Approach to Exploratory Literature Review},
   shorttitle = {Smart Literature Review},
@@ -185,6 +201,17 @@
   file = {/Users/ivang/Zotero/storage/THYG8TG5/Asmussen and Møller - 2019 - Smart literature review a practical topic modelli.pdf}
 }
 
+@inproceedings{balsubramani_fast_2013,
+  title = {The {{Fast Convergence}} of {{Incremental PCA}}},
+  booktitle = {Advances in {{Neural Information Processing Systems}}},
+  author = {Balsubramani, Akshay and Dasgupta, Sanjoy and Freund, Yoav},
+  year = {2013},
+  volume = {26},
+  publisher = {Curran Associates, Inc.},
+  urldate = {2024-11-06},
+  file = {/Users/ivang/Zotero/storage/V8AAKLWX/Balsubramani et al. - 2013 - The Fast Convergence of Incremental PCA.pdf}
+}
+
 @incollection{banerjee_topic_2007,
   title = {Topic {{Models}} over {{Text Streams}}: {{A Study}} of {{Batch}} and {{Online Unsupervised Learning}}},
   shorttitle = {Topic {{Models}} over {{Text Streams}}},
@@ -200,6 +227,20 @@
   abstract = {Topic modeling techniques have widespread use in text data mining applications. Some applications use batch models, which perform clustering on the document collection in aggregate. In this paper, we analyze and compare the performance of three recently-proposed batch topic models---Latent Dirichlet Allocation (LDA), Dirichlet Compound Multinomial (DCM) mixtures and von-Mises Fisher (vMF) mixture models. In cases where offline clustering on complete document collections is infeasible due to resource and response-rate constraints, online unsupervised clustering methods that process incoming data incrementally are necessary. To this end, we propose online variants of vMF, EDCM and LDA. Experiments on large real-world document collections, in both the offline and online settings, demonstrate that though LDA is a good model for finding word-level topics, vMF finds better document-level topic clusters more efficiently, which is often important in text mining applications. Finally, we propose a practical heuristic for hybrid topic modeling, which learns online topic models on streaming text and intermittently runs batch topic models on aggregated documents offline. Such a hybrid model is useful for several applications (e.g., dynamic topic-based aggregation of user-generated content in social networks) that need a good tradeoff between the performance of batch offline algorithms and efficiency of incremental online algorithms.},
   isbn = {978-0-89871-630-6},
   file = {/Users/ivang/Zotero/storage/K2GHNFY9/Banerjee and Basu - 2007 - Topic Models over Text Streams A Study of Batch a.pdf}
+}
+
+@article{bejar_alonso_k-means_2013,
+  title = {K-Means vs {{Mini Batch K-means}}: A Comparison},
+  shorttitle = {K-Means vs {{Mini Batch K-means}}},
+  author = {B{\'e}jar Alonso, Javier},
+  year = {2013},
+  month = may,
+  urldate = {2024-11-06},
+  copyright = {Attribution-NonCommercial-NoDerivs 3.0 Spain},
+  langid = {english},
+  keywords = {Aprenentatge automatic,Arees tematiques de la UPC::Informatica::Intelligencia artificial,K-means,Machine learning,Scalable algorithms,Unsupervised learning},
+  annotation = {Accepted: 2014-07-07T12:02:16Z},
+  file = {/Users/ivang/Zotero/storage/W3WHI73P/Béjar Alonso - 2013 - K-means vs Mini Batch K-means a comparison.pdf}
 }
 
 @inproceedings{bengio_neural_2000,
@@ -597,6 +638,20 @@
   file = {/Users/ivang/Zotero/storage/6F9BJT29/S0306457318307805.html}
 }
 
+@inproceedings{dagher_incremental_2010,
+  title = {Incremental {{PCA-LDA}} Algorithm},
+  booktitle = {2010 {{IEEE International Conference}} on {{Computational Intelligence}} for {{Measurement Systems}} and {{Applications}}},
+  author = {Dagher, Issam},
+  year = {2010},
+  month = sep,
+  pages = {97--101},
+  issn = {2159-1555},
+  doi = {10.1109/CIMSA.2010.5611752},
+  urldate = {2024-11-06},
+  abstract = {In this paper a recursive algorithm of calculating the discriminant features of the PCA-LDA procedure is introduced. This algorithm computes the principal components of a sequence of vectors incrementally without estimating the covariance matrix (so covariance-free) and at the same time computing the linear discriminant directions along which the classes are well separated. Two major techniques are used sequentially in a real time fashion in order to obtain the most efficient and linearly discriminative components. This procedure is done by merging the runs of two algorithms based on principal component analysis (PCA) and linear discriminant analysis (LDA) running sequentially. This algorithm is applied to face recognition problem. Simulation results on different databases showed high average success rate of this algorithm compared to PCA and LDA algorithms. The advantage of the incremental property of this algorithm compared to the batch PCA-LDA is also shown.},
+  keywords = {Algorithm design and analysis,Covariance matrix,Eigenvalues and eigenfunctions,Face,face recognition,Face recognition,linear discriminant analysis (LDA),Principal component analysis,principal component analysis (PCA),Recursive PCA-LDA,Training}
+}
+
 @misc{dai_semi-supervised_2015,
   title = {Semi-Supervised {{Sequence Learning}}},
   author = {Dai, Andrew M. and Le, Quoc V.},
@@ -898,6 +953,43 @@
   abstract = {Minimal keyword extraction with BERT},
   copyright = {MIT},
   keywords = {bert,keyphrase-extraction,keyword-extraction,mmr}
+}
+
+@misc{he_deberta_2021,
+  title = {{{DeBERTa}}: {{Decoding-enhanced BERT}} with {{Disentangled Attention}}},
+  shorttitle = {{{DeBERTa}}},
+  author = {He, Pengcheng and Liu, Xiaodong and Gao, Jianfeng and Chen, Weizhu},
+  year = {2021},
+  month = oct,
+  number = {arXiv:2006.03654},
+  eprint = {2006.03654},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2006.03654},
+  urldate = {2024-11-06},
+  abstract = {Recent progress in pre-trained neural language models has significantly improved the performance of many natural language processing (NLP) tasks. In this paper we propose a new model architecture DeBERTa (Decoding-enhanced BERT with disentangled attention) that improves the BERT and RoBERTa models using two novel techniques. The first is the disentangled attention mechanism, where each word is represented using two vectors that encode its content and position, respectively, and the attention weights among words are computed using disentangled matrices on their contents and relative positions, respectively. Second, an enhanced mask decoder is used to incorporate absolute positions in the decoding layer to predict the masked tokens in model pre-training. In addition, a new virtual adversarial training method is used for fine-tuning to improve models' generalization. We show that these techniques significantly improve the efficiency of model pre-training and the performance of both natural language understanding (NLU) and natural langauge generation (NLG) downstream tasks. Compared to RoBERTa-Large, a DeBERTa model trained on half of the training data performs consistently better on a wide range of NLP tasks, achieving improvements on MNLI by +0.9\% (90.2\% vs. 91.1\%), on SQuAD v2.0 by +2.3\% (88.4\% vs. 90.7\%) and RACE by +3.6\% (83.2\% vs. 86.8\%). Notably, we scale up DeBERTa by training a larger version that consists of 48 Transform layers with 1.5 billion parameters. The significant performance boost makes the single DeBERTa model surpass the human performance on the SuperGLUE benchmark (Wang et al., 2019a) for the first time in terms of macro-average score (89.9 versus 89.8), and the ensemble DeBERTa model sits atop the SuperGLUE leaderboard as of January 6, 2021, out performing the human baseline by a decent margin (90.3 versus 89.8).},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Computer Science - undefined},
+  file = {/Users/ivang/Zotero/storage/T5K6UXRD/He et al. - 2021 - DeBERTa Decoding-enhanced BERT with Disentangled .pdf;/Users/ivang/Zotero/storage/VYC6ZQ6Q/2006.html}
+}
+
+@article{hicks_mbkmeans_2021,
+  title = {Mbkmeans: {{Fast}} Clustering for Single Cell Data Using Mini-Batch k-Means},
+  shorttitle = {Mbkmeans},
+  author = {Hicks, Stephanie C. and Liu, Ruoxi and Ni, Yuwei and Purdom, Elizabeth and Risso, Davide},
+  year = {2021},
+  month = jan,
+  journal = {PLOS Computational Biology},
+  volume = {17},
+  number = {1},
+  pages = {e1008625},
+  publisher = {Public Library of Science},
+  issn = {1553-7358},
+  doi = {10.1371/journal.pcbi.1008625},
+  urldate = {2024-11-06},
+  abstract = {Single-cell RNA-Sequencing (scRNA-seq) is the most widely used high-throughput technology to measure genome-wide gene expression at the single-cell level. One of the most common analyses of scRNA-seq data detects distinct subpopulations of cells through the use of unsupervised clustering algorithms. However, recent advances in scRNA-seq technologies result in current datasets ranging from thousands to millions of cells. Popular clustering algorithms, such as k-means, typically require the data to be loaded entirely into memory and therefore can be slow or impossible to run with large datasets. To address this problem, we developed the mbkmeans R/Bioconductor package, an open-source implementation of the mini-batch k-means algorithm. Our package allows for on-disk data representations, such as the common HDF5 file format widely used for single-cell data, that do not require all the data to be loaded into memory at one time. We demonstrate the performance of the mbkmeans package using large datasets, including one with 1.3 million cells. We also highlight and compare the computing performance of mbkmeans against the standard implementation of k-means and other popular single-cell clustering methods. Our software package is available in Bioconductor at https://bioconductor.org/packages/mbkmeans.},
+  langid = {english},
+  keywords = {Algorithms,Clustering algorithms,Computer hardware,Computer software,Gene expression,Machine learning algorithms,Principal component analysis,Simulation and modeling},
+  file = {/Users/ivang/Zotero/storage/TAQ7JM3P/Hicks et al. - 2021 - mbkmeans Fast clustering for single cell data usi.pdf}
 }
 
 @inproceedings{hoffman_online_2010,
@@ -1375,6 +1467,23 @@
   langid = {english},
   keywords = {Read},
   file = {/Users/ivang/Zotero/storage/Z84HS8AL/Mimno et al. - Optimizing Semantic Coherence in Topic Models.pdf}
+}
+
+@inproceedings{montiel_online_2022,
+  title = {Online {{Clustering}}: {{Algorithms}}, {{Evaluation}}, {{Metrics}}, {{Applications}} and {{Benchmarking}}},
+  shorttitle = {Online {{Clustering}}},
+  booktitle = {Proceedings of the 28th {{ACM SIGKDD Conference}} on {{Knowledge Discovery}} and {{Data Mining}}},
+  author = {Montiel, Jacob and Ngo, Hoang-Anh and {Le-Nguyen}, Minh-Huong and Bifet, Albert},
+  year = {2022},
+  month = aug,
+  series = {{{KDD}} '22},
+  pages = {4808--4809},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3534678.3542600},
+  urldate = {2024-11-06},
+  abstract = {Online clustering algorithms play a critical role in data science, especially with the advantages regarding time, memory usage and complexity, while maintaining a high performance compared to traditional clustering methods. This tutorial serves, first, as a survey on online machine learning and, in particular, data stream clustering methods. During this tutorial, state-of-the-art algorithms and the associated core research threads will be presented by identifying different categories based on distance, density grids and hidden statistical models. Clustering validity indices, an important part of the clustering process which are usually neglected or replaced with classification metrics, resulting in misleading interpretation of final results, will also be deeply investigated.Then, this introduction will be put into the context with River, a go-to Python library merged between Creme and scikit-multiflow. It is also the first open-source project to include an online clustering module that can facilitate reproducibility and allow direct further improvements. From this, we propose methods of clustering configuration, applications and settings for benchmarking, using real-world problems and datasets.},
+  isbn = {978-1-4503-9385-0}
 }
 
 @misc{moody_mixing_2016,
@@ -2220,6 +2329,23 @@
   abstract = {Short text clustering has become an increasingly important task with the popularity of social media like Twitter, Google+, and Facebook. It is a challenging problem due to its sparse, high-dimensional, and large-volume characteristics. In this paper, we proposed a collapsed Gibbs Sampling algorithm for the Dirichlet Multinomial Mixture model for short text clustering (abbr. to GSDMM). We found that GSDMM can infer the number of clusters automatically with a good balance between the completeness and homogeneity of the clustering results, and is fast to converge. GSDMM can also cope with the sparse and high-dimensional problem of short texts, and can obtain the representative words of each cluster. Our extensive experimental study shows that GSDMM can achieve significantly better performance than three other clustering models.},
   isbn = {978-1-4503-2956-9},
   keywords = {dirichlet multinomial mixture,gibbs sampling,short text clustering}
+}
+
+@article{zhang_birch_1996,
+  title = {{{BIRCH}}: An Efficient Data Clustering Method for Very Large Databases},
+  shorttitle = {{{BIRCH}}},
+  author = {Zhang, Tian and Ramakrishnan, Raghu and Livny, Miron},
+  year = {1996},
+  month = jun,
+  journal = {SIGMOD Rec.},
+  volume = {25},
+  number = {2},
+  pages = {103--114},
+  issn = {0163-5808},
+  doi = {10.1145/235968.233324},
+  urldate = {2024-11-06},
+  abstract = {Finding useful patterns in large datasets has attracted considerable interest recently, and one of the most widely studied problems in this area is the identification of clusters, or densely populated regions, in a multi-dimensional dataset. Prior work does not adequately address the problem of large datasets and minimization of I/O costs.This paper presents a data clustering method named BIRCH (Balanced Iterative Reducing and Clustering using Hierarchies), and demonstrates that it is especially suitable for very large databases. BIRCH incrementally and dynamically clusters incoming multi-dimensional metric data points to try to produce the best quality clustering with the available resources (i.e., available memory and time constraints). BIRCH can typically find a good clustering with a single scan of the data, and improve the quality further with a few additional scans. BIRCH is also the first clustering algorithm proposed in the database area to handle "noise" (data points that are not part of the underlying pattern) effectively.We evaluate BIRCH's time/space efficiency, data input order sensitivity, and clustering quality through several experiments. We also present a performance comparisons of BIRCH versus CLARANS, a clustering method proposed recently for large datasets, and show that BIRCH is consistently superior.},
+  file = {/Users/ivang/Zotero/storage/ZJUMALXM/Zhang et al. - 1996 - BIRCH an efficient data clustering method for ver.pdf}
 }
 
 @misc{zhu_survey_2023,

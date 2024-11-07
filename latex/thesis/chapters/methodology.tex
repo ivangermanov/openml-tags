@@ -1,3 +1,4 @@
+\label{sec:methodology}
 In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. We also cover our data exploration and preprocessing steps, the hyperparameter tuning process, and the automated and human evaluation methods and metrics we have chosen.
 
 \section{Data exploration, preprocessing and augmentation}
@@ -46,6 +47,7 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
 
 
 \section{Automated evaluation metrics and baselines}
+\label{sec:automated_evaluation}
 In order to evaluate the quality of the extracted topics, we will use a combination of automated evaluation metrics and baselines. These metrics and baselines will help us assess the performance of our model and compare it to existing topic modeling techniques. The following sections provide an overview of the metrics and baselines we will use in our evaluation.
 
 \subsection{Metrics}
@@ -121,6 +123,9 @@ The log transformation is applied to both the coherence and diversity scores for
 The weights \( w_C \) and \( w_D \) are introduced to provide flexibility in balancing the relative importance of coherence and diversity. Depending on the evaluation goals, one may prioritize more coherent topics or more diverse topics. The weights ensure that both metrics contribute meaningfully to the final score, preventing one from overshadowing the other. This allows for fine-tuning of the metric based on the specific requirements of the task or dataset being modeled.
 
 By maximizing the weighted metric, we aim to find the hyperparameters that produce the most coherent and diverse topics. The hyperparameters we will tune include the number of topics, the parameters of the dimensionality reduction algorithm, the clustering algorithm, etc.
+
+\subsection{Limitations}
+It is important to note that the automated evaluation metrics and baselines have their limitations. Automated metrics such as topic coherence and diversity provide a quantitative measure of topic quality but may not fully capture the nuances of human judgment. These metrics are based on statistical properties of the topics and may not always align with human perceptions, even though they are widely used in the literature. We already mentioned the limitations of these metrics in \cref{sec:topic_coherence}.
 
 \section{Human evaluation}
 \label{sec:human_evaluation}
@@ -259,12 +264,6 @@ All participants will be provided with clear information about the study's purpo
 
 The study poses minimal risk to participants as it involves only text evaluation tasks.
 
-\subsubsection{Limitations}
-Several limitations of this study should be acknowledged. The use of a convenience sample may limit the generalizability of the results. The evaluation of tags involves subjective judgments, which may introduce some variability in the results. The study focuses on a specific set of documents and may not cover all possible domains or types of datasets.
-
-Resource constraints may limit the number of participants and documents evaluated. Additionally, the study provides a snapshot of tag quality but does not assess the long-term usefulness of the tags in real-world scenarios. These limitations should be considered when interpreting the results and drawing conclusions from the study.
-
-Furthermore, while the study aims to provide insights into the model's robustness, the limited scope of the evaluation means that we cannot fully assess the model's performance across all OpenML datasets. This remains an area for potential future research.
 
 \subsubsection{Hypotheses}
 We propose the following hypotheses for this study:
@@ -294,6 +293,17 @@ This large-scale automated evaluation will allow us to assess the model's perfor
 However, it's important to note the limitations of this approach. LLMs, while sophisticated, are not perfect proxies for human judgment. The automated evaluation will not include the document pair tasks from the human evaluation, as the number of possible combinations of document pairs is prohibitively large ($O(n^2)$ for $n$ documents), limiting our ability to assess shared coverage across datasets. Moreover, the results may be influenced by biases inherent in the LLM's training data.
 
 The results from this automated evaluation will be analyzed in conjunction with the human evaluation results to provide a more comprehensive assessment of our model's performance. This dual approach of human and automated evaluation will offer a multifaceted understanding of our model's capabilities and limitations in generating tags.
+
+\subsection{Limitations}
+Several limitations of this study should be acknowledged. The use of a convenience sample may limit the generalizability of the results. The evaluation of tags involves subjective judgments, which may introduce some variability in the results. The study focuses on a specific set of documents and may not cover all possible domains or types of datasets.
+
+Resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
+
+Additionally, the study provides a snapshot of tag quality but does not assess the long-term quality of the tags. This is important when submodels in the tag generation pipeline are changed, as the quality of the tags may change as well.
+
+Furthermore, while the study aims to provide insights into the model's robustness, the limited scope of the evaluation means that we cannot fully assess the model's performance across all OpenML datasets. This remains an area for potential future research.
+
+Although the large-scale automated evaluation will address the robustness limitation, it is not a perfect substitute for human judgment. The results may be influenced by biases in the LLM's training data and may not fully capture the nuances of human evaluation.
 
 \section{Chapter conclusion}
 This chapter addresses several of our research questions. \hyperref[rq1]{\textbf{RQ1}} is partially answered through our proposed data exploration, preprocessing and augmentation steps, which will help us understand the characteristics of OpenML dataset descriptions and their potential impact on model performance.

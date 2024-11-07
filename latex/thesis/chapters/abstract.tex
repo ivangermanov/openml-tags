@@ -1,1 +1,10 @@
-THIS IS MY ABSTRACT
+This thesis presents a novel approach to automatically generate tags for OpenML dataset descriptions using topic modeling techniques. While OpenML datasets are currently categorized using manual tagging, many datasets lack semantic tags that are readable by humans. We develop a modular pipeline that extends the BERTopic model with advanced language models and zeroshot classification to automatically generate high-quality, human-readable tags.
+
+Through an exploratory data analysis, we first investigate OpenML dataset descriptions and augment them with additional metadata and contextual information. We then develop our pipeline, which combines state-of-the-art embedding models, dimensionality reduction, clustering, and fine-tuning with large language models. The modular nature of our approach ensures it can evolve alongside advances in language models and embedding models.
+
+We evaluate our model using both automated metrics and human evaluation. Our automated evaluation shows that our model significantly outperforms baseline approaches including LDA, NMF, and Top2Vec in terms of topic coherence and diversity. A human evaluation study with 21 participants demonstrates that our model generates tags that are significantly more relevant and provide better coverage compared to the baseline approach, while maintaining a good balance between specific and general tags. These findings are further validated through a large-scale automated evaluation using \textit{GPT-4-mini} across the entire OpenML dataset.
+
+Our approach provides OpenML with an automated, scalable solution for dataset tagging that produces high-quality tags approaching human-level performance. The techniques we developed could be applied to similar problems in other domains where automated categorization of technical or scientific content is needed. Our method of combining traditional topic modeling with modern language models and zeroshot classification represents a novel contribution to the field of topic modeling itself.
+
+\textbf{Keywords}: topic modeling, machine learning, natural language processing, dataset tagging, OpenML, BERTopic
+
