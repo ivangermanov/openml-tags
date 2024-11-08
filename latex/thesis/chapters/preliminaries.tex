@@ -257,14 +257,14 @@ BERT, in contrast, is a bidirectional model that captures dependencies between w
     \begin{minipage}[b]{0.40\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/bert.png}
-        \caption{BERT Bidirectional Architecture}
+        \caption{BERT bidirectional architecture}
         \label{fig:bert}
     \end{minipage}
     \hfill
     \begin{minipage}[b]{0.39\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figures/openai.png}
-        \caption{OpenAI GPT Unidirectional Architecture}
+        \caption{OpenAI GPT unidirectional architecture}
         \label{fig:gpt}
     \end{minipage}
 \end{figure}
@@ -288,15 +288,15 @@ The Massive Text Embedding Benchmark (MTEB) \cite{muennighoff_mteb_2023} is a be
 
 As the dimensionality of data (embeddings) increases, the distance to the nearest data point tends to become similar to the distance to the farthest data point \cite{aggarwal_surprising_2001, beyer_when_1999}. This phenomenon implies that in high-dimensional spaces, the notion of spatial locality becomes unclear, and distances between points become increasingly small. While several clustering methods have been developed to address this \textit{curse of dimensionality} \cite{pandove_systematic_2018, steinbach_challenges_2004}, a simpler strategy involves reducing the dimensionality of embeddings. Although PCA \cite{abdi_principal_2010} and t-SNE \cite{van_der_maaten_visualizing_2008} are popular dimensionality reduction techniques, UMAP has been found to better preserve the local and global characteristics of high-dimensional data in its lower-dimensional representations \cite{mcinnes_umap_2020}.
 
-UMAP is a non-linear dimensionality reduction technique that is rooted in manifold learning and is mathematically grounded in \textit{topological data analysis}. More specifically, UMAP seeks to approximate a high-dimensional manifold by constructing a weighted k-nearest neighbor (k-NN) graph and then optimizing a low-dimensional layout of this graph.
+UMAP is a non-linear dimensionality reduction technique that is rooted in manifold learning and is mathematically grounded in topological data analysis. More specifically, UMAP seeks to approximate a high-dimensional manifold by constructing a weighted k-nearest neighbor (k-NN) graph and then optimizing a low-dimensional layout of this graph.
 
-The theory behind UMAP is mathematically complex, but the algorithm can be summarized as follows:
+The theory behind UMAP is more mathematically complex, but the algorithm can be summarized as follows:
 
 1. \textbf{Constructing the k-NN Graph}:\\
 The initial phase of UMAP involves constructing a k-nearest neighbor graph from the high-dimensional data. In this step, for each data point, the algorithm identifies its nearest neighbors based on a distance metric (such as Euclidean distance). The choice of $k$ determines the number of neighbors to consider, and this influences the local structure captured by the graph. Importantly, UMAP assumes that the data points are uniformly distributed on the underlying manifold, and it computes a local distance metric for each point using \textit{Riemannian geometry}. This local metric is based on the distance to the $k$-th nearest neighbor, creating a unique distance function for each point.
 
 2. \textbf{Fuzzy Simplicial Complex Representation}:\\
-Once the k-NN graph is built, UMAP constructs a fuzzy simplicial complex. This is a crucial step rooted in \textit{topological data analysis}. Instead of a binary decision about whether or not a point belongs to a neighborhood, UMAP assigns fuzzy membership values to reflect the probability of points being connected. This fuzzy approach smooths out the local connectivity of the manifold. The fuzzy simplicial set is built by combining local fuzzy simplicial sets of each point, using a probabilistic union operation to merge the connections between points. This union operation involves combining the fuzzy memberships of edges (1-simplices) between points, which can be expressed mathematically as $w(e) = a + b - ab$, where $a$ and $b$ are the fuzzy membership probabilities for the edge in each direction, and $w(e)$ is the resulting combined weight.
+Once the k-NN graph is built, UMAP constructs a fuzzy simplicial complex. This is a crucial step rooted in topological data analysis. Instead of a binary decision about whether or not a point belongs to a neighborhood, UMAP assigns fuzzy membership values to reflect the probability of points being connected. This fuzzy approach smooths out the local connectivity of the manifold. The fuzzy simplicial set is built by combining local fuzzy simplicial sets of each point, using a probabilistic union operation to merge the connections between points. This union operation involves combining the fuzzy memberships of edges (1-simplices) between points, which can be expressed mathematically as $w(e) = a + b - ab$, where $a$ and $b$ are the fuzzy membership probabilities for the edge in each direction, and $w(e)$ is the resulting combined weight.
 
 3. \textbf{Low-Dimensional Embedding Optimization}:\\
 After constructing the fuzzy topological representation, UMAP seeks to optimize a low-dimensional embedding that preserves the topological structure of the original data. This process can be viewed as a \textit{graph layout problem}. UMAP minimizes the cross-entropy between the fuzzy topological structures of the high-dimensional data and the low-dimensional embedding. The cross-entropy loss is given by:
@@ -405,7 +405,7 @@ To illustrate how topic representations can be constructed using a bag-of-words 
         penalty              & 6                  \\
         \hline
     \end{tabular}
-    \caption{Example Bag-of-Words Representation for a Hockey-Related Cluster}
+    \caption{Example Bag-of-Words representation for a hockey-related cluster}
     \label{tab:hockey_cluster}
 \end{table}
 
@@ -445,7 +445,7 @@ To illustrate this, consider the hockey-related cluster. Table \ref{tab:ctfidf_h
         national team        & 12                                      & 15                                                & 100                                    & \( 12 \cdot \log\left(1 + \frac{100}{15}\right) \approx 22.20 \) \\
         \hline
     \end{tabular}
-    \caption{Example c-TF-IDF Weights for Words in the Hockey Cluster}
+    \caption{Example c-TF-IDF weights for words in the hockey cluster}
     \label{tab:ctfidf_hockey}
 \end{table}
 
@@ -461,7 +461,7 @@ Zeroshot text classification refers to the ability of a model to classify text i
 
 In the context of Natural Language Inference (NLI), this can be achieved by reframing classification tasks as entailment tasks. NLI systems are trained to determine whether a given \textit{hypothesis} (a statement) is entailed (i.e., is true or supported) by a \textit{premise} (another statement). For zeroshot text classification, we can treat the task as determining which hypothesis (category) is entailed by a given text.
 
-The zeroshot classification process can be broken down as follows:
+The zeroshot text classification process can be broken down as follows:
 \begin{itemize}
     \item \textbf{Input Text}: This is the text we want to classify. For example, \textit{"The economy is improving rapidly."}
     
@@ -472,7 +472,7 @@ The zeroshot classification process can be broken down as follows:
         \item \textit{"This text is about sports."}
     \end{itemize}
     
-    \item \textbf{Model Evaluation}: A pre-trained NLI model is used to evaluate how well each hypothesis is entailed by the input text. In zeroshot classification, the model calculates the probability that each hypothesis is true, given the input text.
+    \item \textbf{Model Evaluation}: A pre-trained NLI model is used to evaluate how well each hypothesis is entailed by the input text. In zeroshot text classification, the model calculates the probability that each hypothesis is true, given the input text.
     
     \item \textbf{Prediction}: The hypothesis with the highest probability is selected as the predicted label for the input text. Alternatively, the model can return the probabilities for each hypothesis, making it possible to assign multiple labels to the input text.
 \end{itemize}
@@ -572,13 +572,13 @@ It allows for the optimization of model hyper-parameters for experimental compar
 
 OCTIS offers a range of evaluation metrics for assessing topic models, such as coherence, diversity, and classification metrics.
 
-The discovery of optimal hyper-parameter settings relies on a Bayesian Optimization (BO) approach \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the available evaluation metrics. Given the potential variability in performance outcomes due to noise, the objective function is defined as the median performance across multiple runs of the model under the same hyperparameter settings for the chosen evaluation metric.
+The discovery of good hyper-parameter settings relies on a Bayesian Optimization (BO) approach \cite{archetti_bayesian_2019, galuzzi_hyperparameter_2020, snoek_practical_2012}, where the objective can be any of the available evaluation metrics. Given the potential variability in performance outcomes due to noise, the objective function is defined as the median performance across multiple runs of the model under the same hyperparameter settings for the chosen evaluation metric.
 
 BO is a sequential, model-based optimization technique for noisy black-box functions that are costly and complex to evaluate directly, such as topic models. Its main idea involves using all previously evaluated hyperparameter settings to approximate the performance metric's value, and then selecting new, likely better hyperparameter settings for the next run. The approximation is done by a probabilistic \textit{surrogate model}, which has a prior belief of the objective function based on observed hyperparameter settings. The selection of the next hyperparameter settings is driven by optimizing an \textit{acquisition function}, which uses the uncertainty within the posterior distribution to guide the exploration of the parameter space.
 
 OCTIS is useful for our use case, as it provides a unified framework for training the proposed BERTopic model alongside the baseline models, facilitating their comparison across a variety of evaluation metrics. In fact, in the original BERTopic paper, \citet{grootendorst_bertopic_2022} employed OCTIS to evaluate the model's performance.
 
-Additionally, we can utilize OCTIS' hyperparameter optimization capabilities (BO) to approximate the optimal hyperparameter settings for the proposed BERTopic model.
+Additionally, we can utilize OCTIS' hyperparameter optimization capabilities (BO) to find good hyperparameter settings for the proposed BERTopic model.
 
 \section{Chapter conclusion}
 This chapter provides a partial answer to \hyperref[rq2]{\textbf{RQ2}} by presenting various approaches to topic modeling that can be applied to the OpenML dataset descriptions. We have identified state-of-the-art models, as well as potential baselines for comparison. Additionally, we have addressed part of \hyperref[rq3]{\textbf{RQ3}} by outlining the evaluation metrics that can be used to assess the performance of the topic models.

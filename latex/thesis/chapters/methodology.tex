@@ -38,10 +38,10 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
     \item \textbf{c-TF-IDF}: The bag-of-words representation is used to calculate the c-TF-IDF score for each word in each cluster. This score is used to rank the words in each cluster.
     \item \textbf{Fine-tune to extract tags}: For each topic, we have representative documents (from the clustering step) and representative words (from the c-TF-IDF step). We prompt engineer a question that asks an LLM to generate tags for each cluster. The generated tags are categorized as \textit{regular tags} and \textit{overarching tags}.
 
-    \textit{Regular tags} refer to tags that frequently appear among the representative documents and words. \textit{Overarching tags} capture the broader, more general theme of the cluster. For example, if a cluster pertains to "US elections" and the representative documents contain the word "election" while the representative words include "candidate", a possible regular tag could be "election candidate", whereas the overarching tag might be "politics".
+    \textit{Regular tags} refer to tags that frequently appear among the representative documents and words. \textit{Overarching tags} capture the broader, more general theme of the cluster. For example, if a cluster pertains to \textit{US elections} and the representative documents contain the word \textit{election} while the representative words include \textit{candidate}, a possible regular tag could be \textit{election candidate}, whereas the overarching tag might be \textit{politics}.
 
     As context, we feed the LLM with the top \textit{k} representative documents and the top \textit{m} representative words for each topic. This results in tags that are common among the representative documents and representative words, and hence are representative of the topic.
-    \item \textbf{Zeroshot Classifier}: Each description can in reality be contained in multiple clusters (topics). In this step, we get the top \textit{n} most likely clusters for each description. Then, for each description, we get the tags for each of the top \textit{n} clusters in a set. We feed this set of tags to a zeroshot text classification model, which returns confidences from 0 to 1 for whether each tag describes the description. This step is crucial for filtering out irrelevant tags for each description. For instance, if a description about diabetes and a description about cancer are both contained in the same topic (which may be, for example, "medical conditions"), we want to ensure that the tags for the cancer description are not assigned to the diabetes description. Furthermore, the description about diabetes may be contained in another topic that cancer is not in, such as "nutrition". In this case, we want to ensure that the tags in "nutrition" are not assigned to the cancer description, but are assigned to the diabetes description.
+    \item \textbf{Zeroshot Text Classifier}: Each description can in reality be contained in multiple clusters (topics) due to the soft clustering performed by HDBSCAN. In this step, we get the top \textit{n} most likely clusters for each description. Then, for each description, we get the tags for each of the top \textit{n} clusters in a set. We feed this set of tags to a zeroshot text classification model, which returns confidences from 0 to 1 for whether each tag describes the description. This step is crucial for filtering out irrelevant tags for each description. For instance, if a description about diabetes and a description about cancer are both contained in the same topic (which may be, for example, "medical conditions"), we want to ensure that the tags for the cancer description are not assigned to the diabetes description. Furthermore, the description about diabetes may be contained in another topic that cancer is not in, such as \textit{nutrition}. In this case, we want to ensure that the tags in \textit{nutrition} are not assigned to the cancer description, but are assigned to the diabetes description.
 
 \end{enumerate}
 
@@ -71,11 +71,11 @@ In addition to the proposed topic model, we will compare its performance against
 
     \item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML.
 
-    \item \textbf{Data Preparation}: After fetching the data, the next step involves preparing it. This includes removing noise, correcting errors, augmenting it, and standardizing the format to prepare it for analysis. Data preparation ensures that the input to the topic model is of high quality, which is crucial for the success of the subsequent modeling steps. \\ The next step involves removing inadequate data points, such as excessively short descriptions and duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
+    \item \textbf{Data Preparation}: After fetching the data, the next step involves preparing it. This includes removing noise, correcting errors, augmenting it, and standardizing the format to prepare it for analysis. Data preparation ensures that the input to the topic model is of high quality, which is important for the success of the subsequent modeling steps. \\ The next step involves removing inadequate data points such as duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
 
     \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the prepared data. In this case, it will be BERTopic. We refer to it as the \textit{Base BERTopic model}.
 
-    \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared. This will involve baseline models such as LDA, NMF and Top2Vec.
+    \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared.
 
     \item \textbf{Topic Labels}: The output from both the topic model and the benchmark models are sets of topics, represented by a cluster of words that are characteristic of a particular topic.
 
@@ -156,7 +156,7 @@ The study will utilize selected OpenML dataset descriptions as texts. Three sepa
 \begin{enumerate}
 \item A survey with tags generated by the \textit{proposed model}.
 \item A survey with tags generated by the \textit{baseline model}. As a baseline, we will use the tags generated by the Bayesian optimization-tuned BERTopic model without the additional steps introduced in the proposed model. This will allow for a direct comparison of the proposed model's performance against an established approach to tag generation.
-\item A survey with \textit{human-generated tags}
+\item A survey with \textit{human-generated tags}.
 \end{enumerate}
 
 This design allows for a direct comparison of tag quality across the relative performance of the proposed model compared to both a baseline model and human-generated tags, where the baseline model represents an established approach to tag generation, and human-generated tags serve as a gold standard for comparison.
@@ -173,7 +173,7 @@ Participants will evaluate tags based on four main criteria, each addressing a s
 \item 4 - Very well
 \item 5 - Extremely well
 \end{itemize}
-Example: A document about Covid-19 with tags \textit{Covid-19}, \textit{Virus}, \textit{Car Crash}
+Example: A document about Covid-19 with tags \textit{Covid-19}, \textit{Virus}, \textit{Car Crash}. \textit{Covid-19} would be rated as 5, \textit{Virus} as 4, and \textit{Car Crash} as 1.
 
 \item \textit{Generality} (Q2): How general or specific the tag is to the particular document, rated on a 1-5 scale:
 \begin{itemize}
@@ -182,17 +182,18 @@ Example: A document about Covid-19 with tags \textit{Covid-19}, \textit{Virus}, 
 \item 3 - Balanced
 \item 4 - Somewhat general
 \item 5 - Very general, could apply to many documents
+\item 6 - Not applicable (if the tag is not relevant to the document at all)
 \end{itemize}
-Example: A document about Covid-19 with tags \textit{Covid-19}, \textit{Virus}, \textit{Medicine}, \textit{Science}
+Example: A document about Covid-19 with tags \textit{Covid-19}, \textit{Virus}, \textit{Medicine}, \textit{Science}. \textit{Covid-19} would be rated as 2, \textit{Virus} as 3, \textit{Medicine} as 4, and \textit{Science} as 5.
 
 \item \textit{Coverage} (Q3): How well the set of tags covers the range of themes within the document, rated on a 1-5 scale. If a participant does not rate this as 5, they will be prompted to suggest additional tags that would improve coverage.
-Example: A document about Covid-19 Biotechnology Companies with tags \textit{Covid-19}, \textit{Virus}, \textit{Medicine}, \textit{Science} (but missing \textit{Biotechnology})
+Example: A document about Covid-19 Biotechnology Companies with tags \textit{Covid-19}, \textit{Virus}, \textit{Medicine}, \textit{Science} (but missing \textit{Biotechnology}).
 
 \item \textit{Shared Coverage} (Q4): How well the common tags represent shared themes between two documents, rated on a 1-5 scale.
-Example: For datasets about Covid-19 Biotechnology Companies and Covid-19 World Vaccination Progress, common tags might include \textit{Covid-19}, \textit{Virus}, \textit{Medicine} (but not \textit{Biotechnology} or \textit{Vaccinations})
+Example: For datasets about Covid-19 Biotechnology Companies and Covid-19 World Vaccination Progress, common tags might include \textit{Covid-19}, \textit{Virus}, \textit{Medicine} (but not \textit{Biotechnology} or \textit{Vaccinations}).
 \end{itemize}
 
-The goal is to measure relevance and coverage (higher is better), and to assess the distribution of generality (a large standard deviation is desirable, indicating a good mix of specific and general tags). Shared coverage aims to evaluate the model's ability to capture common themes across related documents, which is crucial for dataset discoverability.
+The goal is to measure relevance and coverage (higher is better), and to assess the distribution of generality (a large standard deviation is desirable, indicating a good mix of specific and general tags). Shared coverage aims to evaluate the model's ability to capture common themes across related documents, which is important for dataset discoverability.
 
 
 \subsubsection{Variables}
@@ -219,7 +220,7 @@ To ensure the validity of our comparisons, we will control the following variabl
 \item \textit{Participants}: While not all participants will complete all surveys due to resource constraints, we will ensure that the participant pools for each survey are comparable in terms of expertise and background.
 \end{itemize}
 
-By manipulating the independent variable (Tag Set) while controlling for other factors, we aim to isolate the effect of different tag generation methods on the quality of tags as perceived by human evaluators.
+By manipulating the independent variable (tag set) while controlling for other factors, we aim to isolate the effect of different tag generation methods on the quality of tags as perceived by human evaluators.
 
 \subsubsection{Procedure}
 The experiment will be conducted in two stages: \textit{Individual Document Evaluation} and \textit{Document Pair Evaluation}.
@@ -228,7 +229,7 @@ In the first stage, participants will perform two tasks.
 
 The \textit{Intruder Detection Task} will be the first task, which presents participants with a document and a set of tags, including one intruder tag, which they must identify. \textit{Intruder Detection} is a common task in topic modeling studies, where human evaluators are asked to identify the term that does not belong to the topic \cite{chang_reading_2009, newman_evaluating_2010, musil_exploring_2024, lau_machine_2014, bhatia_automatic_2017, hoyle_is_2021}. It does not directly address our research questions but is a standard task in topic modeling evaluation for assessing the coherence of topics.
 
-Following the first task is the \textit{Tag Quality Assessment Task}, where participants will rate each tag on its relevance and generality using 1-5 scales, as well as rate the overall coverage of the tag set. Participants will be prompted to provide additional tags that would improve coverage if they rate the coverage as less than 5.
+Following the first task is the \textit{Tag Quality Assessment Task}, where participants will rate each tag on its relevance and generality using the 1-5 scales, as well as rate the overall coverage of the tag set. Participants will be prompted to provide additional tags that would improve coverage if they rate the coverage as less than 5.
 
 The second stage, \textit{Document Pair Evaluation}, also consists of two tasks.
 
@@ -260,7 +261,7 @@ Correlation analysis will be performed to explore relationships between relevanc
 For the common tag identification task, we will calculate true positive, true negative, false positive, and false negative rates. Inter-rater reliability analysis will be conducted to assess the consistency of ratings across participants. Hypothesis testing will be employed to compare group means, medians or variances, and effect sizes will be calculated to quantify the magnitude of any differences found.
 
 \subsubsection{Ethical considerations}
-All participants will be provided with clear information about the study's purpose and procedures, and their informed consent will be obtained before participation. Data privacy will be ensured by anonymizing and securely storing participant responses.
+All participants will be provided with information about the study's purpose and procedures, and their informed consent about sharing their email will be obtained before participation. Data privacy will be ensured by anonymizing and securely storing participant responses.
 
 The study poses minimal risk to participants as it involves only text evaluation tasks.
 
@@ -272,12 +273,14 @@ The \textit{proposed model} will generate tags with higher relevance scores comp
 
 Furthermore, we anticipate that the shared coverage scores for the proposed model's common tags will be significantly higher than those of the baseline model. We hypothesize a positive correlation between tag relevance and coverage scores. Finally, we expect some inter-rater reliability for tag evaluations, indicating somewhat consistent judgments across participants.
 
+We expect the proposed model to score lower than the human-generated tags on all evaluation criteria, as human-generated tags are considered the gold standard.
+
 These hypotheses will guide our analysis and help us evaluate the effectiveness of the proposed model in generating high-quality, relevant, and comprehensive tags for dataset descriptions.
 
 \subsection{Large-scale automated evaluation}
 \label{sec:large_scale_evaluation}
 
-To complement our human evaluation and to assess the model's performance across a larger number of OpenML datasets, we propose using a large language model (LLM) as a proxy for human evaluators. This approach is inspired by recent literature demonstrating the effectiveness of LLMs in simulating human judgments for certain tasks \cite{musil_exploring_2024}.
+To complement our human evaluation and to assess the model's performance across a larger number of OpenML datasets, we propose using a large language model (LLM) as a proxy for human evaluators. This approach is inspired by recent literature demonstrating the effectiveness of LLMs in simulating human judgments for certain tasks \cite{musil_exploring_2024}, including intruder detection.
 
 We will use an LLM to evaluate all available OpenML dataset descriptions, both with tags generated from the baseline model and tags generated by the proposed model. This automated evaluation will consist of two main tasks.
 
@@ -297,11 +300,9 @@ The results from this automated evaluation will be analyzed in conjunction with 
 \subsection{Limitations}
 Several limitations of this study should be acknowledged. The use of a convenience sample may limit the generalizability of the results. The evaluation of tags involves subjective judgments, which may introduce some variability in the results. The study focuses on a specific set of documents and may not cover all possible domains or types of datasets.
 
-Resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
-
 Additionally, the study provides a snapshot of tag quality but does not assess the long-term quality of the tags. This is important when submodels in the tag generation pipeline are changed, as the quality of the tags may change as well.
 
-Furthermore, while the study aims to provide insights into the model's robustness, the limited scope of the evaluation means that we cannot fully assess the model's performance across all OpenML datasets. This remains an area for potential future research.
+Resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
 
 Although the large-scale automated evaluation will address the robustness limitation, it is not a perfect substitute for human judgment. The results may be influenced by biases in the LLM's training data and may not fully capture the nuances of human evaluation.
 
