@@ -454,6 +454,9 @@ In \cref{sec:tag_generation} and \cref{fig:tag_generation_pipeline}, we presente
     \label{fig:tag_generation_pipeline_specifics}
 \end{figure}
 
+\subsection{Hardware}
+We run the tag generation pipeline, with the exception of the \textit{Prompt Descriptions Human-Readable} step and the \textit{Fine-tune to Extract Tags} step, on an Apple M2 Max MacBook Pro with 64 GB of internal memory. We run the \textit{Prompt Descriptions Human-Readable} step and the \textit{Fine-tune to Extract Tags} step on \href{https://docs.together.ai/docs/introduction}{Together AI}, a platform that offers a cloud-based environment for running large language models.
+
 \subsection{Results}
 We now show the results of the output of the tag generation pipeline. \cref{fig:top_50_frequency} shows the top 50 regular tags by frequency, while \cref{fig:top_50_overarching_frequency} shows the top 50 overarching tags by frequency. We see that the tags are quite diverse, covering a wide range of topics. The regular tags are more specific, while the overarching tags are more general.
 

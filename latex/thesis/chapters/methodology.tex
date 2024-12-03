@@ -2,6 +2,7 @@
 In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. Our methodology consists of four main components: (1) data exploration, preprocessing, and augmentation to prepare the OpenML dataset descriptions, (2) a novel tag generation pipeline that extends BERTopic with large language models and zeroshot classification, (3) automated evaluation using topic coherence, diversity metrics, and baseline comparisons, and (4) human evaluation through a user study complemented by large-scale automated evaluation. We provide a detailed description of each component, along with their limitations and how they address our research questions.
 
 \section{Data exploration, preprocessing and augmentation}
+\label{sec:data_exploration}
 \subsection{Exploratory data analysis}
 First, an exploratory data analysis (EDA) will be conducted to understand the characteristics of the OpenML dataset descriptions. \cref{fig:dataset_examples} shows an example of an OpenML dataset, which includes a dataset name (\texttt{COVID-19-Rio-de-Janeiro-(City)}), a dataset description (\texttt{Context - World Health Organization (WHO)...}), tags (\texttt{Computer Systems, Machine Learning}), and columns (\texttt{Date, Hour, Neighborhood, Cases, Deaths, Recovered}).
 
@@ -59,12 +60,16 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
     \item \textbf{Clustering}: The reduced embeddings are clustered to group similar descriptions together. The output of this step is clusters, which represent our topics. Each cluster contains a set of descriptions (which we now call \textit{representative documents}) that are similar to each other.
     \item \textbf{Bag-of-words}: The descriptions in each cluster are converted to a bag-of-words representation, ignoring common words such as "the", "and", etc.
     \item \textbf{c-TF-IDF}: The bag-of-words representation is used to calculate the c-TF-IDF score for each word in each cluster. This score is used to rank the words in each cluster.
-    \item \textbf{Fine-tune to extract tags}: For each topic, we have representative documents (from the clustering step) and representative words (from the c-TF-IDF step). We prompt engineer a question that asks an LLM to generate tags for each cluster. The generated tags are categorized as \textit{regular tags} and \textit{overarching tags}.
+    \item \textbf{Fine-tune To Extract Tags}: For each topic, we have representative documents (from the clustering step) and representative words (from the c-TF-IDF step). We prompt engineer a question that asks an LLM to generate tags for each cluster. The generated tags are categorized as \textit{regular tags} and \textit{overarching tags}.
 
     \textit{Regular tags} refer to tags that frequently appear among the representative documents and words. \textit{Overarching tags} capture the broader, more general theme of the cluster. For example, if a cluster pertains to \textit{US elections} and the representative documents contain the word \textit{election} while the representative words include \textit{candidate}, a possible regular tag could be \textit{election candidate}, whereas the overarching tag might be \textit{politics}.
 
     As context, we feed the LLM with the top \textit{k} representative documents and the top \textit{m} representative words for each topic. This results in tags that are common among the representative documents and representative words, and hence are representative of the topic.
-    \item \textbf{Zeroshot Text Classifier}: Each description can in reality be contained in multiple clusters (topics) due to the soft clustering performed by HDBSCAN. In this step, we get the top \textit{n} most likely clusters for each description. Then, for each description, we get the tags for each of the top \textit{n} clusters in a set. We feed this set of tags to a zeroshot text classification model, which returns confidences from 0 to 1 for whether each tag describes the description. This step is crucial for filtering out irrelevant tags for each description. For instance, if a description about diabetes and a description about cancer are both contained in the same topic (which may be, for example, "medical conditions"), we want to ensure that the tags for the cancer description are not assigned to the diabetes description. Furthermore, the description about diabetes may be contained in another topic that cancer is not in, such as \textit{nutrition}. In this case, we want to ensure that the tags in \textit{nutrition} are not assigned to the cancer description, but are assigned to the diabetes description.
+    \item \textbf{Zeroshot Text Classifier}: Each description can in reality be contained in multiple clusters (topics) if we use a soft clustering approach such as HDBSCAN. In this step, we get the top \textit{n} most likely clusters for each description. Then, for each description, we get the tags for each of the top \textit{n} clusters in a set. 
+    
+    The advantage provided by this step is that a description can be contained in multiple clusters, and we can get tags for each of these clusters. This is important because a description may contain multiple topics, and we want to ensure that we capture all of them. For instance, we may have a cluster about \textit{politics} and a cluster about \textit{sports}. A description about the Olympics may be contained in both of these clusters, and we want to ensure that we get tags for both of these clusters.
+    
+    We then feed this set of tags to a zeroshot text classification model, which returns confidences from 0 to 1 for whether each tag describes the description. This step is crucial for filtering out irrelevant tags for each description. For instance, if a description about diabetes and a description about cancer are both contained in the same topic (which may be, for example, \textit{medical conditions}), we want to ensure that the tags for the cancer description are not assigned to the diabetes description. Furthermore, the description about diabetes may be contained in another topic that cancer is not in, such as \textit{nutrition}. In this case, we want to ensure that the tags in \textit{nutrition} are not assigned to the cancer description, but are assigned to the diabetes description.
 
 \end{enumerate}
 
@@ -82,6 +87,69 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
     \label{fig:augmented_description_after}
 \end{figure}
 
+\subsection{Rationale}
+In this subsection, we aim to provide a rationale for the proposed model.
+
+\subsubsection{Proposed model}
+We provided our rationale for steps 1 and 2 in \cref{sec:data_exploration}, and for step 3 in \cref{sec:tag_generation}. Steps 4-8 are part of the Base BERTopic model, a well-established topic modeling technique proven effective across various datasets. Hence, we will focus on steps 9 and 10, which are novel contributions to the existing literature.
+
+Without steps 9 and 10, we would need to rely on the c-TF-IDF representation from step 8 to extract tags. For background on c-TF-IDF, the reader may refer to \cref{sec:bag_of_words,sec:topic_representation}. However, this representation has several limitations:
+\begin{itemize}
+    \item It is based on the bag-of-words representation of the descriptions, which may not capture the full semantic meaning of the text. The c-TF-IDF calculation relies on word frequencies in the descriptions, which is a naive way of capturing word importance in the context of topics.
+    \item It depends on the top words in each cluster, which may not always be representative of the topics. For instance, if a cluster's top words are \textit{election} and \textit{candidate}, these words may not capture the broader theme of \textit{politics}.
+\end{itemize}
+
+The LLM helps address these limitations by generating tags that better represent the topics. Trained on a large corpus of text, it can capture semantic relationships between words. By providing the LLM with the top representative documents and words for each cluster, we can prompt it to generate more representative topic tags. The LLM can identify broader themes and generate more descriptive tags, improving tag quality and interpretability for users.
+
+If we only use step 9 and not step 10, we have two significant limitations:
+\begin{itemize}
+    \item We miss the opportunity to capture the multiple topics a description may belong to
+    \item We cannot filter out irrelevant tags for each description, as not all cluster tags may be relevant to every description within that cluster, as illustrated in step 10 of \cref{sec:tag_generation}
+\end{itemize}
+
+Conversely, if we only use step 10 and not step 9, we must rely on the c-TF-IDF representation to extract tags. As discussed, this representation has several limitations, and using it alone may result in lower quality and less representative tags. By combining steps 9 and 10, we leverage the strengths of both approaches to generate tags that are higher quality, more representative, and more relevant to the descriptions.
+
+\subsubsection{Advantages over naive LLM approaches}
+A naive approach would be to simply feed each individual description to an LLM and ask it to extract tags. However, our proposed pipeline offers several key advantages over this approach:
+
+\begin{enumerate}
+    \item \textbf{Contextual Consistency}: By clustering similar descriptions together, our model develops a broader understanding of related topics. This allows it to generate more consistent and contextually relevant tags across similar descriptions. For example, if we have two similar descriptions about image classification using convolutional neural networks, a naive approach might tag one with \textit{CNN} and another with \textit{computer vision}, while our approach would recognize their similarity and consistently apply both relevant tags to both descriptions. A naive approach, analyzing descriptions in isolation, would likely generate inconsistent tags for similar descriptions due to lacking this broader context and varying interpretations of individual texts.
+    
+    \item \textbf{Multi-level Tag Generation}: Our approach generates tags at multiple levels of specificity:
+    \begin{itemize}
+        \item Keyword tags from individual descriptions (step 3)
+        \item Regular tags that are common across cluster members (step 9)
+        \item Overarching tags that capture broader themes (step 9)
+    \end{itemize}
+    A naive LLM approach, working with single descriptions, would likely focus only on explicitly mentioned concepts and miss broader thematic connections.
+    
+    \item \textbf{Cross-validation}: The combination of clustering and zeroshot classification provides a form of cross-validation for tag relevance. Tags are not just extracted from individual descriptions but are validated against similar descriptions within the same cluster and verified through the zeroshot classifier. For example, consider a cluster about time series forecasting where one description briefly mentions \textit{neural networks} as a comparison method. While the LLM might generate \textit{neural networks} as a tag for the cluster, the zeroshot classifier would likely assign it a low confidence score for this specific description since it's not the main focus. This helps filter out noise and improves tag quality. 
+    
+    \item \textbf{Computational Efficiency}: While our pipeline uses LLMs, it does so more efficiently by processing clusters rather than individual descriptions. In a naive approach, we would need $n$ LLM calls for $n$ descriptions, while our clustering approach requires only $k$ calls, where $k$ is the number of clusters (typically $k < n/2$ or even $k < n/3$, depending on the clustering parameters). This significantly reduces the number of LLM calls needed, particularly for large datasets with many similar descriptions. For large clusters, we can further optimize token usage by selecting only the most representative documents (e.g., using 50 instead of all 80 descriptions in a cluster) while still maintaining the cluster's semantic meaning through the remaining representative descriptions. Similarly, we can truncate individual description lengths while preserving the overall topic through the collective context of the cluster. In contrast, with a naive LLM approach, truncating or dropping parts of individual descriptions would likely result in lost context and lower quality tags, as each description is processed in isolation without the benefit of related documents providing additional context.
+
+\end{enumerate}
+
+\subsubsection{Alternative configurations}
+The pipeline described in \cref{fig:tag_generation_pipeline} is one possible configuration for extracting tags from the OpenML dataset descriptions, which we believe will yield high-quality tags. However, this pipeline may be computationally expensive due to the use of large language models and zeroshot text classifiers. To address this issue, we can consider alternative configurations that are more computationally efficient but may sacrifice some quality in tag generation.
+
+\begin{enumerate}
+    \item \textbf{Simpler Models}: We could use a simpler/smaller LLM for step 9 (tag generation) or a more lightweight zeroshot text classifier \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024} for step 10 (tag filtering) to reduce computational cost. 
+    
+    Alternatively, the zeroshot classifier could be entirely replaced with a cheaper LLM. However, the confidence scores that the LLM outputs may not be as accurate as those from the zeroshot classifier, which could result in lower tag quality by assigning irrelevant tags to descriptions or missing relevant tags.
+    
+    \item \textbf{Pipeline Modification}: Depending on computational constraints, we could modify the pipeline to use only the most essential steps. For instance:
+    \begin{itemize}
+        \item Removing the zeroshot classifier and relying solely on the LLM
+        \item Using the zeroshot classifier without the LLM
+    \end{itemize}
+    However, we expect that eliminating either component would significantly reduce tag quality, so we do not recommend this approach.
+    
+    \item \textbf{Skip Description Rewriting}: We could omit step 3, which involves rewriting augmented descriptions to be more human-readable. While this step enhances embedding quality and, consequently, tag quality, it is computationally expensive. If computational constraints become an issue, removing this step offers a reasonable trade-off.
+    
+    \item \textbf{Combined Generation and Filtering}: Instead of using a separate zeroshot classifier, we could modify the fine-tuning step (step 9) to simultaneously generate and filter tags. This approach would generate tags for a cluster and assign them to each description in one step. However, this would skip getting the top \textit{n} most likely clusters for each description, which could result in missing relevant tags for descriptions that belong to multiple clusters, thus reducing tag quality.
+\end{enumerate}
+
+We recommend maintaining the complete pipeline for initial evaluation to ensure high-quality tags, and only exploring these alternative configurations if computational constraints become problematic.
 
 \section{Automated evaluation metrics and baselines}
 \label{sec:automated_evaluation}

@@ -370,6 +370,7 @@ Points that do not belong to any cluster are labeled as \textit{noise} or \texti
 HDBSCAN also supports a \textit{soft clustering} mode, where instead of assigning a hard cluster label to each point, the algorithm calculates a \textit{membership probability} for each point to belong to a cluster. This is particularly useful in applications like topic modeling, where a document may belong to multiple topics. The membership probability $p(x_j \in C_i)$ for a point $x_j$ to cluster $C_i$ is derived from the distance and density estimates, allowing for more flexible cluster assignments.
 
 \subsection{Bag-of-words}
+\label{sec:bag_of_words}
 
 Before creating topic representations in BERTopic, it is necessary to select a technique that supports the algorithm's modular nature, and does not make assumptions about the data. When using HDBSCAN, we assume that clusters may vary in density and shape, indicating that techniques based on centroid models may not be suitable. The desired method should ideally make minimal assumptions about the cluster structures.
 
@@ -410,6 +411,7 @@ To illustrate how topic representations can be constructed using a bag-of-words 
 \end{table}
 
 \subsection{Topic representation}
+\label{sec:topic_representation}
 From the generated bag-of-words representation, our goal is to identify what distinguishes one cluster from another. Specifically, we want to determine which words are characteristic of a particular cluster (e.g., cluster 1) but less common in other clusters. To achieve this, we need to modify the traditional TF-IDF such that it operates at the cluster level, treating clusters as topics instead of individual documents.
 
 The classic TF-IDF \cite{joachims_probabilistic_1997} method combines term frequency and inverse document frequency to calculate a weight $W_{t,d}$ for term $t$ in document $d$ as follows:
