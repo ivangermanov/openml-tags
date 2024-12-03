@@ -481,8 +481,8 @@ For example, in the case of the input text \textit{"The economy is improving rap
 
 In their recent work, \citet{laurer_building_2024} propose an efficient approach to zeroshot text classification using NLI as a universal task. They demonstrate that NLI can be leveraged to generalize across a wide range of classification tasks, such as topic classification, sentiment analysis, and stance detection. By training a universal classifier on a combination of NLI datasets and non-NLI classification datasets, they achieve significant improvements in zeroshot performance, with a 9.4\% increase compared to NLI-only models. Their approach capitalizes on the ability to verbalize classification labels as hypotheses, allowing the model to determine which hypothesis is most consistent with the input text. This method not only improves classification flexibility but also reduces the need for task-specific fine-tuning, making it applicable to diverse applications.
 
-\subsection{Evaluation metrics}
-
+\section{Evaluation metrics}
+\label{sec:evaluation_metrics}
 According to \citet{abdelrazek_topic_2022}, topic models, which are applicable across a variety of domains, can undergo evaluation through two distinct approaches: extrinsic and intrinsic. Extrinsic evaluation assesses performance based on the specific domain of application, whereas intrinsic evaluation focuses on the qualities of the generated topics themselves, independent of any domain. This makes intrinsic evaluation more universally applicable. The various models are distinguished by their simplicity, computational efficiency, and underlying assumptions, which influence their performance across different corpora and applications. However, there is a lack of agreement on the criteria for evaluating topic models, and multiple methods exist for evaluating the same quality.
 
 \citet{abdelrazek_topic_2022} highlight a range of criteria for evaluating topic models, including quality, interpretability, stability, diversity, efficiency, and flexibility, as illustrated in \cref{fig:evaluation_criteria}. We will focus on quality, interpretability, and diversity, given their relevance to our specific use case.
@@ -510,7 +510,7 @@ According to \citet{abdelrazek_topic_2022}, topic models, which are applicable a
     \label{fig:evaluation_criteria}
 \end{figure}
 
-\subsubsection{Quality and Perplexity}
+\subsection{Quality and Perplexity}
 
 Perplexity measures a model's ability to reproduce the documents in a corpus using the learned topics. It evaluates the model's predictive ability rather than its ability to uncover the latent structure, indicating how effectively the model explains the data. A lower perplexity suggests a model is more effective in explaining the observed documents, as it implies a higher information gain from predicting the outcome of the random variable.
 
@@ -518,7 +518,7 @@ However, using perplexity as an evaluation metric for our use case has several d
 
 Additionally, perplexity has not been found to be correlated with human judgment \cite{chang_reading_2009}. Furthermore, non-generative models like NMF do not have a defined perplexity score because they do not provide probabilities of word sequences.
 
-\subsubsection{Interpretability and Topic coherence}
+\subsection{Interpretability and Topic coherence}
 \label{sec:topic_coherence}
 
 A topic is defined as a discrete distribution over words, with the expectation that this word set is interpretable by humans. For interpretability, the words generated should collectively convey a single semantic meaning. Topic coherence metrics evaluate how related the top-k words of a topic are to one another.
@@ -541,15 +541,15 @@ Additionally, a known trade-off exists between coherence and perplexity \cite{ch
 
 Many authors contend that the field of topic modeling has largely converged on coherence as the primary evaluation metric \cite{doogan_topic_2021, hoyle_is_2021, mimno_optimizing_nodate, lau_machine_2014}. This is because coherence is more closely aligned with human judgment, making it a more reliable measure for evaluating topic models. However, these authors also acknowledge that coherence is not without limitations and advocate for more human evaluations, as well as the development of new metrics that better capture the complexities of topic models, particularly modern neural topic models.
 
-\subsubsection{Topic diversity}
+\subsection{Topic diversity}
 \label{sec:topic_diversity}
 Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
 
-\subsubsection{Silhouette score}
+\subsection{Silhouette score}
 \label{sec:silhouette_score}
 Silhouette score \cite{shahapure_cluster_2020} is a metric used to evaluate the quality of clusters in unsupervised learning. It measures how similar an object is to its own cluster compared to other clusters. The silhouette score ranges from -1 to 1, where a score closer to 1 indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters. Conversely, a score closer to -1 suggests that the object is poorly matched to its own cluster and well matched to neighboring clusters. A score of 0 indicates that the object is on the boundary between two clusters.
 
-\subsubsection{Classification evaluation metrics}
+\subsection{Classification evaluation metrics}
 
 The evaluation metrics discussed previously pertain to topic modeling as an unsupervised learning task. In our case, we treat the topic modeling of OpenML datasets as an unsupervised problem. However, if ground truth labels exist, the evaluation of topic models can be approached as a classification problem. Beyond well-known metrics such as accuracy, precision, recall, and F1 score, coverage and purity would also be considered \cite{churchill_evolution_2022}.
 
@@ -557,7 +557,7 @@ Coverage examines the extent to which the concepts within the document collectio
 
 When ground truth topics are missing, alternative metrics like purity are used. Purity measures the model's accuracy under the assumption that documents are always assigned to the dominant topic. This metric aims to penalize models that assign a large number of low probability topics to documents, in contrast to models that assign a high probability to a single topic from the document corpus.
 
-\subsubsection{OCTIS}
+\subsection{OCTIS}
 \label{sec:octis}
 OCTIS (Optimizing and Comparing Topic models Is Simple) \cite{terragni_octis_2021} is an open-source framework for the training, analysis, and comparison of topic models across various datasets and evaluation metrics.
 

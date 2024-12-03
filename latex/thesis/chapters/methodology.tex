@@ -1,24 +1,45 @@
 \label{sec:methodology}
-In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. We also cover our data exploration and preprocessing steps, the hyperparameter tuning process, and the automated and human evaluation methods and metrics we have chosen.
+In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. Our methodology consists of four main components: (1) data exploration, preprocessing, and augmentation to prepare the OpenML dataset descriptions, (2) a novel tag generation pipeline that extends BERTopic with large language models and zeroshot classification, (3) automated evaluation using topic coherence, diversity metrics, and baseline comparisons, and (4) human evaluation through a user study complemented by large-scale automated evaluation. We provide a detailed description of each component, along with their limitations and how they address our research questions.
 
 \section{Data exploration, preprocessing and augmentation}
 \subsection{Exploratory data analysis}
-First, an exploratory data analysis (EDA) will be conducted to understand the characteristics of the OpenML dataset descriptions. This analysis will be unstructured, discovering patterns in the data in an exploratory manner, using statistical and visual methods. The goal of the EDA is to gain insights into the dataset descriptions, such as their length, vocabulary, distribution of words, etc. This information will help us understand the nature of the data and identify any preprocessing steps that may be necessary to improve the quality of the descriptions.
+First, an exploratory data analysis (EDA) will be conducted to understand the characteristics of the OpenML dataset descriptions. \cref{fig:dataset_examples} shows an example of an OpenML dataset, which includes a dataset name (\texttt{COVID-19-Rio-de-Janeiro-(City)}), a dataset description (\texttt{Context - World Health Organization (WHO)...}), tags (\texttt{Computer Systems, Machine Learning}), and columns (\texttt{Date, Hour, Neighborhood, Cases, Deaths, Recovered}).
+
+This analysis will be unstructured, discovering patterns in the data in an exploratory manner, using statistical and visual methods. The goal of the EDA is to gain insights into the dataset descriptions, such as their length, vocabulary, distribution of words, etc. This information will help us understand the nature of the data and identify any preprocessing steps that may be necessary to improve the quality of the descriptions.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Dataset information]{\includegraphics[width=0.49\textwidth]{figures/dataset_example.png}\label{fig:dataset_example}}
+    \hfill
+    \subfloat[Dataset columns]{\includegraphics[width=0.49\textwidth]{figures/dataset_example_features.png}\label{fig:dataset_example_features}}
+    \caption{OpenML dataset example}
+    \label{fig:dataset_examples}
+\end{figure}
 
 \subsection{Data preprocessing}
-After the EDA, the dataset descriptions will undergo preprocessing to prepare them for the topic modeling process. This preprocessing may involve steps such as stemming, lemmatization, stop-word removal, and tokenization. These steps are important to ensure that the descriptions are in a suitable format for the topic modeling algorithms.
+After the EDA, the dataset descriptions will undergo preprocessing to prepare them for the topic modeling process. For traditional topic models like LDA and NMF, which rely on sparse representations of text (e.g., bag-of-words or TF-IDF) and do not inherently understand semantic relationships between words, several preprocessing steps are necessary:
+
+\begin{itemize}
+    \item Stemming and lemmatization: These reduce words to their root or base form (e.g., \textit{running} to \textit{run}), ensuring that different forms of the same word are treated as identical. This is important for models that treat words as discrete tokens, as it helps capture true word frequencies.
+    \item Stop-word removal: Common words like \textit{the}, \textit{and}, \textit{is} are removed as they carry little semantic meaning and can dominate frequency-based representations.
+    \item Tokenization: Text is split into individual tokens (words or subwords), creating the discrete units that these models operate on.
+\end{itemize}
+
+Modern embedding-based models like Top2Vec and BERTopic typically do not require these preprocessing steps, as they use embedding models that can capture semantic meaning and handle word variations naturally.
 
 \subsection{Data augmentation}
-In addition to the original dataset descriptions, we will explore the possibility of augmenting the data with additional information. This could include metadata such as dataset name, tags, features (column names), scraping from the original dataset if available, etc. This additional information can provide context and background to the descriptions, which may help improve the quality of the topics extracted by the topic model.
+In addition to the original dataset descriptions, we will explore the possibility of augmenting the data with additional information. This could include metadata such as dataset name, tags, features (column names), scraping from the original dataset if available. This additional information can provide context and background to the descriptions, which may help improve the quality of the topics extracted by the topic model.
 
 \section{Tag generation}
 \label{sec:tag_generation}
-In this subsection, we introduce our model, which is, in fact, a pipeline comprising multiple submodels and techniques. Steps 1-3 involve data preprocessing to prepare the data for the model. Steps 5-8 are referred to as the \textit{Base BERTopic model}. It includes dimensionality reduction, clustering, bag-of-words and c-TF-IDF. Finally, steps 9 and 10 represent our improvements to the base model, introducing an approach that, to the best of our knowledge, is novel within the literature. Additionally, we provide an explanation of which steps are computationally efficient and which are more expensive.
+In this subsection, we introduce our model, which is, in fact, a pipeline comprising multiple submodels and techniques. We shall henceforth refer to this pipeline as our \textit{proposed model}.
+
+Steps 1-3 involve data preprocessing to prepare the data for the proposed model. We shall refer to steps 5-8 as the \textit{Base BERTopic model}. It includes dimensionality reduction, clustering, bag-of-words and c-TF-IDF. Finally, steps 9 and 10 represent our improvements to the base model, introducing an approach that, to the best of our knowledge, is novel within the literature. Additionally, we provide an explanation of which steps are computationally efficient and which are more expensive.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figures/tag_generation_pipeline.pdf}
-    \caption{Tag generation pipeline}
+    \caption{Tag generation pipeline (\textit{proposed model})}
     \label{fig:tag_generation_pipeline}
 \end{figure}
 
@@ -30,6 +51,8 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
     \item \textbf{Prompt Descriptions Human-Readable}: Augmented descriptions are rewritten to be more human-readable via an LLM and prompt engineering. This is because the original descriptions are often in a technical format that is not easily interpretable by humans. Since LLMs are trained on large text corpora, they work best with human-readable (natural language) text.
     
     Additionally, we design the prompt to extract \textit{keyword tags} from each individual description. These tags are directly mentioned within the description and are typically highly specific to it. For instance, if a description includes the terms "US elections," "voting," and "candidates," these would be considered keyword tags.
+
+    \cref{fig:augmented_description_before,fig:augmented_description_after} show an example of an augmented description before and after the augmentation and rewriting process.
 
     \item \textbf{Create Embeddings}: Embeddings for each description are created using a pre-trained embedding model.
     \item \textbf{Dimensionality Reduction}: The dimensionality of the embeddings is reduced to cure the curse of dimensionality.
@@ -45,14 +68,30 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
 
 \end{enumerate}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/augmented_description_before.png}
+    \caption{Augmented dataset description example (before)}
+    \label{fig:augmented_description_before}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/augmented_description_after.png}
+    \caption{Augmented dataset description example (after)}
+    \label{fig:augmented_description_after}
+\end{figure}
+
 
 \section{Automated evaluation metrics and baselines}
 \label{sec:automated_evaluation}
-In order to evaluate the quality of the extracted topics, we will use a combination of automated evaluation metrics and baselines. These metrics and baselines will help us assess the performance of our model and compare it to existing topic modeling techniques. The following sections provide an overview of the metrics and baselines we will use in our evaluation.
+In order to evaluate the quality of the extracted topics, we will use a combination of automated evaluation metrics and comparison with baselines. These metrics and baselines will help us assess the performance of our model and compare it to existing topic modeling techniques. The following sections provide an overview of the metrics and baselines we will use in our evaluation.
 
 \subsection{Metrics}
+From the range of possible evaluation metrics for topic models — including quality, interpretability, stability, diversity, efficiency, and flexibility — we focus on three metrics that are most relevant to our use case and are supported by literature, as explained in \cref{sec:evaluation_metrics}. Most of the remaining metrics appear infrequently in the literature and will not be included in our evaluation. Among our selected metrics, all except the silhouette score are widely adopted in topic modeling research. However, as discussed in \cref{sec:evaluation_metrics}, these commonly used metrics have significant limitations \cite{doogan_topic_2021, hoyle_is_2021}, especially when it comes to newer topic modeling approaches such as neural models. Therefore, their results should be interpreted with caution.
+
 \subsubsection{Topic coherence}
-As explained in \cref{sec:topic_coherence}, topic coherence is a widely used metric for evaluating the quality of topics generated by topic models. It measures the semantic similarity between words in a topic and is based on the assumption that coherent topics contain words that are related to each other. We will use topic coherence to assess the quality of the topics extracted by our model.
+As explained in \cref{sec:topic_coherence}, topic coherence is a widely used metric for evaluating the quality of topics generated by topic models. It measures the semantic similarity between words in a topic and is based on the assumption that coherent topics contain words that are related to each other. As explained in \cref{sec:evaluation_metrics}, topic coherence has been shown to correlate with human judgment, so we will use it to assess the cohesion of the topics extracted by our model.
 
 \subsubsection{Topic diversity}
 Topic diversity (\cref{sec:topic_diversity}) is another important metric for evaluating topic models. It measures the extent to which topics are distinct from each other and do not overlap in terms of the words they contain. A diverse set of topics ensures that the model captures a wide range of themes and concepts present in the data. We will use topic diversity to evaluate the diversity of topics generated by our model.
@@ -61,7 +100,13 @@ Topic diversity (\cref{sec:topic_diversity}) is another important metric for eva
 The silhouette score (\cref{sec:silhouette_score}) is a metric used to evaluate the quality of clusters in unsupervised learning. It measures how similar an object is to its own cluster (cohesion) compared to other clusters (separation). A high silhouette score indicates that the clusters are well-separated and that the objects within each cluster are similar to each other. We will use the silhouette score to evaluate the quality of the clusters generated by our model.
 
 \subsection{Baselines}
-In addition to the proposed topic model, we will compare its performance against several baseline models. These baselines represent established or commonly used topic modeling techniques and will serve as a point of reference for evaluating the proposed model. The baselines we will consider include Latent Dirichlet Allocation (LDA), Non-negative Matrix Factorization (NMF), and Top2Vec (described in \cref{sec:latent_dirichlet_allocation,sec:non-negative_matrix_factorization,sec:top2vec}), and Contextualized Topic Models (CTM) \cite{bianchi_pre-training_2021, bianchi_cross-lingual_2021} which are a less popular, but still effective topic modeling approach. These models are widely used in the field of topic modeling and will provide a benchmark for evaluating the performance of our model.
+In addition to the proposed model, we will compare the performance of the Base BERTopic model against several \textit{baseline models}. These baselines represent established or commonly used topic modeling techniques and will serve as a point of reference for evaluating the proposed model. 
+
+It is important to note that only the Base BERTopic model can and will be evaluated using the automated evaluation metrics, not the whole pipeline. There are two reasons for this limitation. First, the proposed model is a pipeline that includes several submodels and techniques, making it difficult to evaluate the pipeline as a whole using automated metrics due to resource constraints. Second, coherence and diversity metrics are not directly applicable to the proposed model, as it generates tags rather than topics. Therefore, automated evaluation metrics will be used only up to the Base BERTopic model (step 8 in \cref{fig:tag_generation_pipeline}).
+
+Additionally, BERTopic, on its own, automatically determines the final number of clusters (topics) based on the data, which is a significant advantage over traditional topic modeling techniques that require the number of topics to be specified in advance. However, when comparing the Base BERTopic model to baselines, we will use the same number of topics for all models to ensure a fair comparison. We do this by taking the clusters generated by BERTopic, and reducing them to the same number of topics as the baselines by merging clusters based on their similarity until the desired number of topics is reached. It is important to note that this process may result in a loss of information, as the original clusters may contain more nuanced distinctions than the merged topics, thus potentially disadvantaging BERTopic in the comparison.
+
+The baselines we will consider include Latent Dirichlet Allocation (LDA), Non-negative Matrix Factorization (NMF), and Top2Vec (described in \cref{sec:latent_dirichlet_allocation,sec:non-negative_matrix_factorization,sec:top2vec}), and Contextualized Topic Models (CTM) \cite{bianchi_pre-training_2021, bianchi_cross-lingual_2021} which are a less popular, but still effective topic modeling approach. These models are widely used in the field of topic modeling and will provide a benchmark for evaluating the performance of our model.
 
 \subsection{Automated evaluation pipeline}
 
@@ -71,15 +116,15 @@ In addition to the proposed topic model, we will compare its performance against
 
     \item \textbf{Data Fetching}: This is the first stage where dataset descriptions are downloaded from OpenML.
 
-    \item \textbf{Data Preparation}: After fetching the data, the next step involves preparing it. This includes removing noise, correcting errors, augmenting it, and standardizing the format to prepare it for analysis. Data preparation ensures that the input to the topic model is of high quality, which is important for the success of the subsequent modeling steps. \\ The next step involves removing inadequate data points such as duplicates. Stop words are removed for models that require it (e.g., LDA). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
+    \item \textbf{Data Preparation}: After fetching the data, the next step involves preparation by preprocessing and augmenting it. Data preparation ensures that the input to the topic model is of high quality, which is important for the success of the subsequent modeling steps. \\ The next step involves removing inadequate data points such as duplicates. Stop words are removed for models that require it (e.g., LDA, NMF). Additionally, the process includes stemming and lemmatization to normalize words to their base forms.
 
-    \item \textbf{Topic Model}: In this step, the proposed topic model is applied to the prepared data. In this case, it will be BERTopic. We refer to it as the \textit{Base BERTopic model}.
+    \item \textbf{Topic Model}: In this step, the Base BERTopic model is applied to the prepared data.
 
-    \item \textbf{Benchmark Models}: Concurrently with the proposed topic model, benchmark models are run. These models represent established or baseline approaches to topic modeling against which the performance of the proposed topic model is compared.
+    \item \textbf{Benchmark Models}: Concurrently with the Base BERTopic model, benchmark models are run. These models represent established or baseline approaches \cite{grootendorst_bertopic_2022, blei_latent_2001, shahnaz_document_2006, kasiviswanathan_emerging_2011, yan_learning_2013, angelov_top2vec_2020, bianchi_pre-training_2021, bianchi_cross-lingual_2021} to topic modeling against which the performance of the proposed topic model is compared.
 
-    \item \textbf{Topic Labels}: The output from both the topic model and the benchmark models are sets of topics, represented by a cluster of words that are characteristic of a particular topic.
+    \item \textbf{Topic Labels}: The output from both the Base BERTopic model and the benchmark models are sets of topics, represented by a cluster of words that are characteristic of a particular topic.
 
-    \item \textbf{Evaluation}: Finally, the performances of the proposed topic model and benchmark models are evaluated. This includes comparing the topic coherence, diversity and silhouette score.
+    \item \textbf{Evaluation}: Finally, the performances of the Base BERTopic model and benchmark models are evaluated. This includes comparing the topic coherence, diversity and silhouette score.
 
 \end{enumerate}
 
@@ -92,9 +137,9 @@ In addition to the proposed topic model, we will compare its performance against
 
 \subsection{Hyperparameter tuning}
 \label{sec:hyperparameter_tuning}
-As mentioned in \cref{sec:octis}, we will use Bayesian optimization to tune the hyperparameters of our \textit{Base BERTopic model}. This process will involve selecting the most relevant hyperparameters to optimize, defining the search space for each hyperparameter, and running the optimization algorithm to find the best combination of hyperparameters. The goal of hyperparameter tuning is to improve the performance of our model by finding the settings for the hyperparameters which are close to optimal.
+As mentioned in \cref{sec:octis}, we will use Bayesian optimization to tune the hyperparameters of our Base BERTopic model. This process will involve selecting the most relevant hyperparameters to optimize, defining the search space for each hyperparameter, and running the optimization algorithm to find the best combination of hyperparameters. The goal of hyperparameter tuning is to improve the performance of our model by finding the settings for the hyperparameters which are close to optimal.
 
-As a metric to optimize, we will define a custom weighted metric which includes the topic coherence score and topic diversity score.
+As a metric to optimize, we will define a custom weighted metric which includes the topic coherence score (NPMI) and topic diversity score. We do not include the silhouette score in the weighted metric as it is positively correlated with the topic coherence score, since both metrics indirectly measure cluster quality, and we do not want to overweight the coherence score. Conversely, the diversity score is negatively correlated with the coherence score (i.e., more diverse topics are less coherent, since they contain fewer semantically related words), so we want to ensure that both metrics contribute meaningfully to the final score. The weighted metric is defined as:
 
 Let \( C \) represent the topic coherence score normalized between \([-1, 1]\), and \( D \) represent the topic diversity score normalized between \([0, 1]\). The normalized scores are given by:
 
@@ -122,7 +167,7 @@ The log transformation is applied to both the coherence and diversity scores for
 
 The weights \( w_C \) and \( w_D \) are introduced to provide flexibility in balancing the relative importance of coherence and diversity. Depending on the evaluation goals, one may prioritize more coherent topics or more diverse topics. The weights ensure that both metrics contribute meaningfully to the final score, preventing one from overshadowing the other. This allows for fine-tuning of the metric based on the specific requirements of the task or dataset being modeled.
 
-By maximizing the weighted metric, we aim to find the hyperparameters that produce the most coherent and diverse topics. The hyperparameters we will tune include the number of topics, the parameters of the dimensionality reduction algorithm, the clustering algorithm, etc.
+By maximizing the weighted metric, we aim to find the hyperparameters that produce the most coherent and diverse topics. The hyperparameters we will tune include the number of topics, the parameters of the dimensionality reduction algorithm, the clustering algorithm, and other hyperparameters which will be explicitly defined in \cref{sec:automated_evaluation}.
 
 \subsection{Limitations}
 It is important to note that the automated evaluation metrics and baselines have their limitations. Automated metrics such as topic coherence and diversity provide a quantitative measure of topic quality but may not fully capture the nuances of human judgment. These metrics are based on statistical properties of the topics and may not always align with human perceptions, even though they are widely used in the literature. We already mentioned the limitations of these metrics in \cref{sec:topic_coherence}.
@@ -154,8 +199,8 @@ We will begin by recruiting participants for the user study. Given that particip
 The study will utilize selected OpenML dataset descriptions as texts. Three separate surveys will be created, each containing the same set of texts but with different sets of tags:
 
 \begin{enumerate}
-\item A survey with tags generated by the \textit{proposed model}.
-\item A survey with tags generated by the \textit{baseline model}. As a baseline, we will use the tags generated by the Bayesian optimization-tuned BERTopic model without the additional steps introduced in the proposed model. This will allow for a direct comparison of the proposed model's performance against an established approach to tag generation.
+\item A survey with tags generated by the \textit{proposed model} (\cref{sec:tag_generation}).
+\item A survey with tags generated by the \textit{baseline model}. As a baseline, we will use the tags generated by the Bayesian optimization-tuned Base BERTopic model (\cref{sec:tag_generation}). This will allow for a direct comparison of the proposed model's performance against an established approach to tag generation. We choose to use it as a baseline, since BERTopic has SOTA results in the literature, and we have optimized it using Bayesian optimization.
 \item A survey with \textit{human-generated tags}.
 \end{enumerate}
 
@@ -193,7 +238,7 @@ Example: A document about Covid-19 Biotechnology Companies with tags \textit{Cov
 Example: For datasets about Covid-19 Biotechnology Companies and Covid-19 World Vaccination Progress, common tags might include \textit{Covid-19}, \textit{Virus}, \textit{Medicine} (but not \textit{Biotechnology} or \textit{Vaccinations}).
 \end{itemize}
 
-The goal is to measure relevance and coverage (higher is better), and to assess the distribution of generality (a large standard deviation is desirable, indicating a good mix of specific and general tags). Shared coverage aims to evaluate the model's ability to capture common themes across related documents, which is important for dataset discoverability.
+The goal is to measure relevance and coverage (higher is better), and to assess the distribution of generality. For generality, a low or high score is unimportant. What is important is having a larger standard deviation and a balanced distribution, indicating a good mix of specific and general tags, since we want the specific tags to capture the details of the document, connecting it with other documents that are highly similar, and the general tags to connect it with documents on a broader level. Shared coverage aims to evaluate the model's ability to capture common themes across related documents, which is important for dataset discoverability.
 
 
 \subsubsection{Variables}
@@ -269,7 +314,7 @@ The study poses minimal risk to participants as it involves only text evaluation
 \subsubsection{Hypotheses}
 We propose the following hypotheses for this study:
 
-The \textit{proposed model} will generate tags with higher relevance scores compared to the baseline model. We expect to see a more balanced distribution of general and specific tags from the proposed model compared to the baseline model. The coverage scores for the proposed model's tag sets are hypothesized to be significantly higher than those of the baseline model.
+The \textit{proposed model} will generate tags with higher relevance scores compared to the baseline model. We expect to see a more balanced distribution with a larger standard deviation on generality from the proposed model compared to the baseline model, indicating a good mix of specific and general tags. The coverage scores for the proposed model's tag sets are hypothesized to be significantly higher than those of the baseline model.
 
 Furthermore, we anticipate that the shared coverage scores for the proposed model's common tags will be significantly higher than those of the baseline model. We hypothesize a positive correlation between tag relevance and coverage scores. Finally, we expect some inter-rater reliability for tag evaluations, indicating somewhat consistent judgments across participants.
 
@@ -300,9 +345,9 @@ The results from this automated evaluation will be analyzed in conjunction with 
 \subsection{Limitations}
 Several limitations of this study should be acknowledged. The use of a convenience sample may limit the generalizability of the results. The evaluation of tags involves subjective judgments, which may introduce some variability in the results. The study focuses on a specific set of documents and may not cover all possible domains or types of datasets.
 
-Additionally, the study provides a snapshot of tag quality but does not assess the long-term quality of the tags. This is important when submodels in the tag generation pipeline are changed, as the quality of the tags may change as well.
+Additionally, the study provides a snapshot of tag quality at the time of conducting the study. The study evaluates the quality of the tags generated by the proposed model with the chosen hyperparameters and submodels, meaning that the results may not be generalizable to other configurations of the model. For instance, changing the embedding model at Step 4 (\cref{sec:tag_generation}) may impact the quality of the tags downstream, or changing the LLM in the fine-tuning step (step 9) may affect the types of tags that are generated. Since it is not feasible to evaluate all possible configurations in a human study due to resource constraints, the results may not fully capture the model's performance across all possible configurations.
 
-Resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
+To add, resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
 
 Although the large-scale automated evaluation will address the robustness limitation, it is not a perfect substitute for human judgment. The results may be influenced by biases in the LLM's training data and may not fully capture the nuances of human evaluation.
 
