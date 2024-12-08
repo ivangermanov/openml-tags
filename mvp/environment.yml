@@ -1,0 +1,15 @@
+name: mvp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.15
+  - pip=24.3.1
+  - pip:
+    - bertopic[spacy]==0.16.4
+    - openml==0.15.0
+    - python-dotenv==1.0.1
+    - numpy
+    - pandas
+    - tiktoken
+    - openai
