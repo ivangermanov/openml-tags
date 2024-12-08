@@ -1,0 +1,404 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43601
+
+Name: Daily-Wheat-Price
+
+Tags: 
+
+Context
+Last time I built an LSTM price prediction for Corn, but the result is not satisfactory. I would like to try other algorithm and data. So I decided to use Wheat price for the exercise. And this time the data is more in length of time (9 years).
+Content
+The daily wheat dataset is from 2009-10-14 to 2018-03-12. It is downloaded from investing.com or Quantapi also have a API for it. 
+Acknowledgements
+https://www.investing.com/commodities/us-wheat
+
+https://quantapi.co/
+Inspiration
+To the extent that you can find ways where you're making predictions, there's no substitute for testing yourself on real-world situations that you don't know the answer to in advance. 
+Nate Silver
+
+Features: date, open, high, low, close
+---
+- ID: 43563
+
+Name: Digital-currency---Time-series
+
+Tags: 
+
+Context
+Howdy folks! 
+I have prepared a starter dataset for time series practice. This is my 1st upload. Any questions/feedback are welcome. 
+Content
+
+The data was prepared using Alpha Vantage API
+The data represents historical daily time series for a digital currency (BTC) traded on the Saudi market (SAR/Sudi Riyal)
+Prices and volumes are quoted in both SAR  USD.
+Data date range: 2018-05-11 to 30.01.2021
+
+Task: Use the past to predict the future!
+
+Check Tasks tab
+
+Acknowledgements
+Special thanks to all my instructors and friends at GA.
+
+Features: Unnamed:_0, open_SAR, open_USD, high_SAR, high_USD, low_SAR, low_USD, close_SAR, close_USD, volume
+---
+- ID: 43779
+
+Name: Bitcoin-Stock-Data
+
+Tags: 
+
+Context
+This Dataset contains the value of the Bitcoin stock from 14th September 2014 till Date 
+Content
+It is a very simple dataset to both explore and understand the columns are themselves descriptive in nature
+Acknowledgements
+SOURCE:
+https://yahoofinance.com/ 
+Inspiration
+Just Explore the dataset, practice your skills using this really simple real world dataset
+License
+CC0: Public domain
+
+Features: Date, Open, High, Low, Close, Adj_Close, Volume
+---
+- ID: 43391
+
+Name: Ethereum-Cryptocurrency-Historical-Dataset
+
+Tags: 
+
+Context
+Ethereum a decentralized, open-source blockchain featuring smart contract functionality was proposed in 2013 by programmer Vitalik Buterin. Development was crowdfunded in 2014, and the network went live on 30 July 2015, with 72 million coins premined. 
+Some interesting facts about Ethereum(ETH):
+
+Ether (ETH) is the native cryptocurrency of the platform. It is the second-largest cryptocurrency by market capitalization, after Bitcoin. Ethereum is the most actively used blockchain.
+Some of the worlds leading corporations joined the EEA(Ethereum Alliance, is a collaboration of many block start-ups) and supported further development. Some of the most famous companies are Samsung SDS, Toyota Research Institute, Banco Santander, Microsoft, J.P.Morgan, Merck GaA, Intel, Deloitte, DTCC, ING, Accenture, Consensys, Bank of Canada, and BNY Mellon.
+
+Content
+The dataset consists of ETH prices from March-2016 to the current date(1813 days) and the dataset will be updated on a weekly basis. 
+Information regarding the data
+The data totally consists of 1813 records(1813 days) with
+---
+- ID: 43336
+
+Name: Complete-Cryptocurrency-Market-History
+
+Tags: 
+
+Cryptocurrencies
+Cryptocurrencies are fast becoming rivals to traditional currency across the world. The digital currencies are available to purchase in many different places, making it accessible to everyone, and with retailers accepting various cryptocurrencies it could be a sign that money as we know it is about to go through a major change.
+In addition, the blockchain technology on which many cryptocurrencies are based, with its revolutionary distributed digital backbone, has many other promising applications. Implementations of secure, decentralized systems can aid us in conquering organizational issues of trust and security that have plagued our society throughout the ages. In effect, we can fundamentally disrupt industries core to economies, businesses and social structures, eliminating inefficiency and human error.
+Content
+The dataset contains all historical daily prices (open, high, low, close) for all cryptocurrencies listed on CoinMarketCap.
+Acknowledgements
+
+Every Cryptocurrency Daily Market Price - I initially developed kernels for this dataset before making my own scraper and dataset so that I could keep it regularly updated.
+CoinMarketCap  - For the data
+
+Features: Unnamed:_0, Date, Symbol, Open, High, Low, Close, Volume, Market_Cap
+---
+- ID: 43426
+
+Name: Historical-data-on-the-trading-of-cryptocurrencies
+
+Tags: 
+
+Context
+This is historical data on cryptocurrency tradings for the period from 2016-01-01 to 2021-02-21.
+If you enjoy this dataset please upvote so I can see it is popular and I need to update it.
+Thank you!
+Content
+This dataset will be good for data analysis in predicting the price for digital cryptocurrencies.
+
+Features: trade_date, volume, price_usd, price_btc, market_cap, capitalization_change_1_day, USD_price_change_1_day, BTC_price_change_1_day, crypto_name, crypto_type, ticker, max_supply, site_url, github_url, minable, platform_name, industry_name
+---
+- ID: 43319
+
+Name: CompleteCryptocurrencyMarketHistory
+
+Tags: 
+
+CryptocurrenciesCryptocurrenciesarefastbecomingrivalstotraditionalcurrencyacrosstheworldThedigitalcurrenciesareavailabletopurchaseinmanydifferentplacesmakingitaccessibletoeveryoneandwithretailersacceptingvariouscryptocurrenciesitcouldbeasignthatmoneyasweknowitisabouttogothroughamajorchangeInadditiontheblockchaintechnologyonwhichmanycryptocurrenciesarebasedwithitsrevolutionarydistributeddigitalbackbonehasmanyotherpromisingapplicationsImplementationsofsecuredecentralizedsystemscanaidusinconqueringorganizationalissuesoftrustandsecuritythathaveplaguedoursocietythroughouttheagesIneffectwecanfundamentallydisruptindustriescoretoeconomiesbusinessesandsocialstructureseliminatinginefficiencyandhumanerrorContentThedatasetcontainsallhistoricaldailypricesopenhighlowcloseforallcryptocurrencieslistedonCoinMarketCapAcknowledgementsEveryCryptocurrencyDailyMarketPriceIinitiallydevelopedkernelsforthisdatasetbeforemakingmyownscraperanddatasetsothatIcouldkeepitregularlyupdatedCoinMarketCapForthedata
+
+Features: Unnamed:_0, Date, Symbol,
+---
+- ID: 43472
+
+Name: Dogecoin-Historical-Data
+
+Tags: 
+
+Introduction
+Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide. It is qualitatively more fun while being technically nearly identical to its close relative Bitcoin. This dataset contains its historical stock price in USD on a daily frequency starting from 17 September 2014.
+For more information refer to https://dogecoin.com/
+
+Credits
+Image Credits: Unsplash - claybanks
+
+Features: Date, Open, High, Low, Close, Volume
+---
+- ID: 43434
+
+Name: BitCoin-Dataset
+
+Tags: 
+
+Why 2017 to 2020?
+The BitCoin data is Limited to these 3 years because as everyone Knows: Dec 2017 was the time when BitCoin Prices Skyrocketed! Hence, this duration is Perfect for Predicting future Prices. As the years before 2017 had a low Price ratio which can cause a disturbance in our Prediction Models.
+
+Features: Date, High, Low, Open, Close, Volume, Adj_Close
+---
+- ID: 45972
+
+Name: BTC
+
+Tags: 
+
+### Description:
+The `bitstampUSD_1-min_data_2012-01-01_to_2021-03-31.csv` dataset is a comprehensive collection of minute-by-minute Bitcoin trading data on the Bitstamp platform, spanning from January 1, 2012, to March 31, 2021. This dataset is crucial for understanding Bitcoin's trading dynamics over time, including price fluctuations and trading volumes. It is formatted in a chronological order, covering nearly a decade of Bitcoin transactions, making it an invaluable resource for financial analysts, econometric study, and anyone interested in the cryptocurrency market dynamics.
+
+### Attribute Description:
+- **Timestamp**: The date and time (Unix timestamp) of the observation.
+- **Open**: The opening price of Bitcoin in USD at the start of the minute.
+- **High**: The highest price of Bitcoin in USD during the minute.
+- **Low**: The lowest price of Bitcoin in USD during the minute.
+- **Close**: The closing price of Bitcoin in USD at the end of the minute.
+- **Volume_(BTC)**: The volume of Bitcoin traded during the minute.
+- **Volume_(Currency)**: The volume of trades in
+---
+- ID: 43668
+
+Name: Cryptocurrencies
+
+Tags: 
+
+Context
+Thousands of cryptocurrencies have sprung up in the past few years. Can you predict which one will be the next BTC?
+Content
+The dataset contains daily opening, high, low, close, and trading volumes for over 1200 cryptocurrencies (excluding bitcoin).
+Acknowledgements
+https://timescaledata.blob.core.windows.net/datasets/crypto_data.tar.gz
+Inspiration
+Speculative forces are always at work on cryptocurrency exchanges - but do they contain any statistically significant features?
+
+Features: DateTime, Open, High, Low, Close, Volume, VolumeBTC, Symbol
+---
+- ID: 43685
+
+Name: Dogecoin--historical-data-(jan2018---feb2021)
+
+Tags: 
+
+Context
+Dogecoin is making news as well as a little profit these days although it may seem like its new in the market but it has been around quite a while now. I have tried to collect historical data of Dogecoin from year jan-2018 to feb-2021
+Inspiration
+You can try to do time series analysis on this data. Good luck and have fun.
+
+Features: Date, Open, High, Low, Close, Adj_Close, Volume
+---
+- ID: 43312
+
+Name: Complete-Historical-Cryptocurrency-Financial-Data
+
+Tags: 
+
+Context
+Recent growing interest in cryptocurrencies, specifically as a speculative investment vehicle, has sparked global conversation over the past 12 months. Although this data is available across various sites, there is a lack of understanding as to what is driving the exponential rise of many individual currencies. This data set is intended to be a starting point for a detailed analysis into what is driving price action, and what can be done to predict future movement.
+Content
+Consolidated financial information for the top 10 cryptocurrencies by marketcap. Pulled from CoinMarketCap.com. Attributes include:
+
+Currency name (e.g. bitcoin)
+Date  
+Open
+High
+Low
+Close
+Volume
+Marketcap
+
+Inspiration
+For the past few months I have been searching for a reliable source for historical price information related to cryptocurrencies. I wasn't able to find anything that I could use to my liking, so I built my own data set.
+I've written a small script that scrapes historical price information for the top 200 coins by market cap as listed on CoinMarketCap.com.
+I plan to run some basic analysis on it to answer questions that I have a "gut" feeling about, but
+---
+- ID: 43332
+
+Name: Complete-Cryptocurrency-Market-History
+
+Tags: 
+
+CryptocurrenciesCryptocurrencies are fast becoming rivals to traditional currency across the world. The digital currencies are available to purchase in many different places, making it accessible to everyone, and with retailers accepting various cryptocurrencies it could be a sign that money as we know it is about to go through a major change.In addition, the blockchain technology on which many cryptocurrencies are based, with its revolutionary distributed digital backbone, has many other promising applications. Implementations of secure, decentralized systems can aid us in conquering organizational issues of trust and security that have plagued our society throughout the ages. In effect, we can fundamentally disrupt industries core to economies, businesses and social structures, eliminating inefficiency and human error.ContentThe dataset contains all historical daily prices open, high, low, close for all cryptocurrencies listed on CoinMarketCap.AcknowledgementsEvery Cryptocurrency Daily Market Price  I initially developed kernels for this dataset before making my own scraper and dataset so that I could keep it regularly updated.CoinMarketCap   For the data
+
+Features: Unnamed:_0, Date, Symbol, Open, High, Low, Close, Volume, Market_Cap
+---
+- ID: 43576
+
+Name: Soybean-price-factor-data-1962-2018
+
+Tags: 
+
+Context
+Soy beans are a major agricultural crop.
+Content
+Compilation of Soybean prices and factors that effect soybean prices. Daily data. Temp columns are daily temperatures of the major U.S. grow areas. Production and Area are the annual counts from each country (2018 being the estimates). Prices of commodities are from CME futures and are NOT adjusted for inflation. Updates of these CME futures can be found on Quandl. Additional data could be added, such as, interest rates, country currency prices, country import data, country temperatures.
+More raw data I used to assemble this.  
+https://github.com/MotorCityCobra/Soy_Data_Collection
+Browse my other projects and offer me a job.
+Acknowledgements
+https://www.quandl.com/
+Banner Photo by rawpixel on Unsplash
+
+Features: Date, soux_H, soux_L, indianap_H, indianap_L, memphis_H, memphis_L, Gold, USD, Oil, bean_high, bean_low, bean_settle, bean_volume, bean_openint, meal_high, meal_low, meal_settle, meal_volume, meal_openint, soyoil
+---
+- ID: 43824
+
+Name: Top-100-2020-Cryptocurrency-Daily-Market-Price
+
+Tags: 
+
+Short Description
+Here you are a dataset containing the top 100 coins by their total volume across all markets during 9th January of 2021. The prices are in USD dollars.
+If you need a different or specific cryptocurrency data, open a new Discussion and I will try to do my best.
+Content
+This dataset was obtained thanks to cryptocompare API. You can see that it contains data about the top 100 coins by volume market during moreover 2020 (it contains a little bit of 2019 and 2021 years also). The dataset has 10 columns:
+
+datetime: the date in which the coin had that price and volume.
+low: the lowwst price of that day in USD dollars.
+high: the highest price of that day in USD dollars.
+open: the price when that day started in the markets in USD dollars.
+close: the price when that day closed in the markets in USD dollars.
+volumefrom: the quantity of that coin that was traded in that day.
+volumeto: the quantity of that coin that was traded in that day in USD dollars.
+cryptocurrency: the
+---
+
+The topic is described by the following keywords: cryptocurrency, cryptocurrencies, bitcoin, usd, open, eth, prices, volume, low, close, marketcap, currency, market, coins, my, high, daily, trading, digital, datedollars, dollars, currencies, blockchain, coin, markets, respective, making, top, ethereum, dogecoin
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43601, 43563, 43779, 43391, 43336, 43426, 43319, 43472, 43434, 45972, 43668, 43685, 43312, 43332, 43576, 43824 !

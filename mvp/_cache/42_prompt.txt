@@ -1,0 +1,299 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 41492
+
+Name: youtube
+
+Tags: 2019_multioutput_paper
+
+The YouTube personality dataset consists of a collection of behavorial features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse.
+
+Features: mean.pitch, sd.pitch, mean.conf.pitch, sd.conf.pitch, mean.spec.entropy, sd.spec.entropy, mean.val.apeak, sd.val.apeak, mean.loc.apeak, sd.loc.apeak, mean.num.apeak, sd.num.apeak, mean.energy, sd.energy, mean.d.energy, sd.d.energy, avg.voiced.seg, avg.len.seg, time.speaking, voice.rate, num.turns, hogv.entropy, hogv.median, hogv.cogR, hogv.cogC, gender, Extr, Agr, Cons, Emot, Open
+---
+- ID: 4544
+
+Name: GeographicalOriginalofMusic
+
+Tags: OpenML-Reg19
+
+**Author**: Fang Zhou (fang.zhou '@' nottingham.edu.cn)  The University of Nottinghan","Ningbo","China  
+**Source**: UCI  
+**Please cite**: Fang Zhou, Claire Q and Ross. D. King 
+Predicting the Geographical Origin of Music, ICDM, 2014  
+
+Abstract: Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+Source:
+
+Creators: 
+Fang Zhou (fang.zhou '@' nottingham.edu.cn) 
+The University of Nottinghan, Ningbo, China 
+
+Donors of the Dataset: 
+Fang Zhou (fang.zhou '@' nottingham.edu.cn) 
+Claire Q (eskoala '@' gmail.com) 
+Ross D. King (ross.king '@' manchester.ac.uk)
+
+
+Data Set Information:
+
+The dataset was built from a personal collection of 1059 tracks covering 33 countries/area. The music used is traditional, ethnic or `world' only, as classified by the publishers of the product on which it appears. Any Western
+---
+- ID: 41545
+
+Name: emotions
+
+Tags: 2019_multioutput_paper_benchmark_data
+
+Multi-label dataset. Audio dataset (emotions) consists of 593
+  musical files with 6 clustered emotional labels and 72 predictors. Each song
+  can be labeled with one or more of the labels {amazed-surprised,
+  happy-pleased, relaxing-calm, quiet-still, sad-lonely, angry-aggressive}.
+
+Features: Mean_Acc1298_Mean_Mem40_Centroid, Mean_Acc1298_Mean_Mem40_Rolloff, Mean_Acc1298_Mean_Mem40_Flux, Mean_Acc1298_Mean_Mem40_MFCC_0, Mean_Acc1298_Mean_Mem40_MFCC_1, Mean_Acc1298_Mean_Mem40_MFCC_2, Mean_Acc1298_Mean_Mem40_MFCC_3, Mean_Acc1298_Mean_Mem40_MFCC_4, Mean_Acc1298_Mean_Mem40_MFCC_5, Mean_Acc1298_Mean_Mem40_MFCC_6, Mean_Acc1298_Mean_Mem40_M
+---
+- ID: 40589
+
+Name: emotions
+
+Tags: 2016_multilabel_r_benchmark_paper, multi_label
+
+Multi-label dataset. Audio dataset (emotions) consists of 593 musical files with 6 clustered emotional labels and 72 predictors. Each song can be labeled with one or more of the labels {amazed-surprised, happy-pleased, relaxing-calm, quiet-still, sad-lonely, angry-aggressive}.
+
+Features: Mean_Acc1298_Mean_Mem40_Centroid, Mean_Acc1298_Mean_Mem40_Rolloff, Mean_Acc1298_Mean_Mem40_Flux, Mean_Acc1298_Mean_Mem40_MFCC_0, Mean_Acc1298_Mean_Mem40_MFCC_1, Mean_Acc1298_Mean_Mem40_MFCC_2, Mean_Acc1298_Mean_Mem40_MFCC_3, Mean_Acc1298_Mean_Mem40_MFCC_4, Mean_Acc1298_Mean_Mem40_MFCC_5, Mean_Acc1298_Mean_Mem40_MFCC_6, Mean_Acc1298_Mean_Mem40_MFCC
+---
+- ID: 44965
+
+Name: geographical_origin_of_music
+
+Tags: 
+
+**Data Description**
+
+Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+
+The dataset was built from a personal collection of 1059 tracks covering 33 countries/area. The music used is traditional, ethnic or `world' only, as classified by the publishers of the product on which it appears. Any Western music is not included because its influence is global - what we seek are the aspects of music that most influence location. Thus, being able to specify a location with strong influence on the music is central. 
+
+The geographical location of origin was manually collected the information from the CD sleeve notes, and when this information was inadequate we searched other information sources. The location data is limited in precision to the country of origin. 
+
+The country of origin was determined by the artist's or artists' main country/area of residence. Any track that had ambiguous origin is not included. We have taken the position of each country's capital city (or the province of the area) by latitude and longitude as the absolute point of origin. 
+
+The program MARSYAS was used to extract audio features from the wave
+---
+- ID: 41559
+
+Name: youtube
+
+Tags: 2019_multioutput_paper_benchmark_data
+
+The YouTube personality dataset consists of a collection of behavorial features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse.
+
+Features: mean.pitch, sd.pitch, mean.conf.pitch, sd.conf.pitch, mean.spec.entropy, sd.spec.entropy, mean.val.apeak, sd.val.apeak, mean.loc.apeak, sd.loc.apeak, mean.num.apeak, sd.num.apeak, mean.energy, sd.energy, mean.d.energy, sd.d.energy, avg.voiced.seg, avg.len.seg, time.speaking, voice.rate, num.turns, hogv.entropy, hogv.median, hogv.cogR, hogv.cogC, gender, Extr, Agr, Cons, Emot, Open
+---
+- ID: 41465
+
+Name: emotions
+
+Tags: 2019_multioutput_paper
+
+Multi-label dataset. Audio dataset (emotions) consists of 593
+  musical files with 6 clustered emotional labels and 72 predictors. Each song
+  can be labeled with one or more of the labels {amazed-surprised,
+  happy-pleased, relaxing-calm, quiet-still, sad-lonely, angry-aggressive}.
+
+Features: Mean_Acc1298_Mean_Mem40_Centroid, Mean_Acc1298_Mean_Mem40_Rolloff, Mean_Acc1298_Mean_Mem40_Flux, Mean_Acc1298_Mean_Mem40_MFCC_0, Mean_Acc1298_Mean_Mem40_MFCC_1, Mean_Acc1298_Mean_Mem40_MFCC_2, Mean_Acc1298_Mean_Mem40_MFCC_3, Mean_Acc1298_Mean_Mem40_MFCC_4, Mean_Acc1298_Mean_Mem40_MFCC_5, Mean_Acc1298_Mean_Mem40_MFCC_6, Mean_Acc1298_Mean_Mem40_MFCC_7
+---
+- ID: 4552
+
+Name: BachChoralHarmony
+
+Tags: 
+
+**Author**: -- Creators: Daniele P. Radicioni and Roberto Esposito  -- Donor: Daniele P. Radicioni (radicion '@' di.unito.it) and Roberto Esposito (esposito '@' di.unito.it)  -- Date: May","2014  
+**Source**: UCI  
+**Please cite**: D. P. Radicioni and R. Esposito. Advances in Music Information Retrieval, chapter BREVE: an HMPerceptron-Based Chord Recognition System. Studies in Computational Intelligence, Zbigniew W. Ras and Alicja Wieczorkowska (Editors), Springer, 2010.  
+
+Abstract: The data set is composed of 60 chorales (5665 events) by J.S. Bach (1675-1750). Each event of each chorale is labelled using 1 among 101 chord labels and described through 14 features.
+Source:
+
+-- Creators: Daniele P. Radicioni and Roberto Esposito 
+-- Donor: Daniele P. Radicioni (radicion '@' di.unito.it) and Roberto Esposito (esposito '@
+---
+- ID: 41083
+
+Name: Olivetti_Faces
+
+Tags: vision
+
+**Author**: AT&T Laboratories Cambridge   
+**Source**: http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html  - Date: 1992-1994
+**Please cite**:   
+
+This dataset contains a set of face images taken between April 1992 and April 1994 at AT&T Laboratories Cambridge. 
+
+As described on the original website:
+
+There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement).
+The image is quantized to 256 grey levels and stored as unsigned 8-bit integers; the loader will convert these to floating point values on the interval [0, 1], which are easier to work with for many algorithms.
+
+The “target” for this database is an integer from 0 to 39 indicating the identity of the person pictured; however, with only 10 examples
+---
+- ID: 46348
+
+Name: mxmh
+
+Tags: 
+
+music and mental health dataset
+
+Features: Timestamp, Age, Primary streaming service, Hours per day, While working, Instrumentalist, Composer, Fav genre, Exploratory, Foreign languages, BPM, Frequency [Classical], Frequency [Country], Frequency [EDM], Frequency [Folk], Frequency [Gospel], Frequency [Hip hop], Frequency [Jazz], Frequency [K pop], Frequency [Latin], Frequency [Lofi], Frequency [Metal], Frequency [Pop], Frequency [R&B], Frequency [Rap], Frequency [Rock], Frequency [Video game music], Anxiety, Depression, Insomnia, OCD, Music effects, Permissions
+---
+- ID: 41084
+
+Name: UMIST_Faces_Cropped
+
+Tags: vision
+
+**Author**:   H. Wechsler, P. J. Phillips, V. Bruce, F. Fogelman-Soulie and T. S. Huang
+**Source**:  https://www.sheffield.ac.uk/eee/research/iel/research/face  
+**Please cite**:  Characterizing Virtual Eigensignatures for General Purpose Face Recognition, Daniel B Graham and Nigel M Allinson. In Face Recognition: From Theory to Applications ; NATO ASI Series F, Computer and Systems Sciences, Vol. 163; H. Wechsler, P. J. Phillips, V. Bruce, F. Fogelman-Soulie and T. S. Huang (eds), pp 446-456, 1998. 
+
+The Sheffield (previously UMIST) Face Database consists of 564 images of 20 individuals (mixed race/gender/appearance). Each individual is shown in a range of poses from profile to frontal views - each in a separate directory labelled 1a, 1b, ... 1t and images are numbered consecutively as they were taken
+
+Grayscale faces 8 bit [0-
+---
+- ID: 43602
+
+Name: FEER-Dataset
+
+Tags: 
+
+Content
+This database contains six basic emotions (happiness, surprise, anger, fear, disgust, and sadness) of normalized (average mean reference) data and collected from 85 undergraduate university students (55 male; 30 female) aged between 20 - 27 years with a mean age of 24.5 years. The data which contain noises and other movement artifacts are removed from the raw data. A built-in face time HD camera in Apple Mac Pro with a resolution of 2560  1600 at 227 pixels per inch is used to collect the facial images in a controlled environment (25C room temperature with 50 Lux lighting intensity) at 30 frames per second. All the subjects are seated comfortably in a chair in front of the camera and the distance between the subject face to the camera is 0.95m. A computerized PowerPoint slides are used to instruct the subjects to express the facial emotional expression by looking into the International Affective Picture System (IAPS) images of six different emotions. The data file contains 11 columns (10 columns for 10 markers and the last column represents the label of emotion) and 190968 rows. In the file
+---
+
+The topic is described by the following keywords: music, audio, origin, esposito, marsyas, radicioni, emotions, geographical, chord, western, influence, facial, quietstill, relaxingcalm, happypleased, chromatic, sadlonely, 1059, fang, frequency, zhou, emotional, artists, pitch, tuning, diunitoit, daniele, claire, covering, face
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 41492, 4544, 41545, 40589, 44965, 41559, 41465, 4552, 41083, 46348, 41084, 43602 !

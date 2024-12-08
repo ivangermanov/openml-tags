@@ -1,0 +1,202 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43480
+
+Name: Toronto-COVID-19-Cases
+
+Tags: 
+
+This data set contains demographic, geographic, and severity information for all confirmed and probable cases reported to and managed by Toronto Public Health since the first case was reported in January 2020. This includes cases that are sporadic (occurring in the community) and outbreak-associated. The data are extracted from the provincial communicable disease reporting system (iPHIS) and Toronto's custom COVID-19 case management system (CORES) and combined for reporting.
+The data in this spreadsheet are subject to change as public health investigations into reported cases and continuous quality improvement initiatives are ongoing, and additional cases continue to be reported.
+
+Features: _id, Outbreak_Associated, Age_Group, Neighbourhood_Name, FSA, Source_of_Infection, Classification, Episode_Date, Reported_Date, Client_Gender, Outcome, Currently_Hospitalized, Currently_in_ICU, Currently_Intubated, Ever_Hospitalized, Ever_in_ICU, Ever_Intubated
+---
+- ID: 43138
+
+Name: ACSPublicCoverage
+
+Tags: 
+
+The dataset was reproduced following instructions from this paper: https://arxiv.org/pdf/2108.04884.pdf. The data originates from ACS PUMS.
+
+Features: AGEP, SCHL, MAR, SEX, DIS, ESP, CIT, MIG, MIL, ANC, NATIVITY, DEAR, DEYE, DREM, PINCP, ESR, ST, FER, RAC1P
+---
+- ID: 43365
+
+Name: Covid-19-Case-Surveillance-Public-Use-Dataset
+
+Tags: 
+
+Context and Content
+The COVID-19 case surveillance system database includes individual-level data reported to U.S. states and autonomous reporting entities, including New York City and the District of Columbia (D.C.), as well as U.S. territories and states. On April 5, 2020, COVID-19 was added to the Nationally Notifiable Condition List and classified as immediately notifiable, urgent (within 24 hours) by a Council of State and Territorial Epidemiologists (CSTE) Interim Position Statement (Interim-20-ID-01). CSTE updated the position statement on August 5, 2020 to clarify the interpretation of antigen detection tests and serologic test results within the case classification. The statement also recommended that all states and territories enact laws to make COVID-19 reportable in their jurisdiction, and that jurisdictions conducting surveillance should submit case notifications to CDC. COVID-19 case surveillance data are collected by jurisdictions and shared voluntarily with CDC.
+For more information:
+https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf
+
+---
+- ID: 43140
+
+Name: ACSPublicCoverage
+
+Tags: 
+
+ACSPublicCoverage dataset reproduced from this paper: https://arxiv.org/pdf/2108.04884.pdf.
+
+Features: AGEP, SCHL, MAR, SEX, DIS, ESP, CIT, MIG, MIL, ANC, NATIVITY, DEAR, DEYE, DREM, PINCP, ESR, ST, FER, RAC1P, PUBCOV
+---
+- ID: 43550
+
+Name: COVID-19-Hospitals-Treatment-Plan
+
+Tags: 
+
+Context
+The COVID-19 pandemic has placed an unprecedented strain on health systems, with rapidly increasing demand for healthcare in hospitals and intensive care units (ICUs) worldwide. As the pandemic escalates, determining the resulting needs for healthcare resources (beds, staff, equipment) has become a key priority for many countries. Projecting future demand requires estimates of how long patients with COVID-19 need different levels of hospital care.
+ While healthcare management has various use cases for using data science, patient length of stay is one critical parameter to observe and predict if one wants to improve the efficiency of the healthcare management in a hospital. 
+This parameter helps hospitals to identify patients of high LOS risk (patients who will stay longer) at the time of admission. Once identified, patients with high LOS risk can have their treatment plan optimized to miminize LOS and lower the chance of staff/visitor infection. Also, prior knowledge of LOS can aid in logistics such as room and bed allocation planning.
+The problem is to manage the functioning of Hospitals in a professional and optimal manner. 
+ 
+ 
+ 
+
+Content
+The task is to accurately predict the Length of Stay for each patient on case by case basis
+---
+- ID: 43428
+
+Name: Mexico-COVID-19-clinical-data
+
+Tags: 
+
+Mexico COVID-19 clinical data 
+This dataset contains the results of real-time PCR testing for COVID-19 in Mexico as reported by the [General Directorate of Epidemiology](https://www.gob.mx/salud/documentos/datos-abiertos-152127).
+The official, raw dataset is available in the Official Secretary of Epidemiology website: https://www.gob.mx/salud/documentos/datos-abiertos-152127.
+You might also want to download the official column descriptors and the variable definitions - e.g. SEXO=1 - Female; SEXO=2 - Male; SEXO=99 - Undisclosed) - in the following [zip file](http://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/diccionario_datos_covid19.zip). I've maintained the original levels as described in the official dataset, unless otherwise specified.
+IMPORTANT: This dataset has been maintained since the original data releases, which weren't tabular, but rather consisted of PDF files, often with many/different inconsistencies which had to be resolved carefully and is annotated in the .R script. More later datasets should be more reliable,
+---
+
+The topic is described by the following keywords: covid19, stay, official, case, hospital, reported, admission, patient, hospitals, los, surveillance, jurisdictions, acspubliccoverage, cases, units, healthcare, reporting, respiratory, health, viral, availableextraroomsinhospital, entidadum, wardfacility, agegroup, 7180, hospitalregion, bedgrade, wardtype, cste, entidadres
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43480, 43138, 43365, 43140, 43550, 43428 !

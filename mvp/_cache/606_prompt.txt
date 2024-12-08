@@ -1,0 +1,260 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43587
+
+Name: UCI-SECOM-Dataset
+
+Tags: 
+
+Context
+Manufacturing process feature selection and categorization
+Content
+Abstract: Data from a semi-conductor manufacturing process
+
+Data Set Characteristics: Multivariate 
+Number of Instances: 1567
+Area: Computer 
+Attribute Characteristics: Real 
+Number of Attributes: 591 
+Date Donated: 2008-11-19 
+Associated Tasks: Classification, Causal-Discovery 
+Missing Values? Yes
+
+A complex modern semi-conductor manufacturing process is normally under consistent 
+surveillance via the monitoring of signals/variables collected from sensors and or 
+process measurement points. However, not all of these signals are equally valuable 
+in a specific monitoring system. The measured signals contain a combination of 
+useful information, irrelevant information as well as noise. It is often the case 
+that useful information is buried in the latter two. Engineers typically have a 
+much larger number of signals than are actually required. If we consider each type 
+of signal as a feature, then feature selection may be applied to identify the most 
+relevant signals. The Process Engineers may then use these signals to determine key 
+factors contributing to yield excursions downstream in the process. This will 
+enable an increase in
+---
+- ID: 1504
+
+Name: steel-plates-fault
+
+Tags: OpenML100, study_123, study_14, study_34, study_50, study_52, study_7
+
+**Author**: Semeion, Research Center of Sciences of Communication, Rome, Italy.     
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/steel+plates+faults)     
+**Please cite**: Dataset provided by Semeion, Research Center of Sciences of Communication, Via Sersale 117, 00128, Rome, Italy.  
+
+**Steel Plates Faults Data Set**  
+A dataset of steel plates' faults, classified into 7 different types. The goal was to train machine learning for automatic pattern recognition.
+
+The dataset consists of 27 features describing each fault (location, size, ...) and 7 binary features indicating the type of fault (on of 7: Pastry, Z_Scratch, K_Scatch, Stains, Dirtiness, Bumps, Other_Faults). The latter is commonly used as a binary classification target ('common' or 'other' fault.)
+
+### Attribute Information  
+* V1: X_Minimum  
+* V2: X
+---
+- ID: 1468
+
+Name: cnae-9
+
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_218, study_52, study_7, study_98, study_99
+
+**Author**: Patrick Marques Ciarelli, Elias Oliviera   
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/CNAE-9) - 2010  
+**Please cite**:   
+
+### Description
+
+This is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a subset of 9 categories.
+
+### Source
+```
+Patrick Marques Ciarelli, pciarelli '@' lcad.inf.ufes.br, Department of Electrical Engineering, Federal University of Espirito Santo 
+Elias Oliveira, elias '@' lcad.inf.ufes.br, Department of Information Science, Federal University of Espirito Santo
+```
+
+### Data Set Information
+
+This is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a 
+subset of 9 categories cataloged in a table called National Classification of Economic Activities (Classificação Nacional de 
+
+---
+- ID: 42890
+
+Name: AI4I2020
+
+Tags: 
+
+The AI4I 2020 Predictive Maintenance Dataset is a synthetic dataset that reflects real predictive maintenance data encountered in industry. Since real predictive maintenance datasets are generally difficult to obtain and in particular difficult to publish, we present and provide a synthetic dataset that reflects real predictive maintenance encountered in industry to the best of our knowledge.
+
+Features: UDI, Product ID, Type, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min], Machine failure, TWF, HDF, PWF, OSF, RNF
+
+Scraped Data: Dataset Information Additional Information Since real predictive maintenance datasets are generally difficult to obtain and in particular difficult to publish, we present and provide a synthetic dataset that reflects real predictive maintenance encountered in industry to the best of our knowledge. Has Missing Values? No
+
+Additional Variable Information The dataset consists of 10 000 data points stored as rows with 14 features in columns
+UID: unique identifier ranging from 1 to 10000
+product ID: consisting of a letter L, M, or H for low (50% of all products), medium (30%) and high (20%) as product
+---
+- ID: 1501
+
+Name: semeion
+
+Tags: OpenML-CC18, OpenML100, study_123, study_14, study_34, study_50, study_7, study_98, study_99, uci
+
+**Author**: Semeion Research Center of Sciences of Communication     
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/semeion+handwritten+digit)     
+**Please cite**: Semeion Research Center of Sciences of Communication, via Sersale 117, 00128 Rome, Italy 
+Tattile Via Gaetano Donizetti, 1-3-5,25030 Mairano (Brescia), Italy.    
+
+### Dataset Description
+
+Semeion Handwritten Digit Data Set, where 1593 handwritten digits from around 80 persons were scanned and documented. The each of the 256 variables V1 - V256 describe one of the pixels and their corresponding values. 
+
+### Sources
+
+The dataset was created by Tactile Srl, Brescia, Italy (http://www.tattile.it) and donated in 1994 to Semeion Research Center of Sciences of Communication, Rome, Italy
+---
+- ID: 40982
+
+Name: steel-plates-fault
+
+Tags: OpenML-CC18, study_135, study_98, study_99
+
+**Author**: Semeion, Research Center of Sciences of Communication, Rome, Italy.     
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/steel+plates+faults)     
+**Please cite**: Dataset provided by Semeion, Research Center of Sciences of Communication, Via Sersale 117, 00128, Rome, Italy.  
+
+__Changes w.r.t. version 1: included one target factor with 7 levels as target variable for the classification. Also deleted the previous 7 binary target variables.__
+
+**Steel Plates Faults Data Set**  
+A dataset of steel plates' faults, classified into 7 different types. The goal was to train machine learning for automatic pattern recognition.
+
+The dataset consists of 27 features describing each fault (location, size, ...) and 1 feature indicating the type of fault (on of 7: Pastry, Z_Scratch, K_Scatch, Stains, Dirtiness, Bumps, Other_Faults). The target is the type of fault.
+
+### Attribute Information
+---
+
+The topic is described by the following keywords: semeion, failure, wear, buscema, rome, italy, tool, fault, elias, 591, fails, ciarelli, rotational, 1567, plates, modes, communication, 857, torque, patrick, nm, 256, texts, fail, sciences, brazilian, marques, zscratch, misuse, dirtiness
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43587, 1504, 1468, 42890, 1501, 40982 !

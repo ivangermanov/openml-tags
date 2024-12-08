@@ -1,0 +1,199 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43482
+
+Name: 2019-Ironman-World-Championship-Results
+
+Tags: 
+
+Context
+Data set containing results from 2019 Ironman World Championship in Kona, Hawaii to help answer the question of which countries produce the fastest overall finish times, as well as fastest swim, bike, and run times.
+Content
+The data set contains the name of each male and female competitor, the country they are representing, their category (Professional or Age Group), their overall placing, finish time, and swim / T1 / bike / T2 / run splits.
+Acknowledgements
+Coach Cox (www.coachcox.co.uk)
+Inspiration
+
+Features: BIB, Name, Country, Gender, Division, Swim, Bike, Run, Overall, Division_Rank, Gender_Rank, Overall_Rank, T1, T2
+---
+- ID: 41022
+
+Name: Short_Track_Speed_Skating
+
+Tags: SportsAnalytics, study_93
+
+**Author**: xWang  
+**Source**: [Kaggle](https://www.kaggle.com/seniorwx/shorttrack/data)  
+**Please cite**:   
+
+**Short Track Speed Skating Database for Sports Data Analysis**  
+The database covers all the international short track games in the last 5 years. Currently it contains only men's 500m.
+
+Detailed lap data including personal time and ranking in each game from seasons 2012/2013 to present .
+The final time results, ranking, starting position, qualified or penalized information of each athlete in each game.
+All series of World Cup, World Championship, European Championship and Olympic Games.
+Original data source
+The data is collected from the ISU's (International Skating Union) official website. I have already done the cleaning procedure.
+
+Please make sure that the data are only for personal and non-commercial use.
+
+**Explore the data**  
+Interesting questions may be like:
+
+- What will happen in a game when there are more than one athlete from the same team? Are there performance all improved?
+- How does the performance of athletes change within a season
+---
+- ID: 43548
+
+Name: All-Time-Premier-League-Player-Statistics
+
+Tags: 
+
+Context
+I am a really huge football fan and the Premier League is one of my favourite football (or soccer, whatever you like to call it) leagues. So, as my very first dataset, I thought this would be a great opportunity for me to make a dataset of player statistics of all seasons from the Premier League.
+The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League (EFL). Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League. 
+Home to some of the most famous clubs, players, managers and stadiums in world football, the Premier League is the most-watched league on the planet with one billion homes watching the action in 188 countries.The league takes place between August and May and involves the teams playing each other home and away across the season, a total of 380 matches.
+Three points are awarded for a win, one point for a draw and none for a defeat
+---
+- ID: 43510
+
+Name: UEFA-Champions-league-Player-Statistics
+
+Tags: 
+
+Context
+This dataset has an exhaustive list of player statistics for each season from 2013 - 2020
+Content
+Each row is associated with a player and a season.
+Eg. You will have 7 rows for Lionel Messi: 1 for each season he played
+Each row will have 103 unique stats you can look at (Eg. No of Goals Scored, Passing accuracy in , Minutes Played etc)
+
+Features: Unnamed:_0, name, season, season_year, team, rating, goals, bigChancesCreated, bigChancesMissed, assists, goalsAssistsSum, accuratePasses, inaccuratePasses, totalPasses, accuratePassesPercentage, accurateOwnHalfPasses, accurateOppositionHalfPasses, accurateFinalThirdPasses, keyPasses, successfulDribbles, successfulDribblesPercentage, tackles, interceptions, yellowCards, directRedCards, redCards, accurateCrosses, accurateCrossesPercentage, totalShots, shotsOnTarget, shotsOffTarget, groundDuelsWon, groundDuelsWonPercentage, aerialDuelsWon, aerialDuelsWonPercentage, totalDuelsWon
+---
+
+The topic is described by the following keywords: league, premier, championship, football, finish, season, english, clubs, swim, athletes, goals, blockedshots, contested, shotsontarget, skating, tackles, clearances, relegation, offsides, accuratelongballs, bigchancescreated, bigchancesmissed, owngoals, goalsconceded, httpswwwpremierleaguecom, punches, hitwoodwork, highclaims, headedgoals, redcards
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43482, 41022, 43548, 43510 !

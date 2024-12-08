@@ -1,0 +1,260 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43798
+
+Name: Google-Play-Store-Apps
+
+Tags: 
+
+Context
+Google PlayStore App analytics. (1.1 Million + App Data)
+Source: https://github.com/gauthamp10/Google-Playstore-Dataset
+Content
+I've collected the data with the help of Python and Scrapy running on a google cloud vm instance.
+The data was collected on December 2020.
+Acknowledgements
+I couldn't have build this dataset without the help of Google's Cloud engine.
+Inspiration
+Took inspiration from: https://www.kaggle.com/lava18/google-play-store-apps to build a big database for students and researchers.
+
+Features: App_Name, App_Id, Category, Rating, Rating_Count, Installs, Minimum_Installs, Maximum_Installs, Free, Price, Currency, Size, Minimum_Android, Developer_Id, Developer_Website, Developer_Email, Released, Last_Updated, Content_Rating, Privacy_Policy, Ad_Supported, In_App_Purchases, Editors_Choice, Scraped_Time
+---
+- ID: 43835
+
+Name: Indeed-Software-Engineer-Job-Dataset
+
+Tags: 
+
+Context
+This DataSet is scrapped from the Website https://www.Indeed.com/ , I want to scrapped this dataset, as I'm looking for a job and it comes to my mind what if I scapped all this 10000 dataset and analyze it.
+Content
+This Dataset contain 10,000 rows and 6 columns, 10000 rows means 10000 job profiles form different companies.
+Acknowledgements
+This DataSet is scrapped from Indeed Website, I want to thank them to allow me to scrap. Here is the Web Scrapping Code
+https://www.kaggle.com/samrat77/indeed-job-web-scraping
+Inspiration
+Please analyze it if you want to, and if there is any mistake in the data, Please Feel free to correct me and also if you want to ask anything about the web scraping process, feel free to ask.
+
+Features: Unnamed:_0, Name, Company, City, Ratings, Summary, Date
+---
+- ID: 43767
+
+Name: Development-Category-(10k-courses)-from-Udemy
+
+Tags: 
+
+Context
+A compilation of all the development related courses ( 10 thousand courses) which are available on Udemy's website. Under the development category, there are courses from Web Development, Data Science, Mobile App, Programming Languages, Game Development, Databases, Software Testing, Software Engineering, Development Tools and E-commerce each having multiple courses under it's domain.
+All the details can be found on Udemy's website as well!
+Content
+Here, I have extracted data related to 10k courses which come under the development category on Udemy's website.
+The 17 columns in the dataset can be used to gain insights related to:
+
+id : The course ID of that particular course.
+title : Shows the unique names of the courses available under the development category on Udemy.
+url: Gives the URL of the course.
+is_paid : Returns a boolean value displaying true if the course is paid and false if otherwise.
+num_subscribers : Shows the number of people who have subscribed that course.
+avg_rating : Shows the average rating of the course.
+avg rating recent : Reflects the recent changes in the average rating.
+num_reviews : Gives us an idea related
+---
+- ID: 43538
+
+Name: Business-Courses---Udemy-(10k-courses)
+
+Tags: 
+
+Context
+A compilation of all the BUSINESS related courses ( 10 thousand courses) which are available on Udemy's website. Under the Business category, there are courses from Finance, Entrepreneurship, Communication, Management, Sales, Strategy, Operations, Project Management, Business Law, Data  Analytics, Home Business, Human Resources and Industry each having multiple courses under it's domain.
+All the details can be found on Udemy's website as well!
+Content
+Here, I have extracted data related to 10k courses which come under the development category on Udemy's website.
+The 20 columns in the dataset can be used to gain insights related to:
+
+id : The course ID of that particular course.
+title : Shows the unique names of the courses available under the development category on Udemy.
+url: Gives the URL of the course.
+is_paid : Returns a boolean value displaying true if the course is paid and false if otherwise.
+num_subscribers : Shows the number of people who have subscribed that course.
+avg_rating : Shows the average rating of the course.
+avg rating recent : Reflects the recent changes in the average rating.
+num_reviews : Gives us an idea related
+---
+- ID: 43381
+
+Name: Coursera-Course-Dataset
+
+Tags: 
+
+Context
+This is a dataset i generated during a hackathon for project purpose. Here i have scrapped data from Coursera official web site.  Our project aims to help any new learner get the right course to learn by just answering a few questions. It is an intelligent course recommendation system. Hence we had to scrap data from few educational websites. This is data scrapped from Coursera website. For the project visit: https://github.com/Siddharth1698/Coursu . Please do show your support by following us. I have just started to learn on data science and hope this dataset will be helpful to someone for his/her personal purposes. The scrapping code is here : https://github.com/Siddharth1698/Coursera-Course-Dataset
+Article about the dataset generation : https://medium.com/analytics-vidhya/web-scraping-and-coursera-8db6af45d83f  
+
+Content
+This dataset contains mainly 6 columns and 890 course data. The detailed description:
+
+course_title : Contains the course title.
+course_organization : It tells which organization is conducting the courses.
+courseCertificatetype : It has
+---
+- ID: 42076
+
+Name: kickstarter_projects
+
+Tags: 
+
+Data are collected from Kickstarter Platform
+
+You'll find most useful data for project analysis. Columns are self explanatory except:
+
+usd_pledged: conversion in US dollars of the pledged column (conversion done by kickstarter).
+
+usd pledge real: conversion in US dollars of the pledged column (conversion from Fixer.io API).
+
+usd goal real: conversion in US dollars of the goal column (conversion from Fixer.io API).
+
+Features: ID, name, category, main_category, currency, deadline, goal, launched, pledged, state, backers, country, usd pledged, usd_pledged_real, usd_goal_real
+---
+- ID: 43738
+
+Name: Masters-Degrees--Programs-(mastersportal.eu)
+
+Tags: 
+
+Context
+I was searching for a master degree program in data-science when I found this awesome website mastersportal, So I just scrapped it to take my time analysing all master programs available around the world.
+Content
+This dataset contains 60442 different master's degree programs from 99 countries around the world.
+Scrapping code
+https://github.com/AnasFullStack/Masters-Portal-Scrapper
+
+Features: country_name, country_code, university_name, university_rank, program_name, program_type, deadline, duration, language, tution_1_currency, tution_1_money, tution_1_type, tution_2_currency, tution_2_money, tution_2_type, tuition_price_specification, start_date, ielts_score, structure, academic_req, facts, city, program_url
+---
+
+The topic is described by the following keywords: course, courses, discounted, udemys, shows, scrapped, conversion, pledged, numsubscribers, publishedtime, ispaid, numreviews, currency, website, avgrating, rating, gives, offered, idea, offers, 10000, scrapping, under, category, recent, coursetitle, coursestudentsenrolled, pricedetailamount, courseorganization, avgratingrecent
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43798, 43835, 43767, 43538, 43381, 42076, 43738 !

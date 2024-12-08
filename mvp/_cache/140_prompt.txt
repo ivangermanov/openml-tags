@@ -1,0 +1,248 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 41091
+
+Name: spellman_yeast
+
+Tags: concept_drift
+
+Two colour spotted cDNA array data set of a series of experiments to identify which genes in Yeast are cell cycle regulated.
+
+Features: cln3-1, cln3-2, clb, clb2-2, clb2-1, alpha, alpha0, alpha7, alpha14, alpha21, alpha28, alpha35, alpha42, alpha49, alpha56, alpha63, alpha70, alpha77, alpha84, alpha91, alpha98, alpha105, alpha112, alpha119, cdc15, cdc15_10, cdc15_30, cdc15_50, cdc15_70, cdc15_80, cdc15_90, cdc15_100, cdc15_110, cdc15_120, cdc15_130, cdc15_140, cdc15_150, cdc15_160, cdc15_170, cdc15_180, cdc15_190, cdc15_200, cdc15_210, cdc15_220, cdc15_230, cdc
+---
+- ID: 1485
+
+Name: madelon
+
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_98, study_99
+
+**Author**: Isabelle Guyon  
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/madelon)  
+**Please cite**: Isabelle Guyon, Steve R. Gunn, Asa Ben-Hur, Gideon Dror, 2004. Result analysis of the NIPS 2003 feature selection challenge.
+
+#### Abstract: 
+
+MADELON is an artificial dataset, which was part of the NIPS 2003 feature selection challenge. This is a two-class classification problem with continuous input variables. The difficulty is that the problem is multivariate and highly non-linear.
+
+#### Source:
+
+Isabelle Guyon 
+Clopinet 
+955 Creston Road 
+Berkeley, CA 90708 
+isabelle '@' clopinet.com 
+
+#### Data Set Information:
+
+MADELON is an artificial dataset containing data points grouped in 32 clusters placed on the vertices of a five-dimensional hypercube and randomly labeled +1 or -1. The five dimensions constitute 5 informative features. 15 linear combinations of those
+---
+- ID: 311
+
+Name: oil_spill
+
+Tags: mythbusting_1, study_1, study_15, study_20, study_52, study_7
+
+**Author**:   
+  
+**Source**: Unknown -   
+**Please cite**:   
+
+Oil dataset
+
+Past Usage:
+1. Kubat, M., Holte, R.,
+
+Features: class, attr1, attr2, attr3, attr4, attr5, attr6, attr7, attr8, attr9, attr10, attr11, attr12, attr13, attr14, attr15, attr16, attr17, attr18, attr19, attr20, attr21, attr22, attr23, attr24, attr25, attr26, attr27, attr28, attr29, attr30, attr31, attr32, attr33, attr34, attr35, attr36, attr37, attr38, attr39, attr40, attr41, attr42, attr43, attr44, attr45, attr46, attr47, attr48, attr49
+---
+- ID: 41473
+
+Name: yeast
+
+Tags: 2019_multioutput_paper
+
+Multi-label dataset. The yeast dataset (Elisseeff and Weston, 2002)
+  consists of micro-array expression data, as well as phylogenetic profiles of
+  yeast, and includes 2417 genes and 103 predictors. In total, 14 different
+  labels can be assigned to a gene, but only 13 labels were used due to label
+  sparsity.
+
+Features: Att1, Att2, Att3, Att4, Att5, Att6, Att7, Att8, Att9, Att10, Att11, Att12, Att13, Att14, Att15, Att16, Att17, Att18, Att19, Att20, Att21, Att22, Att23, Att24, Att25, Att26, Att27, Att28, Att29, Att30, Att31, Att32, Att33, Att34, Att35, Att36, Att37, Att38, Att39, Att40, Att41, Att42, Att43, Att44, Att45, Att46, Att47, Att48, Att49, Att50, Att51,
+---
+- ID: 40591
+
+Name: genbase
+
+Tags: 2016_multilabel_r_benchmark_paper, multi_label
+
+Multi-label dataset. The genbase dataset contains protein sequences that can be assigned to several classes of protein families.
+
+Features: protein, PS00010, PS00011, PS00012, PS00014, PS00017, PS00018, PS00019, PS00020, PS00021, PS00022, PS00023, PS00024, PS00025, PS00026, PS00027, PS00032, PS00033, PS00034, PS00035, PS00045, PS00046, PS00047, PS00048, PS00049, PS00050, PS00058, PS00059, PS00060, PS00061, PS00062, PS00063, PS00064, PS00065, PS00066, PS00067, PS00068, PS00069, PS00070, PS00071, PS00072, PS00073, PS00074, PS00084, PS00085, PS00086, PS00087, PS00088, PS00089, PS00090, PS00091, PS000
+---
+- ID: 316
+
+Name: yeast_ml8
+
+Tags: mythbusting_1, study_1, study_144, study_15, study_20, study_52, study_7
+
+**Author**:   
+  
+**Source**: Unknown -   
+**Please cite**:   
+
+Yeast dataset
+
+Past Usage:
+André Elisseeff and Jason Weston.
+A kernel method for multi-labelled classification.
+In Thomas G. Dietterich, Susan Becker, and Zoubin Ghahramani, editors, Advances in Neural Information Processing Systems 14, 2002.
+
+Features: attr1, attr2, attr3, attr4, attr5, attr6, attr7, attr8, attr9, attr10, attr11, attr12, attr13, attr14, attr15, attr16, attr17, attr18, attr19, attr20, attr21, attr22, attr23, attr24, attr25, attr26, attr27, attr28, attr29, attr30, attr31, attr32, attr33, attr34, attr35, attr36, attr37, attr38, attr39, attr40, attr41, attr42, attr43, attr44, attr
+---
+- ID: 40597
+
+Name: yeast
+
+Tags: 2016_multilabel_r_benchmark_paper, multi_label
+
+Multi-label dataset. The yeast dataset (Elisseeff and Weston, 2002) consists of micro-array expression data, as well as phylogenetic profiles of yeast, and includes 2417 genes and 103 predictors. In total, 14 different labels can be assigned to a gene, but only 13 labels were used due to label sparsity.
+
+Features: Att1, Att2, Att3, Att4, Att5, Att6, Att7, Att8, Att9, Att10, Att11, Att12, Att13, Att14, Att15, Att16, Att17, Att18, Att19, Att20, Att21, Att22, Att23, Att24, Att25, Att26, Att27, Att28, Att29, Att30, Att31, Att32, Att33, Att34, Att35, Att36, Att37, Att38, Att39, Att40, Att41, Att42, Att43, Att44, Att45, Att46, Att47, Att48, Att49, Att50, Att51,
+---
+- ID: 41467
+
+Name: genbase
+
+Tags: 2019_multioutput_paper
+
+Multi-label dataset. The genbase dataset contains protein sequences
+  that can be assigned to several classes of protein families.
+
+Features: protein, PS00010, PS00011, PS00012, PS00014, PS00017, PS00018, PS00019, PS00020, PS00021, PS00022, PS00023, PS00024, PS00025, PS00026, PS00027, PS00032, PS00033, PS00034, PS00035, PS00045, PS00046, PS00047, PS00048, PS00049, PS00050, PS00058, PS00059, PS00060, PS00061, PS00062, PS00063, PS00064, PS00065, PS00066, PS00067, PS00068, PS00069, PS00070, PS00071, PS00072, PS00073, PS00074, PS00084, PS00085, PS00086, PS00087, PS00088, PS00089, PS00090, PS00091, PS00092, PS00093
+---
+
+The topic is described by the following keywords: yeast, genbase, multilabel, isabelle, weston, madelon, elisseeff, nips, guyon, ps00092, ps00059, ps00084, ps00093, ps00089, ps00091, ps00085, ps00072, ps00074, ps00073, ps00068, ps00071, ps00070, ps00069, ps00067, ps00065, ps00064, ps00063, ps00062, ps00061, ps00087
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 41091, 1485, 311, 41473, 40591, 316, 40597, 41467 !

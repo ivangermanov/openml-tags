@@ -1,0 +1,288 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43547
+
+Name: House-Rent-in-Indian-Cities-and-Localities
+
+Tags: 
+
+Content
+This is a 10692 rows x 13 columns dataset that contains the different features of a property and its rent
+Acknowledgements
+This is a synthetic Indian dataset of the original dataset that has been uploaded by rubenssjr 
+Original dataset:  https://www.kaggle.com/rubenssjr/brasilian-houses-to-rent
+
+Features: city, area, rooms, bathroom, parking_spaces, floor, animal_allowance, furniture, association_tax, rent_amount, property_tax, fire_insurance, total_rent
+---
+- ID: 43536
+
+Name: Chennai-Zomato-Restaurants-Data
+
+Tags: 
+
+Context
+This is a tribute to my favourite city's rich food scene
+Content
+Entirely derived from web-scraping Zomato Chennai page. The data has important columns like the price for 2, top-selling dishes and cuisines the restaurant serve. It also has Zomato given ratings and how many votes were used to come up with that rating. Any field which I was unable to scrape is given as 'invalid'
+Acknowledgements
+All of the data belongs to Zomato and Zomato only. I thank Zomato for their ever helpful website. This data should be used only for academic purposes
+Inspiration
+I'm looking at how prices vary across Chennai's areas and which cuisine is famous in which areas and do they verify the gentrification of certain areas in Chennai. More interested in these sorts of things.
+
+Features: Zomato_URL, Name_of_Restaurant, Address, Location, Cuisine, Top_Dishes, Price_for_2, Dining_Rating, Dining_Rating_Count, Delivery_Rating, Delivery_Rating_Count, Features
+---
+- ID: 43723
+
+Name: Toronto-Apartment-Rental-Price
+
+Tags: 
+
+Context
+I have collected the Toronto Apartment Rental prices from various sources in local websites. 
+Content
+There are 7 columns in the dataset.
+Bedroom - How many bedrooms available
+Bathroom - How many bathrooms available
+Den - Whether den is available or not
+Address - Location
+Lat - Lattitude
+Long - Longitude
+Price - Apartment Rental price per month in CAD
+Inspiration
+I would recommend you to collect more insights from these data and show some visual as well. Predicting the price would be great.
+
+Features: Bedroom, Bathroom, Den, Address, Lat, Long, Price
+---
+- ID: 46284
+
+Name: bengaluru_real_estate_price
+
+Tags: 
+
+From original source:
+-----
+
+About this file
+What are the things that a potential home buyer considers before purchasing a house? The location, the size of the property, vicinity to offices, schools, parks, restaurants, hospitals or the stereotypical white picket fence? What about the most important factor - the price?
+
+Now with the lingering impact of demonetization, the enforcement of the Real Estate (Regulation and Development) Act (RERA), and the lack of trust in property developers in the city, housing units sold across India in 2017 dropped by 7 percent. In fact, the property prices in Bengaluru fell by almost 5 percent in the second half of 2017, said a study published by property consultancy Knight Frank.
+For example, for a potential homeowner, over 9,000 apartment projects and flats for sale are available in the range of 42-52 lakh, followed by over 7,100 apartments that are in the 52-62 lakh budget segment, says a report by property website Makaan. According to the study, there are over 5,000 projects in the 15-25 lakh budget segment followed by those in the
+---
+- ID: 43707
+
+Name: Govt.-of-India-Census-2001-District-Wise
+
+Tags: 
+
+Context
+Census of India is a rich database which can tell stories of over a billion Indians. It is important not only for research point of view, but commercially as well for the organizations that want to understand India's complex yet strongly knitted heterogeneity. 
+However, nowhere on the web, there exists a single database that combines the district- wise information of all the variables (most include no more than 4-5 out of over 50 variables!). Extracting and using data from Census of India 2001 is quite a laborious task since all data is made available in scattered PDFs district wise. Individual PDFs can be extracted from http://www.censusindia.gov.in/(S(ogvuk1y2e5sueoyc5eyc0g55))/Tables_Published/Basic_Data_Sheet.aspx. 
+Content
+This database has been extracted from Census of 2001 and includes data of 590 districts, having around 80 variables each. 
+In case of confusion regarding the context of the variable, refer to the following PDF and you will be able to make sense out of it: http://censusindia
+---
+- ID: 43837
+
+Name: New-Delhi-Rental-Listings
+
+Tags: 
+
+Context
+The dataset is from a rental price prediction project I did. Includes different types of properties (Apartments, Independent floors, Independent houses, Villas etc.)
+It contains 12000 rental listings from a popular real estate website. It can be used for rental prediction projects, analysis of areas of affluence etc.
+Content
+The dataset multiple quantitative, categorical and co-ordinate features including :
+
+Data about the houses : 
+sizesqft, 
+propertyType,
+bedrooms,
+Data about the locality of the house :
+latitude,
+longitude,
+localityName,
+suburbName,
+cityName,
+Asking Rent :
+price,
+Property agency :
+companyName,
+Distance to closest landmarks (geodesic distance, not driving-road distance)  :
+closestmterostationkm,
+APdistkm (Indira Gandhi International Airport),
+Aiimsdistkm (All India Institute of Medical Science - major government hospital),
+NDRLWdist_km (New Delhi Railway Station), 
+
+Heatmap of Data
+Red Vmax for monthly rent of Rs. 2lakh/mo and above.
+
+Features: Unnamed:_0, size_sq_ft, propertyType, bedrooms, latitude, longitude, locality
+---
+- ID: 46096
+
+Name: Economic_Census_Delhi
+
+Tags: 
+
+Description: The delhi_state.csv dataset is a structured collection of data associated with various economic, demographic, and social attributes of areas within Delhi state, India. This extensive dataset provides insight into different dimensions including but not limited to the administration (State, District, Tehsil), workforce composition (WC, EB, EBX, BACT, NIC3, TOTAL_WORKER), household characteristics (C_HOUSE, IN_HH, OWN_SHIP_C), personal demographics (SEX, SG, RELIGION), and other assorted metrics like T_V (Total Value), HLOOM_ACT (Handloom Activity), NOP (Number of Persons), SOF (Source of Finance), M_H (Male Headed Households), F_H (Female Headed Households), M_NH (Male Non-headed Households), F_NH (Female Non-headed Households), and the operational SECTOR of the workforce. Key identifiers like the DISTRICT code provide locational specificity enhancing the dataset's utility for regional analysis.
+
+Attribute Description:
+- State, District, Tehsil: Administrative identifiers.
+- T_V: Numeric, represents a Total Value (could be economic or demographic in nature).
+- WC
+---
+- ID: 43417
+
+Name: Ottawa-Real-Estate-Data
+
+Tags: 
+
+Context
+Real Estate data from the Canadian capital city of Ottawa for you to test your data analytics skill. This is my first dataset in Kaggle. Please let me know of anything that needs to be changed.
+Content
+Data was collected from real estate listings in Ottawa, Canada with minor changes made to location for privacy. 
+Inspiration
+Your data will be in front of the world's largest data science community. What questions do you want to see answered?
+Collection of this data set was inspired by Kaggle's introductory course on Melbourne housing market. Anyone who wants to try out the skills they learned from their will surely benefit this dataset.
+
+Features: latitude, longitude, postalCode, walkScore, propertyType, style, yearBuilt, bedrooms, bathrooms, parking, garage, lotDepth, lotFrontage, price
+---
+- ID: 43814
+
+Name: Dubai-Properties---Apartments
+
+Tags: 
+
+This dataset is part of my personal project Apartment Pricing: Advance Regression Techniques. You can check the details on the below URL:
+Apartment Pricing: Advanced Regression Techniques
+The data is scraped from the real estate portal and it is anonymized. It consists of more than 1800+ properties containing 38 features.
+
+Features: id, neighborhood, latitude, longitude, price, size_in_sqft, price_per_sqft, no_of_bedrooms, no_of_bathrooms, quality, maid_room, unfurnished, balcony, barbecue_area, built_in_wardrobes, central_ac, childrens_play_area, childrens_pool, concierge, covered_parking, kitchen_appliances, lobby_in_building, maid_service, networked, pets_allowed, private_garden, private_gym, private_jacuzzi, private_pool, security, shared_gym, shared_pool, shared_spa, study, vastu_compliant, view_of_landmark, view_of_water, walk_in_closet
+---
+
+The topic is described by the following keywords: district, zomato, india, lakh, apartment, delhi, fnh, hloomact, ownshipc, pdfs, totalworker, nop, mnh, tehsil, bact, inhh, chouse, ebx, bengaluru, nic3, estate, workforce, rental, property, fh, mh, propertytype, eb, demographic, household
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43547, 43536, 43723, 46284, 43707, 43837, 46096, 43417, 43814 !

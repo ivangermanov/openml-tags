@@ -1,0 +1,384 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43481
+
+Name: Cosmetics-datasets
+
+Tags: 
+
+Context
+Whenever I want to try a new cosmetic item, it's so difficult to choose. It's actually more than difficult. It's sometimes scary because new items that I've never tried end up giving me skin trouble. We know the information we need is on the back of each product, but it's really hard to interpret those ingredient lists unless you're a chemist. You may be able to relate to this situation.
+
+Content
+we are going to create a content-based recommendation system where the 'content' will be the chemical components of cosmetics. Specifically, we will process ingredient lists for 1472 cosmetics on Sephora via word embedding, then visualize ingredient similarity using a machine learning method called t-SNE and an interactive visualization library called Bokeh. Let's inspect our data first.
+
+Acknowledgements
+DataCamp
+
+Features: Label, Brand, Name, Price, Rank, Ingredients, Combination, Dry, Normal, Oily, Sensitive
+---
+- ID: 43712
+
+Name: 515K-Hotel-Reviews-Data-in-Europe
+
+Tags: 
+
+Acknowledgements
+The data was scraped from Booking.com. All data in the file is publicly available to everyone already. Data is originally owned by Booking.com. Please contact me through my profile if you want to use this dataset somewhere else.
+Data Context
+This dataset contains 515,000 customer reviews and scoring of 1493 luxury hotels across Europe. Meanwhile, the geographical location of hotels are also provided for further analysis.
+Data Content
+The csv file contains 17 fields. The description of each field is as below:
+
+Hotel_Address: Address of hotel. 
+Review_Date: Date when reviewer posted the corresponding review.
+Average_Score: Average Score of the hotel, calculated based on the latest comment in the last year.
+Hotel_Name: Name of Hotel
+Reviewer_Nationality: Nationality of Reviewer
+Negative_Review: Negative Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it should be: 'No Negative'
+ReviewTotalNegativeWordCounts: Total number of words in the negative review.
+Positive_Review: Positive Review the reviewer gave to the hotel. If the reviewer does not give the negative review, then it
+---
+- ID: 45050
+
+Name: Amazon_Electronics_Dataset
+
+Tags: 
+
+Amazon Reviews data (data source) The repository has several datasets. For this case study, we are using the Electronics dataset.
+
+Features: User, Item, Rating
+---
+- ID: 43575
+
+Name: Snapchat-Google-PlayStore-Reviews
+
+Tags: 
+
+Context
+The dataset contains reviews from google playstore on snapchat.
+With the sentiment analysis, we can check for the users' adoption of andriod version of snapchat, which has been improved significantly recently (as claimed by the company). Also whether the app is redefining  the  use of camera and changing the way people interact with their close ones.
+
+Features: Date, Rating, Helpful, Review_Text
+---
+- ID: 43565
+
+Name: Google-Play-Store-Reviews
+
+Tags: 
+
+Google Play Store
+Google Play, formerly Android Market, is a digital distribution service operated and developed by Google. It serves as the official app store for certified devices running on the Android operating system, allowing users to browse and download applications developed with the Android software development kit (SDK) and published through Google. It has crossed over 82 billion app downloads with over 3.5 million published apps making it the largest app store in the world. 
+
+Content
+The data contains over 12000 reviews of different app store applications by real users. The data also contains the rating that was given by them so it can be classified into positive or negative reviews. This is a real good place to perform sentiment analysis tasks. Some of the apps whose data has been collected can be seen below. 
+
+Acknowledgements
+I have used the Google Play Store Scrapper Library for this task which made the scrapping really easy. You can also check out the data collection process here. 
+Motivation
+This is a really good place to start learning about sentiment analysis. These reviews and ratings can provide beginners with annotated real-world data. I have uploaded a BERT sentiment analysis model which has been trained on
+---
+- ID: 43366
+
+Name: Amazon---Ratings-(Beauty-Products)
+
+Tags: 
+
+Context
+Amazon.com is one of the largest electronic commerce and cloud computing companies.
+Just a few Amazon related facts
+
+They lost 4.8 million in August 2013, when their website went down for 40 mins.
+They hold the patent on 1-Click buying, and licenses it to Apple.
+Their Phoenix fulfilment centre is a massive 1.2 million square feet.
+
+Amazon relies heavily on a Recommendation engine that reviews customer ratings and purchase history to recommend items and improve sales. 
+Content
+This is a dataset related to over 2 Million customer reviews and ratings of Beauty related products sold on their website.
+It contains 
+
+the unique UserId (Customer Identification), 
+the product ASIN (Amazon's unique product identification code for each product), 
+Ratings (ranging from 1-5 based on customer satisfaction) and 
+the Timestamp of the rating (in UNIX time)
+
+Acknowledgements
+A description of the entire Amazon products dataset.
+This dataset contains product reviews and metadata from Amazon, including 142.8 million reviews spanning May 1996 - July 2014.
+This dataset includes reviews (ratings, text, helpfulness votes), product metadata (des
+---
+- ID: 43360
+
+Name: Popular-Halloween-2020--Costumes-Amazon-Reviews
+
+Tags: 
+
+Context
+So it's Halloween again dear Kagglers!
+And what better way of celebrating than with some NLP!
+The dataset brings you the reviews of popular Halloween costumes sold on amazon as of November 2020.
+Content
+The dataset contains popular costumes from the Amazon website, for each costume there are user review texts including the review title and the review score, also you will find the publishing date and location.
+The data hasn't been preprocessed in any way so I think it can be a great exercise for aspiring data scientists who are looking to sharpen their skills in text preprocessing skills and feature extraction skills.
+
+Features: text, date, title, rating, product_name
+---
+- ID: 43721
+
+Name: Hotel-Reviews
+
+Tags: 
+
+Data Description
+Dataset is from one of the leading travel site containing hotel reviews provided by customers.  
+
+
+
+Variable
+Description
+
+
+
+
+User_ID
+unique ID of the customer
+
+
+Description
+description of the review posted
+
+
+Browser_Used
+browser used to post the review
+
+
+Device_Used
+device used to post the review
+
+
+Is_Response
+target Variable
+
+Features: User_ID, Description, Browser_Used, Device_Used, Is_Response
+---
+- ID: 1457
+
+Name: amazon-commerce-reviews
+
+Tags: study_123
+
+**Author**: Zhi Liu  
+**Source**: UCI
+**Please cite**:   
+
+Dataset creator and donator: Zhi Liu, e-mail: liuzhi8673 '@' gmail.com, institution: National Engineering Research Center for E-Learning, Hubei Wuhan, China
+
+Data Set Information:
+ 
+dataset are derived from the customers reviews in Amazon Commerce Website for authorship identification. Most previous studies conducted the identification experiments for two to ten authors. But in the online context, reviews to be identified usually have more potential authors, and normally classification algorithms are not adapted to large number of target classes. To examine the robustness of classification algorithms, we identified 50 of the most active users (represented by a unique ID and username) who frequently posted reviews in these newsgroups. The number of reviews we collected for each author is 30.
+
+Attribute Information:
+ 
+attribution includes authors' linguistic style such as usage of digit, punctuation, words and sentences' length and usage frequency of words and so on
+
+Features: V1, V2, V3, V4, V5, V6, V7, V8, V9,
+---
+- ID: 43431
+
+Name: Amazon-Echo-Dot-2-Reviews-Dataset
+
+Tags: 
+
+Context
+Since Amazon Echo Dot 2 has been the best selling Alexa product, we decided to extract the reviews posted on Amazon for this device. This particular dataset contains reviews posted in September and October 2017. The complete dataset with all the reviews from 2016 can be downloaded from DataStock - a repository of clean and structured web datasets with historical records.
+Content
+Given below are the data fields:
+
+Pageurl    
+Title    
+Review Text    
+Device Color    
+User Verified    
+Review Date    
+Review Useful Count    
+Configuration 
+Rating    
+Declaration Text (Example: Vine Voice, Top 100 reviewer, etc.)
+
+Acknowledgements
+This dataset has been created via PromptCloud's in-house web data extraction solution.
+
+Inspiration
+The initial set of analyses can be access here - https://goo.gl/XHVe9b.
+
+Features: Pageurl, Title, Review_Text, Review_Color, User_Verified, Review_Date, Review_Useful_Count, Configuration_Text, Rating, Declaration_Text
+---
+- ID: 43663
+
+Name: Womens-E-Commerce-Clothing-Reviews
+
+Tags: 
+
+Context
+Welcome. This is a Womens Clothing E-Commerce dataset revolving around the reviews written by customers. Its nine supportive features offer a great environment to parse out the text through its multiple dimensions. Because this is real commercial data, it has been anonymized, and references to the company in the review text and body have been replaced with retailer.
+Content
+This dataset includes 23486 rows and 10 feature variables. Each row corresponds to a customer review, and includes the variables:
+
+Clothing ID: Integer Categorical variable that refers to the specific piece being reviewed. 
+Age: Positive Integer variable of the reviewers age.
+Title: String variable for the title of the review.
+Review Text: String variable for the review body. 
+Rating: Positive Ordinal Integer variable for the product score granted by the customer from 1 Worst, to 5 Best. 
+Recommended IND: Binary variable stating where the customer recommends the    product where 1 is recommended, 0 is not recommended.    
+Positive Feedback Count: Positive Integer documenting the number of other customers who found this review positive.
+Division Name: Categorical name of the product high level division.
+Department Name: Categorical name of the
+---
+- ID: 43504
+
+Name: 1-million-Reddit-comments-from-40-subreddits
+
+Tags: 
+
+Content
+This data is an extract from a bigger reddit dataset (All reddit comments from May 2019, 157Gb or data uncompressed) that contains both more comments and more associated informations (timestamps, author, flairs etc).
+For ease of use, I picked the first 25 000  comments for each of the 40 most frequented subreddits  (May 2019), this was if anyone wants to us the subreddit as categorical data, the volumes are balanced.
+I also excluded any removed comments / comments whose author got deleted and comments deemed too short (less than 4 tokens) and changed the format (json - csv).
+This is primarily a NLP dataset, but in addition to the comments I added the 3 features I deemed the most important, I also aimed for feature type variety.
+The information kept here is:
+
+subreddit (categorical): on which subreddit the comment was posted
+body (str): comment content
+controversiality (binary): a reddit aggregated metric
+score (scalar): upvotes minus downvotes
+
+Acknowledgements
+The data is but a small extract of what is being collected
+---
+
+The topic is described by the following keywords: reviews, review, hotel, amazon, reviewer, product, rating, text, comments, posted, store, google, subreddit, app, sentiment, score, customer, reviewers, reviewtext, recommendation, ingredient, hotels, reviewdate, comment, million, reddit, ratings, userid, content, words
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43481, 43712, 45050, 43575, 43565, 43366, 43360, 43721, 1457, 43431, 43663, 43504 !

@@ -1,0 +1,272 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42813
+
+Name: bankmarketing
+
+Tags: 
+
+
+
+Features: age, job, marital, education, default, housing, loan, contact, month, day_of_week, duration, campaign, pdays, previous, poutcome, emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed, y
+---
+- ID: 43595
+
+Name: Loan-Predication
+
+Tags: 
+
+Among all industries, insurance domain has the largest use of analytics  data science methods. This data set would provide you enough taste of working on data sets from insurance companies, what challenges are faced, what strategies are used, which variables influence the outcome etc. This is a classification problem. The data has 615 rows and 13 columns.
+Problem-----
+Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others. To automate this process, they have given a problem to identify the customers segments, those are eligible for loan amount so that they can specifically target these customers. Here they have provided a partial data set.
+
+Features: Loan_ID, Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status
+---
+- ID: 43552
+
+Name: Case-Study-Applicants-for-a-Gold-Digger-position
+
+Tags: 
+
+Context
+This dataframe describes applications for a Gold Digger position. According to each applicants's characteristics, can you create the best model to classify whether a candidate is hired or not ?
+It is a good playground to harden your data science skills and try new models. Ideal to prepare interviews.
+Content
+This dataframe contains 20000 observations and 11 columns:
+
+date: date of the application
+age: age of the candidate
+diplome: highest qualification diploma (bac, licence, master, doctorat)
+specialite: minor of the diploma (geologie, forage, detective, archeologie,)
+salaire: salary expectation
+dispo: oui : directly available, non : not directly available
+sexe: female (F) or male (M)
+exp: years of relevant experience
+cheveux: hair color (chatain, brun, blond, roux)
+note: grade (out of 100) for gold digging exam
+embauche: Has the candidate been hired ? (0 : no, 1 : yes)
+
+Features: Unnamed:_0, date, cheveux, age, exp, salaire, sexe, diplome,
+---
+- ID: 43718
+
+Name: Bank-Marketing-Dataset
+
+Tags: 
+
+Context
+Find the best strategies to improve for the next marketing campaign. How can the financial institution have a greater effectiveness for future marketing campaigns? In order to answer this, we have to analyze the last marketing campaign the bank performed and identify the patterns that will help us find conclusions in order to develop future strategies.
+Source
+[Moro et al., 2014] S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014
+
+Features: age, job, marital, education, default, balance, housing, loan, contact, day, month, duration, campaign, pdays, previous, poutcome, deposit
+---
+- ID: 43826
+
+Name: Personal-Loan-Modeling
+
+Tags: 
+
+Context
+This case is about a bank (Thera Bank) whose management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors). A campaign that the bank ran last year for liability customers showed a healthy conversion rate of over 9 success. This has encouraged the retail marketing department to devise campaigns with better target marketing to increase the success ratio with minimal budget.
+Content
+The file Bank.xls contains data on 5000 customers. The data include customer demographic information (age, income, etc.), the customer's relationship with the bank (mortgage, securities account, etc.), and the customer response to the last personal loan campaign (Personal Loan). Among these 5000 customers, only 480 (= 9.6) accepted the personal loan that was offered to them in the earlier campaign.
+There are no empty or (NaN) values in the dataset. The dataset has a mix of numerical and categorical attributes, but all categorical data are represented with numbers. Moreover, Some of the predictor variables are heavily skewed (long - tailed), making the data pre-processing an interesting yet not too challenging aspect of the data.
+
+Features: ID,
+---
+- ID: 44071
+
+Name: bank-marketing
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark. Original description: 
+ 
+**Author**: Paulo Cortez, Sergio Moro
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
+**Please cite**: S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimaraes, Portugal, October, 2011. EUROSIS.       
+
+**Bank Marketing**  
+The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed. 
+
+The classification goal is to predict if the
+---
+- ID: 42572
+
+Name: Santander_transaction_value
+
+Tags: 
+
+According to Epsilon research, 80% of customers are more likely to do business with you if you provide personalized service. Banking is no exception.
+
+The digitalization of everyday lives means that customers expect services to be delivered in a personalized and timely manner... and often before they've even realized they need the service. In their 3rd Kaggle competition, Santander Group aims to go a step beyond recognizing that there is a need to provide a customer a financial service and intends to determine the amount or value of the customer's transaction. This means anticipating customer needs in a more concrete, but also simple and personal way. With so many choices for financial services, this need is greater now than ever before.
+
+In this competition, Santander Group is asking Kagglers to help them identify the value of transactions for each potential customer. This is a first step that Santander needs to nail in order to personalize their services at scale.
+
+You are provided with an anonymized dataset containing numeric feature variables, the numeric target column, and a string ID column.
+
+The task is to predict the value of target column.
+
+Features: ID, 48df886f9, 0deb4b6a8, 34b15
+---
+- ID: 45929
+
+Name: DATASETBANK
+
+Tags: 
+
+BANCO DE DATOS
+
+Features: CustomerID, Age, Months as a Customer, Number of Products, Average Balance Feed Index, Personal Debt to Equity Ratio, Has Bad Payment Record, Marital Status, Age Youngest Child, Number of Workers in Household, Income, Payed the Personal Loan
+---
+- ID: 43407
+
+Name: Advertising-Campaign-Analytics-Merkle-Sokrati
+
+Tags: 
+
+Problem Statement
+The following Data Analysis of Marketing Campaigns is a part of the Assignment for Data Science Intern at Merkle Sokrati.
+Objectives of the Task
+
+Carry out EDA and build ML model to evaluate the insights automatically.
+Prepare a summary of your Analysis and put that into a professional looking deck.
+
+Content
+Marketing campaigns containing data from Oct19 to July20. This data is from Google and Facebook campaigns which shows the performance of different Age-groups for different dimensions.
+All the key fields like Platform, Type, Medium, Sub Channel, Audience, Creative have already been mapped to the data.
+
+Platform: Marketing platforms on which campaigns are running majorly: Google Ads and Facebook Ads.
+Type: Type of campaign, In this data, only Google search and Facebook Conversion campaigns have been considered.
+Medium: The way we are connecting to people in our Marketing campaigns either via some Keywords or Creatives.
+Sub Channel: Subchannel is under Google Search which type of keywords have been targeted, In Facebook which on subchannel we are targeting.
+Audience: Multiple Type of audiences are getting targeted in different campaigns and those have been encrypted as Audience 1,2,3
+---
+
+The topic is described by the following keywords: campaign, campaigns, marketing, loan, customers, client, bank, facebook, moro, personal, marital, subchannel, deposit, pdays, poutcome, santander, contact, customer, audience, google, yesno, balance, success, merkle, embauche, cheveux, specialite, intern, diploma, sokrati
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42813, 43595, 43552, 43718, 43826, 44071, 42572, 45929, 43407 !

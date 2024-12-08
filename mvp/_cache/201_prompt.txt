@@ -1,0 +1,271 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43558
+
+Name: LT_Finance_Holdings_Ltd_Stock_Price_2017_to_2020
+
+Tags: 
+
+Context
+This dataset is a playground for fundamental and technical analysis. This can serve as basic tutorial for time-series data analysis.
+Content
+Dataset consists of following files:
+LTFinanceHoldingsLtdStockPrice2017to2020.csv: The data related to LT Finance Holdings Ltd Stock Price from Feb 2017 to Feb 2020 and contains 13 columns.
+Acknowledgements
+Prices were fetched from "bseindia" databases.
+Inspiration
+Here is couple of things one could try out with this data:
+
+One day ahead prediction: Rolling Linear Regression, ARIMA, SARIMA, LSTM
+Momentum/Mean-Reversion Strategies
+
+Features: Date, Open_Price, High_Price, Low_Price, Close_Price, WAP, No.of_Shares, No._of_Trades, Total_Turnover_(Rs.), Deliverable_Quantity, %_Deli._Qty_to_Traded_Qty, Spread_High-Low, Spread_Close-Open
+---
+- ID: 43848
+
+Name: NSE-Future-and-Options-Dataset-3M
+
+Tags: 
+
+Context
+This Data is gathered from NSE website  for the past three months I am posting this here so people can analyse this data 
+ and gather meaningful insights from this.
+Example -  Probability of Stock ending up at Max Pain with the help of Open Interest.
+Content
+The dataset contains stock symbol with which it is traded,  Expiry Date. Strike Price and the Option pricing of the Symbol at that Strike price.
+Acknowledgements
+I thank the people working at NSE for publishing these reports everyday.
+Inspiration
+Whenever we want to initiate an Options trade we look at various parameters like OpenInterest, Change in OI, Technical Analysis Indicators before deciding to Buy/Sell the Option. Most times we need to browse to multiple websites to gather the data we need, This is an example to show how you can customise the data for our needs.
+
+Features: Unnamed:_0, INSTRUMENT, SYMBOL, EXPIRY_DT, STRIKE_PR, OPTION_TYP, OPEN, HIGH, LOW, CLOSE, SETTLE_PR, CONTRACTS, VAL_INLAKH, OPEN_INT, CHG_IN_OI, TIMESTAMP
+---
+- ID: 43402
+
+Name: Stock-Market-NIFTY50-Index-Data
+
+Tags: 
+
+Context
+The Stock Market forecasting and Modelling has always been the problem most researched by analysts, here we will present a dataset of the Indian Stock Exchange - Nifty50 Index . for use for modelling and forecasting ability by machine learning .
+Content
+The Data consists of 9 Rows, directly sources from the NSE India website and uploaded here each data row represents the market prices at the Close of day . along with the NIFTY50 Index Daily yields.  the dataset is from 2006 to 2020 Feb. ideal for making models of daily datasets.
+    
+ Data Field  Description 
+ Date  --Calendar Date: Trading Date 
+ Open  --Index Open Price for Day 
+ High  --Index Highest Price for Day 
+ Low  ---Index Lowest Price for Day 
+ Close  --Index Closing Price for Day 
+ Volume  --Total Volume Traded During the Day  
+ Pe ratio  --The Profit/Equity ratio of NIFTY Index 
+ Pb ratio --The Profit/Book Value Ratio of Nifty Index 
+ dividend_yield --The dividend yield of the Nifty Index 
+    
+Acknowledgements
+The data is publicly sourced from the NSE India Website, and
+---
+- ID: 43645
+
+Name: stock-market-prediction
+
+Tags: 
+
+Context
+this dataset is containing information about HDFC bank equity share information.
+Content
+The dataset containing a total of 7 columns  Date         5151 non-null datetime64[ns]
+Open         5082 non-null float64
+High         5082 non-null float64
+Low          5082 non-null float64
+Close        5082 non-null float64
+Adj Close    5082 non-null float64
+Volume  5082 non-null float64
+
+Features: Date_, series_, OPEN_, HIGH_, LOW_, PREV._CLOSE_, ltp_, close_, vwap_, 52W_H_, 52W_L_, VOLUME_, VALUE_, No_of_trades_
+---
+- ID: 43520
+
+Name: 5-year-BSE-Sensex-Dataset
+
+Tags: 
+
+Context
+The BSE SENSEX (also known as the SP Bombay Stock Exchange Sensitive Index or simply the SENSEX) is a free-float market-weighted stock market index of 30 well-established and financially sound companies listed on Bombay Stock Exchange. The 30 constituent companies which are some of the largest and most actively traded stocks, are representative of various industrial sectors of the Indian economy.
+
+Content
+Dataset includes few fundamental statistics of SENSEX. Can you come up with a screener to select investment worthy opportunities? Can you find out any trend of last 5 years from 2015 to 2020.
+What other fundamental indicators would be look at? Comment and I may add them in future versions.
+
+Features: Date, Open, High, Low, Close
+---
+- ID: 43666
+
+Name: NSE-Stocks-Data
+
+Tags: 
+
+Context
+The data is of National Stock Exchange of India.
+The data is compiled to felicitate Machine Learning, without bothering much about Stock APIs.
+Content
+The data is of National Stock Exchange of India's stock listings for each trading day of 2016 and 2017.
+A brief description of columns.
+SYMBOL: Symbol of the listed company. 
+SERIES: Series of the equity. Values are [EQ, BE, BL, BT, GC and IL] 
+OPEN: The opening market price of the equity symbol on the date. 
+HIGH: The highest market price of the equity symbol on the date. 
+LOW: The lowest recorded market price of the equity symbol on the date. 
+CLOSE: The closing recorded price of the equity symbol on the date. 
+LAST: The last traded price of the equity symbol on the date. 
+PREVCLOSE: The previous day closing price of the equity symbol on the date. 
+TOTTRDQTY: Total traded quantity of the equity symbol on the date. 
+TOTTRDVAL: Total traded volume of the equity symbol on the date. 
+TIMESTAMP: Date of record. 
+TOTALTRADES: Total trades executed
+---
+- ID: 43621
+
+Name: BSE-30-daily-market-price-(2008-2018)
+
+Tags: 
+
+Content
+The SP BSE SENSEX (SP Bombay Stock Exchange Sensitive Index), also called the BSE 30 or simply the SENSEX, is a free-float market-weighted stock market index of 30 well-established and financially sound companies listed on Bombay Stock Exchange. The 30 component companies which are some of the largest and most actively traded stocks, are representative of various industrial sectors of the Indian economy.
+This dataset contains the data about these 30 stocks for 10 years starts from 06/05/2008 to 04/05/2018 .
+Variables are symbol (ticker) , Date , open , high , low , close, adj close and volume.
+Acknowledgement
+The prices are fetched from yahoo finance.
+Inspiration
+1) Which stocks were most Volatile/ Stable?
+2) Predicting next day stock prices
+
+Features: Symbol, Date, Open, High, Low, Close, Adj_Close, Volume
+---
+
+The topic is described by the following keywords: symbol, equity, stock, 5082, float64, nonnull, sensex, nse, open, exchange, close, bombay, market, stocks, bse, nifty, low, prevclose, index, volume, fetched, traded, feb, nifty50, nooftrades, wellestablished, freefloat, tottrdqty, tottrdval, felicitate
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43558, 43848, 43402, 43645, 43520, 43666, 43621 !

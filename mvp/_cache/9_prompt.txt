@@ -1,0 +1,451 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42824
+
+Name: NaijaCOVID-19
+
+Tags: 
+
+
+
+Features: States, Geopolitical zones, Latitude, Longitude, Population_Female, Population_Male, Population_Total, Confirmed, Admission, Discharged, Deaths, Discharge rate, Fatality rate, Percentage Reduction, Primary health care, Secondary health care, Tertiary, Health care total, COVID-19_lab
+---
+- ID: 43634
+
+Name: Coronavirus-News-(COVID-19)
+
+Tags: 
+
+Context
+The World Health Organization (WHO) declared the 201920 coronavirus outbreak a pandemic and a Public Health Emergency of International Concern (PHEIC). Evidence of local transmission of the disease has been found in many countries across all six WHO regions.
+Content
+Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).
+A novel coronavirus (COVID-19) was identified in 2019 in Wuhan, China. This is a new coronavirus that has not been previously identified in humans, and has since spread globally, resulting in the 201920 coronavirus pandemic.
+Acknowledgements
+I'd like to express my gratitude to my instructional team (Essra Madi, Markus Lim, Fahad Alsharekh and Bilal Yousef) for all of there efforts.
+Inspiration
+I hope this data will help the data scientist to get an insight about spreading the (COVID-19) around the world.
+
+Features: Unnamed:_0, Unnamed:_0.1, date, title, category, body, source
+---
+- ID: 43554
+
+Name: Global-School-Closures-for-COVID-19
+
+Tags: 
+
+The number of children, youth and adults not attending schools or universities because of COVID-19 is soaring. Governments all around the world have closed educational institutions in an attempt to contain the global pandemic.
+According to UNESCO monitoring, over 100 countries have implemented nationwide closures, impacting over half of worlds student population. Several other countries have implemented localized school closures and, should these closures become nationwide, millions of additional learners will experience education disruption.
+This data is compiled by the UNESCO and distributed by HDX.
+
+Features: Date, ISO, Country, Status
+---
+- ID: 43733
+
+Name: Covid-19--historical-data
+
+Tags: 
+
+Context
+Includes data on confirmed cases, deaths, hospitalizations, and testing, as well as other variables of potential interest.
+Content
+As of 26 January 2021, the columns are: isocode, continent, location, date, totalcases, newcases, newcasessmoothed, totaldeaths, newdeaths, newdeathssmoothed, totalcasespermillion, newcasespermillion, newcasessmoothedpermillion, totaldeathspermillion, newdeathspermillion, newdeathssmoothedpermillion, reproductionrate, icupatients, icupatientspermillion, hosppatients, hosppatientspermillion, weeklyicuadmissions, weeklyicuadmissionspermillion, weeklyhospadmissions, weeklyhospadmissionspermillion, totaltests, newtests, totaltestsperthousand, newtestsperthousand, newtestssmoothed, newtestssmoothedperthousand, positiverate, testspercase, testsunits, totalvaccinations, peoplevaccinated, peoplefullyvaccinated, newvaccinations, newvaccinationssmoothed, totalvaccinationsper
+---
+- ID: 43764
+
+Name: Data-on-COVID-19-(coronavirus)
+
+Tags: 
+
+Coronavirus Country Profiles
+We built 207 country profiles which allow you to explore the statistics on the coronavirus pandemic for every country in the world.
+In a fast-evolving pandemic it is not a simple matter to identify the countries that are most successful in making progress against it. Excess mortality and the rate of the confirmed deaths is what we focus on in the sections below, but for a fuller assessment a wider perspective is useful. For this purpose we track the impact of the pandemic across our publication and we built country profiles for 207 countries to study the statistics on the coronavirus pandemic for every country in the world in depth.
+Each profile includes interactive visualizations, explanations of the presented metrics, and the details on the sources of the data.
+Every country profile is updated daily.
+
+Features: iso_code, continent, location, date, total_cases, new_cases, new_cases_smoothed, total_deaths, new_deaths, new_deaths_smoothed, total_cases_per_million, new_cases_per_million, new_cases_smoothed_per_million, total_deaths_per_million, new_deaths_per_million, new_deaths_smoothed_per_million, reproduction_rate,
+---
+- ID: 43400
+
+Name: COVID-19-community-mobility-reports
+
+Tags: 
+
+The pandemic context brings new challenges to cities. This fantastic resource was created by Google with aggregated, anonymized sets of data from users who have turned on the Location History setting on Android. It captures the changes in mobility between baseline values (median value from the 5week period Jan 3  Feb 6, 2020) at weekly intervals data from February to October 2020. Data include changes in mobility related to workplace, residential, transit hubs, parks, retail and grocery. It covers 593 cities in 43 countries. 
+See https://ourworldindata.org/covid-mobility-trends
+
+Features: country_region_code, country_region, sub_region_1, sub_region_2, metro_area, iso_3166_2_code, census_fips_code, date, retail_and_recreation_percent_change_from_baseline, grocery_and_pharmacy_percent_change_from_baseline, parks_percent_change_from_baseline, transit_stations_percent_change_from_baseline, workplaces_percent_change_from_baseline, residential_percent_change_from_baseline
+---
+- ID: 43349
+
+Name: COVID-19-World-Vaccination-Progress
+
+Tags: 
+
+Context
+Data is collected daily from Our World in Data GitHub repository for covid-19, merged and uploaded.
+
+Content
+The data contains the following information:
+
+Country- this is the  country for which the vaccination information is provided;   
+Country ISO Code - ISO code for the country;   
+Date - date for the data entry; for some of the dates we have only the daily vaccinations, for others, only the (cumulative) total;   
+Total number of vaccinations - this is the absolute number of total immunizations in the country;  
+Total number of people vaccinated - a person, depending on the immunization scheme, will receive one or more (typically 2) vaccines; at a certain moment, the number of vaccination might be larger than the number of people;  
+Total number of people fully vaccinated - this is the number of people that received the entire set of immunization according to the immunization scheme (typically 2); at a certain moment in time, there might be a certain number of people that received one vaccine and another number (smaller) of people that received all vaccines in the scheme;  
+Daily vaccinations (raw) - for a
+---
+- ID: 43509
+
+Name: COVID-19-Rio-de-Janeiro-(City)
+
+Tags: 
+
+Context - World Health Organization (WHO)
+Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus (2019-nCoV).
+
+Content
+This dataset has information on the number of confirmed cases, deaths, and recoveries (by neighborhood) in the city of Rio de Janeiro, Brazil. 
+Please note that this is a time-series data and so the number of cases on any given day is a cumulative number.
+The number of new cases can be obtained by the difference between current and previous days.
+The data is available from 21 April 2020 until December 2020.
+
+Acknowledgements
+Rio de Janeiro City Hall, Municipal Health Secretariat  Others - Painel COVID-19 Rio
+Raphael Fontes unanimad - Dataset Inspiration
+
+Inspiration
+Changes in the number of confirmed cases, deaths, and recoveries by neighborhood over time.
+Changes in the number of confirmed cases, deaths, and recoveries at the city level.
+Spread of the disease in the city.
+
+Features: Date, Hour, Neighborhood, Cases, Deaths, Recovered
+---
+- ID: 43412
+
+Name: COVID-19-Visualisation-and-Epidemic-Analysis-Data
+
+Tags: 
+
+COVID-19 Dataset for Epidemic Model Development
+I combined several data sources to gain an integrated dataset involving country-level COVID-19 confirmed, recovered and fatalities cases which can be used to build some epidemic models such as SIR, SIR with mortality. Adding information regarding population which can be used for calculating incidence rate and prevalence rate.
+One of my applications based on this dataset is published at https://dylansp.shinyapps.io/COVID19_Visualization_Analysis_Tool/.
+Content
+My approach is to retrieve cumulative confirmed cases, fatalities and recovered cases since 2020-01-22 onwards from the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE) COVID-19 dataset, merged with country code as well as population of each country. For the purpose of building epidemic models, I calculated information regarding daily new confirmed cases, recovered cases, and fatalities, together with remaining confirmed cases which equal to cumulative confirmed cases - cumulative recovered cases - cumulative fatalities. I haven't yet to find creditable data sources regarding probable cases of various countries yet. I'll add them once I found them.
+
+Date: The date of the record
+---
+- ID: 43457
+
+Name: COVID19-Dataset-with-100-World-Countries
+
+Tags: 
+
+COVID19-Algeria-and-World-Dataset
+A coronavirus dataset with 104 countries constructed from different reliable sources, where each row represents a country, and the columns represent geographic, climate, healthcare, economic, and demographic factors that may contribute to accelerate/slow the spread of the COVID-19. The assumptions for the different factors are as follows:
+
+Geography: some continents/areas may be more affected by the disease
+Climate: cold temperatures may promote the spread of the virus
+Healthcare: lack of hospital beds/doctors may lead to more human losses
+Economy: weak economies (GDP) have fewer means to fight the disease
+Demography: older populations may be at higher risk of the disease
+
+The last column represents the number of daily tests performed and the total number of cases and deaths reported each day.
+Data description
+
+Countries in the dataset by geographic coordinates
+  
+
+Europe:           33 countries
+Asia:             28 countries
+Africa:           21 countries
+North America:    11 countries
+South America:     8 countries
+Oceania:           3 countries
+
+Statistical description of the data
+
+Data distribution
+
+
+---
+- ID: 43844
+
+Name: Coronavirus-Worldwide-Dataset
+
+Tags: 
+
+Context
+From World Health Organization - On 31 December 2019, WHO was alerted to several cases of pneumonia in Wuhan City, Hubei Province of China. The virus did not match any other known virus. This raised concern because when a virus is new, we do not know how it affects people.
+So daily level information on the affected people can give some interesting insights when it is made available to the broader data science community.
+The European CDC publishes daily statistics on the COVID-19 pandemic. Not just for Europe, but for the entire world. We rely on the ECDC as they collect and harmonize data from around the world which allows us to compare what is happening in different countries.
+Content
+This dataset has daily level information on the number of affected cases, deaths and recovery etc. from coronavirus. It also contains various other parameters like average life expectancy, population density, smocking population etc. which users can find useful in further prediction that they need to make.
+The data is available from 31 Dec,2019.
+Inspiration
+Give people weekly data so that they can use it to make accurate predictions.
+
+Features: iso_code, continent, location, date, total
+---
+- ID: 43367
+
+Name: COVID-19-Indonesia-Dataset
+
+Tags: 
+
+Context
+The COVID-19 dataset in Indonesia was created to find out various factors that could be taken into consideration in decision making related to the level of stringency in each province in Indonesia.
+Content
+Data compiled based on time series, both on a country level (Indonesia), and on a province level. If needed in certain provinces, it might also be provided at the city / regency level.
+Demographic data is also available, as well as calculations between demographic data and COVID-19 pandemic data.
+Acknowledgements
+Thank you to those who have provided data openly so that we can compile it into a dataset here, which is as follows: covid19.go.id, kemendagri.go.id, bps.go.id, and bnpb-inacovid19.hub.arcgis.com
+
+Features: Date, Location_ISO_Code, Location, New_Cases, New_Deaths, New_Recovered, New_Active_Cases, Total_Cases, Total_Deaths, Total_Recovered, Total_Active_Cases, Location_Level, City_or_Regency, Province, Country, Continent, Island, Time_Zone, Special_Status, Total_Regencies, Total_C
+---
+- ID: 46095
+
+Name: Financial_Allocations_Russia-Ukraine_War_2024
+
+Tags: 
+
+Description:
+The "Financial Allocations.csv" dataset provides a comprehensive snapshot of financial allocations across different categories including humanitarian, military, and total bilateral allocations, in addition to a country's participation status in the European Union (EU) and their share in EU allocations. This dataset spans five countries: Estonia, Belgium, Czech Republic, Australia, and South Korea. Through its well-structured columns, this dataset sheds light on the financial engagement and priorities of these countries in the realms of humanitarian efforts, military expenditure, and overall financial contributions within bilateral agreements. Additionally, it highlights the share of financial allocations attributed to the EU's budget, thereby offering insights into the economic dynamics and commitments of EU member states versus non-EU countries featured within the dataset.
+
+Attribute Description:
+1. Country: Lists the names of countries covered in the dataset.
+2. EU member: Indicates whether a country is an EU member (1 for 'yes', 0 for 'no').
+3. Financial allocations ($ billion): Represents the financial allocations without specifying the category.
+4. Humanitarian allocations ($ billion): Specifies the allocations dedicated to humanitarian efforts.
+5. Military allocations ($ billion): Details the allocations
+---
+- ID: 43684
+
+Name: COVID-19-Stats-and-Mobility-Trends
+
+Tags: 
+
+COVID-19 Stats  Trends
+Context
+This dataset seeks to provide insights into what has changed due to policies aimed at combating COVID-19 and evaluate the changes in community activities and its relation to reduced confirmed cases of COVID-19. The reports chart movement trends, compared to an expected baseline, over time (from 2020/02/15 to 2020/02/05) by geography (across 133 countries), as well as some other stats about the country that might help explain the evolution of the disease.
+Content
+
+Grocery  Pharmacy: Mobility trends for places like grocery markets, food warehouses, farmers' markets, specialty food shops, drug stores, and pharmacies.
+Parks: Mobility trends for places like national parks, public beaches, marinas, dog parks, plazas, and public gardens.
+Residential: Mobility trends for places of residence.
+Retail  Recreation: Mobility trends for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.
+Transit stations: Mobility trends for places like public transport hubs such as subway, bus, and train stations.
+Workplaces: Mobility trends for places of work.
+Total
+---
+- ID: 43815
+
+Name: ECDC-daily-data-on-COVID19-geographic-distribution
+
+Tags: 
+
+Data on the geographic distribution of COVID-19 cases worldwide.
+The dataset includes the reported number of diagnosed cases and deaths each day in every country in the world.
+The main fields include date, number of reported cases, number of reported deaths, country.
+The csv file is a direct transformation of the original xls provided by the European Centre for Disease Prevention and Control. ECMC is the provider of the data, the dataset is posted here to increase visibility and allow easier access to the Kaggle community.
+
+Features: dateRep, day, month, year, cases, deaths, countriesAndTerritories, geoId, countryterritoryCode, popData2018
+---
+- ID: 43405
+
+Name: Covid-19-Turkey-Daily-Details-Dataset
+
+Tags: 
+
+Context
+TurkeyCovid 19 Dataset
+Data Source : https://covid19.saglik.gov.tr/
+Content
+This data set has been created in accordance with the data shared by the Ministry of Health of the Republic of Turkey. Data from the website of the ministry of health every day is added to the data set using the data mining method. I update the data set every day and share it on github. https://github.com/birolemekli/covid19-turkey-daily-details-dataset
+Columns
+totalTests: number of tests carried out up to
+totalCases: number of cases announced up to day
+totalDeaths: number of death announced up to day
+totalIntensiveCare: the number of people in intensive care announced until the day
+totalIntubated: number of intubated people announced until the day
+totalRecovered: total healing people
+dailyTest: the number of people tested daily
+dailyCases: daily number of cases
+dailyDeaths: daily deaths
+
+Features: date, totalTests, totalCases, totalDeaths, totalIntensiveCare, totalIntubated, totalRecovered, dailyTests, daily
+---
+- ID: 43638
+
+Name: Measles-Immunization-Rates-in-US-Schools
+
+Tags: 
+
+Context
+This data set contains measles vaccination rate data for 46,412 schools in 32 states across the US. 
+Content
+Vaccination rates are for the 2017-201818 school year for the following states: 
+
+Colorado
+Connecticut
+Minnesota
+Montana
+New Jersey
+New York
+North Dakota
+Pennsylvania
+South Dakota
+Utah
+Washington
+
+Rates for other states are for the time period 2018-2019. 
+The data was compiled by The Wall Street Journal.
+Acknowledgements
+The data was originally compiled by The Wall Street Journal, and then downloaded and wrangled by the TidyTuesday community. The R code used for wrangling can be accessed here.
+Inspiration
+Please remember that you are welcome to explore beyond the provided data set, but the data is provided as a "toy" data set to practice techniques on. The data may require additional cleaning and wrangling!
+
+Features: index, state, year, name, type, city, county, district, enroll, mmr, overall, xrel, xmed, xper, lat, lng
+---
+- ID: 43410
+
+Name: Coronavirus-Disease-(COVID-19)
+
+Tags: 
+
+Context
+Since awareness on COVID-19   began growing across the world, more health datasets have been published as open for (re-)users to utilise in creating platforms and interactive maps, for example, to support citizens in taking steps to stay healthy, like avoiding risk areas  .
+This dataset is intended to mobilize researchers   to apply recent advances in natural language processing to generate new insights in support of the fight against this infectious disease.
+Acknowledgements
+Source of data: ourworldindata
+
+Features: iso_code, location, date, total_cases, new_cases, total_deaths, new_deaths, total_cases_per_million, new_cases_per_million, total_deaths_per_million, new_deaths_per_million, total_tests, new_tests, total_tests_per_thousand, new_tests_per_thousand, new_tests_smoothed, new_tests_smoothed_per_thousand, tests_units, stringency_index, population, population_density, median_age, aged_65_older, aged_70_older, gdp_per_capita, extreme_poverty, cvd_death_rate, diabetes_prevalence, female_smokers, male_smokers,
+---
+
+The topic is described by the following keywords: covid19, countries, allocations, cases, country, coronavirus, confirmed, vaccination, cumulative, deaths, eu, daily, vaccinations, pandemic, people, totaltests, vaccinated, billion, population, fatalities, totalcases, totaldeaths, populationdensity, mobility, recovered, world, newcasespermillion, humanitarian, totalcasespermillion, totaldeathspermillion
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42824, 43634, 43554, 43733, 43764, 43400, 43349, 43509, 43412, 43457, 43844, 43367, 46095, 43684, 43815, 43405, 43638, 43410 !

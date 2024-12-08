@@ -1,0 +1,350 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 312
+
+Name: scene
+
+Tags: multi_label, mythbusting_1, OpenML100, study_1, study_123, study_14, study_15, study_20, study_34, study_7
+
+**Author**: Matthew R. Boutell, Jiebo Luo, Xipeng Shen, and Christopher M. Brown.  
+**Source**: [Mulan](http://mulan.sourceforge.net/datasets-mlc.html)     
+**Please cite**: 
+
+### Description
+
+Scene recognition dataset - It contains characteristics about images and their classes. 
+The original dataset is a multi-label classification problem with 6 different labels: {Beach, Sunset, FallFoliage, Field, Mountain, Urban}.
+The current dataset is a binary classification problem considering just the 'Urban' label.
+
+### Sources
+
+Matthew R. Boutell, Jiebo Luo, Xipeng Shen, and Christopher M. Brown.
+Learning multi-label scene classification.
+Pattern Recognition, 37(9):1757-1771, 2004. 
+
+### Dataset Information
+
+Multi-label classification problem, based on real-world images.   
+Instances: 2407    
+Features: 294 numerical features with values between [0,1]   
+
+---
+- ID: 42859
+
+Name: segment
+
+Tags: label ranking
+
+
+
+Features: A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, L1, L2, L3, L4, L5, L6, L7
+
+Scraped Data: Dataset Information Additional Information The instances were drawn randomly from a database of 7 outdoor images.  The images were handsegmented to create a classification for every pixel.  
+
+   Each instance is a 3x3 region. Has Missing Values? No
+
+Additional Variable Information 1.  region-centroid-col:  the column of the center pixel of the region.
+    2.  region-centroid-row:  the row of the center pixel of the region.
+    3.  region-pixel-count:  the number of pixels in a region = 9.
+    4.  short-line-density-5:  the results of a line extractoin algorithm that counts how many lines of length 5 (any orientation) with low contrast, less than or equal to 
+---
+- ID: 45686
+
+Name: cylinder-bands
+
+Tags: 
+
+**Author**: Bob Evans, RR Donnelley & Sons Co.  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Cylinder+Bands) - August, 1995  
+**Please cite**:  [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)
+
+### Description
+
+Cylinder bands UCI dataset - Process delays known as cylinder banding in rotogravure printing were substantially mitigated using control rules discovered by decision tree induction.
+ 
+### Attribute Information
+
+There are 40 attributes for 540 observations, including the class: 20 are numeric and 20 are nominal.  
+There are missing values in 302 of the instances.
+
+```
+   1. timestamp: numeric;19500101 - 21001231  
+   2. cylinder number: nominal  
+   3. customer: nominal;  
+   4. job number: nominal;   
+   5. grain screened: nominal; yes, no  
+   6. ink color: nominal;  key, type  
+   7. proof on ctd ink:  nominal;  yes, no   
+
+---
+- ID: 1502
+
+Name: skin-segmentation
+
+Tags: study_69
+
+**Author**: Rajen Bhatt, Abhinav Dhall  
+**Source**: UCI   
+**Please cite**: Rajen Bhatt, Abhinav Dhall, 'Skin Segmentation Dataset', UCI Machine Learning Repository   
+
+* Title:
+
+Skin Segmentation Data Set 
+
+* Abstract: 
+
+The Skin Segmentation dataset is constructed over B, G, R color space. Skin and Nonskin dataset is generated using skin textures from face images of diversity of age, gender, and race people.
+
+* Source:
+
+Rajen Bhatt, Abhinav Dhall, rajen.bhatt '@' gmail.com, IIT Delhi.
+
+* Data Set Information:
+
+The skin dataset is collected by randomly sampling B,G,R values from face images of various age groups (young, middle, and old), race groups (white, black, and asian), and genders obtained from FERET database and PAL database. Total learning sample size is 245057; out of which 50859 is the skin samples and 194198 is non-skin samples. Color FERET Image Database: [Web Link], PAL Face Database from Productive Aging Laboratory, The University of Texas at
+---
+- ID: 42860
+
+Name: segment
+
+Tags: partial label ranking
+
+
+
+Features: A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, L1, L2, L3, L4, L5, L6, L7
+
+Scraped Data: Dataset Information Additional Information The instances were drawn randomly from a database of 7 outdoor images.  The images were handsegmented to create a classification for every pixel.  
+
+   Each instance is a 3x3 region. Has Missing Values? No
+
+Additional Variable Information 1.  region-centroid-col:  the column of the center pixel of the region.
+    2.  region-centroid-row:  the row of the center pixel of the region.
+    3.  region-pixel-count:  the number of pixels in a region = 9.
+    4.  short-line-density-5:  the results of a line extractoin algorithm that counts how many lines of length 5 (any orientation) with low contrast, less than or equal to
+---
+- ID: 6332
+
+Name: cylinder-bands
+
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_144, study_34, study_52, study_98, study_99, uci
+
+**Author**: Bob Evans, RR Donnelley & Sons Co.  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Cylinder+Bands) - August, 1995  
+**Please cite**:  [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)
+
+### Description
+
+Cylinder bands UCI dataset - Process delays known as cylinder banding in rotogravure printing were substantially mitigated using control rules discovered by decision tree induction.
+ 
+### Attribute Information
+
+There are 40 attributes for 540 observations, including the class: 20 are numeric and 20 are nominal.  
+There are missing values in 302 of the instances.
+
+```
+   1. timestamp: numeric;19500101 - 21001231  
+   2. cylinder number: nominal  
+   3. customer: nominal;  
+   4. job number: nominal;   
+  
+---
+- ID: 40984
+
+Name: segment
+
+Tags: OpenML-CC18, study_135, study_218, study_98, study_99
+
+**Author**: University of Massachusetts Vision Group, Carla Brodley  
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/image+segmentation) - 1990  
+**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  
+
+**Image Segmentation Data Set**
+The instances were drawn randomly from a database of 7 outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a 3x3 region.
+ 
+__Major changes w.r.t. version 2: ignored first two variables as they do not fit the classification task (they reflect the location of the sample in the original image). The 3rd is constant, so should also be ignored.__
+
+
+### Attribute Information  
+
+4.  short-line-density-5:  the results of a line extractoin algorithm that 
+          counts how many lines of length 5 (any orientation) with
+          low contrast, less than or equal to 5, go through the region.
+5
+---
+- ID: 30
+
+Name: page-blocks
+
+Tags: study_1, study_37, study_41, study_50, study_7, study_70, study_76, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+1. Title of Database: Blocks Classification
+ 2. Sources:
+    (a) Donato Malerba
+        Dipartimento di Informatica
+        University of Bari
+        via Orabona 4
+        70126 Bari - Italy
+        phone: +39 - 80 - 5443269
+        fax: +39 - 80 - 5443196
+        malerbad@vm.csata.it
+    (b) Donor: Donato Malerba
+    (c) Date: July 1995
+ 3. Past Usage:
+    This data set have been used to try different simplification methods
+    for decision trees. A summary of the results can be found in:
+ 
+    Malerba, D., Esposito, F., and Semeraro, G.
+    "A Further Comparison of Simplification Methods for Decision-Tree Induction."
+    In D. Fisher and H. L
+---
+- ID: 36
+
+Name: segment
+
+Tags: OpenML100, study_1, study_123, study_14, study_34, study_37, study_41, study_50, study_52, study_7, study_70, study_76, uci
+
+**Author**: University of Massachusetts Vision Group, Carla Brodley  
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/image+segmentation) - 1990  
+**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  
+
+**Image Segmentation Data Set**
+The instances were drawn randomly from a database of 7 outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a 3x3 region.
+ 
+### Attribute Information  
+
+1.  region-centroid-col:  the column of the center pixel of the region.
+2.  region-centroid-row:  the row of the center pixel of the region.
+3.  region-pixel-count:  the number of pixels in a region = 9.
+4.  short-line-density-5:  the results of a line extractoin
+---
+
+The topic is described by the following keywords: contrast, region, excess, pixels, shortlinedensity5, cylinder, nominal, block, ink, adjacent, line, measure, over, 0100, blackpix, counts, vedgemean, vegdesd, exredmean, exbluemean, exgreenmean, valuemean, hedgemean, hedgesd, shortlinedensity2, rawredmean, rawbluemean, rawgreenmean, intensitymean, huemean
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 312, 42859, 45686, 1502, 42860, 6332, 40984, 30, 36 !

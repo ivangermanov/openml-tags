@@ -1,0 +1,288 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43518
+
+Name: New-York-Times-Best-Sellers
+
+Tags: 
+
+Content
+The data contains Best Sellers List published by The New York Times every Sunday. The temporal range is from 03-Jan-2010 to 29-Dec-2019 which makes it a whole decade of data. Each week, 5 books are named as best sellers for each category.
+Acknowledgements
+
+Image URL: Sincerely Media - Unsplash
+
+Features: published_date, list_name, list_name_encoded, rank, isbn13, isbn10, title, author, description, amazon_product_url, price, weeks_on_list
+---
+- ID: 43544
+
+Name: Harry-Potter-fanfiction-data
+
+Tags: 
+
+Context
+Huge Harry Potter fan. Wanted to collect fan-fiction data to make a dashboard and visualize it. Its in the works. 
+Content
+I scraped this data from https://www.fanfiction.net/book/Harry-Potter/ using requests and beautiful soup. The data is completely structured. The scraping code can be found at https://github.com/nt03/HarryPotter_fanfics/tree/master/ffnet
+It contains all HP Fanfic entries written between 2001-2019 in all available languages. The data doesn't contain the story itself but just the story blurb.
+Acknowledgements
+The code is entirely mine. The thumbnail and banner are attributed to [Photo by Christian Wagner on Unsplash]
+Inspiration
+You can answer questions like 'which is the most popular pairing', which language has the most ffs written in it, what has been the general trend like since the last movie or book came out.
+
+Features: Chapters, Favs, Follows, Published, Reviews, Updated, Words, author, characters, genre, language, rating, story_link, synopsis, title, published_mmyy, pairing
+---
+- ID: 43438
+
+Name: Goodreads-Books---31-Features
+
+Tags: 
+
+Context
+The official Goodread's API limits retrievable data, so I decided to scrape the actual HTTP pages and grab additional details on each book.
+Content
+Books are scraped from a list titles the "Best Books Ever" which can be found here https://www.goodreads.com/list/show/1.Best_Books_Ever
+Acknowledgements
+Thanks to Goodreads for housing the data.
+
+Features: id, title, link, series, cover_link, author, author_link, rating_count, review_count, average_rating, five_star_ratings, four_star_ratings, three_star_ratings, two_star_ratings, one_star_ratings, number_of_pages, date_published, publisher, original_title, genre_and_votes, isbn, isbn13, asin, settings, characters, awards, amazon_redirect_link, worldcat_redirect_link, recommended_books, books_in_series, description
+---
+- ID: 43542
+
+Name: 7k-Books
+
+Tags: 
+
+Do we really need another dataset of books?
+My initial plan was to build a toy example for a recommender system article I was writing. After a bit of googling, I found a few datasets. Sadly, most of them had some issues that made them unusable for me (e.g, missing description of the book, a mix of different languages but no column to specify the language per row or weird delimiters). 
+So I decided to make a dataset that would match my purposes.
+First, I got ISBNs from Soumik's Goodreads-books dataset. Using those identifiers, I crawled the Google Books API to extract the books' information.
+Then, I merged those results with some of the original columns from the dataset and after some cleaning I got the dataset you see here.
+What can I do with this?
+Different Exploratory Data Analysis, clustering of books by topics/category, content-based recommendation engine using different fields from the book's description. 
+Why is this dataset smaller than Soumik's Goodreads-books?
+Many of the ISBNs of that dataset did not return valid results from the Google Books API. I plan to update this in the future, using more fields (e.g.,
+---
+- ID: 43493
+
+Name: GoodReads-Choice-Awards
+
+Tags: 
+
+GoodReads Choice Awards
+Every year GoodReads announces a contest for the best book of the year called GoodReads Choice Awards. Every year there are multiple categories and every reader can vote for a single book in each of them.
+Data
+
+are scraped from GoodReads Choice Awards awards websites using Python
+
+Features: gid, rank, votes, title, category, year, authors, avg_rating, pages, published, publisher, 5stars, 4stars, 3stars, 2stars, 1stars, ratings
+---
+- ID: 43836
+
+Name: features-and-price-of-computer-components
+
+Tags: 
+
+Context
+The most common website that provided computer hardware components we chose the Newegg website it has hardware systems, Buy PC Parts, Laptops, Electronics  More. Now Shipping to Saudi Arabia! Track Order and more with fast shipping.
+to determine which the best component with the best price here we can provide you this dataset. 
+Content
+Implement the Web scraping by using  the python language and using selenium on python, to extract the data from newegg that contain CPU, GPU, power, ram, monitor, storage 
+the** data contains**:
+
+the brand name
+items_Decribtion
+ratings
+prices
+Category (CPU, GPU,motherboard, ram, powersuplly, storage  )
+
+Acknowledgements
+Thank you for the MISK academy and general assembly for guiding us.
+Inspiration
+we recommend using EDA to clean data and also recommend to build model predictive price or build assumption analysis
+
+Features: Unnamed:_0, brand_name, items_Decribtion, ratings, prices, Category
+---
+- ID: 43791
+
+Name: Best-Books-of-the-19th-Century
+
+Tags: 
+
+This dataset has been scrapped off Goodreads to obtain land information about the best books of the 19th Century.  
+
+
+
+Feature
+Description
+
+
+
+
+Book_Name
+the title of the book
+
+
+Author_Name
+the author(s) of the book
+
+
+Description
+a brief description about the book
+
+
+Rating
+rating given by Goodreads users
+
+
+CoverImageLink
+the book cover
+
+Features: Book_Name, Author_Name, Discription, Book_Rating, Cover_Image_Link
+---
+- ID: 43785
+
+Name: Goodreads-Computer-Books
+
+Tags: 
+
+Context
+The reason for creating this dataset is the requirement of a good clean dataset of computer books. I had searched for datasets on books in Kaggle and I found out that while most of the datasets had a good amount of books listed, there were either major columns missing or grossly unclean data. I mean, you can't determine how good a book is just from a few text reviews. So I collected this data from the Goodreads website from the "Computer" category to help people who are like this type of book.
+Acknowledgements
+This data was entirely scraped via the Webdriver
+Inspiration
+The reason behind creating this dataset is pretty straightforward, I'm listing the books for all who need computer books, irrespective of the language and publication and all of that. So go ahead and use it to your liking, find out what book you should be reading next,  all possible approaches to exploring this dataset are welcome.
+I started creating this dataset on Jan 18, 2021, and intend to update it frequently.
+P.S. If you like this, please don't forget to give an upvote!
+Notes
+The missing values are imputed in this data by the creator.
+
+Features:
+---
+
+The topic is described by the following keywords: books, goodreads, awards, book, soumiks, goodreadsbooks, authorname, best, isbn13, language, api, choice, isbns, coverimagelink, bookname, newegg, itemsdecribtion, isbn10, title, ratingscount, creating, thumbnail, build, acknowledgements, averagerating, avgrating, google, pairing, unsplash, shipping
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43518, 43544, 43438, 43542, 43493, 43836, 43791, 43785 !

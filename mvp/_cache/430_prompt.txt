@@ -1,0 +1,271 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43650
+
+Name: Spike-waveforms
+
+Tags: 
+
+Introduction
+Neurons in the brain use electrical signals communication. Different spike waveforms correspond to different cell types or different neuron morphologies (Henze et al., J. Neurophysiol. 2000). In learning about different spike waveforms, we may identify different neuronal types in our sample.
+Content
+
+The data contains 150 numerical categories (0 to 149, in columns) corresponding to the sampling of a 5-millisecond extracellular voltage at 30 kHz. Since the extracellular voltage amplitude related to the squared of the distance to the cell, we normalize the whole trace to the minimal voltage (through) that corresponds to the peak of the spike. To load it in Python.
+import pandas as pd
+waveforms = pd.read_csv('waveforms.csv', index_col = 'uid')
+waveforms.info()
+waveforms.iloc[0, :-1,].plot()  plot the first waveform (last column is organoid)
+
+To know more
+For more information visiy my GitHub repository
+
+Features: uid, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
+---
+- ID: 1471
+
+Name: eeg-eye-state
+
+Tags: brain, EEG, OpenML100, study_123, study_14, study_34, study_7, time_series, uci
+
+**Author**: Oliver Roesler  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/EEG+Eye+State), Baden-Wuerttemberg, Cooperative State University (DHBW), Stuttgart, Germany  
+**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  
+
+All data is from one continuous EEG measurement with the Emotiv EEG Neuroheadset. The duration of the measurement was 117 seconds. The eye state was detected via a camera during the EEG measurement and added later manually to the file after analyzing the video frames. '1' indicates the eye-closed and '0' the eye-open state. All values are in chronological order with the first measured value at the top of the data.
+
+The features correspond to 14 EEG measurements from the headset, originally labeled AF3, F7, F3, FC5, T7, P, O1, O2, P8, T8, FC6, F
+---
+- ID: 1490
+
+Name: planning-relax
+
+Tags: mf_less_than_80, study_123, study_7, study_88
+
+**Author**: Rajen Bhatt  
+
+**Source**: UCI 
+
+**Please cite**: Rajen Bhatt, 'Planning-Relax Dataset for Automatic Classification of EEG Signals', UCI Machine Learning Repository
+
+
+* Title:
+
+Planning Relax Data Set 
+
+
+* Abstract: 
+
+The dataset concerns with the classification of two mental stages from recorded EEG signals: Planning (during imagination of motor act) and Relax state.
+
+* Data Set Characteristics:  
+
+Univariate
+Number of Instances: 182
+Area: Computer
+Attribute Characteristics: Real
+Number of Attributes: 13
+Associated Tasks: Classification
+Missing Values? N/A
+
+* Source:
+
+Rajen Bhatt, rajen.bhatt '@' gmail.com, IIT Delhi
+
+
+* Data Set Information:
+
+EEG record contains many regular oscillations, which are believed to reflect synchronized rhythmic activity in a group of neurons. Most activity related EEG patterns occur within the following frequency bands. Delta (0.5 â€“ 4 Hz.), Theta (4 â€“ 8 Hz), Alpha (8 â€“ 13 Hz), Beta (13 â€“ 22 Hz
+---
+- ID: 43884
+
+Name: mne-sample-meg-auditory
+
+Tags: 
+
+MEG data from auditory stimulation experiment using 305 sensors.
+The design matrix/forward operator is `data[:, :7498]`.
+The measurements for left stimulation are `data[:, 7498:7583]`.
+The measurements for right stimulation are `data[:, 7583:]`.
+
+The data was generated with the following script:
+```
+import mne
+import numpy as np
+from mne.datasets import sample
+from mne.inverse_sparse.mxne_inverse import _prepare_gain
+# this script used MNE 1.0.2
+
+condition = "Right Auditory"
+data_path = sample.data_path() + '/MEG/sample'
+loose = 0
+depth = 0.8
+
+fwd_fname = data_path + '/sample_audvis-meg-eeg-oct-6-fwd.fif'
+ave_fname = data_path + '/sample_audvis-ave.fif'
+cov_fname = data_path + '/sample_audvis-shrunk-cov.fif'
+
+# Read noise covariance matrix
+noise_cov = mne.read_cov(cov_fname)
+# Handling forward solution
+forward = mne.read_forward_solution(fwd
+---
+- ID: 43883
+
+Name: mne-sample-meg-auditory
+
+Tags: 
+
+MEG data from auditory stimulation experiment using 305 sensors.
+The design matrix/forward operator is `data[:, :7498]`.
+The measurements for left stimulation are `data[:, 7498:7583]`.
+The measurements for right stimulation are `data[:, 7583:]`.
+
+The data was generated with the following script:
+```
+import mne
+import numpy as np
+from mne.datasets import sample
+from mne.inverse_sparse.mxne_inverse import _prepare_gain
+# this script used MNE 1.0.2
+
+condition = "Right Auditory"
+data_path = sample.data_path() + '/MEG/sample'
+loose = 0
+depth = 0.8
+
+fwd_fname = data_path + '/sample_audvis-meg-eeg-oct-6-fwd.fif'
+ave_fname = data_path + '/sample_audvis-ave.fif'
+cov_fname = data_path + '/sample_audvis-shrunk-cov.fif'
+
+# Read noise covariance matrix
+noise_cov = mne.read_cov(cov_fname)
+# Handling forward solution
+forward = mne.read_forward_solution(fwd
+---
+
+The topic is described by the following keywords: eeg, hz, auditory, datapath, wavelet, electrodes, forward, rajen, bhatt, stimulation, right, import, noisecov, avefname, preparegain, whitener, evoked, mne, movement, spike, waveforms, 713, left, epoch, relaxed, condition, gain, packet, voltage, frequency
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43650, 1471, 1490, 43884, 43883 !

@@ -1,0 +1,216 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43439
+
+Name: Medical-Appointment-No-Shows
+
+Tags: 
+
+Context
+A person makes a doctor appointment, receives all the instructions and no-show. Who to blame? 
+If this help you studying or working, please dont forget to upvote :).  Reference to Joni Hoppen and Aquarela Advanced Analytics  Aquarela
+Greetings! 
+Content
+110.527 medical appointments its 14 associated variables (characteristics). The most important one if the patient show-up or no-show to the appointment.  Variable names are self-explanatory, if you have doubts, just let me know! 
+scholarship variable means this concept = https://en.wikipedia.org/wiki/Bolsa_FamC3ADlia
+14 variables 
+Data Dictionary
+01 - PatientId
+
+Identification of a patient
+
+02 - AppointmentID
+
+Identification of each appointment
+
+03 - Gender
+
+Male or Female . Female is the greater proportion, woman takes way more care of they health in comparison to man.
+
+04 - DataMarcacaoConsulta
+
+The day of the actuall appointment, when they have to visit the doctor.
+
+05 - DataAgendamento
+
+The day someone called or registered the appointment, this is before appointment of course.
+
+06 - Age
+
+How old
+---
+- ID: 42887
+
+Name: absenteeism-at-work
+
+Tags: 
+
+The database was created with records of absenteeism at work from July 2007 to July 2010 at a courier company in Brazil. The data set allows for several new combinations of attributes and attribute exclusions, or the modification of the attribute type (categorical, integer, or real) depending on the purpose of the research. The data set (Absenteeism at work - Part I) was used in academic research at the Universidade Nove de Julho - Postgraduate Program in Informatics and Knowledge Management.
+
+### Attribute Information:
+
+1. Individual identification (ID)
+2. Reason for absence (ICD).
+Absences attested by the International Code of Diseases (ICD) stratified into 21 categories (I to XXI) as follows:
+
+I Certain infectious and parasitic diseases
+II Neoplasms
+III Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+IV Endocrine, nutritional and metabolic diseases
+V Mental and behavioural disorders
+VI Diseases of the nervous system
+VII Diseases of the eye and adnexa
+VIII Diseases of the ear and mastoid process
+IX Diseases of the circulatory system
+X Diseases of the respiratory system
+XI Diseases
+---
+- ID: 43617
+
+Name: Medical-Appointment
+
+Tags: 
+
+Context
+The No Show problem is one of the bigest on the health industry, about 30 of the patient fail theirs appointments.
+Content
+61K points, from 2017.01.01 to 2017.04.30 and 19 features to work with
+Data Dictionary
+
+especialidad : what kind of specialist is going to. Ie dematologist, etc.
+edad: Age 
+sexo:  sex, 1: Male, 2: Female
+reservamesd :  discrete value for the month of the appointment, 1: Jan, 2: Feb 
+reservamesc :  continue value for the month of the appointment, the formula is COS(2reservamesdPi/12)
+reservadiad :  day of the week for the appointment, 1: Mon 7: Sun
+reservadiac :  continous value for the day of the week, the formula is COS(2reservadiadPi/7)
+reservahorad :  discrete value for hour of the appointment
+reservahorac :  continous value for the hour of the appointment, the formula is COS(2reservahoradPi/24
+---
+
+The topic is described by the following keywords: appointment, diseases, pet, no0, yes1, absenteeism, noshow, certain, continous, icd, consultation, xxi, son, postgraduate, doctor, show, formula, reservadiad, reservadiac, real, absence, scholarship, work, disorders, patient, seasons, attribute, system, causes, aquarela
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43439, 42887, 43617 !

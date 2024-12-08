@@ -1,0 +1,309 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42450
+
+Name: Toxic_comment
+
+Tags: 
+
+r fgtgt
+
+Features: id, comment_text, toxic, severe_toxic, obscene, threat, insult, identity_hate
+---
+- ID: 43850
+
+Name: Hatred-on-Twitter-During-MeToo-Movement
+
+Tags: 
+
+Interest and Motivation
+This dataset belongs to the MeToo movement on Twitter. This movement was against the sexual harassment incidents and many people posted various hatred tweets. Using this dataset, we can build a model that can accurately classify hatred and non-hatred tweets to restrict its spread.
+Dataset Description
+The details about the columns are as follows:
+
+status_id: A unique id for each tweet [numeric].
+text: tweet text data [string].
+created_at: The timestamp of the tweet [timestamp].
+favourite_count: favourite count of the user of the tweet [numeric].
+retweet_count: retweet count of the tweet [numeric].
+location: location mentioned by the user while tweeting [string].
+followers_count: user's followers' count [numeric].
+friends_count: user's friends' count [numeric].
+statuses_count: user's total statuses count [numeric].
+category: target variable, whether tweet belongs to hatred (category=1) or non-hatred (catogory=0).
+
+Features: status_id, text, created_at, favorite_count, retweet_count, location, followers_count, friends_count, statuses_count, category
+---
+- ID: 43697
+
+Name: covid-19_sentiments-India200320---310520
+
+Tags: 
+
+About our Dataset
+The journey of the collection of this Covid-19 India dataset begin with a competition where we have to do sentiment analysis of tweets. The data was collected from https://ieee-dataport.org/open-access/coronavirus-covid-19-tweets-dataset . This site gave us the tweet Id of relevant tweets and to extract the tweets text and other information, we used Hydrator app.
+About features of dataset
+There are total 5 columns.
+Column 1: 'Text ID'
+    It contains unique ID for each tweet.
+Column 2: 'Text'
+    It is the tweet text of that particular tweet ID.
+Column 3: 'Date'
+    The date on which the tweet was tweeted.
+Column 4: 'Location'
+    The place from where the tweet was tweeted.
+Column 5: 'Sentiments'
+    The sentiment value of that tweet, whether it is positive, negative or neutral.
+     If sentiment score is greater then 0 then sentiment is positive.
+     If sentiment score is equal to 0 then sentiment is neutral.
+     If sentiment score is less then 0 then sentiment is negative
+---
+- ID: 43532
+
+Name: The-Social-Dilemma-Tweets---Text-Classification
+
+Tags: 
+
+Context
+The Social Dilemma, a documentary-drama hybrid explores the dangerous human impact of social networking, with tech experts sounding the alarm on their own creations as the tech experts sound the alarm on the dangerous human impact of social networking.
+Initial release: January 2020
+Director: Jeff Orlowski
+Producer: Larissa Rhodes
+Music director: Mark A. Crawford
+Screenplay: Jeff Orlowski, Vickie Curtis, Davis Coombe
+Content
+This dataset brings you the twitter responses made with the TheSocialDilemma hashtag after watching the eye-opening documentary  "The Social Dilemma" released in an OTT platform(Netflix) on September 9th, 2020.
+The dataset was extracted using TwitterAPI, consisting of nearly 10,526 tweets from twitter users all over the globe!
+
+
+
+No
+Columns
+Descriptions
+
+
+
+
+1
+user_name
+The name of the user, as theyve defined it.
+
+
+2
+user_location
+The user-defined location for this accounts profile.
+
+
+3
+user_description
+The user-defined UTF-8 string describing their account.
+
+
+4
+user_created
+Time and date, when the
+---
+- ID: 43608
+
+Name: Personality-traits-of-Twitter-users-(celebrities)
+
+Tags: 
+
+Context
+Finding similarities between different types of public figures based in their Twitter activity.
+.
+Content
+    usuario - username
+    op = Openness to experience
+    co =Conscientiousness
+    ex = Extraversion
+    ag = Agreeableness
+    ne = Neuroticism
+    Wordcount- word count lol
+    Categoria  user's laboral activity(actor, singer, etc.)
+Acknowledgements
+Inspiration
+
+Features: usuario, op, co, ex, ag, ne, wordcount, categoria
+---
+- ID: 43345
+
+Name: Quora_Insincere_Questions_2018
+
+Tags: 
+
+Context
+It's the preprocessed train data from  Quora Insincere Questions competition 2018 The original train data is preprocessed to remove stop words, numbers, punctuations, common words and converted to lower case. The resultant data set is lemmatised and stemmed with scikit-learn/NLTK library.
+Content
+It contains approximately 1.3 million rows of quora questions with target =0 for sincere questions and target=1 for insincere questions.
+Acknowledgements
+Thanks for Co-learning lounge mentors to help me to work on this problem
+Inspiration
+It's very handy to build the ML models in NLP.
+
+Features: Unnamed:_0, qid, question_text, target
+---
+- ID: 41463
+
+Name: sarcasm_detection
+
+Tags: 
+
+It has 3 attributes (ID, tweet, label ) 91299 tweets with non-sarcastic 39998 tweets and 51300 sarcastic tweets.
+
+Features: ID, tweet, label
+---
+- ID: 45961
+
+Name: (Non-)depressive_tweet_data
+
+Tags: 
+
+Description:
+The dataset, named "clean_tweet_Dec19ToDec20.csv," comprises a collection of tweets post-processed for clarity and analysis, spanning from December 2019 to December 2020. It is designed to provide insights into public sentiment during this period, capturing a unique blend of personal and societal narratives emerging from various global circumstances, including the COVID-19 pandemic. This dataset is structured into columns that include an index for unique identification, the raw text of each tweet, and a sentiment score.
+
+Attribute Description:
+- Index: A numerical identifier assigned to each tweet, e.g., 98655, 59794.
+- Text: Contains the cleaned and processed text of the tweet. This column captures a wide range of topics, from personal appliance purchases and mental health advice to discussions on electricity waste, unemployment, and even cryptocurrency-related dietary suggestions.
+- Sentiment: A numerical sentiment score assigned to each tweet, where 0 indicates a negative sentiment and 1 indicates a positive sentiment. This binary classification assists in sentiment analysis, offering a simplistic yet effective insight into the general mood of each tweet.
+
+Use Case:
+This dataset can be instrumental for researchers and data
+---
+- ID: 43085
+
+Name: tuiter
+
+Tags: 
+
+asdfasd
+
+Features: n, CUENTA, MES, topico, Sexo, Tier, Multimedia, Tipo, V9, numero, funcion, sentimiento, URLscitadas, URL_Ytb, URL_Twitter, tipo_web, N_A, @1_CASOS, @2_MUERTES, @3_VIRUS, @4_PANDEMIA, @5_DATA, @6_ARTICULO, @7_HILO, @8_CIENCIA, @9_ESP, @10_ARG, @11_CUARENTENA, @12_AGUA, @13_CRITICA, @14_TEST, topico_n, Sexo_n, cuenta_n, tier_n, multimedia_n, tipo_n, funcion_n, @#_n, sentimiento_n, tipo_web_n, topico_nn
+---
+
+The topic is described by the following keywords: tweet, sentiment, tweets, text, twitter, hatred, sentiments, account, indicates, hashtags, usuario, statusescount, categoria, friendscount, quora, nonhatred, tweeted, statusid, thesocialdilemma, orlowski, httpsieeedataportorgopenaccesscoronaviruscovid19tweetsdataset, hydrator, userdefined, insincere, username, utf8, networking, userfavourites, wordcount, societal
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42450, 43850, 43697, 43532, 43608, 43345, 41463, 45961, 43085 !

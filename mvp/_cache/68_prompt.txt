@@ -1,0 +1,290 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43801
+
+Name: Motorcycle-Dataset
+
+Tags: 
+
+This dataset contains information about used motorcycles
+This data can be used for a lot of purposes such as price prediction to exemplify the use of linear regression in Machine Learning.
+The columns in the given dataset are as follows:
+
+name
+selling price
+year
+seller type
+owner
+km driven
+ex showroom price
+
+For used car datasets please go to  https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho
+
+Features: name, selling_price, year, seller_type, owner, km_driven, ex_showroom_price
+---
+- ID: 43393
+
+Name: USA-Housing-Listings
+
+Tags: 
+
+Context
+Craigslist is the world's largest collection of privately sold housing options, yet it's very difficult to collect all of them in the same place. I built this dataset as a means in by which to perform experimental analysis on the United States states as a whole instead of isolated urban housing markets.
+Content
+This data is scraped every few months, it contains most all relevant information that Craigslist provides on retail sales
+
+Features: id, url, region, region_url, price, type, sqfeet, beds, baths, cats_allowed, dogs_allowed, smoking_allowed, wheelchair_access, electric_vehicle_charge, comes_furnished, laundry_options, parking_options, image_url, description, lat, long, state
+---
+- ID: 43789
+
+Name: Used-cars-in-KSA
+
+Tags: 
+
+** This project display used cars in many different brands to pay. The number of used cars in the website is 1219 cars, I create data frame for them and each car has 9 features and the prediction of this data is car's price. 
+I choice used cars in the project in order to use machine learning to predict car's price. Assign fair price for used car has a big issue depend on their features after usr it. So, I tried to collect as much as I can of features to give a good chance for ML to allocate a best price for car.
+The kind of modeling that match with my data is supervised model because it includes label 'car_price' and use regression type because the target is number. Additionally, it can be used recommender system in this data .**
+
+Features: Car_Name, Car_Brand, Year, Max_Mile_km, Min_Mile_km, Kind, City_Of_Owner, Condition, Kind_Of_Motor, Color, Price
+---
+- ID: 43828
+
+Name: Another-Dataset-on-used-Fiat-500-(1538-rows)
+
+Tags: 
+
+This dataset has been created from a query done on an website specialized in used cars and contains 1538 rows
+Description of colums:
+model: Fiat 500 comes in several 'flavours' :'pop', 'lounge', 'sport'
+engine_power: number of Kw of the engine
+ageindays: age of the car in number of days (from the time the dataset has been created)
+km: kilometers of the car
+previous_owners: number of previous owners
+lat: latitude of the seller (the price of cars in Italy varies from North to South of the country)
+lon: longitude of the seller (the price of cars in Italy varies from North to South of the country)
+price: selling price (the target)
+I collected this dataset to train myself and test regression algorithms. Hope this can help people to train as well.
+
+Features: model, engine_power, age_in_days, km, previous_owners, lat, lon, price
+---
+- ID: 43475
+
+Name: Trulia-Property-Listing-Dataset-2020
+
+Tags: 
+
+Context
+This dataset was created by our in house Web Scraping and Data Mining teams at PromptCloud and DataStock. You can download the full dataset here. This sample contains 30K records.
+Content
+This dataset contains the following: 
+Total Records Count: 78519 Domain Name: trulia.com Date Range :: 01st Jan 2020 - 31st Jan 2020  File Extension : csv
+Available Fields:: Uniq Id, Crawl Timestamp, Url, Title, Description, Price, Image Url, Style, Sqr Ft, Longitude, Latitude, Home Id, Lot Size, Beds, Bath, Year Built, Price Sqr Ft, Features, Last Sold Year, Last Sold For, Last Tax Assestment, Last Tax Year, Address, City, State, Zipcode, Property Type, Address Full, Facts, Days On Trulia, Listing Agent Name, Listing Agent Contact No, Agent Name 1, Agent Contact No 1, Agent Name 2, Agent Contact No 2, Agent Name 3, Agent Contact No 3, Agent Name 4, Agent Contact No 4, Agent Name 
+---
+- ID: 43631
+
+Name: US-Real-Estate-Listings-by-Zip-Code
+
+Tags: 
+
+Context
+Real Estate inventory of listings from 2012-2017
+Content
+Includes data for all Real Estate listings in the US, such as,  active listings, prices, days on market, price changes, and pending listings by county.
+
+Median Listing Price: The median listing price within the specified geography during the specified month.
+Active Listing Count: The count of active listings within the specified geography during the specified month. The active listing count tracks the number of for sale properties on the market, excluding pending listings where a pending status is available. This is a snapsot measure of how many active listings can be expected on any given day of the specified month.
+Median Days on Market: The median number of days property listings spend on the market within the specified geography during the specified month. Time spent on the market is defined as the time between the initial listing of a property and either its closing date or the date it is taken off the market.
+New Listing Count: The count of new listings added to the market within the specified geography. The new listing count represents a typical weeks worth of new listings in a given month. The new listing count can be multiplied by
+---
+- ID: 43498
+
+Name: Land-Market-in-Saudi-Arabia
+
+Tags: 
+
+This dataset has been scrapped off sa.aqar.fm to obtain land information such as price, size, street width, and locations. The uncleaned dataset scrapped 4347 rows, but seems like 1395 were duplicated and deleted. Leaving us with 2952 rows. The majority of the data is unfortunately lands based in Riyadh, but there are a good number of lands in Jeddah and Khobar. The dataset is set in Arabia, and decided to keep it that way to keep the integrity of the data. However, the street width, land size, and price have all been converted to numerical values, leaving some of those values as null if couldn't convert them.
+Here is the data description:
+mainlocation        object        The main location of the land
+sublocation        object        Indicates the subregion of the location. Note that only the big cities (ex. Riyadh and Jeddah) have subregions, NaN values are meant to be empty
+neighborhood        object        The neighborhood where the land resides
+frontage        object        The cardinal direction where the land faces the street
+purpose        object        The purpose
+---
+- ID: 43474
+
+Name: Used-Cars-In-Saudi-Arabia
+
+Tags: 
+
+Context
+Yallamotor is website in ksa have a collection of used vehicles for sale.
+I used the Yallamotor website to create dataset of used vehicles in KSA.
+Content
+Dataset includes ( 2287 ) vehicles information like price ,car model ,etc .. 
+Acknowledgements
+The data in this dataset has been scraped using BeautifulSoup from the Yallamotor website.
+Inspiration
+Data will be handy to study and practice different models and approaches.
+As a further step you can use regression model to predict the car price based on the different features.
+
+Features: car_brand, car_model, car_driven, car_transmission, car_model_year, car_price
+---
+- ID: 43305
+
+Name: Used-Cars-Dataset
+
+Tags: 
+
+Context
+Craigslist is the world's largest collection of used vehicles for sale, yet it's very difficult to collect all of them in the same place. I built a scraper for a school project and expanded upon it later to create this dataset which includes every used vehicle entry within the United States on Craigslist.
+
+Content
+This data is scraped every few months, it contains most all relevant information that Craigslist provides on car sales including columns like price, condition, manufacturer, latitude/longitude, and 18 other categories. For ML projects, consider feature engineering on location columns such as long/lat. For previous listings, check older versions of the dataset.
+
+See https://github.com/AustinReese/UsedVehicleSearch
+
+Features: id, url, region, region_url, price, year, manufacturer, model, condition, cylinders, fuel, odometer, title_status, transmission, VIN, drive, size, type, paint_color, image_url, description, county, state, lat, long, posting_date
+---
+- ID: 43348
+
+Name: Edmunds-car-review
+
+Tags: 
+
+Context
+Started this for my final year project improved on it during quarantine.
+Content
+A mix of used and new car reviews from the year 2000 to 2019 of various brands from edmunds.com. I did not  scrape all brands, just the popular ones in the US.
+Added a notebook for walkthrough
+Inspiration
+Did not have a proper car review dataset for my final year project, so I made one
+
+Features: Company, Model, Year, Reviewer, Date, Title, Rating, Review
+---
+
+The topic is described by the following keywords: listings, agent, listing, specified, pending, geography, count, craigslist, image, car, land, cars, month, yallamotor, market, imageurl, beds, weeks, brands, increase, lat, active, km, seller, price, pricepm, sublocation, snapsot, riyadh, enginepower
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43801, 43393, 43789, 43828, 43475, 43631, 43498, 43474, 43305, 43348 !

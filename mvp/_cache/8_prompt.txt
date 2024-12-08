@@ -1,0 +1,499 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 1593
+
+Name: SensIT-Vehicle-Combined
+
+Tags: 
+
+**Author**: University of Wisconsin–Madison  
+libSVM","AAD group  
+**Source**: [original](http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html) - Date unknown  
+**Please cite**:   
+
+#Dataset from the LIBSVM data repository.
+
+Preprocessing: Regenerate features by the authors' matlab scripts (see Sec. C of Appendix A), then randomly select 10% instances from the noise class so that the class proportion is 1:1:2 (AAV:DW:noise). The training/testing sets are from a random 80% and 20% split of the data.
+
+Features: att_1, att_2, att_3, att_4, att_5, att_6, att_7, att_8, att_9, att_10, att_11, att_12, att_13, att_14, att_15, att_16, att_17, att_18, att_19, att_20, att_21, att_22, att_23, att_24
+---
+- ID: 41138
+
+Name: APSFailure
+
+Tags: study_218, UCI
+
+This is the dataset used for the 2016 IDA Industrial Challenge, courtesy of Scania.
+For a full description, see http://archive.ics.uci.edu/ml/datasets/IDA2016Challenge .
+This dataset contains both the train and test set provided.
+The first 60000 samples are the train set, and the last 16000 samples are
+the test set.
+
+Data was published under the GNU GPL v3 license.
+
+Features: class, aa_000, ab_000, ac_000, ad_000, ae_000, af_000, ag_000, ag_001, ag_002, ag_003, ag_004, ag_005, ag_006, ag_007, ag_008, ag_009, ah_000, ai_000, aj_000, ak_000, al_000, am_0, an_000, ao_000, ap_000, aq_000, ar_000, as_000, at_000, au_000, av_000, ax_000, ay_000, ay_001, ay_002, ay_003
+---
+- ID: 54
+
+Name: vehicle
+
+Tags: OpenML-CC18, OpenML100, study_1, study_123, study_127, study_135, study_14, study_218, study_34, study_37, study_41, study_50, study_52, study_7, study_70, study_98, study_99, uci
+
+**Author**: Dr. Pete Mowforth and Dr. Barry Shepherd  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Statlog+(Vehicle+Silhouettes))
+**Please cite**: Siebert,JP. Turing Institute Research Memorandum TIRM-87-018 "Vehicle Recognition Using Rule Based Methods" (March 1987)  
+
+ NAME
+         vehicle silhouettes
+ 
+ PURPOSE
+         to classify a given silhouette as one of four types of vehicle,
+         using  a set of features extracted from the silhouette. The
+         vehicle may be viewed from one of many different angles.  
+ 
+ PROBLEM TYPE
+         classification
+         
+ SOURCE
+         Drs.Pete Mowforth and Barry Shepherd
+         Turing Institute
+         George House
+         36 North Hanover St.
+         Glasgow
+---
+- ID: 328
+
+Name: bridges
+
+Tags: 
+
+**Author**: Yoram Reich","Steven J. Fenves  
+  
+**Source**: [original](http://openml.org/d/19) -   
+**Please cite**:   
+
+Pittsburgh bridges  
+
+This version is derived from version 2 (the discretized version) by removing all instances with missing values in the last (target) attribute. The bridges dataset is originally not a classification dataset, put is used so extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking result. Therefore, these instances have been removed. 
+
+Sources: 
+-- Yoram Reich and Steven J. Fenves Department of Civil Engineering and Engineering Design Research Center Carnegie Mellon University Pittsburgh, PA 15213  Compiled from various sources.  
+-- Date: 1 August 1990  
+
+Attribute Information:   The type field state whether a property is continuous/integer (c)  or nominal (n). For properties with c,n type, the range of continuous numbers is given  first and the possible values of the nominal follow the semi-colon.   
+
+name type possible values comments 
+------------------------------------------------------------------------ 
+1. IDENTIF - - identifier of
+---
+- ID: 40685
+
+Name: shuttle
+
+Tags: study_218, study_76
+
+Source: [UCI](https://archive.ics.uci.edu/ml/datasets/Statlog+(Shuttle))
+
+Donor:
+
+Jason Catlett
+Basser Department of Computer Science,
+University of Sydney, N.S.W., Australia
+
+
+
+Data Set Information:
+
+Approximately 80% of the data belongs to class 1. Therefore the default accuracy is about 80%. The aim here is to obtain an accuracy of 99 - 99.9%.
+
+The examples in the original dataset were in time order, and this time order could presumably be relevant in classification. However, this was not deemed relevant for StatLog purposes, so the order of the examples in the original dataset was randomised, and a portion of the original dataset removed for validation purposes.
+
+
+Attribute Information:
+
+The shuttle dataset contains 9 attributes all of which are numerical. The first one being time. The last column is the class which has been coded as follows :
+1 Rad Flow
+2 Fpv Close
+3 Fpv Open
+4 High
+5 Bypass
+6 Bpv Close
+7 Bpv Open
+
+
+Relevant Papers:
+
+N/A
+
+Features: A1, A2, A3, A4
+---
+- ID: 42863
+
+Name: vehicle
+
+Tags: label ranking
+
+
+
+Features: A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, L1, L2, L3, L4
+
+Scraped Data: Dataset Information Additional Information The purpose is to classify a given silhouette as one of four types of vehicle, using  a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.  
+
+HISTORY:
+
+This data was originally gathered at the TI in 1986-87 by JP Siebert. It was partially financed by Barr and Stroud Ltd. The original purpose was to find a method of distinguishing 3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction.
+
+This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans and buses viewed from constrained elevation but all
+---
+- ID: 59
+
+Name: ionosphere
+
+Tags: mythbusting_1, study_1, study_123, study_15, study_20, study_29, study_30, study_41, study_50, study_52, study_7, study_88, uci
+
+**Author**: Space Physics Group, Applied Physics Laboratory, Johns Hopkins University. Donated by Vince Sigillito.  
+**Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/ionosphere)  
+**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html) 
+
+**Johns Hopkins University Ionosphere database**  
+This radar data was collected by a system in Goose Bay, Labrador.  This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts.  See the paper for more details.  
+
+### Attribute information
+Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number.  There were 17 pulse numbers for the Goose Bay system.  Instances in this database are described by 2 attributes
+---
+- ID: 357
+
+Name: vehicle_sensIT
+
+Tags: concept_drift, mythbusting_1, study_1, study_15, study_20, study_41
+
+**Author**: M. Duarte, Y. H. Hu  
+**Source**: [original](http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets) - 2013-11-14 -   
+**Please cite**:   M. Duarte and Y. H. Hu. 
+Vehicle classification in distributed sensor networks. 
+Journal of Parallel and Distributed Computing, 64(7):826-838, July 2004.
+
+
+This is the SensIT Vehicle (combined)  dataset, retrieved 2013-11-14 from the libSVM site. Additional to the preprocessing done there (see LibSVM site for details), this dataset was created as follows: 
+-join test and train datasets (2 files, already pre-combined)
+-relabel classes 1,2=positive class and 3=negative class
+-normalize each file columnwise according to the following rules: 
+-If a column only contains one value (constant feature), it will set to zero and thus removed by sparsity. 
+
+---
+- ID: 327
+
+Name: bridges
+
+Tags: uci
+
+**Author**: Yoram Reich","Steven J. Fenves  
+  
+**Source**: [original](http://openml.org/d/17) -   
+**Please cite**:   
+
+Pittsburgh bridges  
+
+This version is derived from version 1 by removing all instances with missing values in the last (target) attribute. The bridges dataset is originally not a classification dataset, put is used so extensively in the literature, using the last attribute as the target attribute. However, this attribute has missing values, which may lead to confusing benchmarking result. Therefore, these instances have been removed. 
+
+Sources: 
+-- Yoram Reich and Steven J. Fenves Department of Civil Engineering and Engineering Design Research Center Carnegie Mellon University Pittsburgh, PA 15213  Compiled from various sources.  
+-- Date: 1 August 1990  
+
+Attribute Information:   The type field state whether a property is continuous/integer (c)  or nominal (n). For properties with c,n type, the range of continuous numbers is given  first and the possible values of the nominal follow the semi-colon.   
+
+name type possible values comments 
+------------------------------------------------------------------------ 
+1. IDENTIF - - identifier of the examples 
+2
+---
+- ID: 1242
+
+Name: vehicleNorm
+
+Tags: study_16
+
+Normalized version of vehicle dataset (http://www.openml.org/d/54)
+
+**Author**:  Peter Mowforth  
+**Source**: UCI -   
+**Please cite**: Siebert,JP. Turing Institute Research Memorandum TIRM-87-018 "Vehicle Recognition Using Rule Based Methods" (March 1987)  
+
+ NAME
+         vehicle silhouettes
+ 
+ PURPOSE
+         to classify a given silhouette as one of four types of vehicle,
+         using  a set of features extracted from the silhouette. The
+         vehicle may be viewed from one of many different angles.  
+ 
+ PROBLEM TYPE
+         classification
+         
+ SOURCE
+         Drs.Pete Mowforth and Barry Shepherd
+         Turing Institute
+         George House
+         36 North Hanover St.
+         Glasgow
+         G1 2AD
+ 
+ CONTACT
+         Alistair Sutherland
+         Statistics Dept.
+         Strathclyde University
+         Livingstone Tower
+         26 Richmond St.
+         GLASGOW G1 1XH
+         Great Britain
+         
+         Tel: 041 552 4400 x3033
+         
+         Fax: 041 552
+---
+- ID: 52
+
+Name: trains
+
+Tags: study_1, study_123, study_41, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+1. Title: INDUCE Trains Data set
+ 
+ 2. Sources:
+    - Donor: GMU, Center for AI, Software Librarian,
+             Eric E. Bloedorn (bloedorn@aic.gmu.edu)
+    - Original owners: Ryszard S. Michalski (michalski@aic.gmu.edu)
+      and Robert Stepp
+    - Date received: 1 June 1994
+    - Date updated: 24 June 1994 (Thanks to Larry Holder (UT Arlington)
+      for noticing a translation error)
+ 
+ 3. Past usage:
+    - This set most closely resembles the data sets described in the following
+      two publications:
+       1. R.S. Michalski and  J.B. Larson "Inductive Inference of VL
+          Decision Rules" In Proceedings of the Workshop in Pattern-Directed 
+          Inference Systems, Hawaii, May 1977.  Also published in SIGART
+          Newsletter, ACM No. 63
+---
+- ID: 44153
+
+Name: vehicle_reproduced
+
+Tags: 
+
+**Author**: Dr. Pete Mowforth and Dr. Barry Shepherd  
+
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Statlog+(Vehicle+Silhouettes))
+
+**Please cite**: Siebert,JP. Turing Institute Research Memorandum TIRM-87-018 "Vehicle Recognition Using Rule Based Methods" (March 1987)  
+
+
+
+ NAME
+
+         vehicle silhouettes
+
+ 
+
+ PURPOSE
+
+         to classify a given silhouette as one of four types of vehicle,
+
+         using  a set of features extracted from the silhouette. The
+
+         vehicle may be viewed from one of many different angles.  
+
+ 
+
+ PROBLEM TYPE
+
+         classification
+
+         
+
+ SOURCE
+
+         Drs.Pete Mowforth and Barry Shepherd
+
+         Turing Institute
+
+         George House
+
+         36 North Hanover St.
+
+         Glasgow
+
+         G1 2AD
+
+ 
+
+ CONTACT
+
+         Alistair Sutherland
+
+         Statistics Dept.
+
+         Strathclyde University
+
+         Livingstone Tower
+
+         26 Richmond St.
+
+         GLASGOW G1 1XH
+
+         Great Britain
+
+         
+
+         Tel: 041 552 440
+---
+- ID: 42864
+
+Name: vehicle
+
+Tags: partial label ranking
+
+
+
+Features: A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, L1, L2, L3, L4
+
+Scraped Data: Dataset Information Additional Information The purpose is to classify a given silhouette as one of four types of vehicle, using  a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.  
+
+HISTORY:
+
+This data was originally gathered at the TI in 1986-87 by JP Siebert. It was partially financed by Barr and Stroud Ltd. The original purpose was to find a method of distinguishing 3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction.
+
+This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans and buses viewed from constrained elevation but
+---
+
+The topic is described by the following keywords: minor, axis, vehicle, silhouettes, moment, major, about, bounding, vehicles, variance, objects, cars, captured, hollows, polygon, object, circularity, ratio, rectangularity, scaled, rule, bus, opel, along, kurtosis, skewness, cn, saab, idx, calipers
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 1593, 41138, 54, 328, 40685, 42863, 59, 357, 327, 1242, 52, 44153, 42864 !

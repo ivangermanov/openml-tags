@@ -1,0 +1,299 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42795
+
+Name: Kassa
+
+Tags: 
+
+testing
+
+Features: height, width, aratio, local, url.images.buttons, url.likesbooks.com, url.www.slake.com, url.hydrogeologist, url.oso, url.media, url.peace.images, url.blipverts, url.tkaine.kats, url.labyrinth, url.advertising.blipverts, url.images.oso, url.area51.corridor, url.ran.gifs, url.express.scripts.com, url.off, url.cnet, url.time.1998, url.josefina3, url.truluck.com, url.clawnext.gif, url.autopen.com, url.tvgen.com, url.pixs, url.heartland.5309, url.meadows.9196, url.blue, url.ad.gif, url.area51, url.www.internauts.ca, url.afn.org, url.ran.org, url.shareware.com, url.baons.images, url.area51.labyrinth, url.pics, url.image.navigate, url.pool.images, url.carousel.org, url.members.accessus.net, url.cmp.flowsoft010, url.smallb.gif, url.www.FlowSoft.com, url
+---
+- ID: 42575
+
+Name: Ishwar
+
+Tags: 
+
+hydraulic
+
+Features: ps1, ps2, ps3, ps4, ps5, ps6, ts1, ts2, ts3, ts4, fs1, fs2, eps1, vs1, se, ce, cp, cooler_condition, valve_condition, internal_pump_leakage, hydraulic_accumulator, stable
+---
+- ID: 43105
+
+Name: Testing
+
+Tags: 
+
+I am testing to upload data
+
+Features: class, attr1, attr2, attr3, attr4, attr5, attr6
+---
+- ID: 41668
+
+Name: mj
+
+Tags: 
+
+mki
+
+Features: nome, class
+---
+- ID: 41907
+
+Name: branin
+
+Tags: https://github.com/trentmc/branin
+
+Branin test
+
+Features: x0, x1, y
+---
+- ID: 46208
+
+Name: Banknote
+
+Tags: 
+
+Data Banknote
+
+Features: V1, V2
+---
+- ID: 45013
+
+Name: jannis
+
+Tags: 
+
+This is a test
+
+Features: V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, V19, V20, V21, V22, V23, V24, V25, V26, V27, V28, V29, V30, V31, V32, V33, V34, V35, V36, V37, V38, V39, V40, V41, V42, V43, V44, V45, V46, V47, V48, V49, V50, V51, V52, V53, V54, class
+---
+- ID: 45945
+
+Name: Jeepneys
+
+Tags: 
+
+Intra
+
+Features: Traditional, Unnamed: 1, Unnamed: 2, Unnamed: 3, Unnamed: 4, Unnamed: 5, Unnamed: 6, Unnamed: 7, Unnamed: 8, Unnamed: 9, Unnamed: 10, Unnamed: 11, E-Jeepneys, Unnamed: 13, Unnamed: 14, Unnamed: 15, Unnamed: 16, Unnamed: 17, Unnamed: 18, Unnamed: 19, Unnamed: 20, Unnamed: 21
+---
+- ID: 1436
+
+Name: german.numer
+
+Tags: 
+
+
+
+Features: att_1, att_2, att_3, att_4, att_5, att_6, att_7, att_8, att_9, att_10, att_11, att_12, att_13, att_14, att_15, att_16, att_17, att_18, att_19, att_20, att_21, att_22, att_23, att_24, class
+---
+- ID: 45925
+
+Name: test
+
+Tags: 
+
+test
+
+Features: ID, Motorway, SR, NR, TR, VR, SUR1, SUR2, SUR3, UR, FR, OR, RR, BR, MR, CR, Class
+---
+- ID: 43104
+
+Name: ilpd
+
+Tags: 
+
+**Author**: Bendi Venkata Ramana, M. Surendra Prasad Babu, N. B. Venkateswarlu
+
+Features: V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, Class
+---
+- ID: 42347
+
+Name: test
+
+Tags: 
+
+tmm hjghjg  vjgkjhbb nvhjgb
+
+Features: V1, V2, V3, V4, Class
+---
+- ID: 45957
+
+Name: Trina
+
+Tags: 
+
+Trina
+
+Features: volt, current, soc, max_single_volt, min_single_volt, max_temp, min_temp, timestamp, label
+---
+- ID: 45939
+
+Name: 132
+
+Tags: 
+
+adas
+
+Features: V1, V2, V3, Set
+---
+- ID: 4154
+
+Name: CreditCardSubset
+
+Tags: 
+
+Om algos te testen
+
+Features: Time, V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, V19, V20, V21, V22, V23, V24, V25, V26, V27, V28, Amount, Class
+---
+- ID: 45604
+
+Name: dummy
+
+Tags: 
+
+randomly create description
+
+Features: y, X0, X1, X2, X3, X4, X5
+---
+- ID: 41669
+
+Name: mom
+
+Tags: 
+
+asdasd
+
+Features: datasize, bootstrap, classe, class
+---
+
+The topic is described by the following keywords: unnamed, branin, trina, banknote, v2, v1, v3, x0, v4, minsinglevolt, fs1, ishwar, maxsinglevolt, ps2, datasize, ejeepneys, nvhjgb, nome, ps3, coolercondition, creditcardsubset, ts4, classe, testen, bootstrap, tmm, ts1, ts2, ts3, ps1
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42795, 42575, 43105, 41668, 41907, 46208, 45013, 45945, 1436, 45925, 43104, 42347, 45957, 45939, 4154, 45604, 41669 !

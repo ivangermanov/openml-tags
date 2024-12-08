@@ -1,0 +1,330 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 981
+
+Name: kdd_internet_usage
+
+Tags: binarized, binarized_regression_problem, mythbusting_1, study_1, study_144, study_15, study_20, study_41
+
+**Author**:   
+**Source**: Unknown - Date unknown  
+**Please cite**:   
+
+Binarized version of the original data set (see version 1). The multi-class target feature is converted to a two-class nominal target feature by re-labeling the majority class as positive ('P') and all others as negative ('N'). Originally converted by Quan Sun.
+
+Features: Actual_Time, Age, Community_Building, Community_Membership_Family, Community_Membership_Hobbies, Community_Membership_None, Community_Membership_Other, Community_Membership_Political, Community_Membership_Professional, Community_Membership_Religious, Community_Membership_Support, Country, Disability_Cognitive, Disability_Hearing, Disability_Motor, Disability_Not_Impaired, Disability_Not_Say, Disability_Vision, Education_Attainment, Falsification_of_Information, Gender, Household_Income, How_You_Heard_About_Survey_Banner, How_You_Heard_About_Survey
+---
+- ID: 373
+
+Name: UNIX_user_data
+
+Tags: text_data, uci
+
+**Author**: Terran Lane (terran@ecn.purdue.edu)   
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/UNIX+User+Data) - Date unknown  
+**Please cite**:   
+
+This file contains 9 sets of sanitized user data drawn from the command histories of 8 UNIX computer users at Purdue over the course of up to 2 years (USER0 and USER1 were generated by the same person, working on different platforms and different projects).  The data is drawn from tcsh(1) history files and has been parsed and sanitized to remove filenames, user names, directory structures, web addresses, host names, and other possibly identifying items.  Command names, flags, and shell metacharacters have been preserved.  Additionally, **SOF** and **EOF** tokens have been inserted at the start and end of
+shell sessions, respectively.  Sessions are concatenated by date order and tokens appear in the order issued within the shell session, but no timestamps are included in this data.  For example, the two sessions:
+
+cd ~/private/docs  
+ls -laF |
+---
+- ID: 43346
+
+Name: User-OTT-Consumption-Profile---2019
+
+Tags: 
+
+Context
+With the growing dependency that our society has on the Internet, the amount of data that goes through networks keeps increasing. Network monitoring and analysis of consumption behavior represents an important aspect for network operators allowing to obtain vital information about consumption trends in order to offer new data plans aimed at specific users and obtain an adequate perspective of the network. Over-the-top (OTT) media and communications services and applications are shifting the Internet consumption by increasing the traffic generation over the different available networks. OTT refers to applications that deliver audio, video, and other media over the Internet by leveraging the infrastructure deployed by network operators but without their involvement in the control or distribution of the content and are known by their large consumption of network resources.
+This dataset presents the summarization of the consumption behavior of users inside Universidad del Cauca Network between different days of April, May and June 2019. The users are classified between Low, Medium and High Consumption users. 
+Content
+This dataset contains 1249 instances and 114 attributes on a single CSV file. Each instance represents a users consumption profile which holds summarized information about the  consumption behavior of the user related to 56 OTT applications identified in the
+---
+- ID: 42996
+
+Name: gender-by-name
+
+Tags: 
+
+**Author**: Arun Rao
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Gender+by+Name) - 2020
+**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  
+
+**Gender by Name Data Set**
+
+This dataset attributes first names to genders, giving counts and probabilities. It combines open-source government data from the US, UK, Canada, and Australia.
+
+This dataset combines raw counts for first/given names of male and female babies in those time periods, and then calculates a probability for a name given the aggregate count. Source datasets are from government authorities: 
+
+- US: Baby Names from Social Security Card Applications - National Data, 1880 to 2019 
+- UK: Baby names in England and Wales Statistical bulletins, 2011 to 2018 
+- Canada: British Columbia 100 Years of Popular Baby names, 1918 to 2018 
+- Australia: Popular Baby Names, Attorney-General's Department, 1944 to 2019
+
+### Attribute information
+- Name: String 
+- Gender: M/F (category/string
+---
+- ID: 46282
+
+Name: internet_usage
+
+Tags: 
+
+From original source:
+-----
+
+As part of our continued commitment towards the WWW community and its success, we are again making available the entire data sets for this set of surveys. This enables specialized analysis for those whose needs exceed our analysis. The data sets are however subject to certain copyright restrictions. They will also be availble (compressed) through FTP from:
+
+Copyright 1994-1998 Georgia Tech Research Corporation. All rights Reserved. Source: GVU's WWW User Survey www.gvu.gatech.edu/user_surveys
+-----
+Columns with index 69,70,71 were deleted from the dataset, usually because they related to some kind of index.
+
+Features: Actual Time, Age, Community Building, Community Membership_Family, Community Membership_Hobbies, Community Membership_None, Community Membership_Other, Community Membership_Political, Community Membership_Professional, Community Membership_Religious, Community Membership_Support, Country, Disability_Cognitive, Disability_Hearing, Disability_Motor, Disability_Not Impaired, Disability_Not Say, Disability_Vision, Education Attainment, Falsification of Information, Gender, Household Income, How You Heard About Survey_Banner, How You Heard About Survey_Friend, How You Heard
+---
+- ID: 43920
+
+Name: kdd_internet_usage
+
+Tags: 
+
+This data contains general demographic information on internet users in 1997.
+
+Features: actual_time, age, community_building, community_membership_family, community_membership_hobbies, community_membership_none, community_membership_other, community_membership_political, community_membership_professional, community_membership_religious, community_membership_support, country, disability_cognitive, disability_hearing, disability_motor, disability_not_impaired, disability_not_say, disability_vision, education_attainment, falsification_of_information, gender, household_income, how_you_heard_about_survey_banner, how_you_heard_about_survey_friend, how_you_heard_about_survey_mailing_list, how_you_heard_about_survey_others, how_you_heard_about_survey_printed_media, how_you_heard_about_survey_remebered, how_you_heard_about_survey_search_engine, how_you_heard_about_survey_usenet_news, how_you_heard_about_survey_www_page, major_geographical_location, major_occupation, marital_status, most_import_issue_facing_the_internet, opinions_on_censorship, primary_computing_platform, primary_language,
+---
+- ID: 4562
+
+Name: InternetUsage
+
+Tags: 
+
+**Author**: Original Owner:   Graphics","Visualization","","GA  http://www.gvu.gatech.edu/gvu/user_surveys/survey-1997-10/   Donor:   Dr Di Cook  Department of Statistics  Iowa State University  http://www.public.iastate.edu/~dicook/  
+**Source**: UCI  
+**Please cite**:   
+
+Abstract: This data contains general demographic information on internet users in 1997.
+Source:
+Original Owner: 
+
+Graphics, Visualization, &amp; Usability Center 
+College of Computing 
+Geogia Institute of Technology 
+Atlanta, GA 
+http://www.gvu.gatech.edu/gvu/user_surveys/survey-1997-10/ 
+
+Donor: 
+
+Dr Di Cook 
+Department of Statistics 
+Iowa State University 
+http://www.public.iastate.edu/~dicook/ 
+
+
+Data Set Information:
+
+This data comes from a survey conducted by the Graphics and Visualization Unit at Georgia Tech October 10 to November 16, 1997. The full details of the survey are available here: [Web Link] 
+
+The particular subset of the survey provided here is the &quot;general demographics&quot
+---
+- ID: 372
+
+Name: internet_usage
+
+Tags: uci
+
+**Author**:   
+**Source**: Unknown - Date unknown  
+**Please cite**:   
+
+Internet Usage Data
+ 
+ Data Type
+ 
+    multivariate
+ 
+ Abstract
+ 
+    This data contains general demographic information on internet users
+    in 1997.
+ 
+ Sources
+ 
+     Original Owner
+ 
+ [1]Graphics, Visualization, & Usability Center
+ College of Computing
+ Geogia Institute of Technology
+ Atlanta, GA
+ 
+     Donor
+ 
+ [2]Dr Di Cook
+ Department of Statistics
+ Iowa State University
+ 
+    Date Donated: June 30, 1999
+ 
+ Data Characteristics
+ 
+    This data comes from a survey conducted by the Graphics and
+    Visualization Unit at Georgia Tech October 10 to November 16, 1997.
+    The full details of the survey are available [3]here.
+ 
+    The particular subset of the survey provided here is the "general
+    demographics" of internet users. The data have been recoded as
+    entirely numeric, with an index to the codes described in the "Coding"
+    file.
+ 
+    The full survey is available from the web site above, along with
+    summaries, tables and graphs of their analyses. In addition there
+---
+- ID: 4133
+
+Name: kdd_internet_usage
+
+Tags: 
+
+This data contains general demographic information on internet users in 1997.
+Original Owner
+[1]Graphics, Visualization, &amp; Usability Center College of Computing Geogia Institute of Technology Atlanta, GA
+Donor [2]Dr Di Cook, Department of Statistics, Iowa State University
+Date Donated: June 30, 1999
+ 
+This data comes from a survey conducted by the Graphics and
+Visualization Unit at Georgia Tech October 10 to November 16, 1997.
+
+The particular subset of the survey provided here is the &quot;general demographics&quot; of internet users. The data have been recoded as entirely numeric, with an index to the codes described in the &quot;Coding&quot; file.
+
+The full survey is available from the web site above, along with summaries, tables and graphs of their analyses. In addition there is information on other parts of the survey, including technology demographics and web commerce.
+
+Features: Actual_Time, Age, Community_Building, Community_Membership_Family, Community_Membership_Hobbies, Community_Membership_None, Community_Membership_Other, Community_Membership_Political, Community_Membership_Professional, Community_Membership
+---
+
+The topic is described by the following keywords: survey, heard, internet, users, baby, exit, eof, names, sof, cd, disabilitycognitive, disabilitymotor, disabilityhearing, disabilityvision, demographics, sessions, pays, visualization, summaries, community, session, georgia, web, tokens, graphics, consumption, notpurchasingother, communitymembershipother, whopaysforaccessother, notpurchasingprivacy
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 981, 373, 43346, 42996, 46282, 43920, 4562, 372, 4133 !

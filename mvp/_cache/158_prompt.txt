@@ -1,0 +1,240 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 46475
+
+Name: EDA-Home-Mortgage-NY
+
+Tags: 
+
+Dataset is uploaded from kaggle. https://www.kaggle.com/code/ambarish/eda-home-mortgage-ny-with-feature-analysis/script
+
+Features: agency_code, applicant_ethnicity, applicant_income_000s, applicant_race_1, applicant_sex, application_date_indicator, census_tract_number, co_applicant_ethnicity, co_applicant_race_1, co_applicant_sex, county_code, denial_reason_1, hoepa_status, lien_status, loan_purpose, loan_type, msamd, owner_occupancy, preapproval, property_type, purchaser_type, sequence_number, hud_median_family_income, loan_amount_000s, number_of_1_to_4_family_units, number_of_owner_occupied_units, minority_population, population, tract_to_msamd_income, action_taken
+---
+- ID: 43344
+
+Name: Corporate-Credit-Rating
+
+Tags: 
+
+Context
+A corporate credit rating expresses the ability of a firm to repay its debt to creditors. Credit rating agencies are the entities responsible to make the assessment and give a verdict.  When a big corporation from the US or anywhere in the world wants to issue a new bond it hires a credit agency to make an assessment so that investors can know how trustworthy is the company. The assessment is based especially in the financials indicators that come from the balance sheet. Some of the most important agencies in the world are Moodys, Fitch and Standard and Poors. 
+Content
+A list of 2029 credit ratings issued by major agencies such as Standard and Poors to big US firms (traded on NYSE or Nasdaq) from 2010 to 2016. 
+There are 30 features for every company of which 25 are financial indicators. They can be divided in:
+
+Liquidity Measurement Ratios: currentRatio, quickRatio, cashRatio, daysOfSalesOutstanding
+Profitability Indicator Ratios: grossProfitMargin, operatingProfitMargin, pretaxProfitMargin, netProfitMargin, effectiveTaxRate, returnOnAssets, returnOnEquity, returnOnCapitalEmployed
+Debt
+---
+- ID: 43323
+
+Name: CorporateCreditRating
+
+Tags: 
+
+ContextAcorporatecreditratingexpressestheabilityofafirmtorepayitsdebttocreditorsCreditratingagenciesaretheentitiesresponsibletomaketheassessmentandgiveaverdictWhenabigcorporationfromtheUSoranywhereintheworldwantstoissueanewbondithiresacreditagencytomakeanassessmentsothatinvestorscanknowhowtrustworthyisthecompanyTheassessmentisbasedespeciallyinthefinancialsindicatorsthatcomefromthebalancesheetSomeofthemostimportantagenciesintheworldareMoodysFitchandStandardandPoorsContentAlistof2029creditratingsissuedbymajoragenciessuchasStandardandPoorstobigUSfirmstradedonNYSEorNasdaqfrom2010to2016Thereare30featuresforeverycompanyofwhich25arefinancialindicatorsTheycanbedividedinLiquidityMeasurementRatioscurrentRatioquickRatiocashRatiodaysOfSalesOutstandingProfitabilityIndicatorRatiosgrossProfitMarginoperatingProfitMarginpretaxProfitMarginnetProfitMargineffectiveTaxRatereturnOnAssetsreturnOnEquityreturnOnCapitalEmployedDebtRatiosdebtRati
+---
+- ID: 46478
+
+Name: Corporate_Credit_Rating
+
+Tags: 
+
+# Credit Ratings of Big US Firms and their Financials
+
+## Context
+A corporate credit rating expresses the ability of a firm to repay its debt to creditors. Credit rating agencies assess companies' creditworthiness based on financial indicators.
+
+## Content
+This dataset contains 2029 credit ratings issued by major agencies (S&P, Moody's, Fitch) for US firms traded on NYSE/NASDAQ from 2010-2016. It includes 30 features:
+
+- 25 financial indicators grouped into:
+  * Liquidity Ratios (current ratio, quick ratio, etc.)
+  * Profitability Ratios (profit margins, ROA, ROE, etc.)
+  * Debt Ratios (debt ratio, debt-equity ratio)
+  * Operating Performance Ratios (asset turnover)
+  * Cash Flow Ratios (operating/free cash flow metrics)
+- Company name, trading symbol, rating agency, date, sector
+
+## Target Variable
+The target variable 'Rating' includes 10 class labels representing credit ratings from AAA (highest) to D (lowest).
+
+## Important Notes
+- Dataset is unbalanced
+- Contains missing values in financial indicators
+- May contain outliers with
+---
+- ID: 46505
+
+Name: total_score
+
+Tags: 
+
+This dataset is designed to evaluate companies based on quality and valuation metrics.
+
+Features: company, mcap, operating margin, net debt / ebit, roe, croic, p/fcf, revenues, ev/fcf, total_score, gross margin
+---
+- ID: 46382
+
+Name: company_quality_and_valuation_finance
+
+Tags: 
+
+This dataset is designed to evaluate companies based on quality and valuation metrics. It uses a two-stage scoring system to classify companies into categories like 'High Quality, Fair Valuation'. The dataset is ideal for financial analysis and investment decision-making.
+
+Features: company, mcap, operating margin, net debt / ebit, roe, croic, p/fcf, revenues, ev/fcf, total_score, gross margin
+---
+- ID: 46489
+
+Name: ESG_Risk_Ratings
+
+Tags: 
+
+# ESG Risk Ratings of S&P 500 Companies
+
+## Context
+This dataset exclusively showcases companies from the S&P 500 index. Researchers, investors, analysts, and policy-makers can utilize this dataset to gain insights into the ESG performance and risk profiles of these major corporations. 
+Whether exploring trends, conducting ESG assessments, or making informed investment decisions, this dataset serves as a valuable resource for comprehending the sustainability and governance practices of S&P 500 companies.
+
+## Content
+This dataset contains ESG risk ratings for companies in the S&P 500 index. It includes various features:
+
+- Sector, Industry, Controversy Level, ESG Risk Level
+- Numerical ESG Risk Scores for Environment, Governance, and Social
+
+## Target Variable
+The target variable 'ESG Risk Level' includes several class labels representing different levels of ESG risk from low to severe.
+
+## Important Notes
+- Dataset contains missing values in some features
+- Class imbalance is present in the ESG Risk Level categories
+
+Features: sector, industry, full_time_employees, total_esg_risk_score, environment_risk_score, governance_risk_score, social_risk_score, controversy_level, controversy_score, esg_risk
+---
+
+The topic is described by the following keywords: esg, ratios, rating, debt, sector, agencies, companies, assetturnover, freecashflowpershare, operatingcashflowpershare, quickratio, freecashflowoperatingcashflowratio, cashratio, cashpershare, daysofsalesoutstanding, debtequityratio, operatingcashflowsalesratio, currentratio, risk, ratings, returnonequity, returnoncapitalemployed, returnonassets, operatingprofitmargin, effectivetaxrate, pretaxprofitmargin, grossprofitmargin, agency, netprofitmargin, indicators
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 46475, 43344, 43323, 46478, 46505, 46382, 46489 !

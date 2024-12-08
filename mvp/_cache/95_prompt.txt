@@ -1,0 +1,309 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43122
+
+Name: Hyperplane
+
+Tags: concept drift
+
+Rotating hyperplane is a stream generator that generates d-dimensional classification problems in which the prediction is defined by a rotating hyperplane. By changing the orientation and position of the hyperplane over time in a smooth manner, we can introduce smooth concept drift. 
+This version is created with MOA library with drift parameters t equal to 0.1 (control the magnitude of change after every instance) within a window of 100k. Probability of reversing change direction is fixed at 10%. 
+It contains 500k instances with 10 numeric features. 5% noise is added by randomly changing the class labels.
+
+Features: att1, att2, att3, att4, att5, att6, att7, att8, att9, att10, class
+---
+- ID: 1596
+
+Name: covertype
+
+Tags: concept_drift, study_218
+
+**Author**: Jock A. Blackard, Dr. Denis J. Dean, Dr. Charles W. Anderson  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Covertype) - 1998  
+
+This is the original version of the famous covertype dataset in ARFF format. 
+
+**Covertype**  
+Predicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation (30 x 30 meter cell) was determined from US Forest Service (USFS) Region 2 Resource Information System &#40;RIS&#41; data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains binary (0 or 1) columns of data for qualitative independent variables (wilderness areas and soil types). 
+
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management
+---
+- ID: 180
+
+Name: covertype
+
+Tags: study_10, uci
+
+**Covertype**  
+Predicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation (30 x 30 meter cell) was determined from US Forest Service (USFS) Region 2 Resource Information System (RIS) data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains binary (0 or 1) columns of data for qualitative independent variables (wilderness areas and soil types). 
+
+This study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices. 
+
+Some background information for these four wilderness areas: Neota (area 2) probably has the highest mean elevational value of the 4 wilderness areas. Rawah (area 1) and Comanche Peak (area 3) would have a lower mean elevational value, while Cache la Poudre (area 4) would have the lowest mean elevational value
+---
+- ID: 45081
+
+Name: Tallo
+
+Tags: 
+
+TALLO - a global tree allometry and crown architecture database.
+
+This is the Tallo dataset described in Jucker et al. (2022) but recreated with Python scripts from Laurens Bliek.
+The scripts can be found at https://github.com/lbliek/TALLO_ML/tree/TALLO_ML1.
+
+The Tallo database (v1.0.0) is a collection of 498,838 georeferenced 
+and taxonomically standardized records of individual trees for which stem diameter, 
+height and/or crown radius have been measured. 
+Data were compiled from 61,856 globally distributed sites and include measurements for 5,163 tree species (Jucker et al., 2022).
+Data was sourced from published articles between 1988 and 2021, as well as online resources: https://github.com/lbliek/TALLO_ML/blob/main/DB/Reference_look_up_table.csv
+
+The constructed data set and associated meta-data is for use case 3 in the referenced paper: 
+predicting tree height based on climate data and stem diameter.
+This means a large portion of data is ignored by default (set as attributes to be
+---
+- ID: 150
+
+Name: covertype
+
+Tags: study_16
+
+**Author**: Albert Bifet  
+**Source**: [MOA](http://moa.cms.waikato.ac.nz/datasets/) - 2009  
+**Please cite**:   
+
+Normalized version of the Forest Covertype dataset (see version 1), so that the numerical values are between 0 and 1. Contains the forest cover type for 30 x 30 meter cells obtained from US Forest Service (USFS) Region 2 Resource Information System &#40;RIS&#41; data. It contains 581,012 instances and 54 attributes, and it has been used in several papers on data stream classification.
+
+Features: Elevation, Aspect, Slope, Horizontal_Distance_To_Hydrology, Vertical_Distance_To_Hydrology, Horizontal_Distance_To_Roadways, Hillshade_9am, Hillshade_Noon, Hillshade_3pm, Horizontal_Distance_To_Fire_Points, Wilderness_Area1, Wilderness_Area2, Wilderness_Area3, Wilderness_Area4, Soil_Type1, Soil_Type2, Soil_Type3, Soil_Type4, Soil_Type5, Soil_Type6, Soil_Type7,
+---
+- ID: 43924
+
+Name: eucalyptus
+
+Tags: 
+
+Find out which seedlots in a species are best for soil conservation in dry hill country. Bulluch B. T., (1992) Eucalyptus Species Selection for Soil Conservation in Seasonally Dry Hill Country - Twelfth Year Assessment New Zealand Journal of Forestry Science 21(1): 10 - 31 (1991)
+
+Kirsten Thomson and Robert J. McQueen (1996) Machine Learning Applied to Fourteen Agricultural Datasets. University of Waikato Research Report
+https://www.cs.waikato.ac.nz/ml/publications/1996/Thomson-McQueen-96.pdf + the original publication:
+
+Features: Abbrev, Rep, Locality, Map_Ref, Latitude, Altitude, Rainfall, Frosts, Year, Sp, PMCno, DBH, Ht, Surv, Vig, Ins_res, Stem_Fm, Crown_Fm, Brnch_Fm, Utility
+---
+- ID: 40505
+
+Name: treepipit
+
+Tags: 
+
+Data on the population density of tree pipits, Anthus trivialis, in Franconian oak forests including variables describing the forest ecosystem.
+This data is taken from R package coin.
+This study is based on fieldwork conducted in three lowland oak forests in the Franconian region of northern Bavaria close to Uffenheim, Germany. Diurnal breeding birds were sampled five times, from March to June 2002, using a quantitative grid mapping. Each grid was a one-hectare square. In total, 86 sample sites were established in 9 stands. All individuals were counted in time intervals of 7 min/grid during slow walks along the middle of the grid with a stop in the centre. Environmental factors were measured for each grid.
+
+Features: counts, age, coverstorey, coverregen, meanregen, coniferous, deadtree, cbpiles, ivytree, fdist
+---
+- ID: 43782
+
+Name: Forest-Surfaces-in-Romania-1990-2019
+
+Tags: 
+
+Context
+We publish the data to clarify the real evolution of forest area in post-communist Romania. The data is from the National Statistics Institute of Romania, so these are the official reported data. 
+Content
+The data contains the values of Forest surfaces in Romania, from 1990 to 2019, as a total, per region and county per type of forest (Woods, Softwood, Hardwood, Other).
+Romania has 42 counties (in Romanian: Judete), including the Capital city municipality, Bucharest (in Romanian: Bucuresti)
+Acknowledgements
+The source of the data is the Romanian National Statistics Institute.
+Inspiration
+Use this data to clarify if the forestry surfaces in Romania were declining since 1990 or are increasing. See where the surfaces increased or decreased.
+
+Features: Category, Region, Year, Unit, Value
+---
+- ID: 293
+
+Name: covertype
+
+Tags: 
+
+**Author**: Jock A. Blackard, Dr. Denis J. Dean, Dr. Charles W. Anderson   
+**Source**: [LibSVM repository](http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/) - 2013-11-14  
+**Please cite**: For the binarization: R. Collobert, S. Bengio, and Y. Bengio. A parallel mixture of SVMs for very large scale problems. Neural Computation, 14(05):1105-1114, 2002.
+
+This is the famous covertype dataset in its binary version, retrieved 2013-11-13 from the libSVM site (called covtype.binary there). Additional to the preprocessing done there (see LibSVM site for details), this dataset was created as  follows:
+-load covertpype dataset, unscaled.
+-normalize each file columnwise according to the following rules:
+-If a column only contains one value (constant feature), it will set to zero and thus removed by sparsity.
+-If a column contains two values (binary feature), the value occuring more often will be
+---
+- ID: 43948
+
+Name: covertype
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark,  
+                          transformed in the same way. This dataset belongs to the "classification on categorical and
+                          numerical features" benchmark. Original description: 
+ 
+**Author**: Jock A. Blackard, Dr. Denis J. Dean, Dr. Charles W. Anderson  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Covertype) - 1998  
+
+This is the original version of the famous covertype dataset in ARFF format. 
+
+**Covertype**  
+Predicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation (30 x 30 meter cell) was determined from US Forest Service (USFS) Region 2 Resource Information System &#40;RIS&#41; data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains binary (0 or 1) columns of data for qualitative independent variables (wilderness areas and soil types). 
+
+This study
+---
+- ID: 45739
+
+Name: covertype
+
+Tags: 
+
+Predicting forest cover ...
+
+Features: Product, Stock, Price, Place
+---
+- ID: 149
+
+Name: CovPokElec
+
+Tags: concept_drift, study_16
+
+**Author**: Albert Bifet  
+**Source**: [MOA](http://moa.cms.waikato.ac.nz/datasets/) - 2009  
+**Please cite**:   
+
+Dataset created to study concept drift in stream mining. It is constructed by combining the Covertype, Poker-Hand, and Electricity datasets. More details can be found in:
+Albert Bifet, Geoff Holmes, Bernhard Pfahringer, Richard Kirkby, and Ricard Gavaldà. 2009. New ensemble methods for evolving data streams. In Proceedings of the 15th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '09).
+
+Features: Elevation, Aspect, Slope, Horizontal_Distance_To_Hydrology, Vertical_Distance_To_Hydrology, Horizontal_Distance_To_Roadways, Hillshade_9am, Hillshade_Noon, Hillshade_3pm, Horizontal_Distance_To_Fire_Points, Wilderness_Area1, Wilderness_Area2, Wilderness_Area3, Wilderness_Area4, Soil_Type1, Soil_Type2, Soil_Type3, Soil_Type4,
+---
+
+The topic is described by the following keywords: forest, cover, wilderness, meters, areas, poudre, dist, elevation, quantitative, cache, would, covertype, comanche, hillshade, elevational, horz, rawah, neota, la, nearest, solstice, designation, sprucefir, 255, pine, tree, summer, blackard, jock, cartographic
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43122, 1596, 180, 45081, 150, 43924, 40505, 43782, 293, 43948, 45739, 149 !

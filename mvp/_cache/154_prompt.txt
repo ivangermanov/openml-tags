@@ -1,0 +1,301 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 163
+
+Name: lung-cancer
+
+Tags: mythbusting_1, study_1, study_123, study_15, study_20, study_41, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+1. Title: Lung Cancer Data
+ 
+ 2. Source Information:
+ 	- Data was published in : 
+ 	  Hong, Z.Q. and Yang, J.Y. "Optimal Discriminant Plane for a Small
+ 	  Number of Samples and Design Method of Classifier on the Plane",
+ 	  Pattern Recognition, Vol. 24, No. 4, pp. 317-324, 1991.
+ 	- Donor: Stefan Aeberhard, stefan@coral.cs.jcu.edu.au
+ 	- Date : May, 1992
+ 
+ 3. Past Usage:
+ 	- Hong, Z.Q. and Yang, J.Y. "Optimal Discriminant Plane for a Small
+           Number of Samples and Design Method of Classifier on the Plane",
+           Pattern Recognition, Vol. 24, No. 4, pp. 317-324, 1991.
+ 	- Aeberhard, S., Co
+---
+- ID: 1506
+
+Name: thoracic-surgery
+
+Tags: mf_less_than_80, study_123, study_127, study_50, study_52, study_7, study_88
+
+**Author**:   
+**Source**: UCI    
+**Please cite**: Zikeba, M., Tomczak, J. M., Lubicz, M., & Swikatek, J. (2013). Boosted SVM for extracting rules from imbalanced data in application to prediction of the post-operative life expectancy in the lung cancer patients. Applied Soft Computing.   
+
+  
+* Title: 
+Thoracic Surgery Data Data Set 
+
+* Abstract: 
+The data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.
+
+* Source:
+Creators: Marek Lubicz (1), Konrad Pawelczyk (2), Adam Rzechonek (2), Jerzy Kolodziej (2) 
+-- (1) Wroclaw University of Technology, wybrzeze Wyspianskiego 27, 50-370, Wroclaw, Poland 
+-- (2) Wrocl
+---
+- ID: 13
+
+Name: breast-cancer
+
+Tags: mythbusting_1, study_1, study_15, study_20, study_41, study_52, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+Citation Request:
+    This breast cancer domain was obtained from the University Medical Centre,
+    Institute of Oncology, Ljubljana, Yugoslavia.  Thanks go to M. Zwitter and 
+    M. Soklic for providing the data.  Please include this citation if you plan
+    to use this database.
+ 
+ 1. Title: Breast cancer data (Michalski has used this)
+ 
+ 2. Sources: 
+    -- Matjaz Zwitter & Milan Soklic (physicians)
+       Institute of Oncology 
+       University Medical Center
+       Ljubljana, Yugoslavia
+    -- Donors: Ming Tan and Jeff Schlimmer (Jeffrey.Schlimmer@a.gp.cs.cmu.edu)
+    -- Date: 11 July 1988
+ 
+ 3. Past Usage: (Several: here are some)
+      -- Michalski,R.S., Mozetic,I., Hong,J., & Lavrac,N. (1986). The 
+        
+---
+- ID: 23499
+
+Name: breast-cancer-dropped-missing-attributes-values
+
+Tags: study_88
+
+**Author**: Smite Chow  
+**Source**: http://www.openml.org/d/13 - Date 11 July 1988  
+**Please cite**:   
+
+Citation Request: This breast cancer domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia. Thanks go to M. Zwitter and M. Soklic for providing the data. Please include this citation if you plan to use this database.
+
+ 1. Title: 
+
+ 2. Sources: http://www.openml.org/d/13
+
+ 3. Past Usage: Smite Chow
+
+Features: age, menopause, tumor-size, inv-nodes, node-caps, deg-malig, breast, breast-quad, irradiat, Class
+---
+- ID: 4329
+
+Name: thoracic_surgery
+
+Tags: study_127, study_88
+
+The data was collected retrospectively at Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer in the years 2007 - 2011. The Centre is associated with the Department of Thoracic Dataset from UCI Machine Learning Repository. Surgery of the Medical University of Wroclaw and Lower-Silesian Centre for Pulmonary Diseases, Poland, while the research database constitutes a part of the National Lung Cancer Registry, administered by the Institute of Tuberculosis and Pulmonary Diseases in Warsaw, Poland.
+
+Features: DGN, PRE4, PRE5, PRE6, PRE7, PRE8, PRE9, PRE10, PRE11, PRE14, PRE17, PRE19, PRE25, PRE30, PRE32, AGE, Risk1Yr
+
+Scraped Data: Dataset Information What do the instances in this dataset represent? Individual patients Additional Information The data was collected retrospectively at Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer in the years 2007 to 2011. The Centre is associated with the Department of Thoracic Surgery of the Medical
+---
+- ID: 43
+
+Name: haberman
+
+Tags: mythbusting_1, study_1, study_123, study_127, study_15, study_20, study_29, study_30, study_41, study_50, study_52, study_7, study_88, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+1. Title: Haberman's Survival Data
+ 
+ 2. Sources:
+    (a) Donor:   Tjen-Sien Lim (limt@stat.wisc.edu)
+    (b) Date:    March 4, 1999
+ 
+ 3. Past Usage:
+    1. Haberman, S. J. (1976). Generalized Residuals for Log-Linear
+       Models, Proceedings of the 9th International Biometrics
+       Conference, Boston, pp. 104-122.
+    2. Landwehr, J. M., Pregibon, D., and Shoemaker, A. C. (1984),
+       Graphical Models for Assessing Logistic Regression Models (with
+       discussion), Journal of the American Statistical Association 79:
+       61-83.
+    
+---
+- ID: 224
+
+Name: breastTumor
+
+Tags: 
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ Tumor-size treated as the class attribute.
+
+ As used by Kilpatrick, D. & Cameron-Jones, M. (1998). Numeric prediction
+ using instance-based learning with encoding length selection. In Progress
+ in Connectionist-Based Information Systems. Singapore: Springer-Verlag.
+
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ Citation Request:
+    This breast cancer domain was obtained from the University Medical Centre,
+    Institute of Oncology, Ljubljana, Yugoslavia.  Thanks go to M. Zwitter and 
+    M. Soklic for providing the data.  Please include this citation if you plan
+    to use this database.
+ 
+ 1. Title: Breast cancer data (Michalski has used this)
+ 
+ 2. Sources: 
+    -- Matjaz Zwitter & Milan Soklic (physicians)
+       Institute of Oncology 
+       University Medical Center
+       Ljubljana, Yugoslavia
+    -- Donors: Ming Tan and Jeff Schlimmer (Jeffrey.Schlimmer@a.gp.cs.cmu.edu)
+    -- Date: 11 July 1988
+---
+
+The topic is described by the following keywords: tf, surgery, wroclaw, instances, centre, breast, thoracic, cancer, lung, degmalig, invnodes, breastquad, nodecaps, menopause, enum, tumorsize, poland, norecurrenceevents, recurrenceevents, irradiat, yugoslavia, risk1y, domains, medical, plane, pulmonary, before, soklic, zwitter, survival
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 163, 1506, 13, 23499, 4329, 43, 224 !

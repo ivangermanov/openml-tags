@@ -1,0 +1,238 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43610
+
+Name: Risk-of-being-drawn-into-online-sex-work-(cleaned)
+
+Tags: 
+
+This dataset is the resulting cleaned version of Panos Kostakos's Risk of being drawn into online sex work dataset.
+Context
+This database was used in the paper: "Covert online ethnography and machine learning for detecting individuals at risk of being drawn into online sex work". https://www.flinders.edu.au/centre-crime-policy-research/illicit-networks-workshop
+Content
+The database includes data scraped from a European online adult forum. Using covert online ethnography we interviewed a small number of participants and determined their risk to either supply or demand sex services through that forum. This is a great dataset for semi-supervised learning.
+Acknowledgements
+The dataset was initially publicized by Panos Kostakos.
+Inspiration
+How can we identify individuals at risk of being drawn into online sex work? The spread of online social media enables a greater number of people to be involved into online sex trade; however, detecting deviant behaviors online is limited by the low available of data. To overcome this challenge, we combine covert online ethnography with semi-supervised learning using data from a popular European adult forum.
+
+Features: User_ID, Female
+---
+- ID: 43664
+
+Name: Mental-Health-in-Tech-Survey
+
+Tags: 
+
+Dataset Information
+This dataset is from a 2014 survey that measures attitudes towards mental health and frequency of mental health disorders in the tech workplace. You are also encouraged to analyze data from the ongoing 2016 survey found here.
+Content
+This dataset contains the following data:
+
+Timestamp
+Age
+Gender
+Country
+state: If you live in the United States, which state or territory do you live in?
+self_employed: Are you self-employed?
+family_history: Do you have a family history of mental illness?
+treatment: Have you sought treatment for a mental health condition?
+work_interfere: If you have a mental health condition, do you feel that it interferes with your work?
+no_employees: How many employees does your company or organization have?
+remote_work: Do you work remotely (outside of an office) at least 50 of the time?
+tech_company: Is your employer primarily a tech company/organization?
+benefits: Does your employer provide mental health benefits?
+care_options: Do you know the options for mental health care your employer provides?
+wellness_program: Has your employer ever discussed mental health as part of an employee wellness program?
+seek_help
+---
+- ID: 42164
+
+Name: dating_profile
+
+Tags: 
+
+Anonymized data of dating profiles from OkCupid
+
+Features: age, body_type, diet, drinks, drugs, education, essay0, essay1, essay2, essay3, essay4, essay5, essay6, essay7, essay8, essay9, ethnicity, height, income, job, last_online, location, offspring, orientation, pets, religion, sex, sign, smokes, speaks, status
+---
+- ID: 40536
+
+Name: SpeedDating
+
+Tags: OpenML100, study_123, study_135, study_14, study_144
+
+**Author**: Ray Fisman and Sheena Iyengar  
+**Source**: [Columbia Business School](http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/) - 2004  
+**Please cite**: None  
+
+This data was gathered from participants in experimental speed dating events from 2002-2004. During the events, the attendees would have a four-minute "first date" with every other participant of the opposite sex. At the end of their four minutes, participants were asked if they would like to see their date again. They were also asked to rate their date on six attributes: Attractiveness, Sincerity, Intelligence, Fun, Ambition, and Shared Interests. The dataset also includes questionnaire data gathered from participants at different points in the process. These fields include: demographics, dating habits, self-perception across key attributes, beliefs on what others find valuable in a mate, and lifestyle information. 
+
+### Attribute Information
+```
+ * gender: Gender of self  
+ * age: Age of self  
+ * age_o: Age of partner  
+
+---
+- ID: 42734
+
+Name: okcupid-stem
+
+Tags: 
+
+User profile data for San Francisco OkCupid users published in [Kim, A. Y., & Escobedo-Land, A. (2015). OKCupid data for introductory statistics and data science courses. Journal of Statistics Education, 23(2).]. The curated dataset was downloaded from [https://github.com/rudeboybert/JSE_OkCupid]. The original dataset was created with the use of a python script that pulled the data from public profiles on www.okcupid.com on 06/30/2012. It includes people (n = 59946) within a 25 mile radius of San Francisco, who were online in the last year (06/30/2011), with at least one profile picture. Permission to use this data was obtained by the author of the original paper from OkCupid president and co-founder Christian Rudder under the condition that the dataset remains public. As target, the variable 'job' was collapsed into three categories: 'stem', 'non_stem', and 'student'. STEM jobs were defined as 'job' %in% c('computer / hardware / software', 'science / tech / engineering'). Observations with
+---
+- ID: 42825
+
+Name: speeddating
+
+Tags: 
+
+
+
+Features: has_null, wave, gender, age, age_o, d_age, d_d_age, race, race_o, samerace, importance_same_race, importance_same_religion, d_importance_same_race, d_importance_same_religion, field, pref_o_attractive, pref_o_sincere, pref_o_intelligence, pref_o_funny, pref_o_ambitious, pref_o_shared_interests, d_pref_o_attractive, d_pref_o_sincere, d_pref_o_intelligence, d_pref_o_funny, d_pref_o_ambitious, d_pref_o_shared_interests, attractive_o, sinsere_o, intelligence_o, funny_o, ambitous_o, shared_interests_o, d_attractive_o, d_sinsere_o, d_intelligence_o, d_funny_o, d_ambitous_o, d_shared_interests_o, attractive_important, sincere_important, intellicence_important, funny_important, ambtition_important, shared_interests_important, d_attractive_important, d_sincere_important, d_intellicence_important, d_funny_
+---
+- ID: 41440
+
+Name: okcupid-stem
+
+Tags: 
+
+User profile data for San Francisco OkCupid users published in [Kim, A. Y., & Escobedo-Land, A. (2015). OKCupid data for introductory statistics and data science courses. Journal of Statistics Education, 23(2).]. The curated dataset was downloaded from [https://github.com/rudeboybert/JSE_OkCupid]. The original dataset was created with the use of a python script that pulled the data from public profiles on www.okcupid.com on 06/30/2012. It includes people (n = 59946) within a 25 mile radius of San Francisco, who were online in the last year (06/30/2011), with at least one profile picture. Permission to use this data was obtained by the author of the original paper from OkCupid president and co-founder Christian Rudder under the condition that the dataset remains public. As target, the variable 'job' was collapsed into three categories: 'stem', 'non_stem', and 'student'. STEM jobs were defined as 'job' %in% c('computer / hardware / software', 'science / tech / engineering'). Observations with
+---
+- ID: 45067
+
+Name: okcupid_stem
+
+Tags: 
+
+User profile data for San Francisco OkCupid users published in [Kim, A. Y., & Escobedo-Land, A. (2015). OKCupid data for introductory statistics and data science courses. Journal of Statistics Education, 23(2).]. The curated dataset was downloaded from [https://github.com/rudeboybert/JSE_OkCupid]. The original dataset was created with the use of a python script that pulled the data from public profiles on www.okcupid.com on 06/30/2012. It includes people (n = 59946) within a 25 mile radius of San Francisco, who were online in the last year (06/30/2011), with at least one profile picture. Permission to use this data was obtained by the author of the original paper from OkCupid president and co-founder Christian Rudder under the condition that the dataset remains public. As target, the variable 'job' was collapsed into three categories: 'stem', 'non_stem', and 'student'. STEM jobs were defined as 'job' %in% c('computer / hardware / software', 'science / tech / engineering'). Observations with
+---
+
+The topic is described by the following keywords: partner, mental, okcupid, health, employer, your, you, funny, ambition, do, job, night, online, sincerity, attractiveness, interests, how, rate, jobs, francisco, lastonline, yourself, stem, dating, event, san, essay0, essay9, coworkers, issue
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43610, 43664, 42164, 40536, 42734, 42825, 41440, 45067 !

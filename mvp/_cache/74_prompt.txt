@@ -1,0 +1,353 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43545
+
+Name: Adoptable-Dogs
+
+Tags: 
+
+Context
+This dataset was created when I practiced webscraping.
+Content
+The data is a compilation of information on dogs who were available for adoption on December 12, 2019 in the Hungarian Database of Homeless Pets. In total, there were 2,937 dogs in the database. It contains information on dogs' names, breed, color, age, sex, the date they were found, and some characteristics of their personalities.
+Inspiration
+I thought it would be interesting to have a dataset that looks at adoptable dogs' characteristics. It is not really well-suited for prediction, but could be a good practice dataset for data visualization and working with categorical data.
+
+Features: ID, name, age, sex, breed, date_found, adoptable_from, posted, color, coat, size, neutered, housebroken, likes_people, likes_children, get_along_males, get_along_females, get_along_cats, keep_in
+---
+- ID: 285
+
+Name: flags
+
+Tags: study_1, study_123, study_7, study_88, uci
+
+**Author**: Richard S. Forsyth  
+**Source**: Unknown - 5/15/1990  
+**Please cite**:   
+
+ARFF version of UCI dataset 'flags'.
+
+Creators: Collected primarily from the "Collins Gem Guide to Flags": Collins Publishers (1986). Donor: Richard S. Forsyth. Date 5/15/1990
+
+This data file contains details of various nations and their flags.
+With this data you can try things like predicting the religion of a country from its size and the colours in its flag. 10 attributes are numeric-valued.  The remainder are either Boolean-  or nominal-valued.
+
+Number of Instances: 194. Number of attributes: 30 (overall). Missing values: none
+
+Attribute Information:
+1. name Name of the country concerned
+2. landmass 1=N.America, 2=S.America, 3=Europe, 4=Africa, 4=Asia, 6=Oceania
+3. zone Geographic quadrant, based on Greenwich and the Equator 1=NE
+---
+- ID: 26
+
+Name: nursery
+
+Tags: study_1, study_37, study_41, study_7, study_70, uci
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+1. Title: Nursery Database
+ 
+ 2. Sources:
+    (a) Creator: Vladislav Rajkovic et al. (13 experts)
+    (b) Donors: Marko Bohanec   (marko.bohanec@ijs.si)
+                Blaz Zupan      (blaz.zupan@ijs.si)
+    (c) Date: June, 1997
+ 
+ 3. Past Usage:
+ 
+    The hierarchical decision model, from which this dataset is
+    derived, was first presented in 
+ 
+    M. Olave, V. Rajkovic, M. Bohanec: An application for admission in
+    public school systems. In (I. Th. M. Snellen and W. B. H. J. van de
+    Donk and J.-P. Baquiast, editors) Expert Systems in Public
+    Administration, pages 145-160. Elsevier Science Publishers (North
+    Holland)}, 1989.
+ 
+    Within machine
+---
+- ID: 46336
+
+Name: hayes-roth_clean
+
+Tags: 
+
+**Author**: Barbara and Frederick Hayes-Roth  
+  
+**Source**: [original](https://archive.ics.uci.edu/ml/datasets/Hayes-Roth) -   
+**Please cite**:   
+
+Hayes-Roth Database
+
+This is a merged version of the separate train and test set which are usually distributed. On OpenML this train-test split can be found as one of the possible tasks.
+
+Source Information: 
+(a) Creators: Barbara and Frederick Hayes-Roth 
+(b) Donor: David W. Aha (aha@ics.uci.edu) (714) 856-8779  
+(c) Date: March, 1989  
+
+Attribute Information: 
+-- 1. name: distinct for each instance and represented numerically 
+-- 2. hobby: nominal values ranging between 1 and 3 
+-- 3. age: nominal values ranging between 1 and 4 
+-- 4. educational level: nominal values ranging between 1 and 4 
+-- 5. marital status: nominal values ranging between 1 and 4 
+-- 6. class: nominal value between 1 and 3  
+
+Detailed description of the
+---
+- ID: 11
+
+Name: balance-scale
+
+Tags: artificial, OpenML-CC18, OpenML100, shark-tutorial-demo-tag, study_1, study_123, study_135, study_14, study_34, study_37, study_41, study_50, study_52, study_7, study_70, study_98, study_99, uci
+
+**Author**: Siegler, R. S. (donated by Tim Hume)  
+**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/balance+scale) - 1994  
+**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)   
+
+**Balance Scale Weight & Distance Database**  
+This data set was generated to model psychological experimental results.  Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. The correct way to find the class is the greater of (left-distance * left-weight) and (right-distance * right-weight). If they are equal, it is balanced
+---
+- ID: 43938
+
+Name: nursery
+
+Tags: 
+
+Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools.
+
+Features: parents, has_nurs, form, children, housing, finance, social, health, class
+
+Scraped Data: Dataset Information Additional Information Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was used during several years in 1980's when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family. The model was developed within expert system shell for decision making DEX (M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.).
+
+The hierarchical model ranks nursery-school applications according to the following concept structure:
+
+ NURSERY            Evaluation of applications for nursery schools
+ . EMPLOY           Employment of parents and child's nursery
+ . . parents        Parents' occupation
+ . . has_nurs       Child's nursery
+ . STRUCT_FINAN     Family
+---
+- ID: 43923
+
+Name: mushroom
+
+Tags: 
+
+Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools.
+
+Features: parents, has_nurs, form, children, housing, finance, social, health, class
+
+Scraped Data: Dataset Information Additional Information Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools. It was used during several years in 1980's when there was excessive enrollment to these schools in Ljubljana, Slovenia, and the rejected applications frequently needed an objective explanation. The final decision depended on three subproblems: occupation of parents and child's nursery, family structure and financial standing, and social and health picture of the family. The model was developed within expert system shell for decision making DEX (M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.).
+
+The hierarchical model ranks nursery-school applications according to the following concept structure:
+
+ NURSERY            Evaluation of applications for nursery schools
+ . EMPLOY           Employment of parents and child's nursery
+ . . parents        Parents' occupation
+ . . has_nurs       Child's nursery
+ . STRUCT_FINAN     Family
+---
+- ID: 43515
+
+Name: Egg-Producing-Chickens
+
+Tags: 
+
+Context
+This data set could be used without permission for purposes of enhancing machine learning and data science. It can easily be adapted for classification, regression and clustering.  At a practical level, such machine learning could be applied to determine which chickens are due for curling or approximating the number of eggs to be harvested 
+Content
+GallusBreed - breed of chicken such as Buff Orpington chicken
+Day - an integer indicating the day on which an observation was made
+Age - age of the chicken in weeks
+GallusWeight - weight of the chicken in grams
+GallusEggColor - color of the eggs 
+GallusEggWeight - weight of the eggs in grams 
+AmountOfFeed - amount of feed in grams the chicken consumed per day
+EggsPerDay - number of eggs a chicken laid on a particular day 
+GallusCombType - comb type of a particular chicken
+SunLightExposure - number of hours a chicken is exposed to natural light (sunlight) in a day
+GallusClass - chicken classes as classified by international Poultry associations
+GallusLegShanksColor - color of the legs/feet and shanks on them
+GallusBeak
+---
+- ID: 329
+
+Name: hayes-roth
+
+Tags: study_1, study_50, study_52, study_7, study_88, uci
+
+**Author**: Barbara and Frederick Hayes-Roth  
+  
+**Source**: [original](https://archive.ics.uci.edu/ml/datasets/Hayes-Roth) -   
+**Please cite**:   
+
+Hayes-Roth Database
+
+This is a merged version of the separate train and test set which are usually distributed. On OpenML this train-test split can be found as one of the possible tasks.
+
+Source Information: 
+(a) Creators: Barbara and Frederick Hayes-Roth 
+(b) Donor: David W. Aha (aha@ics.uci.edu) (714) 856-8779  
+(c) Date: March, 1989  
+
+Attribute Information: 
+-- 1. name: distinct for each instance and represented numerically 
+-- 2. hobby: nominal values ranging between 1 and 3 
+-- 3. age: nominal values ranging between 1 and 4 
+-- 4. educational level: nominal values ranging between 1 and 4 
+-- 5. marital status: nominal values ranging between 1 and 4
+---
+- ID: 62
+
+Name: zoo
+
+Tags: study_1, study_123, study_7, study_76, study_86, study_88, uci
+
+**Author**: Richard S. Forsyth   
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Zoo) - 5/15/1990   
+**Please cite**:  
+
+**Zoo database**  
+A simple database containing 17 Boolean-valued attributes describing animals.  The "type" attribute appears to be the class attribute. 
+
+Notes:  
+* I find it unusual that there are 2 instances of "frog" and one of "girl"!
+* feature 'animal' is an identifier (though not unique) and should be ignored when modeling
+
+Features: animal, hair, feathers, eggs, milk, airborne, aquatic, predator, toothed, backbone, breathes, venomous, fins, legs, tail, domestic, catsize, type
+
+Scraped Data: Dataset Information Additional Information A simple database containing 17 Boolean-valued attributes.  The "type" attribute appears to be the class attribute.  Here is a breakdown of which animals are in which type: (I find it unusual that there
+---
+
+The topic is described by the following keywords: nursery, parents, hasnurs, structure, social, children, flag, childs, health, chicken, boolean, schools, housing, hierarchical, ce, hobby, ranging, sochealth, structfinan, applications, concept, decision, convenient, employ, standing, colours, hayesroth, otherwise, model, picture
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43545, 285, 26, 46336, 11, 43938, 43923, 43515, 329, 62 !

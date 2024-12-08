@@ -1,0 +1,301 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42468
+
+Name: hls4ml_lhc_jets_hlf
+
+Tags: 
+
+Identify jets of particles from the LHC, created for the study of ultra low latency inference with hls4ml.
+Use 16 high level features to identify the 5 jet classes: quark (q), gluon (g), W boson (w), Z boson (z), or top quark (t).
+
+
+The hls4ml paper: https://iopscience.iop.org/article/10.1088/1748-0221/13/07/P07027
+The dataset DOI: https://doi.org/10.5281/zenodo.3602260
+
+Features: zlogz, c1_b0_mmdt, c1_b1_mmdt, c1_b2_mmdt, c2_b1_mmdt, c2_b2_mmdt, d2_b1_mmdt, d2_b2_mmdt, d2_a1_b1_mmdt, d2_a1_b2_mmdt, m2_b1_mmdt, m2_b2_mmdt, n2_b1_mmdt, n2_b2_m
+---
+- ID: 45664
+
+Name: subset_higgs
+
+Tags: 
+
+See [https://github.com/slds-lmu/paper_2023_ci_for_ge](https://github.com/slds-lmu/paper_2023_ci_for_ge) for a description.
+
+Features: lepton pT, lepton eta, lepton phi, missing energy magnitude, missing energy phi, jet 1 pt, jet 1 eta, jet 1 phi, jet 1 b-tag, jet 2 pt, jet 2 eta, jet 2 phi, jet 2 b-tag, jet 3 pt, jet 3 eta, jet 3 phi, jet 3 b-tag, jet 4 pt, jet 4 eta, jet 4 phi, jet 4 b-tag, m_jj, m_jjj, m_lv, m_jlv, m_bb, m_wbb, m_wwbb, Target
+---
+- ID: 43975
+
+Name: Higgs
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark. Original description: 
+ 
+This is a smaller version of the original dataset, containing 1M rows. 
+**Author**: Daniel Whiteson, University of California Irvine  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/HIGGS)  
+**Please cite**: Baldi, P., P. Sadowski, and D. Whiteson. Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications 5 (July 2, 2014).  
+
+**Higgs Boson detection data**. The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop
+---
+- ID: 45570
+
+Name: Higgs
+
+Tags: 
+
+This is a classification problem to distinguish between a signal process which produces Higgs bosons and a background process which does not.
+    
+## Information
+
+The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. Benchmark results using Bayesian Decision Trees from a standard physics package and 5-layer neural networks are presented in the original paper. The last 500,000 examples are used as a test set.
+
+## Attribute Information    
+
+The first column is the class label (1 for signal, 0 for background), followed by the 28 features (21 low-level features then 7 high-level features): lepton  pT, lepton  eta, lepton  phi, missing energy magnitude, missing energy phi, jet 1 pt, jet 1 eta, jet 1 phi, jet 1 b-tag, jet 
+---
+- ID: 44077
+
+Name: Higgs
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark. Original description: 
+ 
+This is a smaller version of the original dataset, containing 1M rows. 
+**Author**: Daniel Whiteson, University of California Irvine  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/HIGGS)  
+**Please cite**: Baldi, P., P. Sadowski, and D. Whiteson. Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications 5 (July 2, 2014).  
+
+**Higgs Boson detection data**. The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually
+---
+- ID: 43534
+
+Name: Production-cross-sections-of-Inert-Doublet-Model
+
+Tags: 
+
+Context
+'Learning the production cross-sections of the Inert Doublet Model'
+
+Cite as  
+Humberto Reyes-Gonzlez, Andre Lessa,  Sydney Otten. (2020). 'Learning the production cross sections of the Inert Doublet Model' training data set. [Data set]. Zenodo. http://doi.org/10.5281/zenodo.3689678
+Content
+Pheno AI training dataset used in the ''Learning the production cross-sections of the Inert Doublet Model'' subproject, made of 50000 samples with 
+5 input values: 
+
+MH0
+MA0
+MHC 
+lam2
+lamL 
+
+and 
+8 target values 
+
+xsec353513TeV
+xsec363613TeV
+xsec373713TeV
+xsec353713TeV
+xsec363713TeV
+xsec373513TeV
+xsec373613TeV
+xsec353613TeV 
+
+from a parameter space of the Inert Doublet Model chosen as: 50 MH0, MA0, MHC3000GeV; 
+---
+- ID: 43429
+
+Name: CERN-Electron-Collision-Data
+
+Tags: 
+
+Context
+This dataset contains 100k dielectron events in the invariant mass range 2-110 GeV for use in outreach and education. These data were selected for use in education and outreach and contain a subset of the total event information. The selection criteria may be different from that used in CMS physics results.
+
+Content
+1) Run: The run number of the event.
+2) Event: The event number.
+3, 11) E1, E2: The total energy of the electron (GeV) for electrons 1 and 2.
+4, 5, 6, 12, 13, 14) px1,py1,pz1,px2,py2,pz2: The components of the momemtum of the electron 1 and 2 (GeV).
+7, 15) pt1, pt2: The transverse momentum of the electron 1 and 2 (GeV).
+8, 16) eta1, eta2: The pseudorapidity of the electron 1 and 2.
+9, 17) phi1, phi2: The phi angle of the electron 1
+---
+- ID: 4532
+
+Name: higgs
+
+Tags: 
+
+**Author**: Daniel Whiteson daniel'@'uci.edu", Assistant Professor, Physics, Univ. of California Irvine  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/HIGGS)  
+**Please cite**: Baldi, P., P. Sadowski, and D. Whiteson. Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications 5 (July 2, 2014).  
+
+Data Set Information:
+
+The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. Benchmark results using Bayesian Decision Trees from a standard physics package and 5-layer neural networks are presented in the original paper. The last 500,000 examples are used as a test set.
+
+
+Attribute Information:
+
+The first column is the class label (1
+---
+- ID: 42769
+
+Name: Higgs
+
+Tags: 
+
+This is a smaller version of the original dataset, containing 1M rows. 
+**Author**: Daniel Whiteson, University of California Irvine  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/HIGGS)  
+**Please cite**: Baldi, P., P. Sadowski, and D. Whiteson. Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications 5 (July 2, 2014).  
+
+**Higgs Boson detection data**. The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. The last 500,000 examples are used as a test set.
+
+**Note: This is the UCI Higgs dataset, same as version 1, but it fixes the definition of the class attribute
+---
+- ID: 23512
+
+Name: higgs
+
+Tags: artificial, derived, mf_less_than_80, OpenML100, physics, study_123, study_218, uci
+
+**Author**: Daniel Whiteson, University of California Irvine  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/HIGGS)  
+**Please cite**: Baldi, P., P. Sadowski, and D. Whiteson. Searching for Exotic Particles in High-energy Physics with Deep Learning. Nature Communications 5 (July 2, 2014).  
+
+**Higgs Boson detection data**. The data has been produced using Monte Carlo simulations. The first 21 features (columns 2-22) are kinematic properties measured by the particle detectors in the accelerator. The last seven features are functions of the first 21 features; these are high-level features derived by physicists to help discriminate between the two classes. There is an interest in using deep learning methods to obviate the need for physicists to manually develop such features. The last 500,000 examples are used as a test set.
+
+**Note: This is the UCI Higgs dataset, same as version 1,
+---
+
+The topic is described by the following keywords: jet, phi, pt, eta, btag, lepton, physicists, highlevel, whiteson, higgs, physics, mwwbb, mlv, mjlv, mjjj, mwbb, mjj, mbb, deep, kinematic, baldi, sadowski, exotic, highenergy, communications, energy, 21, particles, obviate, accelerator
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42468, 45664, 43975, 45570, 44077, 43534, 43429, 4532, 42769, 23512 !

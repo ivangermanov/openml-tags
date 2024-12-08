@@ -1,0 +1,336 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43585
+
+Name: My-Clash-Royale-Ladder-Battles
+
+Tags: 
+
+Clash Royale Ladder Battles dataset
+I expect to update this dataset daily
+I encourage you to make an EDA or even train a model to predict if I win or lose!
+Notes:
+
+"op" means opponent
+my/optroops, my/opbuildings, my/opspells, my/opcommons, my/oprares, my/opepics, my/op_legendaries: Number of cards of that type. 
+my/opnameof_card: Level of that card. If 0 then that card wasn't used in that battle.
+
+This is my second Clash Royale account and I don't play 2v2 matches, 1v1 ladder matches only.
+
+Features: my_result, my_score, points, opponent_score, my_trophies, opponent_trophies, i_have_clan, opponent_has_clan, match_type, my_deck_elixir, op_deck_elixir, my_troops, my_buildings, my_spells, op_troops, op_buildings, op_spells, my_commons, my_rares, my_epics, my_legendaries, op_commons, op_rares
+---
+- ID: 43615
+
+Name: Esports-matches-in-2020-pre-worlds
+
+Tags: 
+
+Context
+All credit of this database goes to Tim Sevenhuysen of OraclesElixir.com. Im just uploading it here because I want to see what you guys do with this dataset before Worlds! Im super hyped! 
+Teams
+The qualified teams are: ["G2 Esports", "Fnatic", "Rogue", "MAD Lions",
+                "Team SoloMid", "FlyQuest", "Team Liquid", "Top Esports",
+                "JD Gaming", "Suning", "LGD Gaming", "DAMWON Gaming",
+                "DRX", "Gen.G", "Machi Esports", "PSG Talon", "INTZ",
+                "Unicorns Of Love.CIS", "V3 Esports", "Rainbow7", 
+                "Legacy Esports", "Papara SuperMassive"]
+Go G2.
+Content
+All pro matches from regular season and playoffs of all pro teams (13 sept. 2020)
+Acknowledgements
+Again, Tim Sevenhuysen of OraclesElixir.com for creating and updating this dataset.
+
+Features: gameid, datacompleteness, url, league, year,
+---
+- ID: 43790
+
+Name: TEAMFIGHT-TACTICS-FATES-Challenger-EUW-Rank-Games
+
+Tags: 
+
+Context
+TFT
+TFT is an 8-player free-for-all drafting tactics game in which the player recruits powerful champions, deploys them, and battles to become the last player standing. 
+When acquired, a champion starts as a 1-Star. Three of the same 1-Star champion can be combined to create a stronger 2-Star champion. Three of the same 2-star champions can be combined to create an even stronger 3-Star champion. 
+Champions have one origin and one class, with a few exceptions. Satisfying the origin or class conditions grants bonus effects to the entire team or to the champions of the respective origin or class. 
+A champion can hold up to 3 items at a time.
+Set 4
+In Set 4: Fates, Chosen champions occasionally appear in a player's shop. Player can have at most one Chosen champion in the game. 
+Chosen champions come with some extra power:
+
+One of their traits (origin or class) is "Chosen" and counts as 2 of that trait.        
+They gain 200 bonus health.
+They also gain a unique
+---
+- ID: 43635
+
+Name: League-of-Legends-Diamond-Games-(First-15-Minutes)
+
+Tags: 
+
+Context
+Inspired by the following dataset , we have a collection of data on the first 15 minutes of about 50000 Diamond ranked League of Legends matches scraped using Riot's API. 
+Can you predict their outcomes?
+Content
+Data
+All matches were collected with the following parameters:
+Season: 13
+Server: NA1
+Rank: Diamond
+Tier: I,II,III,IV
+Acknowledgements
+Thank you to Riot Games for allowing access to their API.
+Inspiration
+When working on the linked dataset above, we see classification accuracy peak around 70. Given that we have 5 times the amount of data, I wanted to explore how this would improve our results.
+
+Features: Unnamed:_0, matchId, blue_win, blueGold, blueMinionsKilled, blueJungleMinionsKilled, blueAvgLevel, redGold, redMinionsKilled, redJungleMinionsKilled, redAvgLevel, blueChampKills, blueHeraldKills, blueDragonKills, blueTowersDestroyed, redChampKills, redHeraldKills, redDragonKills, redTowersDestroyed
+---
+- ID: 43810
+
+Name: MPII-Human-Pose-Data
+
+Tags: 
+
+Source  Acknowledgements:
+Data was collected from MPII Human Pose and transformed into a '.csv' file.
+Source License:
+Copyright (c) 2015, Max Planck Institute for Informatics 
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+---
+- ID: 43430
+
+Name: CSGO-Round-Winner-Classification
+
+Tags: 
+
+Context
+CS:GO is a tactical shooter, where two teams (CT and Terrorist) play for a best of 30 rounds, with each round being 1 minute and 55 seconds. There are 5 players on each team (10 in total) and the first team to reach 16 rounds wins the game. At the start, one team plays as CT and the other as Terrorist. After 15 rounds played, the teams swap side. There are 7 different maps a game can be played on. You win a round as Terrorist by either planting the bomb and making sure it explodes, or by eliminating the other team. You win a round as CT by either eliminating the other team, or by disarming the bomb, should it have been planted.
+Content
+The dataset was originally published by Skybox as part of their CS:GO AI Challenge, running from Spring to Fall 2020. The data set consists of 700 demos from high level tournament play in 2019 and 2020. Warmup rounds and restarts have been filtered, and for the remaining live rounds a round snapshot have been recorded every 20 seconds
+---
+- ID: 43842
+
+Name: League-of-Legend-High-Elo-Team-Comp--Game-Length
+
+Tags: 
+
+Context
+I was exploring League of Legends datasets to play around but since Riot allows limited calls to their API, I've collected the data from OP.GG. 
+Few goals of mine were to find out the best team compositions and to predict Victory/Loss given a team comp and game length. The most recent games on the dataset are on 2020 October 16th. 
+Content
+The dataset consists of ranked matches from Korea(WWW), North America(NA), Eastern Europe(EUNE), and Western Europe(EUW) servers. It has which team won the match, the total time of the match,  blue team composition and red team composition. Note that only the high elo games were added this includes Challenger, Grand Master, Master and sometimes even High Diamonds. Note that there are 151 total unique champions with 'Samira' as the latest addition.
+
+You may find my blog post useful. (On quick data cleaning and analysis) https://leejaeka.github.io/jaekangai/fastpages/jupyter/2020/10/28/lolpredict.html
+
+Features: game_length, mmr, result, server
+---
+- ID: 43577
+
+Name: Overwatch-competitions-data-7-seasons
+
+Tags: 
+
+Overwatch is a team-based multiplayer first-person shooter video game developed and published by Blizzard Entertainment, which released on May 24, 2016 for PlayStation 4, Xbox One, and Windows. Described as a "hero shooter", Overwatch assigns players into two teams of six, with each player selecting from a roster of nearly 30 characters, known as "heroes", each with a unique style of play whose roles are divided into three general categories that fit their role: Offense, Defense, Tank, and Support. 
+Players on a team work together to secure and defend control points on a map or escort a payload across the map in a limited amount of time. 
+I discovered this dataset on the Overwatch Subreddit here: https://www.reddit.com/r/Overwatch/comments/7o8hmg/my_friend_has_recorded_every_game_hes_played/
+and there is sort of same dataset here:
+https://www.kaggle.com/mylesoneill/overwatch-game-records/home
+Data was messy, so I try to clean it and make better and easier for visualising and analysing.
+Columns as:
+time, 
+---
+- ID: 43496
+
+Name: League-of-Legends-SOLO-Q-Ranked-Games
+
+Tags: 
+
+Context
+League of Legends is a MOBA (multiplayer online battle arena) where 2 teams (blue and red) face off. There are 3 lanes, a jungle, and 5 roles. The goal is to take down the enemy Nexus to win the game.
+Content
+This dataset contains stats of approx. 25000 ranked games (SOLO QUEUE) from a Platinium ELO.
+Each game is unique. The gameId can help you to fetch more attributes from the Riot API.
+Each game has features from different time frames from 10min to the end of the game. For example, game1 10min, game1 12min, game1 14min etc.
+In total there are +240000 game frames.  
+There are 55 features collected for the BLUE team  . This includes kills, deaths, gold, experience, level It's up to you to do some feature engineering to get more insights.
+The column hasWon is the target value if you're doing classification to predict the game outcome.
+Otherwise you can use the gameDuration attribute if you wanna predict the game duration.
+Attributes starting with is*
+---
+- ID: 43793
+
+Name: League-of-Legends---(LCL)-2019
+
+Tags: 
+
+Context
+As a russian league of legends player, i love LCL so much and i wanted to make a dataset linked with data from this league.
+Content
+Match data which documents all the regular season games of the split (Including tiebreakers, excluding playoffs, spring/summer splits)
+Sources
+Data collected from Gamepedia.
+
+Features: Unnamed:_0, Team1, Team2, Winner, UTC, Blue, Red, MVP
+---
+- ID: 45563
+
+Name: Dota2-Games-Results-Data-Set
+
+Tags: 
+
+Dota 2 is a popular computer game with two teams of 5 players. At the start of the game each player chooses a unique hero with different strengths and weaknesses.
+
+Source:
+
+stephen.tridgell '@' sydney.edu.au
+
+
+Data Set Information:
+
+Dota 2 is a popular computer game with two teams of 5 players. At the start of the game each player chooses a unique hero with different strengths and weaknesses. The dataset is reasonably sparse as only 10 of 113 possible heroes are chosen in a given game. All games were played in a space of 2 hours on the 13th of August, 2016
+
+The data was collected using: [Web Link]
+
+
+Attribute Information:
+
+Each row of the dataset is a single game with the following features (in the order in the vector):
+1. Team won the game (1 or -1)
+2. Cluster ID (related to location)
+3. Game mode (eg All Pick)
+4. Game type (eg. Ranked)
+5 - end: Each element is an indicator for a hero. Value of 1 indicates that a player from team '1' played
+---
+
+The topic is described by the following keywords: team, terrorist, game, counterterrorist, players, champion, hero, champions, round, teams, csgo, esports, matches, legends, win, copyright, league, gameid, trait, shooter, bomb, riot, overwatch, game1, timeleft, skybox, armor, kills, gamelength, play
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43585, 43615, 43790, 43635, 43810, 43430, 43842, 43577, 43496, 43793, 45563 !

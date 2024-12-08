@@ -1,0 +1,276 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 44042
+
+Name: black_friday
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark,  
+                                  transformed in the same way. This dataset belongs to the "regression on categorical and
+                                  numerical features" benchmark. Original description: 
+ 
+Customer purchases on Black Friday
+
+Features: Gender, Age, Occupation, City_Category, Stay_In_Current_City_Years, Marital_Status, Product_Category_1, Product_Category_2, Product_Category_3, Purchase
+---
+- ID: 43660
+
+Name: Lisbon-House-Prices
+
+Tags: 
+
+Context
+Explore the regression algorithm using the prices of Lisbon's houses. This dataset contains a total of 246 records. 
+Content
+The attributes of this dataset are:
+
+Id: is a unique identifying number assigned to each house.
+Condition: The house condition  (i.e., New, Used, As New, For Refurbishment).
+PropertyType: Property type (i.e., Home, Single habitation) 
+PropertySubType: Property Sub Type (i.e., Apartment, duplex, etc.)  
+Bedrooms: Number of Bedrooms
+Bathrooms: Number of Bathrooms
+AreaNet: Net area of the house
+AreaGross: Gross area of the house
+Parking: Number of parking places
+Latitude: Geographical Latitude
+Longitude: Geographical Longitude
+Country: Country where the house is located
+District: District where the house is located
+Municipality: Municipality where the house is located
+Parish: Parish where the house is located
+Price Sq. M.: Price per m in the location of the house
+Price: This is our training variable and target. It is the home price.
+
+Features: Id, Condition, PropertyType, PropertySubType, Bedrooms, Bathrooms, AreaNet,
+---
+- ID: 44051
+
+Name: house_sales
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark,  
+                                  transformed in the same way. This dataset belongs to the "regression on categorical and
+                                  numerical features" benchmark. Original description: 
+ 
+Date converted to year/mo/day numerics.This dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015.
+
+It contains 19 house features plus the price and the id columns, along with 21613 observations.
+It's a great dataset for evaluating simple regression models.
+
+Features: bedrooms, bathrooms, sqft_living, sqft_lot, waterfront, grade, sqft_above, sqft_basement, yr_built, yr_renovated, lat, long, sqft_living15, sqft_lot15, date_year, date_month, date_day, price
+---
+- ID: 44019
+
+Name: house_sales
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "regression on numerical features" benchmark. Original description: 
+ 
+Date converted to year/mo/day numerics.This dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015.
+
+It contains 19 house features plus the price and the id columns, along with 21613 observations.
+It's a great dataset for evaluating simple regression models.
+
+Features: bedrooms, bathrooms, sqft_living, sqft_lot, grade, sqft_above, sqft_basement, yr_built, yr_renovated, lat, long, sqft_living15, sqft_lot15, date_month, date_day, price
+---
+- ID: 42496
+
+Name: seattlecrime6
+
+Tags: 
+
+**Author**: City of Seattle
+**Source**: https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5 - 24-06-2019
+**Please cite**:   
+
+This data represents crime reported to the Seattle Police Department (SPD). Each row contains the record of a unique event where at least one criminal offense was reported by a member of the community or detected by an officer in the field. This data is the same data used in meetings such as SeaStat (https://www.seattle.gov/police/information-and-data/seastat) for strategic planning, accountability and performance management. 
+
+For more information see:
+https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5 For this version, the task was downsampled to 10 percent. Compute a new target Reported_Time. Compute new date features, ignore some features and encode as features as factor variables.
+
+Features: Reported_Time, Primary_Offense_Description, Precinct, Sector, Beat, Neighborhood, Occurred_hour, Occurred_min
+---
+- ID: 45043
+
+Name: seattlecrime6
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "regression on both numerical and categorical features" benchmark. 
+ 
+  Original link: https://openml.org/d/42496 
+ 
+ Original description: 
+ 
+**Author**: City of Seattle
+**Source**: https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5 - 24-06-2019
+**Please cite**:   
+
+This data represents crime reported to the Seattle Police Department (SPD). Each row contains the record of a unique event where at least one criminal offense was reported by a member of the community or detected by an officer in the field. This data is the same data used in meetings such as SeaStat (https://www.seattle.gov/police/information-and-data/seastat) for strategic planning, accountability and performance management. 
+
+For more information see:
+https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5 For this version, the task was downsampled to 10 percent. Compute a
+---
+- ID: 41960
+
+Name: seattlecrime6
+
+Tags: 
+
+**Author**: City of Seattle
+**Source**: https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5 - 24-06-2019
+**Please cite**:   
+
+This data represents crime reported to the Seattle Police Department (SPD). Each row contains the record of a unique event where at least one criminal offense was reported by a member of the community or detected by an officer in the field. This data is the same data used in meetings such as SeaStat (https://www.seattle.gov/police/information-and-data/seastat) for strategic planning, accountability and performance management. 
+
+For more information see:
+https://data.seattle.gov/Public-Safety/Crime-Data/4fs7-3vj5
+
+Features: Report_Number, Occurred_Time, Reported_Time, Crime_Subcategory, Primary_Offense_Description, Precinct, Sector, Beat, Neighborhood
+---
+- ID: 44002
+
+Name: house_sales
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "classification on numerical features" benchmark. Original description: 
+ 
+Date converted to year/mo/day numerics.This dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015.
+
+It contains 19 house features plus the price and the id columns, along with 21613 observations.
+It's a great dataset for evaluating simple regression models.
+
+Features: bedrooms, bathrooms, sqft_living, sqft_lot, grade, sqft_above, sqft_basement, yr_built, yr_renovated, lat, long, sqft_living15, sqft_lot15, date_month, date_day, price
+---
+
+The topic is described by the following keywords: house, seattle, httpsdataseattlegovpublicsafetycrimedata4fs73vj5, reportedtime, bathrooms, bedrooms, accountability, httpswwwseattlegovpoliceinformationanddataseastat, 24062019, seattlecrime6, precinct, seastat, parish, benchmark, yearmoday, criminal, numericsthis, offense, housesales, reported, spd, dateday, datemonth, strategic, 21613, municipality, compute, yrbuilt, yrrenovated, sqftbasement
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 44042, 43660, 44051, 44019, 42496, 45043, 41960, 44002 !

@@ -1,0 +1,251 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 46430
+
+Name: LT-Vehicle-Loan-Default-Prediction
+
+Tags: 
+
+Dataset is uploaded from kaggle, see citation for the link.
+
+Features: uniqueid, disbursed_amount, asset_cost, ltv, branch_id, supplier_id, manufacturer_id, current_pincode_id, date.of.birth, employment.type, disbursaldate, state_id, employee_code_id, mobileno_avl_flag, aadhar_flag, pan_flag, voterid_flag, driving_flag, passport_flag, perform_cns.score, perform_cns.score.description, pri.no.of.accts, pri.active.accts, pri.overdue.accts, pri.current.balance, pri.sanctioned.amount, pri.disbursed.amount, sec.no.of.accts, sec.active.accts, sec.overdue.accts, sec.current.balance, sec.sanctioned.amount, sec.disbursed.amount, primary.instal.amt, sec.instal.amt, new.accts.in.last.six.months, delinquent.accts.in.last.six.months, average.acct.age, credit.history.length, no.of_inquiries, loan_default
+---
+- ID: 45567
+
+Name: hcdr_main
+
+Tags: 
+
+Home Credit Default Risk Main Table
+
+**WARNING:** This is only the main table of the competition' training dataset! Please do not use it alone (but rather use all data available on Kaggle) unless you aim to reproduce the results of:
+
+> Huang, X., Khetan, A., Cvitkovic, M., & Karnin, Z. (2020). 
+> Tabtransformer: Tabular data modeling using contextual embeddings. 
+> arXiv preprint arXiv:2012.06678v1.
+
+Check the [Kaggle competition website](https://www.kaggle.com/competitions/home-credit-default-risk) for further information.
+
+Features: SK_ID_CURR, TARGET, NAME_CONTRACT_TYPE, CODE_GENDER, FLAG_OWN_CAR, FLAG_OWN_REALTY, CNT_CHILDREN, AMT_INCOME_TOTAL, AMT_CREDIT, AMT_ANNUITY, AMT_GOODS_PRICE, NAME_TYPE_SUITE, NAME_INCOME_TYPE, NAME_EDUCATION_TYPE, NAME_FAMILY_STATUS, NAME_HOUSING_TYPE, REGION_POPULATION_RELATIVE, DAYS_BIRTH, DAYS_EMPLOYED, DAYS_REGISTRATION,
+---
+- ID: 43745
+
+Name: Delinquency-Telecom-Dataset
+
+Tags: 
+
+Context
+Delinquency is a condition that arises when an activity or situation does not occur at its scheduled (or expected) date i.e., it occurs later than expected.
+Content
+Many donors, experts, and microfinance institutions (MFI) have become convinced that using mobile financial services (MFS) is more convenient and efficient, and less costly, than the traditional high-touch model for delivering microfinance services. MFS becomes especially useful when targeting the unbanked poor living in remote areas. The implementation of MFS, though, has been uneven with both significant challenges and successes.
+Today, microfinance is widely accepted as a poverty-reduction tool, representing 70 billion in outstanding loans and a global outreach of 200 million clients.
+Data Description
+https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox2F43788582F8d6c62159a033854dc4ca79d2cfbf0942FCapture.PNG?generation=1589482946434860alt=media
+A Telecom collaborates with an MFI to provide micro-credit on mobile balances to be paid back in 5 days.
+---
+- ID: 45044
+
+Name: LoanDefaultPrediction
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark, transformed in the same way. This dataset belongs to the "regression on both numerical and categorical features" benchmark. 
+ 
+  Original link: https://openml.org/d/6331 
+ 
+ Original description: 
+ 
+Data from training set of the Kaggle Loan Default Prediction - Imperial College London challenge:
+https://www.kaggle.com/c/loan-default-prediction
+      
+This data corresponds to a set of financial transactions associated with individuals. The data has been standardized, de-trended, and anonymized. You are provided with over two hundred thousand observations and nearly 800 features.  Each observation is independent from the previous. 
+
+For each observation, it was recorded whether a default was triggered. In case of a default, the loss was measured. This quantity lies between 0 and 100. It has been normalised, considering that the notional of each transaction at inception is 100. For example, a loss of 60 means that only 40 is reimbursed. If the loan did not default, the loss was 0. You are asked to predict the losses for each observation
+---
+- ID: 6331
+
+Name: LoanDefaultPrediction
+
+Tags: 
+
+Data from training set of the Kaggle Loan Default Prediction - Imperial College London challenge:
+https://www.kaggle.com/c/loan-default-prediction
+      
+This data corresponds to a set of financial transactions associated with individuals. The data has been standardized, de-trended, and anonymized. You are provided with over two hundred thousand observations and nearly 800 features.  Each observation is independent from the previous. 
+
+For each observation, it was recorded whether a default was triggered. In case of a default, the loss was measured. This quantity lies between 0 and 100. It has been normalised, considering that the notional of each transaction at inception is 100. For example, a loss of 60 means that only 40 is reimbursed. If the loan did not default, the loss was 0. You are asked to predict the losses for each observation in the test set.
+
+Missing feature values have been kept as is, so that the competing teams can really use the maximum data available, implementing a strategy to fill the gaps if desired. Note that some variables may be categorical (e.g. f776 and f777).
+
+The competition sponsor has worked to remove time-dimensional
+---
+- ID: 44067
+
+Name: LoanDefaultPrediction
+
+Tags: 
+
+Dataset used in the tabular data benchmark https://github.com/LeoGrin/tabular-benchmark,  
+                                  transformed in the same way. This dataset belongs to the "regression on categorical and
+                                  numerical features" benchmark. Original description: 
+ 
+Data from training set of the Kaggle Loan Default Prediction - Imperial College London challenge:
+https://www.kaggle.com/c/loan-default-prediction
+      
+This data corresponds to a set of financial transactions associated with individuals. The data has been standardized, de-trended, and anonymized. You are provided with over two hundred thousand observations and nearly 800 features.  Each observation is independent from the previous. 
+
+For each observation, it was recorded whether a default was triggered. In case of a default, the loss was measured. This quantity lies between 0 and 100. It has been normalised, considering that the notional of each transaction at inception is 100. For example, a loss of 60 means that only 40 is reimbursed. If the loan did not default, the loss was 0. You are asked to predict the losses for each observation in the test set.
+
+Missing feature values have been kept as
+---
+- ID: 43743
+
+Name: TVS_Loan_Default
+
+Tags: 
+
+Personal Loan product is an unsecured loan therefore it is vital to assess the risk of the customers by checking their credit worthiness. This must be done to prevent loan defaults.
+The objective is to build a Risk model using the dataset which will assess the risk of a customer defaulting after cross-selling the Personal Loan.
+Column Descriptions:
+V1:  Customer ID
+V2:  If a customer has bounced in first EMI (1 : Bounced, 0 : Not bounced)
+V3:  Number of times bounced in recent 12 months
+V4:  Maximum MOB (Month of business with TVS Credit)
+V5:  Number of times bounced while repaying the loan
+V6:  EMI
+V7:  Loan Amount
+V8:  Tenure
+V9:  Dealer codes from where customer has purchased the Two wheeler
+V10:  Product code of Two wheeler (MC : Motorcycle , MO : Moped, SC : Scooter)
+V11:  No of advance EMI paid
+V12:  Rate of interest
+V13:  Gender (Male/Female)
+V14:  Employment type (HOUSEWIFE :
+---
+
+The topic is described by the following keywords: loan, default, loans, loss, bounced, observation, sanctioned, notional, unsecured, wheeler, timedimensionality, emi, reimbursed, f101, httpswwwkagglecomcloandefaultprediction, microfinance, mfs, loandefaultprediction, f777, f776, detrended, inception, months, imperial, fill, sponsor, lies, competing, kaggle, f100
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 46430, 45567, 43745, 45044, 6331, 44067, 43743 !

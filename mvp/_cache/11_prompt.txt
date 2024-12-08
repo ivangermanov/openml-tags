@@ -1,0 +1,404 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42223
+
+Name: dataset-autoHorse_fixed
+
+Tags: 
+
+Fixed dataset for autoHorse.csv I suggest...
+
+Features: attribute_0, symboling, wheel-base, length, width, height, curb-weight, num-of-cylinders, engine-size, compression-ratio, city-mpg, highway-mpg, make_alfa-romero, make_audi, make_bmw, make_chevrolet, make_dodge, make_honda, make_isuzu, make_jaguar, make_mazda, make_mercedes-benz, make_mercury, make_mitsubishi, make_nissan, make_peugot, make_plymouth, make_porsche, make_renault, make_saab, make_subaru, make_toyota, make_volkswagen, make_volvo, fuel-type_diesel, fuel-type_gas, aspiration_std, aspiration_turbo, body-style_convertible, body-style_hardtop, body-style_hatchback, body-style_sedan, body-style_wagon, drive-wheels_4wd, drive-wheels_fwd, drive-wheels_rwd, engine-location_front, engine-location_rear, engine-type_dohc, engine-type_l, engine-type_ohc,
+---
+- ID: 43921
+
+Name: car_evaluation
+
+Tags: 
+
+Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX, M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.). In this version duplicate rows are dropped
+
+Features: buying, maint, doors, persons, lug_boot, safety, class
+
+Scraped Data: Dataset Information Additional Information Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX, M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.). The model evaluates cars according to the following concept structure:
+
+CAR                      car acceptability
+. PRICE                  overall price
+. . buying               buying price
+. . maint                price of the maintenance
+. TECH                   technical characteristics
+. . COMFORT              comfort
+. . . doors              number of doors
+. . . persons            capacity in terms of persons to carry
+. . . lug_boot           the size of luggage boot
+. . safety               estimated safety of the car
+
+
+---
+- ID: 45070
+
+Name: kick
+
+Tags: 
+
+One of the biggest challenges of an auto dealership purchasing a used car at an auto auction is the risk of that the vehicle might have serious issues that prevent it from being sold to customers. The auto community calls these unfortunate purchases "kicks". Kicked cars often result when there are tampered odometers, mechanical issues the dealer is not able to address, issues with getting the vehicle title from the seller, or some other unforeseen problem. Kick cars can be very costly to dealers after transportation cost, throw-away repair work, and market losses in reselling the vehicle.Modelers who can figure out which cars have a higher risk of being kick can provide real value to dealerships trying to provide the best inventory selection possible to their customers.The challenge of this competition is to predict if the car purchased at the Auction is a Kick (bad buy).
+
+Features: PurchDate, VehYear, VehicleAge, VehOdo, MMRAcquisitionAuctionAveragePrice, MMRAcquisitionAuctionCleanPrice, MMRAcquisitionRetailAveragePrice, MMRAcquisitonRetailCleanPrice, MMRCurrentAuctionAveragePrice, MMRCurrentAuctionCleanPrice, MMRCurrentRetailAveragePrice, MMRCurrentRetailCleanPrice, Veh
+---
+- ID: 45061
+
+Name: dresses-sales
+
+Tags: 
+
+This dataset contain attributes of dresses and their recommendations according to their sales. Sales are monitor on the basis of alternate days.The attributes present analyzed are: Recommendation, Style, Price, Rating, Size, Season, NeckLine, SleeveLength, waiseline, Material, FabricType, Decoration, Pattern, Type. In this dataset they are named Class(target) and then subsequently V2 - V13.Contact:Muhammad Usman & Adeel Ahmed, usman.madspot '@' gmail.com adeel.ahmed92 '@' gmail.com, Air University, Students at Air University.
+
+Features: V4, V2, V3, V5, V6, V7, V8, V9, V10, V11, V12, V13, class
+---
+- ID: 40975
+
+Name: car
+
+Tags: OpenML-CC18, study_135, study_144, study_218, study_98, study_99, uci
+
+**Author**: Marko Bohanec, Blaz Zupan  
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/car+evaluation) - 1997   
+**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  
+
+**Car Evaluation Database**  
+This database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX (M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.).
+
+The model evaluates cars according to the following concept structure:
+ 
+    CAR                      car acceptability
+    . PRICE                  overall price
+    . . buying               buying price
+    . . maint                price of the maintenance
+    . TECH                   technical characteristics
+    . . COMFORT              comfort
+    . . . doors              number of doors
+    . . . persons            capacity in terms of persons to carry
+    . . .
+---
+- ID: 45080
+
+Name: autos
+
+Tags: 
+
+This data set consists of three types of entities: (a) the specification of an auto in terms of various characteristics, (b) its assigned insurance risk rating, (c) its normalized losses in use as compared to other cars. The second rating corresponds to the degree to which the auto is more risky than its price indicates. Cars are initially assigned a risk factor symbol associated with its price. Then, if it is more risky (or less), this symbol is adjusted by moving it up (or down) the scale. Actuarians call this process "symboling". A value of +3 indicates that the auto is risky, -3 that it is probably pretty safe.The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all autos within a particular size classification (two-door small, station wagons, sports/speciality, etc), and represents the average loss per car per year.Note: Several of the attributes in the database could be used as a "class" attribute.Source: https://www.kaggle.com/datasets/toramky/automobile-dataset
+
+Features: normalized-losses, wheel-base, length, width, height, curb-weight,
+---
+- ID: 43613
+
+Name: Sample-of-Car-Data
+
+Tags: 
+
+Context
+There's a story behind every dataset and here's your opportunity to share yours.
+Content
+What's inside is more than just rows and columns. Make it easy for others to get started by describing how you acquired the data and what time period it represents, too.
+Acknowledgements
+We wouldn't be here without the help of others. If you owe any attributions or thanks, include them here along with any citations of past research.
+Inspiration
+Your data will be in front of the world's largest data science community. What questions do you want to see answered?
+
+Features: Unnamed:_0, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, compression_ratio, horsepower, peak_rpm, city_mpg, highway_mpg, price
+---
+- ID: 42224
+
+Name: dataset-autoHorse_fixed
+
+Tags: 
+
+price col is int now. autoHorse dataset
+
+Features: attribute_0, symboling, wheel-base, length, width, height, curb-weight, num-of-cylinders, engine-size, compression-ratio, city-mpg, highway-mpg, make_alfa-romero, make_audi, make_bmw, make_chevrolet, make_dodge, make_honda, make_isuzu, make_jaguar, make_mazda, make_mercedes-benz, make_mercury, make_mitsubishi, make_nissan, make_peugot, make_plymouth, make_porsche, make_renault, make_saab, make_subaru, make_toyota, make_volkswagen, make_volvo, fuel-type_diesel, fuel-type_gas, aspiration_std, aspiration_turbo, body-style_convertible, body-style_hardtop, body-style_hatchback, body-style_sedan, body-style_wagon, drive-wheels_4wd, drive-wheels_fwd, drive-wheels_rwd, engine-location_front, engine-location_rear, engine-type_dohc, engine-type_l, engine-type_ohc
+---
+- ID: 23381
+
+Name: dresses-sales
+
+Tags: OpenML-CC18, OpenML100, study_123, study_135, study_14, study_144, study_98, study_99
+
+**Author**: Muhammad Usman & Adeel Ahmed   
+**Source**: origin source at [UCI](https://archive.ics.uci.edu/ml/datasets/Dresses_Attribute_Sales)  
+**Please cite**: [Paper that claims to first have used the data](https://www.researchgate.net/profile/Dalia_Jasim/publication/293464737_main_steps_for_doing_data_mining_project_using_weka/links/56b8782008ae44bb330d2583/main-steps-for-doing-data-mining-project-using-weka.pdf)
+
+####1. Summary
+
+This dataset contain attributes of dresses and their recommendations according to their sales. Sales are monitor on the basis of alternate days. 
+
+The attributes present analyzed are: Recommendation, Style, Price, Rating, Size, Season, NeckLine, SleeveLength, waiseline, Material, FabricType, Decoration, Pattern, Type. In this dataset they are named Class(target) and then subsequently V2 - V13.
+
+Contact:
+``
+---
+- ID: 46331
+
+Name: autos_clean
+
+Tags: 
+
+From original source:
+-----
+
+Author: Jeffrey C. Schlimmer (Jeffrey.Schlimmer@a.gp.cs.cmu.edu)
+Source: UCI - 1987
+Please cite:
+
+1985 Auto Imports Database
+This data set consists of three types of entities: (a) the specification of an auto in terms of various characteristics, (b) its assigned insurance risk rating, (c) its normalized losses in use as compared to other cars. The second rating corresponds to the degree to which the auto is more risky than its price indicates. Cars are initially assigned a risk factor symbol associated with its price. Then, if it is more risky (or less), this symbol is adjusted by moving it up (or down) the scale. Actuarians call this process "symboling". A value of +3 indicates that the auto is risky, -3 that it is probably pretty safe.
+
+The third factor is the relative average loss payment per insured vehicle year. This value is normalized for all autos within a particular size classification (two-door small, station wagons, sports/speciality, etc...), and represents the average loss per car per year.
+
+Several of the attributes in the database
+---
+- ID: 195
+
+Name: auto_price
+
+Tags: 
+
+**Author**:   
+**Source**: Unknown -   
+**Please cite**:   
+
+This data set consists of three types of entities:
+ (a) the specification of an auto in terms of various characteristics;
+ (b) its assigned insurance risk rating,;
+ (c) its normalized losses in use as compared to other cars. 
+ The second rating corresponds to the degree to which the auto is more risky than its price indicates. Cars are initially
+ assigned a risk factor symbol associated with its price. Then, if it is more risky (or less), this symbol is adjusted by
+ moving it up (or down) the scale. Actuarians call this process "symboling". A value of +3 indicates that the auto is
+ risky, -3 that it is probably pretty safe.The third factor is the relative average loss payment per insured vehicle year.
+ This value is normalized for all autos within a particular size classification (two-door small, station wagons,
+ sports/speciality, etc...), and represents the average loss per car per year.
+ - Note: Several of the attributes in the database could be used as a "class" attribute.
+ The original data (from the UCI repository) (http://
+---
+- ID: 41162
+
+Name: kick
+
+Tags: chalearn
+
+One of the biggest challenges of an auto dealership purchasing a used car at an auto auction is the risk of that the vehicle might have serious issues that prevent it from being sold to customers. The auto community calls these unfortunate purchases &quot;kicks&quot;.
+
+Kicked cars often result when there are tampered odometers, mechanical issues the dealer is not able to address, issues with getting the vehicle title from the seller, or some other unforeseen problem. Kick cars can be very costly to dealers after transportation cost, throw-away repair work, and market losses in reselling the vehicle.
+
+Modelers who can figure out which cars have a higher risk of being kick can provide real value to dealerships trying to provide the best inventory selection possible to their customers.
+
+The challenge of this competition is to predict if the car purchased at the Auction is a Kick (bad buy).
+
+Features: IsBadBuy, PurchDate, Auction, VehYear, VehicleAge, Make, Model, Trim, SubModel, Color, Transmission, WheelTypeID, WheelType, VehOdo, Nationality, Size, TopThreeAmericanName, MMRAcquisitionAuctionAveragePrice, MMRAcquisitionAuctionCleanPrice, MMRAc
+---
+- ID: 43619
+
+Name: Car-sales
+
+Tags: 
+
+This is the Car sales data set which include information about different cars . This data set is being taken from the Analytixlabs for the purpose of prediction
+In this we have to see two things
+First we have see which feature has more impact on car sales and carry out result of this
+Secondly we have to train the classifier and to predict car sales and check the accuracy of the prediction.
+
+Features: Manufacturer, Model, Sales_in_thousands, __year_resale_value, Vehicle_type, Price_in_thousands, Engine_size, Horsepower, Wheelbase, Width, Length, Curb_weight, Fuel_capacity, Fuel_efficiency, Latest_Launch, Power_perf_factor
+---
+- ID: 44994
+
+Name: cars
+
+Tags: 
+
+**Data Description**
+
+Data frame of the suggested retail prices (column *Price*) and various characteristics of each car.
+
+For this data set, a representative sample of over eight hundred 2005 GM cars were selected, then retail prices were calculated from the tables provided in the 2005 Central Edition of the Kelly Blue Book.
+
+**Attribute Description**
+
+All features describe different self-explanatory characteristics for the cars.
+
+1. *Price* - target feature
+2. *Mileage*
+3. *Cylinder*
+4. *Doors*
+5. *Cruise*
+6. *Sound*
+7. *Leather*
+8. *Buick*
+9. *Cadillac*
+10. *Chevy*
+11. *Pontiac*
+12. *Saab*
+13. *Saturn*
+14. *convertible*
+15. *coupe*
+16. *hatchback*
+17. *sedan*
+18. *wagon*
+
+Features: Price, Mileage, Cylinder, Doors, Cruise, Sound, Leather, Buick, Cadillac, Chevy, Pontiac, Saab, Saturn, convertible, coupe, hatchback, sedan, wagon
+---
+- ID: 43540
+
+Name: Emissions-by-Cars
+
+Tags: 
+
+Context
+This Data set contains various information about a set of cars that were manufactured with set of factory parameters like cylinder size, number of cylinders, fuel consumption, Carbon dioxide emissions etc.
+Content
+Feature set includes model, make, vehicle type, engine size,Transmission, fuel consumption etc. The target set is Carbon dioxide Emission. 
+Inspiration
+The inspiration was to learn and help understand the concept behind data science's basics.
+
+Features: MODEL, MAKE, MODEL.1, VEHICLE_CLASS, ENGINE_SIZE, CYLINDERS, TRANSMISSION, FUEL, FUEL_CONSUMPTION*, Unnamed:_9, Unnamed:_10, Unnamed:_11, CO2_EMISSIONS
+---
+- ID: 9
+
+Name: autos
+
+Tags: study_1, study_41, study_76, uci
+
+**Author**: Jeffrey C. Schlimmer (Jeffrey.Schlimmer@a.gp.cs.cmu.edu)   
+**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Automobile) - 1987  
+**Please cite**:   
+
+**1985 Auto Imports Database**  
+This data set consists of three types of entities: (a) the specification of an auto in terms of various characteristics, (b) its assigned insurance risk rating, (c) its normalized losses in use as compared to other cars.  The second rating corresponds to the degree to which the auto is more risky than its price indicates. Cars are initially assigned a risk factor symbol associated with its price.   Then, if it is more risky (or less), this symbol is adjusted by moving it up (or down) the scale.  Actuarians call this process "symboling".  A value of +3 indicates that the auto is risky, -3 that it is probably pretty safe.
+ 
+The third factor is the relative average loss payment per insured vehicle year.  This value is normalized for
+---
+
+The topic is described by the following keywords: auto, car, continuous, cars, risky, doors, symboling, safety, enginesize, buying, curbweight, persons, wheelbase, maint, lugboot, peakrpm, compressionratio, citympg, highwaympg, numofdoors, numofcylinders, normalizedlosses, autos, risk, stroke, comfort, kick, horsepower, drivewheels, bodystyle
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42223, 43921, 45070, 45061, 40975, 45080, 43613, 42224, 23381, 46331, 195, 41162, 43619, 44994, 43540, 9 !

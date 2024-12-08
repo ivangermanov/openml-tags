@@ -1,3 +1,5 @@
+import json
+import os
 import time
 from typing import List, Callable, Any
 
@@ -75,3 +77,25 @@ def fetch_response_with_retry(
                 time.sleep(delay)
             else:
                 raise e
+
+def append_to_json(file_path, new_data):
+    """Append new data to a JSON array stored in a file."""
+    if os.path.exists(file_path):
+        with open(file_path, 'r+') as file:
+            # Load existing data
+            try:
+                data = json.load(file)
+            except json.JSONDecodeError:
+                data = []
+            # Append new data
+            data.append(new_data)
+            # Move the file pointer to the beginning
+            file.seek(0)
+            # Write the updated data
+            json.dump(data, file, indent=2)
+            # Truncate the file to the current size
+            file.truncate()
+    else:
+        with open(file_path, 'w') as file:
+            # Write new data in a list
+            json.dump([new_data], file, indent=2)

@@ -1,0 +1,321 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 41540
+
+Name: black_friday
+
+Tags: OpenML-Reg19
+
+Customer purchases on Black Friday
+
+Features: Gender, Age, Occupation, City_Category, Stay_In_Current_City_Years, Marital_Status, Product_Category_1, Product_Category_2, Product_Category_3, Purchase
+---
+- ID: 43605
+
+Name: Sales_DataSet_of_SuperMarket
+
+Tags: 
+
+The Story
+This data set was part of my online course material for Data Analysis using Python over at Udemy.
+The Contents
+The dataset is very useful for beginners and novice number crunchers looking to run queries in a relatable and easy-to-understand dataset. It includes the data about shoppers of a supermarket chain having different locations and the total of their purchases.
+Acknowledgements
+This dataset was organised with the help of Ashutosh Pawar at Udemy.
+Inspiration
+I want this database to be for beginners venturing into Data Science, a dataset so relatable and commonplace. Ultimately, driving home the point that Data Science itself is for solving real life problems.
+
+Features: Invoice_ID, Date, Time, Gender, Location, City, Member, Category, Price, Quantity, Total, Payment, Rating
+---
+- ID: 45060
+
+Name: online_shoppers
+
+Tags: 
+
+The dataset consists of feature vectors belonging to 12,330 sessions.The dataset was formed so that each sessionwould belong to a different user in a 1-year period to avoidany tendency to a specific campaign, special day, userprofile, or period.Source: https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset
+
+Features: BounceRates, ExitRates, PageValues, SpecialDay, Browser, OperatingSystems, VisitorType, Administrative_Duration, Month, Region, ProductRelated, ProductRelated_Duration, Informational, TrafficType, Informational_Duration, Weekend, Administrative, class
+---
+- ID: 43446
+
+Name: Online-Food-Delivery-Preferences-Bangalore-region
+
+Tags: 
+
+Context of dataset
+There has been a rise in the demand of online delivery in the metropolitan cities such as Bangalore in India. The question about why this increase in the demand has always been a lingering question. So a survey is conducted and the data is presented.
+Content
+The dataset has nearly 55 variables based on the following titles
+
+Demographics of consumers
+Overall/general purchase decision 
+Time of delivery influencing the purchase decision 
+Rating of Restaurant influencing the purchase decision 
+
+This dataset can be useful for
+
+Classification modelling (Whether this consumer will buy again or not)
+Text analysis (Reviews of consumers)
+Geo-spatial Analysis (location-latitude and longitude of consumers)
+
+Inspiration
+This dataset was collected as a part of my masters thesis
+
+Features: Age, Gender, Marital_Status, Occupation, Monthly_Income, Educational_Qualifications, Family_size, latitude, longitude, Pin_code, Medium_(P1), Medium_(P2), Meal(P1), Meal(P2), Perference(P1), Perference(P2), Ease_and_convenient, Time_saving, More_restaurant_choices, Easy_Payment_option, More_Offers_and_Discount,
+---
+- ID: 45560
+
+Name: online-shoppers-intention
+
+Tags: 
+
+## Source:
+
+1. C. Okan Sakar
+Department of Computer Engineering, Faculty of
+Engineering and Natural Sciences, Bahcesehir University,
+34349 Besiktas, Istanbul, Turkey
+
+2. Yomi Kastro
+Inveon Information Technologies Consultancy and Trade,
+34335 Istanbul, Turkey
+
+## Data Set Information:
+
+The dataset consists of feature vectors belonging to 12,330 sessions.
+The dataset was formed so that each session
+would belong to a different user in a 1-year period to avoid
+any tendency to a specific campaign, special day, user
+profile, or period.
+
+
+## Attribute Information:
+
+The dataset consists of 10 numerical and 8 categorical attributes.
+The 'Revenue' attribute can be used as the class label.
+
+"Administrative", "Administrative Duration", "Informational", "Informational Duration", "Product Related" and "Product Related Duration" represent the number of different types of pages visited by the visitor in that session and total time spent in each of these page categories. The values of these features are derived from the URL information of the pages visited by the user and updated in real time when a user takes an action, e.g. moving
+---
+- ID: 45074
+
+Name: Shipping
+
+Tags: 
+
+An international e-commerce company based wants to discover key insights from their customer database. They want to use some of the most advanced machine learning techniques to study their customers. The company sells electronic products
+
+Features: Customer_care_calls, Customer_rating, Prior_purchases, Discount_offered, Weight_in_gms, Warehouse_block, Mode_of_Shipment, Product_importance, Gender, class
+---
+- ID: 43422
+
+Name: The-Bread-Basket
+
+Tags: 
+
+Context
+The dataset belongs to "The Bread Basket" a bakery located in Edinburgh. The dataset has 20507 entries, over 9000 transactions, and 4 columns.
+Content
+The dataset has transactions of customers who ordered different items from this bakery online and the time period of the data is from 26-01-11 to 27-12-03.
+
+Features: Transaction, Item, date_time, period_day, weekday_weekend
+---
+- ID: 43218
+
+Name: 17OnlineShoppersPurchasingIntention
+
+Tags: 
+
+17OnlineShoppersPurchasingIntention
+
+Features: Administrative, Administrative_Duration, Informational, Informational_Duration, ProductRelated, ProductRelated_Duration, BounceRates, ExitRates, PageValues, SpecialDay, Month, OperatingSystems, Browser, Region, TrafficType, VisitorType, Weekend, Revenue
+---
+- ID: 43543
+
+Name: Sample---Employees-Monthly-Salary
+
+Tags: 
+
+Context
+This is a sample dataset to explore key insights, EDA, and to perform statistical simulations.
+Content
+This Dataset contains Gross and Net salary of each Employee with Tax deduction
+Inspiration
+
+Do male employees earn significantly more than female employees?
+Are there any departments paying significantly low salaries in the organization?
+What is the relation between gender and leadership roles in the organization?
+What is the relation between age and leadership roles in the organization?
+Are Data Scientists getting paid significantly more than others in this company?
+Does the salary depend on Age?
+
+Features: EmpID, Name, Gender, Date_of_Birth, Age, Join_Date, Tenure_in_org_in_months, GROSS, Net_Pay, Deduction, Deduction_percentage, Designation, Department
+---
+- ID: 43368
+
+Name: Online-Retail-II-UCI
+
+Tags: 
+
+Context
+This Online Retail II data set contains all the transactions occurring for a UK-based and registered, non-store online retail between 01/12/2009 and 09/12/2011.The company mainly sells unique all-occasion gift-ware. Many customers of the company are wholesalers.
+Content
+Attribute Information:
+InvoiceNo: Invoice number. Nominal. A 6-digit integral number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
+StockCode: Product (item) code. Nominal. A 5-digit integral number uniquely assigned to each distinct product.
+Description: Product (item) name. Nominal.
+Quantity: The quantities of each product (item) per transaction. Numeric.
+InvoiceDate: Invice date and time. Numeric. The day and time when a transaction was generated.
+UnitPrice: Unit price. Numeric. Product price per unit in sterling ().
+CustomerID: Customer number. Nominal. A 5-digit integral number uniquely assigned to each customer.
+Country: Country name. Nominal. The name of the country where a customer resides.
+Acknowledgements
+Chen, D. Sain,
+---
+- ID: 43626
+
+Name: Gender-discrimination
+
+Tags: 
+
+Context
+Content
+A few years ago, the United States District Court of Houston had a case that arises under Title VII of the Civil Rights Act of 1964, 42 U.S.C. 200e et seq. The plaintiffs in this case were all female doctors at Houston College of Medicine who claimed that the College has engaged in a pattern and practice of discrimination against women in giving promotions and setting salaries. The Lead plaintiff in this action, a pediatrician and an assistant professor, was denied for promotion at the College. The plaintiffs had presented a set of data to show that female faculty at the school were less likely to be full professors, more likely to be assistant professors, and earn less money than men, on average.
+1 Dept                1=Biochemistry/Molecular Biology
+                            2=Physiology
+                            3=Genetics
+                            4=Pediatrics
+                            5=Medicine
+                            6=Surgery
+2 Gender           1=Male, 0=Female
+3 Clin                  1=Primarily clinical emphasis, 0=Primarily research emphasis
+4 Cert                 1=Board certified, 0=not certified
+5 Pr
+---
+
+The topic is described by the following keywords: informational, page, administrative, transaction, ecommerce, customer, bounce, guo, online, operatingsystems, integral, bouncerates, traffictype, exitrates, informationalduration, visited, pagevalues, productrelatedduration, visitortype, administrativeduration, specialday, browser, productrelated, gender, visitor, item, chen, product, special, purchase
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 41540, 43605, 45060, 43446, 45560, 45074, 43422, 43218, 43543, 43368, 43626 !

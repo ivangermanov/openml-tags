@@ -1,0 +1,218 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 42143
+
+Name: nfl_games
+
+Tags: 
+
+nfl_games
+
+Features: date, season, neutral, playoff, team1, team2, elo1, elo2, elo_prob1, score1, score2, result1
+---
+- ID: 470
+
+Name: profb
+
+Tags: mythbusting_1, OpenML100, study_1, study_123, study_135, study_14, study_144, study_15, study_20, study_34, study_41, study_52, unspecified_target_feature
+
+**Author**: Hal Stern, Robin Lock  
+**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/profb)   
+**Please cite**:   
+
+PRO FOOTBALL SCORES  (raw data appears after the description below)
+
+How well do the oddsmakers of Las Vegas predict the outcome of
+professional football games?  Is there really a home field advantage - if
+so how large is it?  Are teams that play the Monday Night game at a
+disadvantage when they play again the following Sunday?  Do teams benefit
+from having a "bye" week off in the current schedule?  These questions and
+a host of others can be investigated using this data set.
+
+Hal Stern from the Statistics Department at Harvard University has
+made available his compilation of scores for all National Football League
+games from the 1989, 1990, and 1991 seasons.  Dr. Stern
+---
+- ID: 43580
+
+Name: Nebraska-Football-Box-Scores-1962-2020
+
+Tags: 
+
+Dataset includes date and time, opponent, score, rushing statistics, passing statistics, turnovers, Nebraska penalties, point spread, and weather information. All games are included. Penalty data is incomplete before 1972-09-16 (Texas AM). Point spread data is unknown before the 1978 season. It is listed for approx. 89 of games from from that point forward. Weather data is taken from the DarkSky API and from Weather Underground. I've found temperature and humidity data to be fairly reliable but wind data is less so.
+Column Labels:
+
+date  Date the game was played
+time  Kickoff (CT)
+opp  Nebraska's opponent
+site  Location the game was played (home, away, neutral-home, or neutral-away)
+conference  Whether it was a conference opponent (TRUE or FALSE)
+opp-score  Nebraska's opponent's score
+ne-score  Nebraska's score
+opp-rush-att  Opponent rushing attempts
+opp-rush-yards  Opponent rushing yards
+ne-rush-att  Nebraska rushing attempts
+ne-rush-yards  Nebraska rushing yards
+opp-pass-comp  Opponent passing completions
+---
+- ID: 508
+
+Name: nflpass
+
+Tags: sport, study_93
+
+**Author**: Roger W. Johnson      
+**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/)  
+**Please cite**:  
+
+**National Football League Passes**  
+Dataset listing all-time NFL passers through 1994 by the NFL passing efficiency rating.
+Associated passing statistics from which this rating is computed are included.
+
+The dataset lists statistics for 26 players. The first 25 are the top 25 all-time career best rating leaders recognized by the NFL. The 26th player, Otto Graham, has statistics which include his performance in the All-America Football Conference (1946-1949) which is not recognized by the NFL. The statistics given are current through the 1994 regular season. Only passers with a minimum of 1,500 career passing attempts are included.
+
+The NFL describes how to compute its rating in its 1977 document "National Football League Passer Rating System" (410 Park Avenue, New York, NY 10022-4444, (212) 758-1500) through the use of tables. No formula is explicitly stated for rating. But, examining the tables in the "
+---
+- ID: 43525
+
+Name: NFL-Team-Stats-2002-2019-(ESPN)
+
+Tags: 
+
+All data is scraped from ESPN's Team Stats page for each game. Seasons include all 256 regular season games plus 11 playoff games, with the exception of 3 games that are missing from ESPN's site:
+
+DALWAS 12-30-2007
+CARPIT 12-23-2010
+TBATL 1-1-2012
+
+Any errors or quirks in ESPN's data will be present in this dataset. For example, redzone conversions are missing prior to the 2006-07 season.
+
+Features: date, away, home, first_downs_away, first_downs_home, third_downs_away, third_downs_home, fourth_downs_away, fourth_downs_home, passing_yards_away, passing_yards_home, rushing_yards_away, rushing_yards_home, total_yards_away, total_yards_home, comp_att_away, comp_att_home, sacks_away, sacks_home, rushing_attempts_away, rushing_attempts_home, fumbles_away, fumbles_home, int_away, int_home, turnovers_away, turnovers
+---
+
+The topic is described by the following keywords: passing, nfl, nebraska, yards, rating, opponent, spread, lt, favored, attempts, season, rushing, kickoff, underdog, passers, football, interceptions, games, completions, touchdown, percentage, team, formula, interception, espns, nebraskas, meserole, oddsmakers, quarterbacks, stern
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 42143, 470, 43580, 508, 43525 !

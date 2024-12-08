@@ -1,0 +1,318 @@
+Based on the below information, extract and synthesize human-readable tags/keywords/themes from the text, capitalized first letters of words. What is the main human-readable theme or subject matter discussed in the provided texts? What is the overarching, high-level theme of the texts, e.g. "Music", "Sports", "Environment", etc.? Please provide overarching themes that tie the different pieces of information together. What is/are the overarching, highest level theme(s) that you could use as a keyword(s)? Prefer single word tags/keywords, e.g. "Tennis" rather than "Tennis Match", "Prison" rather than "Prison Time", etc., however, if the term makes sense only as a whole, e.g. "Republic of the Congo", "COVID-19", then use it! Consider adding synonyms as well, e.g. for "Influenza", add "Flu", for "Car", add "Automobile", etc.! Some examples of human-readable themes are   "Agriculture", "Astronomy", "Chemistry", "Computational Universe", "Computer Systems", "Climate and Environment", "Culture", "Demographics", "Earth Science", "Economics", "Education", "Engineering", "Finance", "Geography", "Government", "Games", "Health", "History", "Human Activities", "Images", "Language", "Law", "Life Science", "Machine Learning", "Manufacturing", "Mathematics", "Medicine", "Meteorology", "Physical Sciences", "Politics", "Social Media", "Sociology", "Statistics", "Text & Literature",  "Transportation". Avoid tags/keywords that are too specific, e.g. "Serine Threonine Protein Kinase". Good theme examples are: "Birds", "Species Migration", "Air Pollution", or "War", "Government", "International Relations", "Politics". And be concise in theme generation, e.g. instead of "Income Prediction", say "Income", instead of "Demographic Information", say "Demographics"! Another important rule to obey - place more focus on the dataset names for theme extraction, if they exist. Say {"topic": {"themes": ["example1", "example2", ...], "overarching_themes": ["example13", "...", ...]}, "texts": [{"example1": 0.93, "example2": 0.68, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 1, all of them)}], {"example1": 0.87, "example2": 0.34, "...": ..., ..., "example13": ..., ... (strings corresponding to themes and overarching themes for text 2, all of them)}]} and give your answer in JSON format, where under "topic" you put all themes and overarching themes, and in "texts", you give a confidence score in each theme and overarching theme for each text. "themes" and "overarching_themes" shouldn't overlap. If a theme is overarching and common to all texts, it should be present in all texts with a high score. Give only the ones with highest scores.
+For example, for this text:
+ID: 506
+
+Name: Biden Administration
+
+The Biden administration is preparing to roll out a sweeping border executive action as early as Tuesday, according to two sources familiar with the discussions, who cautioned that timing is fluid.
+
+White House officials have begun reaching out to mayors who represent cities along the US southern border to potentially join President Joe Biden when he announces the order, two other sources familiar with those conversations said.
+
+For weeks, administration officials have been working through an executive action that would dramatically limit migrants’ ability to seek asylum at the US southern border — part of a strategy to try to give Biden the upper hand on one of his Republican rival’s key campaign issues. The action is designed to potentially blunt Republican attacks on border security and preempt former President Donald Trump ahead of the first presidential debate, which will be held on June 27 on CNN.
+---
+ID: 401
+
+Name: Name: Trump conviction
+
+Now that a New York jury has convicted former President Donald Trump of all 34 felony charges of falsifying business records, the next obvious question is: Can a convicted felon run for president?
+
+Definitely.
+
+Trump meets all three requirements. There is, arguably, another criterion laid out in the 14th Amendment, where it states that no one who has previously taken an oath of office who engages in insurrection can be an officer of the US. But the US Supreme Court ruled earlier this year that Congress would have to pass a special law invoking this prohibition. That’s not happening any time soon.
+
+Judge Juan Merchan has scheduled Trump’s sentencing for July 11, which happens to be four days before the start of the Republican National Convention that is scheduled to take place in Milwaukee.
+
+It is technically possible, although perhaps unlikely for a first-time offender, that Trump could be sentenced to prison time.
+---
+ID: 51376
+
+Name: Trump has vowed to give green cards to college grads. Could that actually happen?
+
+The candidate known for touting immigration crackdowns told a group of tech investors that he wanted to help foreign students stay in the US.
+
+“What I want to do, and what I will do, is — you graduate from a college, I think you should get automatically, as part of your diploma, a green card to be able to stay in this country,” Trump said during a June interview with “The All-In Podcast.”
+
+If the president-elect pursues this proposal after he takes office, and if Congress passes the legislation that would be required to enact it, the policy could pave the way for potentially millions of international students to become legal permanent residents.
+---
+This would be your answer:
+{
+  "topic": {
+    "themes": [
+      "Biden Administration",
+      "Border",
+      "Executive Action",
+      "Asylum",
+      "Immigration",
+      "Trump",
+      "Felony",
+      "Business Records",
+      "Presidential Campaign",
+      "Republican",
+      "Debate",
+      "Former President",
+      "Conviction",
+      "Sentencing",
+      "Prison",
+      "14th Amendment",
+      "Insurrection",
+      "Supreme Court",
+      "Republican National Convention",
+      "College",
+      "Green Card",
+      "Legislation",
+      "Student"
+    ],
+    "overarching_themes": [
+      "Politics",
+      "Government",
+      "Law",
+      "Justice",
+      "Elections",
+      "Education"
+    ]
+  },
+  "texts": { 
+    506: {
+      "Biden Administration": 0.96,
+      "Border": 0.92,
+      "Executive Action": 0.91,
+      "Asylum": 0.88,
+      "Immigration": 0.84,
+      "Presidential Campaign": 0.82,
+      "Republican": 0.82,
+      "Debate": 0.78,
+      "Politics": 0.99,
+      "Government": 0.93,
+      "Law": 0.85,
+      "Elections": 0.72,
+    },
+    401: {
+      "Trump": 0.95,
+      "Felony": 0.92,
+      "Business Records": 0.97,
+      "Presidential Campaign": 0.84,
+      "Republican": 0.82,
+      "Former President": 0.98,
+      "Conviction": 0.92,
+      "Sentencing": 0.91,
+      "Prison": 0.85,
+      "14th Amendment": 0.82,
+      "Insurrection": 0.80,
+      "Supreme Court": 0.78,
+      "Republican National Convention": 0.76,
+      "Politics": 0.92,
+      "Government": 0.92,
+      "Law": 0.90,
+      "Justice": 0.88,
+      "Elections": 0.85,
+    },
+    51376: {
+      "Immigration": 0.67,
+      "Trump": 0.98,
+      "Republican": 0.59,
+      "College": 0.98,
+      "Green Card": 0.93,
+      "Legislation": 0.89,
+      "Student": 0.89,
+      "Politics": 0.82,
+      "Government": 0.81,
+      "Law": 0.69,
+      "Education": 0.97
+    }
+  }
+}
+---
+Now, the above was just an example. Now, do it for all the following text(s), generate many themes, make sure to return for each dataset ID!:
+- ID: 43379
+
+Name: Pokmon-Legendary-Data
+
+Tags: 
+
+Context
+In the world of Pokmon academia, one name towers above any other  Professor Samuel Oak. While his colleague Professor Elm specializes in Pokmon evolution, Oak has dedicated his career to understanding the relationship between Pokmon and their human trainers. A former trainer himself, the professor has first-hand experience of how obstinate Pokmon can be  particularly when they hold legendary status.
+For his latest research project, Professor Oak has decided to investigate the defining characteristics of legendary Pokmon to improve our understanding of their temperament. Hearing of our expertise in classification problems, he has enlisted us as the lead researchers.
+Our journey begins at the professor's research lab in Pallet Town, Kanto. The first step is to open up the Pokdex, an encyclopaedic guide to 801 Pokmon from all seven generations.
+
+Content
+After browsing the Pokdex, we can see several variables that could feasibly explain what makes a Pokmon legendary. We have a series of numerical fighter stats  attack, defense, speed and so on  as well as a categorization of Pokemon type (bug, dark, dragon, etc.). is_legendary is the binary classification variable we will eventually
+---
+- ID: 43795
+
+Name: The-2020-Pokemon-dataset
+
+Tags: 
+
+Context
+I am currently learning Data Science concepts so I started my journey by doing some basic data visualisations. While I was looking for datasets online to visualise, I saw a Pokemon dataset. I have been a fan of this franchise since I was 3 and I have played it's every main series games so it was such a delight for me to start with a pokemon dataset as the start of my Data Visualisation work. 
+But when I started the analysis of that data, I found that the data had quite a few missing values at places and it had information of only the first seven generation pokemon. This was kinda expected as the datasets were 3 years old and the latest generation was revealed last year. I thought that now is the need to update this data. I had the knowledge of web scraping so nothing was stopping me from doing that.
+I scraped the data from pokemondb.net and bulbapedia and it took me two days of creating the logic, debugging and perfecting the code so that I can scrape data. I also included the data of all the mega and all the alternate forms too. This meant iterating through a single page multiple times and accessing
+---
+- ID: 43694
+
+Name: Smogon-6v6-Pokemon-Tiers
+
+Tags: 
+
+This dataset stems from Alberto Barradas' popular Pokemon with stats dataset by listing the tiered Pokemon in Smogon 6v6.
+Smogon 6v6 is one of the most popular formats for competitive Pokemon. Although it is not the "official" competitive format, there is still a significant number of people who play the format. There are a number of 'tiers' of Pokemon in which people can play, the most popular being OU. This dataset seeks to display both a Pokemon's stats and corresponding tier for easier competitive analysis.
+In addition to the addition of the 'Tier' variable, there are several other changes I made to the set:
+
+Classified Mythical Pokemon as 'Legendary'
+Changed the naming convention of Mega Evolutions and some form changes
+Addition of 'Mega' tier to signify Mega Evolutions
+
+Note that this dataset includes only Pokemon tiered from PU to AG. NFE and LC Pokemon are not included unless they appear in Smogon's list. List of which Pokemon are in which tier was found here.
+Thank you to Alberto Barradas for his comprehensive Pokemon dataset.
+
+Features: X., Name, Type.1, Type.2
+---
+- ID: 43549
+
+Name: Pokemon-(Generation-1---Generation-8)
+
+Tags: 
+
+Pokemons are something which fascinated me every single time.  Who would believe that a 6 year old kid used to be late to school almost everyday because of watching those extra minutes of the Pokemon episode. Years later, that kid is still deep inside me fantasizing about the Pokemon world.
+About the Data
+The dataset contains the details of all Pokemons from Generation 1 to Generation 8.
+It describes the different attributes of Pokemons like Type, HP, Attack power, Defense power etc. for 1045 unique Pokemons.
+Column details
+
+Pokedex No. - pokedex number of the pokemon
+Name - name of the pokemon
+Type - type of the pokemon
+Every pokemon belongs to atleast one type and atmost two types.
+Other Type - the other type of the pokemon, if any.
+The value of the column is NaN if the pokemon belongs to only one type.
+HP - hit points  of the pokemon
+Attack - attack power  of the pokemon
+Defense - defense power  of the pokemon
+Special Attack - special attack power  of the pokemon
+Special Defense - special defense power  of the pokemon
+Speed - speed of the
+---
+- ID: 43749
+
+Name: Generation-8-Pokemon
+
+Tags: 
+
+Context
+This dataset contains information from all 400 Pokemon in generation eight. 
+Content
+
+No.: Pokedex number
+Name: Pokemon name in english
+Ability1: Pokemon ability
+Ability2: Pokemon second ability (if available)
+Hidden_Ability: A Pokemon's hidden ability (if available)
+Type1: A Pokemon's typing (e.g. fire, water, flying, etc.)
+Type2: A Pokemon's secondary typing (if available)
+HP: Base HP stat
+Att: Base Attack stat
+Def: Base Defense Stat
+S.Att: Base Special Attack stat
+S.Def: Base Special Defense stat
+Spd: Base Speed stat
+Weight_kg: Pokemon's weight in kilogram
+Height_m: Pokemon's height in meters
+Weight_lbs: Pokemon's weight in pounds
+Height_ft: Pokemon's height in feet
+Cap_Rate: Pokemon's capture rate
+Egg_Steps: Base number of steps for a Pokemon's egg to hatch
+
+Acknowledgements
+This information was scraped from
+
+Features: No., Name, Ability1, Ability2, Hidden_Ability, Type1, Type2, HP, Att, Def, S.Att, S.Def,
+---
+- ID: 43692
+
+Name: Pokemon-with-stats-Generation-8
+
+Tags: 
+
+Context
+After the release of Pokmon Sword and Shield on the November 15, 2019, 81 new Pokemons were released alongside 13 regional variants of preexisting Pokmon.
+Content
+Like dataset from previous generations, you'll find data about:
+
+Name 
+HP
+Attack     
+Defense     
+Sp. Attack     
+Sp. Defense     
+Speed     
+Total     
+Average
+Generation
+
+Acknowledgements
+Alberto Barradas for all the Pokemons until generation 6 and gurarako for the generation 7.
+Additional information gathered thanks to bulbapedia.
+
+Features: #, Name, Type_1, Type_2, HP, Attack, Defense, Sp._Attack, Sp._Defense, Speed, Total, Average, Generation
+---
+- ID: 43710
+
+Name: The-Complete-Pokemon-Dataset
+
+Tags: 
+
+Context
+This dataset contains information on all 802 Pokemon from all Seven Generations of Pokemon. The information contained in this dataset include Base Stats, Performance against Other Types, Height, Weight, Classification, Egg Steps, Experience Points, Abilities, etc. The information was scraped from http://serebii.net/
+Content
+
+name: The English name of the Pokemon
+japanese_name: The Original Japanese name of the Pokemon
+pokedex_number: The entry number of the Pokemon in the National Pokedex
+percentage_male: The percentage of the species that are male. Blank if the Pokemon is genderless.
+type1: The Primary Type of the Pokemon
+type2: The Secondary Type of the Pokemon
+classification: The Classification of the Pokemon as described by the Sun and Moon Pokedex
+height_m: Height of the Pokemon in metres
+weight_kg: The Weight of the Pokemon in kilograms
+capture_rate: Capture Rate of the Pokemon
+baseeggsteps: The number of steps required to hatch an egg of the Pokemon
+abilities: A stringified list of abilities that the Pokemon is capable of having
+experience_growth: The Experience Growth of the Pokemon
+base_h
+---
+- ID: 43722
+
+Name: Gen-1-Pokemon
+
+Tags: 
+
+Context
+Dataset of the original 151 Pokemon with stats only from Generation 1. Data was scraped from https://serebii.net/. 
+Content
+
+Number: Pokedex Index Number
+Name: Name of the Pokemon
+Types: The number of types a Pokemon has
+Type1: The primary type
+Type2: The secondary type if applicable
+Height: The height of the Pokemon in meters
+Weight: The weight of the Pokemon in kilograms
+Male_Pct: The probability of encountering a male in percentage
+Female_Pct: The probability of encountering a female in percentage
+Capt_Rate: Measures how difficult it is too capture the Pokemon (Higher value = Higher difficulty
+Exp_Points: Experience points needed to fully level up
+Exp_Speed: How fast a Pokemon fully levels up
+Base_Total: The sum all the base stats (HP, Attack, Defense, Special, Speed)
+HP - Speed: The base stats of a Pokemon
+NormalDmg - DragonDmg: The multiplicative damage it takes from certain types
+Evolutions: The number of evolutions the base Pokemon has
+
+Acknowledgements
+Scraped from https://serebii.net/.
+
+
+---
+
+The topic is described by the following keywords: pokemon, pokemons, hp, legendary, defense, attack, base, pokmon, generation, speed, pokedex, special, type2, stats, heightm, type1, weightkg, islegendary, mega, evolutions, abilities, spdefense, spattack, tier, basetotal, pokedexnumber, barradas, alberto, generations, egg
+---
+Remember, generate many themes and overarching themes, each one should be used in the classifications (don't skip any of the generated themes and overarching themes), then classify each dataset id by them, make sure to return for each dataset ID - 43379, 43795, 43694, 43549, 43749, 43692, 43710, 43722 !
