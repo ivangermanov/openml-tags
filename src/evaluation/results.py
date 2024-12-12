@@ -372,6 +372,7 @@ class Results:
             figsize: tuple = (10, 5),
             confidence_interval: bool = False,
             with_ctm: bool = True,
+            location: str = "upper right",
     ):
 
         results = self.basic_results[dataset].copy()
@@ -429,7 +430,7 @@ class Results:
         plt.xticks(np.arange(min(results[x]), max(results[x]) + 1, 10))
 
         plt.title(title)
-        plt.legend()
+        plt.legend(loc=location)
 
         return fig
 

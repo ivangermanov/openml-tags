@@ -1,0 +1,28 @@
+\chapter{Figures}\label{sec:figures_appendix}
+
+\cref{fig:top_50_frequency} shows the top 50 regular tags by frequency, while \cref{fig:top_50_overarching_frequency} shows the top 50 overarching tags by frequency. We see that the tags are quite diverse, covering a wide range of topics. The regular tags are more specific, while the overarching tags are more general.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/top_50_frequency.pdf}
+    \caption{Top 50 tags by frequency}
+    \label{fig:top_50_frequency}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/top_50_overarching_frequency.pdf}
+    \caption{Top 50 overarching tags by frequency}
+    \label{fig:top_50_overarching_frequency}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_relevance_qq_plot.pdf}\label{fig:gpt_relevance_qq_plot}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_generality_qq_plot.pdf}\label{fig:gpt_generality_qq_plot}}
+
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_coverage_qq_plot.pdf}\label{fig:gpt_coverage_qq_plot}}
+    \caption{Q-Q plots for evaluation metrics}
+    \label{fig:all_qq_plots}
+\end{figure}

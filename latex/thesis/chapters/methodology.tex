@@ -1,5 +1,6 @@
-\label{sec:methodology}
-In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. Our methodology consists of four main components: (1) data exploration, preprocessing, and augmentation to prepare the OpenML dataset descriptions, (2) a novel tag generation pipeline that extends BERTopic with large language models and zeroshot classification, (3) automated evaluation using topic coherence, diversity metrics, and baseline comparisons, and (4) human evaluation through a user study complemented by large-scale automated evaluation. We provide a detailed description of each component, along with their limitations and how they address our research questions.
+\chapter{Methodology}
+\label{chapter:methodology}
+In this chapter, we present our proposed methodology, including the methods and techniques used to address our research questions. Our methodology consists of four main components: (1) data exploration, preprocessing, and augmentation to prepare the OpenML dataset descriptions, (2) a novel tag generation pipeline that extends BERTopic with large language models and zeroshot classification, (3) automated evaluation and optimization using topic coherence, diversity metrics, and baseline comparisons, and (4) human evaluation through a user study complemented by large-scale automated evaluation. We provide a detailed description of each component, along with their limitations and how they address our research questions.
 
 \section{Data exploration, preprocessing and augmentation}
 \label{sec:data_exploration}
@@ -33,6 +34,9 @@ In addition to the original dataset descriptions, we will explore the possibilit
 
 \section{Tag generation}
 \label{sec:tag_generation}
+
+\subsection{Pipeline}
+\label{sec:tag_generation_pipeline}
 In this subsection, we introduce our model, which is, in fact, a pipeline comprising multiple submodels and techniques. We shall henceforth refer to this pipeline as our \textit{proposed model}.
 
 Steps 1-3 involve data preprocessing to prepare the data for the proposed model. We shall refer to steps 5-8 as the \textit{Base BERTopic model}. It includes dimensionality reduction, clustering, bag-of-words and c-TF-IDF. Finally, steps 9 and 10 represent our improvements to the base model, introducing an approach that, to the best of our knowledge, is novel within the literature. Additionally, we provide an explanation of which steps are computationally efficient and which are more expensive.
@@ -88,32 +92,33 @@ To explain the pipeline illustrated in \cref{fig:tag_generation_pipeline} in mor
 \end{figure}
 
 \subsection{Rationale}
+\label{sec:rationale}
 In this subsection, we aim to provide a rationale for the proposed model.
 
 \subsubsection{Proposed model}
-We provided our rationale for steps 1 and 2 in \cref{sec:data_exploration}, and for step 3 in \cref{sec:tag_generation}. Steps 4-8 are part of the Base BERTopic model, a well-established topic modeling technique proven effective across various datasets. Hence, we will focus on steps 9 and 10, which are novel contributions to the existing literature.
+We provided our rationale for steps 1 and 2 in \cref{sec:data_exploration}, and for step 3 in \cref{sec:tag_generation_pipeline}. Steps 4-8 are part of the Base BERTopic model, a well-established topic modeling technique proven effective across various datasets. Hence, we will focus on steps 9 and 10, which are novel contributions to the existing literature.
 
-Without steps 9 and 10, we would need to rely on the c-TF-IDF representation from step 8 to extract tags. For background on c-TF-IDF, the reader may refer to \cref{sec:bag_of_words,sec:topic_representation}. However, this representation has several limitations:
+Without steps 9 and 10, we would need to solely rely on the c-TF-IDF representation from step 8 to extract tags. For background on c-TF-IDF, the reader may refer to \cref{sec:bag_of_words,sec:topic_representation}. This c-TF-IDF representation has several limitations:
 \begin{itemize}
-    \item It is based on the bag-of-words representation of the descriptions, which may not capture the full semantic meaning of the text. The c-TF-IDF calculation relies on word frequencies in the descriptions, which is a naive way of capturing word importance in the context of topics.
+    \item It is based on the bag-of-words representation of the descriptions, which may not capture the full semantic meaning of the text. The c-TF-IDF calculation relies on word frequencies in the descriptions, which is a naive way of capturing word importance in the context of topics, as it does not consider the relationships between words.
     \item It depends on the top words in each cluster, which may not always be representative of the topics. For instance, if a cluster's top words are \textit{election} and \textit{candidate}, these words may not capture the broader theme of \textit{politics}.
 \end{itemize}
 
-The LLM helps address these limitations by generating tags that better represent the topics. Trained on a large corpus of text, it can capture semantic relationships between words. By providing the LLM with the top representative documents and words for each cluster, we can prompt it to generate more representative topic tags. The LLM can identify broader themes and generate more descriptive tags, improving tag quality and interpretability for users.
+The LLM helps address these limitations by generating tags that better represent the topics. Trained on a large corpus of text, it can capture semantic relationships between words. By providing the LLM with the top representative documents and words for each cluster, we can prompt it to generate more representative topic tags. The LLM can identify broader themes and generate more descriptive tags, improving tag quality for users.
 
 If we only use step 9 and not step 10, we have two significant limitations:
 \begin{itemize}
-    \item We miss the opportunity to capture the multiple topics a description may belong to
-    \item We cannot filter out irrelevant tags for each description, as not all cluster tags may be relevant to every description within that cluster, as illustrated in step 10 of \cref{sec:tag_generation}
+    \item We miss the opportunity to capture the multiple topics a description may belong to.
+    \item We cannot filter out irrelevant tags for each description, as not all cluster tags may be relevant to every description within that cluster, as illustrated by the example in step 10 of \cref{sec:tag_generation_pipeline}.
 \end{itemize}
 
-Conversely, if we only use step 10 and not step 9, we must rely on the c-TF-IDF representation to extract tags. As discussed, this representation has several limitations, and using it alone may result in lower quality and less representative tags. By combining steps 9 and 10, we leverage the strengths of both approaches to generate tags that are higher quality, more representative, and more relevant to the descriptions.
+Conversely, if we only use step 10 and not step 9, we must rely on the c-TF-IDF representation to classify tags. As discussed, this representation has several limitations, and using it alone may result in lower quality and less representative tags. By combining steps 9 and 10, we leverage the strengths of both LLMs and zeroshot classifiers to generate tags that are higher quality, more representative, and more relevant to the descriptions.
 
 \subsubsection{Advantages over naive LLM approaches}
-A naive approach would be to simply feed each individual description to an LLM and ask it to extract tags. However, our proposed pipeline offers several key advantages over this approach:
+A naive approach would be to simply feed each individual description to an LLM and ask it to extract tags. However, our proposed pipeline offers several advantages over this approach:
 
 \begin{enumerate}
-    \item \textbf{Contextual Consistency}: By clustering similar descriptions together, our model develops a broader understanding of related topics. This allows it to generate more consistent and contextually relevant tags across similar descriptions. For example, if we have two similar descriptions about image classification using convolutional neural networks, a naive approach might tag one with \textit{CNN} and another with \textit{computer vision}, while our approach would recognize their similarity and consistently apply both relevant tags to both descriptions. A naive approach, analyzing descriptions in isolation, would likely generate inconsistent tags for similar descriptions due to lacking this broader context and varying interpretations of individual texts.
+    \item \textbf{Contextual Consistency}: By clustering similar descriptions together, our model develops a broader understanding of related topics. This allows it to generate more consistent and contextually relevant tags across similar descriptions. For example, if we have two similar descriptions about image classification using convolutional neural networks, a naive approach might tag one with \textit{CNN} and another with \textit{computer vision}, while our approach would recognize their similarity and consistently apply both relevant tags to both descriptions. A naive approach, analyzing descriptions in isolation, would generate inconsistent tags for similar descriptions due to lacking this broader context and varying interpretations of individual texts.
     
     \item \textbf{Multi-level Tag Generation}: Our approach generates tags at multiple levels of specificity:
     \begin{itemize}
@@ -121,28 +126,29 @@ A naive approach would be to simply feed each individual description to an LLM a
         \item Regular tags that are common across cluster members (step 9)
         \item Overarching tags that capture broader themes (step 9)
     \end{itemize}
-    A naive LLM approach, working with single descriptions, would likely focus only on explicitly mentioned concepts and miss broader thematic connections.
+    A naive LLM approach, working with single descriptions, would focus on explicitly mentioned concepts in individual descriptions and miss broader thematic connections.
     
-    \item \textbf{Cross-validation}: The combination of clustering and zeroshot classification provides a form of cross-validation for tag relevance. Tags are not just extracted from individual descriptions but are validated against similar descriptions within the same cluster and verified through the zeroshot classifier. For example, consider a cluster about time series forecasting where one description briefly mentions \textit{neural networks} as a comparison method. While the LLM might generate \textit{neural networks} as a tag for the cluster, the zeroshot classifier would likely assign it a low confidence score for this specific description since it's not the main focus. This helps filter out noise and improves tag quality. 
+    \item \textbf{Cross-validation}: The combination of clustering and zeroshot classification provides a form of cross-validation for tag relevance. Tags are not just extracted from individual descriptions but are validated against similar descriptions within the same cluster and verified through the zeroshot classifier. For example, consider a cluster about weather forecasting where one of the descriptions briefly mentions \textit{neural networks}. While the LLM might generate \textit{neural networks} as a tag for the cluster, the zeroshot classifier would likely assign it a low confidence score for other descriptions in the cluster, since it is not their main focus. This helps filter out irrelevant tags, thus improving tag quality. 
     
-    \item \textbf{Computational Efficiency}: While our pipeline uses LLMs, it does so more efficiently by processing clusters rather than individual descriptions. In a naive approach, we would need $n$ LLM calls for $n$ descriptions, while our clustering approach requires only $k$ calls, where $k$ is the number of clusters (typically $k < n/2$ or even $k < n/3$, depending on the clustering parameters). This significantly reduces the number of LLM calls needed, particularly for large datasets with many similar descriptions. For large clusters, we can further optimize token usage by selecting only the most representative documents (e.g., using 50 instead of all 80 descriptions in a cluster) while still maintaining the cluster's semantic meaning through the remaining representative descriptions. Similarly, we can truncate individual description lengths while preserving the overall topic through the collective context of the cluster. In contrast, with a naive LLM approach, truncating or dropping parts of individual descriptions would likely result in lost context and lower quality tags, as each description is processed in isolation without the benefit of related documents providing additional context.
+    \item \textbf{Computational Efficiency}: While our pipeline uses LLMs, it does so more efficiently by processing clusters rather than individual descriptions. In a naive approach, we would need $n$ LLM calls for $n$ descriptions, while our clustering approach requires only $k$ calls, where $k$ is the number of clusters ($k < n/2$, $k < n/3$, or even $k < n / 5$, depending on the clustering parameters). This significantly reduces the number of LLM calls needed, particularly for large datasets with many similar descriptions. For large clusters, we can further optimize token usage by selecting only the most representative documents (e.g., using 50 instead of all 80 descriptions in a cluster) while still maintaining the cluster's semantic meaning through the remaining representative descriptions. Similarly, we can truncate individual description lengths while preserving the overall topic through the collective context of the cluster. In contrast, with a naive LLM approach, truncating or dropping parts of individual descriptions would result in lost context and lower quality tags, as each description is processed in isolation without the benefit of related documents providing additional context.
 
 \end{enumerate}
 
 \subsubsection{Alternative configurations}
-The pipeline described in \cref{fig:tag_generation_pipeline} is one possible configuration for extracting tags from the OpenML dataset descriptions, which we believe will yield high-quality tags. However, this pipeline may be computationally expensive due to the use of large language models and zeroshot text classifiers. To address this issue, we can consider alternative configurations that are more computationally efficient but may sacrifice some quality in tag generation.
+\label{sec:alternative_configurations}
+The pipeline described in \cref{fig:tag_generation_pipeline} is one possible configuration for extracting tags from the OpenML dataset descriptions, which we believe will yield high-quality tags based on our reasoning. However, this pipeline is more computationally expensive due to the use of large language models and zeroshot text classifiers. To address this issue, we can consider alternative configurations that are more computationally efficient but may sacrifice some quality in tag generation.
 
 \begin{enumerate}
-    \item \textbf{Simpler Models}: We could use a simpler/smaller LLM for step 9 (tag generation) or a more lightweight zeroshot text classifier \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024} for step 10 (tag filtering) to reduce computational cost. 
+    \item \textbf{Simpler Models}: We could use a smaller LLM for step 9 or a more lightweight zeroshot text classifier \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024} for step 10 to reduce computational cost. 
     
-    Alternatively, the zeroshot classifier could be entirely replaced with a cheaper LLM. However, the confidence scores that the LLM outputs may not be as accurate as those from the zeroshot classifier, which could result in lower tag quality by assigning irrelevant tags to descriptions or missing relevant tags.
+    Alternatively, the zeroshot classifier could be entirely replaced with a cheaper LLM. However, the confidence scores that the LLM outputs may not be as accurate as those from the zeroshot classifier, since the latter is specifically designed for text classification tasks. This could result in lower tag quality by assigning irrelevant tags to descriptions or missing relevant tags.
     
     \item \textbf{Pipeline Modification}: Depending on computational constraints, we could modify the pipeline to use only the most essential steps. For instance:
     \begin{itemize}
         \item Removing the zeroshot classifier and relying solely on the LLM
         \item Using the zeroshot classifier without the LLM
     \end{itemize}
-    However, we expect that eliminating either component would significantly reduce tag quality, so we do not recommend this approach.
+    However, we expect that eliminating either component would significantly reduce tag quality based on our reasoning in the previous sections, so we do not recommend this approach.
     
     \item \textbf{Skip Description Rewriting}: We could omit step 3, which involves rewriting augmented descriptions to be more human-readable. While this step enhances embedding quality and, consequently, tag quality, it is computationally expensive. If computational constraints become an issue, removing this step offers a reasonable trade-off.
     
@@ -152,7 +158,7 @@ The pipeline described in \cref{fig:tag_generation_pipeline} is one possible con
 We recommend maintaining the complete pipeline for initial evaluation to ensure high-quality tags, and only exploring these alternative configurations if computational constraints become problematic.
 
 \section{Automated evaluation metrics and baselines}
-\label{sec:automated_evaluation}
+\label{sec:automated_evaluation_methodology}
 In order to evaluate the quality of the extracted topics, we will use a combination of automated evaluation metrics and comparison with baselines. These metrics and baselines will help us assess the performance of our model and compare it to existing topic modeling techniques. The following sections provide an overview of the metrics and baselines we will use in our evaluation.
 
 \subsection{Metrics}
@@ -235,7 +241,7 @@ The log transformation is applied to both the coherence and diversity scores for
 
 The weights \( w_C \) and \( w_D \) are introduced to provide flexibility in balancing the relative importance of coherence and diversity. Depending on the evaluation goals, one may prioritize more coherent topics or more diverse topics. The weights ensure that both metrics contribute meaningfully to the final score, preventing one from overshadowing the other. This allows for fine-tuning of the metric based on the specific requirements of the task or dataset being modeled.
 
-By maximizing the weighted metric, we aim to find the hyperparameters that produce the most coherent and diverse topics. The hyperparameters we will tune include the number of topics, the parameters of the dimensionality reduction algorithm, the clustering algorithm, and other hyperparameters which will be explicitly defined in \cref{sec:automated_evaluation}.
+By maximizing the weighted metric, we aim to find the hyperparameters that produce the most coherent and diverse topics. The hyperparameters we will tune include the number of topics, the parameters of the dimensionality reduction algorithm, the clustering algorithm, and other hyperparameters which will be explicitly defined in \cref{sec:automated_evaluation_methodology}.
 
 \subsection{Limitations}
 It is important to note that the automated evaluation metrics and baselines have their limitations. Automated metrics such as topic coherence and diversity provide a quantitative measure of topic quality but may not fully capture the nuances of human judgment. These metrics are based on statistical properties of the topics and may not always align with human perceptions, even though they are widely used in the literature. We already mentioned the limitations of these metrics in \cref{sec:topic_coherence}.
@@ -267,8 +273,8 @@ We will begin by recruiting participants for the user study. Given that particip
 The study will utilize selected OpenML dataset descriptions as texts. Three separate surveys will be created, each containing the same set of texts but with different sets of tags:
 
 \begin{enumerate}
-\item A survey with tags generated by the \textit{proposed model} (\cref{sec:tag_generation}).
-\item A survey with tags generated by the \textit{baseline model}. As a baseline, we will use the tags generated by the Bayesian optimization-tuned Base BERTopic model (\cref{sec:tag_generation}). This will allow for a direct comparison of the proposed model's performance against an established approach to tag generation. We choose to use it as a baseline, since BERTopic has SOTA results in the literature, and we have optimized it using Bayesian optimization.
+\item A survey with tags generated by the \textit{proposed model} (\cref{sec:tag_generation_pipeline}).
+\item A survey with tags generated by the \textit{baseline model}. As a baseline, we will use the tags generated by the Bayesian optimization-tuned Base BERTopic model (\cref{sec:tag_generation_pipeline}). This will allow for a direct comparison of the proposed model's performance against an established approach to tag generation. We choose to use it as a baseline, since BERTopic has SOTA results in the literature, and we have optimized it using Bayesian optimization.
 \item A survey with \textit{human-generated tags}.
 \end{enumerate}
 
@@ -404,7 +410,7 @@ For each OpenML dataset description, we will present the LLM with the descriptio
 For each dataset, we will prompt the LLM to rate the relevance, generality, and coverage of the tags using the same 1-5 scale as in the human evaluation.
 
 \subsubsection{Rationale}
-This large-scale automated evaluation will allow us to assess the model's performance across a much larger and more diverse set of datasets, providing insights into the model's robustness and consistency. Additionally, it will enable us to generate a large amount of evaluation data quickly and cost-effectively.
+This large-scale automated evaluation will allow us to assess the model's performance across a much larger and more diverse set of datasets, providing insights into the model's robustness. Additionally, it will enable us to generate a large amount of evaluation data quickly and cost-effectively.
 
 However, it's important to note the limitations of this approach. LLMs, while sophisticated, are not perfect proxies for human judgment. The automated evaluation will not include the document pair tasks from the human evaluation, as the number of possible combinations of document pairs is prohibitively large ($O(n^2)$ for $n$ documents), limiting our ability to assess shared coverage across datasets. Moreover, the results may be influenced by biases inherent in the LLM's training data.
 
@@ -413,17 +419,35 @@ The results from this automated evaluation will be analyzed in conjunction with 
 \subsection{Limitations}
 Several limitations of this study should be acknowledged. The use of a convenience sample may limit the generalizability of the results. The evaluation of tags involves subjective judgments, which may introduce some variability in the results. The study focuses on a specific set of documents and may not cover all possible domains or types of datasets.
 
-Additionally, the study provides a snapshot of tag quality at the time of conducting the study. The study evaluates the quality of the tags generated by the proposed model with the chosen hyperparameters and submodels, meaning that the results may not be generalizable to other configurations of the model. For instance, changing the embedding model at Step 4 (\cref{sec:tag_generation}) may impact the quality of the tags downstream, or changing the LLM in the fine-tuning step (step 9) may affect the types of tags that are generated. Since it is not feasible to evaluate all possible configurations in a human study due to resource constraints, the results may not fully capture the model's performance across all possible configurations.
+Additionally, the study provides a snapshot of tag quality at the time of conducting the study. The study evaluates the quality of the tags generated by the proposed model with the chosen hyperparameters and submodels, meaning that the results may not be generalizable to other configurations of the model. For instance, changing the embedding model at Step 4 (\cref{sec:tag_generation_pipeline}) may impact the quality of the tags downstream, or changing the LLM in the fine-tuning step (step 9) may affect the types of tags that are generated. Since it is not feasible to evaluate all possible configurations in a human study due to resource constraints, the results may not fully capture the model's performance across all possible configurations.
 
 To add, resource constraints may limit the number of participants and documents evaluated. Meaning that the results may not be fully representative of the model's performance across all OpenML datasets.
 
 Although the large-scale automated evaluation will address the robustness limitation, it is not a perfect substitute for human judgment. The results may be influenced by biases in the LLM's training data and may not fully capture the nuances of human evaluation.
 
 \section{Chapter conclusion}
-This chapter addresses several of our research questions. \hyperref[rq1]{\textbf{RQ1}} is partially answered through our proposed data exploration, preprocessing and augmentation steps, which will help us understand the characteristics of OpenML dataset descriptions and their potential impact on model performance.
+This chapter presents a methodology for generating and evaluating tags for OpenML dataset descriptions. Our approach combines data exploration, preprocessing and augmentation, a novel tag generation pipeline, and an evaluation strategy combining automated and human methods.
 
-\hyperref[rq2]{\textbf{RQ2}} is addressed by our novel tag generation pipeline, which builds upon the BERTopic model and incorporates additional steps for fine-tuning and tag filtering.
+For data preparation, we outline an approach to understanding and improving OpenML dataset descriptions. We propose an unstructured exploratory data analysis to investigate dataset characteristics and patterns to detail any preprocessing and augmentation steps that may be necessary to improve the quality of the descriptions, and to identify potential limitations of the data. For traditional topic models like LDA and NMF, we detail necessary preprocessing steps including stemming, lemmatization, stop word removal, and tokenization. Modern embedding-based models like BERTopic typically do not require these steps. We also propose augmenting descriptions with metadata such as dataset names, existing tags, column names, and information scraped from source URLs where available, in order to provide more context for the subsequent steps in the pipeline.
 
-\hyperref[rq3]{\textbf{RQ3}} and \hyperref[rq4]{\textbf{RQ4}} are tackled through our evaluation strategy, which includes both automated metrics and a detailed human evaluation plan. We have outlined specific metrics and procedures for assessing the quality and usefulness of the generated tags.
+The core of our methodology is a ten-step pipeline that extends BERTopic. The pipeline progresses from original descriptions through description augmentation and rewriting by an LLM, followed by the creation of embeddings, dimensionality reduction, and clustering. After generating bag-of-words representations and applying c-TF-IDF, we introduce two new steps: LLM-based fine-tuning for tag generation (step 9) and zeroshot classification for tag filtering (step 10). The LLM component generates both regular tags (specific to cluster content) and overarching tags (capturing broader themes), addressing limitations of c-TF-IDF by incorporating semantic understanding beyond word frequencies. The zeroshot classifier leverages HDBSCAN's soft clustering to handle cases where descriptions belong to multiple topics.
 
-Additionally, we have proposed a large-scale automated evaluation using a language model as a proxy for human judgment, which further contributes to addressing \hyperref[rq3]{\textbf{RQ3}} and \hyperref[rq4]{\textbf{RQ4}}.
+Our pipeline offers several advantages over naive LLM approaches. It achieves contextual consistency through clustering, enables multi-level tag generation (keyword, regular, and overarching tags), provides cross-validation for the LLM fine-tuning step by using a zeroshot classifier, and improves computational efficiency by processing clusters rather than individual descriptions, reducing the number of LLM calls and token counts.
+
+The rationale for our two-step tag generation process (LLM fine-tuning followed by zeroshot classification) is supported by examining the limitations of using either component alone. Using only the LLM (step 9) would miss the opportunity to leverage soft clustering and filter irrelevant tags, while using only the zeroshot classifier (step 10) would rely on the limited c-TF-IDF representation for tag candidates. The combination allows us to generate higher quality tags while ensuring their relevance to specific descriptions.
+
+We acknowledge that the use of LLMs and zeroshot classifiers introduces computational overhead. To address this, we propose alternative configurations including simpler models (e.g., smaller LLMs or lightweight zeroshot classifiers \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024}), pipeline modifications (removing either the LLM or zeroshot classifier), skipping description rewriting, or combining generation and filtering steps. However, we expect these alternatives to result in lower tag quality and choose to maintain the complete pipeline in this work.
+
+For evaluation, our primary automated metrics are NPMI coherence and topic diversity, following the field's convergence on these metrics \cite{doogan_topic_2021, hoyle_is_2021, mimno_optimizing_nodate, lau_machine_2014}. We maintain the same reasoning outlined in \cref{sec:chapter_conclusion_preliminaries}.
+
+For baseline comparisons, we selected models representing different approaches to topic modeling: LDA and NMF as traditional statistical approaches, Top2Vec as an embedding-based model, and CTM as another neural topic model. This selection allows us to compare our approach against both established and modern techniques. Using OCTIS \cite{terragni_octis_2021} as our evaluation framework, we implement an automated pipeline that progresses from data fetching through preparation, model training, and evaluation. We employ Bayesian optimization through OCTIS to tune our model's hyperparameters, optimizing a custom weighted metric that combines coherence and diversity scores.
+
+Our human evaluation study is designed to assess four aspects of tag quality: relevance (how well tags represent document themes), generality (balance between specific and general tags), coverage (comprehensiveness of tag sets), shared coverage (identification of common themes across documents), and robustness (consistency of tag quality across documents and domains). We will recruit participants with relevant expertise and conduct evaluations using three sets of tags: those generated by our proposed model, a baseline model, and human annotators. This design allows direct comparison against both an established approach and the gold standard of human-generated tags.
+
+The evaluation procedure consists of two stages: Individual Document Evaluation and Document Pair Evaluation. In the first stage, participants perform an Intruder Detection Task \cite{chang_reading_2009, newman_evaluating_2010, musil_exploring_2024, lau_machine_2014, bhatia_automatic_2017, hoyle_is_2021} and a Tag Quality Assessment Task. The second stage involves identifying and evaluating common tags between document pairs. We control for variables such as texts, survey structure, and rating scales while manipulating the tag set as our independent variable, and setting relevance, generality, coverage, and shared coverage as dependent variables.
+
+To complement our human evaluation and to help assess robustness, we propose a large-scale automated evaluation using an LLM as a proxy for human judgment \cite{musil_exploring_2024}. This approach will evaluate the entire OpenML dataset, performing automated versions of the intruder detection and tag quality assessment tasks. While this allows broader coverage than human evaluation, we acknowledge that LLMs are imperfect proxies for human judgment and may be influenced by training data biases.
+
+Each evaluation approach has distinct limitations: automated metrics may not fully capture human perceptions of topic quality, human evaluation is constrained by participant availability and cognitive load, and large-scale automated evaluation may inherit biases from the underlying LLM. However, by combining these approaches, we seek to evaluate our model from multiple perspectives, providing a more complete understanding of its effectiveness in generating meaningful tags for OpenML datasets.
+
+This methodology addresses our research questions. \hyperref[rq1]{\textbf{RQ1}} is addressed through our data exploration, preprocessing, and augmentation approach, which will help us understand the characteristics and limitations of OpenML dataset descriptions. \hyperref[rq2]{\textbf{RQ2}} is addressed through our pipeline design, which extends BERTopic and also provides alternative configurations to balance computational cost with tag quality. The pipeline's modularity ensures it can evolve alongside advances in the field. \hyperref[rq3]{\textbf{RQ3}} is answered through our automated evaluation strategy using NPMI coherence and diversity metrics, baseline comparisons, and hyperparameter optimization via OCTIS. Finally, \hyperref[rq4]{\textbf{RQ4}} is addressed through our human evaluation study and large-scale automated evaluation, which provide an assessment of tag quality from a human perspective.

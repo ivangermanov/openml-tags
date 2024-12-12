@@ -1,4 +1,6 @@
-In this chapter, we present the results following the methodology described in Chapter~\ref{chapter:methodology}. We first present the results of the data exploration, preprocessing and augmentation. We then present the results of the automated evaluation, including topic coherence scores, topic diversity scores, silhouette scores, comparison with baseline models, and hyperparameter tuning. Then, we show the tag generation pipeline, including the base BERTopic model and its subcomponents and hyperparameters, the additional fine-tuning model, and zeroshot text classifier. Finally, we present the results of the human evaluation, followed by the results of the large-scale automated evaluation.
+\chapter{Results}\label{chapter:results}
+
+In this chapter, we present the results following the methodology described in Chapter~\ref{chapter:methodology}. We first present the results of the data exploration, preprocessing and augmentation. We then present the results of the automated evaluation, comparison with baseline models, and hyperparameter tuning. Then, we show the tag generation pipeline, including the base BERTopic model, its subcomponents and hyperparameters, the additional fine-tuning model, and zeroshot text classifier. Finally, we present the results of the human evaluation, followed by the results of the large-scale automated evaluation.
 
 \section{Data exploration, preprocessing and augmentation}
 \label{sec:data_exploration}
@@ -15,119 +17,160 @@ Additionally, we remove all datasets that have a cosine similarity of 0.99 or hi
 
 After augmenting the dataset descriptions, we observe that the augmented descriptions are longer, and potentially more informative, as illustrated in \cref{fig:description_vs_augmented_description}. All subsequent analyses are performed on the augmented dataset descriptions.
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.65\textwidth]{figures/description_vs_augmented_description.pdf}
+%     \caption{Histogram of the length of dataset descriptions vs augmented dataset descriptions}
+%     \label{fig:description_vs_augmented_description}
+% \end{figure}
+
+\cref{fig:words_of_descriptions} presents a histogram depicting the number of words in dataset descriptions. The lengths range from 0 to 1500 words, with the majority of descriptions being under 500 words. From the histogram, we can infer that the dataset descriptions are relatively short, with the majority being comparable in length to two Twitter tweets. This is important to note, as descriptions that are too short may lack enough information to generate meaningful tags. However, this may not necessarily pose an issue, as prior studies have successfully applied topic modeling to tweets and other short texts \cite{cataldi_emerging_2010, churchill_percolation-based_2020, curiskis_evaluation_2020, kasiviswanathan_emerging_2011, paul_discovering_2014, yin_dirichlet_2014}.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{figures/words_of_descriptions.pdf}
+%     \caption{Histogram of the number of words of dataset descriptions}
+%     \label{fig:words_of_descriptions}
+% \end{figure}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.65\textwidth]{figures/description_vs_augmented_description.pdf}
-    \caption{Histogram of the length of dataset descriptions vs augmented dataset descriptions}
-    \label{fig:description_vs_augmented_description}
-\end{figure}
-
-\cref{fig:length_of_descriptions} presents a histogram depicting the length of dataset descriptions. The lengths range from 0 to 10,000 words, with the majority of descriptions being under 5,000 words. A few outliers exceed 10,000 words.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/length_of_descriptions.pdf}
-    \caption{Histogram of the length of dataset descriptions}
-    \label{fig:length_of_descriptions}
+    \subfloat[Histogram of the length of dataset descriptions vs augmented dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/description_vs_augmented_description.pdf}\label{fig:description_vs_augmented_description}}
+    \hfill
+    \subfloat[Histogram of the number of words of dataset descriptions]{\includegraphics[width=0.49\textwidth]{figures/words_of_descriptions.pdf}\label{fig:words_of_descriptions}}
+    \caption{Analysis of dataset descriptions}
+    \label{fig:dataset_description_histograms}
 \end{figure}
 
 When we examine the availability of tags, we find that the majority of datasets already have tags associated with them (\cref{fig:tag_availability}). This suggests that the tag generation model may be able to leverage the existing tags to improve its performance.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/tag_availability.pdf}
-    \caption{Histogram of the number of datasets with and without tags}
-    \label{fig:tag_availability}
-\end{figure}
 
 When we analyze the number of tags associated with each dataset, we find that most datasets have between 0 and 5 tags, with a few datasets having more than 5 tags (\cref{fig:number_of_tags}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/number_of_tags.pdf}
-    \caption{Histogram of the number of tags associated with datasets}
-    \label{fig:number_of_tags}
+    \subfloat[Histogram of the number of tags associated with datasets]{\includegraphics[width=0.5\textwidth]{figures/number_of_tags.pdf}\label{fig:number_of_tags}}
+    \hfill
+    \subfloat[Histogram of the number of datasets with and without tags]{\includegraphics[width=0.5\textwidth]{figures/tag_availability.pdf}\label{fig:tag_availability}}
+    \caption{Analysis of tag distribution and availability in datasets}
+    \label{fig:tag_analysis}
 \end{figure}
 
-We then look at the number of features (columns) in the datasets. The distribution of the number of features is shown in \cref{fig:number_of_features}. Most datasets have fewer than 100 features, with a large number of datasets having more than 100 features. This is because those datasets are likely to be high-dimensional datasets from domains such as genomics, text processing, or image analysis, where numerous variables or measurements are collected for each sample.
+We then look at the number of features (columns) in the datasets. The distribution of the number of features is shown in \cref{fig:number_of_features}. Most datasets have fewer than 100 features, with a large number of datasets having more than 100 features. This is because those datasets are likely to be high-dimensional datasets from domains such as genomics, text processing, or image analysis, where numerous variables or measurements are collected for each sample. Four tag generation pipeline, we use up to 50 features per dataset, as including all features may lead to a high-dimensional space that is difficult to model.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/number_of_features.pdf}
-    \caption{Histogram of the number of features in datasets}
-    \label{fig:number_of_features}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{figures/number_of_features.pdf}
+%     \caption{Histogram of the number of features in datasets}
+%     \label{fig:number_of_features}
+% \end{figure}
 
 Additionally, we examine the cosine similarity between the augmented dataset descriptions to see whether there are datasets with similar descriptions and duplicates. The heatmap of the cosine similarity is shown in \cref{fig:cosine_similarity}. The majority of dataset descriptions have a low cosine similarity, indicating that they are distinct from one another. However, there are some datasets with high cosine similarity, suggesting that they may be duplicates or different versions of the same dataset.
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{figures/cosine_similarity.png}
+%     \caption{Heatmap of the cosine similarity between dataset descriptions}
+%     \label{fig:cosine_similarity}
+% \end{figure}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/cosine_similarity.png}
-    \caption{Heatmap of the cosine similarity between dataset descriptions}
-    \label{fig:cosine_similarity}
+    \subfloat[Histogram of the number of features in datasets]{\includegraphics[width=0.5\textwidth]{figures/number_of_features.pdf}\label{fig:number_of_features}}
+    \hfill
+    \subfloat[Heatmap of the cosine similarity between dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/cosine_similarity.png}\label{fig:cosine_similarity}}
+    \caption{}
+    \label{fig:dataset_features_and_similarity}
 \end{figure}
+
 
 We find that OpenML datasets can have multiple versions. Our analysis of dataset versions reveals that most datasets have only 2 versions, though several datasets have more than 2 (\cref{fig:number_of_versions}).
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/number_of_versions.pdf}
-    \caption{Histogram of the number of versions of dataset descriptions}
-    \label{fig:number_of_versions}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/number_of_versions.pdf}
+%     \caption{Histogram of the number of versions of dataset descriptions}
+%     \label{fig:number_of_versions}
+% \end{figure}
 
 We also examine the similarity between different versions of the datasets. Our analysis shows that most datasets have a cosine similarity of 0.9 or higher within versions, suggesting that the versions are highly similar to one another (\cref{fig:cosine_similarity_dataset_versions}).
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/cosine_similarity_dataset_versions.pdf}
+%     \caption{Histogram of the cosine similarity of different versions of dataset descriptions}
+%     \label{fig:cosine_similarity_dataset_versions}
+% \end{figure}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/cosine_similarity_dataset_versions.pdf}
-    \caption{Histogram of the cosine similarity of different versions of dataset descriptions}
-    \label{fig:cosine_similarity_dataset_versions}
+    \subfloat[Histogram of the cosine similarity of different versions of dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/cosine_similarity_dataset_versions.pdf}\label{fig:cosine_similarity_dataset_versions}}
+    \hfill
+    \subfloat[Histogram of the number of versions of dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/number_of_versions.pdf}\label{fig:number_of_versions}}
+    \caption{Analysis of dataset versions: similarity and distribution}
+    \label{fig:dataset_version_analysis}
 \end{figure}
 
-From these histograms, we can infer that the dataset descriptions are relatively short, with the majority being comparable in length to two Twitter tweets. This is important to note, as descriptions that are too short may lack enough information to generate meaningful tags. However, this may not necessarily pose an issue, as prior studies have successfully applied topic modeling to tweets and other short texts \cite{cataldi_emerging_2010, churchill_percolation-based_2020, curiskis_evaluation_2020, kasiviswanathan_emerging_2011, paul_discovering_2014, yin_dirichlet_2014}.
 
 We apply Named Entity Recognition (NER) and Part-of-Speech (POS) tagging to the dataset descriptions to identify the most common entities and parts of speech (\cref{fig:pos,fig:ner}). A significant number of words are tagged as \textit{X}, indicating that the POS tagger is unable to determine the part of speech for these words. This is likely due to the presence of domain-specific terms not included in the POS tagger's vocabulary, as well as unrecognized or anomalous tokens and symbols. Additionally, we find that the most frequent named entity is \textit{PERSON}, which can be attributed to the fact that many dataset descriptions reference the names of dataset authors or associated papers. Both of these findings pose challenges for the performance of the tag generation model, as unrecognized tokens and author names do not contribute meaningful information for generating relevant tags.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/pos.pdf}
-    \caption{Bar chart of the most common parts of speech in dataset descriptions}
-    \label{fig:pos}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{figures/pos.pdf}
+%     \caption{Bar chart of the most common parts of speech in dataset descriptions}
+%     \label{fig:pos}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{figures/ner.pdf}
+%     \caption{Bar chart of the most common named entities in dataset descriptions}
+%     \label{fig:ner}
+% \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/ner.pdf}
-    \caption{Bar chart of the most common named entities in dataset descriptions}
-    \label{fig:ner}
+    \subfloat[Bar chart of the most common parts of speech in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/pos.pdf}\label{fig:pos}}
+    \hfill
+    \subfloat[Bar chart of the most common named entities in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/ner.pdf}\label{fig:ner}}
+    \caption{Analysis of linguistic features in dataset descriptions}
+    \label{fig:linguistic_features}
 \end{figure}
 
-We also examine how many datasets include URLs to original sources in their descriptions (\cref{fig:url_availability}). A significant number of datasets contain URLs, which could be used to scrape additional text for augmenting the descriptions. However, upon closer inspection, we find that the information in these URLs is often redundant with what is already provided in the dataset descriptions. Nonetheless, for some datasets, the URLs contain additional text, which is not in the original description, that could add additional information useful for generating tags. We scrape these texts and we augment the dataset descriptions with them.
+We also examine how many original datasets include URLs to original sources in their descriptions (\cref{fig:url_availability}). A significant number of datasets contain URLs, which could be used to scrape additional text for augmenting the descriptions. However, upon closer inspection, we find that the information in these URLs is often redundant with what is already provided in the dataset descriptions. Nonetheless, for some datasets, the URLs contain additional text, which is not in the original description, that could add additional information useful for generating tags. We scrape these texts and we augment the dataset descriptions with them.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/url_availability.pdf}
-    \caption{Bar chart of the number of datasets with and without URLs to original sources}
-    \label{fig:url_availability}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{figures/url_availability.pdf}
+%     \caption{Bar chart of the number of datasets with and without URLs to original sources}
+%     \label{fig:url_availability}
+% \end{figure}
 
 We also explore the readability and complexity of the dataset descriptions by calculating the Flesch Reading Ease \cite{flesch_new_1948} (\cref{fig:flesch_reading_ease}). The Flesch Reading Ease score ranges from 0 to 100, with higher scores indicating easier readability. We find that the dataset descriptions are somewhat difficult to read, with many falling in the 0-60 range. This suggests that the descriptions may contain complex language and jargon that could require specialized knowledge to understand. This may also affect the embedding model performance, as it may struggle to capture the semantic meaning of complex or domain-specific terms which the embedding model has not been trained on.
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.85\textwidth]{figures/flesch_reading_ease.pdf}
+%     \caption{Histogram of the Flesch Reading Ease scores for dataset descriptions}
+%     \label{fig:flesch_reading_ease}
+% \end{figure}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/flesch_reading_ease.pdf}
-    \caption{Histogram of the Flesch Reading Ease scores for dataset descriptions}
-    \label{fig:flesch_reading_ease}
+    \subfloat[Bar chart of the number of datasets with and without URLs to original sources]{\includegraphics[width=0.5\textwidth]{figures/url_availability.pdf}\label{fig:url_availability}}
+    \hfill
+    \subfloat[Histogram of the Flesch Reading Ease scores for dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/flesch_reading_ease.pdf}\label{fig:flesch_reading_ease}}
+    \caption{}
+    \label{fig:url_and_readability_analysis}
 \end{figure}
 
 In this section, we described the most pertinent findings from our data exploration. For readers interested in a more detailed analysis, additional information can be found in the \textit{eda.ipynb} notebook in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
 
 \section{Automated evaluation metrics and baselines}
-\label{sec:automated_evaluation}
-We first explain the hyperparameter tuning (Bayesian optimization) process. Then, we explain the baseline models we use and what parameters we choose for them. We then showcase the results of the comparison between the baseline models and the hyperparameter-optimized BERTopic model.
+\label{sec:automated_evaluation_results}
+Following \cref{sec:automated_evaluation_methodology}, we first explain the hyperparameter tuning (Bayesian optimization) process. Then, we explain the baseline models we use and what parameters we choose for them. We then showcase the results of the comparison between the baseline models and the hyperparameter-optimized BERTopic model.
 
 \subsection{Hyperparameter tuning}
+\label{sec:hyperparameter_tuning_results}
 Using OCTIS, we perform hyperparameter tuning for the \textit{Base BERTopic model}. As an objective metric, we use the weighted metric we defined in \cref{sec:hyperparameter_tuning}. We set ranges for the hyperparameters, which are based on prior knowledge of good default values and the OpenML dataset characteristics. The hyperparameters and their respective search spaces are as follows:
 
 \begin{itemize}
@@ -144,7 +187,7 @@ Using OCTIS, we perform hyperparameter tuning for the \textit{Base BERTopic mode
     \item \textbf{vectorizer\_stop\_words}: We set the stop words for vectorization to be 'english'.
     \item \textbf{vectorizer\_tokenizer}: This boolean hyperparameter controls whether a custom tokenizer is used. We set this to \texttt{False}.
     \item \textbf{outliers\_strategy}: This defines how outliers should be handled. For this study, we set it to \textit{none}, meaning that no specific outlier handling strategy is applied.
-    \item \textbf{embedding\_model}: This hyperparameter defines the embedding model used for the \textit{Base BERTopic model}. Since they are slower to evaluate, we only consider the \texttt{Salesforce/\allowbreak SFR-Embedding-\allowbreak Mistral} model, as it was SOTA on the MTEB leaderboard \cite{muennighoff_mteb_2023} at the time of writing.
+    \item \textbf{embedding\_model}: This hyperparameter defines the embedding model used for the \textit{Base BERTopic model}. Since they are slower to evaluate, we only consider the \texttt{Salesforce/\allowbreak SFR-Embedding-2\allowbreak\_R} \cite{noauthor_salesforcesfr-embedding-2_r_2024} model, as it is one of the best performing models on the MTEB leaderboard \cite{muennighoff_mteb_2023} at the time of writing.
     \item \textbf{representation\_model}: This hyperparameter defines the representation model used for the BERTopic model. Since they are slower to evaluate, we only consider spaCy's Part-of-Speech model called \texttt{en\_core\_web\_lg}.
 \end{itemize}
 
@@ -166,7 +209,7 @@ We can see that the optimization process converges to a stable solution relative
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/bayesian_optimization.pdf}
+    \includegraphics[width=0.75\textwidth]{figures/bayesian_optimization.pdf}
     \caption{Results of the Bayesian optimization process}
     \label{fig:bayesian_optimization}
 \end{figure}
@@ -219,30 +262,41 @@ In \cref{fig:openml_npmi} we present the NPMI scores for the hyperparameter-opti
     \item \textbf{BERTopic\_optimized\_POS\_reduced\_range}: The BERTopic model we optimized with Bayesian optimization above.
     \item \textbf{BERTopic\_optimized\_POS\_full\_range}: Similar to the previous model, also optimized with Bayesian optimization, but with a wider range of hyperparameters. We choose not to use this model as we are interested in exploring smaller topic sizes, but we provide it for comparison in the case where we do not restrict the hyperparameter search space.
     \item \textbf{BERTopic\_POS}: The BERTopic model with default hyperparameters (also with the spaCy Part-of-Speech model as the representation model). This is the default model provided by the BERTopic library, without any hyperparameter optimization. We include this model to compare the performance of the hyperparameter-optimized model with the default settings.
-    \item \textbf{BERTopic\_POS\_mpnet}: Similar to the model above, but with the \texttt{all-mpnet-base-v2} embedding model instead of \texttt{Salesforce/\allowbreak SFR-Embedding-\allowbreak Mistral}. We choose this model to explore the impact of different embedding models on the BERTopic model, since \texttt{all\allowbreak-mpnet\allowbreak-base\allowbreak-v2} is a relatively small model compared to \texttt{Salesforce/\allowbreak SFR-Embedding-\allowbreak Mistral}, which is a SOTA model on the MTEB leaderboard \cite{muennighoff_mteb_2023}.
+    \item \textbf{BERTopic\_POS\_mpnet}: Similar to the model above, but with the \texttt{all-mpnet-base-v2} embedding model instead of \texttt{Salesforce/\allowbreak SFR-Embedding-2\allowbreak\_R} \cite{noauthor_salesforcesfr-embedding-2_r_2024}. We choose this model to explore the impact of different embedding models on the BERTopic model, since \texttt{all\allowbreak-mpnet\allowbreak-base\allowbreak-v2} is a relatively small model compared to \texttt{Salesforce/\allowbreak SFR-Embedding-2\allowbreak\_R} \cite{noauthor_salesforcesfr-embedding-2_r_2024}, which is one of the best performing models on the MTEB leaderboard \cite{muennighoff_mteb_2023}.
 \end{itemize}
 
 We choose these four variations of the BERTopic model to explore the impact of different hyperparameters on the model's performance. 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/openml_npmi.pdf}
-    \caption{Line chart of the NPMI scores for the hyperparameter-optimized BERTopic model and the baseline models}
-    \label{fig:openml_npmi}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=1\textwidth]{figures/openml_npmi.pdf}
+%     \caption{Line chart of the NPMI scores for the hyperparameter-optimized BERTopic model and the baseline models}
+%     \label{fig:openml_npmi}
+% \end{figure}
 
-We observe that the NMF model outperforms all models across all topic numbers. However, when we look at \cref{fig:openml_diversity}, we see that the NMF model has very low diversity scores. This suggests that the NMF model may be picking the same terms in each topic, leading to high coherence but low diversity. For NPMI, we then see that the BERTopic models perform the second best, with small differences between them. We see that \textbf{BERTopic\_optimized\_POS\_reduced\_range} performs slightly worse than the other BERTopic models, but this is likely due to the smaller topic sizes we explored, since this leads to a higher number of smaller clusters, leading to slightly lower coherence, but higher diversity. We see that LDA, CTM, and Top2Vec perform worse than the BERTopic models.
+We observe that the NMF model outperforms all models across all topic numbers. However, when we look at \cref{fig:openml_diversity}, we see that the NMF model has very low diversity scores. This suggests that the NMF model may be picking the same terms in each topic, leading to high coherence but low diversity, as explained in the coherence-diversity trade-off in \cref{sec:chapter_conclusion_preliminaries}. For NPMI, we then see that the BERTopic models perform the second best, with small differences between them. We see that \textbf{BERTopic\_optimized\_POS\_reduced\_range} performs slightly worse than the other BERTopic models, but this is likely due to the smaller topic sizes we explored, since this leads to a higher number of smaller clusters, leading to slightly lower coherence, but higher diversity. We see that LDA, CTM, and Top2Vec perform worse than the BERTopic models.
 
 As for diversity, we see that the \textbf{BERTopic\_optimized\_POS\_reduced\_range} has the highest average diversity scores, followed by the other BERTopic models. This suggests that the BERTopic models are able to capture a wider range of terms in their topics compared to the other models. Surprisingly, the Top2Vec model has the lowest NPMI and diversity scores.
 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=1.0\textwidth]{figures/openml_diversity.pdf}
+%     \caption{Line chart of the diversity scores for the hyperparameter-optimized BERTopic model and the baseline models}
+%     \label{fig:openml_diversity}
+% \end{figure}
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/openml_diversity.pdf}
-    \caption{Line chart of the diversity scores for the hyperparameter-optimized BERTopic model and the baseline models}
-    \label{fig:openml_diversity}
+    \subfloat[Line chart of the diversity scores for the hyperparameter-optimized BERTopic model and the baseline models]{\includegraphics[width=0.49\textwidth]{figures/openml_diversity.pdf}\label{fig:openml_diversity}}
+    \hfill
+    \subfloat[Line chart of the NPMI scores for the hyperparameter-optimized BERTopic model and the baseline models]{\includegraphics[width=0.5\textwidth]{figures/openml_npmi.pdf}\label{fig:openml_npmi}}
+    \caption{Comparison of diversity and NPMI Scores for different topic models}
+    \label{fig:diversity_and_npmi_comparison}
 \end{figure}
 
-In \cref{tab:openml_results}, we present the NPMI and diversity scores for the models. We highlight the best scores in dark green and the subsequent best scores in lighter green. We see that the BERTopic models perform well in terms of diversity, with the \textbf{BERTopic\_optimized\_POS\_reduced\_range} model having the highest diversity score. If we only look at the BERTopic models, we can note a strong negative Pearson correlation between NPMI and diversity scores of -0.67. This suggests that the higher coherence may be driven by the inclusion of more common terms in the topics, while the diversity score is driven by the inclusion of more unique terms. In any case, the BERTopic models outperform the baseline models in terms of combined NPMI and diversity scores.
+In \cref{tab:openml_results}, we present the averaged NPMI and diversity scores for the models. We highlight the best scores in dark green and the subsequent best scores in lighter green. We see that the BERTopic models perform well in terms of diversity, with the \textbf{\allowbreak BERTopic\_\allowbreak optimized\_\allowbreak POS\_\allowbreak reduced\_range} model having the highest diversity score. If we only look at the BERTopic models, we can note a strong negative Pearson correlation between NPMI and diversity scores of -0.67. Surpisingly, \textbf{BERTopic\_\allowbreak POS\_\allowbreak mpnet} has the highest NPMI score (after NMF), even though it uses a smaller embedding model. However, we can see it has a lower diversity score compared to the other BERTopic models. This suggests that the higher coherence may be driven by the inclusion of more common terms in the topics, while the diversity score is driven by the inclusion of more unique terms, as explained in \cref{sec:chapter_conclusion_preliminaries}. In any case, the BERTopic models outperform the baseline models in terms of combined NPMI and diversity scores. 
+
+Looking at the combined scores (NPMI + diversity), the top three performing models are \textbf{BERTopic\_\allowbreak optimized\_\allowbreak POS\_\allowbreak full\_\allowbreak range} with a score of 0.812, followed by \textbf{BERTopic\_POS} with 0.783, and then \textbf{BERTopic\_\allowbreak optimized\_\allowbreak POS\_\allowbreak reduced\_\allowbreak range} with 0.779. This is expected, as for the first model, we explore a wider range of hyperparameters, which allows for more flexibility in the model's performance. For the second model, we use the default hyperparameters, which are already performing well. For the third model, we explore smaller topic sizes, which leads to a higher number of smaller clusters, leading to slightly lower coherence, but higher diversity.
 
 \begin{table}[h]
     \centering
@@ -270,39 +324,29 @@ In \cref{tab:openml_results}, we present the NPMI and diversity scores for the m
 \subsubsection{Statistical significance}
 As mentioned earlier, we had 10 runs for each model and topic number combination. We will now assess whether there are statistically significant differences between the performance of the models. We check whether the assumptions for ANOVA are met, and if not, we use Welch's ANOVA or Kruskal-Wallis (non-parametric) tests.
 
-The first assumption for ANOVA is that the residuals are normally distributed. We apply the Shapiro-Wilk test to check whether the residuals for the NPMI values (the differences between the observed and predicted NPMI values) are normally distributed. The Shapiro-Wilk test returned a statistic of 0.905 and a p-value of 3.30e-18, indicating a significant deviation from normality. Although the statistic is relatively close to 1, suggesting that the residuals are not drastically non-normal, the extremely small p-value suggests that the deviation is statistically significant. As for the diversity values, the Shapiro-Wilk test returned a statistic of 0.968 and a p-value of 8.70e-10, also indicating a significant deviation from normality, but with a statistic even closer to 1.
+The first assumption for ANOVA is that the residuals are normally distributed. We apply the Shapiro-Wilk test to check whether the residuals for the NPMI values (the differences between the observed and predicted NPMI values) are normally distributed. The Shapiro-Wilk test returns a statistic of 0.905 and a p-value of 3.30e-18, indicating a significant deviation from normality. Although the statistic is relatively close to 1, suggesting that the residuals are not drastically non-normal, the extremely small p-value suggests that the deviation is statistically significant. As for the diversity values, the Shapiro-Wilk test returns a statistic of 0.968 and a p-value of 8.70e-10, also indicating a significant deviation from normality, but with a statistic even closer to 1.
 
 Given this result, we further inspect the residuals using visual diagnostics with Q-Q plots and histograms to assess the nature and extent of the deviation from normality. If the deviation is minor, ANOVA may still be appropriate. \cref{fig:qqplot_npmi} and \cref{fig:histogram_npmi} show the Q-Q plot and histogram of the residuals for the NPMI values, respectively. We observe that the residuals are approximately normally distributed, with some deviations at the tails. \cref{fig:qqplot_diversity} and \cref{fig:histogram_diversity} show the Q-Q plot and histogram of the residuals for the diversity values, respectively. We observe a similar pattern for the diversity residuals, with some deviations at the tails. Given that ANOVA is relatively robust to deviations at the tails, since extreme values do not have a large impact on the F-statistic, we consider this assumption to be met.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/qqplot_npmi.pdf}
-    \caption{Q-Q plot of the residuals for the NPMI values}
-    \label{fig:qqplot_npmi}
+    \subfloat[Q-Q plot of the residuals for the NPMI values]{\includegraphics[width=0.5\textwidth]{figures/qqplot_npmi.pdf}\label{fig:qqplot_npmi}}
+    \hfill
+    \subfloat[Histogram of the residuals for the NPMI values]{\includegraphics[width=0.5\textwidth]{figures/histogram_npmi.pdf}\label{fig:histogram_npmi}}
+    \caption{Analysis of residuals for NPMI values}
+    \label{fig:npmi_residuals_analysis}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{figures/histogram_npmi.pdf}
-    \caption{Histogram of the residuals for the NPMI values}
-    \label{fig:histogram_npmi}
+    \subfloat[Q-Q plot of the residuals for the diversity values]{\includegraphics[width=0.5\textwidth]{figures/qqplot_diversity.pdf}\label{fig:qqplot_diversity}}
+    \hfill
+    \subfloat[Histogram of the residuals for the diversity values]{\includegraphics[width=0.5\textwidth]{figures/histogram_diversity.pdf}\label{fig:histogram_diversity}}
+    \caption{Analysis of Residuals for Diversity Values}
+    \label{fig:diversity_residuals_analysis}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/qqplot_diversity.pdf}
-    \caption{Q-Q plot of the residuals for the diversity values}
-    \label{fig:qqplot_diversity}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\textwidth]{figures/histogram_diversity.pdf}
-    \caption{Histogram of the residuals for the diversity values}
-    \label{fig:histogram_diversity}
-\end{figure}
-
-The second assumption for ANOVA is that the residuals have equal variance. We apply the Levene test and the Bartlett test to check whether the residuals have equal variance, for each model and topic number combination. \cref{tab:levene_bartlett} shows the results of the Levene and Bartlett tests for the NPMI and diversity values. We observe that the p-values are mostly below 0.05, indicating that the residuals do not have equal variance. This violates the assumption of homoscedasticity (equal variance) for ANOVA. Therefore, we will use Welch's ANOVA, since the first assumption is met, and the residuals are approximately normally distributed, but the assumption of equal variance is violated.
+The second assumption for ANOVA is that the residuals have equal variance. We apply the Levene test and the Bartlett test to check whether the residuals have equal variance, for each model and topic number combination. \cref{tab:levene_bartlett} shows the results of the Levene and Bartlett tests for the NPMI and diversity values. We observe that the p-values are mostly below 0.05, indicating that the residuals do not have equal variance. This violates the assumption of equal variance for ANOVA. Therefore, we will use Welch's ANOVA, since the first assumption is met, and the residuals are approximately normally distributed, but the assumption of equal variance is violated.
 
 \begin{table}[htbp]
     \centering
@@ -333,13 +377,7 @@ The second assumption for ANOVA is that the residuals have equal variance. We ap
 
 Applying Welch's ANOVA to the NPMI and diversity values, we find that there are statistically significant differences between the models for both metrics (\cref{tab:welch_anova}). For NPMI, 90.75\% of the variance is explained by the model, and for diversity, 81.50\% of the variance is explained by the model. These are both large effect sizes, suggesting that the models have a substantial impact on both metrics.
 
-We then perform post-hoc tests to determine which models are significantly different from one another. We use the Games-Howell post-hoc test, which is appropriate when the assumption of equal variance is violated. The results of the Games-Howell post-hoc test for the NPMI values are shown in \cref{tab:games_howell_npmi}. We observe that the BERTopic models are significantly different from the other models, but generally not much from each other, considering the high p-values. The only exception is \texttt{B\_OPT\_REDUCED}, where we restricted the hyperparameter search space to explore smaller topic sizes, which shows statistically significant differences from the other BERTopic models.
-
-The results of the Games-Howell post-hoc test for the diversity values are shown in \cref{tab:games_howell_diversity}. Similarly to the NPMI values, the BERTopic models are significantly different from the other models, but not much from each other.
-
-These findings imply that the BERTopic models perform similarly to each other, meaning that the hyperparameter optimization process does not have a significant impact on the model's performance, and that BERTopic is a robust model that can achieve good performance across a wide range of hyperparameters.
-
-However, this is the case if we consider NPMI and diversity in isolation. In \cref{sec:evaluation_metrics} and \cref{sec:automated_evaluation} we discussed the limitations of these metrics, so they should not be taken as the sole basis for model selection. In practice, we consider other factors, such as the interpretability of the topics, their relevance, and coverage, which we assess with the human evaluation.
+We then perform post-hoc tests using the Games-Howell method to determine which models are significantly different from one another, as this test is appropriate when the assumption of equal variance is violated. The results of the Games-Howell post-hoc test for the NPMI values are presented in \cref{tab:games_howell_npmi}. We observe a notable homogeneity among the BERTopic models, with generally high p-values indicating a lack of statistically significant difference in their coherence scores. The exception is \texttt{B\_OPT\_REDUCED}, which was configured to explore smaller topic sizes, showing statistically significant differences from other BERTopic models, suggesting that restricting the topic size in this way might negatively impact topic coherence. While NMF achieved the highest average NPMI score, the post-hoc test shows a statistically significant difference between NMF and all BERTopic models. The relatively high NPMI of \texttt{BERTopic\_POS\_mpnet} is worth noting, as this variant utilizes a smaller embedding model compared to others, suggesting that the choice of the embedding model might not be the primary determinant of topic coherence. The post-hoc analysis of diversity scores (\cref{tab:games_howell_diversity}) further underscores the strength of the BERTopic approach, with all BERTopic models demonstrating significantly higher diversity compared to the baseline models. The \texttt{B\_OPT\_FULL} and \texttt{B\_OPT\_REDUCED} models exhibit the highest diversity scores. These results highlight a trade-off between coherence and diversity, suggesting that models excelling in one metric may not perform as well in the other.
 
 \begin{table}[ht]
     \centering
@@ -355,93 +393,14 @@ However, this is the case if we consider NPMI and diversity in isolation. In \cr
     \end{tabular}
 \end{table}
 
-\begin{table}[ht]
-    \centering
-    \caption{Games-Howell post-hoc test results for NPMI}
-    \label{tab:games_howell_npmi}
-    \begin{tabular}{lccc}
-        \toprule
-        \textbf{Comparison (A vs. B)}              & \textbf{Diff} & \textbf{p-value} & \textbf{Hedges' g} \\
-        \midrule
-        \textbf{B\_POS vs. B\_POS\_mpnet}          & -0.0057       & 0.9385           & -0.197             \\
-        \textbf{B\_POS vs. B\_OPT\_FULL}           & -0.0013       & 0.999988         & -0.050             \\
-        \textbf{B\_POS vs. B\_OPT\_REDUCED}        & 0.0423        & 1.498801e-14     & 1.546              \\
-        \textbf{B\_POS vs. CTM}                    & 0.0021        & 0.999622         & 0.085              \\
-        \textbf{B\_POS vs. LDA}                    & 0.0300        & 7.661649e-13     & 1.439              \\
-        \textbf{B\_POS vs. NMF}                    & -0.0687       & 4.252154e-14     & -2.993             \\
-        \textbf{B\_POS vs. Top2Vec}                & 0.2147        & 0.000000         & 12.024             \\
-        \textbf{B\_POS\_mpnet vs. B\_OPT\_FULL}    & 0.0044        & 0.990508         & 0.141              \\
-        \textbf{B\_POS\_mpnet vs. B\_OPT\_REDUCED} & 0.0480        & 1.374456e-13     & 1.488              \\
-        \textbf{B\_POS\_mpnet vs. CTM}             & 0.0077        & 0.779209         & 0.260              \\
-        \textbf{B\_POS\_mpnet vs. LDA}             & 0.0356        & 8.421752e-11     & 1.324              \\
-        \textbf{B\_POS\_mpnet vs. NMF}             & -0.0630       & 3.841372e-14     & -2.205             \\
-        \textbf{B\_POS\_mpnet vs. Top2Vec}         & 0.2203        & 0.000000         & 8.929              \\
-        \textbf{B\_OPT\_FULL vs. B\_OPT\_REDUCED}  & 0.0436        & 1.706413e-13     & 1.471              \\
-        \textbf{B\_OPT\_FULL vs. CTM}              & 0.0034        & 0.995362         & 0.125              \\
-        \textbf{B\_OPT\_FULL vs. LDA}              & 0.0313        & 6.274092e-11     & 1.317              \\
-        \textbf{B\_OPT\_FULL vs. NMF}              & -0.0674       & 0.000000         & -2.631             \\
-        \textbf{B\_OPT\_FULL vs. Top2Vec}          & 0.2160        & 1.643130e-14     & 10.202             \\
-        \textbf{B\_OPT\_REDUCED vs. CTM}           & -0.0403       & 1.185607e-12     & -1.422             \\
-        \textbf{B\_OPT\_REDUCED vs. LDA}           & -0.0124       & 0.085287         & -0.485             \\
-        \textbf{B\_OPT\_REDUCED vs. NMF}           & -0.1110       & 1.110223e-16     & -4.074             \\
-        \textbf{B\_OPT\_REDUCED vs. Top2Vec}       & 0.1724        & 6.661338e-16     & 7.455              \\
-        \textbf{CTM vs. LDA}                       & 0.0279        & 2.411494e-10     & 1.266              \\
-        \textbf{CTM vs. NMF}                       & -0.0707       & 0.000000         & -2.940             \\
-        \textbf{CTM vs. Top2Vec}                   & 0.2126        & 9.992007e-15     & 11.039             \\
-        \textbf{LDA vs. NMF}                       & -0.0987       & 0.000000         & -4.776             \\
-        \textbf{LDA vs. Top2Vec}                   & 0.1847        & 0.000000         & 12.492             \\
-        \textbf{NMF vs. Top2Vec}                   & 0.2834        & 1.543210e-14     & 16.054             \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[ht]
-    \centering
-    \caption{Games-Howell post-hoc test tesults for diversity}
-    \label{tab:games_howell_diversity}
-    \begin{tabular}{lccc}
-        \toprule
-        \textbf{Comparison (A vs. B)}              & \textbf{Diff} & \textbf{p-value} & \textbf{Hedges' g} \\
-        \midrule
-        \textbf{B\_POS vs. B\_POS\_mpnet}          & 0.0431        & 0.000041         & 0.853              \\
-        \textbf{B\_POS vs. B\_OPT\_FULL}           & -0.0278       & 0.000044         & -0.845             \\
-        \textbf{B\_POS vs. B\_OPT\_REDUCED}        & -0.0378       & 0.000072         & -0.827             \\
-        \textbf{B\_POS vs. CTM}                    & 0.0921        & 0.000849         & 0.741              \\
-        \textbf{B\_POS vs. LDA}                    & 0.3587        & 4.329870e-15     & 10.075             \\
-        \textbf{B\_POS vs. NMF}                    & 0.3706        & 3.330669e-15     & 4.486              \\
-        \textbf{B\_POS vs. Top2Vec}                & 0.4058        & 4.107825e-15     & 5.537              \\
-        \textbf{B\_POS\_mpnet vs. B\_OPT\_FULL}    & -0.0709       & 1.008860e-12     & -1.494             \\
-        \textbf{B\_POS\_mpnet vs. B\_OPT\_REDUCED} & -0.0809       & 1.283196e-12     & -1.417             \\
-        \textbf{B\_POS\_mpnet vs. CTM}             & 0.0490        & 0.326768         & 0.380              \\
-        \textbf{B\_POS\_mpnet vs. LDA}             & 0.3156        & 1.221245e-15     & 6.387              \\
-        \textbf{B\_POS\_mpnet vs. NMF}             & 0.3275        & 2.609024e-14     & 3.662              \\
-        \textbf{B\_POS\_mpnet vs. Top2Vec}         & 0.3627        & 1.887379e-15     & 4.483              \\
-        \textbf{B\_OPT\_FULL vs. B\_OPT\_REDUCED}  & -0.0100       & 0.852516         & -0.236             \\
-        \textbf{B\_OPT\_FULL vs. CTM}              & 0.1199        & 4.375404e-06     & 0.975              \\
-        \textbf{B\_OPT\_FULL vs. LDA}              & 0.3865        & 0.000000         & 12.439             \\
-        \textbf{B\_OPT\_FULL vs. NMF}              & 0.3984        & 0.000000         & 4.933              \\
-        \textbf{B\_OPT\_FULL vs. Top2Vec}          & 0.4336        & 0.000000         & 6.090              \\
-        \textbf{B\_OPT\_REDUCED vs. CTM}           & 0.1299        & 9.880746e-07     & 1.023              \\
-        \textbf{B\_OPT\_REDUCED vs. LDA}           & 0.3965        & 0.000000         & 8.929              \\
-        \textbf{B\_OPT\_REDUCED vs. NMF}           & 0.4084        & 0.000000         & 4.707              \\
-        \textbf{B\_OPT\_REDUCED vs. Top2Vec}       & 0.4436        & 2.919887e-14     & 5.691              \\
-        \textbf{CTM vs. LDA}                       & 0.2666        & 0.000000         & 2.154              \\
-        \textbf{CTM vs. NMF}                       & 0.2785        & 5.573320e-14     & 1.928              \\
-        \textbf{CTM vs. Top2Vec}                   & 0.3137        & 0.000000         & 2.251              \\
-        \textbf{LDA vs. NMF}                       & 0.0120        & 9.880892e-01     & 0.146              \\
-        \textbf{LDA vs. Top2Vec}                   & 0.0471        & 5.115797e-03     & 0.649              \\
-        \textbf{NMF vs. Top2Vec}                   & 0.0351        & 4.794142e-01     & 0.338              \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
 \section{Tag generation}
-In \cref{sec:tag_generation} and \cref{fig:tag_generation_pipeline}, we presented the tag generation pipeline on a high level. \cref{fig:tag_generation_pipeline_specifics}, which is similar to \cref{fig:tag_generation_pipeline} shows the specifics of the tag generation pipeline. In particular, we show which specific submodels we used for the different steps in the pipeline:
+\label{sec:tag_generation_results}
+In \cref{sec:tag_generation_pipeline} and \cref{fig:tag_generation_pipeline}, we presented the tag generation pipeline on a high level. \cref{fig:tag_generation_pipeline_specifics}, which is similar to \cref{fig:tag_generation_pipeline} shows the specifics of the tag generation pipeline. In particular, we show which specific submodels we used for the different steps in the pipeline:
 \begin{enumerate}
     \item \textbf{Original Descriptions}: Same as in the high-level pipeline, we start with the original OpenML dataset descriptions.
     \item \textbf{Augmented Descriptions}: In \cref{sec:data_exploration}, we discussed how we augment the descriptions with additional information.
-    \item \textbf{Prompt Descriptions Human-Readable}: For this step, we used the \texttt{Llama-3-70b} model, as it was a model offering a good balance between performance and computational resources at the time of the experiment. We engineered a prompt to extract keyword tags from each individual description. We do not include the prompt here for brevity, but it is available in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
-    \item \textbf{Create Embeddings}: We use the \texttt{Salesforce/SFR-Embedding-2\_R} model, which was the best performing model on the MTEB benchmark \cite{muennighoff_mteb_2023}.
+    \item \textbf{Prompt Descriptions Human-Readable}: For this step, we used the \texttt{Llama-3-70b}, model, as it was a model offering a good balance between performance and computational resources at the time of the experiment. We engineered a prompt to extract keyword tags from each individual description. We do not include the prompt here for brevity, but it is available in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
+    \item \textbf{Create Embeddings}: We use the \texttt{Salesforce/SFR-Embedding-2\_R} model \cite{noauthor_salesforcesfr-embedding-2_r_2024}, which is one of the best performing models on the MTEB benchmark \cite{muennighoff_mteb_2023}.
     \item \textbf{Base BERTopic Model}: For dimensionality reduction, clustering, bag-of-words construction and c-TF-IDF calculation, we use the hyperparameter-optimized BERTopic model.
     \item \textbf{Fine-tune to Extract Tags}: For the fine-tuning step, we use the \texttt{Llama-3-70b} model. We prompt the model to generate tags for each cluster. The prompt can again be found in the repository.
     \item \textbf{Zeroshot Text Classifier}: We use the \texttt{MoritzLaurer/deberta-v3-large-zeroshot-v2.0} model \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024}, which at the time of the experiment was the best performing model for the zeroshot text classification task.
@@ -457,83 +416,37 @@ In \cref{sec:tag_generation} and \cref{fig:tag_generation_pipeline}, we presente
 \subsection{Hardware}
 We run the tag generation pipeline, with the exception of the \textit{Prompt Descriptions Human-Readable} step and the \textit{Fine-tune to Extract Tags} step, on an Apple M2 Max MacBook Pro with 64 GB of internal memory. We run the \textit{Prompt Descriptions Human-Readable} step and the \textit{Fine-tune to Extract Tags} step on \href{https://docs.together.ai/docs/introduction}{Together AI}, a platform that offers a cloud-based environment for running large language models.
 
+The LLM-based rewriting of all dataset descriptions into a more human-readable format took approximately 3 hours and cost around \$8.00. Generating the embeddings using the \textit{Salesforce/SFR-Embedding-2\_R} \cite{noauthor_salesforcesfr-embedding-2_r_2024} model took around 4 hours on the Apple M2 Max MacBook Pro. Training the base BERTopic model required only about 5 minutes. The LLM fine-tuning step using the Llama-3-70b model took roughly 2 hours and cost approximately \$4.80. These reduced costs in the fine-tuning step compared to the rewriting step are likely due to the smaller size of the rewritten descriptions and the implementation of prompt truncation for excessively large inputs. The Llama 3 70B model provided by TogetherAI, \texttt{Meta Llama 3 70B Instruct}, was priced at \$0.88 per 1M tokens at the time of this writing.
+
+By far the most time-consuming step in the pipeline was the zeroshot classification. Despite using a relatively small model (MoritzLaurer/deberta-v3-large-zeroshot-v2.0 with a maximum context length of 8192 tokens \cite{noauthor_moritzlaurerdeberta-v3-large-zeroshot-v20_2024}), this step took approximately 16 hours to complete. This is because each potential tag from the top \textit{n} topic clusters for each dataset description is individually fed to the zeroshot classifier, generating a confidence score for each tag-description pair. This process involves a large number of individual classifications, leading to a substantial time requirement.
+
+
+
 \subsection{Results}
-We now show the results of the output of the tag generation pipeline. \cref{fig:top_50_frequency} shows the top 50 regular tags by frequency, while \cref{fig:top_50_overarching_frequency} shows the top 50 overarching tags by frequency. We see that the tags are quite diverse, covering a wide range of topics. The regular tags are more specific, while the overarching tags are more general.
+We now show the results of the output of the tag generation pipeline. Approximately 6300 regular tags and 300 overarching tags were generated. It is expected that the number of regular tags is higher than the number of overarching tags, as the regular tags are more specific, while the overarching tags are more general and cover a wider range of topics.
+
+Investigating the generated tag frequency in detail, we see that the distribution of the tags is skewed. \cref{fig:histogram_tag_counts_log} shows the histogram of tag counts on a log scale. We see that the majority of tags have a low count, with a few tags having a very high count. This is expected, as natural language has been found to follow Zipf's law (Zipfian distribution), where a few terms are very common, while the majority of terms are rare \cite{zipf_psycho-biology_1935, piantadosi_zipfs_2014}.
+
+We observe a similar pattern when looking at histograms of the overarching tag counts, as seen in \cref{fig:histogram_overarching_tag_counts_log}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/top_50_frequency.pdf}
-    \caption{Top 50 tags by frequency}
-    \label{fig:top_50_frequency}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/top_50_overarching_frequency.pdf}
-    \caption{Top 50 overarching tags by frequency}
-    \label{fig:top_50_overarching_frequency}
-\end{figure}
-
-Investigating the tag counts in more detail, we see that the distribution of the tags is highly skewed. \cref{fig:box_plot_tag_counts} shows a box plot of the tag counts, while \cref{fig:box_plot_overarching_tag_counts} shows a box plot of the overarching tag counts. We see that the majority of tags have a low count, with a few tags having a very high count. This is expected, as natural language has been found to follow Zipf's law (Zipfian distribution), where a few terms are very common, while the majority of terms are rare \cite{zipf_psycho-biology_1935, piantadosi_zipfs_2014}.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/box_plot_tag_counts.pdf}
-    \caption{Box plot of tag counts}
-    \label{fig:box_plot_tag_counts}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/box_plot_overarching_tag_counts.pdf}
-    \caption{Box plot of overarching tag counts}
-    \label{fig:box_plot_overarching_tag_counts}
-\end{figure}
-
-We observe the same pattern when looking at histograms of the tag counts. \cref{fig:histogram_tag_counts} shows the histogram of tag counts, while \cref{fig:histogram_tag_counts_log} shows the histogram of tag counts on a log scale. We see that the distribution is highly skewed, with a few tags having a very high count. In \cref{fig:histogram_overarching_tag_counts} and \cref{fig:histogram_overarching_tag_counts_log}, we see the same pattern for the overarching tags. It is important to note that the number of regular tags is approximately 6300 and the number of overarching tags is approximately 300. This is also expected, as the overarching tags are more general and should cover a wider range of topics.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/histogram_tag_counts.pdf}
-    \caption{Histogram of tag counts}
-    \label{fig:histogram_tag_counts}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/histogram_tag_counts_log.pdf}
-    \caption{Histogram of tag counts (log scale)}
-    \label{fig:histogram_tag_counts_log}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/histogram_overarching_tag_counts.pdf}
-    \caption{Histogram of overarching tag counts}
-    \label{fig:histogram_overarching_tag_counts}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/histogram_overarching_tag_counts_log.pdf}
-    \caption{Histogram of overarching tag counts (log scale)}
-    \label{fig:histogram_overarching_tag_counts_log}
+    \subfloat[Tag counts]{\includegraphics[width=0.50\textwidth]{figures/histogram_tag_counts_log.pdf}\label{fig:histogram_tag_counts_log}}
+    \hfill
+    \subfloat[Overarching tag counts]{\includegraphics[width=0.50\textwidth]{figures/histogram_overarching_tag_counts_log.pdf}\label{fig:histogram_overarching_tag_counts_log}}
+    \caption{Histograms of tag counts (log scale)}
+    \label{fig:histograms}
 \end{figure}
 
 We now turn to investigating the tag scores, which are a measure from 0 to 1 that the zeroshot text classifier assigns to each tag based on each individual description. \cref{fig:histogram_scores} shows the histogram of tag scores, while \cref{fig:histogram_overarching_scores} shows the histogram of overarching tag scores. We see that the distribution of scores is skewed, with a few tags having a very low score (close to 0) and a few tags having a very high score (close to 1), with the remaining tags having scores in between. This means that the zeroshot text classifier is filtering out tags that are not relevant to the descriptions, while assigning high scores to tags that are relevant.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/histogram_scores.pdf}
-    \caption{Histogram of tag scores}
-    \label{fig:histogram_scores}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/histogram_overarching_scores.pdf}
-    \caption{Histogram of overarching tag scores}
-    \label{fig:histogram_overarching_scores}
+    \subfloat[Tag scores]{\includegraphics[width=0.50\textwidth]{figures/histogram_scores.pdf}\label{fig:histogram_scores}}
+    \hfill
+    \subfloat[Overarching tag scores]{\includegraphics[width=0.50\textwidth]{figures/histogram_overarching_scores.pdf}\label{fig:histogram_overarching_scores}}
+    \caption{Histograms of tag scores}
+    \label{fig:histograms_scores}
 \end{figure}
 
 \section{Human evaluation}
@@ -614,67 +527,101 @@ In the second task, \textit{Shared Coverage Assessment}, participants were asked
 \subsection{Participants}
 For the \textit{proposed model} survey, we recruited 21 participants, all of whom completed the survey. For the \textit{baseline model} survey, we recruited 19 participants, and for the \textit{human-generated} survey, we recruited 18 participants. There was a large overlap between the participants in the three surveys, with 93.3\% of participants completing all three surveys.
 
-As for the background of the participants, \cref{fig:education_pie} shows the education level of the participants. We see that the majority of participants have a Bachelor's degree, followed by a Master's degree. This is expected, as the aim of the study was to recruit individuals with a background that aligns with the background of OpenML users.
+As shown in \cref{tab:demographics}, the majority of participants across all three surveys hold a Bachelor's degree (57.1-63.2\%), followed by those with a Master's degree (19.0-22.2\%). This educational background aligns with our aim to recruit participants with backgrounds similar to OpenML users. The age distribution shows that most participants (81.0-84.2\%) are between 25 and 34 years old. Regarding English proficiency, the majority of participants demonstrate advanced language skills, with 71.4-78.9\% at C1 (Advanced) level and an additional 10.5-19.0\% at C2 (Proficient) level.
 
-
-\begin{figure}[h]
+\begin{table}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/education_pie.pdf}
-    \caption{Education level of participants}
-    \label{fig:education_pie}
-\end{figure}
+    \caption{Demographic characteristics of participants across surveys}
+    \begin{tabular}{llccc}
+        \hline
+        Category & Characteristic & Human-generated & Baseline model & Proposed model \\
+        \hline
+        \multirow{5}{*}{Education} & Bachelor's degree & 63.2\% & 57.1\% & 61.1\% \\
+        & Master's degree & 21.1\% & 19.0\% & 22.2\% \\
+        & Doctoral degree & 5.3\% & 19.0\% & 5.6\% \\
+        & Some college & 5.3\% & 4.8\% & 5.6\% \\
+        & High school or equivalent & 5.3\% & 0.0\% & 5.6\% \\
+        \hline
+        \multirow{3}{*}{Age} & 25-34 & 84.2\% & 81.0\% & 83.3\% \\
+        & 18-24 & 10.5\% & 9.5\% & 11.1\% \\
+        & 35-44 & 5.3\% & 9.5\% & 5.6\% \\
+        \hline
+        \multirow{4}{*}{English} & C1 (Advanced) & 78.9\% & 71.4\% & 77.8\% \\
+        & C2 (Proficient) & 10.5\% & 19.0\% & 11.1\% \\
+        & B1 (Intermediate) & 5.3\% & 4.8\% & 5.6\% \\
+        & Native speaker & 5.3\% & 4.8\% & 5.6\% \\
+        \hline
+    \end{tabular}
+    \label{tab:demographics}
+\end{table}
 
-\cref{fig:age_range_pie} shows the age range of the participants. We see that the majority of participants are between 25 and 34 years old.
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/education_pie.pdf}
+%     \caption{Education level of participants}
+%     \label{fig:education_pie}
+% \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/age_range_pie.pdf}
-    \caption{Age range of participants}
-    \label{fig:age_range_pie}
-\end{figure}
+% \cref{fig:age_range_pie} shows the age range of the participants. We see that the majority of participants are between 25 and 34 years old.
 
-\cref{fig:english_prof_pie} shows the English proficiency of the participants. We see that the majority of participants possess a high level of English proficiency.
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/age_range_pie.pdf}
+%     \caption{Age range of participants}
+%     \label{fig:age_range_pie}
+% \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/english_prof_pie.pdf}
-    \caption{English proficiency of participants}
-    \label{fig:english_prof_pie}
-\end{figure}
+% \cref{fig:english_prof_pie} shows the English proficiency of the participants. We see that the majority of participants possess a high level of English proficiency.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/english_prof_pie.pdf}
+%     \caption{English proficiency of participants}
+%     \label{fig:english_prof_pie}
+% \end{figure}
 
 \subsection{Results}
 \subsubsection{Stage 1 — Task 1: Intruder Detection}
-\cref{fig:intruder_detection_results} presents the intruder detection results for all three texts (\textit{League of Legends}, \textit{Forex} and \textit{Lung Cancer}), for all three surveys. The proposed model performed notably better than the baseline model, but slightly lagged behind the human-generated tags. The human-generated tags achieved the highest performance with a perfect score. These results indicate that human-generated tags were of higher quality, as participants more readily identified the intruder tags. This higher detection suggests that intruder tags were less related to the source text, demonstrating greater cohesion among the human-generated tag sets.
+\Cref{tab:intruder_detection} presents the intruder detection results for all three texts (\textit{League of Legends}, \textit{Forex} and \textit{Lung Cancer}), across all three surveys. The proposed model demonstrated substantially better performance than the baseline model (95.2\% vs 42.1\% overall detection rate), though it did not quite match the perfect performance achieved by human-generated tags (100\% detection rate). The baseline model showed particularly poor performance on the Forex text, with only 5.3\% detection rate. These results suggest that human-generated tags exhibited the highest quality, as participants consistently identified the intruder tags, indicating stronger cohesion among the human-generated tag sets.
 
-\begin{figure}[h]
+\begin{table}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/intruder_detection_results.pdf}
-    \caption{Intruder detection results}
-    \label{fig:intruder_detection_results}
-\end{figure}
+    \caption{Intruder detection results across different text sources and survey types}
+    \begin{tabular}{llcc}
+        \hline
+        Survey Type & Text Source & Detected & Not Detected \\
+        \hline
+        \multirow{4}{*}{Baseline Model} & League of Legends & 63.2\% (12) & 36.8\% (7) \\
+        & Forex & 5.3\% (1) & 94.7\% (18) \\
+        & Lung Cancer & 57.9\% (11) & 42.1\% (8) \\
+        & Total & 42.1\% (24) & 57.9\% (33) \\
+        \hline
+        \multirow{4}{*}{Proposed Model} & League of Legends & 100.0\% (21) & 0.0\% (0) \\
+        & Forex & 90.5\% (19) & 9.5\% (2) \\
+        & Lung Cancer & 95.2\% (20) & 4.8\% (1) \\
+        & Total & 95.2\% (60) & 4.8\% (3) \\
+        \hline
+        \multirow{4}{*}{Human-generated} & League of Legends & 100.0\% (18) & 0.0\% (0) \\
+        & Forex & 100.0\% (18) & 0.0\% (0) \\
+        & Lung Cancer & 100.0\% (18) & 0.0\% (0) \\
+        & Total & 100.0\% (54) & 0.0\% (0) \\
+        \hline
+    \end{tabular}
+    \label{tab:intruder_detection}
+\end{table}
 
 \subsubsection{Stage 1 — Task 2: Tag Quality Assessment}
-\cref{fig:tags_analysis_comparison_relevance,fig:tags_analysis_comparison_generality,fig:tags_analysis_comparison_coverage} show the tag quality assessment results for the baseline model, the proposed model, and the human-generated tags, respectively. The histograms display the distribution of scores for relevance, generality, and coverage across all surveys, combining data from all three texts. For each measure, we include the mean scores, standard deviations, and 95\% confidence intervals.
+\cref{fig:tags_analysis_comparison_relevance,fig:tags_analysis_comparison_generality,fig:tags_analysis_comparison_coverage} show the tag quality assessment results for the baseline model, the proposed model, and the human-generated tags, respectively. The histograms display the distribution of scores for relevance, generality, and coverage across all surveys (Human-generated — HG, Proposed Model — PM, Baseline Model — BM), combining data from all three texts. For each measure, we include the mean scores, standard deviations, and 95\% confidence intervals.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_relevance_comparison.pdf}
-    \caption{Aggregated relevance scores by model}
-    \label{fig:tags_analysis_comparison_relevance}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_generality_comparison.pdf}
-    \caption{Aggregated generality scores by model}
-    \label{fig:tags_analysis_comparison_generality}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.89\textwidth]{figures/tags_analysis_coverage_comparison.pdf}
-    \caption{Aggregated coverage scores by model}
-    \label{fig:tags_analysis_comparison_coverage}
+    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_relevance_comparison.pdf}\label{fig:tags_analysis_comparison_relevance}}
+    \hfill
+    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_generality_comparison.pdf}\label{fig:tags_analysis_comparison_generality}}
+    \hfill
+    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_coverage_comparison.pdf}\label{fig:tags_analysis_comparison_coverage}}
+    \caption{Aggregated scores comparison by model}
+    \label{fig:tags_analysis_comparison}
 \end{figure}
 
 % \begin{figure}[h]
@@ -710,24 +657,23 @@ As for the background of the participants, \cref{fig:education_pie} shows the ed
 %     \label{fig:tags_analysis_human}
 % \end{figure}
 
-Analysis of the scoring metrics revealed that the proposed model demonstrated superior performance compared to the baseline model. For relevance scores (higher is better), the baseline model achieved a mean of 2.39, while the proposed model achieved 3.63, which is closer to the human-generated tags' score of 3.95. Regarding generality, where larger standard deviations indicate a better balance between general and specific tags, the proposed model (SD = 1.40) performed better than the baseline (SD = 1.33) and nearly matched human-generated tags (SD = 1.41). In terms of coverage, the proposed model (mean = 4.46) outperformed the baseline model (mean = 2.65) and was close to the human-generated tags (mean = 4.54).
+Analysis of the scoring metrics revealed that the proposed model demonstrated superior performance compared to the baseline model. For relevance scores (higher is better), the baseline model achieved a mean of 2.39, while the proposed model achieved 3.63, which is closer to the human-generated tags' score of 3.95. Regarding generality, where larger standard deviations indicate a better balance between general and specific tags, the proposed model (mean = 2.93, SD = 1.40) performed better than the baseline (mean = 3.13, SD = 1.33) and nearly matched human-generated tags (mean = 3.00, SD = 1.41). In terms of coverage, the proposed model (mean = 4.46) outperformed the baseline model (mean = 2.65) and was close to the human-generated tags (mean = 4.54). However, it is notable that the baseline model had a significantly higher number of tags marked as "Not Applicable" (97 tags), compared to the proposed model (11) and human-generated tags (3). This suggests that while the baseline model's valid tags showed similar generality levels, it produced many irrelevant tags that evaluators couldn't meaningfully assess for generality.
 
 The human-generated tags achieved the best scores in relevance, generality and coverage, indicating that the human-generated tags were of higher quality. The proposed model outperformed the baseline model by a wide margin, and only somewhat lagged behind the human-generated tags. This suggests that the proposed model was able to generate better tags than the baseline model, but still not quite as high-quality as human-generated tags.
 
-Another notable observation (\cref{fig:tags_correlations}) is the correlation between relevance and generality scores. For the baseline model, the correlation was -0.42, for the proposed model, it was -0.59, and for human-generated tags, it was -0.19. This indicates that evaluators found more specific tags to be more relevant, which is expected, as more specific tags are more likely to be relevant to the text. However, the inclusion of more general tags can also be beneficial, as they provide a broader context.
+Another notable observation is the relationship between relevance and generality scores across the three tag sources. The proposed model exhibited the strongest negative correlation (-0.59), indicating that as tags became more specific, they were generally rated as more relevant. The baseline model showed a similar but moderately weaker pattern (-0.42). In contrast, human-generated tags demonstrated a much weaker negative correlation (-0.19), suggesting that human-generated tags were more relevant across both specific and general levels. For all three, we observe p-values below 0.001, indicating that the correlations are statistically significant. This balance between specificity and generality in human-generated tags indicates a more nuanced approach to tag creation, where both specific details and broader contextual tags can maintain high relevance.
+
+Additionally, we inspect the aggregated relevance and generality scores by tag type (regular vs. overarching tags, as explained in \cref{sec:tag_generation_pipeline}) in \cref{fig:tags_analysis_human_multiple_documents} for human-generated tags and in \cref{fig:tags_analysis_model_multiple_documents} for the proposed model. We see that the relevance scores mean for the proposed model is slightly higher for regular tags (3.77) than for overarching tags (3.48), while the generality scores are higher for overarching tags (3.52) than for regular tags (2.38). This second observation indicates that the pipeline we designed was successful in generating more specific tags for regular tags and more general tags for overarching tags. For human-generated tags, we see a similar pattern, with higher relevance scores for regular tags (4.03) than for overarching tags (3.81), and higher generality scores for overarching tags (3.74) than for regular tags (2.61).
+
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_baseline.pdf}\label{fig:tags_correlations_baseline}}
+    \subfloat[Aggregated relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_relevance.pdf}\label{fig:tags_analysis_model_multiple_documents_relevance}}
     \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_model.pdf}\label{fig:tags_correlations_model}}
-
-    \subfloat[Human-generated]{\includegraphics[width=0.45\textwidth]{figures/tags_correlations_human.pdf}\label{fig:tags_correlations_human}}
-    \caption{Relevance and generality correlations comparison}
-    \label{fig:tags_correlations}
+    \subfloat[Aggregated generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_generality.pdf}\label{fig:tags_analysis_model_multiple_documents_generality}}
+    \caption{Aggregated relevance and generality scores by tag type (proposed model)}
+    \label{fig:tags_analysis_model_multiple_documents}
 \end{figure}
-
-Additionally, we inspect the aggregated relevance and generality scores by tag type (regular vs. overarching tags, as explained in \cref{sec:tag_generation}) in \cref{fig:tags_analysis_human_multiple_documents} for human-generated tags and in \cref{fig:tags_analysis_model_multiple_documents} for the proposed model. We see that the relevance scores are higher for regular tags than for overarching tags, while the generality scores are higher for overarching tags than for regular tags. This second observation indicates that the pipeline we designed was successful in generating more specific tags for regular tags and more general tags for overarching tags.
 
 \begin{figure}[h]
     \centering
@@ -738,14 +684,6 @@ Additionally, we inspect the aggregated relevance and generality scores by tag t
     \label{fig:tags_analysis_human_multiple_documents}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \subfloat[Aggregated relevance scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_relevance.pdf}\label{fig:tags_analysis_model_multiple_documents_relevance}}
-    \hfill
-    \subfloat[Aggregated generality scores]{\includegraphics[width=0.5\textwidth]{figures/tags_analysis_model_multiple_documents_generality.pdf}\label{fig:tags_analysis_model_multiple_documents_generality}}
-    \caption{Aggregated relevance and generality scores by tag type (proposed model)}
-    \label{fig:tags_analysis_model_multiple_documents}
-\end{figure}
 
 The histograms provided here only show the aggregated results across all three texts, across all tags. For readers interested in the details for each individual text or tag, additional information can be found in the \textit{human\_evaluation\_analysis.ipynb} notebook in the \href{https://github.com/ivangermanov/openml-tags}{GitHub repository} \cite{germanov_topic_modeling_of_2024}.
 
@@ -772,226 +710,13 @@ We calculated the inter-rater reliability for the relevance, generality, and cov
 
 We also used ICC to assess the consistency of ratings across our raters (\cref{fig:icc_baseline,fig:icc_model,fig:icc_human}). Among the main forms of ICC, ICC(1) assumes random raters and absolute agreement, ICC(2) assumes random raters with consistency agreement, while ICC(3) is designed for fixed raters with consistency agreement. Furthermore, ICC(3,k) specifically measures the reliability of averaged ratings rather than individual ratings. ICC(3,k) is most appropriate for our study design because we have a fixed set of participants rating the same texts across different conditions (baseline, proposed model, and human-generated tags), and we are interested in the reliability of averaged ratings rather than individual ratings. ICC(3,k) accounts for systematic differences in how individual participants use the rating scale while providing reliability estimates for the averaged scores, making it the most suitable choice for comparing the reliability of ratings across our three tag generation methods.
 
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.45         & 16.65      & 1.68e-40   & [0.31, 0.64]    \\
-            ICC2          & 0.46         & 25.92      & 1.18e-57   & [0.31, 0.65]    \\
-            ICC3          & 0.57         & 25.92      & 1.18e-57   & [0.42, 0.74]    \\
-            ICC1k         & 0.94         & 16.65      & 1.68e-40   & [0.90, 0.97]    \\
-            ICC2k         & 0.94         & 25.92      & 1.18e-57   & [0.89, 0.97]    \\
-            ICC3k         & 0.96         & 25.92      & 1.18e-57   & [0.93, 0.98]    \\
-            \hline
-        \end{tabular}
-        \caption*{(a) Relevance}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & -0.03        & 0.53       & 0.711      & [-0.04, 0.15]   \\
-            ICC2          & 0.00         & 0.99       & 0.416      & [-0.02, 0.17]   \\
-            ICC3          & 0.00         & 0.99       & 0.416      & [-0.04, 0.28]   \\
-            ICC1k         & -0.87        & 0.53       & 0.711      & [-4.49, 0.78]   \\
-            ICC2k         & 0.00         & 0.99       & 0.416      & [-0.56, 0.80]   \\
-            ICC3k         & -0.01        & 0.99       & 0.416      & [-1.98, 0.88]   \\
-            \hline
-        \end{tabular}
-        \caption*{(b) Generality}
-    \end{minipage}
 
-    \vspace{1em}
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.33         & 10.16      & 1.80e-04   & [0.08, 0.95]    \\
-            ICC2          & 0.34         & 21.51      & 7.14e-07   & [0.10, 0.95]    \\
-            ICC3          & 0.52         & 21.51      & 7.14e-07   & [0.18, 0.98]    \\
-            ICC1k         & 0.90         & 10.16      & 1.80e-04   & [0.61, 1.00]    \\
-            ICC2k         & 0.91         & 21.51      & 7.14e-07   & [0.67, 1.00]    \\
-            ICC3k         & 0.95         & 21.51      & 7.14e-07   & [0.81, 1.00]    \\
-            \hline
-        \end{tabular}
-        \caption*{(c) Coverage}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.04         & 1.69       & 0.202      & [-0.04, 0.99]   \\
-            ICC2          & 0.06         & 3.65       & 0.072      & [-0.01, 0.99]   \\
-            ICC3          & 0.12         & 3.65       & 0.072      & [-0.02, 0.99]   \\
-            ICC1k         & 0.41         & 1.69       & 0.202      & [-2.24, 1.00]   \\
-            ICC2k         & 0.55         & 3.65       & 0.072      & [-0.18, 1.00]   \\
-            ICC3k         & 0.73         & 3.65       & 0.072      & [-0.64, 1.00]   \\
-            \hline
-        \end{tabular}
-        \caption*{(d) Shared Coverage}
-    \end{minipage}
-    \caption{ICC values for different rating types (baseline model)}
-    \label{fig:icc_baseline}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.34         & 11.93      & 2.88e-30   & [0.22, 0.53]    \\
-            ICC2          & 0.35         & 19.27      & 7.72e-47   & [0.22, 0.54]    \\
-            ICC3          & 0.47         & 19.27      & 7.72e-47   & [0.32, 0.65]    \\
-            ICC1k         & 0.92         & 11.93      & 2.88e-30   & [0.85, 0.96]    \\
-            ICC2k         & 0.92         & 19.27      & 7.72e-47   & [0.86, 0.96]    \\
-            ICC3k         & 0.95         & 19.27      & 7.72e-47   & [0.91, 0.98]    \\
-            \hline
-        \end{tabular}
-        \caption*{(a) Relevance}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.46         & 18.68      & 1.94e-35   & [0.30, 0.68]    \\
-            ICC2          & 0.46         & 31.71      & 4.86e-53   & [0.30, 0.69]    \\
-            ICC3          & 0.59         & 31.71      & 4.86e-53   & [0.43, 0.78]    \\
-            ICC1k         & 0.95         & 18.68      & 1.94e-35   & [0.90, 0.98]    \\
-            ICC2k         & 0.95         & 31.71      & 4.86e-53   & [0.90, 0.98]    \\
-            ICC3k         & 0.97         & 31.71      & 4.86e-53   & [0.94, 0.99]    \\
-            \hline
-        \end{tabular}
-        \caption*{(b) Generality}
-    \end{minipage}
-
-    \vspace{1em}
-
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.05         & 2.06       & 0.137      & [-0.02, 0.79]   \\
-            ICC2          & 0.07         & 5.57       & 0.007      & [0.01, 0.79]    \\
-            ICC3          & 0.18         & 5.57       & 0.007      & [0.02, 0.91]    \\
-            ICC1k         & 0.51         & 2.06       & 0.137      & [-0.91, 0.99]   \\
-            ICC2k         & 0.63         & 5.57       & 0.007      & [0.12, 0.99]    \\
-            ICC3k         & 0.82         & 5.57       & 0.007      & [0.27, 1.00]    \\
-            \hline
-        \end{tabular}
-        \caption*{(c) Coverage}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.19         & 5.99       & 0.019      & [0.00, 1.00]    \\
-            ICC2          & 0.20         & 10.25      & 0.004      & [0.02, 1.00]    \\
-            ICC3          & 0.31         & 10.25      & 0.004      & [0.03, 1.00]    \\
-            ICC1k         & 0.83         & 5.99       & 0.019      & [0.09, 1.00]    \\
-            ICC2k         & 0.84         & 10.25      & 0.004      & [0.34, 1.00]    \\
-            ICC3k         & 0.90         & 10.25      & 0.004      & [0.43, 1.00]    \\
-            \hline
-        \end{tabular}
-        \caption*{(d) Shared Coverage}
-    \end{minipage}
-    \caption{ICC values for different rating types (proposed model)}
-    \label{fig:icc_model}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.13         & 3.70       & 5.26e-07   & [0.06, 0.28]    \\
-            ICC2          & 0.15         & 8.70       & 7.21e-20   & [0.07, 0.31]    \\
-            ICC3          & 0.30         & 8.70       & 7.21e-20   & [0.18, 0.50]    \\
-            ICC1k         & 0.73         & 3.70       & 5.26e-07   & [0.52, 0.87]    \\
-            ICC2k         & 0.77         & 8.70       & 7.21e-20   & [0.59, 0.89]    \\
-            ICC3k         & 0.89         & 8.70       & 7.21e-20   & [0.80, 0.95]    \\
-            \hline
-        \end{tabular}
-        \caption*{(a) Relevance}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.34         & 10.38      & 9.38e-21   & [0.20, 0.56]    \\
-            ICC2          & 0.35         & 16.76      & 5.01e-32   & [0.21, 0.57]    \\
-            ICC3          & 0.47         & 16.76      & 5.01e-32   & [0.31, 0.68]    \\
-            ICC1k         & 0.90         & 10.38      & 9.38e-21   & [0.82, 0.96]    \\
-            ICC2k         & 0.91         & 16.76      & 5.01e-32   & [0.83, 0.96]    \\
-            ICC3k         & 0.94         & 16.76      & 5.01e-32   & [0.89, 0.97]    \\
-            \hline
-        \end{tabular}
-        \caption*{(b) Generality}
-    \end{minipage}
-
-    \vspace{1em}
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & -0.02        & 0.59       & 0.560      & [-0.05, 0.55]   \\
-            ICC2          & 0.00         & 1.09       & 0.348      & [-0.02, 0.56]   \\
-            ICC3          & 0.00         & 1.09       & 0.348      & [-0.04, 0.70]   \\
-            ICC1k         & -0.71        & 0.59       & 0.560      & [-5.77, 0.96]   \\
-            ICC2k         & 0.05         & 1.09       & 0.348      & [-0.65, 0.96]   \\
-            ICC3k         & 0.08         & 1.09       & 0.348      & [-2.78, 0.98]   \\
-            \hline
-        \end{tabular}
-        \caption*{(c) Coverage}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \begin{tabular}{lcccl}
-            \hline
-            \textbf{Type} & \textbf{ICC} & \textbf{F} & \textbf{p} & \textbf{CI95\%} \\
-            \hline
-            ICC1          & 0.10         & 3.09       & 0.088      & [-0.02, 0.99]   \\
-            ICC2          & 0.12         & 4.25       & 0.055      & [-0.01, 0.99]   \\
-            ICC3          & 0.15         & 4.25       & 0.055      & [-0.02, 1.00]   \\
-            ICC1k         & 0.68         & 3.09       & 0.088      & [-0.78, 1.00]   \\
-            ICC2k         & 0.70         & 4.25       & 0.055      & [-0.20, 1.00]   \\
-            ICC3k         & 0.76         & 4.25       & 0.055      & [-0.42, 1.00]   \\
-            \hline
-        \end{tabular}
-        \caption*{(d) Shared Coverage}
-    \end{minipage}
-    \caption{ICC values for different rating types (human-generated)}
-    \label{fig:icc_human}
-\end{figure}
 
 Looking at the ICC(3,k) values for relevance, where the F-statistic indicates the ratio of between-group to within-group variance (higher values showing stronger rater agreement), we see that the proposed model achieved an ICC of 0.95 ($F=19.27$, $p=7.72\times10^{-47}$, CI$_{95\%}$[0.91,0.98]), the baseline model an ICC of 0.96 ($F=25.92$, $p=1.18\times10^{-57}$, CI$_{95\%}$[0.93,0.98]), and the human-generated tags an ICC of 0.89 ($F=8.70$, $p=7.21\times10^{-20}$, CI$_{95\%}$[0.80,0.95]). For generality, the proposed model performed best with an ICC of 0.97 ($F=31.71$, $p=4.86\times10^{-53}$, CI$_{95\%}$[0.94,0.99]), followed by human-generated tags at 0.94 ($F=16.76$, $p=5.01\times10^{-32}$, CI$_{95\%}$[0.89,0.97]), while the baseline model showed poor reliability with -0.01 ($F=0.99$, $p=0.416$, CI$_{95\%}$[-1.98,0.88]) and a non-significant $p$-value indicating unreliable results. For coverage, the baseline model achieved the highest reliability at 0.95 ($F=21.51$, $p=7.14\times10^{-7}$, CI$_{95\%}$[0.81,1.00]), followed by the proposed model at 0.82 ($F=5.57$, $p=0.007$, CI$_{95\%}$[0.27,1.00]), while human-generated tags performed poorly at 0.08 ($F=1.09$, $p=0.348$, CI$_{95\%}$[-2.78,0.98]) with non-significant results. For shared coverage, the proposed model showed the strongest reliability at 0.90 ($F=10.25$, $p=0.004$, CI$_{95\%}$[0.43,1.00]), followed by human-generated tags at 0.76 ($F=4.25$, $p=0.055$, CI$_{95\%}$[-0.42,1.00]) and the baseline model at 0.73 ($F=3.65$, $p=0.072$, CI$_{95\%}$[-0.64,1.00]), though the latter two had borderline significant $p$-values suggesting less reliable results.
 
-Similar to Fleiss' Kappa, ICC may not be ideal for ordinal data, as it assumes continuous data. This is why Krippendorff's Alpha, which can handle both ordinal and nominal data, is a better choice. \cref{tab:kalpha} shows the Krippendorff's Alpha values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that the baseline model performs best in shared coverage ($\alpha=0.4818$), while showing moderate reliability for generality ($\alpha=0.2863$) and coverage ($\alpha=0.2600$), but lower reliability for relevance ($\alpha=0.1687$). The proposed model shows strongest reliability in coverage ($\alpha=0.5647$), moderate reliability in shared coverage ($\alpha=0.2497$) and relevance ($\alpha=0.2263$), but lower reliability in generality ($\alpha=0.1671$). The human-generated tags show the highest reliability for relevance ($\alpha=0.4692$) and coverage ($\alpha=0.4503$), but lower reliability for generality ($\alpha=0.2044$) and shared coverage ($\alpha=0.1898$). Overall, these values indicate moderate to fair agreement across all three approaches, with different strengths in different evaluation metrics.
+Similar to Fleiss' Kappa, ICC may not be ideal for ordinal data, as it assumes continuous data. We also provide results for Krippendorff's Alpha, which can handle both ordinal and nominal data. \cref{tab:kalpha} shows the Krippendorff's Alpha values for the different evaluation metrics for the baseline model, the proposed model, and the human-generated tags. We see that the baseline model performs best in shared coverage ($\alpha=0.4818$), while showing moderate reliability for generality ($\alpha=0.2863$) and coverage ($\alpha=0.2600$), but lower reliability for relevance ($\alpha=0.1687$). The proposed model shows strongest reliability in coverage ($\alpha=0.5647$), moderate reliability in shared coverage ($\alpha=0.2497$) and relevance ($\alpha=0.2263$), but lower reliability in generality ($\alpha=0.1671$). The human-generated tags show the highest reliability for relevance ($\alpha=0.4692$) and coverage ($\alpha=0.4503$), but lower reliability for generality ($\alpha=0.2044$) and shared coverage ($\alpha=0.1898$). 
+
+This analysis reveals a complex and sometimes contradictory pattern of interrater reliability. The metrics often disagree substantially in their assessment of reliability. For instance, while the proposed model shows remarkably high ICC values for generality (0.97) and shared coverage (0.90), the corresponding Krippendorff's Alpha values are notably low (0.1671 and 0.2497 respectively). Similarly, the baseline model's high ICC scores for relevance (0.96) and coverage (0.95) contrast sharply with its low Krippendorff's Alpha (0.1687). Human-generated tags show their own contradictions - strong ICC for relevance (0.89) paired with moderate Krippendorff's Alpha (0.4692), and very low ICC for coverage (0.08) yet moderate Krippendorff's Alpha (0.4503). These discrepancies between metrics make it particularly challenging to draw definitive conclusions about relative reliability across the different approaches.
 
 \begin{table}[htbp]
     \centering
@@ -1027,16 +752,24 @@ The top-left quadrant of the confusion matrix represents the true positives, i.e
 
 \begin{figure}[h]
     \centering
-    \subfloat[Baseline model]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:second_pair_common_tags_confusion_matrix_baseline}}
+    \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_confusion_matrix_baseline.pdf}\label{fig:second_pair_common_tags_confusion_matrix_baseline}}
     \hfill
-    \subfloat[Proposed model]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_model.pdf}\label{fig:second_pair_common_tags_confusion_matrix_model}}
+    \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_confusion_matrix_model.pdf}\label{fig:second_pair_common_tags_confusion_matrix_model}}
 
-    \subfloat[Human-generated]{\includegraphics[width=0.46\textwidth]{figures/second_pair_common_tags_confusion_matrix_human.pdf}\label{fig:second_pair_common_tags_confusion_matrix_human}}
+    \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_confusion_matrix_human.pdf}\label{fig:second_pair_common_tags_confusion_matrix_human}}
     \caption{Common tags confusion matrix comparison}
     \label{fig:second_pair_common_tags_confusion_matrix}
 \end{figure}
 
-In \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recall, specificity, and F1-Score between the first and second pairs for the baseline model, the proposed model, and human-generated tags, respectively. We see that the proposed model outperformed the baseline model, but still lagged behind human-generated tags. This indicates that the proposed model was able to identify common tags more accurately than the baseline model, but still not quite as accurately as human evaluators.
+To interpret the confusion matrices, in \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recall, specificity, and F1-Score between the first and second pairs for the baseline model, the proposed model, and human-generated tags, respectively. The results show varying performance patterns across different metrics. For the first pair, the proposed model achieved the highest accuracy (0.87) and F1-Score (0.83), outperforming both the baseline model (0.69 accuracy, 0.43 F1-Score) and slightly exceeding human-generated tags (0.83 accuracy, 0.79 F1-Score). However, for the second pair, human-generated tags demonstrated superior performance with 0.86 accuracy compared to the proposed model's 0.76 and the baseline's 0.60.
+
+The baseline model showed a peculiar pattern in the second pair, with perfect precision (1.00) due to having no false positives, but poor recall (0.29) due to a high number of false negatives. This is because the two surveys were in the same topic cluster, and since the zeroshot classifier was not applied, all the tags from the cluster were provided. These results showcase how not using the LLM fine-tuning step and the zeroshot classifier can lead to poor performance.
+
+The proposed model maintained more balanced metrics across both pairs, though with some decline in performance for the second pair, particularly in precision (dropping from 0.81 to 0.58). Human-generated tags showed the most consistent performance across both pairs, with all metrics maintaining relatively stable values between 0.69 and 0.89.
+
+These results suggest that while the proposed model shows promising performance, particularly for the first pair, its effectiveness varies more between different text pairs compared to human evaluators. The baseline model's extreme variations in metrics indicate less reliable performance overall.
+
+
 
 \begin{table}[h]
     \centering
@@ -1058,7 +791,7 @@ In \cref{tab:metrics_comparison_combined}, we compare accuracy, precision, recal
 \end{table}
 
 \paragraph{Statistical significance}
-We additionally perform Kruskal-Wallis tests to determine if the differences in the evaluation metrics between the baseline model, the proposed model, and human-generated tags are statistically significant. The Kruskal-Wallis test is a non-parametric test that compares the medians of two or more groups. We use this test because our data are ordinal and do not meet the assumptions of parametric tests.
+We additionally perform Kruskal-Wallis tests to determine if the differences in the evaluation metrics between the baseline model, the proposed model, and human-generated tags are statistically significant. The Kruskal-Wallis test is a non-parametric test that compares the medians of two or more groups. We use this test because our data are ordinal and do not meet the assumptions of parametric tests, which require a normal distribution and homogeneity of variances.
 
 \cref{tab:kruskal_wallis} shows the results of the Kruskal-Wallis H test for the different evaluation metrics. We see that the differences in relevance, coverage, and shared coverage are statistically significant, while the differences in generality are not statistically significant. The H-statistic indicates the magnitude of difference between the groups, with higher values suggesting greater differences. The highest H-statistic is observed for relevance (H = 239.29), indicating substantial differences in how participants rated tag relevance across the three methods. Coverage (H = 65.54) and shared coverage (H = 47.82) also show considerable differences, while generality shows minimal differences (H = 4.56).
 
@@ -1080,7 +813,7 @@ The effect sizes, measured by $\eta^2$, provide additional insight into the prac
     \label{tab:kruskal_wallis}
 \end{table}
 
-After finding these statistically significant differences, we perform post-hoc pairwise comparisons using Dunn's test with Bonferroni correction to identify which groups differ from each other. \cref{fig:dunns_test} shows the p-values for the post-hoc tests for relevance, generality, coverage, and shared coverage. The results indicate that the differences between the baseline model and the proposed model, as well as between the baseline model and human-generated tags, are statistically significant for all metrics. The differences between the proposed model and human-generated tags are only statistically significant for relevance (p = 0.011). For generality, coverage, and shared coverage, there were no statistically significant differences between our proposed model and human-generated tags (p = 0.158, p = 1.000, and p = 0.511 respectively). This suggests that while our model still lags behind human performance in terms of tag relevance, it achieves comparable performance to humans in generating tags with appropriate generality levels and comprehensive coverage of the text content. Given our sample size of 21 participants, the lack of statistically significant differences between the proposed model and human-generated tags for generality, coverage, and shared coverage may be due to limited statistical power. A larger number of participants would increase our ability to detect smaller differences between these approaches, if they exist. Future work with more raters could provide stronger statistical evidence to either confirm the apparent equivalence between our model and human performance or reveal subtle differences that our current sample size was unable to detect.
+After finding these statistically significant differences, we perform post-hoc pairwise comparisons using Dunn's test with Bonferroni correction to identify which groups differ from each other. \cref{fig:dunns_test} shows the p-values for the post-hoc tests for relevance, generality, coverage, and shared coverage. The results indicate that the differences between the baseline model and the proposed model, as well as between the baseline model and human-generated tags, are statistically significant for all metrics. The differences between the proposed model and human-generated tags are only statistically significant for relevance (p = 0.011). For generality, coverage, and shared coverage, there were no statistically significant differences between our proposed model and human-generated tags (p = 0.158, p = 1.000, and p = 0.511 respectively). This suggests that while our model still lags behind human performance in terms of tag relevance, it achieves comparable performance to humans in generating tags with appropriate generality levels and comprehensive coverage of the text content. Given our sample size of 21 participants, the lack of statistically significant differences between the proposed model and human-generated tags for generality, coverage, and shared coverage could be due to limited statistical power. A larger number of participants would increase our ability to detect smaller differences between these approaches, if they exist. Future work with more raters could provide stronger statistical evidence to either confirm the apparent equivalence between our model and human performance or reveal differences that our current sample size was unable to detect.
 
 \begin{figure}[h]
     \centering
@@ -1145,7 +878,7 @@ After finding these statistically significant differences, we perform post-hoc p
 
 We include Cliff's Delta effect size to provide additional context on the magnitude of differences between groups. Cliff's Delta is a non-parametric effect size measure that quantifies the difference between two groups by calculating the probability that a randomly selected observation from one group will be greater than a randomly selected observation from the other group. The effect sizes are interpreted as small (0.147), medium (0.33), and large (0.474) based on common guidelines. \cref{tab:cliffs_delta} shows the effect sizes for the different metrics and comparisons. We see that baseline scores differ substantially from both human and model scores for most metrics. For relevance ratings, there are large negative effects when comparing baseline to both human ($\delta = -0.703$) and model ($\delta = -0.599$), indicating that baseline tags were rated consistently lower in relevance. The small positive effect between human and model ratings ($\delta = 0.163$) suggests that model-generated tags achieve relevance levels comparable to human-generated ones.
 
-Generality shows a different pattern, with negligible effects across all comparisons ($\delta$ ranging from 0.014 to 0.112), indicating that all three methods produce tags with similar levels of generality.
+Generality shows a different pattern, with negligible effects across all comparisons ($\delta$ ranging from 0.014 to 0.112), indicating that all three methods produce tags with similar levels of generality. However, these results should be interpreted with caution, as the Not Applicable (NA) tags were excluded from the generality analysis.
 
 Coverage metrics reveal the most pronounced differences. Both overall coverage and shared coverage show large negative effects when comparing baseline to human ($\delta = -0.885$ and $-0.789$ respectively) and model ($\delta = -0.888$ and $-0.681$ respectively). This strongly suggests that both human and model-generated tag sets provide substantially better coverage than baseline tags. The negligible to small effects between human and model coverage scores ($\delta = -0.053$ for coverage, $\delta = 0.200$ for shared coverage) indicate that the model achieves coverage levels similar to human performance.
 
@@ -1180,38 +913,7 @@ Coverage metrics reveal the most pronounced differences. Both overall coverage a
     \label{tab:cliffs_delta}
 \end{table}
 
-To provide a comprehensive analysis of effect sizes, we calculated Cohen's d alongside Cliff's Delta, while acknowledging its limitations for our data characteristics. Given our ordinal Likert scale data, likely non-normal distribution, and small sample size (n=21), Cohen's d results should be interpreted with caution. Nevertheless, as shown in \cref{tab:cohens_d}, the calculations reveal strong effects that align with our Cliff's Delta findings. For relevance, large negative effects were found comparing baseline to both human ($d = -1.589$) and model ($d = -1.254$), with a small to medium effect between human and model ($d = 0.293$). Generality showed negligible to small effects across comparisons ($d$ ranging from 0.027 to 0.202). Coverage metrics demonstrated the largest effects, with very large negative effects when comparing baseline to both human ($d = -2.454$) and model ($d = -2.539$) for overall coverage, and similarly large effects for shared coverage (baseline vs human: $d = -1.882$; baseline vs model: $d = -1.485$). The human vs model comparisons showed negligible effects for coverage ($d = -0.078$) and small to medium effects for shared coverage ($d = 0.391$). While these results support our main findings, we primarily rely on Cliff's Delta as our effect size measure due to its better alignment with our data characteristics and non-parametric analysis approach.
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{llrl}
-        \hline
-        \textbf{Metric} & \textbf{Comparison} & \textbf{Cohen's d} & \textbf{Effect} \\
-        \hline
-        \multirow{3}{*}{Relevance}
-                        & Baseline model vs Human-generated   & -1.589             & Very Large      \\
-                        & Baseline model  vs Proposed model   & -1.254             & Very Large      \\
-                        & Human-generated vs Model      & 0.293              & Small-Medium    \\
-        \hline
-        \multirow{3}{*}{Generality}
-                        & Baseline model vs Human-generated   & 0.027              & Negligible      \\
-                        & Baseline model vs Proposed model   & 0.202              & Small-Medium    \\
-                        & Human-generated vs Proposed model      & 0.178              & Small           \\
-        \hline
-        \multirow{3}{*}{Coverage}
-                        & Baseline model vs Human-generated   & -2.454             & Very Large      \\
-                        & Baseline model vs Proposed model   & -2.539             & Very Large      \\
-                        & Human-generated vs Proposed model      & -0.078             & Negligible      \\
-        \hline
-        \multirow{3}{*}{Shared Coverage}
-                        & Baseline model vs Human-generated   & -1.882             & Very Large      \\
-                        & Baseline model vs Proposed model   & -1.485             & Very Large      \\
-                        & Human-generated vs Proposed model      & 0.391              & Small-Medium    \\
-        \hline
-    \end{tabular}
-    \caption{Cohen's d effect sizes for different metrics and comparisons}
-    \label{tab:cohens_d}
-\end{table}
+To provide a comprehensive analysis of effect sizes, we calculated Cohen's d alongside Cliff's Delta, while acknowledging its limitations for our data characteristics. Given our ordinal Likert scale data, non-normal distribution, and small sample size (n=21), Cohen's d results should be interpreted with caution. Nevertheless, as shown in \cref{tab:cohens_d}, the calculations reveal strong effects that align with our Cliff's Delta findings. For relevance, large negative effects were found comparing baseline to both human ($d = -1.589$) and model ($d = -1.254$), with a small to medium effect between human and model ($d = 0.293$). Generality showed negligible to small effects across comparisons ($d$ ranging from 0.027 to 0.202). Coverage metrics demonstrated the largest effects, with very large negative effects when comparing baseline to both human ($d = -2.454$) and model ($d = -2.539$) for overall coverage, and similarly large effects for shared coverage (baseline vs human: $d = -1.882$; baseline vs model: $d = -1.485$). The human vs model comparisons showed negligible effects for coverage ($d = -0.078$) and small to medium effects for shared coverage ($d = 0.391$). While these results support our main findings, we primarily rely on Cliff's Delta as our effect size measure due to its better alignment with our data characteristics and non-parametric analysis approach.
 
 \subsubsection{Stage 2 — Task 2: Common Tags Quality Assessment}
 \cref{fig:first_pair_common_tags_coverage_comparison,fig:second_pair_common_tags_coverage_comparison} show the common tags coverage comparison for the first and second pairs, respectively.
@@ -1224,80 +926,43 @@ This indicates that the proposed model was able to identify common tags more acc
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{figures/first_pair_common_tags_coverage_comparison.pdf}
-    \caption{Common tags coverage by model for the first pair}
-    \label{fig:first_pair_common_tags_coverage_comparison}
+    \subfloat[Common tags coverage by model for the first pair]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_comparison.pdf}\label{fig:first_pair_common_tags_coverage_comparison}}
+    \hfill
+    \subfloat[Common tags coverage by model for the second pair]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_comparison.pdf}\label{fig:second_pair_common_tags_coverage_comparison}}
+    \caption{Common tags coverage comparison by model for both pairs}
+    \label{fig:common_tags_coverage_comparison}
 \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_baseline.pdf}\label{fig:first_pair_common_tags_coverage_baseline}}
-%     \hfill
-%     \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_model.pdf}\label{fig:first_pair_common_tags_coverage_model}}
-
-%     \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/first_pair_common_tags_coverage_human.pdf}\label{fig:first_pair_common_tags_coverage_human}}
-%     \caption{Common tags coverage comparison for the first pair}
-%     \label{fig:first_pair_common_tags_quality}
-% \end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/second_pair_common_tags_coverage_comparison.pdf}
-    \caption{Common tags coverage by model for the second pair}
-    \label{fig:second_pair_common_tags_coverage_comparison}
-\end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \subfloat[Baseline model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_baseline.pdf}\label{fig:second_pair_common_tags_coverage_baseline}}
-%     \hfill
-%     \subfloat[Proposed model]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_model.pdf}\label{fig:second_pair_common_tags_coverage_model}}
-
-%     \subfloat[Human-generated]{\includegraphics[width=0.5\textwidth]{figures/second_pair_common_tags_coverage_human.pdf}\label{fig:second_pair_common_tags_coverage_human}}
-%     \caption{Common tags coverage comparison}
-%     \label{fig:second_pair_common_tags_quality}
-% \end{figure}
 
 \subsection{Large-scale automated evaluation}
-We follow the methodology outlined in \cref{sec:large_scale_evaluation} to evaluate the proposed model. As an LLM, we pick \textit{GPT-4-mini} as the model for this evaluation, as it is a smaller and relatively less expensive compared to larger models.
+We follow the methodology outlined in \cref{sec:large_scale_evaluation} to evaluate the proposed model, running the evaluation on all $\sim$5200 datasets. As an evaluation model, we pick \textit{GPT-4o-mini}, as it is a smaller and relatively less expensive LLM compared to larger models, yet offers good performance compared to models of similar size \cite{noauthor_gpt-4o_nodate}.
 
 \subsubsection{Automated Intruder Detection}
-\cref{fig:gpt_intruder_detection_accuracy} shows the automated intruder detection accuracy for the proposed model. We see that the LLM managed to detect 88.3\% of intruders, which is a promising result. This indicates that the LLM was able to detect the majority of intruders in the dataset, indicating that the tags generated by the proposed model are cohesive.
+The automated intruder detection experiment revealed that the LLM successfully identified 88.3\% of intruders, with only 11.7\% of cases resulting in incorrect detection. This high accuracy in identifying intruder tags among true tags suggests that the tags generated by the proposed model form cohesive, semantically related groups. The ability to distinguish contextually unrelated tags from related ones provides evidence for the semantic consistency of the model's tag generation process.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/gpt_intruder_detection_accuracy.pdf}
-    \caption{Automated intruder detection accuracy}
-    \label{fig:gpt_intruder_detection_accuracy}
-\end{figure}
-
-We observe that the intruder detection accuracy decreases as the number of tags increases, as shown in \cref{fig:gpt_accuracy_by_num_tags}. This is expected, as the model has to consider more tags, making it more challenging to detect intruders. Choosing a larger model may help improve intruder detection accuracy for a larger number of tags.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/gpt_accuracy_by_num_tags.pdf}
-    \caption{Intruder detection accuracy by number of tags}
-    \label{fig:gpt_accuracy_by_num_tags}
-\end{figure}
+We observe that the intruder detection accuracy decreases as the number of tags increases, as shown in \cref{fig:gpt_accuracy_by_num_tags}. This is expected, as the evaluation model has to consider more tags, making it more challenging to detect intruders. Choosing a larger model may help improve intruder detection accuracy for a larger number of tags.
 
 This finding is corroborated by the correlation analysis in \cref{fig:gpt_correlation_num_tags}, which shows a negative correlation between the number of tags and intruder detection accuracy.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/gpt_correlation_num_tags.pdf}
-    \caption{Correlation between number of tags and intruder detection accuracy}
-    \label{fig:gpt_correlation_num_tags}
+    \subfloat[Correlation between number of tags and intruder detection accuracy]{\includegraphics[width=0.5\textwidth]{figures/gpt_correlation_num_tags.pdf}\label{fig:gpt_correlation_num_tags}}
+    \hfill
+    \subfloat[Intruder detection accuracy by number of tags]{\includegraphics[width=0.5\textwidth]{figures/gpt_accuracy_by_num_tags.pdf}\label{fig:gpt_accuracy_by_num_tags}}
+    \caption{Analysis of Intruder Detection Accuracy and Number of Tags}
+    \label{fig:gpt_num_tags_analysis}
 \end{figure}
 
 \subsubsection{Automated Tag Quality Assessment}
-\cref{fig:gpt_relevance_vs_generality} shows the correlation between relevance and generality for the proposed model. We see that there is a positive correlation between relevance and generality. This is surprising, as the human evaluation showed a negative correlation between relevance and generality.
+We investigate the correlation between relevance and generality and see that there is a positive correlation between them, with a Pearson correlation coefficient of 0.108 and a Spearman correlation coefficient of 0.012, both of which have a p-value of less than 0.01. Given the Likert scale nature of the data, we consider the Spearman correlation coefficient to be more reliable, indicating that there is practically no correlation between relevance and generality according to the LLM.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/gpt_relevance_vs_generality.pdf}
-    \caption{Correlation between relevance and generality}
-    \label{fig:gpt_relevance_vs_generality}
-\end{figure}
+This is a surprising finding, as the human evaluation showed a negative correlation between relevance and generality, namely, -0.59. This discrepancy may be attributed to the differences in how humans and LLMs perceive relevance and generality, or to the limitations of the LLM in capturing the nuances of human judgment. However, upon closer inspection of the data, we find that for the same texts used in the human study, the LLM also shows a negative correlation between relevance and generality, with a Spearman correlation coefficient of -0.407 and a p-value of 0.075. This suggests that the discrepancy in the correlation between relevance and generality is likely due to the differences in the three datasets used for the human evaluation rather than a fundamental difference in how humans and LLMs perceive relevance and generality. For the tags generated by our proposed model, this finding may indicate that there is a lower or nonexistent correlation between relevance and generality, meaning that both regular and overarching tags are found as relevant. This means that we should not lean on choosing one over the other, but rather consider including both types of tags in the final tag set.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/gpt_relevance_vs_generality.pdf}
+%     \caption{Correlation between relevance and generality}
+%     \label{fig:gpt_relevance_vs_generality}
+% \end{figure}
 
 % \cref{fig:gpt_average_relevance_score_per_tag} and \cref{fig:gpt_average_generality_score_per_tag} shows a histogram of the average relevance and generality scores per tag, respectively. We see how many tags are rated as extremely relevant (5), very relevant (4), etc., and how many tags are rated as very general (5), somewhat general (4), etc.
 
@@ -1315,43 +980,40 @@ This finding is corroborated by the correlation analysis in \cref{fig:gpt_correl
 %     \label{fig:gpt_average_generality_score_per_tag}
 % \end{figure}
 
-\cref{fig:gpt_relevance_score_distribution,fig:gpt_generality_score_distribution,fig:gpt_coverage_score_distribution} show the distribution of relevance, generality, and coverage scores, respectively. We see that the mean relevance score is 4.11, the mean generality score is 3.29, and the mean coverage score is 3.72. This indicates that the tags generated by the proposed model are generally relevant, somewhat general, with a decent standard deviation, and provide good coverage, according to the LLM.
+When we investigate the scores for the generated tags, we find a mean relevance score of 4.11 with a standard deviation of 0.98, and a mean generality score of 3.29 with a standard deviation of 0.87. The mean coverage score is 3.72. These results indicate that the tags produced by the proposed model are generally relevant, somewhat general, and provide good coverage, based on the evaluation by the LLM. The standard deviations for relevance and generality also suggest a reasonable spread in these scores.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/gpt_relevance_score_distribution.pdf}
-    \caption{Distribution of relevance scores}
-    \label{fig:gpt_relevance_score_distribution}
-\end{figure}
+A comparison between the LLM's evaluation and the human evaluation of the proposed model reveals some interesting discrepancies. While the LLM rated the model's relevance at 4.11, humans rated it slightly lower at 3.63. For generality, the difference is more pronounced: the LLM assessed a mean score of 3.29 with a standard deviation of 0.87, whereas human ratings reflected in a mean of 2.93 and a standard deviation of 1.40. In terms of coverage the LLM and humans rated the model with scores of 3.72 and 4.46, respectively. These findings suggest that the LLM may be more lenient in its evaluation of generality compared to humans, while showing similar performance in relevance and coverage assessment. It could also be the case that the datasets chosen for the human evaluation were different from the datasets used for the LLM evaluation, leading to discrepancies in the results.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/gpt_generality_score_distribution.pdf}
-    \caption{Distribution of generality scores}
-    \label{fig:gpt_generality_score_distribution}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{figures/gpt_relevance_score_distribution.pdf}
+%     \caption{Distribution of relevance scores}
+%     \label{fig:gpt_relevance_score_distribution}
+% \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/gpt_coverage_score_distribution.pdf}
-    \caption{Distribution of coverage scores}
-    \label{fig:gpt_coverage_score_distribution}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{figures/gpt_generality_score_distribution.pdf}
+%     \caption{Distribution of generality scores}
+%     \label{fig:gpt_generality_score_distribution}
+% \end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{figures/gpt_coverage_score_distribution.pdf}
+%     \caption{Distribution of coverage scores}
+%     \label{fig:gpt_coverage_score_distribution}
+% \end{figure}
 
 \cref{fig:gpt_tag_type_relevance_distribution,fig:gpt_tag_type_generality_distribution} show the distribution of relevance and generality scores by tag type. As expected, the keyword tags were found to be the most relevant, since they were most specific to each text. However, interestingly, the LLM found them to be slightly more general than the regular tags.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{figures/relevance_distribution.pdf}
-    \caption{Distribution of relevance scores by tag type}
-    \label{fig:gpt_tag_type_relevance_distribution}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{figures/generality_distribution.pdf}
-    \caption{Distribution of generality scores by tag type}
-    \label{fig:gpt_tag_type_generality_distribution}
+    \subfloat[Distribution of relevance scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/relevance_distribution.pdf}\label{fig:gpt_tag_type_relevance_distribution}}
+    \hfill
+    \subfloat[Distribution of generality scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/generality_distribution.pdf}\label{fig:gpt_tag_type_generality_distribution}}
+    \caption{Distribution of relevance and generality scores by tag type}
+    \label{fig:gpt_tag_type_score_distributions}
 \end{figure}
 
 % \begin{figure}[h]
@@ -1369,19 +1031,8 @@ This finding is corroborated by the correlation analysis in \cref{fig:gpt_correl
 % \end{figure}
 
 
-\paragraph{Statistical significance}
+\paragraph{Normality testing}
 The Q-Q plots in \cref{fig:all_qq_plots} show the distribution of relevance, generality, and coverage scores, respectively. We see that the scores are not normally distributed, which is expected given the ordinal nature of the Likert scale data, and is similar to the human evaluation results.
-
-\begin{figure}[h]
-    \centering
-    \subfloat[Relevance scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_relevance_qq_plot.pdf}\label{fig:gpt_relevance_qq_plot}}
-    \hfill
-    \subfloat[Generality scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_generality_qq_plot.pdf}\label{fig:gpt_generality_qq_plot}}
-
-    \subfloat[Coverage scores]{\includegraphics[width=0.5\textwidth]{figures/gpt_coverage_qq_plot.pdf}\label{fig:gpt_coverage_qq_plot}}
-    \caption{Q-Q plots for evaluation metrics}
-    \label{fig:all_qq_plots}
-\end{figure}
 
 \cref{tab:normality_comparison} shows the results of the normality tests for the relevance, generality, and coverage scores. We see that the Shapiro-Wilk test and Anderson-Darling test both indicate that the scores are not normally distributed.
 
@@ -1421,13 +1072,54 @@ The Q-Q plots in \cref{fig:all_qq_plots} show the distribution of relevance, gen
     \label{tab:distribution_comparison}
 \end{table}
 
+
+
+\section{Evaluation of alternative configurations}
+In addition to the primary pipeline evaluation, we explored a more cost-effective configuration designed to reduce computational expenses, particularly regarding LLM usage, following the alternative configuration outlined in \cref{sec:alternative_configurations}. This alternative pipeline deviates from the original approach in three aspects:
+
+\begin{enumerate}
+    \item \textbf{Omission of Description Rewriting}: We eliminated the step of rewriting augmented descriptions into a more human-readable format (Step 3 in the original pipeline).
+    \item \textbf{Simplified Tag Generation and Classification}: We combined the tag generation and classification steps into a single step (step 9), utilizing GPT-4o-mini with a maximum output of 256 tokens per description, and removing the zeroshot classifier entirely (step 10).
+    \item \textbf{Choice of LLM}: We opted for GPT-4o-mini for the combined tag generation and classification step, as it offers a good balance between performance and cost compared to larger models \cite{noauthor_gpt-4o_nodate}. GPT-4o-mini was priced at \$0.15 per 1M tokens of input and \$0.60 per 1M tokens of output.
+\end{enumerate}
+
+This configuration significantly reduced the overall processing time. Embedding generation (step 4) took approximately 4 hours using the \textit{Salesforce/SFR-Embedding-2\_R} model \cite{noauthor_salesforcesfr-embedding-2_r_2024}. Omission of description rewriting reduced processing time by 3 hours and expenses by approximately \$8.00 compared to the proposed pipeline. Training the base BERTopic model (steps 5-8) required about 5 minutes. Substantial resource saving was also achieved in the fine-tuning step (step 9), which took approximately 2 hours and cost only \$0.80 using GPT-4o-mini, compared to using the Llama-3-70b model in the original pipeline, which took similar time but cost approximately \$4.80.
+
+While this configuration offers significant cost and time advantages, our initial observations suggest a potential trade-off in tag quality compared to the original pipeline. The absence of description rewriting led to a degradation in the quality of the c-TF-IDF representations. Specifically, the c-TF-IDF output for this configuration contained a higher proportion of nonsensical or irrelevant terms (e.g., \textit{q59fi3}, \textit{timmenziesus}, \textit{145160}) compared to the original pipeline, which benefited from cleaner, human-readable descriptions. This difference in c-TF-IDF quality likely impacted the subsequent tag generation, resulting in some less relevant or nonsensical tags (e.g., \textit{Rows}, \textit{Columns}, \textit{Seed}, \textit{Intra-Class}).
+
+The impact on clustering is more difficult to quantify objectively. However, subjective inspection revealed instances where unrelated descriptions were grouped into the same cluster. Additionally, we observed a tendency towards fragmentation, with similar descriptions being split into multiple smaller clusters instead of being grouped into a single, larger cluster. For example, instead of one large cluster for all QSAR-related datasets, there were many smaller clusters containing different subsets of QSAR datasets.
+
+Using a cheaper LLM (GPT-4o-mini) for the combined tag generation and classification step introduced further challenges. The model tended to extract more specific tags (e.g., \textit{Cropped Images} instead of \textit{Images}) at the expense of more general, common tags. While the overarching tags remained largely unaffected, the model occasionally produced incorrectly formatted JSON outputs, requiring manual correction in roughly 10 out of 900 cases. Furthermore, the model sometimes failed to assign generated tags during the classification phase or introduced new tags not present in the initial generation step. The confidence scores produced by the LLM were also less reliable than those from the dedicated zeroshot classifier in the original pipeline, as the LLM is not specifically trained for this task. Finally, this configuration does not provide tags from the top \textit{n} clusters for each description, potentially missing out on relevant tags.
+
+Despite these limitations, the tags produced by this cost-effective configuration are still generally of good quality. This configuration offers a viable alternative when computational resources or budget constraints are a primary concern. Further evaluation using a large-scale automated approach, similar to the one performed for the original pipeline, would provide a more comprehensive assessment of the trade-offs between cost and quality.
+
+% \section{Chapter conclusion}
+% In this chapter, we explained how we followed the methodology outlined in \cref{chapter:methodology} to evaluate the proposed model. We addressed each research question from \hyperref[rq1]{\textbf{RQ1}} through \hyperref[rq4]{\textbf{RQ4}}.
+
+% We answered \hyperref[rq1]{\textbf{RQ1}} by performing an exploratory data analysis and data augmentation. For the exploratory data analysis, we analyzed the dataset descriptions, investigating traits such as length, readability, duplicate content, their tags, features, and versions. We then proceeded to augment the descriptions, giving them more context which would help the proposed model generate better tags.
+
+% \hyperref[rq2]{\textbf{RQ2}} was answered by following the tag generation methodology in \cref{sec:tag_generation_pipeline}. We chose and gave rationale for the chosen submodels, and discovered a good set of hyperparameters for them.
+
+% For \hyperref[rq3]{\textbf{RQ3}}, we evaluated the proposed model using the automated evaluation metrics we discussed in \cref{sec:automated_evaluation_methodology}. We compared the proposed model to a set of baseline models on several metrics, namely coherence (NPMI), diversity, and silhouette score. The baseline models were LDA, NMF, CTM, Top2Vec, and several BERTopic model configurations. We found that our BERTopic configurations outperformed the baseline models, with the exception of NMF for NPMI. However, NMF had very low diversity score due to picking the same terms, driving NPMI higher, and its diversity lower. Additionally, we performed Bayesian Optimization to find the best hyperparameters for our base BERTopic model.
+
+% Finally, we answered \hyperref[rq4]{\textbf{RQ4}} by evaluating the proposed model using human evaluation and large-scale automated evaluation. For the human evaluation,  we picked a suitable baseline model, and created a human-generated set of tags. We conducted a two-stage evaluation, where we first asked participants to perform intruder detection, and evaluated the relevance, generality, coverage, and shared coverage of the tags generated by the proposed model, the baseline model and the human-generated tags. Then, participants evaluated the common tags identified by the proposed model, the baseline model and the human-generated tags. We found that the proposed model outperformed the baseline model in most metrics, while slightly lagging behind the human-generated tags. For the large-scale automated evaluation, we evaluated the proposed model using an LLM, \textit{GPT-4-mini}. We found that the LLM managed to detect the majority of intruders in the dataset, indicating that the tags generated by the proposed model are cohesive. We also found that the tags generated by the proposed model are generally relevant, somewhat general, with a decent standard deviation, and provide good coverage.
+
+
+
 \section{Chapter conclusion}
-In this chapter, we explained how we followed the methodology outlined in \cref{sec:methodology} to evaluate the proposed model. We addressed each research question from \hyperref[rq1]{\textbf{RQ1}} through \hyperref[rq4]{\textbf{RQ4}}.
 
-We answered \hyperref[rq1]{\textbf{RQ1}} by performing an exploratory data analysis and data augmentation. For the exploratory data analysis, we analyzed the dataset descriptions, investigating traits such as length, readability, duplicate content, their tags, features, and versions. We then proceeded to augment the descriptions, giving them more context which would help the proposed model generate better tags.
+In this chapter, we explained how we followed the methodology outlined in \cref{chapter:methodology} to evaluate the proposed model. We addressed each research question from \hyperref[rq1]{\textbf{RQ1}} through \hyperref[rq4]{\textbf{RQ4}}.
 
-\hyperref[rq2]{\textbf{RQ2}} was answered by following the tag generation methodology in \cref{sec:tag_generation}. We chose and gave rationale for the chosen submodels, and discovered a good set of hyperparameters for them.
+We answered \hyperref[rq1]{\textbf{RQ1}} by performing an exploratory data analysis and data augmentation. For the exploratory data analysis, we analyzed the 5200 dataset descriptions, investigating traits such as length, readability, duplicate content, their tags, features, and versions. Our findings revealed that descriptions are generally short, with a median length comparable to two tweets, and exhibit a wide range of readability scores, ranging from 0 to 100, with many falling in the 0-60 range on the Flesch Reading Ease scale, indicating varying complexity. We observed that a significant portion of datasets already contain associated tags, with most datasets having between 0 and 5 tags, and many descriptions include URLs to external resources. We augmented the descriptions with metadata (dataset name, existing tags, column names) and text scraped from external URLs. We also removed \~300 duplicate datasets with high cosine similarity. Additionally, we applied Named Entity Recognition (NER) and Part-of-Speech (POS) tagging, which revealed challenges posed by domain-specific terms and author names for generating relevant tags.
 
-For \hyperref[rq3]{\textbf{RQ3}}, we evaluated the proposed model using the automated evaluation metrics we discussed in \cref{sec:automated_evaluation}. We compared the proposed model to a set of baseline models on several metrics, namely coherence (NPMI), diversity, and silhouette score. The baseline models were LDA, NMF, CTM, Top2Vec, and several BERTopic model configurations. We found that our BERTopic configurations outperformed the baseline models, with the exception of NMF for NPMI. However, NMF had very low diversity score due to picking the same terms, driving NPMI higher, and its diversity lower. Additionally, we performed Bayesian Optimization to find the best hyperparameters for our base BERTopic model.
+\hyperref[rq2]{\textbf{RQ2}} was answered by following the tag generation methodology in \cref{sec:tag_generation_pipeline}. We detailed the implementation of our tag generation pipeline, extending the Base BERTopic model with an LLM (Llama-3-70b) for prompt-based tag generation and a zeroshot classifier (MoritzLaurer/deberta-v3-large-zeroshot-v2.0) for tag filtering. We provided a step-by-step description of the pipeline, including the rationale for selecting specific submodels. We highlighted the advantages of this approach over naive LLM-based methods, particularly in terms of contextual consistency, multi-level tag generation, and computational efficiency. The main limitation of the proposed tag generation pipeline is the computational cost of the Llama-3-70b model. We also explored a more cost-effective pipeline configuration, omitting the description rewriting step, using a cheaper LLM (GPT-4o-mini), and combining tag generation and classification into a single step. While this configuration reduced computational costs and time, it led to a decrease in tag quality, as observed through the degradation of c-TF-IDF representations and some clustering issues.
 
-Finally, we answered \hyperref[rq4]{\textbf{RQ4}} by evaluating the proposed model using human evaluation and large-scale automated evaluation. For the human evaluation,  we picked a suitable baseline model, and created a human-generated set of tags. We conducted a two-stage evaluation, where we first asked participants to perform intruder detection, and evaluated the relevance, generality, coverage, and shared coverage of the tags generated by the proposed model, the baseline model and the human-generated tags. Then, participants evaluated the common tags identified by the proposed model, the baseline model and the human-generated tags. We found that the proposed model outperformed the baseline model in most metrics, while slightly lagging behind the human-generated tags. For the large-scale automated evaluation, we evaluated the proposed model using an LLM, \textit{GPT-4-mini}. We found that the LLM managed to detect the majority of intruders in the dataset, indicating that the tags generated by the proposed model are cohesive. We also found that the tags generated by the proposed model are generally relevant, somewhat general, with a decent standard deviation, and provide good coverage.
+For \hyperref[rq3]{\textbf{RQ3}}, we evaluated the Base BERTopic model using the automated evaluation metrics we discussed in \cref{sec:automated_evaluation_methodology}. We compared the hyperparameter-optimized BERTopic model against several baselines, including LDA, NMF, CTM, Top2Vec, and different BERTopic configurations. Our results showed that the optimized BERTopic model achieved the highest combined NPMI and diversity score of 0.779, outperforming all baseline models on this combined metric. NMF achieved the highest NPMI, but had very low diversity. The optimized BERTopic model had the highest diversity (0.808). We performed hyperparameter tuning using Bayesian optimization with a custom weighted metric combining NPMI and diversity. The optimized hyperparameters included a \textit{min\_topic\_size} of 2, \textit{umap\_n\_neighbors} of 3, \textit{umap\_n\_components} of 5, \textit{hdbscan\_min\_cluster\_size} of 3, along with specific settings for other parameters detailed in \cref{tab:bertopic_parameters}. Statistical analysis using ANOVA, Kruskal-Wallis, and post-hoc tests confirmed significant differences between models for NPMI, diversity, with large effect sizes, highlighting the strong performance of our optimized BERTopic model and the BERTopic family as a whole.
+
+Finally, we answered \hyperref[rq4]{\textbf{RQ4}} by evaluating the proposed model using human evaluation and large-scale automated evaluation. For the human evaluation, we picked a suitable baseline model (Base BERTopic), and created a human-generated set of tags. We conducted a two-stage evaluation, where we first asked participants to perform intruder detection, and evaluated the relevance, generality, coverage, and shared coverage of the tags generated by the proposed model, the baseline model and the human-generated tags. Our model achieved a mean relevance score of 3.63, outperforming the baseline (2.39) and approaching the performance of human-generated tags (3.95). For generality, our model showed a better balance between specific and general tags (SD = 1.40) compared to the baseline (SD = 1.33) and was close to human-generated tags (SD = 1.41). In terms of coverage, our model (4.46) outperformed the baseline (2.65) and was close to human-generated tags (4.54). The intruder detection task demonstrated our model's ability to generate cohesive tag sets, with a 95.2\% detection rate, compared to 42.1\% for the baseline and 100\% for human-generated tags. For inter-rater agreement, we calculated Fleiss' Kappa, Interclass Correlation Coefficient (ICC), and Krippendorff's Alpha. While Fleiss' Kappa indicated only slight agreement at best (all values below 0.18), ICC and Krippendorff's Alpha showed more nuanced results, with some metrics indicating moderate to strong agreement (e.g., ICC(3,k) values of 0.95 for relevance for the proposed model, and 0.97 for generality, and Krippendorff's Alpha of 0.5647 for coverage). However, there was also disagreement between the metrics, suggesting complexity in assessing inter-rater reliability for this task. 
+
+The common tag identification task revealed that our model achieved balanced precision and recall across two text pairs, with an accuracy of 0.87 and 0.76 respectively, which was higher than the baseline (0.69 and 0.60), slightly higher than the human-generated tags for the first pair (0.83), but slightly lower than human-generated tags for the second pair (0.86). Statistical tests, including Kruskal-Wallis and Dunn's post-hoc test, showed statistically significant differences between our model and the baseline for all metrics. While our model's tags were rated significantly lower in relevance compared to human-generated tags, there were no significant differences in generality, coverage, and shared coverage. Effect size analysis using Cliff's Delta confirmed large differences between the baseline and both our model and human-generated tags for relevance, coverage, and shared coverage. However, the effect sizes between our model and human-generated tags were small to negligible, indicating that our model's performance was comparable to human-generated tags.
+
+For the large-scale automated evaluation, we evaluated the proposed model using an LLM, \textit{GPT-4-mini}. We found that the LLM managed to detect the majority of intruders in the dataset (88.3\%), indicating that the tags generated by the proposed model are cohesive. Tag quality assessment by the LLM yielded a mean relevance score of 4.11, a mean generality score of 3.29 (SD = 0.87), and a mean coverage score of 3.72. The LLM found that keyword tags were the most relevant, and it found them to be slightly more general than regular tags. The automated evaluation also found a weakly positive (near-neutral) correlation between relevance and generality, which differed from the negative correlation found in the human evaluation. The discrepancy in correlation may be attributed to differences in how humans and LLMs perceive these qualities, or to the different dataset samples used in the two evaluations.
+
+Our results demonstrate that the proposed model generates cohesive, relevant and diverse tags for OpenML dataset descriptions with a good coverage, outperforming the baseline model and approaching human-level performance in several aspects.
