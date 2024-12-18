@@ -111,7 +111,7 @@ We also examine the similarity between different versions of the datasets. Our a
 \end{figure}
 
 
-We apply Named Entity Recognition (NER) and Part-of-Speech (POS) tagging to the dataset descriptions to identify the most common entities and parts of speech (\cref{fig:pos,fig:ner}). A significant number of words are tagged as \textit{X}, indicating that the POS tagger is unable to determine the part of speech for these words. This is likely due to the presence of domain-specific terms not included in the POS tagger's vocabulary, as well as unrecognized or anomalous tokens and symbols. Additionally, we find that the most frequent named entity is \textit{PERSON}, which can be attributed to the fact that many dataset descriptions reference the names of dataset authors or associated papers. Both of these findings pose challenges for the performance of the tag generation model, as unrecognized tokens and author names do not contribute meaningful information for generating relevant tags.
+We apply Named Entity Recognition (NER) and Part-of-Speech (POS) tagging to the dataset descriptions to identify the most common entities and parts of speech (\cref{fig:pos,fig:ner}). A significant number of words are tagged as \textit{X}, indicating that the POS tagger is unable to determine the part of speech for these words. This is likely due to the presence of domain-specific terms not included in the POS tagger's vocabulary, as well as unrecognized or anomalous tokens and symbols. Additionally, we find that one of the most frequent named entities are \textit{PERSON} and \textit{ORG}, which can be attributed to the fact that many dataset descriptions reference the names of dataset authors or associated papers and their organizations. Both of these findings pose challenges for the performance of the tag generation model, as unrecognized tokens and author names do not contribute meaningful information for generating relevant tags.
 
 % \begin{figure}[h]
 %     \centering
@@ -129,9 +129,9 @@ We apply Named Entity Recognition (NER) and Part-of-Speech (POS) tagging to the 
 
 \begin{figure}[h]
     \centering
-    \subfloat[Bar chart of the most common parts of speech in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/pos.pdf}\label{fig:pos}}
+    \subfloat[Bar chart of the most common parts of speech in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/pos_descriptions.pdf}\label{fig:pos}}
     \hfill
-    \subfloat[Bar chart of the most common named entities in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/ner.pdf}\label{fig:ner}}
+    \subfloat[Bar chart of the most common named entities in dataset descriptions]{\includegraphics[width=0.5\textwidth]{figures/ner_descriptions.pdf}\label{fig:ner}}
     \caption{Analysis of linguistic features in dataset descriptions}
     \label{fig:linguistic_features}
 \end{figure}
@@ -201,7 +201,7 @@ To guide the search for optimal hyperparameters, we use the Lower Confidence Bou
 
 Before the optimization begins, we initialize the surrogate model with a diverse set of hyperparameter configurations. These initial points are generated using Latin Hypercube Sampling (LHS), which ensures a broad coverage of the search space from the outset.
 
-Additionally, we set the number of iterations for the optimization process to 125, and the number of model runs per iteration to 3. This configuration allows us to explore the hyperparameter space thoroughly while maintaining a reasonable computational cost. We set the model runs to 3 to account for the stochastic nature of the BERTopic model (specifically, UMAP), which can yield slightly different results for each run.
+Additionally, we set the number of iterations for the optimization process to 125, and the number of model runs per iteration to 10. This configuration allows us to explore the hyperparameter space thoroughly while maintaining a reasonable computational cost. We set the model runs to 10 to account for the stochastic nature of some of the models, e.g. BERTopic, which may yield different results each time it is run primarily due to UMAP. Furthermore, having 10 runs per iteration allows us to identify statistically significant differences between the models.
 
 \cref{fig:bayesian_optimization} shows the results of the Bayesian optimization process. The x-axis represents the number of iterations, while the y-axis represents the weighted metric score, \textit{Median(model\_runs)} and \textit{Mean(model\_runs)}, and other metrics. 
 
@@ -813,7 +813,7 @@ The effect sizes, measured by $\eta^2$, provide additional insight into the prac
     \label{tab:kruskal_wallis}
 \end{table}
 
-After finding these statistically significant differences, we perform post-hoc pairwise comparisons using Dunn's test with Bonferroni correction to identify which groups differ from each other. \cref{fig:dunns_test} shows the p-values for the post-hoc tests for relevance, generality, coverage, and shared coverage. The results indicate that the differences between the baseline model and the proposed model, as well as between the baseline model and human-generated tags, are statistically significant for all metrics. The differences between the proposed model and human-generated tags are only statistically significant for relevance (p = 0.011). For generality, coverage, and shared coverage, there were no statistically significant differences between our proposed model and human-generated tags (p = 0.158, p = 1.000, and p = 0.511 respectively). This suggests that while our model still lags behind human performance in terms of tag relevance, it achieves comparable performance to humans in generating tags with appropriate generality levels and comprehensive coverage of the text content. Given our sample size of 21 participants, the lack of statistically significant differences between the proposed model and human-generated tags for generality, coverage, and shared coverage could be due to limited statistical power. A larger number of participants would increase our ability to detect smaller differences between these approaches, if they exist. Future work with more raters could provide stronger statistical evidence to either confirm the apparent equivalence between our model and human performance or reveal differences that our current sample size was unable to detect.
+After finding these statistically significant differences, we perform post-hoc pairwise comparisons using Dunn's test with Bonferroni correction to identify which groups differ from each other. \cref{fig:dunns_test} shows the p-values for the post-hoc tests for relevance, generality, coverage, and shared coverage. The results indicate that the differences between the baseline model and the proposed model, as well as between the baseline model and human-generated tags, are statistically significant for all metrics, besides generality. The differences between the proposed model and human-generated tags are only statistically significant for relevance (p = 0.011). For generality, coverage, and shared coverage, there were no statistically significant differences between our proposed model and human-generated tags (p = 0.158, p = 1.000, and p = 0.511 respectively). This suggests that while our model still lags behind human performance in terms of tag relevance, it achieves comparable performance to humans in generating tags with appropriate generality levels and comprehensive coverage of the text content. Given our sample size of 21 participants, the lack of statistically significant differences between the proposed model and human-generated tags for generality, coverage, and shared coverage could be due to limited statistical power. A larger number of participants would increase our ability to detect smaller differences between these approaches, if they exist. Future work with more raters could provide stronger statistical evidence to either confirm the apparent equivalence between our model and human performance or reveal differences that our current sample size was unable to detect.
 
 \begin{figure}[h]
     \centering
@@ -937,7 +937,7 @@ This indicates that the proposed model was able to identify common tags more acc
 We follow the methodology outlined in \cref{sec:large_scale_evaluation} to evaluate the proposed model, running the evaluation on all $\sim$5200 datasets. As an evaluation model, we pick \textit{GPT-4o-mini}, as it is a smaller and relatively less expensive LLM compared to larger models, yet offers good performance compared to models of similar size \cite{noauthor_gpt-4o_nodate}.
 
 \subsubsection{Automated Intruder Detection}
-The automated intruder detection experiment revealed that the LLM successfully identified 88.3\% of intruders, with only 11.7\% of cases resulting in incorrect detection. This high accuracy in identifying intruder tags among true tags suggests that the tags generated by the proposed model form cohesive, semantically related groups. The ability to distinguish contextually unrelated tags from related ones provides evidence for the semantic consistency of the model's tag generation process.
+The automated intruder detection experiment revealed that the LLM successfully identified 88.3\% of intruders, with only 11.7\% of cases resulting in incorrect detection. This high accuracy in identifying intruder tags among true tags suggests that the tags generated by the proposed model form cohesive, semantically related groups. The ability to distinguish contextually unrelated tags from related ones provides evidence for the semantic consistency of the model's tag generation process. In contrast, for the baseline model, only 47.5\% of intruders were correctly identified, indicating a much lower level of semantic coherence in the tag sets generated by the baseline model.
 
 We observe that the intruder detection accuracy decreases as the number of tags increases, as shown in \cref{fig:gpt_accuracy_by_num_tags}. This is expected, as the evaluation model has to consider more tags, making it more challenging to detect intruders. Choosing a larger model may help improve intruder detection accuracy for a larger number of tags.
 
@@ -945,9 +945,9 @@ This finding is corroborated by the correlation analysis in \cref{fig:gpt_correl
 
 \begin{figure}[h]
     \centering
-    \subfloat[Correlation between number of tags and intruder detection accuracy]{\includegraphics[width=0.5\textwidth]{figures/gpt_correlation_num_tags.pdf}\label{fig:gpt_correlation_num_tags}}
-    \hfill
     \subfloat[Intruder detection accuracy by number of tags]{\includegraphics[width=0.5\textwidth]{figures/gpt_accuracy_by_num_tags.pdf}\label{fig:gpt_accuracy_by_num_tags}}
+    \hfill
+    \subfloat[Correlation between number of tags and intruder detection accuracy]{\includegraphics[width=0.5\textwidth]{figures/gpt_correlation_num_tags.pdf}\label{fig:gpt_correlation_num_tags}}
     \caption{Analysis of Intruder Detection Accuracy and Number of Tags}
     \label{fig:gpt_num_tags_analysis}
 \end{figure}
@@ -980,9 +980,36 @@ This is a surprising finding, as the human evaluation showed a negative correlat
 %     \label{fig:gpt_average_generality_score_per_tag}
 % \end{figure}
 
-When we investigate the scores for the generated tags, we find a mean relevance score of 4.11 with a standard deviation of 0.98, and a mean generality score of 3.29 with a standard deviation of 0.87. The mean coverage score is 3.72. These results indicate that the tags produced by the proposed model are generally relevant, somewhat general, and provide good coverage, based on the evaluation by the LLM. The standard deviations for relevance and generality also suggest a reasonable spread in these scores.
+When we investigate the scores for the generated tags by the proposed model, we find a mean relevance score of 4.11 and a mean generality score of 3.29 with a standard deviation of 0.87. The mean coverage score is 3.72 (\cref{fig:gpt_tag_type_score_distributions}).
 
-A comparison between the LLM's evaluation and the human evaluation of the proposed model reveals some interesting discrepancies. While the LLM rated the model's relevance at 4.11, humans rated it slightly lower at 3.63. For generality, the difference is more pronounced: the LLM assessed a mean score of 3.29 with a standard deviation of 0.87, whereas human ratings reflected in a mean of 2.93 and a standard deviation of 1.40. In terms of coverage the LLM and humans rated the model with scores of 3.72 and 4.46, respectively. These findings suggest that the LLM may be more lenient in its evaluation of generality compared to humans, while showing similar performance in relevance and coverage assessment. It could also be the case that the datasets chosen for the human evaluation were different from the datasets used for the LLM evaluation, leading to discrepancies in the results.
+\begin{figure}[h]
+    \centering
+    \subfloat[Distribution of relevance scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/relevance_distribution.pdf}\label{fig:gpt_tag_type_relevance_distribution}}
+    \hfill
+    \subfloat[Distribution of generality scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/generality_distribution.pdf}\label{fig:gpt_tag_type_generality_distribution}}
+    
+    \subfloat[Distribution of coverage scores]{\includegraphics[width=0.5\textwidth]{figures/coverage_distribution.pdf}\label{fig:gpt_coverage_distribution}}
+    \caption{Distribution of relevance, generality, and coverage scores}
+    \label{fig:gpt_tag_type_score_distributions}
+\end{figure}
+
+When comparing with the tags generated by the baseline model (\cref{fig:gpt_baseline_score_distributions}), for which we have a mean of 3.26 for relevance, 1.13 SD for generality and 3.11 mean for coverage, we see that the proposed model outperforms the baseline model in relevance and coverage, according to the LLM. Surprisingly, the generality score is lower for the proposed model compared to the baseline model, which seems contrary to the human evaluation results. However, in the evaluation of the human study results, we performed a statistical analysis to determine the significance of the differences in generality between the baseline model and the proposed model, and found no significant difference. Therefore, this findidng is not necessarily contradictory to the human evaluation results.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Distribution of relevance scores (baseline)]{\includegraphics[width=0.5\textwidth]{figures/gpt_relevance_score_distribution_baseline.pdf}\label{fig:gpt_relevance_distribution_baseline}}
+    \hfill
+    \subfloat[Distribution of generality scores (baseline)]{\includegraphics[width=0.5\textwidth]{figures/gpt_generality_score_distribution_baseline.pdf}\label{fig:gpt_generality_distribution_baseline}}
+    
+    \subfloat[Distribution of coverage scores (baseline)]{\includegraphics[width=0.5\textwidth]{figures/gpt_coverage_score_distribution_baseline.pdf}\label{fig:gpt_coverage_distribution_baseline}}
+    \caption{Distribution of relevance, generality, and coverage scores (baseline)}
+    \label{fig:gpt_baseline_score_distributions}
+\end{figure}
+
+A comparison between the LLM's evaluation of the proposed model and the human evaluation of the proposed model reveals some interesting discrepancies. While the LLM rated the model's relevance at 4.11, humans rated it slightly lower at 3.63. For generality, the difference is more pronounced: the LLM assessed a mean score of 3.29 with a standard deviation of 0.87, whereas human ratings reflected in a mean of 2.93 and a standard deviation of 1.40. In terms of coverage the LLM and humans rated the model with scores of 3.72 and 4.46, respectively. These findings suggest that the LLM may be more lenient in its evaluation of generality compared to humans, while showing similar performance in relevance and coverage assessment. It could also be the case that the datasets chosen for the human evaluation were different from the datasets used for the LLM evaluation, leading to discrepancies in the results.
+
+
+
 
 % \begin{figure}[h]
 %     \centering
@@ -1005,16 +1032,8 @@ A comparison between the LLM's evaluation and the human evaluation of the propos
 %     \label{fig:gpt_coverage_score_distribution}
 % \end{figure}
 
-\cref{fig:gpt_tag_type_relevance_distribution,fig:gpt_tag_type_generality_distribution} show the distribution of relevance and generality scores by tag type. As expected, the keyword tags were found to be the most relevant, since they were most specific to each text. However, interestingly, the LLM found them to be slightly more general than the regular tags.
 
-\begin{figure}[h]
-    \centering
-    \subfloat[Distribution of relevance scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/relevance_distribution.pdf}\label{fig:gpt_tag_type_relevance_distribution}}
-    \hfill
-    \subfloat[Distribution of generality scores by tag type]{\includegraphics[width=0.5\textwidth]{figures/generality_distribution.pdf}\label{fig:gpt_tag_type_generality_distribution}}
-    \caption{Distribution of relevance and generality scores by tag type}
-    \label{fig:gpt_tag_type_score_distributions}
-\end{figure}
+
 
 % \begin{figure}[h]
 %     \centering
