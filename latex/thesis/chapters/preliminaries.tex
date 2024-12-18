@@ -529,13 +529,9 @@ A topic is defined as a discrete distribution over words, with the expectation t
 
 \citet{newman_automatic_2010} measure coherence by examining the lexical similarity between word pairs, employing various similarity measures and identifying mutual information as the most reliably performing measure. The pointwise mutual information, \textit{PMI}, and the normalized pointwise mutual information, \textit{NPMI} \cite{bouma_normalized_nodate}, between a pair of words $(w_i, w_j)$ are calculated as follows \cite{lau_machine_2014}:
 
-\[
-\text{PMI}(w_i) = \sum_{j}^{N-1} \log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}
-\]
+\[\text{PMI}(w_i, w_j) = \log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}\]
 
-\[
-\text{NPMI}(w_i) = \sum_{j}^{N-1} \frac{\log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}}{-\log P(w_i, w_j)}
-\]
+\[\text{NPMI}(w_i, w_j) = \frac{\log \frac{P(w_i, w_j)}{P(w_i) P(w_j)}}{-\log P(w_i, w_j)} = \frac{\text{PMI}(w_i, w_j)}{-\log P(w_i, w_j)}\]
 
 This formula quantifies the difference between the probability of $w_i$ and $w_j$ occurring together compared to the probabilities of them appearing independently within the corpus. Here, $p(w_i,w_j)$ represents the joint probability of both words occurring together, while $p(w_i)$ and $p(w_j)$ are the individual probabilities $w_i$ and $w_j$ occurring in the corpus.
 
@@ -547,7 +543,13 @@ Many authors contend that the field of topic modeling has largely converged on c
 
 \subsection{Topic diversity}
 \label{sec:topic_diversity}
-Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics. So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
+Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics:
+
+\[TD = \frac{|\bigcup_{i=1}^{T} \{ w_{i,1}, w_{i,2}, ..., w_{i,k} \}|}{k \times T}\]
+
+Where $TD$ represents the Topic Diversity score; $T$ is the total number of topics; $k$ is the number of top words considered for each topic; $w_{i,j}$ represents the $j$-th word in the $i$-th topic; $\bigcup$ denotes the union of sets; and $|\cdot|$ denotes the cardinality of a set (i.e., the number of elements in the set).
+
+So, in general, diversity metrics aim to quantify the variation among the top-k words within a topic. A high score in topic diversity suggests that a topic model successfully generates diverse topics, whereas a low score may indicate the presence of redundant topics, showing the model's inability to clearly differentiate the themes within the corpus. It is important to note that the choice of the number of topics in a model significantly influences topic diversity. Choosing too many topics might lead to similar topics with overlapping words, while too few topics can result in overly broad topics that lack interpretability.
 
 \subsection{Silhouette score}
 \label{sec:silhouette_score}
