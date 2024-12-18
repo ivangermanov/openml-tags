@@ -545,7 +545,7 @@ Many authors contend that the field of topic modeling has largely converged on c
 \label{sec:topic_diversity}
 Topic diversity refers to the semantic diversity among the generated topics. A method to assess diversity, as proposed by \citet{dieng_topic_2020}, considers it as the proportion of unique words within the top 25 words across all topics:
 
-\[TD = \frac{|\bigcup_{i=1}^{T} \{ w_{i,1}, w_{i,2}, ..., w_{i,k} \}|}{k \times T}\]
+\[TD = \frac{|\bigcup_{i=1}^{T} \{ w_{i,1}, w_{i,2}, ..., w_{i,k} \}|}{kT}\]
 
 Where $TD$ represents the Topic Diversity score; $T$ is the total number of topics; $k$ is the number of top words considered for each topic; $w_{i,j}$ represents the $j$-th word in the $i$-th topic; $\bigcup$ denotes the union of sets; and $|\cdot|$ denotes the cardinality of a set (i.e., the number of elements in the set).
 
